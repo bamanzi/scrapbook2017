@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html itemtype="http://schema.org/Article" itemscope="">
+<head>
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>Everything You Can Do With Windows 10’s New Bash Shell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="Everything You Can Do With Windows 10’s New Bash Shell">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="Windows 10’s&nbsp;Anniversary Update brings a “Bash on Ubuntu on Windows” environment to Windows 10. But don’t be deceived: This is more than just a Bash shell. It’s a full compatibility layer for running Linux applications on Windows.">
+<meta property="og:image" content="http://www.howtogeek.com/thumbcache/280/160/489bc9bbb58a8f638eebb59f7b632f07/wp-content/uploads/2016/08/img_57a14ed2a0cec.png">
+<link rel="image_src" href="http://www.howtogeek.com/thumbcache/280/160/489bc9bbb58a8f638eebb59f7b632f07/wp-content/uploads/2016/08/img_57a14ed2a0cec.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@howtogeek">
+<meta name="twitter:title" content="Everything You Can Do With Windows 10’s New Bash Shell">
+<meta name="twitter:description" content="Windows 10’s&nbsp;Anniversary Update brings a “Bash on Ubuntu on Windows” environment to Windows 10. But don’t be deceived: This is more than just a Bash shell. It’s a full compatibility layer for running Linux applications on Windows.">
+<meta name="twitter:image:src" content="http://www.howtogeek.com/thumbcache/648/248/931aa8341ee2b5564f677f0f5f963592/wp-content/uploads/2016/08/img_57a14ed2a0cec.png">
+<link rel="stylesheet" href="urn:scrapbook-download:cfe9069c-0695-45d3-ae42-09f045331d2e" type="text/css">
+<link href="urn:scrapbook-download:3a4e9618-cc40-4be0-901d-f5cc1054cf18" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="urn:scrapbook-download:78ae7bb1-96e9-4946-8415-298ad29e6f17" type="image/x-icon">
+<script type="text/javascript" async="" src="about:blank"></script><script src="about:blank" async=""></script><script src="about:blank" async=""></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" id="facebook-jssdk"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>	<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="http://www.howtogeek.com/wp-json/">
+<link rel="shortlink" href="http://www.howtogeek.com/?p=265900">
+<link rel="alternate" type="application/json+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F265900%2Feverything-you-can-do-with-windows-10s-new-bash-shell%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F265900%2Feverything-you-can-do-with-windows-10s-new-bash-shell%2F&amp;format=xml">
+<link rel="canonical" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">
+<meta property="og:url" content="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/"><link rel="amphtml" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/amp/">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script pagespeed_no_defer="">/* Code removed by ScrapBook */</script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+<body class="v3">
+<div style="text-align: center; min-height: 90px; z-index: 999999; margin-right: auto; margin-left: auto; position: relative;" class="adslot adslot970">
+<div id="htgyl11">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader" style="border-top: 4px solid rgb(23, 34, 50);">
+<div class="logo" style="">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek"></a>
+<div style="float: right; width: 450px;">
+<ul class="bigmenu">
+<li class="menubaritem">Articles <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu">
+<div class="subMenuArticles">
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" align="left" class="title" rel="bookmark"><span><img src="urn:scrapbook-download:9e14ac92-efcd-4a1e-a1a8-b2f3e2aff33e"></span></a>
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" class="title" rel="bookmark">Amazon Echo vs. Google Home: Which One Should You Buy?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" align="left" class="title" rel="bookmark"><span><img src="urn:scrapbook-download:43779293-e834-4889-b364-c73c09123b25"></span></a>
+<a href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" class="title" rel="bookmark">How to Create a Live Ubuntu USB Drive With Persistent Storage</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" align="left" class="title" rel="bookmark"><span><img src="urn:scrapbook-download:e817a9c3-b1aa-4d0c-806c-7aad53bb9907"></span></a>
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" class="title" rel="bookmark">Does Brand Really Matter When Buying a Hard Drive?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" align="left" class="title" rel="bookmark"><span><img src="urn:scrapbook-download:092958cc-4445-42fc-87c2-3ef9389d6d0a"></span></a>
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" class="title" rel="bookmark">How to Spot Fake Reviews on Amazon, Yelp, and Other Sites</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li>
+<li class="menubaritem">Subscribe <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu" style="padding-bottom: 10px;">
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>FOLLOW US</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/howtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom: 20px;">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="topmenu" type="hidden">
+<input id="fromaddress" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<p style="font-family: 'Open Sans'; text-transform: none;">Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input id="from" name="email" value="Enter Your Email Here" style="width: 200px; color: rgb(187, 187, 187); margin-left: 59px; font-family: 'Open Sans'; text-transform: none;" type="text"><input id="sub1" name="sub1" value="Get Your Newsletter Now" style="background: none repeat scroll 0% 0% rgb(85, 168, 223); margin-left: 59px; width: 212px; margin-top: 6px; font-family: 'Open Sans'; text-transform: none;" type="submit"></p>
+<div style="clear: both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>RSS</h4>
+<ul style="width: 130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menubaritem">Search <span class="icon-magnifying-glass" style="padding-left: 10px; font-size: 16px;"></span>
+<div class="subMenu" style="padding: 20px; text-align: center;">
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input name="q" id="s" value="" style="width: 900px; height: 40px; line-height: 40px; border: 1px solid rgb(204, 204, 204);" type="text">
+<input id="searchsubmit" value="Go" style="height: 42px; border: 1px solid rgb(204, 204, 204); font-family: 'Open Sans'; font-size: 16px; padding: 10px; background: none repeat scroll 0% 0% rgba(196, 230, 237, 0.99); border-radius: 0px 5px 5px 0px;" type="submit">
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display: none;">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-265900">
+<style>
+/* Code tidied up by ScrapBook */
+p + .relatedside { margin-top: 8px ! important; }
+</style>
+<h2 style="margin-top: 10px;"><a style="font-family: 'Open Sans',sans-serif;" href="#" rel="bookmark" title="Everything You Can Do With Windows 10’s New Bash Shell">Everything You Can Do With Windows 10’s New Bash Shell</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img class="alignnone size-full wp-image-265984" alt="" src="urn:scrapbook-download:5fe7e465-5c1c-41c4-92b3-7384a9dc6675"></p>
+<p><a href="http://www.howtogeek.com/248177/whats-new-in-windows-10s-anniversary-update/">Windows 10’s&nbsp;Anniversary Update</a> brings a “Bash on Ubuntu on Windows” environment to Windows 10. But don’t be deceived: This is more than just a Bash shell. It’s a full compatibility layer for running Linux applications on Windows.</p>
+<p>We’ve covered a lot of the things you can do in Windows 10’s new Bash shell, so we’ve rounded up all those guides into one mega list here, for your convenience.</p>
+<div id="div-thetop1" style="margin-top: 5px; margin-bottom: 15px;">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script async="" src="about:blank"></script>
+<!-- htg-desktop-top -->
+<ins class="adsbygoogle" style="display: inline-block; width: 650px; height: 141px;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="1477883008"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<h3>Getting Started with Bash&nbsp;on Windows</h3>
+<p><img alt="" src="urn:scrapbook-download:6324f23b-b5dd-464d-8a79-5048bcc0ee9c"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/"><img src="urn:scrapbook-download:749990df-f6d3-4f05-9420-8896a282156a"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></span><div style="clear: both;"></div></div></div>
+<p>You can install the Bash shell on any edition of Windows 10, including Windows 10 Home. However, it does require a 64-bit version of Windows 10. You’ll just have to enable developer mode, add the feature to Windows, and then run the Bash program.</p>
+<p>When you run the Bash program, it will download the Ubuntu system files and set up a Bash environment for you. Check out <a href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">our guide to installing it</a> for more.</p>
+<h3>Install Linux Software</h3>
+<p><img alt="" src="urn:scrapbook-download:69fd0ed8-a004-45d0-833f-97ebee63b20f"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261449/how-to-install-linux-software-in-windows-10s-ubuntu-bash-shell/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261449/how-to-install-linux-software-in-windows-10s-ubuntu-bash-shell/">How to Install Linux Software in Windows 10’s Ubuntu Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>The easiest way to install Linux software inside Bash is with&nbsp;the apt-get command. This command downloads and installs software from Ubuntu’s software repositories. You can download and install one or more applications with just a single command.</p>
+<p>As this is a more-or-less full Ubuntu userspace environment, you can also install software in other ways. You can compile and install software from the source code just as you would on a Linux distribution, for example. See <a href="http://www.howtogeek.com/261449/how-to-install-linux-software-in-windows-10s-ubuntu-bash-shell/">our guide to apt-get in Windows</a> for more step-by-step info.</p>
+<h3>Access Windows Files in Bash, and Bash Files in Windows</h3>
+<p><img alt="" src="urn:scrapbook-download:ba4aa6ee-057c-475d-9bcb-1e07861074fc"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/"><img src="urn:scrapbook-download:08991ff0-6348-4c4e-a38f-00f3b440ca65"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/">How to Access Your Ubuntu Bash Files in Windows (and Your Windows System Drive in Bash)</a></span><div style="clear: both;"></div></div></div>
+<p>Your Bash environment files and Windows files are normally separated, but there are ways to access your Bash files from Windows and your Windows files from the Bash environment.</p>
+<p>When Bash downloads the Ubuntu system files to your hard drive, it also creates a home folder specifically for that Bash Linux compatibility environment.&nbsp;These folders are normally hidden, but you can find them under your Windows user account’s&nbsp;Application Data folder.</p>
+<p>When you’re in the Linux environment, you can access your Windows drives from under the /mnt/ folder. Your C: drive is located at /mnt/c and your D: drive is located at /mnt/d, for example. You can see more details in <a href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/">our full guide</a>.</p>
+<h3>Use Zsh (or Another Shell) Instead of Bash</h3>
+<p><img alt="" src="urn:scrapbook-download:c7e17c23-8fd7-4bf5-9110-ccf0d535d331"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/"><img src="urn:scrapbook-download:18063558-6fe1-4c57-bfb9-ae794c8a5ab8"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/">How to Use Zsh (or Another Shell) in Windows 10</a></span><div style="clear: both;"></div></div></div>
+<p>While Microsoft pitches this feature as “Bash shell” environment, it’s actually an underlying compatibility layer that allows you to run Linux software on Windows. That means you can run other shells instead of Bash, if you prefer them.</p>
+<p>For example, you can <a href="http://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/">use the Zsh shell instead of Bash</a>. You can even have Bash automatically switch to the Zsh shell when you open the Bash shell shortcut in your Start menu.</p>
+<h3>Use&nbsp;Bash Scripts on Windows</h3>
+<p><img alt="" src="urn:scrapbook-download:b33fea4a-f2c6-472e-96d4-e2fb9a40a4f2"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/"><img src="data:image/png;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/">How to Create and Run Bash Shell Scripts on Windows 10</a></span><div style="clear: both;"></div></div></div>
+<p>Thanks to this environment, it’s actually possible to write a Bash shell script on Windows and run it. Your Bash script can access your Windows files stored under the /mnt folder, so you can use Linux commands and scripts to work on your normal Windows files..</p>
+<p>Unfortunately, there’s no way to actually launch a Windows program or run a Windows command from within a Bash script or the Bash shell. However, you can incorporate Bash commands into a <a href="http://www.howtogeek.com/263177/how-to-write-a-batch-script-on-windows/">Batch script</a> or <a href="http://www.howtogeek.com/137803/geek-school-learn-how-to-automate-windows-with-powershell/">PowerShell script</a>, which is pretty handy. For all this and more, see <a href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/">our guide to bash scripts in Windows 10</a>.</p>
+<h3>Run Linux Commands&nbsp;From Outside&nbsp;Bash</h3>
+<p><img alt="" src="urn:scrapbook-download:7be974ec-6c58-4f19-8b4c-888033e4f6d3"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/"><img src="urn:scrapbook-download:a3092342-7ce4-4a52-b049-8ded5c7e7479"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/">How to Run Linux Commands From Outside the Bash Shell on Windows 10</a></span><div style="clear: both;"></div></div></div>
+<p>If you just want to quickly launch a program, execute a command, or run a script, you don’t even need to launch the Bash environment first. You can use the “bash -c” command to directly execute a Linux command. Bash will simply run the command and then quit. If you run this command from within a Command Prompt or PowerShell window, the command will print its output to the Command Prompt or PowerShell consoles.</p>
+<p>You can do a lot with bash -c. You can create desktop shortcuts to launch Linux programs, integrate them into batch or PowerShell scripts, or run them any other way you’d run a Windows program. For more ideas, check out <a href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/">our instructions on using bash -c in Windows</a>.</p>
+<h3>Run Graphical Linux Desktop Programs</h3>
+<p><img alt="" src="urn:scrapbook-download:dfff5969-d9a5-4365-9a15-34ca738bf037"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/">How to Run Graphical Linux Desktop Applications from Windows 10’s Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>Microsoft doesn’t officially support graphical Linux software&nbsp;on Windows. The Bash feature&nbsp;is just intended for running command-line programs developers might need. But it’s actually possible to run graphical Linux desktop programs on Windows using the Bash shell.</p>
+<p>This won’t work by default, however.&nbsp;You’ll need to install an X server and set the DISPLAY variable before graphical Linux desktop programs will run on your Windows desktop. The simpler the application, the more likely it is to work well. The more complex the application, the more likely that it’ll try to do something Microsoft’s underlying Windows Subsystem for Linux doesn’t yet support. The best you can do is <a href="http://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/">give it a shot with these instructions</a> and hope for the best.</p>
+<h3></h3>
+<h3>Change Your UNIX User Account</h3>
+<p><img alt="" src="urn:scrapbook-download:5d564214-4027-40a0-902a-7ac9fd989117"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261417/how-to-change-your-user-account-in-windows-10s-ubuntu-bash-shell/"><img src="urn:scrapbook-download:197be96b-0879-423c-98f3-ea1ca0f06373"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261417/how-to-change-your-user-account-in-windows-10s-ubuntu-bash-shell/">How to Change Your User Account in Windows 10’s Ubuntu Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>When you first set up Bash, you’ll be prompted to&nbsp;create a UNIX user account and set a password. You’ll be automatically signed in with this account each time you open the Bash window. If you want to change your UNIX user account–or use the root account as your default account in the shell–there’s <a href="http://www.howtogeek.com/261417/how-to-change-your-user-account-in-windows-10s-ubuntu-bash-shell/">a hidden lxrun command or changing your default user account</a>.</p>
+<h3>Uninstall and Reinstall the Ubuntu Envrionment</h3>
+<p><img alt="" src="urn:scrapbook-download:7289f503-0049-4cc5-9685-8067d51bf865"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/"><img src="urn:scrapbook-download:2c0fd820-6dba-4144-b9bd-2afa40b5b559"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/">How to Uninstall (or Reinstall) Windows 10’s Ubuntu Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>After you’ve installed some programs or changed some settings, you might want to reinstall the Ubuntu environment and get a fresh Linux slate. You can <a href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/">do this with the lxrun command as described here</a>, which allows you to remove your installed Linux system files and either keep or delete the user files in your home folder.</p>
+<p>Bash will automatically reinstall an Ubuntu environment the next time you launch it, but the lxrun command can also be used to install the Linux environment. You can write a command that automatically responds to the questions you’re asked when installing the Linux environment, for example.</p>
+<hr>
+<p>&nbsp;</p>
+<p>Enterprising geeks will no doubt figure out other interesting things you can do with the Linux environment in the future. The Windows Subsystem for Linux will hopefully continue getting more powerful, but don’t expect Microsoft to officially support graphical Linux desktop applications&nbsp;or server software that needs to run in the background any time soon.</p>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear: both; height: 0px;"></div>
+<!-- discourse comments begin -->
+<style>
+/* Code tidied up by ScrapBook */
+#discusslink { color: rgb(88, 88, 88); text-decoration: none; }
+#discusslink:hover { color: rgb(0, 0, 255); text-decoration: none; }
+.commenttext img { max-width: 618px; }
+</style>
+<div style="max-width: 650px; width: 100%; padding-top: 10px;"><span style="font-family: bebas_neueregular; font-size: 19px; position: relative; top: -9px; padding-right: 10px; float: left; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(134, 134, 134);"><a id="discusslink" href="#">JOIN THE DISCUSSION (4 REPLIES)</a></span><div style="border-top: 4px solid rgb(204, 204, 204);"></div></div>
+<div id="discusscomments" style="display: none;"><style>
+/* Code tidied up by ScrapBook */
+</style>
+<div style="clear: both;"></div>
+<ul class="commentlist"><li class="comment-def">
+<div class="commentmetadata date"><a href="#">August 6, 2016</a></div>
+<div class="commentauthor"><div class="ca2">willrun4fun</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>I installed nfs-common hoping I could hook up some NFS in Win10Pro. No dice <img oldsrc="/images/emoji/emoji_one/frowning.png?v=2" title=":frowning:" class="emoji" alt=":frowning:"></p><p></p></div>
+</li></ul>
+<div id="discourselink">
+<h3 id="reply-title"><a href="https://discuss.howtogeek.com/t/everything-you-can-do-with-windows-10s-new-bash-shell/49858">Got Feedback? Click Here to Join the Discussion</a></h3>
+</div>
+</div>
+<div style="clear: both; height: 0px;"></div>
+<div id="socialmediabuttons" style="margin-bottom: 0px;">
+<div id="fb-root"></div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="fb-like" data-href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+</div>
+<div style="padding-right: 20px; float: left;">
+<div class="g-plusone" data-size="tall"></div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-right: 20px; float: left;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/" data-via="howtogeek" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="postiddiv" post="265900"></div>
+<div style="clear: both;"></div>
+<div class="articleExtras" style="background: none repeat scroll 0% 0% rgb(254, 254, 254); border-top: medium none;">
+<div style="width: 450px; float: left;" id="authorinfobox">
+<p style="font-weight: normal; color: rgb(51, 51, 51);"><a href="http://www.howtogeek.com/author/chrishoffman/"><b>Chris Hoffman</b></a> is a technology writer and all-around computer geek. He's as at home using the Linux terminal as he is digging into the Windows registry.
+Connect with him on <a href="https://plus.google.com/107865379603964146316?rel=author">Google+</a>.</p>
+</div>
+<div style="width: 130px; float: right;">
+<ul class="normul" style="margin-bottom: 6px;">
+<li>Published 08/6/16</li>
+<!--<li><span id="pv3"></span></li>-->
+</ul>
+<div style="margin-left: -14px;"><a href="https://twitter.com/chrisbhoffman" class="twitter-follow-button" data-show-count="false"></a></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div class="below-post-features" style="width: 650px; overflow: hidden; max-height: 250px; margin-bottom: 20px;">
+<div id="outbrain-below-article" style="">
+<style>
+/* Code tidied up by ScrapBook */
+.below-post-features:hover { box-shadow: 0px 0px 3pt 2pt rgb(98, 128, 156); }
+#sb3 { padding-top: 0px; }
+.content { padding-bottom: 0px; margin-bottom: 0px; }
+</style>
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+</div>
+<div style="width: 100%; max-width: 650px; margin-bottom: 0px;">
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="yui-u">
+<div class="sidebar">
+<div style="margin-top: 24px; clear: both;"></div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding: 10px;"><p>In 2006, William Shatner sold his kidney stone for $25,000, then donated the money to Habitat for Humanity.</p>
+</div>
+</div>
+<div id="side78"><div id="htgyr11">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>	<div class="sidebar-glossary lazyloaddiv">
+<style>
+/* Code tidied up by ScrapBook */
+</style>
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/245717/how-to-make-windows-defender-scan-for-potentially-unwanted-programs/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAAECAwUIBgQH/8QAMhAAAgEDAgIIBQMFAAAAAAAAAQIRAAMEBSEHEgYTMUFDUZTSIjJSU2EUFXGBkaGisf/EABgBAQEBAQEAAAAAAAAAAAAAAAACBAED/8QAHBEBAQACAgMAAAAAAAAAAAAAAAEDBBEUAgVh/9oADAMBAAIRAxEAPwDpW4F8QutvtYy8SzbewVRbmqvdIeRvPVrH9qZlcCeID2CLF+xZvQIY607LO0mOqB8++tIM+ughVXR7jbTNx0nYTtBjef6VNjtq5y0W/a0xbE/EUusXiO4FQO2u81ziPg54M9Lz4mmeob20w8FumB8TS/UN7a0XNoxBTfs3G9E2piUn+RWmbmSPC63hWcTwU6YnxNL9Q3tpp4JdMj4mleob21pCbUTKQO0yKB1bTy8pjyq5v5Ynp42bDwQ6Z/c0r1De2mngf0z+5pXqG9taX5V+kUnKv0iqnsc3xPSxKlcC2oEaHhDlbmHwJsfOlXDVSCuiYYKmQQqbHz/wK9mmXGu2WZsk5BDRzG0bcfiKr+syjkm2us3ZdmRAcGQp/JiNvzE1gbDl0+yvy6DgrBkQiClbBtsOVtDwiO2CqVbIGCKGbmYDcxEnzp1BUtiBvm0XDPduqec/9Apt1LuFiF8LT7WNcZwrCzaBJUA9y1cUUHIfu3SfeNKvQOyV3P8ArU7ajr8KRjXgSoLD9Mxg+UxXUUUFTh5BGWqXNRyL8kjlbE5QdvqC1Jhdbdy3K6jkXEtt8Vt8dVU7nYHlE9ncaKKCxpaKKBKWiigKSiig/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/245717/how-to-make-windows-defender-scan-for-potentially-unwanted-programs/" class="title" rel="bookmark">How to Make Windows Defender Scan for Potentially Unwanted Programs</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/204961/how-to-easily-boost-your-cell-phone-signal-at-home/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAAAAECAwUEBwgG/8QAKRAAAQMEAgICAQQDAAAAAAAAAQACAwQFERIhMQYTQWFRBxUicZGx8P/EABkBAAIDAQAAAAAAAAAAAAAAAAACAQMEBf/EABsRAAMAAwEBAAAAAAAAAAAAAAABEgIDIRET/9oADAMBAAIRAxEAPwD1+qNVJql1XTsxyYVzqorfbp66bPrhZs7Aycf0vPy+ZWmnrGU0skhlqaj1wMLNXdADg4xz+VdeXwtl8UubHFzQad3LewtCXG9TfvHvrKj2U1ur5HhgiO7yQMZeCMZDWjIAx8KnZtafC7VrTXToSjLpKOGR4/k5gJ5+lJqsPxS4C8eO0dxbAYGzMOsZzkAEgdgfhWRarFs4VPHpAWJpYsjVJr9KfoRJKG/ScGp4CcGrH9DTBU+QveyhZEKMVkc7zFLCWuIcwscTnUE/A6C0TH6YvPHUb7FG2aS5t9dE6kLmuaS9paWn4wCAMjjK3p5NU3CmkoWUEJmdJIQ9ga45Ax8t5GOT18LSlS+5n9TYLpLBJLVQXCNwy0DIL3jr/ukuWXo+K8N32FtSKMRz0opWMYwRRhgaGjUcAZPR4VhosLxasra+zsqbgwsnc4hzDGWa9cYP+1ZYRYskWiTX6UpCRH0CRwwlGEIWOmaJQ+PG4OBkdLnS5RwzX6quPurBUCnFW0t2OJMyOGccBu2uOhj/AAhCZNslLw6LeWnloAB5GExCEtMiUIU0oQimEo//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/204961/how-to-easily-boost-your-cell-phone-signal-at-home/" class="title" rel="bookmark">How to Easily Boost Your Cell Phone Signal at Home</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/168841/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABQYABwMECAL/xAAxEAABAwMCBAQFAwUAAAAAAAABAgMEAAUREiEGBxMxQWGBkRQiI1FxMpKhQrGy0fD/xAAZAQACAwEAAAAAAAAAAAAAAAAEBQIDBgH/xAAkEQACAgICAQMFAAAAAAAAAAABAgADBBESIRMFFCIxM0Fhcf/aAAwDAQACEQMRAD8A6OvXKbg245XHiP21w/1RHSB+1WUj0AqtePeT4sltfu4u0OVGaxkPsltwZOAEkZyd/KrGt3FyykBSgfzShzT4kVfH4tnbV9Bg9Z7B2UsjYeg/y8qjkUeIbYS0KRKqVaYEOIHlOyWipQSnQoqKieyQDmssKTLeTEEC7MywE62GXchWN1Y0+h28jXq/NuXSc3aIaY8lKMLdaXoKBpUkr1hQycJPZG4JGcChEnomNKlSbfJghTY+FSMx221dJQWAFkatKEhIIODqOMbmgdbk4xSbvcFXQzrnbDhR+YsJBGwwO3p3rBb7ja5dyWqS+iMNJILn2z+nz2o1wWxAtsZlc/rTYzyS+W2k9HQpeDgIztgeGe/jW5xOxwy9bUvxoxkydeFsOslOlO+4UAR9vv3oOy/jYK9Hv8j6SXDY3Kg5oG2v2zTlH1nUaS2NISoKCvXGP5FD+afNSdZOLXLVafh1tR2kJcUsZ+puSB+BgfkGgHOK6MquybfBbEZmPlASF6tJ/UtWfYelIDrj7rzj7zDkl51RcdWdzqO+D54x7059sGC8oF5NE6naabgGYxe6moJGdj38qCl9bcaRNWnqvFKnMZxqOMgVXFi5ocOTV/CzHV2+R2U3JQUEGm+4xbXxVYFxF3JKG1KC0qbAcSvHhgf774qzOyjkkbGhCA0FSXI7aJc2XDWmQ64VtLWhbSVNgtqXhlxR3Us6cbaseGRktaor5uUaBFmh6JFIeHWC0AgOKU5ob06FgqUADn5R28DQWXab/FeckQ5c5yLFjpbhJaUhwNlKQAVtncnvuAc/2YeWUaQ+GF3SIGpi1KCz827QVkAIUToBJ/SMDxxQDsFUkmdGz0Bsx0juWgMtiW3JYcUT1HtHUbUM+AGT9hsKUeLr03ZY86Uy11WG0qLDg+TUTsnKFbjenPipES322SY7hC+mNCE/LlSsgHSNjvnOQdgaoPm7xDIdZZtZUkafqK0+JOyc/gZPtVODjiyzkCSJCzKJUoV0w6lU3lx2ZcXpD2pwajqPckDc+qlfxRqzWtkQErlNuKdcJWrQe2fD/vDFakCOHHUpUSE91H7JG5PtRpu4x22W+p8hUnUEgZwMkAewxWjRAx2Yudio1HC8xrLfm8PMxJycbEgKI9e4ofbbHPtCNHDt5lQGs5EZwB9j9qtx6GpUrE+R6+gY8ChuzDDfEnGNuZUZthZuaUg4dt72FH8tr39iasbkZNlX6K9xBcrVJtxQsxkMPpIUSMFSsHcDsPepUrt1zPSQYZ6fUvmBgnibjaIzzMv8aQ4y7FgtNtpZ1AHIRqUR55WoVzFzQvr134hdWVacLK1BJ7E9h6DAqVK0eAirSCP1E+b99v6YM4XmyzcAwqU8W1JOUFZwaZ332ELAecCVY2HlUqUzpPxgNg+U/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/168841/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line/" class="title" rel="bookmark">How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAwQABwIFBgEI/8QAMBAAAgEDAgQEBQMFAAAAAAAAAQIDAAQREiEFEzFBIlFxgQYHMkJhFHKxUqHB0eH/xAAbAQACAwADAAAAAAAAAAAAAAADBAECBQAGB//EACMRAAIBAwQBBQAAAAAAAAAAAAECAAMEEQUSMUEhBiJRYfH/2gAMAwEAAhEDEQA/AK8DawdcXJkIwxJyG/wamZIAGAOexydJ/H4962ckcTEB4hq/pPf3oK28asVRiO+MVs7xPMqtmOpjbuXPMUlDjcHpRrjlgBZcqDsD2pz4L4DDxH4t4fZyOwgmnVZlVsEr1IHltmrO4j8uZ1mkWCD4e/T8w6BJJdFtGds4OM470J6yocGWtfT1a7BdCAB8/kp4xSRKSgyQdsfcP90W3dZ15Mz74zET3/Fdz8weAcL4EsA4ZA6Iz4fMrNsc46+hrjpba1uoNUOEbqDnv3oiOrjMUu9NqW1Q06nI7EPGshUK2WU9DnegywStISF1fnST/FAaS5gGXDHTucHfHmDRkkiuFEiSdeunzou3ESNrg5AhZ+VK/hByNgdVKyE6SGiLHPUnBraPw+ZTlUeQEeJX2IHr0pblHUAramOwR6K1D6nb2UNyJu/lgiSfFtmWBSNVkzldgeWwGO3UjpV2XswMchDowOytzlT+xr5zltmZsRSmCTO2rYjseo9emaXuOGrcQJbXXFFdUOQjMDjPf6aRuLYs2QZradcJQpFcE+ZZXzNjFzw1HIYkSKdhjIAYYyf3VWEjSWc2AGZHGdJprVPbwQ26XbzQxquiPYBPD+0HIyRWUkkcudWcAbspxg0a3olF93EztSKXFXeB1PbWaOaIaRqQH6SfEKRvOFzSTl7bJjPTC0aaDW3O4awEq9VOwPpQxxKNfDcq8Mo2ZcUyFYeVmcbadct2c4UlSDgg5/ivZJY28M9tbygfawB/7UqU7HYube1kBTLQqeiP41HoDuPY0rLwdZTpS5TzVtXiB9+3vUqVG0Gcis/Cb+H64xMncpuRj8A70tGHjkJCKp7qw0k+fWpUqhQYkwaxB5C1usokYb6DhvXH3CsGN0cCSziuyNhKVUkj36elSpQeDLKBP//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark">5 Ways To Free Up Disk Space on Your OS X Mac</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/162781/how-to-convert-your-color-photos-to-stunning-black-and-white-prints/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAcFBgIDBAgB/8QALhAAAQMDAwIEBgIDAAAAAAAAAQIDBAAFEQYSIQcxEzJBUQgUFSJhgUKRI1Kh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APRK4aT3SP6rH6e2f4j+qlcCvoAoIZdtaP8AAVBQIF5OprkqbEtzNhbj5iONulT7jgweU+g8wI/Ax3q4ynWI7KnXlpQhIySaSGret1r0x1Cu9sKvm4QtSVxW2mClQlqUdwUsgYTsKVEn2I78UF8vMRtCDwKqrVsC5S1J7ZqKidX9K6haQy3Kchytv3Jko2IJ7HC/L37ZIJ9qs+mpcSex48aQy+jONzawoZ9sigx+kAIClDmtZgN55qwSnWmmxkgYqDkz2g6RuTQNEmgEe9cy3h71Ca4uTNv0ddZ7wfU2xGUr/BuC92PtAKeQc45FAsOmvUR3WPU7V1nu0XwfpkUqjsHcoFSFqR/0qTzSa08qBrfqJ9FnMFcmbdEhxDzK9zTTW8upIGFJ4J44yQPUcWjpxovVWqLpN6l21bGmHZjfhtRDIW780UYVuWc8pU6hGQe4CvQ1OaWaSn4hYd4EBuM9ftP/ADSglClIQ9wHBj3GwgkYz39TQL34jdCRem1zjTrOuQ5aLgomOHUnLCk+ZBJ5PcEHvjOe2TO/DrqmVDXJs8l5pUGcUuoJJOHUj0x2JB9f9eORXNqFK9X2XUFs1Q/uQxqETYa2lEpKTvQttIPkTtSnj0z71y9OtGXtXUWKdO2d26WNb6XpLediI+05KN54GRnAzn0oG1rPUzcOOrK/TuDSmn68WJKtj/H5rT1xuUq16ruFofhuQFMrwllSiftIyFAknII57+tKxO94eISeaD3HcdWRGM5eSMfmqpqzqiLXCtyISFPl64J8YIGctJH3DPbPIP6NFFBE3TqlbmFKRECW28nalIx+8CuXT2vbRbNI3ZE2xtibbpEgyFqb3PJbdc3BDTmQEBaVKAO5O0/xURyUUCE0rqhyWJUExltIwXW1FY5wTn8nj2/NN/pJrbUenIrsSPa1ltyWHkl5BSHSW9uzJx7oVx7iiigWXXC8ydVdTrvc31NhQWhjajyjw0JQcftJP7qpstqQ2Ek9qKKD/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/162781/how-to-convert-your-color-photos-to-stunning-black-and-white-prints/" class="title" rel="bookmark">How to Convert Your Color Photos to Stunning Black and White Prints</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/233911/how-to-make-your-windows-gaming-pc-automatically-boot-to-big-picture-mode-like-a-steam-machine/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAQCAwEFBgf/xAAzEAABAwMBBAcHBQEAAAAAAAABAgMEAAURIQYSMZITFEFRVHHSFiIyQkRhoQczUpGx4f/EABkBAAIDAQAAAAAAAAAAAAAAAAECAAMFBP/EACgRAAEDAwIFBAMAAAAAAAAAAAEAAgMEEjERIRMUUWGxMkFxgaHR8f/aAAwDAQACEQMRAD8A8/8A1Q2b2WgbLsy4Not1udMgIcUxcw+4Br8oUrQ+VeSyWmGyCy+lxJOgGcjzyBUmbfKdOEAE92aYds09n91rcP3yK3WxuDdM91hXNDvV9f3UpAVIUx1J8LKdMgZ41c1abg4gLbjOLSfmSkkVBG4+yDpWDJSiD2VazuKcSlxW6knBV3CrVwJLSyhxBQocUq0IqKYzygMDjwqWOBwqy5pGxTiY1s6RIVcCElzdUQ2ThOONRRHt5TrcN066dGapets1tsOLZUlB1CiCAdcf7pSymXQeynOoy3yqmtuw/wAfpdHY7hDhy25AksgozooZHDurb3W/QZ7KELkxUhJz7iSK54bJTxxkwudXprPspP8AEwudXprrbNK1ttuyz5aaikkEpl3HcK3poHW1nrLe7uJwc9uVf8rf23aCNDgpjNzYwSkKABSSdTk9tc4NlZ4+phc6vTUhstO8TC51emoyaVh1DUs9NRzAB8v5C2Vym2+ZLdlOS2StepxoOGKStz8BoMurkNBSN07qhkZHfUBstO8TC51emj2WneJhc6vTQMkhOtqLYqVrLBLt8hbqdfoEmGpguxU7ySFEJVk5VvE8dNda5l5cQOHdfQR2GmzsrOP1MLnV6ax7JXA69Zhc6vTSySSyZamp4qOnBDZc9wmHLoQo+9+aiLmsgkEkDjRRQ4jlfykQGE0xtE80yGQhhaRn42wTr96ydo3CAOhiADuZFFFLeU/KRdFJO0jqUhPQxVAHI3mgcf350o5d1LcUslIKjnCRgDyFFFTiOQ5OLosC6H+X5phu5kp+KiimEjlTJSRAYX//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/233911/how-to-make-your-windows-gaming-pc-automatically-boot-to-big-picture-mode-like-a-steam-machine/" class="title" rel="bookmark">How to Make Your Windows Gaming PC Automatically Boot to Big Picture Mode (Like a Steam Machine)</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAgDBAUCBwb/xAA5EAABAgQDBQQHBwUAAAAAAAABAgMABBEhBQYSBxMxQVEIFWFxGCIjJUSR0RQyM0JVgYOVobLB4f/EABgBAAMBAQAAAAAAAAAAAAAAAAADBgUB/8QALREAAQICBwYHAQAAAAAAAAAAAQACAwQFBhETIZKxEjFSYtHSFSIkQkNhcoH/2gAMAwEAAhEDEQA/AMUdpDbelJC8NlivlpwZwinjf/vhELvaV25NA6sGaXaxbwVZ/tqj2WVyXl15S2lYWlB0oqV74JUpQJqPW4AWI5HnF1OScEDraTLS5SAddHHb0PI6rWIpx4GNKyjAbC9+UdVimJTA3Q4eZ3al9e7T233Wd1gcvp5asDcr/lHPpPdoL9DlP6I79YYBOTMG3aCZRlSlqRQhTooDWtQVW/1Fs5MywNXu7hX4ty9OkdIose9+Udy4YlMj44eZ3alz9J3tA29xSluHuR36xZ2mZxzdtM2QZcxDNMknvlnF5tC5eXlFNqQ1ob0qKKkgG9/CPe5jK2V2X9z3RMOK1ITVD7hT6xpWvCg4noIlVk/LISgnC1EKr8Uu1OvSvKHQH0ZCiB+082co6pcXxiKwsu4ePM7tSWoy/iJAph06D4y6vpEb2FTDK9280W1j8qxpPyMOsrJ2Vwkr7rUSVBBAmXK35+V+ML3trwRuU2iT8thrAEs2hoICXNYHs0k3PiTG/JTcnOvu4AdbvxA6lZEeDPyrbyY2Q3dgScf6An5gginNOYi2slmWZeRqAT7QhVOpqKfKIdWysPOttBJcURqUEixNzERn5QObsvUVUClDzNBGVPzGLuEtiVLAJHqpmUJKh58R+3MRSYOLMrbqpbiUCoKp5J1UUDe96ivHqIEL6uCMhicxlQbT3YhQJALhfSBSnE0rz6CNRoulJ3qUJNbaVE2+QgQu4UrbI8GdpOLoDLahrQaqTU3bTDawnG3d2cRtTxhLMu0tFW7qdKT+GnlSKiqJAnzbwnUKWrfDvJADmGhTjRRxdbiPsu7aeXV9IO71WFeJ0kW87QQRLqpWQRrnlLmcPnShLqwlaA9UXF/vcOlvLnFkNSZl3kM4ZMEaaneocrZXAVv42gghzfM0/SFyl3dqWXJDElLbUojdF0II1AWFaHr5RvwQQlCIUXbZLPO7TcXWhsqTqbv/ABpggipqgfXn8nUKSro8so8EcQ0K/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/" class="title" rel="bookmark">How to Run Graphical Linux Desktop Applications from Windows 10’s Bash Shell</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/218505/how-to-fax-a-document-from-your-smartphone/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABQYABAcDAf/EADcQAAEDAwIDAgwFBQAAAAAAAAECAwQFBhEAIQcSMRMUCCIjMkFCUWFxgZGhQ1KCkrEVFsHh8P/EABoBAAIDAQEAAAAAAAAAAAAAAAIEAAMFAQb/xAAiEQABBAICAgMBAAAAAAAAAAABAAIDBBEhBRITMRUycYH/2gAMAwEAAhEDEQA/ADk7jVw0pcdthuUp3s0BJCUjJI29J0lVrj9w351FmzY09zmyFPspO/t83SxSuGFtRUJdciB85/EUVZHw9B02WzaVAgONxGKIuQ8oczJipZQVJGPOU4pO4yM9TuPTnGezgYu3ZziSmTyWBhrV474Ul2SYgg25ZqAwE8qUtxiUgfLVGTxd4+10ju0VmnoIwCeQED4ddaRBt4tLCRSKXFx678lclY+LaQlP0XouilMutYmVnug9CYcZphvHv5gpQ/drQHGxAb3/AFLm88nWljCqZxruUhNUvp+K2rqlhSyB/Gk++OH14w2kLYqqK+4jPbpYldpIznqWslWPr8tb9Uq9wmtzIqU+LU3k7lD7yppSfcklQH01QneExS6TTXBbFmy5kaMAC64EsMN5OAfFCsDJGxx11HVIGj0AutszE62sQ4a27fVKlOTnqPMiQH2iHHJQEdJA3BSXCnmPuGeuiMm4fLKA5ttt+uuN0cTq9edzJq1Qo9PgtzcNtFptSGgE7EkknmVpthWdR58VEr+5HWysZKRFCh9eYaSFSxISYxkfqcF+KEYk0VTpF1U1yhxZM2XEjKKUqc5lgK5wMEY69d9VLg4rUaFDKqaZEqWwS6wtKOVAc95ODg9DgbgnWU12DORISliI46CNiB01zhWnXqn5MNFOfVSMn7aubyTegJKX+PPYgBbbRbk4r3zFRKoMBiLDcykSEpSE7HB8ZWc4IxsNH4nBq56yQ5d13SHEnzmGFKUPkVbD9uu/gvf1G2rfqNuVlKEpS93qKC4CsBQAWCAdhkJP6jrU51wMNg4I0bbHlb2ByF3weM4ISrQeENkUcJUaYma6PxJiu1z+k+L9tMVWpFCkUSRR5UZnuL7SmVtJSEjlIxt7NL9YvFtoK8qBj2HWTXjxiiMyDApy1zpilcgQ0fFCverp9M6DBcrMhvtBrmrUe2UybZhxUSW4zpbPeEJUhQB2ISR89IdQuyqOzHF96U10HIyAhIwANgND+I0yeu5pgefVlxYcBTtkEA/6+WhkaM9IjodATuN/jnQVK4rEuJ9obUonADWraKlXbciKIaZMxwfm836D/Ogk68Kg62WoqURGT6raeX+NTU156OFuMlbvY5XtjV6VAulua7IV2fYuJcUpW2CBj740z1i93n+YRyoj8x2Gpqae8zoowGJRzA9+Skev3BJdCkrfUrI6Z20n8Mqc/V7uSGo7j60pWsJSMkn/AI6mpp6gS4ElJW9YARbi9R51JrsJuoxXGHXoaXAF9SOdSc/Y6p0mmSHoSFNIykbH46mpq25poClP7Er/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/218505/how-to-fax-a-document-from-your-smartphone/" class="title" rel="bookmark">How to Fax a Document From Your Smartphone</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark">How to Find and Remove Duplicate Files on Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both;"></div>	<div style="width: 300px; min-height: 20px; margin-top: 30px;">
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<div id="htgys01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-top: 10px;"></div>
+</div>
+<div id="sidebar-float-widget">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom: 0px;"></div>
+<div class="g-page" data-width="320" data-href="//plus.google.com/100292833634918081724" data-layout="landscape" data-rel="publisher"></div>
+<div style="margin-top: 8px;">
+<a href="https://twitter.com/howtogeek" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @howtogeek</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+<div style="margin-bottom: 10px;"></div>
+<div class="fb-like" data-href="https://www.facebook.com/howtogeek" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div style="margin-bottom: 15px;"></div></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both; margin-bottom: 20px;"></div>
+<div style="clear: both;"></div>
+<div id="htgyr01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<div style="padding: 0px 20px 20px;">
+<h3 style="text-align: left; font-size: 30px; color: rgb(35, 70, 113); font-family: bebas_neueregular; text-transform: uppercase; font-weight: normal;">More Articles You Might Like</h3>
+<script async="" src="about:blank"></script>
+<!-- htg-below-article-content -->
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="8688851009" data-ad-format="autorelaxed"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="htgyl01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width: 18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="https://discuss.howtogeek.com/">Discussion Forum</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color: rgb(255, 152, 84);">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="footer" type="hidden">
+<input id="fromaddress2" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<input name="email" id="ftemtxt" style="color: rgb(187, 187, 187);" value="Enter Your Email Here" type="text">
+<input id="ftemsub" value="Get Articles by Email" style="background: none repeat scroll 0% 0% rgb(85, 168, 223);" type="submit">
+</form>
+<p></p>
+<div style="clear: both;"></div>
+</div>
+<div style="width: 280px; float: left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/howtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left; margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="font-style: italic; font-size: 11px; text-align: center;">Disclaimer: Most of the pages on the internet include affiliate links, including some on this site.</div>
+<br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2016 How-To Geek, LLC&nbsp; All Rights Reserved</div>
+</div>
+</div><script src="about:blank" id="pocket-btn-js"></script>
+<style>
+/* Code tidied up by ScrapBook */
+#subscribeoverlay { background: url("urn:scrapbook-download:8b6b492d-34e3-4701-bbe3-7e39dce5ae7b") no-repeat scroll 0% 0% transparent; }
+#emailoverlaylist { color: rgb(34, 34, 34); }
+#emailoverlayformbutton { background: none repeat scroll 0% 0% rgb(111, 198, 255); }
+#emailoverlayformbutton:hover { background: none repeat scroll 0% 0% rgb(41, 167, 250); }
+#emfh2 { color: rgb(0, 0, 0); top: 100px; }
+</style>
+<div class="overlay-bg">
+<div id="subscribeoverlay">
+<a href="#" id="ovclose"></a>
+<h2 id="emfh2"></h2>
+<div id="emftag"></div>
+<ul id="emailoverlaylist">
+<li>Get exclusive articles before everybody else.</li>
+<li>Get downloadable ebooks for free!</li>
+<li>Get geeky trivia, fun facts, and much more.</li>
+</ul>
+<form id="emailoverlayform" method="GET" action="http://www.howtogeek.com/em/subscribe">
+<p>
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="overlay1" type="hidden">
+</p><p id="emoflbl" style="position: absolute; left: 20px; top: 240px; font-weight: bold; font-size: 120%; color: rgb(0, 0, 0);">Enter Your Email Here to Get Access for Free:</p>
+<input style="color: rgb(187, 187, 187);" id="overlayfrom" name="email" value="Enter Your Email Here" type="text">
+<input id="emailoverlayformbutton" value="Get Free Content Now" style="" type="submit">
+<p></p>
+</form>
+<div id="overlayformsuccess">Go check your email!</div>
+<img id="overlayimage" style="position: absolute; left: -9000px; top: -9000px;" src="urn:scrapbook-download:0e88be23-67b7-4137-a7d2-e5d25c62832b">
+</div>
+</div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Begin comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<!-- Quantcast Tag -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+
+</body>
+</html>

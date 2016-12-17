@@ -1,0 +1,25 @@
+/* Code tidied up by ScrapBook */
+* { margin: 0px; }
+html, body { height: 100%; font-family: 'Open Sans',sans-serif; font-size: 22px; line-height: 130%; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Open Sans',sans-serif; font-weight: 500; margin: 0px 0px 23px; }
+h1 { font-size: 40px; line-height: 46px; }
+p { line-height: 1.55em; margin: 0px 0px 23px; text-align: justify; }
+.noborder { border: 0px none transparent; }
+.navbar-nav li { border-right: 1px solid rgb(255, 255, 255); margin-top: 20px; margin-bottom: 20px; background: none repeat scroll 0% 0% transparent; padding: 10px; font-family: 'Open Sans',sans-serif; font-size: 16px; line-height: 18px; text-transform: uppercase; }
+.navbar-nav li a:link, .navbar-nav li a:visited, .navbar-nav li a:active { color: rgb(255, 255, 255); }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: rgb(117, 58, 0); }
+.navbar-nav > li > a { padding-top: 0px; padding-bottom: 0px; }
+.orange { background-color: rgb(234, 125, 36); }
+button { border: 0px none; background: none repeat scroll 0% 0% rgb(234, 125, 36); padding: 10px; color: rgb(255, 255, 255); font-size: 1em; }
+button:hover { background: none repeat scroll 0% 0% rgb(117, 58, 0); }
+.post-meta { font-family: 'Open Sans',sans-serif; font-size: 18px; line-height: 23px; margin: 0px 0px 23px; }
+article a { color: rgb(115, 158, 159); }
+article a:hover { color: rgb(43, 62, 63); }
+article { width: 100%; }
+.post-content img { display: block; max-width: 100%; height: auto; padding: 0.6em 0px; position: relative; left: 50%; transform: translateX(-50%); }
+code, tt { padding: 1px 3px; font-family: Inconsolata,monospace,sans-serif; font-size: 0.85em; white-space: pre-wrap; border: 1px solid rgb(227, 237, 243); background: none repeat scroll 0% 0% rgb(247, 250, 251); border-radius: 2px 2px 2px 2px; }
+aside { margin-bottom: 100px; }
+aside a { font-size: 0.8em; color: rgb(115, 158, 159); }
+aside a:hover { color: rgb(43, 62, 63); }
+.fa-icon-left { margin-right: 10px; }
+.fa-icon-right { margin-left: 10px; }

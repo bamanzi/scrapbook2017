@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <title>Working with Bash on Ubuntu on Windows 10</title>
+        <meta name="description" content="">
+        <meta name="generator" content="Bootply">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+        <link rel="shortcut icon" href="favicon.png">
+    
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+        <link href="css.dat" rel="stylesheet" type="text/css">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="canonical" href="https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/">
+    <meta name="referrer" content="origin-when-cross-origin">
+    
+    <meta property="og:site_name" content="Christos Matskas">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Working with Bash on Ubuntu on Windows 10">
+    <meta property="og:description" content="Yes, the title reads right. I'm talking about running Bash, the Unix Shell on Windows. Well, on the Ubuntu subsystem running inside the Windows 10 OS. It's a bit weird, I know. And yet so cool and forward thinking.  If you need more info about how this works, you can">
+    <meta property="og:url" content="https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/">
+    <meta property="article:published_time" content="2016-10-06T17:48:51.000Z">
+    <meta property="article:modified_time" content="2016-10-06T17:48:51.000Z">
+    <meta property="article:tag" content="Open Source">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Windows 10">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Working with Bash on Ubuntu on Windows 10">
+    <meta name="twitter:description" content="Yes, the title reads right. I'm talking about running Bash, the Unix Shell on Windows. Well, on the Ubuntu subsystem running inside the Windows 10 OS. It's a bit weird, I know. And yet so cool and forward thinking.  If you need more info about how this works, you can">
+    <meta name="twitter:url" content="https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Christos Matskas">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Open Source, Linux, Windows 10">
+    
+    <script src="about:blank" async=""></script><script type="application/ld+json">/* Code removed by ScrapBook */</script>
+
+    <meta name="generator" content="Ghost 0.9">
+    <link rel="alternate" type="application/rss+xml" title="Christos Matskas" href="https://cmatskas.com/rss/">
+        <script>/* Code removed by ScrapBook */</script>
+    
+        <script type="text/javascript">/* Code removed by ScrapBook */</script><script async="" src="about:blank" type="text/javascript"></script>
+    <script data-timestamp="1481950548803" src="about:blank"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style></head>
+    <body class="post-template tag-open-source tag-linux tag-windows-10 nav-closed">
+    
+        <div class="navbar navbar-default navbar-static-top orange noborder">
+    <div class="container">
+        <div class="navbar-header noborder">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#custom-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+             </button>
+        </div>
+        <div class="collapse navbar-collapse" id="custom-navbar">
+            <ul class="nav navbar-nav">
+                    <li class="" role="presentation"><a href="https://cmatskas.com/">Home</a></li>
+                    <li class="" role="presentation"><a href="https://cmatskas.com/about/">About</a></li>
+                    <li class="" role="presentation"><a href="https://cmatskas.com/speaking/">Speaking</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+        <div class="site-wrapper">
+            
+
+
+<div class="container">
+    <div id="maincontent">
+        <section class="col-md-12">
+            <main role="main">
+            <article class="post tag-open-source tag-linux tag-windows-10">
+                <header class="post-header">
+                    <h1 class="post-title">Working with Bash on Ubuntu on Windows 10</h1>
+                    <section class="post-meta">
+                        <time class="post-date" datetime="2016-10-06">06 October 2016</time>
+                        <span style="background: none repeat scroll 0% 0% rgb(202, 196, 198); font-weight: 700; font-size: 20px;">&nbsp;<a href="#disqus_thread"> Comments</a>&nbsp;</span>
+                        Posted in <a href="https://cmatskas.com/tag/open-source/">Open Source</a>, <a href="https://cmatskas.com/tag/linux/">Linux</a>, <a href="https://cmatskas.com/tag/windows-10/">Windows 10</a>
+                    </section>
+                </header>
+        
+                <section class="post-content">
+                    <p>Yes, the title reads right. I'm talking about running <strong><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" target="_blank">Bash</a></strong>, the Unix Shell on Windows. Well, on the Ubuntu subsystem running inside the Windows 10 OS. It's a bit weird, I know. And yet so cool and forward thinking. </p>
+
+<p>If you need more info about how this works, you can check <strong><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about" target="_blank">this MSDN article</a></strong> that also provides links to related posts. And these people have done a great job explaining in depth how it all hangs together. They also provide installation and usage instructions which are miles better than mine. </p>
+
+<p>But I'm too excited not to share. Because today, this addition to Windows made my life so much easier. I was able to work with the native tools to manage a Linux cluster. By now, my past self would be horrified with the sentence I just wrote because I hadn't touched Linux for a very long time. Let alone deploy and manage a Linux cluster on Azure! And I did it all through the command line. I was even offered the option to perform the same tasks through the GUI but I ignored it! I still chose the command line as it was faster! </p>
+
+<p>The fact that got me so excited is that I was able to perform some really complex workloads all through the command line (OK, and a little bit of Visual Studio Code). It was faster and easier all together, even with the learning curve involved. What tasks did I perform you may ask?</p>
+
+<ol>
+<li>I forked the [Azure Quick Start Template() GitHub repo  </li>
+<li>Copied it locally (<code>git pull</code>)  </li>
+<li>Edited the necessary ARM template in VS Code  </li>
+<li>Saved and push my changes to the remote (<code>git push</code>)  </li>
+<li>Run the ARM template with Powershell  </li>
+<li>Installed the MySQL client on Ubuntu through bash  </li>
+<li>Logged into the newly deployed MySQL cluster using the MySQL client  </li>
+<li>Tested the cluster failover from the command line  </li>
+<li>Queried the database, created tables and inserted records  </li>
+<li>I ssh(ed) into both the VMs to ensure that MySQL replication was working as expected  </li>
+<li>Wiped out the cluster after I was satisfied with the results!</li>
+</ol>
+
+<p>I didn't have to install <strong>Putty</strong> or <strong>Cygwin</strong> nor did I have to enable <strong>HyperV</strong> and install <strong>Ubuntu</strong> or another <strong>Linux</strong> distro (flavour). </p>
+
+<p>It's one of these times that I felt empowered to do what I need without having to jump through 20 hoops or rely on 3rd party, half-baked solutions. It's all about using the right tool for the right job! And for this instance, we have the Windows team to thank. Because they made the Linux subsystem part of the native Windows toolchain. And it looks like this:</p>
+
+<p><img src="bash-on-ubuntu-on-windows.gif" alt=""></p>
+
+<p>If you haven't tried it yet, I urge you to give it a go and hopefully you'll feel as elated as I did today (apart from the fact that I suck in using bash/cmd/powershell).</p>
+                </section>
+                
+                <section class="follow-me" style="margin-top: 50px; margin-bottom: 30px;">
+                    <strong><i>P.S. Make sure you follow me on Twitter <a href="https://twitter.com/christosmatskas">@christosmatskas</a> for more up-to-date news, articles and tips.</i></strong>
+                </section>
+                <hr>
+                <footer>
+                    <section class="text-right">
+                        <ul class="list-unstyled list-inline">
+                            <li>Share this post on </li>
+                            <li>
+                                <a href="https://twitter.com/share?text=Working%20with%20Bash%20on%20Ubuntu%20on%20Windows%2010&amp;url=https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/">
+                                <i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/">
+                                <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/&amp;title=Working%20with%20Bash%20on%20Ubuntu%20on%20Windows%2010&amp;source=cmatskas.com">
+                                <i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://cmatskas.com/working-with-bash-on-ubuntu-on-windows-10/"><i class="fa fa-google-plus" "=""></i></a></li>
+                        </ul>
+                    </section>
+                </footer> 
+            </article>
+        </main>
+        
+        <aside class="row">
+            <div class="col-xs-12 col-md-5 text-left">
+                <a href="https://cmatskas.com/unit-testing-with-net-core/"><i class="fa fa-arrow-circle-o-left fa-icon-left"></i>Unit testing with .NET Core</a>
+            </div>
+            <div class="col-xs-12 col-md-2 text-center">
+                <a href="https://cmatskas.com/">Blog Home</a>
+            </div>
+            <div class="col-xs-12 col-md-5 text-right">
+                <a href="https://cmatskas.com/the-new-azure-management-fluent-api-is-has-landed/">The new Azure Management Fluent API has landed<i class="fa fa-arrow-circle-o-right fa-icon-right"></i></a>
+            </div>    
+        </aside>
+        
+        <div id="disqus_thread"></div>
+        </section>
+    </div>
+    <script type="text/javascript">/* Code removed by ScrapBook */</script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+    
+        <!-- You can safely delete this line if your theme does not require jQuery -->
+<script type="text/javascript" src="about:blank"></script>
+    
+        <script type="text/javascript" src="about:blank"></script>
+        <script type="text/javascript" src="about:blank"></script>
+        <script type="text/javascript" src="about:blank"></script>
+        <script src="about:blank"></script>
+        <script id="dsq-count-scr" src="about:blank" async=""></script>
+    
+
+</div></body>
+</html>

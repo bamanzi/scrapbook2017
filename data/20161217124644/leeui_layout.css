@@ -1,0 +1,9 @@
+/* Code tidied up by ScrapBook */
+.box { display: flex; }
+.box.justify { justify-content: space-between; -moz-box-pack: justify; }
+.vertical { align-items: center; }
+.baseline { align-items: baseline; }
+.horizontal { justify-content: center; }
+.box-fl { transition: width 0.2s ease 0s; order: 1; }
+.box-fr { transition: width 0.2s ease 0s; order: 3; }
+.box-aw { min-width: 0px; transition: width 0.2s ease 0s; order: 2; flex: 1 1 0%; }

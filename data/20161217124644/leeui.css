@@ -1,0 +1,26 @@
+/* Code tidied up by ScrapBook */
+*, *:before, *:after { box-sizing: border-box; }
+html { font-size: 16px; }
+body { font: 16px/1.618 'PingFang SC','Helvetica Neue','Microsoft YaHei UI','Microsoft YaHei','Noto Sans CJK SC',sans-serif; margin: 0px; }
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { display: block; }
+a { background-color: transparent; }
+a:active, a:hover { outline-width: 0px; }
+b, strong { font-weight: inherit; }
+b, strong { font-weight: bolder; }
+h1 { font-size: 2em; margin: 0.67em 0px; }
+img { border: medium none; outline: medium none; }
+svg { display: block; }
+svg:not(:root) { overflow: hidden; }
+code, kbd, pre, samp { font-family: monospace,monospace; font-size: 1em; }
+hr { overflow: visible; box-sizing: content-box; height: 0px; }
+button, input, select, textarea { font: inherit; margin: 0px; outline: medium none; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button, html [type="button"], [type="reset"], [type="submit"] {  }
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { padding: 0px; border-style: none; }
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted buttontext; }
+textarea { overflow: auto; }
+[type="button"] { border: medium none; outline: medium none; }
+[type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0px; }
+ul { margin: 0px; padding: 0px; list-style: none outside none; }
+a { text-decoration: none; outline: medium none; }

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html itemtype="http://schema.org/Article" itemscope="">
+<head>
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>How to Update the Windows Bash Shell to Ubuntu 16.04</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="How to Update the Windows Bash Shell to Ubuntu 16.04">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="Starting with the&nbsp;Windows 10 Creators Update, which comes out this spring, anyone&nbsp;who installs&nbsp;the Bash environment will get Ubuntu 16.04 (Xenial). But, if you’ve previously installed Bash in the Anniversary Update, you’ll be stuck with Ubuntu 14.04 (Trusty) until you manually upgrade.">
+<meta property="og:image" content="http://www.howtogeek.com/thumbcache/280/160/20fedddf3b231766d9ca52f61c45cb21/wp-content/uploads/2016/10/img_58111dcfcd1da.png">
+<link rel="image_src" href="http://www.howtogeek.com/thumbcache/280/160/20fedddf3b231766d9ca52f61c45cb21/wp-content/uploads/2016/10/img_58111dcfcd1da.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@howtogeek">
+<meta name="twitter:title" content="How to Update the Windows Bash Shell to Ubuntu 16.04">
+<meta name="twitter:description" content="Starting with the&nbsp;Windows 10 Creators Update, which comes out this spring, anyone&nbsp;who installs&nbsp;the Bash environment will get Ubuntu 16.04 (Xenial). But, if you’ve previously installed Bash in the Anniversary Update, you’ll be stuck with Ubuntu 14.04 (Trusty) until you manually upgrade.">
+<meta name="twitter:image:src" content="http://www.howtogeek.com/thumbcache/280/160/20fedddf3b231766d9ca52f61c45cb21/wp-content/uploads/2016/10/img_58111dcfcd1da.png">
+<link rel="stylesheet" href="A.howtogeek.css,q1466298260.pagespeed.gp+jp+jw+pj+ec+ei+fc+if+ii+js+rj+rp+rw+ri+cp+md.cf.8phhU3MPa4.css" type="text/css">
+<link href="css.dat" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script type="text/javascript" async="" src="about:blank"></script><script src="about:blank" async=""></script><script src="about:blank" async=""></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" id="facebook-jssdk"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style>	<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="http://www.howtogeek.com/wp-json/">
+<link rel="shortlink" href="http://www.howtogeek.com/?p=278152">
+<link rel="alternate" type="application/json+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F278152%2Fhow-to-update-the-windows-bash-shell%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F278152%2Fhow-to-update-the-windows-bash-shell%2F&amp;format=xml">
+<link rel="canonical" href="http://www.howtogeek.com/278152/how-to-update-the-windows-bash-shell/">
+<meta property="og:url" content="http://www.howtogeek.com/278152/how-to-update-the-windows-bash-shell/"><link rel="amphtml" href="http://www.howtogeek.com/278152/how-to-update-the-windows-bash-shell/amp/">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script></head>
+<body class="v3">
+<div style="text-align: center; min-height: 90px; z-index: 999999; margin-right: auto; margin-left: auto; position: relative;" class="adslot adslot970">
+<div id="htgyl11">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader" style="border-top: 4px solid rgb(23, 34, 50);">
+<div class="logo" style="">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek"></a>
+<div style="float: right; width: 450px;">
+<ul class="bigmenu">
+<li class="menubaritem">Articles <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu">
+<div class="subMenuArticles">
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" align="left" class="title" rel="bookmark"><span><img src="x2016-11-29_0011-650x301.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.SxnaVW3yQQ.jpg"></span></a>
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" class="title" rel="bookmark">Amazon Echo vs. Google Home: Which One Should You Buy?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" align="left" class="title" rel="bookmark"><span><img src="ximg_58474603a5af0.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.CniLY6LxMR.jpg"></span></a>
+<a href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" class="title" rel="bookmark">How to Create a Live Ubuntu USB Drive With Persistent Storage</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" align="left" class="title" rel="bookmark"><span><img src="ximg_5840cd6f52437.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.ASJFBqYVSu.jpg"></span></a>
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" class="title" rel="bookmark">Does Brand Really Matter When Buying a Hard Drive?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" align="left" class="title" rel="bookmark"><span><img src="xfake-reviews-amazon-yelp.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.efpYlWnttb.jpg"></span></a>
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" class="title" rel="bookmark">How to Spot Fake Reviews on Amazon, Yelp, and Other Sites</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li>
+<li class="menubaritem">Subscribe <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu" style="padding-bottom: 10px;">
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>FOLLOW US</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/howtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom: 20px;">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="topmenu" type="hidden">
+<input id="fromaddress" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<p style="font-family: 'Open Sans'; text-transform: none;">Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input id="from" name="email" value="Enter Your Email Here" style="width: 200px; color: rgb(187, 187, 187); margin-left: 59px; font-family: 'Open Sans'; text-transform: none;" type="text"><input id="sub1" name="sub1" value="Get Your Newsletter Now" style="background: none repeat scroll 0% 0% rgb(85, 168, 223); margin-left: 59px; width: 212px; margin-top: 6px; font-family: 'Open Sans'; text-transform: none;" type="submit"></p>
+<div style="clear: both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>RSS</h4>
+<ul style="width: 130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menubaritem">Search <span class="icon-magnifying-glass" style="padding-left: 10px; font-size: 16px;"></span>
+<div class="subMenu" style="padding: 20px; text-align: center;">
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input name="q" id="s" value="" style="width: 900px; height: 40px; line-height: 40px; border: 1px solid rgb(204, 204, 204);" type="text">
+<input id="searchsubmit" value="Go" style="height: 42px; border: 1px solid rgb(204, 204, 204); font-family: 'Open Sans'; font-size: 16px; padding: 10px; background: none repeat scroll 0% 0% rgba(196, 230, 237, 0.99); border-radius: 0px 5px 5px 0px;" type="submit">
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display: none;">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-278152">
+<style>
+/* Code tidied up by ScrapBook */
+.thecontent > pre { text-align: left; clear: both; margin: 0px 0px 10px; border: 1px dashed rgb(47, 111, 171); color: rgb(0, 0, 0); background-color: rgb(249, 249, 249); line-height: 1.1em; font-family: monospace; max-width: 618px; padding: 20px 10px; overflow-x: auto; }
+</style>
+<h2 style="margin-top: 10px;"><a style="font-family: 'Open Sans',sans-serif;" href="#" rel="bookmark" title="How to Update the Windows Bash Shell to Ubuntu 16.04">How to Update the Windows Bash Shell to Ubuntu 16.04</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img class="alignnone size-full wp-image-278167" alt="" src="ximg_58111dcfcd1da.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.HdkBnr1TUv.png"></p>
+<p>Starting with the&nbsp;<a href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/">Windows 10 Creators Update</a>, which comes out this spring, anyone&nbsp;who installs&nbsp;<a href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">the Bash environment</a> will get <a href="http://www.howtogeek.com/251647/ubuntu-16.04-makes-ubuntu-exciting-again/">Ubuntu 16.04 (Xenial)</a>. But, if you’ve previously <a href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">installed Bash</a> in <a href="http://www.howtogeek.com/248177/whats-new-in-windows-10s-anniversary-update/">the Anniversary Update</a>, you’ll be stuck with Ubuntu 14.04 (Trusty) until you manually upgrade.</p>
+<p>Ubuntu 16.04 contains&nbsp;more modern, up-to-date software packages. Ubuntu 14.04 was originally released in April, 2014, while Ubuntu 16.04 was released in April, 2016.</p>
+<div class="relatedfull"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLES</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 0px;"><div style="clear: both;"><div class="leftitem" style="float: left; width: 310px; margin-right: 20px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/"><img src="ximg_57a14ed2a0cec.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.N3ROesx6Ps.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">Everything You Can Do With Windows 10’s New Bash Shell</a></span></div><div class="leftitem" style="float: left; width: 310px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/">What’s New in Windows 10’s Creators Update, Arriving Spring 2017</a></span></div><div style="clear: both;"> </div></div></div><div style="clear: both;"> </div></div>
+<div id="div-thetop1" style="margin-top: 5px; margin-bottom: 15px;">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script async="" src="about:blank"></script>
+<!-- htg-desktop-top -->
+<ins class="adsbygoogle" style="display: inline-block; width: 650px; height: 141px;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="1477883008"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<h3>Ubuntu 16.04&nbsp;Requires the Creators Update</h3>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/">What’s New in Windows 10’s Creators Update, Arriving Spring 2017</a></span><div style="clear: both;"></div></div></div>
+<p>Using Ubuntu 16.04 in Windows 10’s Bash shell requires the Creators Update, which is only available in Insider Preview form at the moment.</p>
+<p>While you can go out of your way to forcibly upgrade the Ubuntu shell to 16.04 on Windows 10’s Anniversary Update, it’s not a good idea. The underlying Windows Subsystem for Linux doesn’t fully support Ubuntu 16.04 in the Anniversary Update, so some things just won’t work properly.</p>
+<p>In the Creators Update, the Windows Subsystem for Linux has been updated to support Ubuntu 16.04. If you haven’t installed Bash yet, you’ll get Ubuntu 16.04 when you do. If you previously installed Bash, Windows will leave your Bash environment alone and you’ll have to go out of your way to upgrade it.</p>
+<h3>How to Check Which Version of Ubuntu&nbsp;You Have</h3>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/"><img src="ximg_57a14ed2a0cec.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.N3ROesx6Ps.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">Everything You Can Do With Windows 10’s New Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>If you’re not sure which version of Ubuntu is being used in your current Bash environment,&nbsp;open a Bash window and run the following command:</p>
+<pre>lsb_release -a</pre>
+<p>It’ll show you whether you’re running Ubuntu 14.04 or Ubuntu 16.04. If you’re running Ubuntu 14.04 and want to upgrade, read on.</p>
+<p><img class="alignnone size-full wp-image-278160" alt="" src="ximg_5811134b38e2d.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.OzNLz5Jm_S.png"></p>
+<h3>Option One: Uninstall and Reinstall Bash With lxrun</h3>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/"><img src="ximg_5775d608ceb5e.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.Ua3E4lazFz.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/">How to Uninstall (or Reinstall) Windows 10’s Ubuntu Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>If you don’t care about any customizations you’ve made to your bash environment (or you’re prepared to customize it again), you don’t have to worry about performing an Ubuntu upgrade. You can simply <a href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/">remove&nbsp;your current Ubuntu image</a>&nbsp;and then tell Windows to reinstall a new Ubuntu image. This is the fastest way to upgrade your Bash environment.</p>
+<p>To do this, first open a Command Prompt window by right-clicking the Start button or pressing Windows+X on your keyboard and selecting “Command Prompt”. Run the following command to uninstall the Bash shell. This will keep your Linux user account’s files and preferences, but will erase the system files, including any installed programs and system-level settings changes.</p>
+<pre>lxrun /uninstall</pre>
+<p>Type “y” to continue and Windows will uninstall the Ubuntu 14.04 Bash environment.</p>
+<p><img class="alignnone size-full wp-image-278162" alt="" src="ximg_58111ad18a2a3.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.gQGBtMA9UW.png"></p>
+<p>Your Bash system files are now removed. To reinstall Bash–which will give you Ubuntu 16.04 instead of Ubuntu 14.04–run the following command:</p>
+<pre>lxrun /install</pre>
+<p>Type “y” to continue and Windows will install the Ubuntu 16.04 Bash environment. Windows will automatically suggest you use the same username you used previously.&nbsp;You’ll be asked to enter a password after.</p>
+<p><img class="alignnone size-full wp-image-278164" alt="" src="ximg_58111bf627deb.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.1q51BQawXa.png"></p>
+<p>When it’s done, run the <code>lsb_release -a</code> command once again and you’ll see you’re now using Ubuntu 16.04. You have access to the newer&nbsp;software available in Ubuntu 16.04’s package repositories.</p>
+<p><img class="alignnone size-full wp-image-278165" alt="" src="ximg_58111c2348db2.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.dYon7_lIts.png"></p>
+<h3>Option Two: Upgrade Ubuntu With do-release-upgrade</h3>
+<p>If you’ve customized your Bash environment and installed software, you may not want to completely erase everything. In this case, you can perform an upgrade command from within the Bash shell. This will upgrade Ubuntu from version 14.04 to 16.04, just like you’d upgrade a full Ubuntu environment to a new release. However, this will take longer than simply removing and reinstalling the Bash files.</p>
+<p>To do this, open the Bash shell and run the following command:</p>
+<pre>sudo do-release-upgrade</pre>
+<p>At the moment, this command doesn’t seem to work for us. The command can’t find a new release of Ubuntu, which means Ubuntu’s&nbsp;servers aren’t offering&nbsp;the new version to Ubuntu systems running on Windows…yet.</p>
+<p>However, this is&nbsp;the process <a href="https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14936">officially recommended</a> by Microsoft, so we’ve included it here for completion’s sake.&nbsp;In theory, it should work in the future. Perhaps Microsoft and Canonical have some work to do before it will.</p>
+<p><img class="alignnone size-full wp-image-278161" alt="" src="ximg_581119cd09024.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.g3ZZywHZbQ.png"></p>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear: both; height: 0px;"></div>
+<!-- discourse comments begin -->
+<style>
+/* Code tidied up by ScrapBook */
+#discusslink { color: rgb(88, 88, 88); text-decoration: none; }
+#discusslink:hover { color: rgb(0, 0, 255); text-decoration: none; }
+</style>
+<div style="max-width: 650px; width: 100%; padding-top: 10px;"><span style="font-family: bebas_neueregular; font-size: 19px; position: relative; top: -9px; padding-right: 10px; float: left; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(134, 134, 134);"><a id="discusslink" href="#">JOIN THE DISCUSSION (2 REPLIES)</a></span><div style="border-top: 4px solid rgb(204, 204, 204);"></div></div>
+<div id="discusscomments" style="display: none;"><style>
+/* Code tidied up by ScrapBook */
+</style>
+<div style="clear: both;"></div>
+<div id="discourselink">
+<h3 id="reply-title"><a href="https://discuss.howtogeek.com/t/how-to-update-the-windows-bash-shell-to-ubuntu-16-04/53159">Got Feedback? Click Here to Join the Discussion</a></h3>
+</div>
+</div>
+<div style="clear: both; height: 0px;"></div>
+<div id="socialmediabuttons" style="margin-bottom: 0px;">
+<div id="fb-root"></div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="fb-like" data-href="http://www.howtogeek.com/278152/how-to-update-the-windows-bash-shell/" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+</div>
+<div style="padding-right: 20px; float: left;">
+<div class="g-plusone" data-size="tall"></div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-right: 20px; float: left;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.howtogeek.com/278152/how-to-update-the-windows-bash-shell/" data-via="howtogeek" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="postiddiv" post="278152"></div>
+<div style="clear: both;"></div>
+<div class="articleExtras" style="background: none repeat scroll 0% 0% rgb(254, 254, 254); border-top: medium none;">
+<div style="width: 450px; float: left;" id="authorinfobox">
+<p style="font-weight: normal; color: rgb(51, 51, 51);"><a href="http://www.howtogeek.com/author/chrishoffman/"><b>Chris Hoffman</b></a> is a technology writer and all-around computer geek. He's as at home using the Linux terminal as he is digging into the Windows registry.
+Connect with him on <a href="https://plus.google.com/107865379603964146316?rel=author">Google+</a>.</p>
+</div>
+<div style="width: 130px; float: right;">
+<ul class="normul" style="margin-bottom: 6px;">
+<li>Published 10/28/16</li>
+<!--<li><span id="pv3"></span></li>-->
+</ul>
+<div style="margin-left: -14px;"><a href="https://twitter.com/chrisbhoffman" class="twitter-follow-button" data-show-count="false"></a></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div class="below-post-features" style="width: 650px; overflow: hidden; max-height: 250px; margin-bottom: 20px;">
+<div id="outbrain-below-article" style="">
+<style>
+/* Code tidied up by ScrapBook */
+.below-post-features:hover { box-shadow: 0px 0px 3pt 2pt rgb(98, 128, 156); }
+#sb3 { padding-top: 0px; }
+.content { padding-bottom: 0px; margin-bottom: 0px; }
+</style>
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+</div>
+<div style="width: 100%; max-width: 650px; margin-bottom: 0px;">
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="yui-u">
+<div class="sidebar">
+<div style="margin-top: 24px; clear: both;"></div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding: 10px;"><p>In 1923, horse jockey Frank Hayes suffered a heart attack in the midst of a race at Belmont Park, New York; his horse finished the race and, in the process, made Hayes the only jockey in history to win a race posthumously.</p>
+</div>
+</div>
+<div id="side78"><div id="htgyr11">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>	<div class="sidebar-glossary lazyloaddiv">
+<style>
+/* Code tidied up by ScrapBook */
+</style>
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/226091/how-to-opt-out-of-personalized-ads-on-any-smartphone-tablet-or-pc/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAEHAwUGBAL/xAAxEAABAwMCAwYDCQAAAAAAAAABAgMEAAYRBQcSIUETIjEyUZEIsbIUI2FxdIShoqP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAbEQEAAgMBAQAAAAAAAAAAAAAAAQIREhMhUf/aAAwDAQACEQMRAD8AuuPuJpb2Ps8XXpR9GNFlrz7N17m7zkOD7m0bud/PR3W/rCatGprHOq5lWSLl19XONt5dDh6cSYzQ/u8K+zql8v8ANG3MxHoZGqRE/StVWTU051NpV21K3NIwxaOjR/1GuH5IZVUqi7rP+aPZsf8AdyHsf5Iqw6U51+LtKtnLc3OkjDlwWpFHq3pj7pHu8msJsG/FniXuJASo9EW8Mfy8TVn0rWsfE2lFTSlVClKUClRU0ClYX5UZgZfkMtD1WsD514HLjt5tRS5r2loUOipaAfnQUDIu7dZcdx1q6pailJUEsW2w2TgeA7Rw1XWmXd8VFxNKfgT3Uxi4tCVliCzjhUUkEFIIIIII6EUpVvOIyxWZmWquTWfiL0+YI+rX0qCOxLzriprTaEIBwpRKcZ4eWQnJ7w5c65XXbu3FahvPq3zXMcQMiPD1aWFueoHdSnPj1pSrX1XJ2Xrl+3lc7GjytwblQXULWVqkyHsBIz5UqJPtXbx9uNRnPvMTrpuma4Hi02WorykL5AglSk4QOeDxY8D0xlStMy2UXY59ESO8/E1eU8HSX2y8zwlHexwq7ZBJ8viE9a20PZ2E5HStVsNtE57kmW8HBz69nJUn8eRpSsZ9V//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/226091/how-to-opt-out-of-personalized-ads-on-any-smartphone-tablet-or-pc/" class="title" rel="bookmark">How to Opt Out of Personalized Ads on Any Smartphone, Tablet, or PC</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/228367/how-to-find-out-exactly-when-it-will-rain-and-when-it-will-stop/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgMAAwEAAAAAAAAAAAAAAAcEBQYBAwgC/8QALxAAAgEDAwIFAgUFAAAAAAAAAQIDBAURAAYSITEHE0FRYXGBCBQiI5EVMnKC0f/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQAE/8QAHBEBAQACAwEBAAAAAAAAAAAAAQACEQMhMRIy/9oADAMBAAIRAxEAPwBube8BduQ1ImqKup89G5K0PJFI/wBl6/Y6sx4TOyVKUt+ZYs4EIXkpIPZu3xqJtnxHoNuWWG23SaPzKWHCySEs0vX0IzkfPxqVtvxb/rF2mpVpqFEVC0ciuxMhz2A6dcffS+n2OsfLDfiLrq/bENutVPaqeOFoetdHTCMO2eqjHQ4GO/XvpRU9TXXClUT16rk5YyPgfU6avjRdaDdhFHSi7vWTTftwkMYQR0yoPTOPQaW67TrbRCy3GCZH5/p5LgED/utOQSHwjV9rqK231DCd1enJw6YGXX2z3xpgbavmyLnUm1y23y+K5ZquudcnsAgVDn6d9Lu/yGlp1kMOORA447a5tjULPFWTCSOKNgzNFjmD6Yzpe9t3nRO6/wDh1tS6PDNSRT00KqOcqtyUnHt7Z6dNLrcG3tn2y4flZrrKsgQFgIicZ+2rekv1Xb6cQ010nehdVdjIvFsH0OeQJ0tt8VL1W4p6hKdkRwCo5Z6dvTA9PTQxGSlQV12neGKR3yyjizg9SPTWioPE42aw1FmoLXbZo5kINTND++GPqHB5DHpgjt9cpw3B5CCZmOOwzr6jnMjheR+2vR8mtNDaPUyrT4hblpzHHRXSojKMGUhuoI7ddPvYlJuK7bZS47gepq6mrblE0gWQhPQqcHiP415bsdTQUrI8kHmyq4J5OeJHt0I16M2t4jbxba8NZGtult0WIyeUZeFQB+krksRjt3OB1wNQ5XX5KuBvpbR3bZYr2X83Ql/1BVV3AJPsATqvg2dbrYzqKGJixBIYh+3p37axO+N91N4QSUl1p1jRA7QeYUkEgyCwKqAehIxk9PnWFtu9Lhb+awyyOpk8xubkgj21gcmRauGLOK7UFsgp+L29FAyWPcfbPbWWrLXY55fMZWGR0yD21RXLfT1lNIZqpRIW5BVB4t8deoA1QVO9pZZSzsAQMYAwBjWGPJq5cJNzVsLgBKcIfcHXUKwrnBYfQ6NGr71HW7shrSDkSNnV9bLtIo4+c2Do0aQwyNU564uhzIf51AmuJU4MmD9dGjSp0Oa8rH/dIzfA66gyX9yxxF0/y0aNTcmvhxiX/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/228367/how-to-find-out-exactly-when-it-will-rain-and-when-it-will-stop/" class="title" rel="bookmark">How to Find Out Exactly When It Will Rain and When It Will Stop</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark">How to Use All of Windows 10’s Backup and Recovery Tools</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" border="0" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABgcAAwgCBAX/xAAzEAABAwMCAggFAwUAAAAAAAABAgMEAAURBhIhMQcIExQiQWGBMlFxcpMVRMFSVGKRof/EABgBAAMBAQAAAAAAAAAAAAAAAAECAwUE/8QAHxEAAgICAQUAAAAAAAAAAAAAAAECAxExIQQTIiNB/9oADAMBAAIRAxEAPwDV0P8AcHPnVt0bS5D2LAKcjIPI1XC5P/cal/kx40RIecAUpQ2NgFS148kpHE+woS0GOxMzGNA267/qSp0VDjzqkMbfg3IPjHDzB5ii7oheUnUF9j7CWX0syGVIRhAGCDn1Oc+1C3SJcbvp64W3DFukwlqdJR2aQ4hZ8W5QJxtA5keLOPcGa1je2paJMS7TISbhvKiwRk7DgE5GeOeH0rgpj7DV6jHZyzVqasHKspztQ6zDfaIveoH0nzZm/wAAg0b9VvWt2vs/U1ivUqa+7EdRIjd8WpTqUHKFA7uIGUpOP8jWgZWB6OHDaj6GhDRt8RqLTzF2RGEdLqnEhsqKiNqynn7UXL4oUPQ0ttMag0ppyzNWuRdbTBUhbigwiYp4JBWT8RAyScn05UGDn4El2kOR9O3d9hfZPNtOKQvHJWOB/wB0pdGyZ1w1d36S688WY7rq3XFnlt25yfuo2RcLhy77I/IauROn/wB7I/IaWTysDw8XkSDFgud7usi2s3WVc0wMPdnIaAQUrJARnhlQCAd3nniOORbrm1iDMt1tehiOxHg4QUnBcCnFlSvclXtTt77OP72R+Q0pesBLebFuffeWvIU3uWSSMlI/mkrgo6KW3Ss2DZuqIkBT7q9rbaMnHHHpXc6t9wcb6bI8kkI/V4Ehh1vfkpUja4AfXCcemCPnSv1NeS9FYtjS+zL8hCVOKJ/qHyIP/RR70XTbfYNYWi6HcWojo7RasAoSQUEgY+SjwHCrkcmxV/Ar6GsiPaIddmyirU+l2SHleFy4gHyPkPXHsa1zvCm9ySCCMgjzpDs6gnP3K6tlMRCY09xhATGQPCnGM8OfGnrqlY8RGhFy0FTahVyCKlSoALBSc6zDE2TH0+1BiSZS1S17kMNlaiAgnkB88VKlFbAhB6h09qhV9jd/tMyIy0A52ctBYzzwcKwSCfavXtLbkAYmXEtqA3YjvKSEn7eCcD6calSqBSNh9XjVj2q+jdtyUSuRbXTBW7tx2oQlJSoj57VAH1BPDOK53G03h+Wt+2SbPGaX4lJetyXFKX5kkEelSpSNtPgeC5P/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark">10 Quick Ways to Speed Up a Slow PC Running Windows 7, 8, or 10</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/242472/how-to-use-and-configure-androids-battery-saver-mode/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAcBCAMEBgUC/8QAOxAAAQIEBAIGBwUJAAAAAAAAAQIDAAQFEQYHEiETMRQWQVGU0wgVGCJVVnFUdIGSoSMkMkNTYZGx0f/EABgBAQEBAQEAAAAAAAAAAAAAAAADBAIB/8QAIxEAAgICAQMFAQAAAAAAAAAAAQIAAwQREhMhMTJRcYHB8P/aAAwDAQACEQMRAD8AVVFclH5JT87Kyan3NRIdfcbKSoAjYdxv/nflE1CXln39UuadJhCAC22+tQWeZUCq/O/K+1oaicpcr6dR6Ouqz+N3pp6lSs9UFSsxL8OVDqU7kKbufePIXNo7Ga9HDLpiY4SZvMF9OxDrCmltqBTe4IZ37vrHleRUxKIe6yuRg5NaLdaug/cH3/tg/e5W5+VDQV+9S69IBshZN7m1htzjWizh9G3LnWEidx+q9iCC0Um4B58G3b+hjPKejHl5MPhoVLHLV0k6nXWUpFiRa5Z57X+lu+LcxMnTMq5GaR6KJ1gzyXlSvETxgyQHCi/vaSbi9r2vFqvZTy++O4t8Yx5MHsp5ffHcW+MY8mHMR0zK01FOF7Mqpqqpcuv8RM1oslvUODYpG6tN9W1r2ttHNz1efpT/AEdhltaFDXdd787dn0i3Xsp5ffHcW+MY8mEdn9k/hzBmMZSl0uo1l5l2nomFKmnm1qCi44mwKUAWskdnfErUruXi42JXFtvw7utS5B1qWtoWBcO1vCeGpqpS7rzrdHlGXCh5aEzCEoSQlwJNlC++8dVO+pm5wCZeZZeJACVOFNzYAbXA5ED8YSOH8a5vy1Bp8tJYYkHpVqVbQw4ZVV1NhICSf2o5i3YI3TjrOcm5wlTr/dFedHC1IrFlGifM0WZN1qLW7EhfAJ7D4jcCqFqA6Q2pQ/hBcUT+Av8ArAHaAEBwTjISq6QeMoXsLEDfnY8oUfXnOb5Sp3hFebEdec5rW6o07wivNjuQjmbp1OmZcKaGppYNilxVjvz598ZFUuTIUC2fe5++r/u0JYY7zoAsMJ08D7orzonr5nR8p0/wq/OhEeLDSWWg03sgcgbn/Ziu/pOURNSx7IvrmFNlNLbRYIv/ADXT3/3j1+vmdHynT/Cr86OAzGxBjep1tl/ENJl5OaTLJQhDbJSCjUog7rPaVdvZCJu4zwvi2vOYfn6JPBcumkSqJZaZ9LIkngAVOKFwTcEG6QTta0NycluK+VmeUoqSjUpuoFkKIA30gbXI74II135j31JUwGk8a/Zay9rEVCPTMT0pxNCDOv6AkJ2qyh3G97Ek37Y+uijjAibeKU6U39bKFwO0jt5n6wQRkkZtMU+nNPtuirzai2QUpXPqKdrbEX3Gw5x6nS5X7Ux+cQQQiT0uV+0s/nEJ3O59C8VypacbWOgo3Cx/UcgghE//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/242472/how-to-use-and-configure-androids-battery-saver-mode/" class="title" rel="bookmark">How to Use and Configure Android’s “Battery Saver” Mode</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABAYABQECAwf/xAAzEAABAwMDAwIEAgsAAAAAAAABAgMRAAQSBQYhEzFRYYEUIkGRB3EWMjM0QkOCkqGx8P/EABsBAAMAAgMAAAAAAAAAAAAAAAABBQYHAgME/8QAKhEAAQIEBAQHAQAAAAAAAAAAAQACAwQREwUhUZESQlKBBhUWIjNBofD/2gAMAwEAAhEDEQA/AEdpY80U2pBiYpMVuWxZdU2t1YUhRSqEHuK3G7NNA/auH+g1uMY1Ig0MVu4WpnYLOOzEM7FP1s6wnvE0e3qNqymVFIry5zd9r/Atf9poG73Oh0QlxZ9q4RMfkAPkB7rp9MTcU+5hHZer3O/29JPUssesnsYBikPeW+9f3G6oanqdzcNg/I2pw4J/IdhSe9qaHVSpaj7UI5coUZyP2qFM4zLxDVrmjaqu4f4dMoKBh/UU67JJ80OXBNcS+knvXMuieBUx09BPON1cbJxRylX22b3QrXW7t7XrI3bCssEj6Knv/wB35EiZHPbmpqsL28XauWbbLv8AJvGuo2tIVKZHkGDVG5ytRnuZrdi66DbrYQ0sOCCVoCing8jweaxSJJxL74nCc9llnmgfJQpQ8NGVz+89T/fgoznUrhTVy2XduDqJTk58KjKSCmEnHgjGfcGiXtbdcJDh2w6nNCxFmE8JWFBPABAMAR4kUsOayVFM2lhwZ/dxyee/3rKNcdQ042GLPFapINunjtwPTifzmixF6SvLdZqEyp3FdFDjGO2ClwYk/ApA47EGPlMHgjkenehtb1J7VbEt3FzoCZWFFTFtg6TP1VEwJ8+3c1RXGtl5tSFWliMk4ym3AI4jg/Tiujm4XnAQu2sVSZOVskkn8zyaLEXpKLrNVlGmWy7joI1W2ktZhauEZTymf9GOfSoxpbTqCpWrac18xELWqTBieEnihNQ1P43DNi2awEDotBHHrHf3oQut+aLEXpKLrNUrlavJ+9YKleT96lSiqdFu2pvpr6inM+MMYj1mi3xpg0u3Uw/dG+KVddC0gISrMxj5GMEk/XiI5qVKVSnRaupsUi0KLh5eQHxPEFPaQn2/yKYfw/OxBvMI3k5qn6PlpYztky6Fx8pIBEiZ7elSpTqkqy6VoC9a1NVmp9vTjdLNgLhJU4GMlY5Yn9bHGee81UXBR13OkolvI4T4nipUoqii/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark">What’s the Best Antivirus for Windows 10? (Is Windows Defender Good Enough?)</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/133704/how-to-scan-your-computer-with-multiple-antivirus-programs/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAAAAIEBQYDBwgB/8QAQhAAAgAFAQMECw4HAAAAAAAAAQIAAwQFESEGBxIxQVGBCBMUFRciVGFxk9IWIzJSgpGSlKGlwdHT4xg0RlZiosP/xAAaAQACAwEBAAAAAAAAAAAAAAABAwACBAUG/8QALREAAQMBBgQEBwAAAAAAAAAAAQACAwQFERIhMZETUaHSFDJBYiVSYXGBotH/2gAMAwEAAhEDEQA/AGV1uleVXtNmp6jiyHBp0THX54g2mXM5zYU+kI3BbtzVnuVUtNbd5tvnTxLfK00hndgVI4iDUsNCc6ARIjse3DSz7uEQpylaJ8tpjXiqCOfOgh7aypGk7v17VxjZeLMSHp/FoaYLixybIo+UIxOtyIwLQF9DCN/L2PTKkoHbaWGRlPbBRTOJsYzy1BXXHRzmJJtxUvODtag0z/Ij9WHx1c7vNUOH4b2qj7Me3yvJ2XNLyrifhWv7RGE01eCT3tPziOmTuIltybXJ9RH6sJG4JXUsm1oYDnFAD/1hwnJ1qXbN7VTwE40J6LmdZFYihe9QbXUkg9UOFmVSLwiySsfJ/KOkD2PpP9Wfd37sJ/h7P92fd37sHG31qXbDtU8FU8z0TDdzsterTtTV7TNaJVBT97pkuSZI8WUvCvAuMdCjU6k6nUxKUu18wScPQ3GqYMwExEYIfHIGgfm+Dy8ojaN7n0sjZ+4S6ehaVmQ4bhCDmOpw0Uut3cbMUVnl3CquO0Cy5oUskmoXAZvG0HDoMn5zHnXwTsAbT5nPVb4qUUsdzXEjM3n6/YBQKbwKXiUvb6xpYHIruD1Hth06oV4QbcF4RbLkF6O6Gxp1xMHdlsYgKtV7UJwjUdrcgAecSsc0P5W57ZabKDpcb5wuMjNQoznXkKRl+LN+XZNwPPqqs+8K1octbrgpPTUEZ+2FJvLt6KVl01yQdC1jD8YtD7l9lXxx116bHJmoQ4/0hPgU2S8rvHr09iCH2p7dghwpefVU3wg256gvPts50LE57obi16+XkzEiN6FuAA7muv11vaiw+BTZLyu8evT2IPApsl5XePXp7EHHaft2CPDl5q6bTUlKNn7gwp5WRTvg8I6DDS73+i2e2et9VXVcmlSaqS1abLdwTwZx4gJzpBBHbhYHvDSnSuLWkhRdNvAtE/SXdqBmOAoFPP1P0Ynplxqse9vSE/5Spo6PN6YII01EDIyLkiCZ0l96zU10VJDPWvLBXJzKlTMYx5x6YzS7pRTEDrMcqwyPenH4QQRlLBetAcV73xo/jv6pvyg740fx39U35QQRMAUxFf/Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/133704/how-to-scan-your-computer-with-multiple-antivirus-programs/" class="title" rel="bookmark">How to Scan Your Computer With Multiple Antivirus Programs</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAwQABwIFBgEI/8QAMBAAAgEDAgQEBQMFAAAAAAAAAQIDAAQREiEFEzFBIlFxgQYHMkJhFHKxUqHB0eH/xAAbAQACAwADAAAAAAAAAAAAAAADBAECBQAGB//EACMRAAIBAwQBBQAAAAAAAAAAAAECAAMEEQUSMUEhBiJRYfH/2gAMAwEAAhEDEQA/AK8DawdcXJkIwxJyG/wamZIAGAOexydJ/H4962ckcTEB4hq/pPf3oK28asVRiO+MVs7xPMqtmOpjbuXPMUlDjcHpRrjlgBZcqDsD2pz4L4DDxH4t4fZyOwgmnVZlVsEr1IHltmrO4j8uZ1mkWCD4e/T8w6BJJdFtGds4OM470J6yocGWtfT1a7BdCAB8/kp4xSRKSgyQdsfcP90W3dZ15Mz74zET3/Fdz8weAcL4EsA4ZA6Iz4fMrNsc46+hrjpba1uoNUOEbqDnv3oiOrjMUu9NqW1Q06nI7EPGshUK2WU9DnegywStISF1fnST/FAaS5gGXDHTucHfHmDRkkiuFEiSdeunzou3ESNrg5AhZ+VK/hByNgdVKyE6SGiLHPUnBraPw+ZTlUeQEeJX2IHr0pblHUAramOwR6K1D6nb2UNyJu/lgiSfFtmWBSNVkzldgeWwGO3UjpV2XswMchDowOytzlT+xr5zltmZsRSmCTO2rYjseo9emaXuOGrcQJbXXFFdUOQjMDjPf6aRuLYs2QZradcJQpFcE+ZZXzNjFzw1HIYkSKdhjIAYYyf3VWEjSWc2AGZHGdJprVPbwQ26XbzQxquiPYBPD+0HIyRWUkkcudWcAbspxg0a3olF93EztSKXFXeB1PbWaOaIaRqQH6SfEKRvOFzSTl7bJjPTC0aaDW3O4awEq9VOwPpQxxKNfDcq8Mo2ZcUyFYeVmcbadct2c4UlSDgg5/ivZJY28M9tbygfawB/7UqU7HYube1kBTLQqeiP41HoDuPY0rLwdZTpS5TzVtXiB9+3vUqVG0Gcis/Cb+H64xMncpuRj8A70tGHjkJCKp7qw0k+fWpUqhQYkwaxB5C1usokYb6DhvXH3CsGN0cCSziuyNhKVUkj36elSpQeDLKBP//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark">5 Ways To Free Up Disk Space on Your OS X Mac</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAwEAAwEAAAAAAAAAAAAAAAYHBQECBAj/xAAuEAABAwMDAwMDAwUAAAAAAAABAgMEAAURBhIhBzFRE0FhInGBFDKRFUKCobH/xAAZAQACAwEAAAAAAAAAAAAAAAAABAIDBQb/xAAeEQACAgMBAQEBAAAAAAAAAAABAgARAyExEgQiQf/aAAwDAQACEQMRAD8ASmtYdUGmJLki/MtqjrKFJUw2oHHggcj5pGsfV3W9qu93kuXBr9RMfSuQlbIKcpSEgpHtwB28U26w6laS1BbILypMuNcUtpMhl1lSUlZAC0gjO4ZAOffB80gS7Rb7zqZhuLIEeJITmTJkoVsbV5ThIVz4xSON8pYhppPjweB57GK39UtTagkO25bsqVOlHbFQyMhSvb6e4Hkj802wG75CSIs1EKVIz3Q+ELUraFFITjGRkc5xjHPeqN0o6N2u2wwIF1jJdcRslOsFtUhxWP2pLiwEgZx9OfuTTnd9Ewo8lcCMm3KvKEt+gzKlpXLWf3ZCU7Ep4B7lQq1r7F7UGpCLTd7fd/UbZSpD6EgusPI2uJB7HHuD5GRXhvOmIMwKcjoEd7ykfSfuKWuuETWNj18qU/ZX7UuMn0kPshK08IztKkcHOR37fiqToPUiJWk7cuXF0o/KRGQJK5D7wdC+AfUSMBJyft79qjkqtiWYXYH8mSiXDdhSFMvoIWk/g13bUkJHFN/Udt16/es4xBYCmk7UQystDHjfz8+OaVvQ+1IsQDN3FbKDHnpf09iL07Gu8xKXZctHqI3chtB7AfJHOfmmZ7p6+8pv0ZziEpc3FoIAQseDtwo8cZ3Um9FNfsStOs2yU4EyoI9PBPKkf2kfjj8VTBq5lDf0rArWIucwLHI12m4XKw2owoFltUGEMkpYU6ygc+4Qsbv8txNeeRfFQ5BaYmvRFvL3FERCWWSvB7gEc4zyr+amOu9YPybFJaYdOCBnB9s1laI10pEMyruESCyNja1qCVJ8nJ+lXHH1efzVTMqmpYqFtyr3CalTymZG9clzcVAqDhOBlWSMjI9+SalfUdiDJkqbnwmlvpAwpaAVAe2D3x9qo9h1DbdWX6FaIkVhiS/MAZXlsFpCkqBQChXuDycE8HHeudSaXjy7xcY7yEL/AKdIVG3pHCiME4z8mpKwMCvmRdi3T7xIiBy4oaZjRww2lTfGM91Edz8/ArCdVsdW24SlaFFJHyKqc+3swHihtIFZEy12+W960iMhbmMFXIzSuXGGOo/830HGKM+b470y2vM3KI7sKicFJ9x3BqoR9WWe5yGWbXOlMqLDfqIm7UlTu0b9pHG3dnGecUUU7/LmbxqjzpiM1I+iWkOBQwQrkEVtSumVvnwvStk9UEKUFFCkb0/buD/2iiolQw3D2VOozdG9ENaO1uxqO7T0Tf0xW400w3jKykhJJPYDJ/1TfcpLTbUlxAwp95byz3JUtRUT/JoooCheQLljuTG9Pl2ao+wNZ5VRRS57Ghyf/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark">7 Ways To Free Up Hard Disk Space On Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both;"></div>	<div style="width: 300px; min-height: 20px; margin-top: 30px;">
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<div id="htgys01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-top: 10px;"></div>
+</div>
+<div id="sidebar-float-widget">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom: 0px;"></div>
+<div class="g-page" data-width="320" data-href="//plus.google.com/100292833634918081724" data-layout="landscape" data-rel="publisher"></div>
+<div style="margin-top: 8px;">
+<a href="https://twitter.com/howtogeek" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @howtogeek</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+<div style="margin-bottom: 10px;"></div>
+<div class="fb-like" data-href="https://www.facebook.com/howtogeek" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div style="margin-bottom: 15px;"></div></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both; margin-bottom: 20px;"></div>
+<div style="clear: both;"></div>
+<div id="htgyr01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<div style="padding: 0px 20px 20px;">
+<h3 style="text-align: left; font-size: 30px; color: rgb(35, 70, 113); font-family: bebas_neueregular; text-transform: uppercase; font-weight: normal;">More Articles You Might Like</h3>
+<script async="" src="about:blank"></script>
+<!-- htg-below-article-content -->
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="8688851009" data-ad-format="autorelaxed"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="htgyl01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width: 18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="https://discuss.howtogeek.com/">Discussion Forum</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color: rgb(255, 152, 84);">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="footer" type="hidden">
+<input id="fromaddress2" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<input name="email" id="ftemtxt" style="color: rgb(187, 187, 187);" value="Enter Your Email Here" type="text">
+<input id="ftemsub" value="Get Articles by Email" style="background: none repeat scroll 0% 0% rgb(85, 168, 223);" type="submit">
+</form>
+<p></p>
+<div style="clear: both;"></div>
+</div>
+<div style="width: 280px; float: left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/howtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left; margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="font-style: italic; font-size: 11px; text-align: center;">Disclaimer: Most of the pages on the internet include affiliate links, including some on this site.</div>
+<br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2016 How-To Geek, LLC&nbsp; All Rights Reserved</div>
+</div>
+</div><script src="about:blank" id="pocket-btn-js"></script>
+<style>
+/* Code tidied up by ScrapBook */
+#subscribeoverlay { background: url("xemailoverlay4.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.bdAMUqnBuz.jpg") no-repeat scroll 0% 0% transparent; }
+#emailoverlaylist { color: rgb(34, 34, 34); }
+#emailoverlayformbutton { background: none repeat scroll 0% 0% rgb(111, 198, 255); }
+#emailoverlayformbutton:hover { background: none repeat scroll 0% 0% rgb(41, 167, 250); }
+#emfh2 { color: rgb(0, 0, 0); top: 100px; }
+</style>
+<div class="overlay-bg">
+<div id="subscribeoverlay">
+<a href="#" id="ovclose"></a>
+<h2 id="emfh2"></h2>
+<div id="emftag"></div>
+<ul id="emailoverlaylist">
+<li>Get exclusive articles before everybody else.</li>
+<li>Get downloadable ebooks for free!</li>
+<li>Get geeky trivia, fun facts, and much more.</li>
+</ul>
+<form id="emailoverlayform" method="GET" action="http://www.howtogeek.com/em/subscribe">
+<p>
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="overlay1" type="hidden">
+</p><p id="emoflbl" style="position: absolute; left: 20px; top: 240px; font-weight: bold; font-size: 120%; color: rgb(0, 0, 0);">Enter Your Email Here to Get Access for Free:</p>
+<input style="color: rgb(187, 187, 187);" id="overlayfrom" name="email" value="Enter Your Email Here" type="text">
+<input id="emailoverlayformbutton" value="Get Free Content Now" style="" type="submit">
+<p></p>
+</form>
+<div id="overlayformsuccess">Go check your email!</div>
+<img id="overlayimage" style="position: absolute; left: -9000px; top: -9000px;" src="xemailoverlay4.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.bdAMUqnBuz.jpg">
+</div>
+</div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Begin comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<!-- Quantcast Tag -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+
+</body>
+</html>

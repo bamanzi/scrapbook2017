@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="ROBOTS" content="INDEX, FOLLOW" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="author" content="jackchammons" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="description" content="Installation Guide" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="keywords" content="BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="search.ms_sitename" content="MSDN" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="search.ms_docsetname" content="MSFT_commandline" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="version" content="0" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.contentlang" content="en-us" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.sitename" content="MSDN" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="search.ms_product" content="MSDN" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.depotname" content="MSDN.MSFT_commandline" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.publishtime" content="2016-12-02 11:40 PM" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.gitcommit" content="https://github.com/Microsoft/CommandLine-Documentation/blob/91a9e40dfa59b903d006264e50821a3309eb9cbe/commandline/WSL/install_guide.md" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.giturl" content="https://github.com/Microsoft/CommandLine-Documentation/blob/live/commandline/WSL/install_guide.md" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.documentid" content="7e0f4110-f321-4e81-99e0-4ed1ffa680f9" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.opspagetype" content="Conceptual" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="canonical_url" content="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="content_type" content="text/html" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="content_uri" content="https://opdhsblobprod02.blob.core.windows.net/contents/40beaa88e8334337922b868fc5640038/72d1fd35bf9149199c15681f4be21834" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="ms.contentsource" content="OP" xmlns:c="urn:msdn-com:mtps/2004/1/common" xmlns="http://www.w3.org/1999/xhtml"><link rel="canonical" href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">
+    <title>Bash on Ubuntu on Windows - Installation Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<meta name="AmbientContext" content="{&quot;layout.limit_max_width&quot;:false,&quot;AmbientContextId&quot;:&quot;1944E949-6AA9-422C-922E-F24779AFABB6&quot;,&quot;display.use_large_font&quot;:false,&quot;insight.perf_timing&quot;:true,&quot;AmbientContextDownstream&quot;:{&quot;LogTrace&quot;:false},&quot;display.high_contrast&quot;:false,&quot;insight.use_wedcs_vnext&quot;:true}">
+
+<meta name="MN" content="61C41DD0-8:45:10 PM">
+
+<meta name="ms.locale" content="en-us">
+
+<meta name="ms.lang" content="EN">
+
+<meta name="ms.loc" content="US">
+
+<meta name="ms.assetid" content="7afaeacf-435a-4e58-bff0-a9f0d75b8a51">
+
+<meta name="ms.auth" content="0">
+
+<meta name="ms.topic" content="article">
+
+<meta name="ms.service" content="windows-subsystem-for-linux">
+
+<meta name="ms.date" content="9/6/2016">
+
+<meta name="ms.prod" content="windows-subsystem-for-linux">
+    <script type="text/javascript" data-do-not-move="true">/* Code removed by ScrapBook */</script>
+
+        <script type="text/javascript" src="about:blank" data-do-not-move="true" data-provides="jQuery"></script>
+    
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+    
+    
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"><link rel="stylesheet" type="text/css" href="Combined.css"><script class="mtps-injected">/* Code removed by ScrapBook */</script><script src="about:blank" class="mtps-injected"></script><script class="mtps-injected">/* Code removed by ScrapBook */</script><script src="about:blank" class="mtps-injected"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script src="about:blank" class="mtps-injected"></script><script src="about:blank" class="mtps-injected"></script><script src="about:blank" class="mtps-injected"></script><script src="about:blank" class="mtps-injected"></script><script class="mtps-injected">/* Code removed by ScrapBook */</script><script src="about:blank" class="mtps-injected"></script><script>/* Code removed by ScrapBook */</script></head>
+<body class="FF FF3">
+    <div id="page">
+
+        
+
+        
+    
+
+        
+    
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+        
+        
+    <input id="isHeaderBleeding" value="true" type="hidden">
+    <div id="ux-header" dir="ltr" class="ltr msdn" ms.pgarea="header">
+        
+
+      <header>
+        <span id="singleCol"></span>
+        <span id="doubleCol"></span>
+        <span id="isMobile"></span>
+        <div>
+          <div class="row topRow" role="banner">
+            <div class="top">
+              <div class="left">
+                <a class="msdnLogoImg" href="https://msdn.microsoft.com/en-us" title="MSDN home" ms.cmpgrp="mslogo">
+                  <div class="clip70x15">
+                    <img alt="Microsoft Logo" id="msft-logo" class="msft-logo" src="HeaderFooterSprite.png">
+                  </div>
+                </a>
+                <div class="GrayPipeDiv clip1x18">
+                  <img alt="Gray Pipe" class="GrayPipe" src="HeaderFooterSprite.png">
+                </div>
+                  <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/en-us">Developer Network</a>
+                <a class="DevCenterFullName" href="https://msdn.microsoft.com/en-us">Developer Network</a>
+                <a class="DevCenterShortName" href="https://msdn.microsoft.com/en-us">Developer</a>
+              </div>
+              <div class="right" ms.cmpgrp="aux nav">
+                <div id="signIn" aria-label="Profile button">
+
+  <div class="profileImage"></div>
+
+
+
+<a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=13&amp;ct=1481949910&amp;rver=6.7.6640.0&amp;wp=mcmbi&amp;wlcxt=msdn%24msdn%24msdn&amp;wreply=https%3a%2f%2fmsdn.microsoft.com%2fen-us%2fcommandline%2fwsl%2finstall_guide&amp;lc=1033&amp;id=254354&amp;mkt=en-us">Sign in</a></div>
+
+
+
+
+                <div class="auxNav">
+                  <div>
+                    <div data-fragmentname="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">MSDN subscriptions</a>
+</div>
+                    <div data-fragmentname="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x409&amp;slcid=0x409&amp;campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">Get tools</a>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row middleRow">
+            <div class="expandTop">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </div>
+        <div id="buttomRowWrapper" class="bg_default">
+          <div class="row buttomRow bg_default">
+            <div class="bottom">
+              <div class="left" role="navigation" aria-label="header toc" ms.cmpgrp="main nav">
+                <a id="grip" class="menu-icon" role="button" aria-label="navigation menu"></a>
+                
+                <div id="drawer">
+                  <div class="toc">
+                    
+        <nav>
+            <ul class="navL1">
+                        <li class="inactive toggle">
+                                <a role="button" aria-expanded="false">Downloads</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+
+                                                <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" role="link" title="Visual Studio">Visual Studio</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=499b84ac-1321-427f-aa17-267ca6975798&amp;site_id=501454&amp;response_mode=form_post&amp;response_type=code+id_token&amp;redirect_uri=https%3a%2f%2fapp.vssps.visualstudio.com%2f_signedin&amp;nonce=d8f8ecb3-62" role="link" title="Subscription access">Subscription access</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" role="link" title="SDKs">SDKs</a>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a title="Trial software" role="button" aria-expanded="false">Trial software</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/evalcenter" title="Free downloads" role="link">Free downloads</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/officeevaluationresources" title="Office resources" role="link">Office resources</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sharepoint2013resources" title="SharePoint Server 2013 resources" role="link">SharePoint Server 2013 resources</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="SQL Server 2014 Express resources" role="link">SQL Server 2014 Express resources</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Windows Server 2012 resources" role="link">Windows Server 2012 resources</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a role="button" aria-expanded="false">Programs</a>
+                                <ul class="navL2">
+                                        <li class="inactive toggle">
+
+                                                <a title="Subscriptions" role="button" aria-expanded="false">Subscriptions</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-overview" title="Overview" role="link">Overview</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-administration" title="Administrators" role="link">Administrators</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a title="Students" role="button" aria-expanded="false">Students</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/imagine/imagine-home" title="Microsoft Imagine" role="link">Microsoft Imagine</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Microsoft Student Partners" role="link">Microsoft Student Partners</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/applicationbuilder" role="link" title="ISV">ISV</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://www.microsoft.com/bizspark" role="link" title="Startups">Startups</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://rewards.msdn.microsoft.com/" role="link" title="TechRewards">TechRewards</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="http://events.msdn.microsoft.com/" role="link" title="Events">Events</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a role="button" aria-expanded="false">Community</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/magazine/dd767791" role="link" title="Magazine">Magazine</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://social.msdn.microsoft.com/forums/" role="link" title="Forums">Forums</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://blogs.msdn.microsoft.com/" role="link" title="Blogs">Blogs</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="http://channel9.msdn.com/" role="link" title="Channel 9">Channel 9</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a role="button" aria-expanded="false">Documentation</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/library" role="link" title="APIs and reference">APIs and reference</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/developer-centers-msdn" role="link" title="Dev centers">Dev centers</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://code.msdn.microsoft.com/" role="link" title="Samples">Samples</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/retiredcontent" role="link" title="Retired content">Retired content</a>
+                                        </li>
+                                </ul>
+                        </li>
+            </ul>
+        </nav>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right" ms.title="search" role="search">
+                <div data-fragmentname="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+      <button id="FakeHeaderSearchButton" value="Search" type="submit" class="header-search-button" role="button" aria-label="search finder">
+        <div id="search-finder-div" class="clip16x20">
+          <img alt="search finder" id="search-finder" class="search-finder" src="HeaderFooterSprite.png">
+        </div>
+      </button>
+      <button id="HeaderSearchButton" style="display: none;"></button>
+      <div id="searchSplitter"></div>
+      <div id="searchCloseIconDiv" class="clip16x20" tabindex="0">
+        <img alt="search clear" id="searchCloseIcon" class="search-clear-x" src="HeaderFooterSprite.png">
+      </div>
+      <div id="searchTextContainer" style="width: 0px;">
+        <input id="HeaderSearchTextBox" name="query" aria-label="search edit textbox" maxlength="200" type="text">
+      </div>
+    </form>
+    
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+    </div>
+
+    
+    
+    
+    <div id="jumpInfo" style="display: none;">We’re sorry. The content you requested has been removed. You’ll be auto redirected in 1 second.</div>
+
+
+
+
+
+
+<div id="mobileMenu" data-spy="affix">
+    <div id="tocDropdownMenuButton">
+        <div class="tocLabel" role="button" tabindex="0">Table of contents<div class="dropDownIcon"></div></div>
+        <div id="tocDropdownMenu">
+        </div>
+    </div>
+    <div id="functionDropdownMenuButton">
+        <div class="moreToolIcon" aria-label="function area" role="button" tabindex="0"></div>
+        <div id="functionDropdownMenu">
+        </div>
+    </div>
+</div>
+<div id="mobileMenuSpaceHolder"></div>
+<div class="modal fade" id="mobileSocialShareModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2 class="modal-title">Shared to</h2>
+            <div class="modal-body" id="mobileSocialShare">
+            </div>
+            <div class="mobileSocialShareModalDialogFooter">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mobileBranchSelectorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body" id="mobileBranchSelector">
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+</div>
+<div id="tabletContainerWithoutBreadcrumbs"></div>
+
+        <div id="body" ms.pgarea="body">
+            
+
+
+
+
+
+
+<div id="threeColumns">
+    <div id="leftColumn" class="left" ms.cmpgrp="left toc">
+        <div id="tocNav">
+    <div class="tocRootContainer">
+        <a href="#" class="tocRoot" title="Table of contents" tabindex="-1">Table of contents</a> 
+        <a href="#" class="tocRootIcon" title="Table of contents">+</a>
+    </div>
+    <div class="tocData">
+                <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/about" title="About Bash on Ubuntu on Windows">About Bash on Ubuntu on Windows</a>
+        </div>
+
+        </div>
+        <div class="tocSelected tocLevel1">
+                    <div class="tocLevel current">
+            <a href="#" title="Installation Guide">Installation Guide</a>
+        </div>
+
+        </div>
+        <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/reference" title="Command Reference">Command Reference</a>
+        </div>
+
+        </div>
+        <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/user_support" title="Linux User Account and Permissions">Linux User Account and Permissions</a>
+        </div>
+
+        </div>
+        <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/interop" title="Interoperability">Interoperability</a>
+        </div>
+
+        </div>
+        <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/faq" title="Frequently Asked Questions">Frequently Asked Questions</a>
+        </div>
+
+        </div>
+        <div class="tocUnselected tocLevel1">
+                    <div class="tocLevel">
+            <a href="https://msdn.microsoft.com/en-us/commandline/wsl/release_notes" title="Release Notes">Release Notes</a>
+        </div>
+
+        </div>
+
+    </div>
+    <a id="tocMenuToggler">
+        <span id="tocMenuTogglerIcon" role="button" aria-expanded="true" aria-label="Table of contents menu"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>
+
+
+
+        <div style="display: none;">
+            <div id="CollapseLocalizeString">Collapse the table of content</div>
+            <div id="ExpandLocalizeString">Expand the table of content</div>
+        </div>
+    </div>
+    <div class="main" ms.cmpgrp="content body">
+        <div id="oaContent" class="row"><div class="col-md-9" id="api-doc-contents"><h1 id="installation-guide">Installation Guide</h1><span><div class="gitContributors"><span class="author-bio"><a target="_blank" href="https://github.com/jackchammons" aria-label="Jack Hammons"><span class="author-img" style="background-image: url(&quot;2711825.jpeg&quot;);"></span></a></span><span class="username"><a target="_blank" href="https://github.com/jackchammons">Jack Hammons</a></span><span class="contributorSplitter">|</span><span class="contributorsLabel">Last Updated: 12/2/2016</span><div id="contributorList"><span class="contributorSplitter">|</span><div class="contributors"><span class="contributorsLabel">6 Contributors</span><ul><li><a target="_blank" href="https://github.com/bitcrazed" aria-label="Rich Turner"><span class="contributor-img" style="background-image: url(&quot;961950.jpeg&quot;);"></span></a></li><li><a target="_blank" href="https://github.com/xiaoyinl" aria-label="Xiaoyin Liu"><span class="contributor-img" style="background-image: url(&quot;16713498.png&quot;);"></span></a></li><li><a target="_blank" href="https://github.com/athousandwords" aria-label="Susan Weston"><span class="contributor-img" style="background-image: url(&quot;13457780.jpeg&quot;);"></span></a></li><li><a target="_blank" href="https://github.com/russalex" aria-label="Russ Alexander"><span class="contributor-img" style="background-image: url(&quot;17343422.jpeg&quot;);"></span></a></li><li><a target="_blank" href="https://github.com/Tightpants" aria-label="TonyG"><span class="contributor-img" style="background-image: url(&quot;6393369.jpeg&quot;);"></span></a></li><li><a target="_blank" href="https://github.com/scooley" aria-label="Sarah Cooley"><span class="contributor-img" style="background-image: url(&quot;7662290.jpeg&quot;);"></span></a></li></ul></div></div></div></span><blockquote><p><strong>Important note</strong><br>    This is the first release of Bash on Windows and it is branded "beta" deliberately - it's not yet complete! You should expect many things to work and for some things to fail! We greatly appreciate you using Bash on Windows and helping us identify the issues we need to fix in order to deliver a great experience.</p></blockquote><h2 id="prerequisites">Prerequisites</h2><ol><li>Your PC must be running a 64-bit version of <strong>Windows 10 Anniversary Update build 14393 or later</strong></li></ol><blockquote><p>To find your PC's CPU architecture and Windows version/build number, open 
+<strong>Settings</strong>&gt;<strong>System</strong>&gt;<strong>About</strong>. 
+Look for the <strong>OS Build</strong> and <strong>System Type</strong> fields.  </p></blockquote><p><img src="system.png" alt=""></p><p>If your build is below 14393, try checking for updates.</p><h2 id="installation">Installation</h2><p>In order to run Bash on Windows, you will need to manually:</p><ol><li>Turn-on Developer Mode</li><li>Enable the "Windows Subsystem for Linux (beta)" feature via the GUI or the command-line:</li></ol><h3 id="turn-on-developer-mode">Turn on Developer Mode</h3><ol><li>Open Settings -&gt; Update and Security -&gt; For developers</li><li>Select the Developer Mode radio button<br><img src="updateandsecurity.png" alt=""></li></ol><h3 id="enable-the-windows-subsystem-for-linux-feature-gui">Enable the Windows Subsystem for Linux feature (GUI)</h3><ol><li>From Start, search for "Turn Windows features on or off" (type 'turn')</li><li><p>Select <strong>Windows Subsystem for Linux (beta)</strong><br><img src="windowsfeatures.png" alt=""></p></li><li><p>Click OK</p></li></ol><h3 id="enable-the-windows-subsystem-for-linux-feature-command-line">Enable the Windows Subsystem for Linux feature (command-line)</h3><p>Open a PowerShell prompt as administrator and run:</p><pre><code class="lang-PowerShell">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+</code></pre><h3 id="after-enabling-windows-subsystem-for-linux">After enabling Windows Subsystem for Linux</h3><p><strong>Restart your computer when prompted</strong></p><blockquote><p>It is important that you <strong>DO restart when prompted</strong> as some of the infrastructure which Bash on Windows requires can only be loaded during Windows' boot-up sequence.</p></blockquote><h3 id="run-bash-on-windows">Run Bash on Windows</h3><ol><li>Open a command prompt</li><li><p>Run <code>bash</code></p><p><img src="bashshellinstall.png" alt=""></p></li></ol><p>After you have accepted the License, the Ubuntu user-mode image will be downloaded and a "Bash on Ubuntu on Windows" shortcut will be added to your start menu.</p><p>To launch Bash on Windows, either run <code>bash</code> at a cmd/PowerShell command-prompt, or use the start menu shortcut.</p><p>After installation your Linux distribution will be located at: <code>%localappdata%\lxss\</code>
+This directory is marked as a hidden system folder for a very good reason: </p><blockquote><p><strong>Avoid creating and/or modifying files in this location using Windows tools 
+and apps!</strong> If you do, it is likely that your Linux files will be corrupted and data loss may occur. 
+Please read this <a href="https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/">blog post</a> 
+for more information.</p></blockquote><h3 id="create-a-unix-user">Create a UNIX user</h3><p>The first time you install Bash on Windows, you will be prompted to create a UNIX username and password.</p><p><img src="new-user.png" alt=""></p><p>This UNIX username and password can be different from, and has no relationship to your Windows username 
+and password. <a href="https://msdn.microsoft.com/en-us/commandline/wsl/user_support">Read more</a>.</p></div><div id="right-nav-wrapper" class="col-md-3"><div id="right-nav-area" class="bs-sidebar affix"><ul id="task-nav-list" class="nav bs-sidenav" ms.cmpgrp="indoc toc"><li class="nav-header">IN THIS ARTICLE</li><li><a class="" href="#prerequisites">Prerequisites</a></li><li><a class="" href="#installation">Installation</a></li><li><a class="sub-task" href="#turn-on-developer-mode">Turn on Developer Mode</a></li><li><a class="sub-task" href="#enable-the-windows-subsystem-for-linux-feature-gui">Enable the Windows Subsystem for Linux feature (GUI)</a></li><li><a class="sub-task" href="#enable-the-windows-subsystem-for-linux-feature-command-line">Enable the Windows Subsystem for Linux feature (command-line)</a></li><li><a class="sub-task" href="#after-enabling-windows-subsystem-for-linux">After enabling Windows Subsystem for Linux</a></li><li><a class="sub-task" href="#run-bash-on-windows">Run Bash on Windows</a></li><li><a class="sub-task" href="#create-a-unix-user">Create a UNIX user</a></li></ul></div></div></div>
+        
+
+<input id="proxyUrl" value="https://apiexproxy.azurewebsites.net/svc" type="hidden">
+<input id="playgroundUrl" value="https://apisandbox.msdn.microsoft.com/" type="hidden">
+<input id="ajaxTimeout" value="10000" type="hidden">
+<input id="supportedLanguagesForPlayground" value="javascript;c#" type="hidden">
+<input id="authorizationHeader" value="Bearer {token:{resourceName}}" type="hidden">
+
+
+
+
+    </div>
+    <div id="rightColumn" class="right" ms.cmpgrp="right nav">
+            <div id="right-nav-wrapper">
+        <div id="right-nav-area" class="bs-sidebar affix">
+            <div id="navigationButtons">
+                <a id="isdSmile" title="Feedback" href="#">
+                    <ins class="smile"></ins>
+                    Feedback
+                </a>
+
+                    <a id="isdContribute" target="_blank" title="Contribute" href="https://github.com/Microsoft/CommandLine-Documentation/blob/live/commandline/WSL/install_guide.md">
+                        <ins class="contribute"></ins>
+                        Contribute
+                    </a>
+
+                <a id="isdShare" title="Share" href="#" role="button" aria-expanded="false">
+                    <ins class="share"></ins>
+                    Share
+                </a>
+                <div id="socials" style="display: none;">
+                    <a class="isdFacebook" title="Share on Facebook" href="#" data-sitename="Facebook" aria-label="Share on Facebook">
+                        <ins class=" facebook"></ins>
+                    </a>
+                    <a class="isdTwitter" title="Share on Twitter" href="#" data-sitename="Twitter" aria-label="Share on Twitter">
+                        <ins class="twitter"></ins>
+                    </a>
+                    <a class="isdGooglePlus" title="Share on Google+" href="#" data-sitename="Google+" aria-label="Share on Google+">
+                        <ins class="googlePlus"></ins>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+        </div>
+
+          
+            
+            <div id="openFeedbackContainer" style="z-index: 220;" ms.pgarea="body" ms.cmpgrp="feedbackform"></div>
+            
+
+        
+    
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+        
+    <div id="ux-footer" class="" style="" dir="ltr" ms.pgarea="footer">
+            
+                
+            <div id="footerSock" class="">
+                <div id="footerSockInner">
+
+                        <div class="footerSockLeft"><div data-fragmentname="SocialLinks" id="Fragment_SocialLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">Follow us</div>
+    <ul class="links">
+      <li>
+        <a href="http://www.facebook.com/microsoftdeveloper" target="_blank" id="SocialLinks_2151_19" class="facebook" xmlns="http://www.w3.org/1999/xhtml">http://www.facebook.com/microsoftdeveloper</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/msdev" target="_blank" id="SocialLinks_2151_20" class="twitter" xmlns="http://www.w3.org/1999/xhtml">https://twitter.com/msdev</a>
+      </li>
+      <li>
+        <a href="http://plus.google.com/111221966647232053570/" target="_blank" id="SocialLinks_2151_21" class="googlePlus" xmlns="http://www.w3.org/1999/xhtml">http://plus.google.com/111221966647232053570/</a>
+      </li>
+    </ul>
+  </div>
+</div></div>
+
+                        <div class="footerSockRight"><div data-fragmentname="Newsletter" id="Fragment_Newsletter" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/flashnewsletter" title="Sign up for the MSDN Newsletter" id="Newsletter_2148_19" xmlns="http://www.w3.org/1999/xhtml">Sign up for the MSDN Newsletter</a>
+</div></div>
+                    <div class="footerSockCenter">
+                            <a name="feedback"></a>
+
+<div class="rating">
+    <div id="ratingSection1">
+        <div class="title">
+            Is this page helpful?
+        </div>
+        <div class="description">
+            Your feedback about this content is important.<br>Let us know what you think.
+        </div>
+        <div class="buttons">
+            <button class="button" id="ratingYes" aria-label="Yes, this page was helpful">Yes</button>
+            <button class="button" id="ratingNo" aria-label="No, this page was not helpful">No</button>
+        </div>
+        <input id="ratingValue" value="" type="hidden">
+    </div>
+    <div id="ratingSection2">
+        <div class="title left">
+            Additional feedback?
+        </div>
+        <textarea id="ratingText" rows="6" cols="" maxlength="1500"></textarea>
+        <div class="right">
+            <div class="counter">
+                <span id="feedbackTextCounter">1500</span> characters remaining
+            </div>
+            <div class="buttons">
+                <button class="button" id="ratingSubmit" aria-label="Submit my additional feedback">Submit</button>
+                <button class="button" id="ratingSkipThis" aria-label="Skip additional feedback">Skip this</button>
+            </div>
+        </div>
+    </div>
+    <div id="ratingSection3">
+        <div class="title">
+            Thank you!
+        </div>
+        <div class="description">
+            We appreciate your feedback.
+        </div>
+    </div>
+    
+    
+    <div id="contentFeedbackQAContainer" style="display: none;"></div>
+</div>
+    
+                                            </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            
+
+        <footer class="top" role="navigation" aria-label="footer">
+            <div data-fragmentname="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Dev centers</h4>
+    <ul class="links">
+      <li>
+        <a href="https://dev.windows.com/" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+      </li>
+      <li>
+        <a href="http://dev.office.com/" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+      </li>
+      <li>
+        <a href="http://azure.microsoft.com/en-us/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/developer-centers-msdn" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">More...</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div id="rightLinks">
+                <div data-fragmentname="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Learning resources</h4>
+    <ul class="links">
+      <li>
+        <a href="http://www.microsoftvirtualacademy.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="http://channel9.msdn.com/" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/magazine/" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">MSDN Magazine</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Community</h4>
+    <ul class="links">
+      <li>
+        <a href="https://social.msdn.microsoft.com/forums/en-us/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">Forums</a>
+      </li>
+      <li>
+        <a href="http://blogs.msdn.com/b/developer-tools/" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">Blogs</a>
+      </li>
+      <li>
+        <a href="http://www.codeplex.com/" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Support</h4>
+    <ul class="links">
+      <li>
+        <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">Self support</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Programs</h4>
+    <ul class="links">
+      <li>
+        <a href="https://www.microsoft.com/bizspark/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark (for startups)</a>
+      </li>
+      <li>
+        <a href="https://imagine.microsoft.com/en-us" id="CenterLinks4_2151_22" xmlns="http://www.w3.org/1999/xhtml">Microsoft Imagine (for students)</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </div>
+        </footer>
+
+        <footer class="bottom" role="contentinfo">
+            <span class="localeContainer">
+                
+    <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/en-us/selectlocale-dmc">
+        <input name="fromPage" value="https%3a%2f%2fmsdn.microsoft.com%2fen-us%2fcommandline%2fwsl%2finstall_guide" type="hidden">
+        <a href="#" title="Change your language">United States (English)</a>
+    </form>
+
+
+            </span>
+
+            <div data-fragmentname="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/dn529288" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml">Privacy &amp; cookies</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml">Terms of use</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <span class="logoLegal">
+                <span class="logoSpan clip67x13" role="img" tabindex="0" aria-label="microsoft logo">
+                    <img alt="logo" class="logo" src="HeaderFooterSprite.png">
+                </span>
+                <span class="copyright">© 2016 Microsoft</span>
+            </span>
+        </footer>
+    </div>
+    
+
+
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2016 Microsoft</div>
+        </div>
+
+        
+    
+
+
+<!--[CDATA[ WebTrends view model not available or IncludeLegacyWebTrendsScriptInGlobal feature flag is off]]-->
+
+
+    </div>
+
+    
+    
+
+    
+    
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+    
+<script type="text/javascript" class="mtps-injected">/* Code removed by ScrapBook */</script>
+
+</body>
+</html>

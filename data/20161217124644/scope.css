@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+.sc.body { width: 100%; min-width: 1200px; }
+.sc .sc-container { width: 100%; max-width: 1200px; margin: 0px auto; }
+.sc .sc-tool-backtop { position: fixed; right: 20px; bottom: 20px; overflow: hidden; width: 41px; height: 41px; cursor: pointer; transition: all 0.2s ease 0s; border: 1px solid rgb(221, 221, 221); background: none repeat scroll 0% 0% rgb(245, 245, 245); }
+.sc .sc-tool-backtop:hover .icon { margin: -40px 0px 0px; transition: all 0.15s ease 0s; }
+.sc .sc-tool-backtop .sc-tool-name { font-size: 14px; line-height: 40px; display: block; width: 40px; height: 40px; text-align: center; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(58, 171, 78); }
+.sc .hide { display: none; opacity: 0; }
+.clear:after { font-size: 0px; display: block; visibility: hidden; clear: both; width: 0px; height: 0px; content: "."; }

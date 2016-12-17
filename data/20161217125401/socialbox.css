@@ -1,0 +1,12 @@
+/* Code tidied up by ScrapBook */
+div#socialbox, div#socialbox ul, div#socialbox ul li, div#socialbox ul li p, div#socialbox ul li p img, div#socialbox ul li p span, #socialbox ul li p a { background: none repeat scroll 0% 0% transparent; border: medium none; margin: 0px; padding: 0px; }
+div#socialbox { color: rgb(118, 138, 150); font-family: Arial,Helvetica,sans-serif; font-size: 14px; }
+div#socialbox ul { background: url("box-background.png") repeat scroll 0% 0% transparent; border: 1px solid rgb(216, 220, 223) ! important; border-radius: 4px 4px 4px 4px; box-shadow: 0px 2px 4px rgb(223, 228, 231); list-style: none outside none; margin: 0px ! important; padding: 0px; }
+div#socialbox ul li { background-image: none; border-bottom: 1px solid rgb(216, 220, 223); height: 59px; list-style: none outside none; }
+div#socialbox ul li:last-child { border-bottom: medium none; }
+div#socialbox ul li p { padding: 19px 9px 0px; }
+div#socialbox ul li p img { border: medium none; margin-right: 10px; position: relative; top: 3px; vertical-align: baseline; }
+div#socialbox ul li p span { color: rgb(66, 87, 99); font-weight: bold; }
+div#socialbox ul li p a.socialbox-button { background: url("button.png") no-repeat scroll 0% 0% transparent; border: 1px solid rgb(216, 220, 223); border-radius: 3px 3px 3px 3px; color: rgb(66, 87, 99); float: right; font-size: 11px; font-weight: bold; line-height: 11px; padding: 6px 10px; position: relative; text-decoration: none; text-transform: uppercase; top: -2px; }
+div#socialbox ul li p a.socialbox-button:hover { background: url("button.png") no-repeat scroll 0px -27px transparent; }
+div#socialbox ul li p a.socialbox-button:active { background: url("button.png") no-repeat scroll 0px -54px transparent; }

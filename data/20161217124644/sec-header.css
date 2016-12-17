@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+.sec-header { height: 70px; background-repeat: no-repeat; background-position: center center; background-size: cover; }
+.sec-header .banner-box { width: 100%; max-width: 1200px; height: 56px; margin: auto; }
+.sec-header .sec-search { position: relative; }
+.sec-header .sec-search .search-text { width: 280px; height: 30px; padding: 0px 50px 0px 14px; color: rgba(255, 255, 255, 0.6); border: medium none; border-radius: 1.5em 1.5em 1.5em 1.5em; outline: medium none; background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3); font-size: 0.875rem; }
+.sec-header .sec-search .search-text:focus { color: rgb(255, 255, 255); }
+.sec-header .sec-search .ic-search { position: absolute; top: 0px; right: 0px; width: 40px; height: 30px; cursor: pointer; border: medium none; border-top-right-radius: 1em; border-bottom-right-radius: 1em; outline: medium none; background: none repeat scroll 0% 0% transparent; }
+.sec-header .sec-search .ic-search svg { transition: opacity 0.15s ease 0s; opacity: 0.5; }

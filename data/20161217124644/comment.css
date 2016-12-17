@@ -1,0 +1,53 @@
+/* Code tidied up by ScrapBook */
+.comp-comment { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding-bottom: 20px; }
+.comp-comment .comment-panel-wrapper { margin: 30px 32px; }
+.comp-comment .dims { cursor: pointer; }
+.comp-comment .icon_box { font-size: 0px; }
+.comp-comment .NoData { color: rgb(74, 74, 74); text-align: center; line-height: 40px; height: 40px; }
+.panel-heading { box-shadow: 0px 1px 0px rgb(239, 239, 239); }
+.panel-heading .count-of-comment { font-size: 18px; line-height: 44px; width: 130px; text-align: center; color: rgb(74, 74, 74); border-left: medium none; }
+.panel-heading .reply_count { padding: 0px 5px; }
+.panel-comment-form { margin: 0px 0px 40px; }
+.panel-list { margin: 10px 0px; }
+.panel-list hr { height: 1px; margin: 0px 0px 0px 1em; border: medium none; background: none repeat scroll 0% 0% rgb(221, 221, 221); }
+.comp-comments-panel { font-size: 16px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.comp-comments-panel textarea { font-size: 14px; width: 100%; height: 100px; padding: 5px 10px; resize: none; transition: border 0.1s ease 0s; border: 1px solid rgb(221, 221, 221); outline: medium none; display: block; margin-bottom: 14px; }
+.comp-comments-panel textarea:focus { border: 1px solid rgb(78, 170, 76); }
+.comp-comments-panel .comment-item { padding: 18px 12px; word-break: break-all; border-bottom: 1px solid rgb(221, 221, 221); }
+.comp-comments-panel .comment-item:last-child { border-bottom: medium none; }
+.comp-comments-panel .comment-item:hover { background: none repeat scroll 0% 0% rgb(245, 245, 245); }
+.comp-comments-panel .comment-item .user { transition: color 0.3s ease 0s; text-decoration: none; color: rgb(51, 51, 51); border: medium none; outline: medium none; }
+.comp-comments-panel .comment-item .icon { overflow: hidden; width: 40px; height: 40px; margin-right: 15px; border-radius: 50% 50% 50% 50%; }
+.comp-comments-panel .comment-item .icon img { width: 100%; height: 100%; vertical-align: baseline; }
+.comp-comments-panel .comment-item .icon_box { height: 22px; }
+.comp-comments-panel .comment-item .user-name { font-size: 16px; line-height: 22px; color: rgb(74, 74, 74); }
+.comp-comments-panel .comment-item .user-info { font-size: 12px; line-height: 18px; margin-top: 2px; color: rgb(137, 137, 137); }
+.comp-comments-panel .comment-item .comment-content { font-size: 14px; line-height: 22px; word-wrap: break-word; color: rgb(74, 74, 74); }
+.comp-comments-panel .comment-item .ref { font-size: 14px; position: relative; margin-top: 5px; margin-bottom: 10px; margin-left: 10px; color: rgb(106, 106, 106); border-bottom: 1px solid rgb(221, 221, 221); }
+.comp-comments-panel .comment-item .ref:before { position: absolute; height: 100%; margin-left: -10px; content: ""; border-left: 1px solid rgb(221, 221, 221); }
+.comp-comments-panel .comment-item .ref h4 { font-size: 14px; font-weight: 200; margin: 0px; }
+.comp-comment-form { margin-top: 10px; }
+.comp-comment-form textarea { width: 100%; height: 100px; }
+.comp-comment-form .ic-comment-software { margin: 0px 0px 0px 14px; }
+.comp-comment-form .editor-toolbox { height: 30px; }
+.comp-comment-form .comp-emotion { position: relative; }
+.comp-comment-form .comp-emotion .emoji-panel { position: absolute; z-index: 30; top: 25px; left: 0px; display: none; width: 450px; padding: 0px 15px; border: 1px solid rgb(238, 238, 238); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.comp-comment-form .text-muted { color: rgb(153, 153, 153); }
+.comp-comment-form .btn-text, .comp-comment-form .btn-green { font-size: 14px; line-height: 30px; margin: 0px; padding: 0px 0.8rem; cursor: pointer; border: 0px none; border-radius: 3px 3px 3px 3px; }
+.comp-comment-form .btn-text { color: rgb(153, 153, 153); background: none repeat scroll 0% 0% transparent; }
+.comp-comment-form .btn-green { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(74, 171, 71); }
+[data-emoji="wrapper"] { position: absolute; z-index: 30; top: 25px; left: 0px; display: none; width: 450px; padding: 0px 15px; border: 1px solid rgb(238, 238, 238); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+[data-emoji="wrapper"] [data-group] { padding-top: 5px; padding-bottom: 15px; border-top: 1px solid rgb(221, 221, 221); }
+[data-emoji="wrapper"] [data-group]:first-child { border-top: medium none; }
+[data-emoji="wrapper"] [data-group-title] { line-height: 30px; }
+[data-emoji="wrapper"] .emoji-block { font-size: 1.4em; line-height: 36px; display: inline-block; width: 40px; height: 38px; margin: 0px; padding: 0px; cursor: pointer; text-align: center; vertical-align: top; border: 1px solid rgb(246, 246, 246); background-color: rgb(255, 255, 255); }
+[data-emoji="wrapper"] .emoji-block:hover { border: 1px solid rgb(245, 166, 35); }
+[data-emoji="wrapper"] [data-emoji="panel"] { overflow-y: auto; max-height: 350px; }
+[data-emoji="wrapper"] { width: 450px; }
+[data-emoji="nav"] { display: inline-block; width: 100%; }
+[data-emoji-nav] { font-size: 12px; float: left; width: 20%; padding: 10px 0px; cursor: pointer; text-align: center; color: rgb(153, 153, 153); border-bottom: 2px solid transparent; }
+.active[data-emoji-nav] { color: rgb(255, 102, 0); border-bottom: 2px solid rgb(255, 102, 0); }
+[data-emoji-nav]:hover { color: rgb(255, 102, 0); }
+[data-emoji-item] { display: none; }
+.active[data-emoji-item] { display: block; }
+[data-emoji-render="true"] { transition: all 0.2s ease 0s; opacity: 0; }

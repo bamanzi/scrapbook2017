@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>解决Bash On Ubuntu On Window安装Zsh无效问题附安装说明 - seayxu - 博客园</title>
+<link type="text/css" rel="stylesheet" href="blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="bundle-LessIsMoreRight.css">
+<link type="text/css" rel="stylesheet" href="234835.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="bundle-LessIsMoreRight-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/seayxu/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/seayxu/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/seayxu/wlwmanifest.xml">
+<script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" type="text/javascript"></script>  
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/x-mathjax-config;executed=true">/* Code removed by ScrapBook */</script><script src="about:blank" type="text/javascript"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><link rel="stylesheet" href="cnblogs-markdown-css.min.css"><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+#MathJax_Message { position: fixed; left: 1px; bottom: 2px; background-color: rgb(230, 230, 230); border: 1px solid rgb(149, 149, 149); margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap; }
+</style><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style></head>
+<body><div style="display: none;" id="MathJax_Message"></div>
+<a name="top"></a>
+<div id="page_begin_html"></div><script>/* Code removed by ScrapBook */</script>
+
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/seayxu/">SeayXu</a></div>
+<div class="subtitle"><a href="http://seay.me/">博主站点</a>
+<a href="https://github.com/SeayXu">博主github</a>
+<a href="http://www.jianshu.com/users/3462d3ed1acd">博主简书</a></div>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li id="nav_myhome"><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/seayxu/">首页</a></li>
+<li id="nav_newpost"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li id="nav_contact"><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/seayxu">联系</a></li>
+<li id="nav_rss"><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/seayxu/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/seayxu/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔-60&nbsp;
+文章-0&nbsp;
+评论-169&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="#">解决Bash On Ubuntu On Window安装Zsh无效问题附安装说明</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><p><img src="20160607111306437.dat" alt="Bash On Ubuntu On Window"></p>
+<h1 id="前言">前言</h1>
+<p><a href="http://www.zsh.org/">Zsh</a>是一款非常棒的Shell，使用Linux和Mac系统的人，基本上都知道zsh的存在。</p>
+<h1 id="问题">问题</h1>
+<p>在安装完<a href="http://www.zsh.org/">Zsh</a>后，zsh是可以使用的，但是重启之后，又恢复至默认的bash。<br>
+我在安装好之后，使用命令<code>chsh -s /bin/zsh</code>切换默认shell。<br>
+然后，输出<strong>$SHELL</strong>变量是这样的：</p>
+<pre><code class="hljs perl">root@XY ~ <span class="hljs-comment"># echo $SHELL</span>
+/bin/bash</code></pre>
+<p>设置无效，我以为要重启。<br>
+于是，重新启动Bash On Ubuntu On Window。<br>
+结果依然无效。</p>
+<h1 id="办法">办法</h1>
+<p>我在BashOnWindows的<a href="https://github.com/Microsoft/BashOnWindows">GitHub</a>上开了一个<a href="https://github.com/Microsoft/BashOnWindows/issues/477">issues</a>，目前下面的办法可能是最简单易行的。</p>
+<blockquote>
+<p>在.bashrc配置文件里面加上zsh</p>
+</blockquote>
+<p>打开<strong>.bashrc</strong>文件：</p>
+<pre class="shell"><code class="hljs perl">root@XY ~ <span class="hljs-comment"># vi ~/.bashrc</span></code></pre>
+<p>在文件末尾加上<strong>bash -c zsh</strong>。</p>
+<p>然后重新启动终端即可。</p>
+<h1 id="附安装">附：安装</h1>
+<p><a href="http://www.zsh.org/"><strong>Zsh</strong></a>现在比较流行的是使用<a href="https://github.com/robbyrussell/oh-my-zsh"><strong>oh-my-zsh</strong></a>进行配置，因此需要安装<strong>oh-my-zsh</strong>。</p>
+<p><strong>安装zsh</strong><br>
+<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH">Installing ZSH</a></p>
+<pre class="shell"><code class="hljs perl">root@XY ~ <span class="hljs-comment"># sudo apt-get install zsh</span></code></pre>
+<p><strong>安装oh-my-zsh</strong><br>
+oh-my-zsh安装可以通过下面两种方式。<br>
+via curl</p>
+<pre class="shell"><code class="hljs cpp">root@XY ~ <span class="hljs-meta"># sh -c <span class="hljs-string">"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span></span></code></pre>
+<p>via wget</p>
+<pre class="shell"><code class="hljs cpp">root@XY ~ <span class="hljs-meta"># sh -c <span class="hljs-string">"$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"</span></span></code></pre>
+<p>更多信息，请参考<a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh#basic-installation</a></p>
+<p>如果你有更好的方法，希望能分享一下。</p>
+<p>原文:<a href="http://www.jianshu.com/p/9a575dda0eff">解决Bash On Ubuntu On Window安装Zsh无效问题附安装说明</a></p>
+</div><div style="display: block;" id="MySignature"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width: 0px;" src="80x15.png"></a><br>本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br>基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://www.cnblogs.com/seayxu" rel="dct:source">http://www.cnblogs.com/seayxu</a>上的作品创作。<br>
+可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。</div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/seayxu/category/838655.html" target="_blank">操作系统</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/seayxu/tag/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a id="green_channel_digg">好文要顶</a>
+            <a id="green_channel_follow">关注我</a>
+    <a id="green_channel_favorite">收藏该文</a>
+    <a id="green_channel_weibo" title="分享至新浪微博"><img src="icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" title="分享至微信"><img src="wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/seayxu/" target="_blank"><img src="20160712112314.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/seayxu/">seayxu</a><br>
+            <a href="http://home.cnblogs.com/u/seayxu/followees">关注 - 49</a><br>
+            <a href="http://home.cnblogs.com/u/seayxu/followers">粉丝 - 58</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a>+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/seayxu/p/5566351.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/seayxu/p/5566351.html" title="发布于2016-06-07 11:18">在CentOS或RHEL上安装Nux Dextop仓库</a><br><a href="http://www.cnblogs.com/seayxu/p/5568832.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/seayxu/p/5568832.html" title="发布于2016-06-08 09:14">在Ubuntu|CentOS上安装Shutter截图工具及快捷键设置</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-06-08 01:06</span> <a href="http://www.cnblogs.com/seayxu/">seayxu</a> 阅读(<span id="post_view_count">178</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5568830" rel="nofollow">编辑</a> <a href="#">收藏</a></div>
+	</div>
+	<script src="about:blank"></script><script>/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" class="underline">登录</a> 或 <a rel="nofollow" class="underline">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://rongcloud.cn/reports/journal2" target="_blank">【推荐】融云发布 App 社交化白皮书 IM 提升活跃超 8 倍</a><br><a href="http://arcapp.anruichina.com/arctrac/trac?tid=smb_azure_1212_CNBlog" target="_blank">【福利】Microsoft Azure给博客园的你专属三重大礼</a><br><a href="http://bbs.h3bpm.com/read.php?tid=861&amp;fid=11?utm_source=cnblogs&amp;utm_medium=pic&amp;utm_campaign=show&amp;utm_content=v10&amp;utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank">【推荐】BPM免费下载</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="http://www.gcpowertools.com.cn/products/spreadjs/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank"><img src="24442-20161031104652361-1905759806.gif" alt="" width="300" height="250"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/559198/" target="_blank">小米荣耀背后的风来风去：“互联网手机”的非理性繁荣与“消失”</a><br> ·  <a href="http://news.cnblogs.com/n/559197/" target="_blank">Facebook一架巨型上网无人机着陆过程中坠毁</a><br> ·  <a href="http://news.cnblogs.com/n/559196/" target="_blank">Twitter宣布继续保留Vine 更名为“Vine Camera”</a><br> ·  <a href="http://news.cnblogs.com/n/559195/" target="_blank">Oculus分拆表明虚拟现实市场分化加剧</a><br> ·  <a href="http://news.cnblogs.com/n/559194/" target="_blank">为什么LG为苹果生产OLED而自己仍在用液晶屏？</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="http://bbs.h3bpm.com/read.php?tid=861&amp;fid=11?utm_source=cnblogs&amp;utm_medium=pic&amp;utm_campaign=show&amp;utm_content=v10&amp;utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank"><img src="35695-20161213142353073-1602158633.jpg" alt="" width="468" height="60"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/558087/" target="_blank">高质量的工程代码为什么难写</a><br> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br> ·  <a href="http://kb.cnblogs.com/page/553682/" target="_blank">陈皓：什么是工程师文化？</a><br> ·  <a href="http://kb.cnblogs.com/page/551422/" target="_blank">没那么难，谈CSS的设计模式</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><iframe class="share_self" src="index_18.html" scrolling="no" width="290" frameborder="0" height="90"></iframe>
+<!-- 仓鼠-->
+<object type="application/x-shockwave-flash" style="outline: medium none;" data="hamster.swf" width="290" height="225"><param name="movie" value="http://cdn.abowman.com/widgets/hamster/hamster.swf?up_earColor=D4C898&amp;up_waterColor=97B7E8&amp;up_wheelCenterColor=E4EB2F&amp;up_eyeColor=360707&amp;up_bgColor=FFFFFF&amp;up_wheelColor=FFFFFF&amp;up_tailColor=E6BEE5&amp;up_wheelOuterColor=FF4D4D&amp;up_snoutColor=F7F4E9&amp;up_foodColor=cba920&amp;up_wheelSpokeColor=DEDEDE&amp;up_feetColor=AB9954&amp;up_bodyColor=F5D558&amp;"><param name="AllowScriptAccess" value="always"><param name="wmode" value="opaque"></object>
+
+<div id="clustrmaps-widget" style="margin: 0px; width: 290px;"></div><noscript><a href="http://www3.clustrmaps.com/user/a9a11ecb7"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/www.cnblogs.com-seayxu-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+<ul align="center">
+<li><a href="http://seay.me/">博主站点</a></li><li>
+</li><li><a href="https://github.com/SeayXu">博主github</a></li><li>
+</li><li><a href="http://www.jianshu.com/users/3462d3ed1acd">博主简书</a></li><li>
+</li></ul>
+<div id="stats_count_show"></div>
+<div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/seayxu/">seayxu</a><br>园龄：<a href="http://home.cnblogs.com/u/seayxu/" title="入园时间：2015-07-09">1年5个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/seayxu/followers/">58</a><br>关注：<a href="http://home.cnblogs.com/u/seayxu/followees/">49</a><div id="p_b_follow"><a>+加关注</a></div></div></div><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" title="日历" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a>&lt;</a></td><td align="center">2016年12月</td><td class="CalNextPrev" align="right"><a>&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td align="center">1</td><td align="center">2</td><td class="CalWeekendDay" align="center">3</td></tr><tr><td class="CalWeekendDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td class="CalWeekendDay" align="center">10</td></tr><tr><td class="CalWeekendDay" align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td class="CalTodayDay" align="center">17</td></tr><tr><td class="CalWeekendDay" align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td class="CalWeekendDay" align="center">24</td></tr><tr><td class="CalWeekendDay" align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td class="CalWeekendDay" align="center">31</td></tr><tr><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td></tr>
+</tbody></table></div><script type="text/javascript">/* Code removed by ScrapBook */</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" class="input_my_zzk" type="text">&nbsp;<input value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" class="input_my_zzk" type="text">&nbsp;<input value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/seayxu/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/seayxu/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/seayxu/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/seayxu/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/seayxu/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display: none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/seayxu/tag/.NET/">.NET</a>(18)</li><li><a href="http://www.cnblogs.com/seayxu/tag/.NET%20Core/">.NET Core</a>(13)</li><li><a href="http://www.cnblogs.com/seayxu/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>(7)</li><li><a href="http://www.cnblogs.com/seayxu/tag/SQL/">SQL</a>(6)</li><li><a href="http://www.cnblogs.com/seayxu/tag/Visual%20Studio/">Visual Studio</a>(5)</li><li><a href="http://www.cnblogs.com/seayxu/tag/Hexo/">Hexo</a>(5)</li><li><a href="http://www.cnblogs.com/seayxu/tag/CSharp/">CSharp</a>(4)</li><li><a href="http://www.cnblogs.com/seayxu/tag/%E5%89%8D%E7%AB%AF/">前端</a>(4)</li><li><a href="http://www.cnblogs.com/seayxu/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>(3)</li><li><a href="http://www.cnblogs.com/seayxu/tag/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>(3)</li><li><a href="http://www.cnblogs.com/seayxu/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类<span style="font-size: 11px; font-weight: normal;">(75)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/seayxu/category/709841.html">.NET(30)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/seayxu/category/832028.html">.NET Core(13)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/seayxu/category/709845.html">Android</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/seayxu/category/709842.html">ASP .NET(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/seayxu/category/781593.html">Database(9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/seayxu/category/832029.html">Front-end(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/seayxu/category/782609.html">Hexo(6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/seayxu/category/709855.html">Linux(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/seayxu/category/709851.html">Node.js</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/seayxu/category/821545.html">PHP(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/seayxu/category/709857.html">Windows CE(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/seayxu/category/838655.html">操作系统(3)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案<span style="font-size: 11px; font-weight: normal;">(60)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/seayxu/archive/2016/08.html">2016年8月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/seayxu/archive/2016/07.html">2016年7月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/seayxu/archive/2016/06.html">2016年6月 (10)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/seayxu/archive/2016/05.html">2016年5月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/seayxu/archive/2016/04.html">2016年4月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/seayxu/archive/2016/03.html">2016年3月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/seayxu/archive/2016/01.html">2016年1月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/seayxu/archive/2015/12.html">2015年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/seayxu/archive/2015/09.html">2015年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/seayxu/archive/2015/08.html">2015年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/seayxu/archive/2015/07.html">2015年7月 (5)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_scorerank" class="sidebar-block">
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	24819
+	</li>
+	<li class="liRank">
+		排名 -	10030
+	</li>
+</ul>
+</div>
+
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/seayxu/p/5513907.html#3576694">1. Re:[jQuery]jQuery DataTables插件自定义Ajax分页实现</a></li>
+        <li class="recent_comment_body">@iMhagerreturnData.recordsTotal = result.result.pagecount*rowcount;//这个不准，需要返回一个总记录的行数returnData.rec......</li>
+        <li class="recent_comment_author">--seayxu</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/seayxu/p/5513907.html#3576680">2. Re:[jQuery]jQuery DataTables插件自定义Ajax分页实现</a></li>
+        <li class="recent_comment_body">@seayxu引用@superstar就是下面图片json数据内容，可以自己写一个，稍微修改下就可以了格式如下：{total:100,page:10,limit:10,data:[{Id:91,Nam......</li>
+        <li class="recent_comment_author">--iMhager</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/seayxu/p/dotnet-core-tools-dotnet-publish.html#3482667">3. Re:『.NET Core CLI工具文档』（十三）dotnet-publish</a></li>
+        <li class="recent_comment_body">@老杨ABC谢谢支持...</li>
+        <li class="recent_comment_author">--SeayXu</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/seayxu/p/dotnet-core-tools-dotnet-publish.html#3482655">4. Re:『.NET Core CLI工具文档』（十三）dotnet-publish</a></li>
+        <li class="recent_comment_body">顶一下。</li>
+        <li class="recent_comment_author">--老杨ABC</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/seayxu/p/dotnet-core-tools-dotnet-publish.html#3482595">5. Re:『.NET Core CLI工具文档』（十三）dotnet-publish</a></li>
+        <li class="recent_comment_body">@IT白痴多谢...</li>
+        <li class="recent_comment_author">--SeayXu</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/seayxu/p/5523026.html">1. [WinForm]WinForm跨线程UI操作常用控件类大全(2654)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5508148.html">2. [.NET Core].NET Core R2安装教程及Hello示例(2129)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5513907.html">3. [jQuery]jQuery DataTables插件自定义Ajax分页实现(1645)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5569683.html">4. 在CentOS 7上安装.NET Core R2跑Hello World(1621)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/4786960.html">5. 第三方登录插件.NET版XY.OAuth-CSharp(820)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/seayxu/p/5508148.html">1. [.NET Core].NET Core R2安装教程及Hello示例(37)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5523026.html">2. [WinForm]WinForm跨线程UI操作常用控件类大全(33)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5513907.html">3. [jQuery]jQuery DataTables插件自定义Ajax分页实现(28)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5569683.html">4. 在CentOS 7上安装.NET Core R2跑Hello World(26)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/4663526.html">5. Visual Studio 2015 正式版 官方下载地址(6)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/seayxu/p/5523026.html">1. [WinForm]WinForm跨线程UI操作常用控件类大全(17)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5569683.html">2. 在CentOS 7上安装.NET Core R2跑Hello World(13)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/5508148.html">3. [.NET Core].NET Core R2安装教程及Hello示例(8)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/design-pattern-for-dotnet-singleton.html">4. .NET设计模式(1):1.1 单例模式(Singleton Pattern)(5)</a></li><li><a href="http://www.cnblogs.com/seayxu/p/dotnet-core-tools-dotnet-install-script.html">5. 『.NET Core CLI工具文档』（十四）dotnet-install 脚本参考(5)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">/* Code removed by ScrapBook */</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2016 seayxu
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<div align="center"><a href="http://www.amazingcounters.com/"><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AmazingCounters.com" border="0"></a>
+<script>/* Code removed by ScrapBook */</script>
+<script language="javascript" type="text/javascript" src="about:blank"></script>
+</div>
+<div align="center">
+<a href="http://info.flagcounter.com/hTqX"><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Flag Counter" border="0"></a>
+</div>
+<!--PageEndHtml Block End-->
+
+
+</body>
+</html>

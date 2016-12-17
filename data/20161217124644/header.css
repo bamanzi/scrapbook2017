@@ -1,0 +1,21 @@
+/* Code tidied up by ScrapBook */
+.font-red, .font-red a { color: rgb(255, 0, 0); }
+.header-navbar { min-height: 40px; }
+@media screen and (max-width: 960px) {
+  .header-navbar .sm-hide { display: none; }
+}
+.header-navbar .icon-svg { display: inline-block; width: 6px; height: 6px; vertical-align: middle; }
+.header-navbar .icon-svg.icon-arr-down-white { background: url("urn:scrapbook-download:9d0860c7-a8b1-48f0-9f0b-c32983b8cefc") no-repeat scroll center center / contain  transparent; }
+.header-navbar .top-banner { font-size: 14px; line-height: 40px; height: 40px; padding: 0px 20px; color: rgb(255, 255, 255); background: linear-gradient(to right, rgba(78, 170, 76, 0.5), rgba(0, 202, 133, 0.5)) repeat scroll 0% 0%, none repeat scroll 0% 0% rgb(78, 170, 76); }
+.header-navbar .top-banner a, .header-navbar .top-banner .name { color: rgb(255, 255, 255); }
+.header-navbar .top-banner .osc-logo { display: inline-block; width: 24px; height: 24px; margin-right: 20px; vertical-align: middle; background: url("urn:scrapbook-download:af468df3-87b6-4eed-9205-bc7a3db2a334") no-repeat scroll 0% 0% transparent; }
+.header-navbar .top-banner .menus .menu-item { display: inline-block; margin-right: 12px; }
+.header-navbar .top-banner .menu-drop { position: relative; }
+.header-navbar .top-banner .menu-drop:hover .menu-drop-down { display: block; }
+.header-navbar .top-banner .menu-drop .menu-drop-down { position: absolute; z-index: 101; left: -20px; display: none; width: 150px; background: none repeat scroll 0% 0% rgb(255, 255, 255); box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); }
+.header-navbar .top-banner .menu-drop .menu-drop-down .drop-list li { color: rgb(17, 17, 17); }
+.header-navbar .top-banner .menu-drop .menu-drop-down .drop-list li a { line-height: 36px; display: block; padding-left: 18px; color: rgb(17, 17, 17); }
+.header-navbar .top-banner .menu-drop .menu-drop-down .drop-list li a:hover { color: rgb(73, 172, 79); background: none repeat scroll 0% 0% rgb(249, 249, 249); }
+.header-navbar .top-banner .city-all { border-top: 1px solid rgb(221, 221, 221); }
+.header-navbar .split { position: relative; padding-right: 15px; }
+.header-navbar .split:after { position: absolute; top: 0px; right: 0px; width: 1px; height: 14px; margin: 13px 7px; content: ""; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
