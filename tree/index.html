@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html id="scrapbook-index">
+
+<head>
+<meta charset="UTF-8">
+<title>scrapbook2017 - ScrapBook</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+<link rel="stylesheet" type="text/css" href="custom.css" media="all">
+<script>
+function init() {
+    toggleAll(false);
+    try {
+        initLoadHash();
+    } catch(ex) {        if (console && console.error) console.error(ex);
+    }
+    initEvents();
+}
+function initLoadHash() {
+    var hash = top.location.hash, hashTargetUrl, hashTargetItem;
+    if (hash) {
+        hashTargetUrl = hash.substring(1);
+        var mainPage = hashTargetUrl.replace(/^(\.\.\/data\/\d{14})\/.*/, "$1/index.html");
+        var elems = document.getElementById("container-root").getElementsByTagName("A");
+        for ( var i = 0, I = elems.length; i < I; i++ ) {
+            if (elems[i].getAttribute("href") == mainPage) {
+                hashTargetItem = elems[i];
+                break;
+            }
+        }
+    }
+    if (hashTargetUrl) {
+        if (self != top) top.frames["main"].location = hashTargetUrl;
+    }
+    if (hashTargetItem) {
+        if (self != top && hashTargetItem.title) top.document.title = hashTargetItem.title;
+        var ancs = hashTargetItem;
+        while (ancs) { 
+            if (ancs.nodeName == "UL") toggleElem(ancs, true);
+            ancs = ancs.parentNode;
+        }
+        hashTargetItem.focus();
+    }
+}
+function initEvents() {
+    document.getElementById("toggle-all").onclick = function () {
+        toggleAll();
+        return false;
+    }
+    var elems = document.getElementById("container-root").getElementsByTagName("A");
+    for ( var i = 0, I = elems.length; i < I; i++ ) {
+        if (elems[i].className == "container") {
+            elems[i].onclick = onClickContainer;
+        } else if (elems[i].className == "folder") {
+            elems[i].onclick = onClickFolder;
+        } else {
+            elems[i].onclick = onClickItem;
+        }
+    }
+}
+function onClickContainer() {
+    var ulElem = document.getElementById(this.id.replace(/^item-/, "container-"));
+    if (ulElem) toggleElem(ulElem);
+    return false;
+}
+function onClickFolder() {
+    var cElem = this.previousSibling;
+    cElem.focus();
+    cElem.click();
+    return false;
+}
+function onClickItem() {
+    if (self == top) return;
+    var hash = "#" + this.getAttribute("href");
+    var title = this.childNodes[1].nodeValue;
+    try {
+        if (history && history.pushState) top.history.pushState("", title, hash);
+        else top.location.hash = hash;
+        top.document.title = title;
+    } catch(ex) {        if (console && console.error) console.error(ex);
+    }
+}
+function toggleElem(elem, willOpen) {
+    var iElem = document.getElementById(elem.id.replace(/^container-/, "item-"));
+    if (!iElem) return;
+    if (typeof willOpen === "undefined") willOpen = (elem.style.display == "none");
+    if (willOpen) {
+        elem.style.display = "block";
+        iElem.textContent = "▽";
+    }
+    else {
+        elem.style.display = "none";
+        iElem.textContent = "▷";
+    }
+}
+function toggleAll(willOpen) {
+    var ulElems = document.getElementsByTagName("UL");
+    if (typeof willOpen === "undefined") {
+        willOpen = false;
+        for ( var i = 1; i < ulElems.length; i++ ) {
+            if (ulElems[i].style.display == "none") { willOpen = true; break; }
+        }
+    }
+    for ( var i = 1; i < ulElems.length; i++ ) {
+        toggleElem(ulElems[i], willOpen);
+    }
+}
+</script>
+<script src="custom.js"></script>
+</head>
+
+<body>
+<div id="header"><a id="toggle-all" title="Toggle all folders" href="#"><img src="toggle.png" alt="">ScrapBook</a> <a id="search" href="../search.html"><img src="search.png" alt=""></a></div>
+<ul id="container-root">
+<li class="depth1"><a id="item-20161217110731" class="container" title="Toggle" href="#">▷</a><a class="folder" title="userscripts"><img src="treefolder.png" alt="">userscripts</a><ul id="container-20161217110731">
+<li class="depth2"><a class="" title="如何安装用户脚本" href="../data/20161217111034/index.html" target="main"><img src="../data/20161217111034/blacklogo16-bc64b9f7afdc9be4cbfa58bdd5fc2e5c098ad4bca3ad513a27b15602083fd5bc.png" alt="">如何安装用户脚本</a> <a class="bookmark" title="Source" href="https://greasyfork.org/zh-CN/help/installing-user-scripts" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="Greasy Fork - 安全、有用的用户脚本大全" href="../data/20161217111051/index.html" target="main"><img src="../data/20161217111051/blacklogo16-bc64b9f7afdc9be4cbfa58bdd5fc2e5c098ad4bca3ad513a27b15602083fd5bc.png" alt="">Greasy Fork - 安全、有用的用户脚本大全</a> <a class="bookmark" title="Source" href="https://greasyfork.org/zh-CN" target="_blank">➤</a></li>
+<li class="depth2"><a class="bookmark" title="Greasy Scripts :: Add-ons for Firefox" href="https://addons.mozilla.org/en-US/firefox/addon/greasy-scripts/?src=search" target="_blank"><img src="https://addons.cdn.mozilla.net/static/img/favicon.ico#-moz-resolution=16,16" alt="">Greasy Scripts :: Add-ons for Firefox</a></li>
+<li class="depth2"><a class="bookmark" title="Greasefire :: Add-ons for Firefox" href="https://addons.mozilla.org/en-US/firefox/addon/greasefire/" target="_blank"><img src="https://addons.cdn.mozilla.net/static/img/favicon.ico#-moz-resolution=16,16" alt="">Greasefire :: Add-ons for Firefox</a></li>
+<li class="depth2"><fieldset class="separator" title=""><legend>&nbsp;&nbsp;</legend></fieldset></li>
+<li class="depth2"><a class="" title="Top 10 Greasemonkey User Scripts" href="../data/20161217111021/index.html" target="main"><img src="../data/20161217111021/u0939doeuioaqhspkjyc.png" alt="">Top 10 Greasemonkey User Scripts</a> <a class="bookmark" title="Source" href="http://lifehacker.com/249957/top-10-greasemonkey-user-scripts" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="What are some cool greasemonkey scripts that I may use? : firefox" href="../data/20161217111113/index.html" target="main"><img src="../data/20161217111113/favicon.ico" alt="">What are some cool greasemonkey scripts that I may use? : firefox</a> <a class="bookmark" title="Source" href="https://www.reddit.com/r/firefox/comments/3iyijt/what_are_some_cool_greasemonkey_scripts_that_i/" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="GreaseMonkey 10+1個私房推薦腳本：讓網頁變好用的 Firefox 套件 - 電腦玩物" href="../data/20161217111157/index.html" target="main"><img src="../data/20161217111157/favicon.ico" alt="">GreaseMonkey 10+1個私房推薦腳本：讓網頁變好用的 Firefox 套件 - 電腦玩物</a> <a class="bookmark" title="Source" href="http://www.playpcesor.com/2009/12/greasemonkey-101-firefox.html" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="20 must-see Greasemonkey Addons(No Technical Knowledge Req.)" href="../data/20161217111659/index.html" target="main"><img src="../data/20161217111659/32x32.png" alt="">20 must-see Greasemonkey Addons(No Technical Knowledge Req.)</a> <a class="bookmark" title="Source" href="http://www.makeuseof.com/tag/20-must-see-greasemonkey-addonsno-technical-knowledge-req/" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="17 Greasemonkey Scripts to Turbocharge Your Browser | PCWorld" href="../data/20161217111711/index.html" target="main"><img src="../data/20161217111711/favicon.ico" alt="">17 Greasemonkey Scripts to Turbocharge Your Browser | PCWorld</a> <a class="bookmark" title="Source" href="http://www.pcworld.com/article/147266/article.html" target="_blank">➤</a></li>
+<li class="depth2"><a class="" title="有哪些好用的 UserScript 脚本？ - Google Chrome - 知乎" href="../data/20161217111755/index.html" target="main"><img src="../data/20161217111755/favicon.ico" alt="">有哪些好用的 UserScript 脚本？ - Google Chrome - 知乎</a> <a class="bookmark" title="Source" href="https://www.zhihu.com/question/21174406" target="_blank">➤</a></li>
+<li class="depth2"><fieldset class="separator" title=""><legend>&nbsp;&nbsp;</legend></fieldset></li>
+<li class="depth2"><a class="" title="Userscript that makes the filename column bigger on SourceForge, because that shit is not responsive. · GitHub" href="../data/20161217111814/index.html" target="main"><img src="../data/20161217111814/favicon.ico" alt="">Userscript that makes the filename column bigger on SourceForge, because that shit is not responsive. · GitHub</a> <a class="bookmark" title="Source" href="https://gist.github.com/stefansundin/f1e81a8f5281f6f4cac4" target="_blank">➤</a></li>
+</ul>
+</li>
+</ul>
+<script>init();</script>
+</body>
+
+</html>

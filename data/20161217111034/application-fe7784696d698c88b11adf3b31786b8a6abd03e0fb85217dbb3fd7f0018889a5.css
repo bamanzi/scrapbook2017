@@ -1,0 +1,29 @@
+/* Code tidied up by ScrapBook */
+body { margin: 0px; }
+body, select, input { font-family: "Open Sans",sans-serif; }
+a { color: rgb(103, 0, 0); }
+a:visited { color: rgb(164, 33, 33); }
+#main-header { background-color: rgb(103, 0, 0); padding: 0.25em 0px; }
+.width-constraint { margin: auto; max-width: 960px; }
+#main-header .width-constraint { padding: 0px 0px 0.25em; position: relative; }
+#site-name img { vertical-align: bottom; }
+#site-name-text { display: inline-block; vertical-align: top; }
+#site-name-text h1 { line-height: 1.1em; }
+#main-header, #main-header a, #main-header a:visited, #main-header a:active { color: white; }
+#main-header h1 { font-size: 72px; margin: 0px; letter-spacing: -2px; }
+#main-header h1 a { text-decoration: none; }
+#main-header .subtitle { margin: -8px 0px 0px 10px; font-size: 0.7em; text-shadow: -1px -1px 0px rgb(103, 0, 0), 1px -1px 0px rgb(103, 0, 0), -1px 1px 0px rgb(103, 0, 0), 1px 1px 0px rgb(103, 0, 0); }
+#site-nav nav, #nav-user-info { text-align: right; position: absolute; right: 0px; }
+#site-nav nav { bottom: 0px; }
+#nav-user-info { top: 0px; }
+nav a:hover { color: white; }
+nav { padding: 0px; }
+nav li { list-style-type: none; display: inline; }
+nav li + li { margin-left: 0.5em; }
+#script-search, #language-selector { display: inline; }
+#nav-user-info, #nav-user-info select, #nav-user-info input { font-size: smaller; }
+@media (max-width: 600px) {
+}
+:target { background-color: rgb(255, 230, 230); }
+@media not all, only screen and (min--moz-device-pixel-ratio: 1.5), not all {
+}
