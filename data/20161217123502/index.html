@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+		<!-- H5BP best practices -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Cool, but obscure unix tools :: Software architect Kristof Kovacs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Twitter Bootstrap -->
+		<!-- link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css" -->
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<!-- Font Awesome Icons -->
+		<link href="font-awesome.css" rel="stylesheet">
+		<!-- KKovacs.eu specific styles -->
+		<link rel="stylesheet/less" href="https://kkovacs.eu/v/1464120120/css/style.less">
+		<!-- Animate.css -->
+		<!-- <link rel="stylesheet/less" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"> -->
+		<!-- Less.js in the head to act fast -->
+		<script src="about:blank" async=""></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank"></script>
+		<!-- Modrernizr -->
+		<script src="about:blank"></script>
+
+	<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+	<body>
+		<div class="container">
+			<!--[if lt IE 9]>
+				<p class="browsehappy alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" style="text-decoration: underline;">upgrade your browser</a> to improve your experience.</p>
+			<![endif]-->
+
+			<div class="col-lg-6 col-lg-push-6 col-md-7 col-md-push-5 navbar-kk">
+				<div class="navbar navbar-default yamm navbar-kk">
+	<div class="navbar-header">
+		<button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	<div class="navbar-brand hidden-md hidden-lg"><a href="https://kkovacs.eu/">kkovacs.eu</a></div>
+	</div>
+	<div id="navbar-collapse-grid" class="navbar-collapse collapse" style="height: 1px;">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About Me<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+					<li class="grid-demo">
+						<div class="row">
+							<div class="col-sm-6 kk-menu">
+							  <p>Professional me</p>
+								<a href="https://kkovacs.eu/resume">My résumé</a>
+								<a href="https://kkovacs.eu/services">My consulting services</a>
+								<a href="https://kkovacs.eu/open-source-contributions">Open source contributions</a>
+								<a href="https://kkovacs.eu/expertise">What I have expertise in</a>
+								<a href="https://kkovacs.eu/tools">Software tools</a>
+								<a href="https://kkovacs.eu/gear">Hardware gear</a>
+							  <p>Personal me</p>
+								<a href="https://kkovacs.eu/about-kristof">Some personal stuff</a>
+								<a href="https://kkovacs.eu/quotes">A few of my favourite quotations</a>
+								<a href="https://kkovacs.eu/personal-computing-history">My early computing history</a>
+								<a href="https://kkovacs.eu/go-yoga-meditation">My hobbies: Go, Yoga, Meditation</a>
+							</div>
+							<div class="col-sm-6 kk-menu">
+							  <p>Let's be friends</p>
+								<a href="http://twitter.com/kkovacs">...on Twitter <strong>(best)</strong></a>
+								<a href="http://www.linkedin.com/in/kkovacs">...on LinkedIn <strong>(second best)</strong></a>
+								<a href="http://www.facebook.com/kristof.kovacs">...on Facebook</a>
+								<a href="http://plus.google.com/111470163730860313435/about">...on Google+</a>
+								<a href="http://pinboard.in/u:kkovacs/">...on Pinboard.in</a>
+								<a href="http://github.com/kkovacs">...on GitHub</a>
+								<a href="http://bitbucket.org/kkovacs">...on BitBucket</a>
+								<a href="http://code.google.com/u/kkovacs/">...on Google Code</a>
+								<a href="http://www.shelfari.com/kkovacs">...on Shelfari</a>
+								<a href="http://stackoverflow.com/users/398164/kkovacs">...on Stack Overflow</a>
+								<a href="http://foursquare.com/user/kkovacs">...on FourSquare</a>
+							</div>
+						</div>
+					</li>
+				</ul>	
+			</li>
+
+			<li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About You<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="grid-demo">
+						<div class="row">
+							<div class="col-sm-6 kk-menu">
+							  <p>You are a...</p>
+								<a href="https://kkovacs.eu/for-business-owners">Business owner?</a>
+								<a href="https://kkovacs.eu/for-corporate-cio-cto">Corporate CIO/CTO?</a>
+								<a href="https://kkovacs.eu/for-corporate-ceo">Corporate CEO?</a>
+								<a href="https://kkovacs.eu/for-project-managers">Project manager?</a>
+																																								<p>Do you code?</p>
+								<a href="https://kkovacs.eu/senior-developer-jobs">Senior developer?</a>
+								<a href="https://kkovacs.eu/junior-developer-jobs">Junior developer?</a>
+							</div>
+							<div class="col-sm-6 kk-menu">
+							  <p>You need help with...</p>
+								<a href="https://kkovacs.eu/software-development">Software development</a>
+								<a href="https://kkovacs.eu/technical-writer">Tech article writing</a>
+								<a href="https://kkovacs.eu/software-consulting">Software consulting</a>
+								<a href="https://kkovacs.eu/web-application-security-audit">Security audit</a>
+								<a href="https://kkovacs.eu/php-mysql-tuning">PHP/MySQL tuning</a>
+								<a href="https://kkovacs.eu/training-and-workshops">Trainings &amp; workshops</a>
+								<a href="https://kkovacs.eu/high-availability-cloud">High availability cloud</a>
+								<a href="https://kkovacs.eu/rapid-prototyping">Rapid prototyping</a>
+								<a href="https://kkovacs.eu/system-monitoring">Server/system monitoring</a>
+								<a href="https://kkovacs.eu/project-manager">Project leadership</a>
+								<a href="https://kkovacs.eu/business-analyst">Business analysis</a>
+								<a href="https://kkovacs.eu/interim-cio-cto">Interim CIO/CTO</a>
+								<a href="https://kkovacs.eu/business-dashboard">Business dashboard</a>
+							</div>
+						</div>
+					</li>
+				</ul>	
+			</li>
+
+			<li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Insights on Tech<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="grid-demo">
+						<div class="row">
+							<div class="col-sm-12 kk-menu">
+								<p>Articles:</p>
+								<a href="#">Cool and little known Unix tools</a>
+								<a href="https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis</a>
+								<a href="https://kkovacs.eu/zabbix-vs-nagios">Zabbix vs Nagios comparison</a>
+								<a href="https://kkovacs.eu/erlang">What is Erlang and when to use it?</a>
+								<a href="https://kkovacs.eu/running-yaws-with-drupal-wordpress-zend-framework">Running Drupal and Wordpress on YAWS</a>
+								<a href="https://kkovacs.eu/painless-subdomains-on-your-laptop">Painless subdomains on your laptop</a>
+								<a href="https://kkovacs.eu/how-not-to-mess-up-encodings">How not to mess up encodings</a>
+								<a href="https://kkovacs.eu/cloud-power">How the cloud makes my life easier?</a>
+								<a href="https://kkovacs.eu/the-best-features-of-the-coming-drupal-7">My favourite Drupal 7 features</a>
+								<a href="https://kkovacs.eu/drop-in-xcache-emulation-with-memcached">Xcache emulation with memcached</a>
+								<a href="https://kkovacs.eu/writeroom-emulation-with-vim">Writeroom emulation with VIM</a>
+								<a href="https://kkovacs.eu/the-tao-of-programming">The TAO of programming</a>
+								<p>Short series on the basics of web security:</p>
+								<a href="https://kkovacs.eu/is-your-website-a-liability">Is your website a liability?</a>
+								<a href="https://kkovacs.eu/exploiting-web-development-worst-practices-sql-injection">Exploit: Sql injection</a>
+								<a href="https://kkovacs.eu/exploiting-web-development-worst-practices-file-inclusion">Exploit: File inclusion</a>
+								<a href="https://kkovacs.eu/exploiting-web-development-worst-practices-file-upload">Exploit: File upload</a>
+								<p>Downloadable:</p>
+								<a href="https://kkovacs.eu/stuff/Project%20Planning.numbers">Project evaluation sheet (for Numbers on OS X)</a>
+						</div>
+					</div></li>
+				</ul>	
+			</li>
+
+			<li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Insights on Management<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="grid-demo">
+						<div class="row">
+							<div class="col-sm-12 kk-menu">
+								<p>Checklists:</p>
+								<a href="https://kkovacs.eu/software-project-best-practices-checklist">Software Project best practices checklist</a>
+								<a href="https://kkovacs.eu/travel-checklist">Business travel checklist</a>
+							  <p>Articles on the art of software project management:</p>
+								<a href="https://kkovacs.eu/the-death-star-design-pattern">The Death Star design pattern</a>
+								<a href="https://kkovacs.eu/free-project-management-template-mil-std-498">MIL-STD-498, a forgotten military standard</a>
+								<a href="https://kkovacs.eu/teamwork-ground-rules">Teamwork ground rules</a>
+								<a href="https://kkovacs.eu/the-reasons-behind-my-four-project-limit">The reasons behind my four-project limit</a>
+								<a href="https://kkovacs.eu/businessmens-guide-to-open-source-licenses">Open source licenses: Watch out for the restraints</a>
+								<a href="https://kkovacs.eu/always-show-the-larger-view">Use cases are the best type of specification</a>
+								<a href="https://kkovacs.eu/how-much-can-you-learn-from-a-prototype">How much can you learn from a prototype?</a>
+								<a href="https://kkovacs.eu/how-much-open-source-saves-for-you">How much money does open source saves us?</a>
+								<a href="https://kkovacs.eu/cloudsigma-burst-price-chart">Charting Cloudsigma burst prices</a>
+								<a href="https://kkovacs.eu/erlang">What Erlang is good and not good for?</a>
+								<a href="https://kkovacs.eu/concurrency-crunch">Concurrency, the next challenge ahead</a>
+							</div>
+						</div>
+					</li>
+				</ul>	
+			</li>
+		</ul>
+	</div>
+</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 x-col-lg-pull-6 col-md-5 x-col-md-pull-7" id="logohead">
+					<table>
+						<tbody><tr>
+														<td>
+								<a href="https://kkovacs.eu/"><h2>Kristof Kovacs</h2></a>
+								<h5>Software architect, consultant</h5>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+
+			<div class="row" id="content">
+				<div class="col-xs-12">
+					<h1>A little collection of cool unix terminal/console/curses tools</h1>
+
+<p>Just a list of 20 (now 28) tools for the command line. Some are little-known, some are just too useful to miss, some are pure obscure
+-- I hope you find something useful that you weren't aware of yet!
+Use your operating system's package manager to install most of them. (Thanks for the tips, everybody!)
+
+</p><div class="row">
+
+<div class="alpha col-sm-6">
+
+<h2>dstat &amp; sar</h2>
+<p>iostat, vmstat, ifstat and much more in one.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="dstat_screenshot.png" alt="dstat screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>slurm</h2>
+<p>Visualizes network interface traffic over time.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="slurm_screenshot.png" alt="slurm screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>vim &amp; emacs</h2>
+<p>The real programmers' editors.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="vim_screenshot.png" alt="vim screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>screen, dtach, tmux, byobu</h2>
+<p>Keep your terminal sessions alive.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="gnu_screen_screenshot.png" alt="gnu screen screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>multitail</h2>
+<p>See your log files in separate windows.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="multitail_screenshot.png" alt="multitail screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>tpp</h2>
+<p>Presentation ("PowerPoint") tool for terminal.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="tpp_screenshot.png" alt="tpp screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>xargs &amp; parallel</h2>
+<p>Executes tasks from input (even multithread).
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="xargs_screenshot.png" alt="xargs screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>duplicity &amp; rsyncrypto</h2>
+<p>Encrypting backup tools.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="duplicity_screenshot.png" alt="duplicity screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>nethack &amp; slash'em</h2>
+<p>Still the most complex game on the planet.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="nethack_screenshot.png" alt="nethack screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>lftp</h2>
+<p>Does FTPS. Can mirror, kinda like rsync.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="lftp_screenshot.png" alt="lftp screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>ack, ag (silver searcher), pt</h2>
+<p>A better grep for source code.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="ack_screenshot.png" alt="ack screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>calcurse &amp; remind + wyrd</h2>
+<p>Calendar systems.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="calcurse_screenshot.png" alt="calcurse screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>newsbeuter &amp; rsstail</h2>
+<p>Command line RSS readers.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="newsbeuter_screenshot.png" alt="newsbeuter screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>powertop</h2>
+<p>Helps conserve power on Linux.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="powertop_screenshot.png" alt="powertop screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>tig</h2>
+<p>A console UI for git.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="tig_screenshot.png" alt="tig screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>qalc</h2>
+<p>The best calculator. Ever. (For scripts too.)
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="qalc_screenshot.png" alt="qalc screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+</div>
+<div class="omega col-sm-6">
+
+<h2>htop, atop &amp; glances</h2>
+<p>Process, memory and io monitoring.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="htop_screenshot.png" alt="htop screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>ttyrec &amp; ipbt</h2>
+<p>Record and play back terminal sessions.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="ipbt_screenshot.png" alt="ipbt screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>rsync</h2>
+<p>Keeps filesystems in sync over SSH.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="rsync_screenshot.png" alt="rsync screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>mtr</h2>
+<p>traceroute 2.0.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="mtr_screenshot.png" alt="mtr screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>socat &amp; netpipes</h2>
+<p>Directing stuff easily in and out of sockets.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="socat_screenshot.png" alt="socat screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>iftop, iptraf &amp; nethogs</h2>
+<p>To see where your traffic goes.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="iftop_screenshot.png" alt="iftop screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>siege &amp; tsung</h2>
+<p>Command line load test tools.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="siege_screenshot.png" alt="siege screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>ledger</h2>
+<p>Terminal-based accounting package.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="ledger_screenshot.png" alt="ledger screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>taskwarrior</h2>
+<p>Todo management in the terminal.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="taskwarrior_screenshot.png" alt="taskwarrior screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>curl</h2>
+<p>Everybody's favorite HTTP toolbox.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="curl_screenshot.png" alt="curl screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>rtorrent &amp; aria2</h2>
+<p>Command line torrent downloaders.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="rtorrent_screenshot.png" alt="rtorrent screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>ttytter &amp; earthquake</h2>
+<p>Nice trendy Twitter clients :)
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="ttytter_screenshot.png" alt="ttytter screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>vifm &amp; ranger</h2>
+<p>Alternatives to the midnight commander.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="vifm_screenshot.png" alt="vifm screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>cowsay &amp; sl</h2>
+<p>I just couldn't resist. :o)
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="cowsay_screenshot.png" alt="cowsay screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>cloc</h2>
+<p>Counts lines of code.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="cloc_screenshot.png" alt="cloc screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+<h2>ipcalc</h2>
+<p>For network assignments.
+		</p><div class="kk-img animated fadeInRight kk-pull-center "><img src="ipcalc_screenshot.png" alt="ipcalc screenshot" title="" class="" width="400" height="326"><p class="caption_text"></p></div>
+		
+</div>
+</div>
+
+<p><a href="http://news.ycombinator.com/item?id=2567186">Discussion of this post on Hacker News</a>
+- that's the place to get into nice old-school FidoNet-style flame wars about the important things in life,
+like whether or not <code>tmux</code> is better than <code>screen</code>, is <code>parallel</code> better than <code>xargs</code>,
+whether or not <code>ifconfig</code> is a power tool,
+or should this list include somebody's once-used tool for converting old Pascal code to C or something. :o)
+
+
+</p><p><strong><strong>Shameless plug:</strong></strong> I'm a freelance <a href="https://kkovacs.eu/resume">software architect (resume)</a>, have a look at my <a href="https://kkovacs.eu/services">services</a>!
+
+
+
+
+</p><div class="clear"></div>
+
+<div id="contactform" class="hidden-print">
+
+<h3>Got some other command line tool you love? Send me a message!</h3>
+
+<form name="contactform" class="form" role="form" method="POST" action="https://kkovacs.eu/contact">
+<input name="cylondetector" value="37" type="hidden">
+
+<fieldset>
+
+<div class="row">
+
+<div class="form-group col-sm-6">
+<p>Your name:
+<br><input name="name" class="form-control" placeholder="Your Name Here">
+</p></div>
+
+<div class="form-group col-sm-6">
+<p>Your email (so I can reply. Confidential.)
+<br><input name="email" class="form-control" placeholder="you@example.com">
+</p></div>
+
+</div>
+
+<div class="form-group">
+<p>Message:
+<br><textarea name="message" class="form-control" rows="8">Dear Kristof,
+
+...</textarea>
+</p></div>
+
+<p><button class="btn btn-default" type="submit">Send!</button>
+
+</p><fieldset>
+
+
+</fieldset></fieldset></form></div> <!-- contactform -->
+
+				</div>
+			</div>
+
+			<div class="row pagefooter">
+				<hr>
+				<div class="col-xs-6 text-left">
+					<a href="https://twitter.com/kkovacs" class="twitter-follow-button" data-show-count="true" data-dnt="true">Follow @kkovacs</a><script>/* Code removed by ScrapBook */</script>
+				</div>
+				<div class="col-xs-6 text-right">
+					<small>Copyright © Kristof Kovacs, 2016.</small>
+				</div>
+			</div>
+
+		</div><!-- /.container -->
+		<!-- jQuery  -->
+		<script src="about:blank"></script>
+		<!-- Twitter Bootstrap	-->
+		<script src="about:blank"></script>
+		<!-- jQuery plugins we might use  -->
+		<script src="about:blank"></script>
+		<!-- KKovacs.eu specific Javascript -->
+		<script src="about:blank"></script>
+
+		<!-- Google Analytics {{{ -->
+		<script>/* Code removed by ScrapBook */</script>
+		<!-- }}} -->
+
+	
+
+	
+	<script type="application/ld+json">/* Code removed by ScrapBook */</script>
+
+
+</body><!-- Let's give it up to the Microdata -->
+</html>
