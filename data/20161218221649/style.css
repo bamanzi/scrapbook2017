@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+.dgd_stb_box.clean_white { background-color: rgb(255, 255, 255); box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.1); }
+.dgd_stb_box.clean_white h5 { font-family: Arial,Helvetica,sans-serif; color: rgb(46, 46, 46); font-size: 18px; text-shadow: 0px 1px 0px rgb(199, 199, 199); background-color: rgb(240, 240, 240); border-bottom: 1px dashed rgb(55, 99, 120); display: block; margin: 0px -15px 10px; padding: 10px 35px 5px 15px; }
+.dgd_stb_box.clean_white p { font-size: 16px; }
+.dgd_stb_box.clean_white ul { font-size: 14px; margin: 10px 20px; list-style: disc outside url("bullet.png"); line-height: 17px; }
+.dgd_stb_box.clean_white ul.stb_social { overflow: hidden; margin: 10px -7px 0px 0px; padding: 0px; clear: both; list-style: none outside url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); }
+.dgd_stb_box.clean_white .dgd_stb_box_close { top: 8px; right: 8px; background-color: rgb(242, 239, 239); width: 20px; height: 20px; color: rgb(66, 66, 66); font-size: 13px; line-height: 18px; font-family: Tahoma,Geneva,sans-serif; text-align: center; text-decoration: none; border-radius: 10px 10px 10px 10px; box-shadow: 0px 0px 0px 4px rgb(211, 210, 210); }
+.dgd_stb_box.clean_white .stbMsgArea { display: none; padding: 10px 0px 0px; margin: 0px; }
