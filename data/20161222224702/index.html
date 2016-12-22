@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html itemtype="http://schema.org/Article" itemscope="">
+<head>
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>How to Create a Bootable Linux USB Flash Drive, the Easy Way</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="How to Create a Bootable Linux USB Flash Drive, the Easy Way">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="A bootable USB drive is the best way to install or try Linux. But most Linux distributions—like Ubuntu—only offer an ISO disc image file for download. You’ll need a third-party tool to turn that ISO file into a bootable USB drive.">
+<meta property="og:image" content="http://www.howtogeek.com/thumbcache/280/160/16517bbebf53ce8911a88571951547ff/wp-content/uploads/2016/12/img_5841ea9918cac.png">
+<link rel="image_src" href="http://www.howtogeek.com/thumbcache/280/160/16517bbebf53ce8911a88571951547ff/wp-content/uploads/2016/12/img_5841ea9918cac.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@howtogeek">
+<meta name="twitter:title" content="How to Create a Bootable Linux USB Flash Drive, the Easy Way">
+<meta name="twitter:description" content="A bootable USB drive is the best way to install or try Linux. But most Linux distributions—like Ubuntu—only offer an ISO disc image file for download. You’ll need a third-party tool to turn that ISO file into a bootable USB drive.">
+<meta name="twitter:image:src" content="http://www.howtogeek.com/thumbcache/280/160/16517bbebf53ce8911a88571951547ff/wp-content/uploads/2016/12/img_5841ea9918cac.png">
+<link rel="stylesheet" href="A.howtogeek.css,q1466298260.pagespeed.gp+jp+jw+pj+ec+ei+fc+if+ii+js+rj+rp+rw+ri+cp+md.cf.8phhU3MPa4.css" type="text/css">
+<link href="css.dat" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script type="text/javascript" async="" src="about:blank"></script><script src="about:blank" async=""></script><script src="about:blank" async=""></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" id="facebook-jssdk"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>	<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="http://www.howtogeek.com/wp-json/">
+<link rel="shortlink" href="http://www.howtogeek.com/?p=1261">
+<link rel="alternate" type="application/json+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2Fhowto%2Flinux%2Fcreate-a-bootable-ubuntu-usb-flash-drive-the-easy-way%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2Fhowto%2Flinux%2Fcreate-a-bootable-ubuntu-usb-flash-drive-the-easy-way%2F&amp;format=xml">
+<link rel="canonical" href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/">
+<meta property="og:url" content="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/"><link rel="amphtml" href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/amp/">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script pagespeed_no_defer="">/* Code removed by ScrapBook */</script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+<body class="v3">
+<div style="text-align: center; min-height: 90px; z-index: 999999; margin-right: auto; margin-left: auto; position: relative;" class="adslot adslot970">
+<div id="htgyl11">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader" style="border-top: 4px solid rgb(23, 34, 50);">
+<div class="logo" style="">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek"></a>
+<div style="float: right; width: 450px;">
+<ul class="bigmenu">
+<li class="menubaritem">Articles <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu">
+<div class="subMenuArticles">
+<div class="smawrap">
+<a href="http://www.howtogeek.com/97242/how-to-migrate-windows-7-to-a-solid-state-drive/" align="left" class="title" rel="bookmark"><span><img src="xpasted_image_at_2016_12_13_05_15_pm.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.TWtAvLQisz.jpg"></span></a>
+<a href="http://www.howtogeek.com/97242/how-to-migrate-windows-7-to-a-solid-state-drive/" class="title" rel="bookmark">How to Migrate Your Windows Installation to a Solid-State Drive</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/284864/how-to-stop-skype-from-running-in-the-background-on-windows-10/" align="left" class="title" rel="bookmark"><span><img src="ximg_5850b22c4d789.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.soCBzQSBaA.png"></span></a>
+<a href="http://www.howtogeek.com/284864/how-to-stop-skype-from-running-in-the-background-on-windows-10/" class="title" rel="bookmark">How to Stop Skype from Running in the Background on Windows 10</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/285114/how-to-buy-your-first-high-quality-camera/" align="left" class="title" rel="bookmark"><span><img src="xpreview-4.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.XYwojlTVD3.jpg"></span></a>
+<a href="http://www.howtogeek.com/285114/how-to-buy-your-first-high-quality-camera/" class="title" rel="bookmark">How to Buy Your First High-Quality Camera</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/284677/how-to-upgrade-to-a-larger-hard-drive-without-reinstalling-windows/" align="left" class="title" rel="bookmark"><span><img src="ximg_58505c5565757.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.UVKMnLRYeP.jpg"></span></a>
+<a href="http://www.howtogeek.com/284677/how-to-upgrade-to-a-larger-hard-drive-without-reinstalling-windows/" class="title" rel="bookmark">How to Upgrade to a Larger Hard Drive Without Reinstalling Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li>
+<li class="menubaritem">Subscribe <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu" style="padding-bottom: 10px;">
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>FOLLOW US</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/howtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom: 20px;">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="topmenu" type="hidden">
+<input id="fromaddress" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<p style="font-family: 'Open Sans'; text-transform: none;">Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input id="from" name="email" value="Enter Your Email Here" style="width: 200px; color: rgb(187, 187, 187); margin-left: 59px; font-family: 'Open Sans'; text-transform: none;" type="text"><input id="sub1" name="sub1" value="Get Your Newsletter Now" style="background: none repeat scroll 0% 0% rgb(85, 168, 223); margin-left: 59px; width: 212px; margin-top: 6px; font-family: 'Open Sans'; text-transform: none;" type="submit"></p>
+<div style="clear: both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>RSS</h4>
+<ul style="width: 130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menubaritem">Search <span class="icon-magnifying-glass" style="padding-left: 10px; font-size: 16px;"></span>
+<div class="subMenu" style="padding: 20px; text-align: center;">
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input name="q" id="s" value="" style="width: 900px; height: 40px; line-height: 40px; border: 1px solid rgb(204, 204, 204);" type="text">
+<input id="searchsubmit" value="Go" style="height: 42px; border: 1px solid rgb(204, 204, 204); font-family: 'Open Sans'; font-size: 16px; padding: 10px; background: none repeat scroll 0% 0% rgba(196, 230, 237, 0.99); border-radius: 0px 5px 5px 0px;" type="submit">
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display: none;">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-1261">
+<style>
+/* Code tidied up by ScrapBook */
+p + .relatedside { margin-top: 8px ! important; }
+</style>
+<h2 style="margin-top: 10px;"><a style="font-family: 'Open Sans',sans-serif;" href="#" rel="bookmark" title="How to Create a Bootable Linux USB Flash Drive, the Easy Way">How to Create a Bootable Linux USB Flash Drive, the Easy Way</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img class="alignnone size-full wp-image-283174" alt="" src="ximg_5841ea9918cac.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.mmewPwCT0u.png"></p>
+<p>A bootable USB drive is the best way to install or try Linux. But most Linux distributions—like Ubuntu—only offer an ISO disc image file for download. You’ll need a third-party tool to turn that ISO file into a bootable USB drive.</p>
+<p>You’ll need to download an ISO file to do this—we’re going to use Ubuntu in our example, but this should work for quite a few different Linux distributions. Head to <a href="https://www.ubuntu.com/download/desktop">Ubuntu’s download page</a>&nbsp;and download the version of Ubuntu you want—either the stable “Long Term Service” release or the current release. If you’re not sure which one to download, we recommend the <a href="http://www.howtogeek.com/162768/should-you-use-ubuntu-lts-or-upgrade-to-the-latest-release/">LTS release</a>.</p>
+<p>Below, we’ll show you how to turn this ISO into a bootable flash drive on both Windows or an existing Linux system.</p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/">How to Create a Live Ubuntu USB Drive With Persistent Storage</a></span><div style="clear: both;"></div></div></div>
+<p>NOTE: This process creates a traditional live USB drive. When you run it, none of your chances (like installed programs or created files) will be saved for the next time you run it. For installing Linux to your PC, this is fine—but if you want a live USB that keeps your changes so you can use it regularly on different computers, you’ll want to check out <a href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/">these instructions instead</a>.</p>
+<div id="div-thetop1" style="margin-top: 5px; margin-bottom: 15px;">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script async="" src="about:blank"></script>
+<!-- htg-desktop-top -->
+<ins class="adsbygoogle" style="display: inline-block; width: 650px; height: 141px;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="1477883008"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<h3>How to Create a Bootable USB Drive on Windows</h3>
+<p>There are many tools that can do this job for you, but we recommend a free program called&nbsp;<a href="https://rufus.akeo.ie/">Rufus</a>—it’s faster and more reliable than many of the other tools you’ll see recommended, including UNetbootin.</p>
+<p>Download Rufus&nbsp;and run it on your Windows PC. The tool will open immediately—you don’t even have to install it.</p>
+<p>Connect a USB drive with at least 2GB of free space to your Windows PC (this may vary depending on your distribution of choice). The contents of this drive will be erased, so back up any important files on the drive first. Click the “Device” box in Rufus and ensure your connected drive is selected.</p>
+<p><img class="alignnone size-full wp-image-283166" alt="" src="ximg_5841e6e7be5ab.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.5aJVPzhbqj.png"></p>
+<p>If the “Create a bootable disk using” option is grayed out, click the “File System” box and select “FAT32”.</p>
+<p>Activate the “Create a bootable disk using” checkbox, click the button to the right of it, and select your downloaded ISO file.</p>
+<p><img class="alignnone size-full wp-image-283167" alt="" src="ximg_5841e783b5267.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.4FeAozAhB1.png"></p>
+<p>Once you’ve selected the correct options, click the “Start” button to begin creating the bootable drive.</p>
+<p>You&nbsp;may be told you need newer SysLinux files. Just click the “Yes” button and Rufus will automatically download them for you.</p>
+<p><img class="alignnone size-full wp-image-283169" alt="" src="ximg_5841e7e448464.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.TXYGHC2N9P.png"></p>
+<p>Rufus will ask how you want to write the image. Just select the default option—“Write in ISO Image Mode (Recommended)”—and click “OK”.</p>
+<p><img class="alignnone size-full wp-image-283172" alt="" src="ximg_5841e8f08e979.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.bwcfwYDNdW.png"></p>
+<p>You’ll be warned that all data on the USB drive will be erased. Click “OK” to continue if the drive has no important data on it. (If you forgot to back up your data, click “Cancel”, back up the data on the USB drive, and then run Rufus again.)</p>
+<p><img class="alignnone size-full wp-image-283173" alt="" src="ximg_5841e94a9480b.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.q4VNFuyqDA.png"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/">How to Boot Your Computer From a Disc or USB Drive</a></span><div style="clear: both;"></div></div></div>
+<p>Rufus will create the bootable USB drive. You can click “Close” to close Rufus when it’s done.</p>
+<p>Next, restart your computer and <a href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/">boot from the USB drive using these instructions</a>. You can also take it to another computer and boot Ubuntu from the USB drive on that computer.</p>
+<h3>How to Create a Bootable USB Drive on Ubuntu</h3>
+<p>If you’re already using Ubuntu, you don’t need to do this from Windows. Just open the Dash and search for the &nbsp;“Startup Disk Creator” application, which is included with Ubuntu.</p>
+<p><img class="alignnone size-full wp-image-283175" alt="" src="ximg_5841eaee7b3be.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.wxnxBgL3EG.png"></p>
+<p>Provide a downloaded Ubuntu ISO file, connect a USB drive, and the tool will create a bootable Ubuntu USB drive for you.</p>
+<p><img class="alignnone size-full wp-image-283176" alt="" src="ximg_5841eb372f60a.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.skLbi6XqUN.png"></p>
+<p>Many other distributions have their own similar tools built-in, so you’ll have to check and see what your particular distribution has available.</p>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear: both; height: 0px;"></div>
+<!-- discourse comments begin -->
+<style>
+/* Code tidied up by ScrapBook */
+#discusslink { color: rgb(88, 88, 88); text-decoration: none; }
+#discusslink:hover { color: rgb(0, 0, 255); text-decoration: none; }
+</style>
+<div style="max-width: 650px; width: 100%; padding-top: 10px;"><span style="font-family: bebas_neueregular; font-size: 19px; position: relative; top: -9px; padding-right: 10px; float: left; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(134, 134, 134);"><a id="discusslink" href="#">JOIN THE DISCUSSION (9 REPLIES)</a></span><div style="border-top: 4px solid rgb(204, 204, 204);"></div></div>
+<div id="discusscomments" style="display: none;"><style>
+/* Code tidied up by ScrapBook */
+</style>
+<div style="clear: both;"></div>
+<ul class="commentlist"><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Biswa</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p><a rel="nofollow" href="https://rufus.akeo.ie/">Rufus</a> can delete any other files saved in the USB drive. But <a rel="nofollow" href="https://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI</a> s also good for this &amp; it does not delete any data in that flash drive.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Joseph Archer</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>I would also suggest <a rel="nofollow" href="http://www.linuxliveusb.com/">Linux Live USB (lili)</a> as it's pretty easy and straightforward with clean language. It allows also to create persistent USB drives so that you can run the Linux Distro and save info to it.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2"></div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Excellent article and service being provided by HowToGeek.Since Microsoft, clearly, has decided to abandon its "Windows" Operating System, making it easy for Windows users to move to Linux is most appreciated.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 9, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Pradip Shah</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Personally I have found YUMI to be more reliable and easier to use. Apart from what is described here it also allows you to add a whole lot of bootable options to the flash drive.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 9, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Miguel Mayol</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Use YUMI.exe, it is far BETTER as you can USE actual big pendrives for other things too and have several liveISO together including repairing ones that are even good tools for MS WOS users.</p><p></p></div>
+</li></ul>
+<div id="discourselink">
+<h3 id="reply-title"><a href="https://discuss.howtogeek.com/t/how-to-create-a-bootable-linux-usb-flash-drive-the-easy-way/54642">Got Feedback? Click Here to Join the Discussion</a></h3>
+</div>
+</div>
+<div style="clear: both; height: 0px;"></div>
+<div id="socialmediabuttons" style="margin-bottom: 0px;">
+<div id="fb-root"></div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="fb-like" data-href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+</div>
+<div style="padding-right: 20px; float: left;">
+<div class="g-plusone" data-size="tall"></div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-right: 20px; float: left;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/" data-via="howtogeek" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="postiddiv" post="1261"></div>
+<div style="clear: both;"></div>
+<div class="articleExtras" style="background: none repeat scroll 0% 0% rgb(254, 254, 254); border-top: medium none;">
+<div style="width: 450px; float: left;" id="authorinfobox">
+<p style="font-weight: normal; color: rgb(51, 51, 51);"><a href="http://www.howtogeek.com/author/thegeek/"><strong>Lowell Heddings</strong></a>, better known online as the How-To Geek, spends all his free time bringing you fresh geekery on a daily basis. You can follow him on <a href="https://plus.google.com/115673881208416151793/?rel=author" rel="author">Google+</a> if you'd like.</p>
+</div>
+<div style="width: 130px; float: right;">
+<ul class="normul" style="margin-bottom: 6px;">
+<li>Published 12/8/16</li>
+<!--<li><span id="pv3"></span></li>-->
+</ul>
+<div style="margin-left: -14px;"><a href="https://twitter.com/lowellheddings" class="twitter-follow-button" data-show-count="false"></a></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div class="below-post-features" style="width: 650px; overflow: hidden; max-height: 250px; margin-bottom: 20px;">
+<div id="outbrain-below-article" style="">
+<style>
+/* Code tidied up by ScrapBook */
+.below-post-features:hover { box-shadow: 0px 0px 3pt 2pt rgb(98, 128, 156); }
+#sb3 { padding-top: 0px; }
+.content { padding-bottom: 0px; margin-bottom: 0px; }
+</style>
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+</div>
+<div style="width: 100%; max-width: 650px; margin-bottom: 0px;">
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div id="showcomments" class="showcomments" style="">
+<a id="sc1" href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/?showcomments=1#comments">9 Replies</a>
+</div>
+<div id="commentsWrap" post="1261" replyto="0">
+<div id="sc2">
+<ul class="commentlist"><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Biswa</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p><a rel="nofollow" href="https://rufus.akeo.ie/">Rufus</a> can delete any other files saved in the USB drive. But <a rel="nofollow" href="https://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI</a> s also good for this &amp; it does not delete any data in that flash drive.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Joseph Archer</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>I would also suggest <a rel="nofollow" href="http://www.linuxliveusb.com/">Linux Live USB (lili)</a> as it's pretty easy and straightforward with clean language. It allows also to create persistent USB drives so that you can run the Linux Distro and save info to it.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 8, 2016</a></div>
+<div class="commentauthor"><div class="ca2"></div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Excellent article and service being provided by HowToGeek.Since Microsoft, clearly, has decided to abandon its "Windows" Operating System, making it easy for Windows users to move to Linux is most appreciated.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 9, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Pradip Shah</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Personally I have found YUMI to be more reliable and easier to use. Apart from what is described here it also allows you to add a whole lot of bootable options to the flash drive.</p><p></p></div>
+</li><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 9, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Miguel Mayol</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>Use YUMI.exe, it is far BETTER as you can USE actual big pendrives for other things too and have several liveISO together including repairing ones that are even good tools for MS WOS users.</p><p></p></div>
+</li></ul>	</div>
+<div id="respond"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="yui-u">
+<div class="sidebar">
+<div style="margin-top: 24px; clear: both;"></div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding: 10px;"><p>The 1883 eruption of Krakatoa was so incredibly loud that it ruptured the eardrums of people up to forty miles away.</p>
+</div>
+</div>
+<div id="side78"><div id="htgyr11">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>	<div class="sidebar-glossary lazyloaddiv">
+<style>
+/* Code tidied up by ScrapBook */
+</style>
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/242428/whats-the-best-way-to-back-up-my-computer/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAUGBwIECAED/8QAMhAAAQMDAgQEBAUFAAAAAAAAAQIDBAAFEQYhEjFBUQcTMoEUUmGRCEJicaEiIzSx8P/EABcBAQEBAQAAAAAAAAAAAAAAAAMEAgX/xAAhEQACAgIBBAMAAAAAAAAAAAABAgADESExBBITQRQiUf/aAAwDAQACEQMRAD8Aq/WWrYusbSLfcR8MtKgpLzaOIA/tmoa5oW4OMh6BLjyW1bp4gWyfYipfaYCYzKRJdElYPFkoAAO/L7nnTlpwHauCtnj0nE6LIG2ZUM3TF/i5LlsfUB1bHGP4pQ6260oocbW2odFDBq5LxqRqCFtQ2Fz5KQcttgkDAyRsCSQOYA264p7pmzaj1NbkSJ2i5EWMtOUrlFvy1D6FZFUre4GWEEoo9znvJ60Z5Yq8rr4f2d1uS/IgsQWmHA0p0FQK3OjbaUetf6enWoFA01ZL5Lls2yVJiFkAsh0BwuJzgqOCOHpyJ59aZb1IzMhO4ZEhYJ71kFkU61Rp1dhU2lydHeU56UJyF47kcse9JMUqkMMiZIxzLakT48RgvSHUoQNsk8z2A6n6V5pmLddbXJcGBKj2m3tf5El90JXw9cDOSf0j3I5VFrxapc534iLP4HPldGQB2T2+2T3pXMvOurPHVEbucqDFcwlXwYDSFDoD5YHflUNNSsNHcW5m44nWGkLV4YaMhoEZk3GekYXKUyFq9lOcKUDrhOBS3Wvihp2DHecuF6blrCSY9sgKG5ztxuc/tjAzgneuPbhPflsoU/KmvyB6y64VD+TWrEeDLyFgqOfWCP8AVUfDJ2xk7FSACJb2s/Ep9cViTb3lCY4xwFaEhtEJC/UxHT+U8+Jz1K+g56dm1NYbLpP4iG0ozXNltuepa++flH/b1XkdozHw9KX5bQOB9B2FXRbfw96lu+l49+tcy3z3/L8xy0rUWn0pPpAzsT14SR7nattSmApiCwjiU5LuEm6XB2bKdLjrm5PQDsPpWOKZ3y1tWiW5AcjvR57S+F5lYILWOhB3znf9sd6X8BNKAPUxv3JRZ9QW+XhHm+S6fyOHH2PI0/bcStJSQFJI3B5Giiud1Fa1t9ZXWxYbiK92aHISpEdtDbh3OE7Coc/anYzx+J/pSk8+h/aiin6axs9uYdqDGZkErlLQkYS0ByB5DtU/s+vdbWxLYZ1RPajsp9RwpaRjGyiCrsMZ6423NFFVt+SYT6I1AvxHfRC1XIQm9n+1b7usBJX8rMjAAUk5wHMZSTvkcobcIUqBOfgzGFsSWHFNutrGChQOCD70UUZ0cTY2J//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/242428/whats-the-best-way-to-back-up-my-computer/" class="title" rel="bookmark">What’s the Best Way to Back Up My Computer?</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAwQABwIFBgEI/8QAMBAAAgEDAgQEBQMFAAAAAAAAAQIDAAQREiEFEzFBIlFxgQYHMkJhFHKxUqHB0eH/xAAbAQACAwADAAAAAAAAAAAAAAADBAECBQAGB//EACMRAAIBAwQBBQAAAAAAAAAAAAECAAMEEQUSMUEhBiJRYfH/2gAMAwEAAhEDEQA/AK8DawdcXJkIwxJyG/wamZIAGAOexydJ/H4962ckcTEB4hq/pPf3oK28asVRiO+MVs7xPMqtmOpjbuXPMUlDjcHpRrjlgBZcqDsD2pz4L4DDxH4t4fZyOwgmnVZlVsEr1IHltmrO4j8uZ1mkWCD4e/T8w6BJJdFtGds4OM470J6yocGWtfT1a7BdCAB8/kp4xSRKSgyQdsfcP90W3dZ15Mz74zET3/Fdz8weAcL4EsA4ZA6Iz4fMrNsc46+hrjpba1uoNUOEbqDnv3oiOrjMUu9NqW1Q06nI7EPGshUK2WU9DnegywStISF1fnST/FAaS5gGXDHTucHfHmDRkkiuFEiSdeunzou3ESNrg5AhZ+VK/hByNgdVKyE6SGiLHPUnBraPw+ZTlUeQEeJX2IHr0pblHUAramOwR6K1D6nb2UNyJu/lgiSfFtmWBSNVkzldgeWwGO3UjpV2XswMchDowOytzlT+xr5zltmZsRSmCTO2rYjseo9emaXuOGrcQJbXXFFdUOQjMDjPf6aRuLYs2QZradcJQpFcE+ZZXzNjFzw1HIYkSKdhjIAYYyf3VWEjSWc2AGZHGdJprVPbwQ26XbzQxquiPYBPD+0HIyRWUkkcudWcAbspxg0a3olF93EztSKXFXeB1PbWaOaIaRqQH6SfEKRvOFzSTl7bJjPTC0aaDW3O4awEq9VOwPpQxxKNfDcq8Mo2ZcUyFYeVmcbadct2c4UlSDgg5/ivZJY28M9tbygfawB/7UqU7HYube1kBTLQqeiP41HoDuPY0rLwdZTpS5TzVtXiB9+3vUqVG0Gcis/Cb+H64xMncpuRj8A70tGHjkJCKp7qw0k+fWpUqhQYkwaxB5C1usokYb6DhvXH3CsGN0cCSziuyNhKVUkj36elSpQeDLKBP//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/184091/5-ways-to-free-up-disk-space-on-a-mac/" class="title" rel="bookmark">5 Ways To Free Up Disk Space on Your OS X Mac</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/209654/scammers-are-using-a-fake-version-of-adwcleaner-to-trick-people/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/209654/scammers-are-using-a-fake-version-of-adwcleaner-to-trick-people/" class="title" rel="bookmark">Scammers Are Using a Fake Version of AdwCleaner to Trick People</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/112636/htg-explains-do-you-really-need-expensive-cables/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAACAwUGAQf/xAA0EAABAwMCAwcBBgcAAAAAAAABAgMEAAUREiEGMVEHEyJBYXGBQxQVJDKhsURSYoKR0eH/xAAaAQEAAgMBAAAAAAAAAAAAAAACAQUAAwQG/8QAJxEAAgIABAUEAwAAAAAAAAAAAQIAAwQFITEREjKBkRNBUWFxscH/2gAMAwEAAhEDEQA/APROJOHJdglMoecD7Dw8DgTpII5gj9utApR5CqC4dob97uqDcrlGkNttAARkKSw0vUdWFK3Ud0jn5bDnVlbbxDlzZEOK6mRIjJQp9tvxFAVnSTjrg1TjF0sCwPAfen7l22EvrVS67yxCFeR2pwSegNOakNFIJC058ikipQWSNWpOPemltdnQwP4M1MrLuOEgUlIHiQKhUWfMV2Q+kq0N+L2oK6S7fa4apl2nxoLA5rfcCB8Z505Ee40yo7KwahUwc7L296yL3G0m7KLfBXDE+9pzj7c/+Fie4WvdXwKiLPao6dapnCcQn6QZfc0/3ZGTS5fmRzD2lFcrQzczDmx7HclqZjaZa3yhLaXcpIVpAVlGyspVzz81ouyFLPDHF/EN3uyo6GpjTMeKlljGpCMkqUBtnJA+KqkOypV4ktz3pckpbbcbU+7pGDqBG3PcdPOvQYFoj92hzRspIIB9a78+yemqlaqyQDv2InJl2ZW4ixrLdSP7NezxHw3JbBcS2kkn8zBOfnFB3BywSHldzHeWDzU1qSDVc3BYb+kB0OMUS2lKQBy6V49MiVTx9Q9tJeHHEjp8zPXyw8QTLu790cQM2i0lKO7CIveSM6RqypWw3zjFCwez/h+LMTcJzMi+Tx/E3J3v1A+iT4R/itaVHkCD6ZqMrP8AKavqxyIEB28yuYBmLGDOFQGEjSBsE6dhQy9ZVuP0o5TwwRj9KgU8jO5APSlFKiM2y25ltpCQNhpAq4ZkKDaQcGlSpuxbUwqoG0IEtIHiBp/eJUcBZB6UqVaY53RqTzyPT/lQKRudiceWeXxSpUpEhdCgMKUCP6h/uhyCTsknG3hJx+9KlWTJ/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/112636/htg-explains-do-you-really-need-expensive-cables/" class="title" rel="bookmark">Do You Really Need to Buy Expensive Cables?</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/166507/why-most-web-services-dont-use-end-to-end-encryption/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABwAEBQYIAwEC/8QAMxAAAQMDAgQFAgMJAAAAAAAAAQIDBAAFEQYhBxIxQRMiUXGRYYEIFDIVQlJigqGxstH/xAAYAQEAAwEAAAAAAAAAAAAAAAAEAgMFBv/EAB0RAAIDAQEBAQEAAAAAAAAAAAECAAMRBDESQSH/2gAMAwEAAhEDEQA/AM6z9VXxm/R50u4TZLgc5igulKUjOCAkbD7UZrReQ8UpTeXEn+Fawr/anN14dWGfJekp/MxXXVFSiysDzE5J3Bx7DAqHmcMXY8bNouCFuJOyHwpAV/Uk9ftXQPzdCElTMZeilgARL9bFvOYUJLTqMZOEYV8g4/tT8JoXcM3vF1IGXJDyeVrLbLrnMOYfq9M7HbPpmiwhsnoCaTxWOUP3KelUDD4nNKSOm1D29X6aJ8hCbktptLikpSghOAD7ZolqZcR+pBHuKDPES2No1e6hlC5D75CuRKCd1dBgdTVtz4uiV1rpwyO1TenDaJZRNfkSPBV4aVOqUScfWhVDnXBpgI5pDRBOUpcWkfAOK0xA4aaebgpZuDH5t07qWUhv45enzUszonSzLSW02aOQkAZVkn5JolnLZadJiq70rGASUSiuiUULONl/1HabjEhW2euDEkMFfiNIHOpSSeYc3UbY6Y61XuEuqbw7OmRpN4muKIS6gynvFBzkEDPTO1IfrCt8kQycxZfrZddY2K82q/J1RYobEllnzvR228LTthSsDrncnvUjpvipbebxZbDcaKhorfUskrBHZKQN96sen9YyILgU9DQ708zRwT9j/wBoB8ZbQ9p/UsqYUpTaL467LjuoB8mQFFop7EE4G+MEehwO2wjWTyKrTQA3sKU7jPFcbW7BiRpMMtJKVrCkKSsgZCgf5sjHtvvXmhtP3+/3xnVl4dcjhZ540dCQFLGMAq9E47d/85xtctcptUBlolpXmWQgq5N8A9fb70SdNcTNaP6ijLlX59TUYIdcQUtIR4ex5SlKOmD67VXX0An+ybUnJo5yK4h0NYyo7YFPGbO+tHMohB9CK+oswhtDoALh3KqeftaT+66UD0FPZ7PyEVU/YPtZaTt2qojLM4uNrYKlNON4ynmGCDnqD6fShxcuEt8gvKcss2NIa68icMOE9uxBx9TSpVO2lH9EhXayeSOtM7UMOc1b1jlkB0NrZlNqbUg4znbORjfNTP4gNPTH9JxbulQXHjRkNvJKiCFFQwcHbvjsfelSoNKDWWMZzqmD3gLou465nSLPb3S14TzciQUglRbTnoOh3Keu1W7W3D5WhNRMw3yp5h1jnAI5FbeUA5Ksjbt2pUqLXmZkRbu7D3am2022OGlqW34YKVKOSQRkU55aVKtceTKPs//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/166507/why-most-web-services-dont-use-end-to-end-encryption/" class="title" rel="bookmark">Why Most Web Services Don’t Use End-to-End Encryption</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/130826/how-to-fix-a-stuck-pixel-on-an-lcd-monitor/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAAMEBQYHAQj/xAA4EAACAQEFBQUFBwUBAAAAAAABAgMEAAUGERIHEyExUTJSU2FiFCJBQnEVM0NjgZGhFyNyksHw/8QAGAEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAkEQACAgECBgMBAAAAAAAAAAABAgADEQQSITFBUbHBExRhkf/aAAwDAQACEQMRAD8ArlXgG7oJitZiy+Bmx7dcq55PIM//AHWzZMGYRzTfYovBwxXgb1y+aHp/l/AtZMYXfT1u0nDtLWIJYZY6wMrk5HKUEc287MsWRYSw7d2+a6aNpioEUYh1anEcEgHBjzCn9rXNSWZQnUZ5Tmi4qCTIBsI4CWEtJftSxEeZ1Xo3hsenpNlHwps2WoKtebPlIVya8XP4jr0+n7+dnC3VfN4U/tFDhjDUdK6a1aRwH0ZS81z4HTq4dfrZKvr6q4LwU37he63SWRjld1MJtJV1J/TNjl1yFmPpnxgERR1BLRKlwtsznmghinSaSUoERayVixO5IyyHrP8AFpb+mWFBET9kuSEJ4yy91/8Aq2S2gUlDBd+G62ipKemLXpRltEaK2kiHgchytoM1Om7ddKcmHZB+E/pshCVOD2z5llqFaw3ckeJRhszwjvin2ID/AHMuLSH8Rh1+lnN37MsGyREvcETH3fEPNFPXztcVgHtGehfvM+wPFX0eqy11wqIDkg+T5B4a/l21OMFRgcZDYmhK7UsKHSwLvWKCFYfMh7vnakYOiOKdoVRUXk5qBQUkE8ICsNMiHRnwy4gDLjbQMTxRNtKwcwEZBqKkHsdIj0Ns2wHPFhbaJV015pulraJVj1Ko955JGXmvQW6OnG6nI57fZknAXgNyyf7gYmy1FPIqyaN4M1cfOMuFSOtuPSJUVY36M4Eg5s3xlj9fnZ9LAG16UGRZgCEHEaqgeHajYmxpX3BVVE8uF72loqZBM1QkKiMACJzxKDlll9WFucEex8LzlO5FOWkdtdTThe6pVbLdXlQni3L7od89LXypjG8cagfeYdsd6ceJakYtgvfE+z+mqKO66wz+20syR6GzaJSG1jJAMtKk5+VtGljkNWw0S8ZSOUniSenzsF2VfH57MpsIepR+nwJFqqGRSWXtA5al70J7/nZGBljjA1RDNV5sndA7/laVCOI42G9+XkJPyLR1SsqbsZyr7g8TzHWx1cotxiI4tDR48wVKXbP2uYcWPxSH12YbQcD0GJqBalZhTXnTxpJFUoU1ndwuVQlpOC6jn5WLFiS1qxWynp7MUa1feD39CRVyLtLulTRVVNdF4qrhRNV3kusgMwOYDZZkmQ/oOtksSUuM8Q3RLdVdT4cpYKqAxO8dcpbJ0iBIzPMHd/7GxYtn2T8m7aMwVpDJgkxhtCwnX1WDKEXHi17uvK76OKAxpeaxQSIqyaiQnEuQuQ68rYThiDaRiTFMdw09735DVSSBZXqKiZVhzzIMhGZUE9RzNixafUNlN3WUUcbCDPVuEMPRYew9Bd/tdRWyBRJJLVSiZyxWEkBmTPTmOA+As6vOFBJGN0p90jgi99vy7FizqgFQATNQxLT/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/130826/how-to-fix-a-stuck-pixel-on-an-lcd-monitor/" class="title" rel="bookmark">How to Fix a Stuck Pixel on an LCD Monitor</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark">How to Find and Remove Duplicate Files on Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/126665/htg-explains-what-does-bricking-a-device-mean/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAYDBAIFBwgB/8QAMBAAAgEDAwIEBQIHAAAAAAAAAQIDBAURABIhBjETQVFhFCIycYEVoSMkQpKx0fD/xAAYAQEAAwEAAAAAAAAAAAAAAAAGAwQFB//EACIRAAICAgMAAQUAAAAAAAAAAAECAAMEEQUSIUETIjFhcf/aAAwDAQACEQMRAD8A8kU8JYblXGmW0UMjbX8NSSSeVH78au2Gw01X4Jd5kIfD7WJyvr5eo/fvronTvTNlS2UlXWVtTEJGMRAUhg6Psb5SCc5HIOsDNz1QeGLuPwdEF1mv6Ws1LWSR0snj0zSyj+NDMw2c+hO3GccEeWmy30dVViKS7x+DdII3p6iPxvkkJwrHjggqqkHyHbW7oOmbSrVcFHea+KoC5ppDGgUORxyyYI3DuPXGp7rYLpJcpKumu1Im6iiaVZmWWGSpLOHCkbWGAEA7jGcA9ibtva3fV9GJK7Meqwdqzr+SlFbYqW1yUT1Ez00kIhZXfJKZUA575wMZ9zn11hcblHs2yOCUVAME/wBJzzgjv5/b30XK0XmGo21F2ooV8RUbMG5EBfbj6wfsTjuBgHjSb1FFVUyHfcot+Tn+VaPBxnB+cnsCfcdtVasa2xvufc0Gy8IKSqT5fuoWWqldFQBu428DOCffnHrpSqL/ACPO7BRjPop/yNUr4GEDeLdFSdRuVlXKkemCf+50ty1MiMMTI24BshWwc/bSXEwVC7hjNz17aA1Oq9K9OyVMQjglheZU8Rk3gEDyznAGfcjnjvxrf9RWer6eltldLTyfCTRrDK8cW9IZmkJVXIGVLB0I3cHsCcHDB070XAZ47hBZoGkMe0/IULJgYBHHkPTy0yi29OzdIfoE1BCJCUSApLulHhSBguGJyAQdwI0ds5Ctn93r5mpZj30hTWVJH4i29Vb7bT0sVwrIqWeoIEKT5RnYcMoVgOeV7HzOo6q9UkXyC4U+4seDIM+4xpt6g6douounaax1l1r6Gu+MFbTzBisgkT6SA5OUUnO0EYJ7850j3uXrC20tJabh+mXBaLayVqTMCykEAsrjIfjvk4wNRU0Y9w2re/uT18vlI/V6wZqbzexJFJE0iEtGUQkhhg49fLPOOxxpF6xuhNVSVLAqTM+1gWxuZTuyPpHl/cfU6v8AVVxuk0U1PVUFlnIY7ZHUmROSQAwTOBuzyTz+dJV1rFmgZaqOnAbh0UEgtxyOePxgaQ4GEqaO5m8nyb2AjrqUrrcHeT5pDknHPnrUPM5YncdYzbFbajFoyeQwzjjyzqFSAMFVz9z/AL0jrqVR5CN+S7t7PcFu6hSJaaWUypIF+YrIAr57krz5jPfOp+tr3TCyRGWhjrHSVQRU04mgw28jgnjaV7jH1Dvk4NGuVY+/qzpGfh0gKQPmIN36yNZW0m74GjlpXb4SRIWBiLg7wXVwQpJGRg/nGkXr7qbxrhFUvUzxVSQNFI0FSJIZcOSuVdcnuecg8+3Jo0owKkLgETHzqxShNfk59d77PNIyfFpjyYx4zwPQn3HOO34C7VtIxJaQN59tGjSuqtUA0IQyL7HJ7GU23HIOozuz3GjRqyJQLGf/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/126665/htg-explains-what-does-bricking-a-device-mean/" class="title" rel="bookmark">What Does “Bricking” a Device Mean?</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABAYABQECAwf/xAAzEAABAwMDAwIEAgsAAAAAAAABAgMRAAQSBQYhEzFRYYEUIkGRB3EWMjM0QkOCkqGx8P/EABsBAAMAAgMAAAAAAAAAAAAAAAABBQYHAgME/8QAKhEAAQIEBAQHAQAAAAAAAAAAAQACAwQREwUhUZESQlKBBhUWIjNBofD/2gAMAwEAAhEDEQA/AEdpY80U2pBiYpMVuWxZdU2t1YUhRSqEHuK3G7NNA/auH+g1uMY1Ig0MVu4WpnYLOOzEM7FP1s6wnvE0e3qNqymVFIry5zd9r/Atf9poG73Oh0QlxZ9q4RMfkAPkB7rp9MTcU+5hHZer3O/29JPUssesnsYBikPeW+9f3G6oanqdzcNg/I2pw4J/IdhSe9qaHVSpaj7UI5coUZyP2qFM4zLxDVrmjaqu4f4dMoKBh/UU67JJ80OXBNcS+knvXMuieBUx09BPON1cbJxRylX22b3QrXW7t7XrI3bCssEj6Knv/wB35EiZHPbmpqsL28XauWbbLv8AJvGuo2tIVKZHkGDVG5ytRnuZrdi66DbrYQ0sOCCVoCing8jweaxSJJxL74nCc9llnmgfJQpQ8NGVz+89T/fgoznUrhTVy2XduDqJTk58KjKSCmEnHgjGfcGiXtbdcJDh2w6nNCxFmE8JWFBPABAMAR4kUsOayVFM2lhwZ/dxyee/3rKNcdQ042GLPFapINunjtwPTifzmixF6SvLdZqEyp3FdFDjGO2ClwYk/ApA47EGPlMHgjkenehtb1J7VbEt3FzoCZWFFTFtg6TP1VEwJ8+3c1RXGtl5tSFWliMk4ym3AI4jg/Tiujm4XnAQu2sVSZOVskkn8zyaLEXpKLrNVlGmWy7joI1W2ktZhauEZTymf9GOfSoxpbTqCpWrac18xELWqTBieEnihNQ1P43DNi2awEDotBHHrHf3oQut+aLEXpKLrNUrlavJ+9YKleT96lSiqdFu2pvpr6inM+MMYj1mi3xpg0u3Uw/dG+KVddC0gISrMxj5GMEk/XiI5qVKVSnRaupsUi0KLh5eQHxPEFPaQn2/yKYfw/OxBvMI3k5qn6PlpYztky6Fx8pIBEiZ7elSpTqkqy6VoC9a1NVmp9vTjdLNgLhJU4GMlY5Yn9bHGee81UXBR13OkolvI4T4nipUoqii/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark">What’s the Best Antivirus for Windows 10? (Is Windows Defender Good Enough?)</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both;"></div>	<div style="width: 300px; min-height: 20px; margin-top: 30px;">
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<div id="htgys01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-top: 10px;"></div>
+</div>
+<div id="sidebar-float-widget">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom: 0px;"></div>
+<div class="g-page" data-width="320" data-href="//plus.google.com/100292833634918081724" data-layout="landscape" data-rel="publisher"></div>
+<div style="margin-top: 8px;">
+<a href="https://twitter.com/howtogeek" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @howtogeek</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+<div style="margin-bottom: 10px;"></div>
+<div class="fb-like" data-href="https://www.facebook.com/howtogeek" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div style="margin-bottom: 15px;"></div></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both; margin-bottom: 20px;"></div>
+<div style="clear: both;"></div>
+<div id="htgyr01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<div style="padding: 0px 20px 20px;">
+<h3 style="text-align: left; font-size: 30px; color: rgb(35, 70, 113); font-family: bebas_neueregular; text-transform: uppercase; font-weight: normal;">More Articles You Might Like</h3>
+<script async="" src="about:blank"></script>
+<!-- htg-below-article-content -->
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="8688851009" data-ad-format="autorelaxed"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="htgyl01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width: 18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="https://discuss.howtogeek.com/">Discussion Forum</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color: rgb(255, 152, 84);">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="footer" type="hidden">
+<input id="fromaddress2" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<input name="email" id="ftemtxt" style="color: rgb(187, 187, 187);" value="Enter Your Email Here" type="text">
+<input id="ftemsub" value="Get Articles by Email" style="background: none repeat scroll 0% 0% rgb(85, 168, 223);" type="submit">
+</form>
+<p></p>
+<div style="clear: both;"></div>
+</div>
+<div style="width: 280px; float: left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/howtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left; margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="font-style: italic; font-size: 11px; text-align: center;">Disclaimer: Most of the pages on the internet include affiliate links, including some on this site.</div>
+<br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2016 How-To Geek, LLC&nbsp; All Rights Reserved</div>
+</div>
+</div><script src="about:blank" id="pocket-btn-js"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Begin comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<!-- Quantcast Tag -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+
+</body>
+</html>

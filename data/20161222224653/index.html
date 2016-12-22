@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html itemtype="http://schema.org/Article" itemscope="">
+<head>
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>How to Create a Live Ubuntu USB Drive With Persistent Storage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="How to Create a Live Ubuntu USB Drive With Persistent Storage">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="A Linux live USB drive is normally a blank slate each time you boot it. You can boot it up, install programs, save files, and change settings. But, as soon as you reboot, all your changes are wiped away and you’re back to a fresh system. This can be useful, but if you want a system that picks up where you left off, you can create a live USB with persistent storage.">
+<meta property="og:image" content="http://www.howtogeek.com/thumbcache/280/160/44237be1f3b83f4c42efffdbdb6da2b1/wp-content/uploads/2016/12/img_58474603a5af0.png">
+<link rel="image_src" href="http://www.howtogeek.com/thumbcache/280/160/44237be1f3b83f4c42efffdbdb6da2b1/wp-content/uploads/2016/12/img_58474603a5af0.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@howtogeek">
+<meta name="twitter:title" content="How to Create a Live Ubuntu USB Drive With Persistent Storage">
+<meta name="twitter:description" content="A Linux live USB drive is normally a blank slate each time you boot it. You can boot it up, install programs, save files, and change settings. But, as soon as you reboot, all your changes are wiped away and you’re back to a fresh system. This can be useful, but if you want a system that picks up where you left off, you can create a live USB with persistent storage.">
+<meta name="twitter:image:src" content="http://www.howtogeek.com/thumbcache/648/248/b938d4344b5eba919744601021520f4a/wp-content/uploads/2016/12/img_58474603a5af0.png">
+<link rel="stylesheet" href="A.howtogeek.css,q1466298260.pagespeed.gp+jp+jw+pj+ec+ei+fc+if+ii+js+rj+rp+rw+ri+cp+md.cf.8phhU3MPa4.css" type="text/css">
+<link href="css.dat" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script type="text/javascript" async="" src="about:blank"></script><script src="about:blank" async=""></script><script src="about:blank" async=""></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" id="facebook-jssdk"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>	<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="http://www.howtogeek.com/wp-json/">
+<link rel="shortlink" href="http://www.howtogeek.com/?p=14912">
+<link rel="alternate" type="application/json+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2Fhowto%2F14912%2Fcreate-a-persistent-bootable-ubuntu-usb-flash-drive%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2Fhowto%2F14912%2Fcreate-a-persistent-bootable-ubuntu-usb-flash-drive%2F&amp;format=xml">
+<link rel="canonical" href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/">
+<meta property="og:url" content="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/"><link rel="amphtml" href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/amp/">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script pagespeed_no_defer="">/* Code removed by ScrapBook */</script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+<body class="v3">
+<div style="text-align: center; min-height: 90px; z-index: 999999; margin-right: auto; margin-left: auto; position: relative;" class="adslot adslot970">
+<div id="htgyl11">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader" style="border-top: 4px solid rgb(23, 34, 50);">
+<div class="logo" style="">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek"></a>
+<div style="float: right; width: 450px;">
+<ul class="bigmenu">
+<li class="menubaritem">Articles <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu">
+<div class="subMenuArticles">
+<div class="smawrap">
+<a href="#" align="left" class="title" rel="bookmark"><span><img src="ximg_58474603a5af0.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.CniLY6LxMR.jpg"></span></a>
+<a href="#" class="title" rel="bookmark">How to Create a Live Ubuntu USB Drive With Persistent Storage</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" align="left" class="title" rel="bookmark"><span><img src="x2016-11-29_0011-650x301.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.SxnaVW3yQQ.jpg"></span></a>
+<a href="http://www.howtogeek.com/282568/amazon-echo-vs.-google-home-which-one-should-you-buy/" class="title" rel="bookmark">Amazon Echo vs. Google Home: Which One Should You Buy?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" align="left" class="title" rel="bookmark"><span><img src="ximg_5840cd6f52437.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.ASJFBqYVSu.jpg"></span></a>
+<a href="http://www.howtogeek.com/282953/does-brand-really-matter-when-buying-a-hard-drive/" class="title" rel="bookmark">Does Brand Really Matter When Buying a Hard Drive?</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" align="left" class="title" rel="bookmark"><span><img src="xfake-reviews-amazon-yelp.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.efpYlWnttb.jpg"></span></a>
+<a href="http://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/" class="title" rel="bookmark">How to Spot Fake Reviews on Amazon, Yelp, and Other Sites</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li>
+<li class="menubaritem">Subscribe <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu" style="padding-bottom: 10px;">
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>FOLLOW US</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/howtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom: 20px;">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="topmenu" type="hidden">
+<input id="fromaddress" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<p style="font-family: 'Open Sans'; text-transform: none;">Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input id="from" name="email" value="Enter Your Email Here" style="width: 200px; color: rgb(187, 187, 187); margin-left: 59px; font-family: 'Open Sans'; text-transform: none;" type="text"><input id="sub1" name="sub1" value="Get Your Newsletter Now" style="background: none repeat scroll 0% 0% rgb(85, 168, 223); margin-left: 59px; width: 212px; margin-top: 6px; font-family: 'Open Sans'; text-transform: none;" type="submit"></p>
+<div style="clear: both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>RSS</h4>
+<ul style="width: 130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menubaritem">Search <span class="icon-magnifying-glass" style="padding-left: 10px; font-size: 16px;"></span>
+<div class="subMenu" style="padding: 20px; text-align: center;">
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input name="q" id="s" value="" style="width: 900px; height: 40px; line-height: 40px; border: 1px solid rgb(204, 204, 204);" type="text">
+<input id="searchsubmit" value="Go" style="height: 42px; border: 1px solid rgb(204, 204, 204); font-family: 'Open Sans'; font-size: 16px; padding: 10px; background: none repeat scroll 0% 0% rgba(196, 230, 237, 0.99); border-radius: 0px 5px 5px 0px;" type="submit">
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display: none;">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-14912">
+<style>
+/* Code tidied up by ScrapBook */
+p + .relatedside { margin-top: 8px ! important; }
+</style>
+<h2 style="margin-top: 10px;"><a style="font-family: 'Open Sans',sans-serif;" href="#" rel="bookmark" title="How to Create a Live Ubuntu USB Drive With Persistent Storage">How to Create a Live Ubuntu USB Drive With Persistent Storage</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img class="alignnone size-full wp-image-283648" alt="" src="ximg_58474603a5af0.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic._vmKNg9z6t.png"></p>
+<p>A <a href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/">Linux live USB drive</a> is normally a blank slate each time you boot it. You can boot it up, install programs, save files, and change settings. But, as soon as you reboot, all your changes are wiped away and you’re back to a fresh system. This can be useful, but if you want a system that picks up where you left off, you can create a live USB with persistent storage.</p>
+<div class="inlinessp" style="width: 650px; overflow: hidden; max-height: 250px; margin-top: -5px; margin-bottom: -20px; min-height: 25px;">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1"></div><h3>How Persistent Storage Works</h3>
+<p>When you create a USB drive with persistence, you’ll allocate up to 4 GB of the USB drive for a persistent overlay file. Any changes you make to the system—for example, saving a file to your desktop, changing the settings in an application, or installing a program—will be stored in the overlay file. Whenever you boot the USB drive on any computer, your files, settings, and installed programs will be there.</p>
+<p>This is an ideal feature if you want to keep a live Linux system on a USB drive and&nbsp;use on different PCs. You won’t have to set up&nbsp;your system up from scratch each time you boot. You&nbsp;<em>don’t</em> need persistence&nbsp;if you’re just using a USB drive to install Ubuntu and then running it from your hard drive afterwards.</p>
+<p>There are a few limitations. You can’t modify system files, like the kernel. You can’t perform major system upgrades. You also can’t install hardware drivers. However, you can install most applications. You can even update most installed applications, so you can be sure your persistent USB drive has the latest version of&nbsp;the web browser you prefer.</p>
+<p>Persistence doesn’t work with every Linux distribution. It does with with Ubuntu and Ubuntu-based Linux distributions, as well as Fedora Linux. The process for setting up persistence is similar on all supported Linux distributions. Just download the appropriate ISO file and follow the instructions below if you want to use another Ubuntu flavor or Fedora.</p>
+<h3>How to Make a Persistent Ubuntu USB Drive on&nbsp;Windows</h3>
+<p>You’ll need a large enough USB drive to set up persistence. Ubuntu itself claims it needs 2 GB of storage on the USB drive, and you’ll also need extra space for the persistent storage. So, if you have a 4 GB USB drive, you can only have 2 GB of persistent storage. To have the maximum amount of persistent storage, you’ll need a USB drive of at least 6 GB in size.</p>
+<p>Unfortunately, the Rufus tool that Ubuntu officially recommends for <a href="http://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/">creating live Ubuntu USB drives on Windows</a> doesn’t offer support for creating systems with persistent storage. While we recommend using Rufus to create most Ubuntu live USB drives, we’ll have to use a different tool for this particular job.</p>
+<p>Download <a href="https://www.ubuntu.com/download">the Ubuntu ISO file</a> you want to place on the USB drive and the <a href="http://www.linuxliveusb.com/en/home">Linux Live USB Creator</a> application.</p>
+<p>Insert the USB drive you want to use into your computer’s USB port and launch the “LiLi USB Creator” application you just installed.</p>
+<p>Select the USB drive you want to use in the “Step 1: Choose Your Key” box.</p>
+<p><img class="alignnone size-full wp-image-283632" alt="" src="ximg_58473aac8f2b6.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.ru8QiLAnkN.jpg"></p>
+<p>Provide your downloaded Ubuntu ISO file. Click the “ISO / IMG / ZIP” button under “Step 2: Choose a Source”, browse to the .ISO file on your computer, and double-click it.</p>
+<p><img class="alignnone size-full wp-image-283631" alt="" src="ximg_58473aa48d784.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.VV1CsTHQ0m.jpg"></p>
+<p>Use the options in the “Step 3: Persistence” section to select how much space your want to use for persistent storage on the USB drive. Drag the slider all the way to the right to select the maximum amount of storage.</p>
+<p><img class="alignnone size-full wp-image-283630" alt="" src="ximg_58473a973fc57.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.ZviRbQB7za.jpg"></p>
+<p>You’ve now configured all the settings you need to configure. To create your live USB drive with persistent storage, click the lightning icon under “Step 5: Create”.</p>
+<p><img class="alignnone size-full wp-image-283633" alt="" src="ximg_58473ae1b9f75.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.P7uwlwab2B.jpg"></p>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/"><img src="data:image/jpeg;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/">How to Boot Your Computer From a Disc or USB Drive</a></span><div style="clear: both;"></div></div></div>
+<p>Give the tool some time to create the drive. When the process is done, you’ll see a “Your LinuxLive key is now up and ready!” message. You can now either reboot your computer and <a href="http://www.howtogeek.com/129815/beginner-geek-how-to-change-the-boot-order-in-your-computers-bios/">boot from the USB drive</a> or unplug the USB drive, take it to&nbsp;another computer, and boot it there.</p>
+<p><img class="alignnone size-full wp-image-283635" alt="" src="ximg_58473d89e3cd7.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.88LzpQ4etq.jpg"></p>
+<p>To confirm that persistent storage is working properly, boot the USB drive and create a folder on the desktop, or save a file to the desktop. Then, shut down your system and boot the live USB drive again. You should see the folder or file you placed on the desktop.</p>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear: both; height: 0px;"></div>
+<!-- discourse comments begin -->
+<style>
+/* Code tidied up by ScrapBook */
+#discusslink { color: rgb(88, 88, 88); text-decoration: none; }
+#discusslink:hover { color: rgb(0, 0, 255); text-decoration: none; }
+</style>
+<div style="max-width: 650px; width: 100%; padding-top: 10px;"><span style="font-family: bebas_neueregular; font-size: 19px; position: relative; top: -9px; padding-right: 10px; float: left; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(134, 134, 134);"><a id="discusslink" href="#">JOIN THE DISCUSSION (2 REPLIES)</a></span><div style="border-top: 4px solid rgb(204, 204, 204);"></div></div>
+<div id="discusscomments" style="display: none;"><style>
+/* Code tidied up by ScrapBook */
+</style>
+<div style="clear: both;"></div>
+<ul class="commentlist"><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 10, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Pradip Shah</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>So now one can use a version of Ubuntu to behave like Puppy Linux that has been around for like ages. Just wondering if this will allow a Mint distro to be created that absolutely requires additional nVidia graphic drivers to be downloaded and installed to function well. Does one repeat this process every time or are people with nVidia graphics chips s**t out of luck? </p>
+<p>Puppy Linux on the other hand allows this without any problem.</p><p></p></div>
+</li></ul>
+<div id="discourselink">
+<h3 id="reply-title"><a href="https://discuss.howtogeek.com/t/how-to-create-a-live-ubuntu-usb-drive-with-persistent-storage/54684">Got Feedback? Click Here to Join the Discussion</a></h3>
+</div>
+</div>
+<div style="clear: both; height: 0px;"></div>
+<div id="socialmediabuttons" style="margin-bottom: 0px;">
+<div id="fb-root"></div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="fb-like" data-href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+</div>
+<div style="padding-right: 20px; float: left;">
+<div class="g-plusone" data-size="tall"></div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-right: 20px; float: left;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/" data-via="howtogeek" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="postiddiv" post="14912"></div>
+<div style="clear: both;"></div>
+<div class="articleExtras" style="background: none repeat scroll 0% 0% rgb(254, 254, 254); border-top: medium none;">
+<div style="width: 450px; float: left;" id="authorinfobox">
+<p style="font-weight: normal; color: rgb(51, 51, 51);"><a href="http://www.howtogeek.com/author/chrishoffman/"><b>Chris Hoffman</b></a> is a technology writer and all-around computer geek. He's as at home using the Linux terminal as he is digging into the Windows registry.
+Connect with him on <a href="https://plus.google.com/107865379603964146316?rel=author">Google+</a>.</p>
+</div>
+<div style="width: 130px; float: right;">
+<ul class="normul" style="margin-bottom: 6px;">
+<li>Published 12/9/16</li>
+<!--<li><span id="pv3"></span></li>-->
+</ul>
+<div style="margin-left: -14px;"><a href="https://twitter.com/chrisbhoffman" class="twitter-follow-button" data-show-count="false"></a></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div class="below-post-features" style="width: 650px; overflow: hidden; max-height: 250px; margin-bottom: 20px;">
+<div id="outbrain-below-article" style="">
+<style>
+/* Code tidied up by ScrapBook */
+.below-post-features:hover { box-shadow: 0px 0px 3pt 2pt rgb(98, 128, 156); }
+#sb3 { padding-top: 0px; }
+.content { padding-bottom: 0px; margin-bottom: 0px; }
+</style>
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+</div>
+<div style="width: 100%; max-width: 650px; margin-bottom: 0px;">
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div id="showcomments" class="showcomments" style="">
+<a id="sc1" href="http://www.howtogeek.com/howto/14912/create-a-persistent-bootable-ubuntu-usb-flash-drive/?showcomments=1#comments">2 Replies</a>
+</div>
+<div id="commentsWrap" post="14912" replyto="0">
+<div id="sc2">
+<ul class="commentlist"><li class="comment-def">
+<div class="commentmetadata date"><a href="#">December 10, 2016</a></div>
+<div class="commentauthor"><div class="ca2">Pradip Shah</div></div>
+<div style="clear: both;"></div>
+<div class="commenttext"><p></p><p>So now one can use a version of Ubuntu to behave like Puppy Linux that has been around for like ages. Just wondering if this will allow a Mint distro to be created that absolutely requires additional nVidia graphic drivers to be downloaded and installed to function well. Does one repeat this process every time or are people with nVidia graphics chips s**t out of luck? </p>
+<p>Puppy Linux on the other hand allows this without any problem.</p><p></p></div>
+</li></ul>	</div>
+<div id="respond"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="yui-u">
+<div class="sidebar">
+<div style="margin-top: 24px; clear: both;"></div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding: 10px;"><p>What Americans call the “Belgian waffle” is actually known as the “Brussels waffle” in the country of Belgium–when Maurice Vermersch introduced the waffle to Americans, he decided to change the name after observing that many Americans could not correctly identify Brussels as the capital of Belgium.</p>
+</div>
+</div>
+<div id="side78"><div id="htgyr11">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>	<div class="sidebar-glossary lazyloaddiv">
+<style>
+/* Code tidied up by ScrapBook */
+</style>
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/196416/wimboot-explained-how-windows-can-now-fit-on-a-tiny-16-gb-drive/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAABwAFBgMCCP/EADIQAAEDAwMCBAMHBQAAAAAAAAECAwQABREGEiExQQcTIlFhkbEIFBUXI3HBMkJyodH/xAAZAQADAQEBAAAAAAAAAAAAAAADBAUGAAH/xAAjEQACAgICAQQDAAAAAAAAAAABAgADESEEElEFFDFBIpGh/9oADAMBAAIRAxEAPwD5wckOJew7IdcG71blHmkCPabO2oH8PLmOdy1qI+uKMbmdr7n+VIkF9x6DGcGSFMpJPxxQncgDEpJUvYjEspcaCq1yUtQoqFFpeCGUbgcHvjNF4kpV1ySewpMjjg+YtG0jpnmiYK8hawp1RKVEYQc5/gV1NmciD5CgEGInh5pq2XW+touaVriKguSVBRU2E7VJTncDz1NIX5b6HcAUAhKSSARMVz8zWD8Gy67cp/k5LibQ6hI9suopJsMVyI06b02l9D3pY8vKdi/c81SprVqic7/kmXs4b8BML4q6GsFhtECTaFkOyZXlEl0uDaEKJ4/cCjK4ssRJJb3laVAKSQD0PvnvSt4xKQldttAd3eW8pXpVgY2HPIPxovv0V9+alZdx+kkDeok4HT3pNyyHq+jGqlPQExna+zrrGQrdJu2n0Z6lLTi/qkVw1R4O3zT9jmypGs2SYcNx4MNQgkHYlRCclYwDtxkA9RxTRB1HNY0tDtdzuKZFyU2EOzkktb/V1xjg461idUXpiLbr4w4wxcG/KcjuPFO4IK0nac44OOR3xT1fAWwsMgEDzA+9s+zs+PHmEGg2Zl7skRtEdyUsKJkLBJO0KOEnjv7ewNbVHhlZHpAnvRHXHl+pbTjuxAPfhKa8fZ4ffXoBbLbgQ2ia4FDqSdqT/NJP3VO0rdUpYAydx4+Q4rHcrkWLaVXWJoePSjVBm3Cvw807Os2trxbyIyFPwt7A3+hLanTjJ7f0Gr3Ul1WFR/LQ5IQ4QG1t/qZwAnqOgODjIHGKoddztSWvWIuemrRHuDD0FDLhIJ2qStZxgKB/uFZidc9fzZzdxXot/Y2kJ2R2XAg4JOTjPP8AytPw/UB7E0WDIb9yTZxqzfllyB5GZ2aejXTxKht3IqRE9YIeBAB8sYBHGBnHzq7es9rMh0ISAErIBbUNqh1BG5Y7EdOP91mNFwL7d9XuLudrmQGhGeG94EAFQAAysc/WkldlnKaYS5Os7uxoICpKHPMIHuUKSD++Kh8k9Gwp1KCBGGFGpS3rXkl6bIXZIWoHEAJEcqghO733erjvis65etfSDIMW0TWzKx5yi222XMDA3EAZwPepUr1q0oPZBuKcTj007rUA+cDM96Qut28PtNmBJjsffZEpUgtKVvCG9qUjO09SQe/b41qIHi06QESbQw4DwQ2+eeMnoDUqUauiu5e7DZnPe9bdVOpHPEDTbigXrXPi9M7Hs9viKs4OvNGOICBLurJHXctnFSpQ7KQvwTCpcW+ROn47pJxDjqbjIecx6EFGMqPAyQMYqzhuaQbYAVNjSFnlbjxAKj8Aeg9hUqUsVJ+zGAw8T//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/196416/wimboot-explained-how-windows-can-now-fit-on-a-tiny-16-gb-drive/" class="title" rel="bookmark">WIMBoot Explained: How Windows Can Now Fit on a Tiny 16 GB Drive</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/279382/why-you-shouldnt-download-dll-files-from-the-internet/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAEIAgQDBQYH/8QALRAAAQMCAwYFBQEAAAAAAAAAAQACAwQRBRIhBhMUFUGTMVFTVNEiYXGBkTL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAwQGAQL/xAAhEQACAAUFAQEAAAAAAAAAAAAAAQITFVKhAxESUeExQf/aAAwDAQACEQMRAD8A9CishyGD0KXtj4TkMHoUvbHwtBW1Znwjllb0VjKnZ6OWFzIxTwvNrPbECRr9wtVuy0gbY1zSc1weHj0Gun+Urasz4JZX1FY6LAIWxta5lM9wABcYgCT56Cyy5DB6FL2x8JW1ZnwSyt6KyHIYPQpe2PhdTJsNSPe5xlAuSbBo6n8JW1ZnwSzLFdlMQrNvqPaOPHnQ0dOwB1HubucQHCwfmsGG4JBBNwLELdbs/PvIwcRtC3QsZvmm2ugO9sPHy6BOPofeQdwKOPofeQdwLPrTa+IsR6sUaSi/FsZTYFVPblGIsbdoFyyUnTqDvNOn8WLcAqgDfEGfUTmFpsut/Ab3Tpp+VPH0PvIO4FHH0PvIO4F64voj3EezjhDkdVQDM0sdkikFwegO8uOo/aykwKre4O5m1rh1DZRf9b2yjj6H3kHcCjmFD7uDuBOL6G52VNhVLCyG7pi6Ox0nkDSdOhcdNPA3W/cea8pPiGZ0ZiqqOMB13gyh2YeX2/K4ayskllDoK6kiblsRvx4/xc4voHwdERbwrhERAEREAREQH//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/279382/why-you-shouldnt-download-dll-files-from-the-internet/" class="title" rel="bookmark">Why You Shouldn’t Download DLL Files from the Internet</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/228634/how-to-use-cds-dvds-and-blu-ray-discs-on-a-computer-without-a-disc-drive/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAwEBAQEBAAAAAAAAAAAAAAYHBQQIAQP/xAAzEAACAQQABAQDBgcBAAAAAAABAgMABAURBhIhUTFBYXEHEyIUMkKR4fEzQ1JiobHB0f/EABkBAAMBAQEAAAAAAAAAAAAAAAQFBgMHAv/EACYRAAEEAQMEAgMBAAAAAAAAAAEAAgMEEQUxQQYSEyFRYSIjQsH/2gAMAwEAAhEDEQA/AHzhrEXd7k5cqUI5nPLsfh7e1N93iZmXn5Y9EbHjTRjMfBZ2MdvGF2q9dV2LbK1uu1Hh09qD691q1HCyWo/t9442QWkabCCRO3KnotntHWRY1Mi/cLDmK+w8B71j8R4a1zhR8g00VzH/AAbqMgPET2PY+YPQ0+5e0CTlgNBl0D2NY7WUaszFWVCp5gW2D61D6dSbfgFuWUmX5zsrCJ3hAbEAApPneEOJ7TbLbx5SHWxLbkK5HqjH/RPtSsVuI3B+y3Kup3owsdH8tVexdRwY0RzI8iglSAdErulriy2wSY2XIwTfZbhBsIF2sp/pKjqp9R07jzozSJZrULnWODgEcp0OorUOGABw+1A+KTPHfcrJJCrJtUbts1kLOVHKyhteZFM/xAv7K8ubKO2WY3jK+4xET9I112Br96U5HCMVk+luxGjVRDkMAwpq1J5ZXPdz7Xri4klCFgZNDz5q5oOIsrj3HybpnQfy5fqU/wDldl1lcLHBcW8uUs1mTo6mZfoIPgx8FPodVg3qK6h0KsrDasp2GHkQfMVzC7BNXYxxJw4cpGHub7HpO2I4ks82ht3QQ3QGzEx2GHdT51+OQj5VOt68xup1yzJcK8TMkiHmR18QaqWPtriTHW82UjNvcyICQPwnv/3XlWVHTLFyXEDi1v8AXwmEesMhiJkGSNvtYM09vFbr8xwxAI1rZHgfypQ4tvsTNEkUrCNhvRZSAR708cU4aW0Iu0AaOT73L4b/AFqWfFqwis8baSrcLKLpG0B4r710GtUjotYyM5H+pC7X7EjnZYBjhYGGtbGXLZS3LoTIVKOpB2nL0I76O6ysjjIIbt45zErr3I6+o9KzWNrbtbXljMYC/wBDgN9SNrx6/tX28zeeEwA+TOoHR/l72PzpvHK07oytqcUww/8AEr1FIIbFFtLWxgEMagcutdOw6Vi5PFW1leRyWqCK3uyeaIdAsmi3MB5bAO+51RRSy+xsld4cM+k5tsBhKOG8dDecS2cLqGQPzsPIhRvX+KouXeN1KsKKKw6diaKrnDfKkZ3HZLl7l1xtu8N2ouLZgQFJ6j9KjfxCtb/JWReLE3ojhJaOXkGtHuvNz61/bv0ooovxt78/Ke6fUis1+6UZKnEGMMxEjJvuV612nDyHRRGK66aoor05oBwpC7+qZzG7Bf/Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/228634/how-to-use-cds-dvds-and-blu-ray-discs-on-a-computer-without-a-disc-drive/" class="title" rel="bookmark">How to Use CDs, DVDs, and Blu-ray Discs on a Computer Without a Disc Drive</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img style="border: 1px solid rgba(0, 0, 0, 0.05) ! important; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH3wwIAAgyL/YaPAAAACJJREFUCFtjfMbOAAQ/gZiFnQPEBAEmGIMIJgtIL8QEgtoAIn4D/96X1KAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMTItMDhUMDA6MDg6NTArMDM6MDAasuuJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTEyLTA4VDAwOjA4OjUwKzAzOjAwa+9TNQAAAABJRU5ErkJggg==&quot;) repeat scroll 0% 0% rgb(255, 255, 255) ! important;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" height="1" width="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/200962/how-to-find-and-remove-duplicate-files-on-windows/" class="title" rel="bookmark">How to Find and Remove Duplicate Files on Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/217158/what-to-do-when-your-mac-won%e2%80%99t-start-up/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAAAAUGBwgBAwT/xAAxEAACAQMCAwYEBwEBAAAAAAABAgMABBEFBgcSIRMiMUFRgQhhobEUFWJxkbLB8PH/xAAZAQADAQEBAAAAAAAAAAAAAAABBAUAAwL/xAAeEQACAwACAwEAAAAAAAAAAAAAAQIDEQQSITFBBf/aAAwDAQACEQMRAD8AdXD5QeJ6+VMNFZRdq7EBYkaQn0AGP9rhlGPf/RS7cl1+X7T3Ffg4NvpczKf1FDj6ilePy3ZYo4druN0humV231u9L6e4tNzaxAssrOES8kCjJzjGcU2suL3Eazx2e5p3A8poY5P7KaglFUkxXC1Lbj5v6HHbHS7wDymtSAennyMuaa2fxFaquBqO0dHnHn2TNH9+aqWxQQKLRsRoKz+ITb02Px2z7iH17G9D/dVq0uHWuaDvrQX1nSrG+tYEna3KXHLksoUkjDN07w/g9KxQ0YPlWxPhpshZcINLbGGuZJpm95GUfRRQwDSRIpBgHp6/cVDeNN1+C4UbikBw03ZWy/PLrn6Mf4qciCW5bs4U5mbOB7ZqGbr3Dw/u7C80TW7mPU4knHPHGjlHcYHdYYzjr1yPtUrgUSc3LPA7y7koqP0yPRmr/l2nwX1EkRzXWmOc4WO6Zj08SM8/SvNccGtl3cZfS96zQdMqLlY2J9u5VXBLsiis0A1ccvALV50Mmlbh025UeBmR4wfdecUkv+CW/wC1z2Wn2t4B5wXaD+5WiHUVxW4eF1suncONu2jEIy6dCzAnGGZAx+pNZHuuHe+LWVUn2vqgywHNHAZFH7lcitZazINPktrOFeZIbdEGB4AZA+grzJ4vJvfoY8Rdo7qvtH/Kts3djbW8qH8XJJI6TTfoBCkKvv1qlNW4U7306JimjCdFJbmgnjOenpnJx649qKKpxphGPVLESVfOT1kE1nau4bBnjutE1GJVVU7Q2zlehySDjHy/9yErPJDOzrK8Z55CcsQQMd3P/Z9PmUVwsrihyuxs749Z1e1JkF9cc4VTmR89W8T3s/X9x0p3ZcQN2WjciatcMqs6gMzAKF65xkfPx+fpRRSjWMZXkmmwOJ279T1mKzeG3uoWQSyyOOVYY8nJJAyT6ZPX7WGmqtqgN8vRJD3e4fAdAffx96KKl/p3SrjHr9HeDVGcnp//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/217158/what-to-do-when-your-mac-won%e2%80%99t-start-up/" class="title" rel="bookmark">What to Do When Your Mac Won’t Start Up</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABgcAAwgCBAX/xAAzEAABAwMCAggFAwUAAAAAAAABAgMEAAURBhIhMQcIExQiQWGBMlFxcpMVRMFSVGKRof/EABgBAAMBAQAAAAAAAAAAAAAAAAECAwUE/8QAHxEAAgICAQUAAAAAAAAAAAAAAAECAxExIQQTIiNB/9oADAMBAAIRAxEAPwDV0P8AcHPnVt0bS5D2LAKcjIPI1XC5P/cal/kx40RIecAUpQ2NgFS148kpHE+woS0GOxMzGNA267/qSp0VDjzqkMbfg3IPjHDzB5ii7oheUnUF9j7CWX0syGVIRhAGCDn1Oc+1C3SJcbvp64W3DFukwlqdJR2aQ4hZ8W5QJxtA5keLOPcGa1je2paJMS7TISbhvKiwRk7DgE5GeOeH0rgpj7DV6jHZyzVqasHKspztQ6zDfaIveoH0nzZm/wAAg0b9VvWt2vs/U1ivUqa+7EdRIjd8WpTqUHKFA7uIGUpOP8jWgZWB6OHDaj6GhDRt8RqLTzF2RGEdLqnEhsqKiNqynn7UXL4oUPQ0ttMag0ppyzNWuRdbTBUhbigwiYp4JBWT8RAyScn05UGDn4El2kOR9O3d9hfZPNtOKQvHJWOB/wB0pdGyZ1w1d36S688WY7rq3XFnlt25yfuo2RcLhy77I/IauROn/wB7I/IaWTysDw8XkSDFgud7usi2s3WVc0wMPdnIaAQUrJARnhlQCAd3nniOORbrm1iDMt1tehiOxHg4QUnBcCnFlSvclXtTt77OP72R+Q0pesBLebFuffeWvIU3uWSSMlI/mkrgo6KW3Ss2DZuqIkBT7q9rbaMnHHHpXc6t9wcb6bI8kkI/V4Ehh1vfkpUja4AfXCcemCPnSv1NeS9FYtjS+zL8hCVOKJ/qHyIP/RR70XTbfYNYWi6HcWojo7RasAoSQUEgY+SjwHCrkcmxV/Ar6GsiPaIddmyirU+l2SHleFy4gHyPkPXHsa1zvCm9ySCCMgjzpDs6gnP3K6tlMRCY09xhATGQPCnGM8OfGnrqlY8RGhFy0FTahVyCKlSoALBSc6zDE2TH0+1BiSZS1S17kMNlaiAgnkB88VKlFbAhB6h09qhV9jd/tMyIy0A52ctBYzzwcKwSCfavXtLbkAYmXEtqA3YjvKSEn7eCcD6calSqBSNh9XjVj2q+jdtyUSuRbXTBW7tx2oQlJSoj57VAH1BPDOK53G03h+Wt+2SbPGaX4lJetyXFKX5kkEelSpSNtPgeC5P/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark">10 Quick Ways to Speed Up a Slow PC Running Windows 7, 8, or 10</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/207377/5-tips-for-taking-better-photos-with-your-smartphones-camera/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAYEBQIDBwgB/8QAMRAAAQMDBAEBBgQHAAAAAAAAAQIDBAAFEQYSITETQQcUIlFhcRUykbEjM0JSYqHR/8QAGQEBAQEAAwAAAAAAAAAAAAAABAUDAQIG/8QAIBEAAgICAgMBAQAAAAAAAAAAAQIAAxEhEjEEE0EFIv/aAAwDAQACEQMRAD8AjWj2U3hoOKmXG2xigjYd6lJV9dwHH6VA1fEvuln2DMbMmI6SlMmJKDjaiB1yAUn7j54ziu2P25mUxtmvKca78bZwD9z3+lYqtdnkQVwJVqje6EYU2pPxffI5B+uc1h7mY/1PQ+hANdzz3ddSXW6WlVotMKctSiDIWElayk9D4RwKomdNar8SFosVzcB6xFX/AMrv2lrLbtHayelw7qyzabi1scLj7aRHWjlKcqIKsjd0OMc0+K1PYk72mtUWorSDwZaMg/XBpKYA1J9zsj8cTy/A1LKtkByz3BuVFfRyglJCm/7kkdioLVxgDVMOZHUPAl1JKlklR9CTT8NOWq7z5101Bel3Kcl97zMW9xt07N2ElS0k7esYwDTDpK7+z21RY7Nqs7Dbh/K8tG91RHeVq+LOflWTMqZ1G1UPYA43KOUhLh8iDkHmoK2MqzTdq1EJ2SmbCXuRISSsYxhVLJSPWgiW0PJdzpLN9EbAVtCBwFHs0t6q1a45dotujR1p94/O90kpzg4+dLc+5KuE5LDbobz/AFEZAp1Zt1sTp63i+PIceio2h9B2lWeTgd4pNSgDLSd5IZcCsbM06zslpiq03cvcG47Mi6JZkMublof3IO34OU/Mjrr58VD9otqtcOxR7rp6y211CnFMOpLQHgWMKx8ODyM/p9aZb6uz6v07AtcCaUv26SzJDymgrKmwQNwyO8mtybI2jSK7O68HI8iR5XFJSEq3BIHHYHXypfIYGJDsFi25fuc30AiNadUXW0Wma89dHluZguowhpkKQryZPGTkDjnjrqrhWpX4T64CLUmIWFFA8LaQng4IGPSpDdpi6cvjt8ZbnuOk48jmxxGNm3JIAUBj0zjPNaZsmHcn/eG1tebcT/Mwkk95GKytKsdyp4gtCDiBPk292+6wShEVhqQDkLQNpJHeQO6olj4uKJH8ORh0JOM4KEgD/VY53AHHPrRGAzqVlPEblPGnMqEhVnQmZIZSVFCFjdXRfZwzLfsce53u2bZTpKk+Y7/g9CAev3oopqKBmR/0LW4gZ7j2/GS8kOspxkcA+tanSPwxGVDAdPQ+lFFd7NSJQSSQfkgLUkjtR+3FQZbMR4YeitOD/MA0UVgSY0a6lPOsdrfyRDbQT6t5T+1K8uzyoC0sM+SQnbu37MckniiiuABE13OPs//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/207377/5-tips-for-taking-better-photos-with-your-smartphones-camera/" class="title" rel="bookmark">5 Tips for Taking Better Photos With Your Smartphone’s Camera</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark">How to Use All of Windows 10’s Backup and Recovery Tools</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAwEAAwEAAAAAAAAAAAAAAAYHBQECBAj/xAAuEAABAwMDAwMDAwUAAAAAAAABAgMEAAURBhIhBzFRE0FhInGBFDKRFUKCobH/xAAZAQACAwEAAAAAAAAAAAAAAAAABAIDBQb/xAAeEQACAgMBAQEBAAAAAAAAAAABAgARAyExEgQiQf/aAAwDAQACEQMRAD8ASmtYdUGmJLki/MtqjrKFJUw2oHHggcj5pGsfV3W9qu93kuXBr9RMfSuQlbIKcpSEgpHtwB28U26w6laS1BbILypMuNcUtpMhl1lSUlZAC0gjO4ZAOffB80gS7Rb7zqZhuLIEeJITmTJkoVsbV5ThIVz4xSON8pYhppPjweB57GK39UtTagkO25bsqVOlHbFQyMhSvb6e4Hkj802wG75CSIs1EKVIz3Q+ELUraFFITjGRkc5xjHPeqN0o6N2u2wwIF1jJdcRslOsFtUhxWP2pLiwEgZx9OfuTTnd9Ewo8lcCMm3KvKEt+gzKlpXLWf3ZCU7Ep4B7lQq1r7F7UGpCLTd7fd/UbZSpD6EgusPI2uJB7HHuD5GRXhvOmIMwKcjoEd7ykfSfuKWuuETWNj18qU/ZX7UuMn0kPshK08IztKkcHOR37fiqToPUiJWk7cuXF0o/KRGQJK5D7wdC+AfUSMBJyft79qjkqtiWYXYH8mSiXDdhSFMvoIWk/g13bUkJHFN/Udt16/es4xBYCmk7UQystDHjfz8+OaVvQ+1IsQDN3FbKDHnpf09iL07Gu8xKXZctHqI3chtB7AfJHOfmmZ7p6+8pv0ZziEpc3FoIAQseDtwo8cZ3Um9FNfsStOs2yU4EyoI9PBPKkf2kfjj8VTBq5lDf0rArWIucwLHI12m4XKw2owoFltUGEMkpYU6ygc+4Qsbv8txNeeRfFQ5BaYmvRFvL3FERCWWSvB7gEc4zyr+amOu9YPybFJaYdOCBnB9s1laI10pEMyruESCyNja1qCVJ8nJ+lXHH1efzVTMqmpYqFtyr3CalTymZG9clzcVAqDhOBlWSMjI9+SalfUdiDJkqbnwmlvpAwpaAVAe2D3x9qo9h1DbdWX6FaIkVhiS/MAZXlsFpCkqBQChXuDycE8HHeudSaXjy7xcY7yEL/AKdIVG3pHCiME4z8mpKwMCvmRdi3T7xIiBy4oaZjRww2lTfGM91Edz8/ArCdVsdW24SlaFFJHyKqc+3swHihtIFZEy12+W960iMhbmMFXIzSuXGGOo/830HGKM+b470y2vM3KI7sKicFJ9x3BqoR9WWe5yGWbXOlMqLDfqIm7UlTu0b9pHG3dnGecUUU7/LmbxqjzpiM1I+iWkOBQwQrkEVtSumVvnwvStk9UEKUFFCkb0/buD/2iiolQw3D2VOozdG9ENaO1uxqO7T0Tf0xW400w3jKykhJJPYDJ/1TfcpLTbUlxAwp95byz3JUtRUT/JoooCheQLljuTG9Pl2ao+wNZ5VRRS57Ghyf/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark">7 Ways To Free Up Hard Disk Space On Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both;"></div>	<div style="width: 300px; min-height: 20px; margin-top: 30px;">
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<div id="htgys01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-top: 10px;"></div>
+</div>
+<div id="sidebar-float-widget">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom: 0px;"></div>
+<div class="g-page" data-width="320" data-href="//plus.google.com/100292833634918081724" data-layout="landscape" data-rel="publisher"></div>
+<div style="margin-top: 8px;">
+<a href="https://twitter.com/howtogeek" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @howtogeek</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+<div style="margin-bottom: 10px;"></div>
+<div class="fb-like" data-href="https://www.facebook.com/howtogeek" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div style="margin-bottom: 15px;"></div></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both; margin-bottom: 20px;"></div>
+<div style="clear: both;"></div>
+<div id="htgyr01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<div style="padding: 0px 20px 20px;">
+<h3 style="text-align: left; font-size: 30px; color: rgb(35, 70, 113); font-family: bebas_neueregular; text-transform: uppercase; font-weight: normal;">More Articles You Might Like</h3>
+<script async="" src="about:blank"></script>
+<!-- htg-below-article-content -->
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="8688851009" data-ad-format="autorelaxed"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="htgyl01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width: 18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="https://discuss.howtogeek.com/">Discussion Forum</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color: rgb(255, 152, 84);">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="footer" type="hidden">
+<input id="fromaddress2" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<input name="email" id="ftemtxt" style="color: rgb(187, 187, 187);" value="Enter Your Email Here" type="text">
+<input id="ftemsub" value="Get Articles by Email" style="background: none repeat scroll 0% 0% rgb(85, 168, 223);" type="submit">
+</form>
+<p></p>
+<div style="clear: both;"></div>
+</div>
+<div style="width: 280px; float: left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/howtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left; margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="font-style: italic; font-size: 11px; text-align: center;">Disclaimer: Most of the pages on the internet include affiliate links, including some on this site.</div>
+<br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2016 How-To Geek, LLC&nbsp; All Rights Reserved</div>
+</div>
+</div><script src="about:blank" id="pocket-btn-js"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Begin comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<!-- Quantcast Tag -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+
+</body>
+</html>
