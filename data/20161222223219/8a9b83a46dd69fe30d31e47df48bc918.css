@@ -1,0 +1,101 @@
+/* Code tidied up by ScrapBook */
+ul.nav { position: relative; margin-bottom: 0px; width: auto; margin-right: 10px; }
+ul.nav li { position: relative; float: left; list-style: none outside none; }
+ul.nav li a { display: block; padding-top: 1em ! important; padding-bottom: 1em ! important; }
+ul.nav li a:hover { text-decoration: none; }
+.csstransforms3d.csstransitions #navigation, .csstransforms3d.csstransitions .show-nav #navigation, .csstransforms3d.csstransitions .show-nav #inner-wrapper { left: 0px; transform: translate3d(0%, 0px, 0px); }
+.nav-toggle, .nav-close, .nav-home { display: none ! important; }
+#navigation { position: relative; left: auto; width: 100%; border: 1px solid rgb(217, 217, 217); padding-top: 0px; background: -moz-linear-gradient(center top , rgb(255, 255, 255) 0%, rgb(245, 245, 245) 100%) repeat scroll 0% 0% transparent; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.03); border-radius: 5px 5px 5px 5px; display: block ! important; }
+#navigation h3 { display: none; }
+#navigation .menus { clear: none; }
+#navigation ul { margin-bottom: 0px; }
+#navigation ul li:first-child, #navigation ul li:first-child a { border-radius: 5px 0px 0px 5px; }
+#navigation ul.nav > li { border-right: 1px solid rgb(230, 230, 230); }
+#navigation ul.nav > li a:hover { background: none repeat scroll 0% 0% rgb(246, 246, 246); }
+#navigation ul.nav > li:hover { background: none repeat scroll 0% 0% rgb(246, 246, 246); }
+#logo { float: left; }
+.col-left { float: left; }
+.col-right { float: right; }
+.col-full, #wrapper { max-width: 960px; margin: 0px auto; }
+#wrapper #sidebar { margin-top: 0px; }
+#wrapper { padding: 0px 1em 2em; }
+#inner-wrapper { padding: 0px; }
+#main-sidebar-container { position: relative; }
+#main-sidebar-container #main { position: relative; }
+#main-sidebar-container #sidebar { display: inline; }
+#footer-widgets .block { margin-right: 3.8%; float: left; }
+#footer-widgets.col-3 .block { width: 30.75%; }
+#footer-widgets.col-2 .footer-widget-2, #footer-widgets.col-3 .footer-widget-3, #footer-widgets.col-4 .footer-widget-4 { margin-right: 0px; }
+.two-col-left #main-sidebar-container #main, .two-col-right #main-sidebar-container #main { width: 64.89%; }
+.two-col-left #main-sidebar-container #sidebar, .two-col-right #main-sidebar-container #sidebar { width: 31.91%; }
+.two-col-left #main-sidebar-container #main, .two-col-right #main-sidebar-container #sidebar, .three-col-left #main-sidebar-container, .three-col-left #main-sidebar-container #main, .three-col-middle #main-sidebar-container #main, .three-col-middle #sidebar-alt, .three-col-right #main-sidebar-container #sidebar, .three-col-right #sidebar-alt { float: left; }
+.two-col-left #main-sidebar-container #sidebar, .two-col-right #main-sidebar-container #main, .three-col-left #main-sidebar-container #sidebar, .three-col-left #sidebar-alt, .three-col-middle #main-sidebar-container, .three-col-middle #main-sidebar-container #sidebar, .three-col-right #main-sidebar-container, .three-col-right #main-sidebar-container #main { float: right; }
+#comments .comment.bypostauthor { background: none repeat scroll 0px 0px rgb(255, 238, 204); }
+body { background-color: rgb(255, 238, 204); padding-top: 1ex; padding-bottom: 1ex; }
+#wrapper { background-color: rgb(255, 255, 255); }
+#navigation { background-color: rgb(102, 102, 102); background-image: -moz-linear-gradient(center top , rgb(153, 153, 153), rgb(102, 102, 102)); }
+#navigation ul.nav > li a { color: rgb(255, 255, 255); }
+#navigation ul.nav > li a:hover { background-color: rgb(128, 128, 128); }
+.searchform, #searchform { background-color: rgb(255, 255, 255); }
+#navigation ul.nav > li:hover { background-image: none; background-color: rgb(128, 128, 128); }
+.post, .search .page { margin: 0px 0px 10px; }
+.entry img, img.thumbnail { background: none repeat scroll 0% 0% transparent; border: medium none; }
+body #wrapper #content .button, body #wrapper #content .button:visited, body #wrapper #content .reply a, body #wrapper #content #respond .form-submit input#submit, input[type="submit"] { border: medium none; background: -moz-linear-gradient(center top , rgb(185, 185, 185) 0%, rgb(80, 80, 80) 100%) repeat scroll 0% 0% transparent; box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
+ul.nav li a { padding: 0.5em 0.8em; display: block; color: rgb(102, 102, 102); }
+#commentform input.txt, #commentform textarea { font: 300 14px/1.5em "Helvetica Neue",Helvetica,sans-serif; }
+#logo .site-title, #logo .site-description { display: none; }
+body { background-repeat: no-repeat; background-position: left top; background-attachment: scroll; border-top: 0px solid rgb(0, 0, 0); }
+hr, .entry img, img.thumbnail, .entry .wp-caption, #footer-widgets, #comments, #comments .comment.thread-even, #comments ul.children li, .entry h1 { border-color: rgb(0, 0, 0); }
+#header { background-repeat: no-repeat; background-position: left top; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; border: 0px solid; }
+#logo .site-title a { font: bold 40px/1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(34, 34, 34); }
+#logo .site-description { font: 300 13px/1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(153, 153, 153); }
+body, p { font: 300 14px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(85, 85, 85); }
+h1 { font: bold 28px/1.2em "Helvetica Neue",Helvetica,sans-serif; color: rgb(34, 34, 34); }
+h2 { font: bold 20px/1.1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(34, 34, 34); }
+h3 { font: bold 18px/1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(34, 34, 34); }
+h4 { font: bold 16px/1.2em "Helvetica Neue",Helvetica,sans-serif; color: rgb(34, 34, 34); }
+.page-title, .post .title, .page .title { font: bold 24px/1.1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(68, 68, 68); }
+.post-meta { font: 300 12px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(153, 153, 153); }
+.entry, .entry p { font: 300 15px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(51, 51, 51); }
+#comments .comment.thread-even { background-color: rgb(238, 238, 238); }
+#post-author, #connect { border-width: 1px; border-style: solid; border-color: rgb(230, 230, 230); border-radius: 5px 5px 5px 5px; background-color: rgb(250, 250, 250); }
+#comments .comment.thread-even { background-color: rgb(238, 238, 238); }
+.widget h3 { font: bold 14px/1.2em "Helvetica Neue",Helvetica,sans-serif; color: rgb(85, 85, 85); border-bottom: 1px solid rgb(230, 230, 230); }
+.widget p, .widget .textwidget { font: 300 13px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(85, 85, 85); }
+.widget { font: 300 13px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(85, 85, 85); border-radius: 1px 1px 1px 1px; }
+#tabs .inside li a, .widget_woodojo_tabs .tabbable .tab-pane li a { font: bold 12px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(85, 85, 85); }
+#tabs .inside li span.meta, .widget_woodojo_tabs .tabbable .tab-pane li span.meta { font: 300 11px/1.5em "Helvetica Neue",Helvetica,sans-serif; color: rgb(153, 153, 153); }
+#tabs ul.wooTabs li a, .widget_woodojo_tabs .tabbable .nav-tabs li a { font: 300 11px/2em "Helvetica Neue",Helvetica,sans-serif; color: rgb(153, 153, 153); }
+@media only screen and (min-width: 768px) {
+  ul.nav li a, #navigation ul.rss a, #navigation .cart-contents, #navigation ul.rss { font: 300 14px/1em "Helvetica Neue",Helvetica,sans-serif; color: rgb(102, 102, 102); }
+  #navigation ul.nav > li { border-right: 1px solid rgb(219, 219, 219); }
+  #navigation ul li:first-child, #navigation ul li:first-child a { border-radius: 5px 0px 0px 5px; }
+  #navigation { border-width: 1px; border-style: solid; border-color: rgb(219, 219, 219); border-radius: 5px 5px 5px 5px; }
+}
+#footer, #footer p { font: 300 13px/1.4em "Helvetica Neue",Helvetica,sans-serif; color: rgb(153, 153, 153); }
+#footer { background-color: rgb(68, 68, 68); border-width: 1px 0px 0px; border-style: solid; border-color: rgb(219, 219, 219) -moz-use-text-color -moz-use-text-color; border-radius: 1px 1px 1px 1px; }
+.menu-item-113697 a { font-weight: bold; }
+@media only screen and (min-width: 768px) {
+}
+#snippet-box { background: -moz-linear-gradient(center top , rgb(255, 255, 255) 50%, rgb(231, 231, 231) 100%) repeat scroll 0% 0% transparent; border: 1px solid rgb(172, 172, 172); font-family: inherit; font-size: 13px; padding: 0px; margin: 0px 0px 15px; float: left; width: 600px; clear: both; box-sizing: content-box; }
+.snippet-title { font-family: inherit; font-size: 14px; font-weight: bold; background: -moz-linear-gradient(center top , rgb(213, 210, 202) 80%, rgb(235, 234, 232) 100%) repeat scroll 0% 0% transparent; border-bottom: 1px solid rgb(172, 172, 172); clear: both; padding: 0.5em 0px 0.5em 1%; width: 99%; float: left; }
+.snippet-data-img { width: 56%; float: left; padding: 0.4em 2%; }
+.snippet-image { float: left; min-height: 190px; width: 200px; }
+.snippet-image img { border: 2px solid rgb(255, 255, 255); box-shadow: none; transition: all 400ms ease-in 0s; margin: 10px auto; display: block; }
+.snippet-label-img { width: 37%; float: left; clear: right; text-align: right; font-size: 13px; font-weight: bold; margin: 0px 1% 0px 0px; padding: 0.4em 1%; }
+.aio-info { width: 400px; float: left; }
+.snippet-clear { clear: both; }
+@media (max-width: 855px) {
+  #snippet-box { width: 100%; }
+  .snippet-title { width: 96%; padding: 0.5em 0px 0.5em 4%; }
+  .snippet-image { min-height: 50px; margin: 0px 0px 15px; width: 100%; float: left; clear: both; }
+  .aio-info { width: 100%; float: left; clear: both; }
+}
+@media (max-width: 650px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 450px) {
+}
+@media (max-width: 320px) {
+}

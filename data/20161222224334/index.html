@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en-US" class=" td-md-is-firefox">
+<!--<![endif]--><head>
+    <title>Fun in Terminal | Unixmen</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="https://www.unixmen.com/xmlrpc.php">
+    		<style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+	
+			<style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+	<meta property="og:image" content="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/06/terminal-1.jpg"><meta name="author" content="hossein heydari">
+<link rel="icon" type="image/png" href="favicon.png">
+<!-- This site is optimized with the Yoast SEO plugin v3.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.unixmen.com/fun-in-terminal/">
+<link rel="publisher" href="https://plus.google.com/+Unixmen/posts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Working in terminal was always tons of fun for GNU/Linux world’s geeks and this fun will be more when you gonna have some funny games and commands too, in this article we gonna introduce some games and commands that you can have them in your terminal in free times! BSDGames package let you to have ">
+<meta name="twitter:title" content="Fun in Terminal | Unixmen">
+<meta name="twitter:site" content="@unixmen">
+<meta name="twitter:image" content="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/06/terminal-1.jpg">
+<meta name="twitter:creator" content="@hossein7heydari">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Unixmen » Feed" href="https://www.unixmen.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Unixmen » Comments Feed" href="https://www.unixmen.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Unixmen » Fun in Terminal Comments Feed" href="https://www.unixmen.com/fun-in-terminal/feed/">
+		<script src="about:blank" id="facebook-jssdk"></script><script src="about:blank" id="twitter-wjs"></script><script src="about:blank" async=""></script><script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script>
+		<style type="text/css">
+/* Code tidied up by ScrapBook */
+img.wp-smiley, img.emoji { display: inline ! important; border: medium none ! important; box-shadow: none ! important; height: 1em ! important; width: 1em ! important; margin: 0px 0.07em ! important; vertical-align: -0.1em ! important; background: none repeat scroll 0% 0% transparent ! important; padding: 0px ! important; }
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="gpf-feeds-css" href="styles_001.css" type="text/css" media="all">
+<link rel="stylesheet" id="google_font_open_sans-css" href="css_002.dat" type="text/css" media="all">
+<link rel="stylesheet" id="google_font_roboto-css" href="css_001.dat" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-style-css" href="css.dat" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-theme-css" href="style.css" type="text/css" media="all">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="https://www.unixmen.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.unixmen.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dwlvaia9r6jw6.cloudfront.net/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://www.unixmen.com/?p=49057">
+<link rel="alternate" type="application/json+oembed" href="https://www.unixmen.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.unixmen.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F&amp;format=xml">
+
+        <!-- BuySellAds.com Ad Code -->
+        <script type="text/javascript">/* Code removed by ScrapBook */</script><script src="about:blank" async="" type="text/javascript"></script>
+        <!-- END BuySellAds.com Ad Code --> 
+      <script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://dwlvaia9r6jw6.cloudfront.net/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://dwlvaia9r6jw6.cloudfront.net/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+<!-- JS generated by theme -->
+
+<script>/* Code removed by ScrapBook */</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>
+/* Code tidied up by ScrapBook */
+.td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .td-header-style-12 .td-header-menu-wrap-full, .sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after, .sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .sf-menu ul .td-menu-item > a:hover, .sf-menu ul .sfHover > a, .sf-menu ul .current-menu-ancestor > a, .sf-menu ul .current-category-ancestor > a, .sf-menu ul .current-menu-item > a, .td-header-style-12 .td-affix, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, input[type="submit"]:hover, .td-read-more a, .td-post-category:hover, .td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category, .td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category, .td_top_authors .td-active .td-author-post-count, .td_top_authors .td-active .td-author-comments-count, .td_top_authors .td_mod_wrap:hover .td-author-post-count, .td_top_authors .td_mod_wrap:hover .td-author-comments-count, .td-404-sub-sub-title a:hover, .td-search-form-widget .wpb_button:hover, .td-rating-bar-wrap div, .td_category_template_3 .td-current-sub-category, .td-login-wrap .btn, .td_display_err, .td_display_msg_ok, .dropcap, .td_wrapper_video_playlist .td_video_controls_playlist_wrapper, .wpb_default, .wpb_default:hover, .td-left-smart-list:hover, .td-right-smart-list:hover, .woocommerce-checkout .woocommerce input.button:hover, .woocommerce-page .woocommerce a.button:hover, .woocommerce-account div.woocommerce .button:hover, #bbpress-forums button:hover, .bbp_widget_login .button:hover, .td-footer-wrapper .td-post-category, .td-footer-wrapper .widget_product_search input[type="submit"]:hover, .woocommerce .product a.button:hover, .woocommerce .product #respond input#submit:hover, .woocommerce .checkout input#place_order:hover, .woocommerce .woocommerce.widget .button:hover, .single-product .product .summary .cart .button:hover, .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover, .td-next-prev-wrap a:hover, .td-load-more-wrap a:hover, .td-post-small-box a:hover, .page-nav .current, .page-nav:first-child > div, .td_category_template_8 .td-category-header .td-category a.td-current-sub-category, .td_category_template_4 .td-category-siblings .td-category a:hover, #bbpress-forums .bbp-pagination .current, #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a, .td-theme-slider:hover .slide-meta-cat a, a.vc_btn-black:hover, .td-trending-now-wrapper:hover .td-trending-now-title, .td-scroll-up-visible, .td-mobile-close a, .td-smart-list-button:hover, .td-weather-information:before, .td-weather-week:before { background-color: rgb(50, 142, 195); }
+a, cite a:hover, .td_mega_menu_sub_cats .cur-sub-cat, .td-mega-span h3 a:hover, .td_mod_mega_menu:hover .entry-title a, .header-search-wrap .result-msg a:hover, .top-header-menu li a:hover, .top-header-menu .current-menu-item > a, .top-header-menu .current-menu-ancestor > a, .top-header-menu .current-category-ancestor > a, .td-social-icon-wrap > a:hover, .td-header-sp-top-widget .td-social-icon-wrap a:hover, .td-page-content blockquote p, .td-post-content blockquote p, .mce-content-body blockquote p, .comment-content blockquote p, .wpb_text_column blockquote p, .td_block_text_with_title blockquote p, .td_module_wrap:hover .entry-title a, .td-subcat-filter .td-subcat-list a:hover, .td-subcat-filter .td-subcat-dropdown a:hover, .td_quote_on_blocks, .dropcap2, .dropcap3, .td_top_authors .td-active .td-authors-name a, .td_top_authors .td_mod_wrap:hover .td-authors-name a, .td-post-next-prev-content a:hover, .author-box-wrap .td-author-social a:hover, .td-author-name a:hover, .td-author-url a:hover, .td_mod_related_posts:hover h3 > a, .td-post-template-11 .td-related-title .td-related-left:hover, .td-post-template-11 .td-related-title .td-related-right:hover, .td-post-template-11 .td-related-title .td-cur-simple-item, .td-post-template-11 .td_block_related_posts .td-next-prev-wrap a:hover, .comment-reply-link:hover, .logged-in-as a:hover, #cancel-comment-reply-link:hover, .td-search-query, .td-category-header .td-pulldown-category-filter-link:hover, .td-category-siblings .td-subcat-dropdown a:hover, .td-category-siblings .td-subcat-dropdown a.td-current-sub-category, .td-login-wrap .td-login-info-text a:hover, .widget a:hover, .widget_calendar tfoot a:hover, .woocommerce a.added_to_cart:hover, #bbpress-forums li.bbp-header .bbp-reply-content span a:hover, #bbpress-forums .bbp-forum-freshness a:hover, #bbpress-forums .bbp-topic-freshness a:hover, #bbpress-forums .bbp-forums-list li a:hover, #bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover, #bbpress-forums .bbp-topic-started-by a:hover, #bbpress-forums .bbp-topic-started-in a:hover, #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink, #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink, .widget_display_replies .bbp-author-name, .widget_display_topics .bbp-author-name, .footer-email-wrap a, .td-subfooter-menu li a:hover, .footer-social-wrap a:hover, a.vc_btn-black:hover, .td-mobile-content li a:hover, .td-mobile-content .sfHover > a, .td-mobile-content .current-menu-item > a, .td-mobile-content .current-menu-ancestor > a, .td-mobile-content .current-category-ancestor > a, .td-smart-list-dropdown-wrap .td-smart-list-button:hover { color: rgb(50, 142, 195); }
+.td-next-prev-wrap a:hover, .td-load-more-wrap a:hover, .td-post-small-box a:hover, .page-nav .current, .page-nav:first-child > div, .td_category_template_8 .td-category-header .td-category a.td-current-sub-category, .td_category_template_4 .td-category-siblings .td-category a:hover, #bbpress-forums .bbp-pagination .current, .td-login-panel-title, .post .td_quote_box, .page .td_quote_box, a.vc_btn-black:hover { border-color: rgb(50, 142, 195); }
+.header-search-wrap .td-drop-down-search:before { border-color: transparent transparent rgb(50, 142, 195); }
+.block-title > span, .block-title > a, .block-title > label, .widgettitle, .widgettitle:after, .td-trending-now-title, .td-trending-now-wrapper:hover .td-trending-now-title, .wpb_tabs li.ui-tabs-active a, .wpb_tabs li:hover a, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab.vc_active > a, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab:hover > a, .td-related-title .td-cur-simple-item, .woocommerce .product .products h2, .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more { background-color: rgb(50, 142, 195); }
+.block-title, .td-related-title, .wpb_tabs .wpb_tabs_nav, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container, .woocommerce div.product .woocommerce-tabs ul.tabs:before { border-color: rgb(50, 142, 195); }
+.block-title > span, .block-title > a, .block-title > label, .widgettitle, .widgettitle:after, .td-trending-now-title, .td-trending-now-wrapper:hover .td-trending-now-title, .wpb_tabs li.ui-tabs-active a, .wpb_tabs li:hover a, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab.vc_active > a, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab:hover > a, .td-related-title .td-cur-simple-item, .woocommerce .product .products h2, .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more, .td-weather-information:before, .td-weather-week:before { background-color: rgb(34, 34, 34); }
+.block-title, .td-related-title, .wpb_tabs .wpb_tabs_nav, .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container, .woocommerce div.product .woocommerce-tabs ul.tabs:before { border-color: rgb(34, 34, 34); }
+.td-header-wrap .td-header-top-menu-full, .td-header-wrap .top-header-menu .sub-menu { background-color: rgb(50, 142, 195); }
+.td-header-wrap .td-header-top-menu-full .td-header-top-menu, .td-header-wrap .td-header-top-menu-full { border-bottom: medium none; }
+.td-header-top-menu, .td-header-top-menu a, .td-header-wrap .td-header-top-menu-full .td-header-top-menu, .td-header-wrap .td-header-top-menu-full a, .td-header-style-8 .td-header-top-menu, .td-header-style-8 .td-header-top-menu a { color: rgb(255, 255, 255); }
+.top-header-menu .current-menu-item > a, .top-header-menu .current-menu-ancestor > a, .top-header-menu .current-category-ancestor > a, .top-header-menu li a:hover { color: rgb(242, 242, 242); }
+.sf-menu ul .td-menu-item > a:hover, .sf-menu ul .sfHover > a, .sf-menu ul .current-menu-ancestor > a, .sf-menu ul .current-category-ancestor > a, .sf-menu ul .current-menu-item > a, .sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after, .sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .td_block_mega_menu .td-next-prev-wrap a:hover, .td-mega-span .td-post-category:hover, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-mobile-close a { background-color: rgb(50, 142, 195); }
+.header-search-wrap .td-drop-down-search:before { border-color: transparent transparent rgb(50, 142, 195); }
+.td_mega_menu_sub_cats .cur-sub-cat, .td_mod_mega_menu:hover .entry-title a, .td-mobile-content li a:hover, .td-mobile-content .current-menu-item > a, .td-mobile-content .current-menu-ancestor > a, .td-mobile-content .current-category-ancestor > a { color: rgb(50, 142, 195); }
+.td-sub-footer-container { background-color: rgb(0, 0, 0); }
+.post .td-post-header .entry-title { color: rgb(30, 115, 190); }
+.top-header-menu > li > a, .td-header-sp-top-menu .td_data_time { font-size: 12px; }
+ul.sf-menu > .td-menu-item > a { font-size: 12px; }
+.post .td-post-header .entry-title { font-family: Cabin; }
+</style>
+
+<script>/* Code removed by ScrapBook */</script><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" type="text/javascript" async=""></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+
+<body class="single single-post postid-49057 single-format-standard fun-in-terminal wpb-js-composer js-comp-ver-4.11 vc_responsive td-animation-stack-type0 td-full-layout" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+
+<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+
+<div id="td-outer-wrap">
+
+<script>/* Code removed by ScrapBook */</script>
+
+    <div class="td-transition-content-and-menu td-mobile-nav-wrap">
+        <div id="td-mobile-nav">
+    <!-- mobile menu close -->
+    <div class="td-mobile-close">
+        <a href="#">CLOSE</a>
+        <div class="td-nav-triangle"></div>
+    </div>
+
+    <div class="td-mobile-content">
+        <div class="menu-main-menu-container"><ul id="menu-main-menu" class=""><li id="menu-item-47234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first menu-item-47234"><a href="https://www.unixmen.com/">Home</a></li>
+<li id="menu-item-47224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47224"><a href="https://www.unixmen.com/category/linux-distributions/">Linux distributions</a></li>
+<li id="menu-item-47226" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47226"><a href="https://www.unixmen.com/category/linux-tutorials/">Linux tutorials</a></li>
+<li id="menu-item-47227" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47227"><a href="https://www.unixmen.com/category/news/">News</a></li>
+<li id="menu-item-47230" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47230"><a href="https://www.unixmen.com/category/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li id="menu-item-47231" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47231"><a href="https://www.unixmen.com/category/opensource/">Opensource</a></li>
+<li id="menu-item-47232" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47232"><a href="https://www.unixmen.com/category/unix/">Unix</a></li>
+<li id="menu-item-47625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47625"><a href="http://ask.unixmen.com/">Ask/unixmen</a></li>
+</ul></div>    </div>
+</div>    </div>
+
+        <div class="td-transition-content-and-menu td-content-wrap">
+
+
+
+<!--
+Header style 3
+-->
+
+<div class="td-header-wrap td-header-style-3">
+
+    <div class="td-header-top-menu-full">
+        <div class="td-container td-header-row td-header-top-menu">
+            
+    <div class="top-bar-style-1">
+        
+<div class="td-header-sp-top-menu">
+
+
+	<div class="td_data_time">Thursday, December 22, 2016</div><div class="menu-top-container"><ul id="menu-top-menu" class="top-header-menu"><li id="menu-item-47221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-47221"><a href="https://www.unixmen.com/about-us/">About Us</a></li>
+<li id="menu-item-47223" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-47223"><a href="https://www.unixmen.com/advertising/">Advertising on Unixmen</a></li>
+<li id="menu-item-47219" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-47219"><a href="https://www.unixmen.com/work-for-us/">Become a Contributor</a></li>
+<li id="menu-item-48133" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-48133"><a href="https://www.unixmen.com/unixmen-collaborated-with-unixstickers/">Unixmen collaborated with Unixstickers</a></li>
+<li id="menu-item-47222" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-47222"><a href="https://www.unixmen.com/contact-us/">Contact Us</a></li>
+</ul></div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="td-banner-wrap-full">
+        <div class="td-container td-header-row td-header-header">
+            <div class="td-header-sp-logo">
+                    <a href="https://www.unixmen.com/">
+        <img class="td-retina-data" data-retina="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/02/unixmen-logo-retina-300x177.png" src="unixmen-logo.png" alt="Unixmen" title="Unixmen">
+    </a>
+            </div>
+            <div class="td-header-sp-recs">
+                <div class="td-header-rec-wrap">
+    <div class="td-a-rec td-a-rec-id-header "><script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank"></script></div>
+</div>            </div>
+        </div>
+    </div>
+
+    <div class="td-header-menu-wrap-full">
+        <div class="td-header-menu-wrap">
+            <div class="td-container td-header-row td-header-main-menu black-menu">
+                <div id="td-header-menu">
+    <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+    <div class="td-main-menu-logo">
+        		<a class="td-mobile-logo td-sticky-header" href="https://www.unixmen.com/">
+			<img class="td-retina-data" data-retina="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/02/unixmen-logo-mobile-retina.png" src="unixmen-logo-mobile.png" alt="Unixmen" title="Unixmen">
+		</a>
+			<a class="td-header-logo td-sticky-header" href="https://www.unixmen.com/">
+			<img class="td-retina-data" data-retina="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/02/unixmen-logo-retina-300x177.png" src="unixmen-logo.png" alt="Unixmen" title="Unixmen">
+		</a>
+	    </div>
+    <div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="sf-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-47234"><a href="https://www.unixmen.com/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47224"><a href="https://www.unixmen.com/category/linux-distributions/">Linux distributions</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47226"><a href="https://www.unixmen.com/category/linux-tutorials/">Linux tutorials</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47227"><a href="https://www.unixmen.com/category/news/">News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47230"><a href="https://www.unixmen.com/category/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47231"><a href="https://www.unixmen.com/category/opensource/">Opensource</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-47232"><a href="https://www.unixmen.com/category/unix/">Unix</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-47625"><a href="http://ask.unixmen.com/">Ask/unixmen</a></li>
+</ul></div></div>
+
+
+<div class="td-search-wrapper">
+    <div id="td-top-search">
+        <!-- Search -->
+        <div class="header-search-wrap">
+            <div class="dropdown header-search">
+                <a id="td-header-search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-search-wrap">
+	<div class="dropdown header-search">
+		<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+			<form role="search" method="get" class="td-search-form" action="https://www.unixmen.com/">
+				<div class="td-head-form-search-wrap">
+					<input id="td-header-search" value="" name="s" autocomplete="off" type="text"><input class="wpb_button wpb_btn-inverse btn" id="td-header-search-top" value="Search" type="submit">
+				</div>
+			</form>
+			<div id="td-aj-search"></div>
+		</div>
+	</div>
+</div>            </div>
+        </div>
+    </div>
+
+</div><div class="td-main-content-wrap">
+
+    <div class="td-container td-post-template-default ">
+        <div class="td-crumb-container"></div>
+
+        <div class="td-pb-row">
+                                    <div class="td-pb-span8 td-main-content" role="main">
+                            <div class="td-ss-main-content">
+                                
+    <article id="post-49057" class="post-49057 post type-post status-publish format-standard has-post-thumbnail hentry category-featured-2 tag-command tag-fun tag-games tag-geek tag-terminal" itemscope="" itemtype="https://schema.org/Article">
+        <div class="td-post-header">
+
+            
+            <header class="td-post-title">
+                <h1 class="entry-title">Fun in Terminal</h1>
+
+                
+
+                <div class="td-module-meta-info">
+                    <div class="td-post-author-name">By <a href="https://www.unixmen.com/author/hossein/">hossein heydari</a></div>                                                                            </div>
+
+            </header>
+
+        </div>
+
+        <div class="td-post-sharing td-post-sharing-top td-with-like">
+				<div class="td-default-sharing">
+		            <a class="td-social-sharing-buttons td-social-facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F"><i class="td-icon-facebook"></i><div class="td-social-but-text">Share on Facebook</div></a>
+		            <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=Fun+in+Terminal&amp;url=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F&amp;via=unixmen"><i class="td-icon-twitter"></i><div class="td-social-but-text">Tweet on Twitter</div></a>
+		            <a class="td-social-sharing-buttons td-social-google" href="http://plus.google.com/share?url=https://www.unixmen.com/fun-in-terminal/"><i class="td-icon-googleplus"></i></a>
+		            <a class="td-social-sharing-buttons td-social-pinterest" href="http://pinterest.com/pin/create/button/?url=https://www.unixmen.com/fun-in-terminal/&amp;media=https://www.unixmen.com/wp-content/uploads/2016/06/terminal-1.jpg&amp;description=Fun+in+Terminal"><i class="td-icon-pinterest"></i></a>
+		            <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text=Fun+in+Terminal - https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F"><i class="td-icon-whatsapp"></i></a>
+	            </div><div class="td-classic-sharing"><ul><li class="td-classic-facebook"><iframe src="index_27.html" style="border: medium none; overflow: hidden; width: 105px; height: 21px; background-color: transparent;" frameborder="0"></iframe></li><li class="td-classic-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.unixmen.com/fun-in-terminal/" data-text="Fun in Terminal" data-via="" data-lang="en">tweet</a> <script>/* Code removed by ScrapBook */</script></li></ul></div></div>
+
+        <div class="td-post-content">
+
+        <div class="td-post-featured-image"><a href="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/06/terminal-1.jpg" data-caption=""><img class="entry-thumb td-modal-image" src="terminal-1-696x334.jpg" alt="" title="terminal" height="334" width="696"></a></div>
+        <p>Working in terminal was always tons of fun for GNU/Linux world’s geeks and this fun will be more when you gonna have some funny games and commands too, in this article we gonna introduce some games and commands that you can have them in your terminal in free times!</p>
+<p>BSDGames package let you to have some Terminal games such as the famous Worm game, Backgammon, Gomoku and etc, for installing this package use this command in Ubuntu/Debian:</p>
+<pre>sudo apt update &amp;&amp; sudo apt install bsdgames</pre>
+<p>If your using Arch Linux/Manjaro use this command:</p>
+<pre>sudo pacman -S bsdgames</pre>
+<p>After installing that package by entering name of your game in terminal you can play it, for example just enter <code>worm</code> in terminal and start playing the game <img src="1f600.png" alt="😀" class="emoji" draggable="false"></p>
+<p><img class="alignnone size-full wp-image-49059" src="hossein@hossein-System-Product-Name-_001.png" alt="hossein@hossein-System-Product-Name-_001" srcset="hossein@hossein-System-Product-Name-_001.png 738w, hossein@hossein-System-Product-Name-_001-696x472.png 696w, hossein@hossein-System-Product-Name-_001-619x420.png 619w" sizes="(max-width: 738px) 100vw, 738px" height="501" width="738"></p>
+<p>In worm game you should control the snake with arrow keys and catch the worms which are those numbers on screen and get more score.</p><div class="insert-post-ads" style="clear: both; float: left; width: 100%; margin: 0px 0px 20px;"><script type="text/javascript" src="about:blank"></script>
+
+<div id="crt-500314" style="width: 728px; height: 90px;"></div><script type="text/javascript">/* Code removed by ScrapBook */</script></div>
+<p>Another really famous games that most of the people plays is backgammon, for playing this game enter <code>backgammon</code> in terminal then it asks you to read the games rule so you’ll know how to play in another guess if you never played backgammon first search it in INTERNET then starting playing it in Terminal.</p>
+<p><img class="alignnone size-full wp-image-49062" src="hossein@hossein-System-Product-Name-_002.png" alt="hossein@hossein-System-Product-Name-_002" srcset="hossein@hossein-System-Product-Name-_002.png 738w, hossein@hossein-System-Product-Name-_002-696x472.png 696w, hossein@hossein-System-Product-Name-_002-619x420.png 619w" sizes="(max-width: 738px) 100vw, 738px" height="501" width="738"></p>
+<p>Another fun games you have in Terminal is Gomoku, in this game you choose to play with black nuts or white one and you also have an 19*19 play screen and the winner is one that put five nuts in row, enter following command in terminal to have the game:</p>
+<pre>gomoku</pre>
+<p>A picture of this game:</p>
+<p><img class="alignnone size-full wp-image-49063" src="hossein@hossein-System-Product-Name-_0011.png" alt="hossein@hossein-System-Product-Name-_0011" srcset="hossein@hossein-System-Product-Name-_0011.png 738w, hossein@hossein-System-Product-Name-_0011-696x472.png 696w, hossein@hossein-System-Product-Name-_0011-619x420.png 619w" sizes="(max-width: 738px) 100vw, 738px" height="501" width="738"></p>
+<p>By the way for putting the nuts in screen you need to enter an English letter and without any spaces enter a number from 1 to 19 so you can have your nut in right place.</p>
+<p>One of the most hard games in BSDGames to win is Trek which the maker of the game(Eric P. Allman) said:”It takes a long time to get used to game however it is worthy to play!”, Enter <code>trek</code> in terminal so the game will get open and asks you to press Enter to continue and start asking some questions which you should answer before the game. first question is:</p>
+<pre>What length game:</pre>
+<p>In the answer you should specify field length and the acceptable answers are:</p>
+<pre>short
+medium
+long</pre>
+<p>Again it asks you:</p>
+<pre>What skill game:</pre>
+<p>Now you should answer for game difficulty, the acceptable answers are:</p>
+<pre>novice
+fair
+good
+expert
+commodore
+impossible</pre>
+<p>This game has resume feature so you can play the game and put the rest of game for next days so because of that game asks to enter a password so if you wanted to stop game and continue it next days others have to have your password to play game so they can’t ruin your game so when game asks you:</p>
+<pre>Enter a password:</pre>
+<p>Enter a password and press Enter key to pass, Now the game got started and you should go for your first move, for moving nuts you should give your game command in front of “Command:” in game screen, you can move nuts with these commands:</p>
+<pre>move
+mov
+m</pre>
+<p>As an example:</p>
+<pre>move 0 6</pre>
+<p>In command above 06 is your coordinate, for more information read the man page:</p>
+<pre>man /usr/share/doc/bsdgames/trek.me.gz</pre>
+<p>&nbsp;</p>
+<p>Boggle is nice game among this games that helps you to improve your English, Accuracy and etc, in this game you have a limited time to find some meaningful words from a table of letters and put them in next to each other <img src="1f600.png" alt="😀" class="emoji" draggable="false"></p>
+<p><img class="alignnone size-full wp-image-49066" src="hossein@hossein-System-Product-Name-_0012.png" alt="hossein@hossein-System-Product-Name-_0012" srcset="hossein@hossein-System-Product-Name-_0012.png 738w, hossein@hossein-System-Product-Name-_0012-696x466.png 696w, hossein@hossein-System-Product-Name-_0012-627x420.png 627w" sizes="(max-width: 738px) 100vw, 738px" height="494" width="738"></p>
+<p>We said fun in terminal but fun doesn’t mean just some games! let’s go and see some funny commands such as Cmatrix, bb, sl and etc.</p>
+<p>We know that “ls” command list our files in a directory but if we use “sl” command instead we would see a train that pass in our terminal so install the package with following command:</p>
+<pre>sudo apt install sl</pre>
+<p>Now let’s run it by <code>sl</code> in terminal, and the output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49123" src="Selection_003.png" alt="Selection_003" srcset="Selection_003.png 735w, Selection_003-696x418.png 696w, Selection_003-700x420.png 700w" sizes="(max-width: 735px) 100vw, 735px" height="441" width="735"></p>
+<p>Now let’s check something even more fun, you watched matrix movie now let’s enter a command to have matrix world in our terminal so first of all install “cmatrix” package by following command:</p>
+<pre>sudo apt install cmatrix</pre>
+<p>Now the output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49124" src="pic.jpg" alt="pic" srcset="pic.jpg 1366w, pic-768x432.jpg 768w, pic-696x391.jpg 696w, pic-1068x600.jpg 1068w, pic-747x420.jpg 747w" sizes="(max-width: 1366px) 100vw, 1366px" height="768" width="1366"></p>
+<p>another funny command is “cowsay” which can say things you like as a cow! first install the package:</p>
+<pre>sudo apt install cowsay</pre>
+<p>Now start it like this:</p>
+<pre>cowsay I love unixmen!</pre>
+<p>The output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49127" src="hossein@Lenovo-_004.png" alt="hossein@Lenovo: ~_004" srcset="hossein@Lenovo-_004.png 734w, hossein@Lenovo-_004-696x417.png 696w, hossein@Lenovo-_004-701x420.png 701w" sizes="(max-width: 734px) 100vw, 734px" height="440" width="734"></p>
+<p>It can even be graphical so install “xcowsay” package with this command:</p>
+<pre>sudo apt install xcowsay</pre>
+<p>now let’s try this command:</p>
+<pre>xcowsay I love unixmen!</pre>
+<p>And the output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49128" src="pic-1.jpg" alt="pic" srcset="pic-1.jpg 1366w, pic-1-768x432.jpg 768w, pic-1-696x391.jpg 696w, pic-1-1068x600.jpg 1068w, pic-1-747x420.jpg 747w" sizes="(max-width: 1366px) 100vw, 1366px" height="768" width="1366"></p>
+<p>There is a package namely “fortune-mod” that helps you to get nice sentences, first install package with this command:</p>
+<pre>sudo apt install fortune-mod</pre>
+<p>Now run following command in terminal to get your sentence, each time you run command the sentence will be different:</p>
+<pre>fortune</pre>
+<p>The output is something like this:</p>
+<p><img class="alignnone size-full wp-image-49129" src="hossein@Lenovo-_005.png" alt="hossein@Lenovo: ~_005" srcset="hossein@Lenovo-_005.png 734w, hossein@Lenovo-_005-696x417.png 696w, hossein@Lenovo-_005-701x420.png 701w" sizes="(max-width: 734px) 100vw, 734px" height="440" width="734"></p>
+<p>Oh! by the way you can even pipe the command with “cowsay” like this:</p>
+<pre>fortune | cowsay</pre>
+<p>The output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49130" src="hossein@Lenovo-_006.png" alt="hossein@Lenovo: ~_006" srcset="hossein@Lenovo-_006.png 734w, hossein@Lenovo-_006-696x417.png 696w, hossein@Lenovo-_006-701x420.png 701w" sizes="(max-width: 734px) 100vw, 734px" height="440" width="734"></p>
+<p>If you like to have fire in your terminal enter following command and install needed package:</p>
+<pre>sudo apt install libaa-bin</pre>
+<p>Now enter this command:</p>
+<pre>aafire</pre>
+<p>The output will be like this:</p>
+<p><img class="alignnone size-full wp-image-49131" src="pic.jpeg" alt="pic" srcset="pic.jpeg 1366w, pic-768x432.jpeg 768w, pic-696x391.jpeg 696w, pic-1068x600.jpeg 1068w, pic-747x420.jpeg 747w" sizes="(max-width: 1366px) 100vw, 1366px" height="768" width="1366"></p>
+<p>I wish you enjoy from your terminal <img src="1f600.png" alt="😀" class="emoji" draggable="false"></p>
+<script>/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank" async="true" data-url="[PAGE_URL]" data-zone="[ZONE]" data-version="2"></script><p></p>        </div>
+
+
+        <footer>
+                        
+            <div class="td-post-source-tags">
+                                            </div>
+
+            <div class="td-post-sharing td-post-sharing-bottom td-with-like"><span class="td-post-share-title">SHARE</span>
+            <div class="td-default-sharing">
+	            <a class="td-social-sharing-buttons td-social-facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F"><i class="td-icon-facebook"></i><div class="td-social-but-text">Facebook</div></a>
+	            <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=Fun+in+Terminal&amp;url=https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F&amp;via=unixmen"><i class="td-icon-twitter"></i><div class="td-social-but-text">Twitter</div></a>
+	            <a class="td-social-sharing-buttons td-social-google" href="http://plus.google.com/share?url=https://www.unixmen.com/fun-in-terminal/"><i class="td-icon-googleplus"></i></a>
+	            <a class="td-social-sharing-buttons td-social-pinterest" href="http://pinterest.com/pin/create/button/?url=https://www.unixmen.com/fun-in-terminal/&amp;media=https://www.unixmen.com/wp-content/uploads/2016/06/terminal-1.jpg&amp;description=Fun+in+Terminal"><i class="td-icon-pinterest"></i></a>
+	            <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text=Fun+in+Terminal - https%3A%2F%2Fwww.unixmen.com%2Ffun-in-terminal%2F"><i class="td-icon-whatsapp"></i></a>
+            </div><div class="td-classic-sharing"><ul><li class="td-classic-facebook"><iframe src="index_28.html" style="border: medium none; overflow: hidden; width: 105px; height: 21px; background-color: transparent;" frameborder="0"></iframe></li><li class="td-classic-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.unixmen.com/fun-in-terminal/" data-text="Fun in Terminal" data-via="" data-lang="en">tweet</a> <script>/* Code removed by ScrapBook */</script></li></ul></div></div>            <div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Previous article</span><a href="https://www.unixmen.com/rhcsa-module-2-log-management-disk-partition-lvm-management/">RHCSA module 2 – Log management, disk partition and LVM management</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Next article</span><a href="https://www.unixmen.com/create-master-slave-environment-jenkins/">How to create Master Slave environment in JENKINS</a></div></div></div>            <div class="td-author-name vcard author" style="display: none;"><span class="fn"><a href="https://www.unixmen.com/author/hossein/">hossein heydari</a></span></div>	        <span style="display: none;" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><meta itemprop="name" content="hossein heydari"></span><meta itemprop="datePublished" content="2016-06-17T09:41:39+00:00"><meta itemprop="dateModified" content="2016-06-17T09:41:39+00:00"><meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.unixmen.com/fun-in-terminal/"><span style="display: none;" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><span style="display: none;" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/02/unixmen-logo.png"></span><meta itemprop="name" content="Unixmen"></span><meta itemprop="headline " content="Fun in Terminal"><span style="display: none;" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/06/terminal-1.jpg"><meta itemprop="width" content="723"><meta itemprop="height" content="347"></span>        </footer>
+
+    </article> <!-- /.post -->
+
+    <script>/* Code removed by ScrapBook */</script><div class="td_block_wrap td_block_related_posts td_uid_1_585be0fbbbcda_rand td_with_ajax_pagination td-pb-border-top"><h4 class="td-related-title"><a id="td_uid_2_585be0fbbe8c1" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_1_585be0fbbbcda" href="#">RELATED ARTICLES</a><a id="td_uid_3_585be0fbbe908" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_1_585be0fbbbcda" href="#">MORE FROM AUTHOR</a></h4><div id="td_uid_1_585be0fbbbcda" class="td_block_inner">
+
+	<div class="td-related-row">
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://www.unixmen.com/apt-rebuilding-package-debian/" rel="bookmark" title="APT: Rebuilding Package in Debian"><img class="entry-thumb" src="Screenshot_20160927_234240-218x150.png" alt="" title="APT: Rebuilding Package in Debian" height="150" width="218"></a></div>                <a href="https://www.unixmen.com/category/linux-tutorials/" class="td-post-category">Linux tutorials</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/apt-rebuilding-package-debian/" rel="bookmark" title="APT: Rebuilding Package in Debian">APT: Rebuilding Package in Debian</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://www.unixmen.com/rhcsa-module-2-log-management-disk-partition-lvm-management/" rel="bookmark" title="RHCSA module 2 – Log management, disk partition and LVM management"><img class="entry-thumb" src="RHCSA-module-2-Operating-Red-Hat-Enterprise-Server-7-1-218x150.png" alt="" title="RHCSA module 2 – Log management, disk partition and LVM management" height="150" width="218"></a></div>                <a href="https://www.unixmen.com/category/awesome/" class="td-post-category">Awesome</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/rhcsa-module-2-log-management-disk-partition-lvm-management/" rel="bookmark" title="RHCSA module 2 – Log management, disk partition and LVM management">RHCSA module 2 – Log management, disk partition and LVM management</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://www.unixmen.com/find-largest-file-and-print-the-content-of-a-file-in-reverse/" rel="bookmark" title="Tips &amp; Tricks: Find Largest File and Print the content of a file in reverse"><img class="entry-thumb" src="Find-Largest-File-and-Print-the-content-of-a-file-in-reverse-218x150.png" alt="" title="Tips &amp; Tricks: Find Largest File and Print the content of a file in reverse" height="150" width="218"></a></div>                <a href="https://www.unixmen.com/category/featured-2/tips-tricks/" class="td-post-category">Tips &amp; Tricks</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/find-largest-file-and-print-the-content-of-a-file-in-reverse/" rel="bookmark" title="Tips &amp; Tricks: Find Largest File and Print the content of a file in reverse">Tips &amp; Tricks: Find Largest File and Print the content of a file in reverse</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 --></div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_1_585be0fbbbcda" data-td_block_id="td_uid_1_585be0fbbbcda"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_1_585be0fbbbcda" data-td_block_id="td_uid_1_585be0fbbbcda"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-1219">
+        <div id="dsq-comment-header-1219" class="dsq-comment-header">
+            <cite id="dsq-cite-1219">
+                <a id="dsq-author-user-1219" href="http://kermooni.ir/" target="_blank" rel="nofollow">Pesar Kermooni</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1219" class="dsq-comment-body">
+            <div id="dsq-comment-message-1219" class="dsq-comment-message"><p>thanks. <img src="1f642.png" alt="🙂" class="emoji" draggable="false"></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1220">
+        <div id="dsq-comment-header-1220" class="dsq-comment-header">
+            <cite id="dsq-cite-1220">
+                <span id="dsq-author-user-1220">hamid ghadery</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1220" class="dsq-comment-body">
+            <div id="dsq-comment-message-1220" class="dsq-comment-message"><p>very interesting<br>
+tnx &lt;3 &lt;3 &lt;3</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-1221">
+        <div id="dsq-comment-header-1221" class="dsq-comment-header">
+            <cite id="dsq-cite-1221">
+                <span id="dsq-author-user-1221">sae13</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1221" class="dsq-comment-body">
+            <div id="dsq-comment-message-1221" class="dsq-comment-message"><p>awesome. really missed snake</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1276">
+        <div id="dsq-comment-header-1276" class="dsq-comment-header">
+            <cite id="dsq-cite-1276">
+                <a id="dsq-author-user-1276" href="http://cfajohnson.com/" target="_blank" rel="nofollow">cfajohnson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1276" class="dsq-comment-body">
+            <div id="dsq-comment-message-1276" class="dsq-comment-message"><p>“User defined Variables can be any text string of 20 letters and digits.”</p>
+<p>Wrong.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-1277">
+        <div id="dsq-comment-header-1277" class="dsq-comment-header">
+            <cite id="dsq-cite-1277">
+                <a id="dsq-author-user-1277" href="http://cfajohnson.com/" target="_blank" rel="nofollow">cfajohnson</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1277" class="dsq-comment-body">
+            <div id="dsq-comment-message-1277" class="dsq-comment-message"><p>“Environment Variables may be considered as system defined variables.”</p>
+<p>Wrong.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+                            </div>
+                        </div>
+                        <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                            <div class="td-ss-main-sidebar">
+                                <aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><div style="padding: 10px 0px;">
+<script>/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank" async="true" data-url="[PAGE_URL]" data-zone="[ZONE]" data-version="2"></script>
+</div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="about:blank" async=""></script>
+
+
+<div style="padding: 10px 0px;">
+<!--/*
+  *
+  * Revive Adserver Javascript Tag
+  * - Generated with Revive Adserver v3.2.4
+  *
+  */-->
+
+<!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://delivery.amessagewithabottle.com/www/delivery/...'
+  * to
+  *   'https://delivery.amessagewithabottle.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script><noscript><a href='http://delivery.amessagewithabottle.com/www/delivery/ck.php?n=a2bb7049&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://delivery.amessagewithabottle.com/www/delivery/avw.php?zoneid=163&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a2bb7049' border='0' alt='' /></a></noscript>
+</div>
+
+
+<script type="text/javascript" src="about:blank"></script>
+
+<!--BEGIN FIRSTIMPRESSION TAG -->
+<script data-cfasync="false" type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- END FIRSTIMPRESSION TAG -->
+
+</div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/unixmencom/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><div id="crt-500313" style="width: 300px; height: 250px;"></div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+<div id="crt-500313" style="width: 300px; height: 250px;"></div><script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+<div style="padding: 8px 0px;">
+<!--/*
+  *
+  * Revive Adserver Javascript Tag
+  * - Generated with Revive Adserver v3.2.4
+  *
+  */-->
+
+<!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://delivery.amessagewithabottle.com/www/delivery/...'
+  * to
+  *   'https://delivery.amessagewithabottle.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script><noscript><a href='http://delivery.amessagewithabottle.com/www/delivery/ck.php?n=a4bee081&cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://delivery.amessagewithabottle.com/www/delivery/avw.php?zoneid=182&cb=INSERT_RANDOM_NUMBER_HERE&n=a4bee081' border='0' alt='' /></a></noscript>
+</div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><a href="https://twitter.com/unixmen" class="twitter-follow-button" data-show-count="false">Follow @unixmen</a><script async="" src="about:blank" charset="utf-8"></script>
+
+<div style="padding: 10px 0px;">
+<!--/*
+  *
+  * Revive Adserver Javascript Tag
+  * - Generated with Revive Adserver v3.2.4
+  *
+  */-->
+
+<!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://delivery.amessagewithabottle.com/www/delivery/...'
+  * to
+  *   'https://delivery.amessagewithabottle.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script><noscript><a href='http://delivery.amessagewithabottle.com/www/delivery/ck.php?n=aabcd8f5&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://delivery.amessagewithabottle.com/www/delivery/avw.php?zoneid=167&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aabcd8f5' border='0' alt='' /></a></noscript>
+</div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="about:blank"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><a style="padding: 9px 20px; background-color: rgb(204, 204, 204);" href="https://www.unixmen.com/contact-us/">Contact UnixMen</a></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="about:blank"></script>
+
+<div style="padding: 15px 0px;">
+<script type="text/javascript" src="about:blank"></script>
+</div></div>
+		</aside>                            </div>
+                        </div>
+                            </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
+
+<!-- Footer -->
+<div class="td-footer-wrapper">
+    <div class="td-container">
+
+	    <div class="td-pb-row">
+		    <div class="td-pb-span12">
+			    <div class="td-a-rec td-a-rec-id-footer_top "><!--/*
+  *
+  * Revive Adserver Javascript Tag
+  * - Generated with Revive Adserver v3.2.4
+  *
+  */-->
+
+<!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://delivery.amessagewithabottle.com/www/delivery/...'
+  * to
+  *   'https://delivery.amessagewithabottle.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script><noscript><a href='http://delivery.amessagewithabottle.com/www/delivery/ck.php?n=a6c73d80&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://delivery.amessagewithabottle.com/www/delivery/avw.php?zoneid=168&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a6c73d80' border='0' alt='' /></a></noscript>
+</div>		    </div>
+	    </div>
+
+        <div class="td-pb-row">
+
+            <div class="td-pb-span4">
+                <script>/* Code removed by ScrapBook */</script><div class="td_block_wrap td_block_7 td_uid_4_585be0fbc6195_rand td-pb-border-top"><h4 class="block-title"><span>EDITOR PICKS</span></h4><div id="td_uid_4_585be0fbc6195" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/prevent-ssh-disconnecting-sessions/" rel="bookmark" title="How to prevent SSH from disconnecting sessions"><img class="entry-thumb" src="ssh-100x70.png" alt="" title="How to prevent SSH from disconnecting sessions" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/prevent-ssh-disconnecting-sessions/" rel="bookmark" title="How to prevent SSH from disconnecting sessions">How to prevent SSH from disconnecting sessions</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/linux-tutorials/" class="td-post-category">Linux tutorials</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/apt-rebuilding-package-debian/" rel="bookmark" title="APT: Rebuilding Package in Debian"><img class="entry-thumb" src="Screenshot_20160927_234240-100x70.png" alt="" title="APT: Rebuilding Package in Debian" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/apt-rebuilding-package-debian/" rel="bookmark" title="APT: Rebuilding Package in Debian">APT: Rebuilding Package in Debian</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/linux-tutorials/" class="td-post-category">Linux tutorials</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/how-to-backup-with-rsync/" rel="bookmark" title="How to backup with rsync"><img class="entry-thumb" src="lxde-100x70.jpg" alt="" title="How to backup with rsync" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/how-to-backup-with-rsync/" rel="bookmark" title="How to backup with rsync">How to backup with rsync</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/featured-2/tips-tricks/" class="td-post-category">Tips &amp; Tricks</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->                            </div>
+
+            <div class="td-pb-span4">
+                <script>/* Code removed by ScrapBook */</script><div class="td_block_wrap td_block_7 td_uid_5_585be0fbc8bec_rand td-pb-border-top"><h4 class="block-title"><span>POPULAR POSTS</span></h4><div id="td_uid_5_585be0fbc8bec" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/everything-know-rhcsa-certification/" rel="bookmark" title="Everything you should know about RHCSA Certification"><img class="entry-thumb" src="Everything-you-should-know-about-RHCSA-Certification-100x70.png" alt="" title="Everything you should know about RHCSA Certification" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/everything-know-rhcsa-certification/" rel="bookmark" title="Everything you should know about RHCSA Certification">Everything you should know about RHCSA Certification</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/linux-distributions/centos/" class="td-post-category">CentOS</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/ifconfig-command-found-centos-7-minimal-installation-quick-tip-fix/" rel="bookmark" title="‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A Quick Tip To Fix It"><img class="entry-thumb" src="centos7-100x70.jpg" alt="" title="‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A Quick Tip To Fix It" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/ifconfig-command-found-centos-7-minimal-installation-quick-tip-fix/" rel="bookmark" title="‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A Quick Tip To Fix It">‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A...</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/linux-distributions/centos/" class="td-post-category">CentOS</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://www.unixmen.com/install-univention-corporate-server/" rel="bookmark" title="How to install Univention Corporate Server"><img class="entry-thumb" src="Selection_016-2-100x70.png" alt="Selection_016" title="How to install Univention Corporate Server" height="70" width="100"></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://www.unixmen.com/install-univention-corporate-server/" rel="bookmark" title="How to install Univention Corporate Server">How to install Univention Corporate Server</a></h3>            <div class="td-module-meta-info">
+                <a href="https://www.unixmen.com/category/linux-tutorials/" class="td-post-category">Linux tutorials</a>                                                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->                            </div>
+
+            <div class="td-pb-span4">
+                <div class="td_block_wrap td_block_popular_categories td_uid_6_585be0fbcc18d_rand widget widget_categories td-pb-border-top"><h4 class="block-title"><span>POPULAR CATEGORY</span></h4><ul class="td-pb-padding-side"><li><a href="https://www.unixmen.com/category/linux-distributions/">Linux distributions<span class="td-cat-no">1476</span></a></li><li><a href="https://www.unixmen.com/category/news/software/">Software<span class="td-cat-no">570</span></a></li><li><a href="https://www.unixmen.com/category/linux-tutorials/">Linux tutorials<span class="td-cat-no">461</span></a></li><li><a href="https://www.unixmen.com/category/news/">News<span class="td-cat-no">428</span></a></li><li><a href="https://www.unixmen.com/category/frequently-asked-questions/">Frequently Asked Questions<span class="td-cat-no">313</span></a></li><li><a href="https://www.unixmen.com/category/opensource/">Opensource<span class="td-cat-no">271</span></a></li><li><a href="https://www.unixmen.com/category/news/releases/">Releases<span class="td-cat-no">139</span></a></li><li><a href="https://www.unixmen.com/category/linux-distributions/centos/">CentOS<span class="td-cat-no">118</span></a></li><li><a href="https://www.unixmen.com/category/unix/">Unix<span class="td-cat-no">113</span></a></li></ul></div> <!-- ./block -->                            </div>
+        </div>
+    </div>
+    <div class="td-footer-bottom-full">
+        <div class="td-container">
+            <div class="td-pb-row">
+                <div class="td-pb-span3"><aside class="footer-logo-wrap"><a href="https://www.unixmen.com/"><img class="td-retina-data" src="unixmen-logo-footer.png" data-retina="https://dwlvaia9r6jw6.cloudfront.net/wp-content/uploads/2016/02/unixmen-logo-footer-retina-300x177.png" alt=""></a></aside></div><div class="td-pb-span5"><aside class="footer-text-wrap"><div class="block-title"><span>ABOUT US</span></div>Unixmen provide Linux Howtos, Tutorials, Tips &amp; Tricks ,Opensource News. It cover most popular distros like Ubuntu, LinuxMint, Fedora, Centos. It is your Gate to the the world of  Linux/Unix and Opensource in General.
+<br><br>
+<a href="https://www.unixmen.com/unixmen-privacy-policy/" style="font-weight: bold;">Privacy Policy</a><div class="footer-email-wrap">Contact us: <a href="mailto:contact (at) theeighthnetwork (dot) com">contact (at) theeighthnetwork (dot) com</a></div></aside></div><div class="td-pb-span4"><aside class="footer-social-wrap td-social-style-2"><div class="block-title"><span>FOLLOW US</span></div><span class="td-social-icon-wrap"><a target="_blank" href="https://www.facebook.com/unixmencom" title="Facebook"><i class="td-icon-font td-icon-facebook"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://plus.google.com/+Unixmen" title="Google+"><i class="td-icon-font td-icon-googleplus"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://www.linkedin.com/groups/3899550/profile" title="Linkedin"><i class="td-icon-font td-icon-linkedin"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://www.pinterest.com/unixmen/" title="Pinterest"><i class="td-icon-font td-icon-pinterest"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://www.reddit.com/domain/unixmen.com/" title="Reddit"><i class="td-icon-font td-icon-reddit"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="http://www.unixmen.com/feed/" title="RSS"><i class="td-icon-font td-icon-rss"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://twitter.com/unixmen" title="Twitter"><i class="td-icon-font td-icon-twitter"></i></a></span><span class="td-social-icon-wrap"><a target="_blank" href="https://www.youtube.com/user/UnixmenVideos" title="Youtube"><i class="td-icon-font td-icon-youtube"></i></a></span></aside></div>            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sub Footer -->
+    <div class="td-sub-footer-container">
+        <div class="td-container">
+            <div class="td-pb-row">
+                <div class="td-pb-span7 td-sub-footer-menu">
+                                        </div>
+
+                <div class="td-pb-span5 td-sub-footer-copy">
+                    © Copyright 2015 - Newspaper 6 by TagDiv                </div>
+            </div>
+        </div>
+    </div>
+    </div><!--close content div-->
+</div><!--close td-outer-wrap-->
+
+        <script type="text/javascript">/* Code removed by ScrapBook */</script>
+        
+
+    <!--
+
+        Theme: Newspaper by tagDiv 2015
+        Version: 6.7 (rara)
+        Deploy mode: deploy
+        
+        uid: 585be0fbcdebd
+    -->
+
+    
+<!-- Custom css form theme panel -->
+<style type="text/css" media="screen">
+/* Code tidied up by ScrapBook */
+.td-header-style-3 .td-header-sp-logo img { max-height: 135px; }
+.td-header-sp-logo img { position: relative; top: -23px; }
+</style>
+
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+
+<!-- JS generated by theme -->
+
+<script>/* Code removed by ScrapBook */</script>
+
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+</body>
+</html>
