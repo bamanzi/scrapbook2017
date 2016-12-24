@@ -1,0 +1,10 @@
+id	20161224112045
+create	20161224112045
+modify	20161224112045
+type	
+title	resin-io/etcher: Flash OS images to SD cards & USB drives, safely and easily.
+chars	UTF-8
+icon	favicon.ico
+source	https://github.com/resin-io/etcher
+comment	
+lock	

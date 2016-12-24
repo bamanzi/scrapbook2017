@@ -1,0 +1,55 @@
+/* Code tidied up by ScrapBook */
+body { font-size: 62.5%; font-family: "Lucida Grande",Verdana,Arial,Sans-Serif; background-color: rgb(0, 0, 0); color: rgb(51, 51, 51); text-align: center; margin: 0px; padding: 0px; }
+.narrowcolumn .postmetadata { text-align: center; padding-top: 5px; margin-bottom: 10px; }
+.alt { background-color: rgb(248, 248, 248); color: rgb(0, 0, 0); border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: 0px; padding: 10px; }
+small { font-family: "Lucida Grande",Verdana,Arial,Sans-Serif; font-size: 0.9em; line-height: 1.6em; }
+#sidebar { font: 1em "Lucida Grande",Verdana,Arial,Sans-Serif; color: rgb(0, 102, 255); background: none repeat scroll 0% 0% rgb(255, 255, 255); margin-left: 15px; width: 190px; padding: 10px; }
+#sidebar h2 { font-family: "Lucida Grande",Verdana,Arial,Sans-Serif; font-size: 1.2em; color: rgb(51, 51, 51); background: none repeat scroll 0% 0% rgb(255, 255, 255); text-decoration: none; margin: 5px 0px; padding: 0px; }
+#sidebar li { color: rgb(0, 102, 255); background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: 3px 0px 0px; padding: 0px; list-style: none outside none; }
+ol li {  }
+h1, h2 { font-family: "Trebuchet MS","Lucida Grande",Verdana,Arial,Sans-Serif; font-weight: 700; }
+h1 { font-size: 1.6em; text-align: left; margin: 10px 0px 5px; }
+h2 { font-size: 1.3em; margin: 20px 0px 10px; }
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited { color: rgb(51, 51, 51); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, cite { text-decoration: none; }
+h3 { font-size: 1.3em; font-family: "Trebuchet MS","Lucida Grande",Verdana,Arial,Sans-Serif; font-weight: 700; margin: 30px 0px 0px; padding: 0px; }
+.entrytext a:visited { color: rgb(17, 68, 119); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+small, .nocomments, .postmetadata, strike { color: rgb(119, 119, 119); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+a, h2 a:hover, h3 a:hover { color: rgb(0, 102, 255); text-decoration: none; }
+a:hover { color: rgb(17, 68, 119); text-decoration: none; }
+#page { background: url("pendrive.png") repeat-y scroll -760px 50px rgb(255, 255, 255); text-align: left; width: 760px; margin: 25px auto 0px; padding: 0px; border-radius: 15px 15px 0px 0px; }
+#headerimg { background: url("pendrive.png") no-repeat scroll 0px 0px rgb(255, 255, 255); height: 185px; width: 760px; margin: 0px; border-radius: 15px 15px 0px 0px; }
+.narrowcolumn { float: right; width: 470px; margin: 0px; padding: 0px 40px 10px 0px; }
+.post { text-align: left; line-height: 1.6em; margin: 0px 0px 10px; }
+.postmetadata { clear: left; }
+#footer { width: 760px; clear: both; margin: 0px auto; padding: 0px; }
+#footer p { text-align: center; margin: 0px; padding: 10px; }
+#footimg { background: url("pendrive.png") no-repeat scroll -1520px -170px rgb(255, 255, 255); height: 30px; width: 760px; clear: both; margin: 0px auto 10px; padding: 0px; border-radius: 0px 0px 15px 15px; }
+#content img { max-width: 100%; padding: 8px 0px; }
+.entrytext li { margin-left: -15px; }
+.utwrelatedposts { margin: 0px 0px 10px; }
+.utwrelatedposts ul { font-size: 12px; line-height: 1; list-style-position: inside; margin: 0px; padding: 0px; }
+.utwrelatedposts li { line-height: 1.62; height: 18px; overflow: visible; margin: 0px; }
+#navbar { background: url("pendrive.png") repeat scroll -19px -130px rgb(85, 85, 85); float: none; position: absolute; width: 720px; height: 27px; text-transform: uppercase; font-family: Arial,Tahoma,Verdana,Sans-Serif; margin: 130px 0px 0px 19px; padding: 0px; }
+#navbar li { display: inline; list-style-type: none; border-right: 1px solid rgb(51, 51, 51); }
+#nav { font-size: 11px; text-shadow: 0px -1px 0px rgb(51, 51, 51); font-weight: bold; list-style: none outside none; }
+#nav a, #nav a:visited { color: rgb(255, 255, 255); display: block; text-decoration: none; margin: 0px; padding: 7px 14px 6px 12px; }
+#nav a:hover { background: none repeat scroll 0% 0% rgb(15, 15, 15); color: rgb(238, 238, 238); text-decoration: none; margin: 0px; padding: 8px 14px 5px 12px; }
+#nav li { float: left; margin: 0px; padding: 0px; }
+#rss { position: absolute; margin-top: 13px; margin-left: 715px; }
+#rss a { padding: 15px; width: 30px; height: 30px; }
+#searchit2 { position: absolute; margin-top: 131px; margin-left: 510px; }
+#content, h4 { font-size: 1.2em; }
+#sidebar a:link, #sidebar a:visited { color: rgb(0, 102, 255); background: none repeat scroll 0% 0% rgb(255, 255, 255); text-decoration: none; }
+#sidebar a:active, #sidebar a:hover { color: rgb(51, 51, 51); background: none repeat scroll 0% 0% rgb(255, 255, 255); text-decoration: none; }
+#sidebar ul, #sidebar ol, #navbar ul { margin: 0px; padding: 0px; }
+#sidebar p, #sidebar select, #sidebar ul, #sidebar ol { margin: 5px 0px 0px; }
+h1, h1 a, h1 a:visited, #headerimg .description, h1 a:hover, h2 a:hover { text-decoration: none; color: rgb(51, 51, 51); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+img, p img { max-width: 100%; padding: 0px; }
+#shareme { position: absolute; top: 230px; margin-left: 757px; float: left; border-radius: 5px 5px 5px 5px; background-color: rgb(255, 255, 255); padding: 0px 0px 2px; z-index: 10; }
+#shareme .sbutton { float: left; clear: both; margin: 6px; }
+a.socialg { display: block; float: left; width: 33px; height: 33px; background: url("pendrive.png") no-repeat scroll -2282px 0px rgb(255, 255, 255); margin: 0px; padding: 0px; opacity: 0.6; }
+a.socialf { display: block; float: left; width: 33px; height: 33px; background: url("pendrive.png") no-repeat scroll -2282px -33px rgb(255, 255, 255); margin: 0px; padding: 0px; opacity: 0.6; }
+a.socialt { display: block; float: left; width: 33px; height: 33px; background: url("pendrive.png") no-repeat scroll -2282px -66px rgb(255, 255, 255); margin: 0px; padding: 0px; opacity: 0.6; }
+a.socialg:hover, .socials:hover, .socialt:hover, .socialf:hover { opacity: 1; }
+a.socials { display: block; float: left; width: 33px; height: 33px; background: url("pendrive.png") no-repeat scroll -2282px -99px rgb(255, 255, 255); margin: 0px; padding: 0px; opacity: 0.6; }

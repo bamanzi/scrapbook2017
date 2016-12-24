@@ -1,0 +1,50 @@
+/* Code tidied up by ScrapBook */
+html, body, dl, dt, dd, ul, p, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend { margin: 0px; padding: 0px; }
+cite, em, strong, th { font-style: normal; }
+td, th, div { word-break: break-all; word-wrap: break-word; }
+form { display: inline; }
+table { border-collapse: collapse; border-spacing: 0px; }
+li { list-style: none outside none; }
+img { border: 0px none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+.cc {  }
+.cc:after { content: " "; display: block; height: 0px; clear: both; visibility: hidden; }
+.c { clear: both; height: 0px; font: 0px/0 Arial; overflow: hidden; width: 0px; }
+html { background-attachment: fixed; overflow-y: scroll; }
+.mb10 { margin-bottom: 10px ! important; }
+.mr5 { margin-right: 5px ! important; }
+.mr10 { margin-right: 10px ! important; }
+.tac { text-align: center ! important; }
+.fl { float: left ! important; display: inline; }
+.fr { float: right ! important; display: inline; }
+.dn { display: none; }
+.btn, .core_follow, .pop_deep .ct dt.reward, .pages a, .pages strong, .design_mode_edit, #back_top, .pop_showmsg { background: url("core_bg.png") repeat scroll 0% 0% transparent; }
+.btn .add, .btn_error .add, .btn_success .add, .btn_submit .add, .pop_close, .pop_deep .hd .close, .pop_card .unfollow, .pImg_close, .bcr1, .bcr2, .bcr3, .bcr4, .man_ol, .women_ol, .man_unol, .women_unol, .icon_edit, .icon_del, .color_pick, .user_select_input .input_down, .pop_help_punch .select_box dd, .pop_help_punch .select_box dt, .tmode_waterfall .num span, .design_layout_search button span { background: url("core_icon.png") no-repeat scroll 0% 0% transparent; }
+.top_loading, .pop_loading, .tips_loading { background: url("loading.gif") no-repeat scroll 0% 0% transparent; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0px none; padding: 0px; }
+.btn { color: rgb(51, 51, 51) ! important; background-color: rgb(243, 243, 243); background-position: 0px 0px; border: 1px solid rgb(177, 174, 174); border-radius: 2px 2px 2px 2px; text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75); padding: 4px 10px; display: inline-block; cursor: pointer; font-size: 100%; line-height: normal; text-decoration: none; overflow: visible; vertical-align: middle; text-align: center; white-space: nowrap; font-family: inherit; margin: 0px; }
+input.btn, button.btn {  }
+.btn:hover { background-position: 0px -40px; color: rgb(51, 51, 51); text-decoration: none; }
+.btn:active { background-position: 0px -81px; }
+.btn_error, .btn_error:hover, .btn_success, .btn_success:hover, .btn_submit, .btn_submit:hover { color: rgb(255, 255, 255) ! important; }
+.btn_submit { background-position: 0px -120px; background-color: rgb(59, 125, 195); text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); border-color: rgb(15, 117, 164) rgb(14, 97, 145) rgb(12, 73, 124); }
+.btn_submit:hover { background-position: 0px -160px; }
+.btn_submit:active { background-position: 0px -201px; border-color: rgb(12, 72, 123) rgb(14, 93, 142) rgb(15, 117, 163); }
+.input, textarea, select { padding: 4px; font-size: 100%; line-height: 18px; border: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); box-shadow: 2px 2px 2px rgb(240, 240, 240) inset; vertical-align: middle; margin: 0px; font-family: inherit; color: rgb(51, 51, 51); }
+.input:focus, textarea:focus { outline: 2px solid rgb(153, 216, 245); border-color: rgb(123, 191, 242); }
+textarea { height: 72px; overflow: auto; vertical-align: top; resize: vertical; }
+.pop_loading { background-position: center center; height: 80px; width: 80px; margin: auto; }
+.man_ol, .women_ol, .man_unol, .women_unol { display: inline-block; width: 12px; height: 12px; overflow: hidden; vertical-align: middle; margin-top: -4px; }
+.man_unol { background-position: 0px -240px; }
+.core_menu { position: absolute; border: 1px solid rgb(193, 193, 193); background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 98px; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); outline: medium none; }
+.core_menu_list { padding: 5px 0px ! important; height: auto ! important; float: none ! important; }
+.core_menu_list li { float: none ! important; margin: 0px; width: 100% ! important; padding: 0px ! important; }
+.core_menu_list li a { display: block; line-height: 23px; height: 23px; overflow: hidden; padding: 0px 10px ! important; color: rgb(51, 51, 51) ! important; border: 0px none; margin: 0px ! important; float: none ! important; border-radius: 0px 0px 0px 0px; font-size: 12px ! important; font-weight: 100 ! important; white-space: nowrap; text-overflow: ellipsis; }
+.core_menu_list li a:hover { border: 0px none; background-color: rgb(245, 245, 245); text-decoration: none; color: rgb(51, 51, 51); }
+.pages a, .pages strong { display: inline-block; line-height: 13px; padding: 6px 10px ! important; border-width: 1px; border-style: solid; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-color: rgb(201, 201, 201) rgb(189, 189, 189) rgb(176, 176, 176); background-color: rgb(248, 248, 248); text-decoration: none; color: rgb(102, 102, 102); margin-right: 3px; border-radius: 3px 3px 3px 3px; vertical-align: top; }
+.pages a:hover { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(72, 143, 207) ! important; border-color: rgb(36, 112, 181) rgb(72, 143, 207) rgb(72, 143, 207); text-decoration: none; }
+#back_top { background-position: -60px -740px; width: 51px; height: 51px; overflow: hidden; text-indent: -2000em; position: fixed; right: 5px; bottom: 150px; display: none; }
+#back_top:hover { background-position: -60px -791px; }
+.user_select_input { padding: 2px 20px 0px 2px; font-size: 100%; border: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); box-shadow: 2px 2px 2px rgb(240, 240, 240) inset; vertical-align: middle; margin: 0px; font-family: inherit; color: rgb(51, 51, 51); min-height: 25px; width: 376px; }
+.user_select_input input { float: left; width: 90px; padding: 1px 0px; border: 0px none; outline: 0px none; margin: 2px 0px 0px; }
+.user_select_input ul {  }

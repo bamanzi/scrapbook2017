@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using UNetbootin to create a Linux USB from Linux | USB Pen Drive Linux</title>
+<meta name="keywords" content="live linux usb, Live Linux USB Creator, live usb, live usb linux, UNetbootin">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="USB Pen Drive Linux RSS Feed" href="https://www.pendrivelinux.com/feed/">
+<link rel="pingback" href="https://www.pendrivelinux.com/xmlrpc.php">
+<style type="text/css" media="screen">
+/* Code tidied up by ScrapBook */
+</style>
+
+<link rel="canonical" href="https://www.pendrivelinux.com/using-unetbootin-to-create-a-linux-usb-from-linux/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using UNetbootin to create a Linux USB from Linux | USB Pen Drive Linux">
+<meta property="og:description" content="How to Install and Use UNetbootin from Linux: UNetbootin is a Live USB creation tool that can be used to …">
+<meta property="og:url" content="https://www.pendrivelinux.com/using-unetbootin-to-create-a-linux-usb-from-linux/">
+<meta property="og:site_name" content="USB Pen Drive Linux">
+<meta property="article:tag" content="live linux usb">
+<meta property="article:tag" content="Live Linux USB Creator">
+<meta property="article:tag" content="live usb">
+<meta property="article:tag" content="live usb linux">
+<meta property="article:tag" content="UNetbootin">
+<meta property="article:section" content="Flash drive installs using Linux">
+<meta property="article:published_time" content="2010-11-02T12:22:49+00:00">
+<meta property="article:modified_time" content="2015-10-23T21:57:25+00:00">
+<meta property="og:updated_time" content="2015-10-23T21:57:25+00:00">
+<meta property="og:image" content="https://www.pendrivelinux.com/wp-content/uploads/Using-UNetbootin-Net.png">
+<meta property="og:image" content="https://www.pendrivelinux.com/wp-content/uploads/UNetbootin-ISO-Install.png">
+<meta property="og:image" content="https://www.pendrivelinux.com/wp-content/uploads/unetbootin-install-done.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="How to Install and Use UNetbootin from Linux: UNetbootin is a Live USB creation tool that can be used to […]">
+<meta name="twitter:title" content="Using UNetbootin to create a Linux USB from Linux | USB Pen Drive Linux">
+<meta name="twitter:site" content="@Pendrivelinux">
+<meta name="twitter:image" content="//www.pendrivelinux.com/wp-content/uploads/Using-UNetbootin-Net.png">
+<meta name="twitter:creator" content="@Pendrivelinux">
+
+<link rel="stylesheet" id="cookie-notice-front-css" href="front.css" type="text/css" media="all">
+<script src="about:blank" async="" type="text/javascript"></script><script src="about:blank" async="" type="text/javascript"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="https://www.pendrivelinux.com/wp-json/">
+<link rel="alternate" type="application/json+oembed" href="https://www.pendrivelinux.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pendrivelinux.com%2Fusing-unetbootin-to-create-a-linux-usb-from-linux%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.pendrivelinux.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pendrivelinux.com%2Fusing-unetbootin-to-create-a-linux-usb-from-linux%2F&amp;format=xml">
+<meta name="verify-v1" content="S02exvdePDFJ9VGZUxwY0OdRBoXi5NdWIrn3uixcvn8=">
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style></head>
+<body class="cookies-not-accepted">
+<div id="page">
+<div id="headerimg">
+<div id="navbar">
+ <ul id="nav">
+  <li><a href="https://www.pendrivelinux.com/">Home</a></li>
+  <li><a rel="nofollow" href="https://www.pendrivelinux.com/disclaimer/">Disclaimer</a></li>
+  <li><a rel="nofollow" href="https://www.pendrivelinux.com/contact/">Contact</a></li>
+ </ul>
+</div>
+
+<div id="searchit2">
+<div style="width: 232px;">
+
+<script>/* Code removed by ScrapBook */</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+
+</div>
+</div>
+
+<div id="rss"><a href="https://www.pendrivelinux.com/feed/" title="Subscribe to the Pendrivelinux RSS Feed"></a></div>
+</div><div class="KonaBody">
+	<div id="content" class="narrowcolumn">	
+<div class="post" id="post-5120">
+<h1>Using UNetbootin to create a Linux USB from Linux</h1>
+  
+<div style="float: left; margin-top: 15px; margin-right: 10px;"><script async="" src="about:blank"></script>
+<!-- 336x280 Above The Fold PDL -->
+
+<script>/* Code removed by ScrapBook */</script></div>
+			<div class="entrytext">
+				<p>How to Install and Use UNetbootin from Linux: UNetbootin is a Live USB creation tool that can be used to create a Live Linux USB flash drive. One nice feature of UNetbootin is that the tool is offered for Windows and Linux. In the following, I will cover how to quickly get UNetbootin up and running within an Ubuntu Linux Operating Environment.</p>
+<p><span id="more-5120"></span></p>
+<p>UNetbootin was created by Geza Kovacs, released under GNU GPL v2.</p>
+<p><strong>Official UNetbootin Homepage</strong>:&nbsp; <a title="UNetbootin Official Site" href="http://unetbootin.sourceforge.net/" target="_blank" class="external" rel="nofollow">http://unetbootin.sourceforge.net</a></p>
+<p><strong>How to Install and Run UNetbootin under Ubuntu Linux</strong></p>
+<ol>
+<li>Open a terminal (applications &gt; accessories &gt; terminal)</li>
+<li>Type <code>wget unetbootin.sourceforge.net/unetbootin-linux-latest</code></li>
+<li>Type <code>chmod +x ./unetbootin-linux-*</code></li>
+<li>Type <code>sudo apt-get install p7zip-full</code></li>
+<li>Type <code>sudo ./unetbootin-linux-*</code></li>
+<p>Alternately, you can double click the <strong>unetbootin-linux-*</strong> file to run it, since it was marked executable in step 3.</p></ol>
+<p><strong>How to Use UNetbootin under Ubuntu Linux</strong></p>
+<p>Insert your USB flash drive and Start UNetbootin (See step 5 above)</p>
+<p><strong><span style="color: rgb(255, 0, 0);">Option One</span> – Distribution</strong>: Let UNetbootin fetch the Select Linux Distribution files from the internet to put on your USB.</p>
+<p>(1) Select a Linux Distribution (2) Select a&nbsp; specific Version (3) Make sure the correct USB Drive is detected and Click OK <img class="alignnone size-full wp-image-5121" title="Using UNetbootin - Fetch the files from the Net" src="Using-UNetbootin-Net.png" alt="Using UNetbootin - Fetch the files from the Net" srcset="Using-UNetbootin-Net.png 450w, Using-UNetbootin-Net-300x208.png 300w" sizes="(max-width: 450px) 100vw, 450px" width="450" height="313"></p>
+<p>Or you can use Option Two…</p>
+<p><strong><span style="color: rgb(255, 0, 0);">Option Two</span> – Diskimage</strong>: Browse to an ISO and have UNetbootin copy its contents to your USB.</p>
+<p>(1) Browse to the ISO Image you would like UNetbootin to put on USB (2) Make sure the correct USB Drive is detected and Click OK <img class="alignnone size-full wp-image-5125" title="UNetbootin DiskImage ISO Option" src="UNetbootin-ISO-Install.png" alt="UNetbootin DiskImage ISO Option" srcset="UNetbootin-ISO-Install.png 450w, UNetbootin-ISO-Install-300x208.png 300w" sizes="(max-width: 450px) 100vw, 450px" width="450" height="313"></p>
+<p>Once the UNetbootin installer has completed, click <strong>Reboot Now</strong> <img class="alignnone size-full wp-image-1329" title="UNetbootin installation finished " src="unetbootin-install-done.png" alt="" srcset="unetbootin-install-done.png 450w, unetbootin-install-done-300x224.png 300w" sizes="(max-width: 450px) 100vw, 450px" width="450" height="336"></p>
+<p>Set your system BIOS or boot menu to boot from the USB device and  enjoy  your favorite Live Linux on USB</p>
+					
+				<div class="utwrelatedposts">
+<h3 class="related_post_title">Similar Portable Linux Posts:</h3><ul class="related_post"><li><a href="https://www.pendrivelinux.com/using-unetbootin-to-create-a-live-usb-linux/" title="Using UNetbootin to create a Live Linux USB">Using UNetbootin to create a Live Linux USB</a></li><li><a href="https://www.pendrivelinux.com/liveusb-install-live-usb-creator/" title="LiveUSB Install – Live USB Creator">LiveUSB Install – Live USB Creator</a></li><li><a href="https://www.pendrivelinux.com/xboot-multiboot-iso-usb-creator/" title="XBOOT – Multiboot ISO USB Creator (Windows)">XBOOT – Multiboot ISO USB Creator (Windows)</a></li></ul></div>
+
+<p class="postmetadata alt"> 
+<small>Using UNetbootin to create a Linux USB from Linux published under <a href="https://www.pendrivelinux.com/category/flashdrive-installs-using-linux/" rel="category tag">Flash drive installs using Linux</a>, <a href="https://www.pendrivelinux.com/category/usb-creator/" rel="category tag">USB Creator Tools</a>&nbsp;
+<!-- Generated by Simple Tags 2.4.5 - http://wordpress.org/extend/plugins/simple-tags -->
+	</small></p><div class="st-post-tags"><small>
+	<a href="https://www.pendrivelinux.com/tag/live-linux-usb/" title="live linux usb" rel="tag">live linux usb</a>, <a href="https://www.pendrivelinux.com/tag/live-linux-usb-creator/" title="Live Linux USB Creator" rel="tag">Live Linux USB Creator</a>, <a href="https://www.pendrivelinux.com/tag/live-usb/" title="live usb" rel="tag">live usb</a>, <a href="https://www.pendrivelinux.com/tag/live-usb-linux/" title="live usb linux" rel="tag">live usb linux</a>, <a href="https://www.pendrivelinux.com/tag/unetbootin/" title="UNetbootin" rel="tag">UNetbootin</a><br></small></div><small>
+
+</small><p></p>
+
+<img src="mini-disclaimer.png" alt="Disclaimer">
+</div>
+</div>
+	</div>
+</div>
+
+<div id="sidebar">
+<ul>
+<li id="execphp-4" class="widget widget_execphp"><h2 class="widgettitle">Portable Linux Categories</h2>
+			<div class="execphpwidget"><ul>	<li class="cat-item cat-item-16"><a href="https://www.pendrivelinux.com/category/usb-installs-from-linux/" title="How to install Linux to a USB flash memory stick from a running Live CD">Flash drive installs using Live CD</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://www.pendrivelinux.com/category/new-usb-linux-tutorials/" title="How to Install Linux to a USB flash pen drive from Windows">Flash drive installs using Windows</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.pendrivelinux.com/category/virtual-machine/" title="Run Live Linux directly from Windows using a virtual machine emulator">USB Virtual Machine Emulation</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://www.pendrivelinux.com/category/using-linux/" title="Linux Configuration and setup tutorials for general use">Using and Configuring Linux</a>
+</li>
+</ul></div>
+		</li>
+<li id="execphp-8" class="widget widget_execphp"><h2 class="widgettitle">Pendrive Linux Posts</h2>
+			<div class="execphpwidget"><ul>	<li><a href="https://www.pendrivelinux.com/make-a-usb-boot-cd-for-ubuntu-11-10/">Make a USB Boot CD for Ubuntu 11.10</a></li>
+	<li><a href="https://www.pendrivelinux.com/boot-dos-from-usb/">Boot DOS from USB – RUFUS</a></li>
+	<li><a href="https://www.pendrivelinux.com/liveusb-install-live-usb-creator/">LiveUSB Install – Live USB Creator</a></li>
+	<li><a href="https://www.pendrivelinux.com/xboot-multiboot-iso-usb-creator/">XBOOT – Multiboot ISO USB Creator (Windows)</a></li>
+	<li><a href="https://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI – Multiboot USB Creator</a></li>
+	<li><a href="https://www.pendrivelinux.com/sardu-multiboot-usb-creator-windows/">SARDU – Multiboot USB Creator (Windows)</a></li>
+	<li><a href="https://www.pendrivelinux.com/boot-multiple-iso-from-usb-via-grub2-using-linux/">Boot Multiple ISO from USB via Grub2 using Linux</a></li>
+	<li><a href="https://www.pendrivelinux.com/creating-a-kubuntu-live-usb-from-cd/">Creating a Kubuntu Live USB from CD</a></li>
+	<li><a href="https://www.pendrivelinux.com/creating-an-xubuntu-live-usb-from-cd/">Creating an Xubuntu Live USB from CD</a></li>
+	<li><a href="https://www.pendrivelinux.com/creating-an-ubuntu-live-usb-from-cd/">Creating an Ubuntu Live USB from CD</a></li>
+	<li><a href="#">Using UNetbootin to create a Linux USB from Linux</a></li>
+	<li><a href="https://www.pendrivelinux.com/multiboot-create-a-multiboot-usb-from-linux/">MultiSystem – Create a MultiBoot USB from Linux</a></li>
+	<li><a href="https://www.pendrivelinux.com/put-mandriva-2010-on-a-usb-flash-drive-windows/">Put Mandriva 2010 on a USB Flash Drive (Windows)</a></li>
+	<li><a href="https://www.pendrivelinux.com/put-bitdefender-rescue-cd-on-a-usb-flash-drive/">Put Bitdefender Rescue CD on a USB Flash Drive</a></li>
+	<li><a href="https://www.pendrivelinux.com/put-lucid-puppy-on-usb-flash-drive-from-windows/">Put Lucid Puppy on USB Flash Drive from Windows</a></li>
+</ul></div>
+		</li>
+<li id="text-97368863" class="widget widget_text">			<div class="textwidget"><script async="" src="about:blank"></script>
+<!-- 160x600 PDL -->
+<ins class="adsbygoogle" style="display: inline-block; width: 160px; height: 600px;" data-ad-client="ca-pub-0932618358223805" data-ad-slot="4112723803"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+		</li>
+<li id="text-97309161" class="widget widget_text"><h2 class="widgettitle">USB Linux Help</h2>
+			<div class="textwidget"><ul>
+<li><a href="https://www.pendrivelinux.com/testing-your-system-for-usb-boot-compatibility/" title="Ensure your PC can Boot from USB">USB Boot compatibility test</a></li>
+<li><a href="https://www.pendrivelinux.com/category/tools/" title="Misc USB-Linux tools">USB Help and Tools</a></li>
+<li><a href="https://www.pendrivelinux.com/category/cheatcodes/" title="Linux Cheatcodes-Bootcodes">Boot Cheatcodes</a></li>
+<li><a href="https://www.pendrivelinux.com/category/bios-usb-boot-options/" title="Linux USB Bios boot options">BIOS USB Boot Options</a></li>
+<li><a href="https://www.pendrivelinux.com/restoring-your-usb-key-partition/" title="Restoring your USB Key to it's original state">Restoring your USB Key</a></li>
+</ul></div>
+		</li>
+</ul>
+</div><!-- Start Floating ShareMe Bar -->
+<div id="shareme">
+<div class="sbutton">
+<a class="socialg" rel="nofollow" href="#"></a> 
+</div>
+
+<div class="sbutton">
+<a class="socialf" rel="nofollow" href="#"></a>
+</div>
+
+<div class="sbutton">
+<a class="socialt" rel="nofollow" href="#"></a>
+</div>
+
+<div class="sbutton">
+<a class="socials" rel="nofollow" href="#"></a>
+</div>
+
+</div>  
+<!-- End Floating ShareMe Bar -->
+<div id="footer">
+
+
+<center><script async="" src="about:blank"></script>
+<!-- 728x90 PDL Bottom -->
+<ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px;" data-ad-client="ca-pub-0932618358223805" data-ad-slot="0431133546"></ins>
+<script>/* Code removed by ScrapBook */</script></center>
+
+
+<p>©2006-2016 Pendrivelinux.com - Run Linux From USB. <a rel="nofollow" href="https://www.pendrivelinux.com/resources/">Credits, Resources and Sources</a> - <a href="https://www.pendrivelinux.com/privacy-policy/" rel="nofollow"> Cookies &amp; Privacy Policy</a><br>
+Linux® is a registered trademark of Linus Torvalds. Windows is a registered trademark of Microsoft. Other names and logos may also be trademarked by their respective owners.</p>
+</div>
+</div>
+<div id="footimg"></div>
+
+<!-- Powered by WPtouch: 4.3.4 --><script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+
+			<div id="cookie-notice" role="banner" class="cn-bottom wp-default" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); display: block;">
+			</div><!-- Generated in 0.293 seconds. Made 30 queries to database and 1 cached queries. Memory used - 28.25MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+
+
+<!-- Begin Google Analytics -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>

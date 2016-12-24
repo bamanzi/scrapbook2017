@@ -1,0 +1,7 @@
+/* Code tidied up by ScrapBook */
+#cookie-notice { display: none; position: fixed; min-width: 100%; height: auto; z-index: 100000; font-size: 13px; line-height: 20px; left: 0px; text-align: center; }
+.cookie-notice-container { padding: 10px; }
+.cn-bottom { bottom: 0px; }
+#cookie-notice .button { margin-left: 10px; }
+#cookie-notice .button.wp-default { font-family: sans-serif; line-height: 18px; padding: 2px 12px; background: linear-gradient(to bottom, rgb(254, 254, 254), rgb(244, 244, 244)) repeat scroll 0px 0px rgb(243, 243, 243); border-color: rgb(187, 187, 187); color: rgb(51, 51, 51); text-shadow: 0px 1px 0px rgb(255, 255, 255); box-sizing: border-box; border-radius: 3px 3px 3px 3px; border-style: solid; border-width: 1px; cursor: pointer; display: inline-block; font-size: 12px; font-style: normal; text-decoration: none; white-space: nowrap; outline: medium none; }
+#cookie-notice .button.wp-default:hover, #cookie-notice .button.wp-default:focus { background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(243, 243, 243)) repeat scroll 0px 0px rgb(243, 243, 243); border-color: rgb(153, 153, 153); color: rgb(34, 34, 34); }

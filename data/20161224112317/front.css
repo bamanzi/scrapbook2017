@@ -1,0 +1,3 @@
+/* Code tidied up by ScrapBook */
+#cookie-notice { display: none; position: fixed; min-width: 100%; height: auto; z-index: 100000; font-size: 13px; line-height: 20px; left: 0px; text-align: center; }
+.cn-bottom { bottom: 0px; }

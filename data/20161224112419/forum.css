@@ -1,0 +1,78 @@
+/* Code tidied up by ScrapBook */
+.btn_post, .btn_replay, .posts_icon i, .floor_info .operate a, .floor_page .next, .floor_page .pre, .floor_bottom_tips a.a_reply, .floor_bottom_tips a.a_like, .more_down, .icon_read_like, .pop_read_like_arrow, .reply_quick .operate .a_face, .inside_digs_icon { background: url("bg.png") no-repeat scroll 0% 0% transparent; }
+.btn_post, .btn_replay { height: 30px; overflow: hidden; width: 70px; display: block; text-indent: -2000em; text-decoration: none; float: left; position: relative; }
+.btn_post { background-position: 0px 0px; }
+.btn_post:hover { background-position: 0px -30px; }
+.btn_post:active { background-position: 0px -60px; }
+.btn_replay { background-position: 0px -90px; }
+.btn_replay:hover { background-position: 0px -120px; }
+.btn_replay:active { background-position: 0px -150px; }
+.read_pages_wrap { padding: 0px 0px 10px; }
+.read_pages_wrap .btn_post { float: right; margin-left: 10px; display: inline; }
+.read_pages_wrap .btn_replay { float: right; }
+.read_pages_wrap .pages { float: left; }
+.btn_post_menu { width: 68px; border: 1px solid rgb(177, 209, 222); background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; z-index: 1; }
+.btn_post_menu li a { display: block; line-height: 28px; height: 28px; text-align: center; color: rgb(102, 102, 102); }
+.btn_post_menu li a:hover { background: none repeat scroll 0% 0% rgb(242, 247, 251); text-decoration: none; }
+.posts_icon i { display: inline-block; width: 20px; height: 20px; overflow: hidden; vertical-align: middle; background-position: -80px -40px; margin-top: 1px; font: 0px/0 Arial; }
+.posts_icon i.icon_digest { background-position: -120px -20px; }
+.posts_icon i.icon_highlight { background-position: -100px -60px; }
+.floor { border-left: 1px solid rgb(239, 239, 239); border-right: 1px solid rgb(239, 239, 239); border-bottom: 1px solid rgb(211, 211, 211); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02); background: none repeat scroll 0% 0% rgb(255, 255, 255); margin-bottom: 10px; }
+.floor .box_wrap { border: 0px none; box-shadow: 0px 0px 0px; background: none repeat scroll 0% 0% transparent; border-radius: 0px 0px 0px 0px; margin: 0px; }
+#read_0 { margin-top: 0px; }
+.floor .floor_left { vertical-align: top; width: 160px; background: none repeat scroll 0% 0% rgb(251, 251, 251); border-right: 1px solid rgb(233, 233, 233); }
+.floor .floor_right { vertical-align: top; padding: 10px 20px; }
+.floor_bottom { vertical-align: bottom; padding: 0px 20px; }
+.floor_arrow { display: none; position: absolute; margin-left: -42px; margin-top: 25px; }
+.floor_arrow span, .floor_arrow em { position: absolute; width: 0px; height: 0px; padding: 0px; margin: -1px 0px 0px 2px; border-top: 10px dashed transparent; border-bottom: 10px dashed transparent; border-left: 10px dashed transparent; overflow: hidden; }
+.floor_arrow span { border-right: 10px solid rgb(255, 255, 255); }
+.floor_arrow em { border-right: 10px solid rgb(211, 211, 211); margin-top: 0px; }
+.floor_title { padding: 2px 0px 12px; border-bottom: 1px dashed rgb(221, 221, 221); margin-bottom: 10px; }
+.floor_title h1 { font-size: 16px; display: inline; line-height: 24px; }
+.floor_honor { padding: 2px 0px 0px 10px; display: inline-block; vertical-align: top; }
+.post_num { float: right; margin-top: 5px; color: rgb(153, 153, 153); }
+.post_num .replies { padding-left: 10px; }
+.post_num .hits { border-right: 1px solid rgb(204, 204, 204); padding: 0px 10px; }
+.floor_info { padding: 20px 0px 20px 20px; }
+.floor_info .name { padding: 5px 0px; }
+.floor_info .name a { font-weight: 700; color: rgb(51, 51, 51); }
+.floor_info .face { width: 120px; height: 120px; position: relative; margin-bottom: 5px; }
+.floor_info .face a { display: block; }
+.floor_info .face a img { display: block; width: 120px; height: 120px; }
+.floor_info .level { padding: 5px 0px 10px; }
+.floor_info .level img { display: block; margin: 3px 0px 0px -2px; }
+.floor_info .integral { margin-bottom: 8px; }
+.floor_info .integral li { padding-bottom: 2px; height: 18px; overflow: hidden; }
+.floor_info .integral em { float: left; width: 60px; }
+.floor_info .integral span { display: block; width: 70px; height: 18px; float: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.floor_info .integral a { color: rgb(51, 51, 51); }
+.floor_info .operate { margin-bottom: 12px; }
+.floor_info .operate a { display: inline-block; line-height: 20px; height: 20px; color: rgb(153, 153, 153); }
+.floor_info .operate a:hover { color: rgb(51, 51, 51); text-decoration: none; }
+.floor_info .operate .follow { background-position: -150px 6px; margin-right: 9px; padding-left: 12px; }
+.floor_info .operate .message { background-position: -150px -25px; padding-left: 16px; }
+.floor_info .medal { overflow: hidden; padding-bottom: 7px; }
+.floor_info .medal ul { margin-left: -3px; }
+.floor_info .medal li { float: left; margin: 0px 0px 0px 3px; height: 33px; }
+.floor_top_tips { padding: 0px 0px 10px; margin-bottom: 5px; color: rgb(102, 102, 102); }
+.floor_top_tips .lou { float: right; font-size: 24px; color: rgb(187, 187, 187); line-height: 1.3; cursor: pointer; }
+.floor_top_tips .lou sup { font-size: 12px; }
+.floor_bottom_tips { padding: 10px 0px; color: rgb(102, 102, 102); height: 20px; }
+.floor_bottom_tips a { color: rgb(102, 102, 102); }
+.floor_bottom_tips a.a_reply { padding-left: 15px; margin-right: 20px; background-position: -150px -87px; }
+.floor_bottom_tips a.a_like { padding-left: 15px; background-position: -150px -117px; }
+.more_down { float: right; width: 13px; height: 13px; overflow: hidden; text-indent: -2000em; background-position: -80px -200px; margin: 3px 20px; }
+.more_down:hover { background-position: -80px -213px; }
+.icon_read_like { width: 116px; height: 25px; background-position: 0px -300px; background-repeat: no-repeat; display: block; margin: 30px auto 20px; color: rgb(255, 102, 0); line-height: 25px; cursor: pointer; overflow: hidden; }
+.icon_read_like span { float: left; display: block; width: 0px; height: 0px; overflow: hidden; font: 0px/0 Arial; padding: 0px; margin: 0px; }
+.icon_read_like em { float: right; width: 47px; height: 25px; color: rgb(255, 102, 0); text-align: center; font-weight: 700; text-indent: 0px; overflow: hidden; display: block; }
+.icon_read_like:hover { opacity: 0.9; text-decoration: none; }
+.read_like_list { padding: 0px 0px 10px; }
+.read_like_list h4 { margin-bottom: 10px; font-size: 12px; }
+.read_like_list img { vertical-align: top; display: block; margin-bottom: 5px; }
+.read_like_list a { margin-right: 10px; width: 50px; display: block; float: left; color: rgb(102, 102, 102); }
+.read_like_list span { display: block; text-align: center; height: 18px; overflow: hidden; }
+.read_tag_list { padding: 0px 0px 10px; }
+.floor_reply { padding: 20px; vertical-align: top; }
+.reply_login_tips { border: 1px solid rgb(228, 228, 228); background: none repeat scroll 0% 0% rgb(251, 251, 251); padding: 50px 0px; height: 18px; line-height: 18px; text-align: center; color: rgb(102, 102, 102); }
+.signature { background: url("signature.png") no-repeat scroll 0px 0px transparent; margin-top: 10px; padding: 25px 0px 0px; overflow: hidden; }

@@ -1,0 +1,7 @@
+/* Code tidied up by ScrapBook */
+.editor_content { font-size: 14px; line-height: 1.8; }
+.editor_content img { vertical-align: top; }
+.blockquote { border: 1px dashed rgb(204, 204, 204); background: url("blockquote.png") no-repeat scroll right top rgb(247, 247, 247); padding: 15px; margin: 1em 0px; }
+.blockquote .return { background: url("return.png") no-repeat scroll 0% 0% transparent; width: 14px; height: 17px; overflow: hidden; text-indent: -2000em; float: left; margin: 3px 0px 0px 5px; }
+.editor_content img { max-width: 100%; }
+.J_lazy { min-height: 20px; min-width: 20px; background: none repeat scroll 0% 0% rgb(247, 247, 247); }

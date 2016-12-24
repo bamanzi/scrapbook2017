@@ -1,0 +1,37 @@
+/* Code tidied up by ScrapBook */
+body { color: rgb(51, 51, 51); font: 14px/1.5 Tahoma; background: none repeat scroll 0% 0% rgb(252, 252, 252); padding-top: 45px; }
+.wrap {  }
+a { color: rgb(16, 92, 182); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.box_wrap { border-width: 1px; border-style: solid; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-color: rgb(255, 255, 255) rgb(239, 239, 239) rgb(211, 211, 211); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02); background: none repeat scroll 0% 0% rgb(255, 255, 255); border-radius: 3px 3px 3px 3px; margin-bottom: 15px; }
+.header_post, .header_message, .header_message_down, .bread_crumb .home, .content_type a.drop, .user_info .name a i, .my_app_list li a span, .my_forum_list .box_title, .my_forum_list li a, .forum_menu dt, .forum_menu dd p a, .icon_face, .feed_lists_del, .header_search button span, .sidebar_login dt i, .my_message_content .goin li i { background: url("style_icon.png") no-repeat scroll 0% 0% transparent; }
+.nav { float: left; }
+.nav ul { height: 45px; float: left; padding: 0px 3px; }
+.nav li { float: left; }
+.nav li a { color: rgb(255, 255, 255); display: block; float: left; line-height: 45px; height: 45px; font-size: 14px; padding: 0px 12px; }
+.nav li a:hover {  }
+.nav li.current a, .nav li.current a:hover { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(59, 127, 196); }
+.header_wrap { background: none repeat scroll 0% 0% rgb(72, 143, 206); display: block; position: absolute; top: 0px; left: 0px; width: 100%; min-width: 960px; z-index: 10; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+.header { width: 97%; margin: auto; min-height: 45px; }
+.main_wrap { width: 97%; min-width: 960px; margin-left: auto; margin-right: auto; padding-top: 10px; background-color: rgb(247, 247, 247); }
+.footer_wrap { width: 97%; margin: 0px auto; border-top: 1px solid rgba(0, 0, 0, 0.15); }
+.footer { padding: 15px 0px; border-top: 1px solid rgba(255, 255, 255, 0.7); }
+.footer p { text-align: center; font-size: 10px; color: rgb(153, 153, 153); }
+.footer p a { color: rgb(153, 153, 153); }
+.footer p a:hover { color: rgb(51, 51, 51); }
+.bottom { text-align: center; padding: 0px 0px 5px; color: rgb(153, 153, 153); }
+.bottom a { margin: 0px 10px; color: rgb(102, 102, 102); }
+.logo { float: left; margin-right: 10px; }
+.logo a, .logo a img { float: left; }
+.header_search { float: left; width: 160px; height: 28px; background: none repeat scroll 0% 0% rgb(242, 242, 242); margin: 8px 0px 0px 10px; border-radius: 4px 4px 4px 4px; padding: 0px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2) inset; }
+.header_search:hover { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.header_search input { width: 125px; padding: 0px; border: 0px none; float: left; margin: 6px 0px 0px 5px; background: none repeat scroll 0% 0% transparent; }
+.header_search input:focus { outline: 0px none; }
+.header_search button { padding: 0px; margin: 0px; overflow: visible; border: 0px none; background: none repeat scroll 0% 0% transparent; cursor: pointer; float: right; width: 25px; height: 28px; text-align: left; }
+.header_search button span { width: 20px; height: 20px; display: inline; font: 0px/0 Arial; overflow: hidden; padding: 0px; margin: 3px 0px 0px; background-position: 0px -600px; float: left; text-indent: -2000em; cursor: pointer; }
+.header_login { float: right; padding: 13px 0px 0px; }
+.header_login a { color: rgb(255, 255, 255); margin: 0px 0px 0px 10px; }
+.bread_crumb { height: 18px; padding: 0px 0px 10px 20px; position: relative; font-size: 12px; }
+.bread_crumb .home { padding-left: 20px; height: 16px; background-position: 0px -58px; display: block; overflow: hidden; float: left; }
+.bread_crumb em { margin: 0px 5px; font-family: Simsun; color: rgb(102, 102, 102); }
+.bread_crumb a { color: rgb(102, 102, 102); }
