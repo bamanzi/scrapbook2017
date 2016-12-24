@@ -1,0 +1,11 @@
+/* Code tidied up by ScrapBook */
+#pseudobody { background: none repeat scroll 0% 0% transparent; border: medium none; }
+#banner h1 { background-color: transparent; background-image: none; height: auto; padding-bottom: 0px; }
+#accessmenu { display: none; }
+#content { width: auto; }
+#navigation { display: none; }
+#desc { display: none; }
+a:link, a:visited, a:hover, a:active { text-decoration: none ! important; }
+abbr, acronym { background-image: none; }
+#footer a { display: none; }
+#footer #copylink { display: inline; }

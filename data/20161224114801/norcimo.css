@@ -1,0 +1,41 @@
+/* Code tidied up by ScrapBook */
+html, body { margin: 0px auto; padding: 0px; font-family: trebuchet,sans-serif; }
+body { text-align: center; background-color: white; color: black; font-size: 100%; }
+html > body { font-size: 1em; }
+#pseudobody { background-image: url("bodyback.png"); background-repeat: repeat-y; background-position: 36em 0em; width: 50em; margin-left: auto; margin-right: auto; margin-top: 0.1em; text-align: left; position: relative; border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; background-color: transparent; }
+#banner h1 { background-color: rgb(209, 207, 169); margin: 0px; padding: 0.5em; height: 1.5em; color: rgb(161, 154, 102); font-size: 3em; background-image: url("h1back.png"); background-position: left top; background-repeat: no-repeat; }
+#banner h1 a:link, #banner h1 a:visited, #banner h1 a:hover, #banner h1 a:active { color: rgb(161, 154, 102); background-color: transparent; text-decoration: none; }
+#accessmenu { padding: 0px; margin: 0px; position: absolute; top: 0px; left: 0px; }
+#accessmenu li { padding: 0px; margin: 0px; list-style: none outside none; }
+#accessmenu li a { position: absolute; left: -100em; top: 0px; background-color: rgb(128, 118, 56); color: white; }
+#accessmenu li a:focus { position: absolute; display: block; top: 0.3em; left: 1em; width: 14em; border-bottom: 1px solid rgb(102, 102, 51); border-left: 1px solid rgb(102, 102, 51); }
+#content { float: left; width: 35em; padding: 0px 0.5em; }
+#content { background-color: white; }
+#navigation { margin-left: 36em; border-left: 1px solid rgb(102, 102, 51); }
+#navigation #mainnavmenulist { margin: 0px; padding: 0px; list-style: none outside none; position: absolute; top: 7.5em; left: 0px; border-top: 2px solid rgb(102, 102, 51); border-bottom: 2px solid rgb(102, 102, 51); width: 50em; background-color: rgb(161, 154, 102); }
+#navigation #mainnavmenulist a:link, #navigation #mainnavmenulist a:visited, #navigation #mainnavmenulist a:hover, #navigation #mainnavmenulist a:active { color: rgb(50, 60, 38); text-decoration: none; background-color: transparent; }
+#navigation #mainnavmenulist a:hover, #navigation #mainnavmenulist a:active { color: white; }
+#navigation #mainnavmenulist li { float: left; margin: 0px; padding: 0px 0.8em; border-right: 2px solid rgb(102, 102, 51); }
+#navigation #mainnavmenulist li:hover { background-color: rgb(128, 118, 56); }
+#navigation #mainnavmenulist li:hover a { color: white; }
+#navigation h5 { padding: 0px; margin: 0px; display: inline; font-weight: normal; }
+#navigation dl { margin: 2.5em 0px 0px; padding: 0px; }
+#navigation dt { background-color: rgb(161, 154, 102); color: rgb(50, 60, 38); border-bottom: 1px solid rgb(50, 60, 38); margin: 0px 0.4em; font-size: 1.1em; font-weight: normal; padding: 0.05em 0.2em; }
+#navigation dt a:link, #navigation dt a:visited, #navigation dt a:hover, #navigation dt a:active { color: rgb(50, 60, 38); background-color: transparent; text-decoration: none; }
+#navigation dd { margin: 0.75em 0.55em 2.3em 1.7em; background-color: rgb(128, 118, 56); color: white; padding: 0.2em; font-size: 0.8em; }
+#desc { position: absolute; top: 0.625em; left: 24em; width: 20em; font-size: 1em; color: white; border: 2px solid rgb(102, 102, 51); overflow: auto; background-image: url("descback.png"); background-position: left top; background-repeat: repeat; }
+#navigation p, #desc p { padding: 0.2em 0.5em; font-size: 0.8em; margin: 0.5em; height: 4.75em; background-color: rgb(128, 118, 56); }
+#desc h2 { font-size: 0.8em; height: 1em; padding: 0.2em 0.5em 0.3em; margin: 0px; background-color: transparent; border-bottom: 2px solid rgb(102, 102, 51); color: rgb(161, 154, 102); }
+body.pers li#menupers h5 { font-weight: bold; }
+body.pers li#menupers { background-color: rgb(209, 207, 169); }
+#footer { clear: both; background-color: rgb(161, 154, 102); margin: 0.5em 0px 0px; padding: 0.5em; border-bottom: 10px solid white; }
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:active { background-color: transparent; color: black; text-decoration: underline; }
+h2 { background-color: rgb(161, 154, 102); font-size: 1.75em; margin: 1.4em 0px 0.8em; padding: 0.1em 0.3em; color: rgb(50, 60, 38); position: relative; }
+h3 { background-color: rgb(161, 154, 102); font-size: 1em; margin: 0.3em 0px; width: 25%; padding: 0.1em 0.3em; color: rgb(50, 60, 38); }
+a:link { color: rgb(102, 102, 51); text-decoration: underline; }
+a:visited { color: black; text-decoration: underline; }
+a:hover, a:active { background-color: rgb(209, 207, 169); }
+abbr, acronym { text-decoration: none; border: medium none; cursor: help; background-image: url("qmark.png"); background-position: right bottom; background-repeat: no-repeat; letter-spacing: 0.05em; }
+div#counters { position: absolute; left: -100em; top: 0px; }
+@media tty {
+}
