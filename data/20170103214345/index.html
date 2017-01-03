@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" id="2400011427047644" src="about:blank" charset="UTF-8" async=""></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ubuntu与Windows 10周年版Ubuntu Bash性能对比 - 51CTO.COM</title>
+    <meta name="description" content="Windows 的 Linux 子系统测试完成了所有测试，并随着 Windows 10周年更新放出。 默认的 Ubuntu 用户空间还是 Ubuntu 14.04，但是已经可以升级到 16.04。所以测试首先在 14.04 测试，完成后将系统升级升级到 16.04 版本并重复所有测试。">
+    <meta name="keywords" content="Ubuntu,Windows 10,Ubuntu Bash">
+    <base target="_blank">
+    <link rel="stylesheet" type="text/css" href="article_head.css">
+    <link rel="stylesheet" type="text/css" href="article_layout.css">
+    <script async="" src="about:blank"></script><script src="about:blank"></script><script src="about:blank"></script><script type="text/javascript" src="about:blank"></script>
+    <script type="text/javascript" src="about:blank"></script>
+<script src="about:blank"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+  #diigotb-imagepanel { height: 22px ! important; position: absolute ! important; z-index: 11000022 ! important; margin: 0px ! important; }
+  #diigotb-imagepanel .diigotb-btn { cursor: pointer ! important; width: 20px ! important; height: 20px ! important; margin: 2px ! important; float: left ! important; background: transparent url("chrome://diigotb/skin/save-image-action-icons.png") no-repeat scroll 0% 0% ! important; }
+  #diigotb-imagepanel #diigotb-quick-save { background-position: 0px 0px ! important; }
+  .diigotb-border { position: absolute ! important; z-index: 11000000 ! important; margin: 0px ! important; background-color: rgb(75, 140, 220) ! important; }
+  .diigotb-left { width: 1px ! important; }
+  .diigotb-right { width: 1px ! important; }
+  .diigotb-top { height: 1px ! important; }
+  .diigotb-bottom { height: 1px ! important; }
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style><link rel="stylesheet" type="text/css" href="layout_51cto.css"><link rel="stylesheet" href="share_style0_16.css"><style type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+<body>
+<!-- 导航 开始-->
+<!-- top start -->
+<div class="home-top" id="topx">
+    <div class="w1001 cent">
+        <div class="pdr10 fl">中国领先的IT技术网站</div>
+        <div class="pdr10 fl">|</div>
+        <div class="pdr10 fl">
+            <div class="subweb"><span class="trans">51CTO旗下网站</span><i></i>
+                <!--旗下网站-->
+                <div class="subweb-list">
+                    <a href="http://www.51cto.com/" target="_blank">51CTO.com</a>
+                    <a href="http://www.cioage.com/" target="_blank">CIOage.com</a>
+                    <a href="http://www.watchstor.com/" target="_blank">WatchStor.com</a>
+                    <a href="http://www.hc3i.cn/" target="_blank">HC3i.cn</a>
+                </div>
+                <!--旗下网站-->
+            </div>
+        </div>
+        <div class="pdr10 fl">|</div>
+        <div class="pdr10 fl"><a href="http://www.51cto.com/about/map.htm" target="_blank">地图</a></div>
+        <div class="top-r">
+        <div id="login_status" style="text-align: right;" class="login"><i></i><a href="http://home.51cto.com/index?reback=http://os.51cto.com/art/201612/525663.htm" target="_self">登录</a> <a href="http://home.51cto.com/user/register?reback=http://os.51cto.com/art/201612/525663.htm" target="_self">注册</a><span class="fl">|</span><a href="http://www.51cto.com/">收藏本站</a></div>
+        </div>
+    </div>
+</div>
+<!-- top end -->
+<!-- 导航 结束-->
+
+<!-- 频道导航 -->
+<div class="top_bg">
+	<div class="wrap">
+		<div id="tonglanad" class="left"><script type="text/javascript" src="about:blank"></script></div>
+		<div id="list4" class="right" style="position: relative;">
+			<ul>
+				<li id="wordlinkad1"></li>
+				<li id="wordlinkad2"></li>
+				<li id="wordlinkad3"></li>
+				<li id="wordlinkad4"></li>
+			</ul>
+			<div style="right: 0px; width: 24px; height: 14px; z-index: 12; position: absolute; background: transparent url(&quot;wKiom1fI4nWStYqXAAAEoZQn6vs942.png&quot;) repeat scroll 0% 0%; bottom: 2px;"></div>
+		</div>
+	</div>
+	<div class="nav">
+		<a href="http://www.51cto.com/" class="logo"><img src="nr_logo.png" alt=""></a>
+		<ul>
+			<li><a href="http://os.51cto.com/" class="active">系统频道</a></li>
+			<li><a href="http://os.51cto.com/">首页</a></li>
+			<li><a href="http://os.51cto.com/col/543/">资讯</a></li>
+			<li><a href="http://os.51cto.com/linux/">Linux</a></li>
+			<li><a href="http://os.51cto.com/windows/">Windows</a></li>
+			<li><a href="http://os.51cto.com/col/610/">开源</a></li>
+			<li><a href="http://os.51cto.com/col/975/">桌面</a></li>
+			<li><a href="http://os.51cto.com/col/545/">运维&amp;工具</a></li>
+			<li><a href="http://os.51cto.com/col/1496/">技巧集锦</a></li>
+			<li><a href="http://os.51cto.com/speclist/519/">专题</a></li>
+		</ul>
+		<div class="nav-rsear">
+			<form method="post" action="http://www.51cto.com/php/search.php" name="searchform" target="_blank">
+				<input name="keyword" id="q" placeholder="输入您要搜索的内容" class="sear-1" type="text">
+				<input name="" value="" class="sear-2" type="submit">
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 频道导航结束 -->
+
+<div class="main">
+    <!-- 左侧内容 -->
+    <div class="main_left">
+        <div class="wznr">
+            <h2>Ubuntu与Windows 10周年版Ubuntu Bash性能对比</h2>
+            <p>Windows 的 Linux 子系统测试完成了所有测试，并随着 Windows 10周年更新放出。 默认的 Ubuntu 用户空间还是 Ubuntu 14.04，但是已经可以升级到 16.04。所以测试首先在 14.04 测试，完成后将系统升级升级到 16.04 版本并重复所有测试。</p>
+            <dl>
+                <dt><span>作者：佚名</span><span>来源：<a href="http://www.linuxprobe.com/compare-ubuntu-windows.html" target="_blank">linuxprobe</a></span>|<em>2016-12-22 08:54</em></dt>
+                <dd>
+                	<div class="left" style="padding-right: 10px;">
+                		<a title="一键收藏，随时查看，分享好友！" target="_self" class="bds_more1">&nbsp;收藏</a>
+                	</div>
+					<div class="bdsharebuttonbox left bdshare-button-style0-16" data-tag="share_2" data-bd-bind="1483450988100">
+						<a class="bds_more" data-cmd="more">&nbsp;&nbsp;分享</a>
+					</div>
+                </dd>
+            </dl>
+        </div>
+        <div class="zwnr">
+            <h2><a href="#" target="_blank"></a></h2>
+            <p>今年初，当 Microsoft 和 Canonical 发布 Windows 10 Bash 和 Ubuntu 用户空间，我尝试做了一些初步性能测试  Ubuntu on Windows 10 对比 原生 Ubuntu，这次我发布更多的，关于原生纯净的 Ubuntu 和基于 Windows 10  的基准对比。</p>
+<p style="text-align: center;"><a href="http://s2.51cto.com/wyfs02/M02/8B/D9/wKioL1hbJRCCOSlXAAFuMgk36BY447.jpg-wh_651x-s_3124848528.jpg" target="_blank"><img src="wKioL1hbJRCCOSlXAAFuMgk36BY447.jpg-wh_651x-s_3124848528.jpg" alt="" title="" border="0"></a></p>
+<p>Windows 的 Linux 子系统测试完成了所有测试，并随着 Windows 10周年更新放出。 默认的 Ubuntu 用户空间还是 Ubuntu  14.04，但是已经可以升级到 16.04。所以测试首先在 14.04 测试，完成后将系统升级升级到 16.04 版本并重复所有测试。完成所有基于  Windows 的 Ubuntu 子系统测试后，我在同样的系统上干净地安装了 Ubuntu 14.04.5 和 Ubuntu 16.04 LTS  来做性能对比。</p>
+<p style="text-align: center;"><a href="http://s5.51cto.com/wyfs02/M00/8B/DD/wKiom1hbJUGTmT-nAAFMuw2qEZY749.jpg" target="_blank"><img src="wKiom1hbJUGTmT-nAAFMuw2qEZY749.jpg" alt="" title="" border="0"></a></p>
+<p>配置为 Intel i5 6600K Skylake，16G 内存和 256G 东芝 ssd，测试过程中每个操作系统都采用其原生默认配置和软件包。</p>
+<p style="text-align: center;"><a href="http://s4.51cto.com/wyfs02/M02/8B/D9/wKioL1hbJViy5MUsAAHWWnub9pk343.jpg" target="_blank"><img src="wKioL1hbJViy5MUsAAHWWnub9pk343.jpg" alt="" title="" border="0"></a></p>
+<p>这次 Ubuntu/Bash on Windows 和原生 Ubuntu 对比测试，采用开源软件 Phoronix  测试套件，完全自动化并可重复测试。</p>
+<p>许多其他的通用开源基准测试表明，严格的针对 CPU 的测试，Windows 子系统的 Ubuntu 的性能是很接近的，甚至是与原生安装在实际硬件中的  Ubuntu Linux 相等。</p>
+<p>最新的 Windows 的 Linux 子系统，测试结果实际上相当令人印象深刻。让人沮丧的仅仅只是持续缓慢的磁盘/文件系统性能，但是对于受 CPU  限制的工作负载，结果是非常引人注目的。还有很罕见的情况， x264 和 Stream 测试，Ubuntu On Windows  上的性能看起来明显优于运行在实际硬件上 的Ubuntu Linux。</p>
+<p>总的来说，体验是十分愉快的，并且在 Ubuntu/Bash on Windows 也没有遇到任何其他的 bug。测试详情可以点击原文链接查看。</p><p>【编辑推荐】</p><div><ol><li><a href="http://os.51cto.com/art/201612/524871.htm" target="_blank">我为什么钟爱Ubuntu的十大原因</a></li><li><a href="http://os.51cto.com/art/201612/524936.htm" target="_blank">Windows 10新版14986强力优化高DPI屏幕：终于等到你</a></li><li><a href="http://os.51cto.com/art/201612/524979.htm" target="_blank">三大Windows 10系统各自获新累积更新</a></li><li><a href="http://os.51cto.com/art/201612/525309.htm" target="_blank">微软唐娜姐：今年不会有新的Windows 10预览版发布</a></li><li><a href="http://os.51cto.com/art/201612/525662.htm" target="_blank">Ubuntu 调查发现，大部分人从不更新他们的物联网设备</a></li></ol></div><div align="right">【责任编辑：<a class="ln" href="mailto:sunsj@51cto.com">武晓燕</a> TEL：（010）68476606】</div><br>
+            <a href="###" class="dzdz zhan" target="_self">点赞 <span>0</span></a>
+        </div>
+        <div class="share5">
+            <ul>
+                <li><a href="http://www.51cto.com/php/search.php?keyword=Ubuntu" target="_blank" class="underline">Ubuntu</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=Windows%2010" target="_blank" class="underline">Windows 10</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=Ubuntu%20Bash" target="_blank" class="underline">Ubuntu Bash</a></li>
+            </ul>
+            <dl>
+                <dt><em>分享:</em>
+<div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_1" data-bd-bind="1483450988100">
+    <a class="wb" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="wx" data-cmd="weixin" title="分享到微信"></a>
+    <a class="more" data-cmd="more"></a>
+</div>
+</dt>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Baidu Button END -->
+            </dl>
+        </div>
+        <div class="nrdp comment">
+            <div class="comment center">
+	<div class="inner center" id="cmscmt_iframe"><div class="title"><span class="word">内容点评</span><p class="con">已有<span class="total" id="cmt_num">0</span>条评论,<span class="total" id="zan_num">0</span>次赞</p><p style="float: right; margin-top: 17px;">还可以输入<span id="uyan_tts">500</span>字</p></div><div class="frame center"><textarea value="" id="comment" style="color: rgb(124, 124, 124); font-family: Microsoft Yahei;">请输入你的评论</textarea></div><div class="user"><a id="uyan_cmt_btn" class="submit">提交</a><dl><dt class="icon"><img src="duface.png" alt=""></dt><dd class="btn"><span>您还没有登录！</span><span class="note">请先</span>&nbsp;<a href="http://home.51cto.com/index.php?s=/Index/index/reback/http%253A%252F%252Fos.51cto.com%252Fart%252F201612%252F525663.htm" style="color: red;">登录</a>&nbsp;<span class="note">或</span>&nbsp;<a href="http://home.51cto.com/user/register?reback=http%253A%252F%252Fos.51cto.com%252Fart%252F201612%252F525663.htm" style="color: red;">注册</a>&nbsp;</dd></dl></div><ul class="list center first" id="uyan_cmt_list"><div style="margin-top: 10px; padding-top: 10px; font-size: 12px; color: rgb(48, 48, 48); text-align: center;" id="uyan_cmt_list_warn">还没有评论内容</div></ul></div>
+</div>
+<script type="text/javascript" id="UYScript" src="about:blank" async=""></script>
+
+        </div>
+        <div class="dzk">
+            <dl><dt class="show">大家都在看</dt><dt>猜你喜欢</dt></dl>
+            <div>
+                <ul>
+                    <li class="show">
+                        <div class="djdzk" id="djdzk">
+                        <div id="eng_recs_holder_2400011427047644" class="eng_recs_holder"><style>
+/* Code tidied up by ScrapBook */
+#eng_top_ww_widget_2400011427047644 .eng_ww_widget { display: inline-block; direction: ltr; position: relative; margin-bottom: 2px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 5px 0px; }
+#eng_top_ww_widget_2400011427047644 .eng_ww_title { text-align: left; }
+#eng_top_ww_widget_2400011427047644 .eng_asw { display: block; margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_sw { width: 155px; text-align: left; position: relative; display: inline-block; margin-left: 10px; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_in { width: 100%; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_is {  }
+#eng_top_ww_widget_2400011427047644 .eng_widget_img { width: 100%; height: auto; border-radius: inherit; margin-bottom: 5px; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_href { border-radius: inherit; }
+#eng_top_ww_widget_2400011427047644 .eng_branding { text-align: right; margin: 8px 0px 0px; }
+#eng_top_ww_widget_2400011427047644 .eng_branding a { color: rgb(187, 187, 187); font-size: 12px; font-family: arial; }
+#eng_top_ww_widget_2400011427047644 .eng_ww_widget { color: rgb(0, 0, 0); }
+#eng_top_ww_widget_2400011427047644 .eng_widget_sw { vertical-align: top; margin-bottom: 10px; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_href { position: relative; display: block ! important; visibility: visible ! important; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_in { width: 100%; line-height: 1.4; }
+#eng_top_ww_widget_2400011427047644 .eng_ww_title { padding: 0px; margin: 0px 0px 5px; }
+#eng_top_ww_widget_2400011427047644 .eng_ww_ttl_span1 { display: block; padding: 5px 0px; float: none ! important; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_img_w { position: relative; }
+#eng_top_ww_widget_2400011427047644 .eng_widget_img { margin-bottom: 5px; display: block; }
+#eng_sw_0_89 { margin-left: 0px ! important; }
+.eng_ww_widget { padding-top: 0px ! important; }
+.eng_widget_img { width: 151px ! important; height: 97px ! important; margin-bottom: 2px ! important; }
+.eng_ww_title { display: none; }
+.eng_widget_is { display: block; text-overflow: ellipsis; overflow-wrap: break-word; overflow: hidden; max-height: 3.5em; line-height: 1.6em; color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; }
+.eng_branding { display: none ! important; }
+</style><div class="eng_top_ww_widget" id="eng_top_ww_widget_2400011427047644"><div class="eng_ww_widget" id="eng_ww_widget_89"><div class="eng_ww_title" id="eng_ww_title_2400011427047644"><span class="eng_ww_ttl_span1"></span><span class="eng_ww_ttl_span2"></span></div><div class="eng_asw" id="eng_asw_2400011427047644"><div id="eng_sw_0_89" class="eng_widget_sw"><a id="eng_href_0_89" class="eng_widget_href eng_inner" href="http://developer.51cto.com/art/201612/525288.htm?pc" title="在收购Sun的六年后，Oracle 终于瞄准了Java的非付费用户"><div id="eng_img_w_0_89" class="eng_widget_img_w"><img id="eng_img_0_89" class="eng_widget_img" src="s5.51cto.com.wKiom1hWasqzXfGeAAJtbPx1_2D9o20_2Ejpeg_2Dwh_5F651x_2Ds_5F266624411_2E_169746_11.jpg" data-pin-no-hover="true"></div><div id="eng_in_0_89" class="eng_widget_in"><span id="eng_is_0_89" class="eng_widget_is">在收购Sun的六年后，Oracle 终于瞄准了Java的非付费用户</span></div></a></div><div id="eng_sw_1_89" class="eng_widget_sw"><a id="eng_href_1_89" class="eng_widget_href eng_inner" href="http://os.51cto.com/art/201612/525754.htm?pc" title="Windows科普：正版盗版系统有何不同？"><div id="eng_img_w_1_89" class="eng_widget_img_w"><img id="eng_img_1_89" class="eng_widget_img" src="s1.51cto.com.wKiom1hbjwuh0oFfAACN6PTfD1k997_2Ejpg_2Dwh_5F651x_2Ds_5F3975402260_2_113082_11.jpg" data-pin-no-hover="true"></div><div id="eng_in_1_89" class="eng_widget_in"><span id="eng_is_1_89" class="eng_widget_is">Windows科普：正版盗版系统有何不同？</span></div></a></div><div id="eng_sw_2_89" class="eng_widget_sw"><a id="eng_href_2_89" class="eng_widget_href eng_inner" href="http://network.51cto.com/art/201701/526870.htm?pc" title="隔壁老王在蹭网？ 就地正法就要这么做"><div id="eng_img_w_2_89" class="eng_widget_img_w"><img id="eng_img_2_89" class="eng_widget_img" src="s2.51cto.com.wKiom1hrCHzwBJ2QAACbClnwJ9M286_2Ejpg_2Dwh_5F651x_2Ds_5F328500437_2_195634_11.jpg" data-pin-no-hover="true"></div><div id="eng_in_2_89" class="eng_widget_in"><span id="eng_is_2_89" class="eng_widget_is">隔壁老王在蹭网？ 就地正法就要这么做</span></div></a></div><div id="eng_sw_3_89" class="eng_widget_sw"><a id="eng_href_3_89" class="eng_widget_href eng_inner" href="http://os.51cto.com/art/201612/524871.htm?pc" title="我为什么钟爱Ubuntu的十大原因"><div id="eng_img_w_3_89" class="eng_widget_img_w"><img id="eng_img_3_89" class="eng_widget_img" src="s2.51cto.com.wKiom1hPrAOBojNTAAD27YsTVbU066_2Ejpg_2Dwh_5F651x_2Ds_5F3730054187_2_176182_11.jpg" data-pin-no-hover="true"></div><div id="eng_in_3_89" class="eng_widget_in"><span id="eng_is_3_89" class="eng_widget_is">我为什么钟爱Ubuntu的十大原因</span></div></a></div></div><div id="eng_brnd_89" class="eng_branding"><a href="http://goingnative.cn/" target="_blank" title="GoingNative powered by Engageya"><img id="eng_brnd_img_89" class="eng_brnd_img" src="gn.png" width="20px" height="20px"></a><a href="http://goingnative.cn/" style="color: rgb(22, 134, 198);" target="_blank" title="GoingNative powered by Engageya">&nbsp;GoingNative</a></div></div></div></div></div>
+                    </li>
+                    <li>
+                       <div class="djdzk" id="cnxh"><div class="m15"><a href="http://zhuanlan.51cto.com/art/201612/523965.htm"><img src="wKioL1hEy0Lzqe2DAAGr_rXf45Y307.jpg-wh_151x97-wm_-wmp_-s_646296995.jpg" title="2016年12月编程语言排行榜：C作为优秀老语言 评级不足10%"></a><a href="http://zhuanlan.51cto.com/art/201612/523965.htm" title="2016年12月编程语言排行榜：C作为优秀老语言 评级不足10%">2016年12月编程语言排行榜：C作为优秀老语言 评级不足10%</a></div><div class="m15"><a href="http://cloud.51cto.com/art/201612/525478.htm"><img src="wKioL1hZDDWyKEiaAAB_M1qYh68657.jpg-wh_151x97-wm_-wmp_-s_2692219210.jpg" title="值得程序员一看的8个冷门小知识"></a><a href="http://cloud.51cto.com/art/201612/525478.htm" title="值得程序员一看的8个冷门小知识">值得程序员一看的8个冷门小知识</a></div><div class="m15"><a href="http://developer.51cto.com/art/201612/525321.htm"><img src="wKioL1hXgzbzarg0AADdjmbZdCU17.jpeg-wh_151x97-wm_-wmp_-s_1457199075.jpeg" title="免费学习编程的 11个高质量网站，程序员们快收藏！"></a><a href="http://developer.51cto.com/art/201612/525321.htm" title="免费学习编程的 11个高质量网站，程序员们快收藏！">免费学习编程的 11个高质量网站，程序员们快收藏！</a></div><div><a href="http://os.51cto.com/art/201612/525384.htm"><img src="wKioL1hc11WC7gYmAAGJzyvzsaw348.jpg-wh_151x97-wm_-wmp_-s_2572624197.jpg" title="2016年脱颖而出的7个小而美的开源项目"></a><a href="http://os.51cto.com/art/201612/525384.htm" title="2016年脱颖而出的7个小而美的开源项目">2016年脱颖而出的7个小而美的开源项目</a></div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 文章左侧结束 -->
+    <!-- 文章右侧 -->
+    <div class="wrap_right">
+        <div>
+</div>
+        <div class="mtgg m30"><script type="text/javascript" src="about:blank"></script></div>
+        <div></div>
+        <div class="bjtj m30">
+            <h2><span>编辑推荐</span></h2>
+            <dl><dt>头条</dt><dd><a href="http://os.51cto.com/art/201604/509584.htm" title="36款顶级的开源音频/视频应用程序">36款顶级的开源音频/视频应用程序</a></dd></dl><dl><dt>头条</dt><dd><a href="http://os.51cto.com/art/201605/511472.htm" title="修复Windows系统还原功能的12个小窍门">修复Windows系统还原功能的12个小窍门</a></dd></dl><dl><dt>外电</dt><dd><a href="http://os.51cto.com/art/201605/510755.htm" title="九个经受严苛评测的安全Windows免费软件下载站">九个经受严苛评测的安全Windows免费软件下载站</a></dd></dl><dl><dt>头条</dt><dd><a href="http://os.51cto.com/art/201606/512201.htm" title="Linux的这七大认识误区，你千万别有！">Linux的这七大认识误区，你千万别有！</a></dd></dl><dl><dt>外电</dt><dd><a href="http://os.51cto.com/art/201605/511582.htm" title="你可以得心应手使用Windows 10的十个小窍门">你可以得心应手使用Windows 10的十个小窍门</a></dd></dl>
+        </div>
+        <div></div>
+        <div class="news m30">
+            <dl><dt class="show">24H热文</dt><dt>一周话题</dt><dt>本月最赞</dt></dl>
+            <ul><li class="show"><a href="http://os.51cto.com/art/201701/526762.htm" title="九款命令行实用工具助你监测Linux磁盘分区及使用情况">九款命令行实用工具助你监测Linux磁盘分区及使用情况</a><a href="http://os.51cto.com/art/201101/244090.htm" title="如何在Linux中查看所有正在运行的进程">如何在Linux中查看所有正在运行的进程</a><a href="http://os.51cto.com/art/201612/526126.htm" title="2016年十大Linux服务器发行版排行榜">2016年十大Linux服务器发行版排行榜</a><a href="http://os.51cto.com/art/201508/487487.htm" title="安装Linux与Windows" 10双系统，你需要了解的一切="">安装Linux与Windows 10双系统，你需要了解的一切</a><a href="http://os.51cto.com/art/201701/526862.htm" title="Windows" 10新技能：不用键鼠执行安装过程="">Windows 10新技能：不用键鼠执行安装过程</a><a href="http://os.51cto.com/art/201404/435279.htm" title="Linux服务器上监控网络带宽的18个常用命令">Linux服务器上监控网络带宽的18个常用命令</a><a href="http://os.51cto.com/art/201405/439494.htm" title="安装" kali="" linux="" 后需要做的="" 20="" 件事="">安装 Kali Linux 后需要做的 20 件事</a><a href="http://os.51cto.com/art/201001/177866.htm" title="Linux下RPM软件包的安装及卸载">Linux下RPM软件包的安装及卸载</a></li><li><a href="http://os.51cto.com/art/201612/526126.htm" title="2016年十大Linux服务器发行版排行榜">2016年十大Linux服务器发行版排行榜</a><a href="http://os.51cto.com/art/201508/487487.htm" title="安装Linux与Windows" 10双系统，你需要了解的一切="">安装Linux与Windows 10双系统，你需要了解的一切</a><a href="http://os.51cto.com/art/201502/464662.htm" title="12" 个最佳的免费网络监控工具="">12 个最佳的免费网络监控工具</a><a href="http://os.51cto.com/art/201101/244090.htm" title="如何在Linux中查看所有正在运行的进程">如何在Linux中查看所有正在运行的进程</a><a href="http://os.51cto.com/art/201404/435279.htm" title="Linux服务器上监控网络带宽的18个常用命令">Linux服务器上监控网络带宽的18个常用命令</a><a href="http://os.51cto.com/art/201405/439494.htm" title="安装" kali="" linux="" 后需要做的="" 20="" 件事="">安装 Kali Linux 后需要做的 20 件事</a><a href="http://os.51cto.com/art/201001/177866.htm" title="Linux下RPM软件包的安装及卸载">Linux下RPM软件包的安装及卸载</a><a href="http://os.51cto.com/art/201612/526239.htm" title="2016年十大最佳开源项目揭晓，你最爱用哪款？">2016年十大最佳开源项目揭晓，你最爱用哪款？</a></li><li><a href="http://os.51cto.com/art/201508/487487.htm" title="安装Linux与Windows" 10双系统，你需要了解的一切="">安装Linux与Windows 10双系统，你需要了解的一切</a><a href="http://os.51cto.com/art/201101/244090.htm" title="如何在Linux中查看所有正在运行的进程">如何在Linux中查看所有正在运行的进程</a><a href="http://os.51cto.com/art/201502/464662.htm" title="12" 个最佳的免费网络监控工具="">12 个最佳的免费网络监控工具</a><a href="http://os.51cto.com/art/201611/521377.htm" title="面向物联网的几大开源操作系统">面向物联网的几大开源操作系统</a><a href="http://os.51cto.com/art/201404/435279.htm" title="Linux服务器上监控网络带宽的18个常用命令">Linux服务器上监控网络带宽的18个常用命令</a><a href="http://os.51cto.com/art/201001/177866.htm" title="Linux下RPM软件包的安装及卸载">Linux下RPM软件包的安装及卸载</a><a href="http://os.51cto.com/art/201405/439494.htm" title="安装" kali="" linux="" 后需要做的="" 20="" 件事="">安装 Kali Linux 后需要做的 20 件事</a><a href="http://os.51cto.com/art/201412/460698.htm" title="你值得拥有：25个Linux性能监控工具">你值得拥有：25个Linux性能监控工具</a></li></ul>
+        </div>
+        <div></div>
+        <div class="spkc m30">
+            <h2><span>视频课程</span><a href="http://edu.51cto.com/">+更多</a></h2>
+            
+            <dl>
+                <dt><a href="http://edu.51cto.com/course/course_id-8057.html"><img src="c2ad2c34307e422aa19052b6742fcdfcdf476b.jpg" title="JavaScript面向对象的编程视频课程第三季 原型" alt="JavaScript面向对象的编程视频课程第三季 原型" width="100px" height="80px"></a><span></span></dt>
+                <dd>
+                    <h3><a href="http://edu.51cto.com/course/course_id-8057.html" target="_blank" title="JavaScript面向对象的编程视频课程第三季 原型">JavaScript面向对象的编程视频课程第三季 原</a></h3>
+                    <h4><span class="fl">讲师：<em><a href="http://edu.51cto.com/lecturer/user_id-124264.html" target="_blank">胡延亮</a></em></span><span class="fr"><em>4</em>人学习过</span></h4>
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt><a href="http://edu.51cto.com/course/course_id-8056.html"><img src="e9b2a8e878fe5697c63882f71f4a3760cff7ad.jpg" title="华为HCNP考试认证培训班2期（肖哥）【培训班直播回放课程】" alt="华为HCNP考试认证培训班2期（肖哥）【培训班直播回放课程】" width="100px" height="80px"></a><span></span></dt>
+                <dd>
+                    <h3><a href="http://edu.51cto.com/course/course_id-8056.html" target="_blank" title="华为HCNP考试认证培训班2期（肖哥）【培训班直播回放课程】">华为HCNP考试认证培训班2期（肖哥）【培训班</a></h3>
+                    <h4><span class="fl">讲师：<em><a href="http://edu.51cto.com/lecturer/user_id-542102.html" target="_blank">肖宗鹏</a></em></span><span class="fr"><em>0</em>人学习过</span></h4>
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt><a href="http://edu.51cto.com/course/course_id-8055.html"><img src="a2052d626b921708adf23792146ff4c474c782.png" title="【国内首套H3C V7交换机实战课程-9】安全功能配置与管理视频课程（上）" alt="【国内首套H3C V7交换机实战课程-9】安全功能配置与管理视频课程（上）" width="100px" height="80px"></a><span></span></dt>
+                <dd>
+                    <h3><a href="http://edu.51cto.com/course/course_id-8055.html" target="_blank" title="【国内首套H3C V7交换机实战课程-9】安全功能配置与管理视频课程（上）">【国内首套H3C V7交换机实战课程-9】安全功能</a></h3>
+                    <h4><span class="fl">讲师：<em><a href="http://edu.51cto.com/lecturer/user_id-55153.html" target="_blank">王达</a></em></span><span class="fr"><em>8</em>人学习过</span></h4>
+                </dd>
+            </dl>
+            
+        </div>
+        <div></div>
+        <div class="rmzw m30">
+            <h2><span>热门职位</span><a href="http://gaozhao.51cto.com/">+更多</a></h2>
+            <div id="rmzw"><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-5647.html" target="_blank"> 应用运维工程师（Windows方向） </a></dt><dd><h3>全职/1-3年/大专</h3><span>15k-25k</span><a href="http://gaozhao.51cto.com/company/view/id-721.html" target="_blank">大疆创新</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-4327.html" target="_blank"> 中科信软招聘ansible兼职讲师 </a></dt><dd><h3>兼职/3-5年/本科</h3><span>20k-30k</span><a href="http://gaozhao.51cto.com/company/view/id-839.html" target="_blank">中科信软</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-5489.html" target="_blank"> 应用运维岗 </a></dt><dd><h3>全职/1-3年/本科</h3><span>10k-25k</span><a href="http://gaozhao.51cto.com/company/view/id-964.html" target="_blank">人寿财产保险</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-5456.html" target="_blank"> 运维经理 </a></dt><dd><h3>全职/5-10年/本科</h3><span>25k-30k</span><a href="http://gaozhao.51cto.com/company/view/id-925.html" target="_blank">先声教育</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-5225.html" target="_blank"> 运维总监 </a></dt><dd><h3>全职/5-10年/本科</h3><span>40k-70k</span><a href="http://gaozhao.51cto.com/company/view/id-946.html" target="_blank">中网银科</a></dd></dl></div>
+        </div>
+        <div></div>
+        <div class="zxzt m30">
+            <h2><span>最新专题</span><a href="http://os.51cto.com/speclist/523">+更多</a></h2>
+            <dl>
+                <dt><a href="http://os.51cto.com/art/201603/507057.htm" title="如何选择最适合你的Linux发行版？"><img src="wKioL1beLAixuvyFAACz5r8rLPw433.jpg-wh_100x70-s_2159590033.jpg" alt="如何选择最适合你的Linux发行版？" title="如何选择最适合你的Linux发行版？"></a></dt>
+                <dd>
+                    <a href="http://os.51cto.com/art/201603/507057.htm" title="如何选择最适合你的Linux发行版？">如何选择最适合你的Linux发行版？</a>
+                    <h3><a href="http://www.51cto.com/php/search.php?keyword=Linux">Linux</a></h3>
+                </dd>
+            </dl><dl>
+                <dt><a href="http://os.51cto.com/art/201602/505598.htm" title="如何破解微软Windows 10的升级难题"><img src="wKiom1bBzmOgG99uAACJwiEfFQw073.jpg-wh_100x70-s_4286889212.jpg" alt="如何破解微软Windows 10的升级难题" title="如何破解微软Windows 10的升级难题"></a></dt>
+                <dd>
+                    <a href="http://os.51cto.com/art/201602/505598.htm" title="如何破解微软Windows 10的升级难题">如何破解微软Windows 10的升级难题</a>
+                    <h3><a href="http://www.51cto.com/php/search.php?keyword=%CE%A2%C8%ED">微软</a></h3>
+                </dd>
+            </dl><dl>
+                <dt><a href="http://os.51cto.com/art/201601/503687.htm" title="智能化运维在日常业务中的最佳实践探索"><img src="wKiom1aPI2Gx4Qw6AACXFDeaW94853.jpg-wh_100x70-s_4074910719.jpg" alt="智能化运维在日常业务中的最佳实践探索" title="智能化运维在日常业务中的最佳实践探索"></a></dt>
+                <dd>
+                    <a href="http://os.51cto.com/art/201601/503687.htm" title="智能化运维在日常业务中的最佳实践探索">智能化运维在日常业务中的最佳实践探索</a>
+                    <h3><a href="http://www.51cto.com/php/search.php?keyword=%D6%C7%C4%DC%BB%AF%D4%CB%CE%AC">智能化运维</a></h3>
+                </dd>
+            </dl><dl>
+                <dt><a href="http://os.51cto.com/art/201512/501902.htm" title="你应该使用开源软件的九大理由"><img src="wKiom1aExVSgoasqAAC4d3P-TJs622.jpg-wh_100x70-s_976432699.jpg" alt="你应该使用开源软件的九大理由" title="你应该使用开源软件的九大理由"></a></dt>
+                <dd>
+                    <a href="http://os.51cto.com/art/201512/501902.htm" title="你应该使用开源软件的九大理由">你应该使用开源软件的九大理由</a>
+                    <h3><a href="http://www.51cto.com/php/search.php?keyword=%BF%AA%D4%B4%C8%ED%BC%FE">开源软件</a></h3>
+                </dd>
+            </dl>
+        </div>
+        <div></div>
+        <div id="jcpl"><div class="jcpl m30"><h2><span>精彩评论</span></h2><dl><dt><a href="http://home.51cto.com/index.php?s=/space/12464480"><img src="noavatar_middle_001.gif" width="45px" height="45px"></a></dt><dd><a href="http://home.51cto.com/index.php?s=/space/12464480"></a><h3><a href="http://home.51cto.com/index.php?s=/space/12464480">wx5865c19c9e67b</a>评论了：<a href="http://developer.51cto.com/art/201612/526431.htm">让你的孩子成为下一个扎克伯格：程序员们，编程要从娃娃抓起！404 Not Found</a></h3><h4>小编 配图好棒 ！说实话  从小时候学编程真的很好！主要是为了锻炼孩子的思维以及逻辑！不过还是以小孩的兴趣为主！我也是程序员，将来也让孩子学，就差他妈了......！</h4></dd></dl><dl><dt><a href="http://home.51cto.com/index.php?s=/space/10192642"><img src="noavatar_middle.gif" width="45px" height="45px"></a></dt><dd><a href="http://home.51cto.com/index.php?s=/space/10192642"></a><h3><a href="http://home.51cto.com/index.php?s=/space/10192642">火凤凰931</a>评论了：<a href="http://developer.51cto.com/art/201612/526177.htm">拿完年终奖该不该跳槽？程序员们看这里！</a></h3><h4>坑确实很多，不断充实自己是王道</h4></dd></dl><dl><dt><a href="http://home.51cto.com/index.php?s=/space/6709279"><img src="noavatar_middle_002.gif" width="45px" height="45px"></a></dt><dd><a href="http://home.51cto.com/index.php?s=/space/6709279"></a><h3><a href="http://home.51cto.com/index.php?s=/space/6709279">i_can2013</a>评论了：<a href="http://developer.51cto.com/art/201612/526010.htm">惊！甲骨文或在2017年全面向Java SE用户收费</a></h3><h4>说你是标题党不为过吧</h4></dd></dl><dl><dt><a href="http://home.51cto.com/index.php?s=/space/12457893"><img src="noavatar_middle_003.gif" width="45px" height="45px"></a></dt><dd><a href="http://home.51cto.com/index.php?s=/space/12457893"></a><h3><a href="http://home.51cto.com/index.php?s=/space/12457893">qq5863789937049</a>评论了：<a href="http://developer.51cto.com/art/200909/148644.htm">详解C#读取word内容操作</a></h3><h4>完全搞不懂！！</h4></dd></dl></div></div>
+        <div></div>
+        <div class="news m30">
+            <dl><dt class="show">精选博文</dt><dt>论坛热帖</dt><dt>下载排行</dt></dl>
+            <div>
+                <ul>
+                    <li class="show">
+                        <a href="http://iamsujie.blog.51cto.com/661150/320619/" target="_blank" title="“为什么而活”的四种人【人人都是产品经理：9086】">“为什么而活”的四种人【人人都是产</a><a href="http://lqlaps169.blog.51cto.com/855319/320555/" target="_blank" title="三、五分钟部署一台电脑，你相信吗？">三、五分钟部署一台电脑，你相信吗？</a><a href="http://cenchao.blog.51cto.com/638678/320510/" target="_blank" title="使用系统封装工具批量部署客户端">使用系统封装工具批量部署客户端</a><a href="http://drate.blog.51cto.com/1274886/320509/" target="_blank" title="读书汇（03）--中国企业的组织能力模型">读书汇（03）--中国企业的组织能力模</a><a href="http://bingyang.blog.51cto.com/533655/320508/" target="_blank" title="我的无知">我的无知</a>
+                    </li>
+                    <li>
+                        <a href="http://bbs.51cto.com/thread-1152245-1.html" target="_blank" title="CLOUDSTACK FOR HYPER-V">CLOUDSTACK FOR HYPER-V</a><a href="http://bbs.51cto.com/thread-1176551-1.html" target="_blank" title="思科3650交换机密码恢复（注意不是3560）">思科3650交换机密码恢复（注意不是35</a><a href="http://bbs.51cto.com/thread-1176904-1.html" target="_blank" title="思杰 Citrix xen server 6.2　企业级布署（一）">思杰 Citrix xen server 6.2　企业级</a><a href="http://bbs.51cto.com/thread-1177347-1.html" target="_blank" title="【遇见更好的自己】（已更新）毕业5年我拿什么回报给我5年的北漂生活">【遇见更好的自己】（已更新）毕业5</a><a href="http://bbs.51cto.com/thread-1177376-1.html" target="_blank" title="vcenter无法加入主机，急">vcenter无法加入主机，急</a>
+                    </li>
+                    <li>
+                        <a href="http://down.51cto.com/data/1007181/" target="_blank" title="智能农业实训套件">智能农业实训套件</a><a href="http://down.51cto.com/data/1007180/" target="_blank" title="智能家居实训套件">智能家居实训套件</a><a href="http://down.51cto.com/data/1007178/" target="_blank" title="vsftp虚拟用户配置">vsftp虚拟用户配置</a><a href="http://down.51cto.com/data/1007177/" target="_blank" title="命令行下设置IP地址">命令行下设置IP地址</a><a href="http://down.51cto.com/data/1007176/" target="_blank" title="智能环境监测实训套件">智能环境监测实训套件</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div></div>
+        <div class="ds m30">
+            <h2><span>读 书 </span><a href="http://book.51cto.com/">+更多</a></h2>
+            <dl>
+                
+                <dt><a href="http://book.51cto.com/art/200707/50367.htm" title="程序员密码学"><img src="161959314.gif" width="98px" height="144px"></a></dt>
+                <dd><h3><a href="http://book.51cto.com/art/200707/50367.htm" title="程序员密码学">程序员密码学</a></h3>
+                    《程序员密码学》涉及密码学的各个研究方向，分组密码、散列函数、公钥密码以及相关的攻击，同时也讲解了密码学算法实现上常用的ASN.编码、...
+                </dd>
+                
+            </dl>
+        </div>
+        <div></div>
+        <div class="dydy">
+            <dl>
+                <dt><img src="dydy.jpg" alt=""></dt>
+                <dd>
+                    <h3>订阅51CTO邮刊</h3>
+                    <h4><a href="http://news.51cto.com/col/1323/">点击这里查看样刊</a></h4>
+                    <a href="http://home.51cto.com/index.php?s=/Subscribe"><img src="ljdy.jpg" alt="订阅51CTO邮刊"></a>
+                </dd>
+            </dl>
+        </div>
+        <div></div>
+    </div>
+    <!-- 文章右侧结束 -->
+    </div>
+<div class="footer_nav">
+   <div class="wrap">
+       <h2>51CTO旗下网站：</h2>
+       <a href="http://www.51cto.com/">领先的IT技术网站 51CTO</a>|<a href="http://www.watchstor.com/">领先的中文存储媒体 WatchStor</a>|
+       <a href="http://www.cioage.com/">中国首个CIO网站 CIOage </a>|<a href="http://www.hc3i.cn/">中国首家数字医疗网站 HC3i</a>          
+   </div>
+</div>
+<div id="ft"><div id="foot" align="center"><script src="about:blank"></script>Copyright©2005-2016 <a href="http://www.51cto.com/">51CTO.COM</a> 版权所有 未经许可 请勿转载<script src="about:blank" type="text/javascript"></script></div></div>
+<div class="clk"><a class="ewm" href="###" target="_self"><img src="wxwx.jpg" style="display: none;"></a><a class="yjk" href="#comment" target="_self"></a><a class="topx" href="#topx" target="_self"></a></div>
+<script>/* Code removed by ScrapBook */</script>
+<script src="about:blank"></script>
+<!-- 悬浮广告 -->
+<!--end-->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" charset="utf-8"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/javascript" src="about:blank"></script>
+<!--  一大波JS来袭 -->
+<div id="MyMoveAd" style="display: none;">
+    <span id="pinglun"><script type="text/javascript" src="about:blank"></script>0</span>
+	<span id="tonglan"><script type="text/javascript" src="about:blank"></script></span>
+	<span id="wordlink_1"><script src="about:blank"></script></span>
+	<span id="wordlink_2"><script src="about:blank"></script></span>
+	<span id="wordlink_3"><script src="about:blank"></script></span>
+	<span id="wordlink_4"><script src="about:blank"></script></span>
+	<span id="wordlink"><script src="about:blank"></script></span>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- 结束 -->
+
+
+</body><div id="diigotb-imagepanel" style="display: none; width: 24px;"><div class="diigotb-btn enabled" title="Save this image to Diigo" id="diigotb-quick-save"></div></div><div class="diigotb-border diigotb-left" style="display: none;"></div><div class="diigotb-border diigotb-top" style="display: none;"></div><div class="diigotb-border diigotb-right" style="display: none;"></div><div class="diigotb-border diigotb-bottom" style="display: none;"></div>
+</html>

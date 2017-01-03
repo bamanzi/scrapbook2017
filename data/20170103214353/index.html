@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/Article">
+<head>
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>How to Run Windows Programs from Windows 10’s Bash Shell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="How to Run Windows Programs from Windows 10’s Bash Shell">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="In the Creators Update, Windows 10’s Bash shell now allows you to run Windows binaries and standard Command Prompt commands, right from Bash. You can run both Linux and Windows programs from the same Bash shell, or even incorporate Windows commands into a Bash script.">
+<meta property="og:image" content="http://www.howtogeek.com/thumbcache/280/160/fa1055306125cd2dd6707835d1fca372/wp-content/uploads/2016/12/img_585322b274b86.png">
+<link rel="image_src" href="http://www.howtogeek.com/thumbcache/280/160/fa1055306125cd2dd6707835d1fca372/wp-content/uploads/2016/12/img_585322b274b86.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@howtogeek">
+<meta name="twitter:title" content="How to Run Windows Programs from Windows 10’s Bash Shell">
+<meta name="twitter:description" content="In the Creators Update, Windows 10’s Bash shell now allows you to run Windows binaries and standard Command Prompt commands, right from Bash. You can run both Linux and Windows programs from the same Bash shell, or even incorporate Windows commands into a Bash script.">
+<meta name="twitter:image:src" content="http://www.howtogeek.com/thumbcache/648/248/be71b3b87d3d0efdb09b3fd34b9a8da8/wp-content/uploads/2016/12/img_585322b274b86.png">
+<link rel="stylesheet" href="A.howtogeek.css,q1466298260.pagespeed.gp+jp+jw+pj+ec+ei+fc+if+ii+js+rj+rp+rw+ri+cp+md.cf.8phhU3MPa4.css" type="text/css">
+<link href="css.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script src="about:blank" async="" type="text/javascript"></script><script async="" src="about:blank"></script><script async="" src="about:blank"></script><script id="twitter-wjs" src="about:blank"></script><script type="text/javascript" async="" src="about:blank"></script><script id="facebook-jssdk" src="about:blank"></script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>	<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="http://www.howtogeek.com/wp-json/">
+<link rel="shortlink" href="http://www.howtogeek.com/?p=285082">
+<link rel="alternate" type="application/json+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F285082%2Fhow-to-run-windows-programs-from-windows-10s-bash-shell%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.howtogeek.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.howtogeek.com%2F285082%2Fhow-to-run-windows-programs-from-windows-10s-bash-shell%2F&amp;format=xml">
+<link rel="canonical" href="http://www.howtogeek.com/285082/how-to-run-windows-programs-from-windows-10s-bash-shell/">
+<meta property="og:url" content="http://www.howtogeek.com/285082/how-to-run-windows-programs-from-windows-10s-bash-shell/"><link rel="amphtml" href="http://www.howtogeek.com/285082/how-to-run-windows-programs-from-windows-10s-bash-shell/amp/">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script pagespeed_no_defer="">/* Code removed by ScrapBook */</script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+  #diigotb-imagepanel { height: 22px ! important; position: absolute ! important; z-index: 11000022 ! important; margin: 0px ! important; }
+  #diigotb-imagepanel .diigotb-btn { cursor: pointer ! important; width: 20px ! important; height: 20px ! important; margin: 2px ! important; float: left ! important; background: transparent url("chrome://diigotb/skin/save-image-action-icons.png") no-repeat scroll 0% 0% ! important; }
+  #diigotb-imagepanel #diigotb-quick-save { background-position: 0px 0px ! important; }
+  .diigotb-border { position: absolute ! important; z-index: 11000000 ! important; margin: 0px ! important; background-color: rgb(75, 140, 220) ! important; }
+  .diigotb-left { width: 1px ! important; }
+  .diigotb-right { width: 1px ! important; }
+  .diigotb-top { height: 1px ! important; }
+  .diigotb-bottom { height: 1px ! important; }
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+<body class="v3">
+<div style="text-align: center; min-height: 90px; z-index: 999999; margin-right: auto; margin-left: auto; position: relative;" class="adslot adslot970">
+<div id="htgyl11">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader" style="border-top: 4px solid rgb(23, 34, 50);">
+<div class="logo" style="">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek"></a>
+<div style="float: right; width: 450px;">
+<ul class="bigmenu">
+<li class="menubaritem">Articles <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu">
+<div class="subMenuArticles">
+<div class="smawrap">
+<a href="http://www.howtogeek.com/286552/how-to-replace-windows-essentials-2012-after-support-ends-in-january/" align="left" class="title" rel="bookmark"><span><img src="xwle_top-650x300.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.j1RX5vTVbF.png"></span></a>
+<a href="http://www.howtogeek.com/286552/how-to-replace-windows-essentials-2012-after-support-ends-in-january/" class="title" rel="bookmark">How to Replace Windows Essentials 2012 After Support Ends in January</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/286658/how-to-change-how-long-updates-are-deferred-in-windows-10/" align="left" class="title" rel="bookmark"><span><img src="xdwu_top-2-650x300.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.-TSpDNhp87.png"></span></a>
+<a href="http://www.howtogeek.com/286658/how-to-change-how-long-updates-are-deferred-in-windows-10/" class="title" rel="bookmark">How to Change How Long Updates Are Deferred in Windows 10</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/" align="left" class="title" rel="bookmark"><span><img src="xwin10-creators-650x325.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.uOG9gnz8by.jpg"></span></a>
+<a href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/" class="title" rel="bookmark">What’s New in Windows 10’s Creators Update, Arriving Spring 2017</a>
+</div>
+<div class="smawrap">
+<a href="http://www.howtogeek.com/285277/how-to-avoid-washed-out-colors-when-using-hdmi-on-your-pc/" align="left" class="title" rel="bookmark"><span><img src="ximg_5855c59025661.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.P_lZp7Kvb_.jpg"></span></a>
+<a href="http://www.howtogeek.com/285277/how-to-avoid-washed-out-colors-when-using-hdmi-on-your-pc/" class="title" rel="bookmark">How to Avoid Washed Out Colors When Using HDMI on Your PC</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li>
+<li class="menubaritem">Subscribe <span class="nc4"><span class="nc4l"> l </span><span class="nc4r"> l </span></span>
+<div class="subMenu" style="padding-bottom: 10px;">
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>FOLLOW US</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/howtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom: 20px;">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="topmenu" type="hidden">
+<input id="fromaddress" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<p style="font-family: &quot;Open Sans&quot;; text-transform: none;">Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input id="from" name="email" value="Enter Your Email Here" style="width: 200px; color: rgb(187, 187, 187); margin-left: 59px; font-family: &quot;Open Sans&quot;; text-transform: none;" type="text"><input id="sub1" name="sub1" value="Get Your Newsletter Now" style="background: rgb(85, 168, 223) none repeat scroll 0% 0%; margin-left: 59px; width: 212px; margin-top: 6px; font-family: &quot;Open Sans&quot;; text-transform: none;" type="submit"></p>
+<div style="clear: both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left: 20px;">
+<h4>RSS</h4>
+<ul style="width: 130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left: 0px;">
+<h4>&nbsp;</h4>
+<ul style="width: 150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="menubaritem">Search <span class="icon-magnifying-glass" style="padding-left: 10px; font-size: 16px;"></span>
+<div class="subMenu" style="padding: 20px; text-align: center;">
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input name="q" id="s" value="" style="width: 900px; height: 40px; line-height: 40px; border: 1px solid rgb(204, 204, 204);" type="text">
+<input id="searchsubmit" value="Go" style="height: 42px; border: 1px solid rgb(204, 204, 204); font-family: &quot;Open Sans&quot;; font-size: 16px; padding: 10px; background: rgba(196, 230, 237, 0.99) none repeat scroll 0% 0%; border-radius: 0px 5px 5px 0px;" type="submit">
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display: none;">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-285082">
+<style>
+/* Code tidied up by ScrapBook */
+.thecontent > pre { text-align: left; clear: both; margin: 0px 0px 10px; border: 1px dashed rgb(47, 111, 171); color: rgb(0, 0, 0); background-color: rgb(249, 249, 249); line-height: 1.1em; font-family: monospace; max-width: 618px; padding: 20px 10px; overflow-x: auto; }
+</style>
+<h2 style="margin-top: 10px;"><a style="font-family: &quot;Open Sans&quot;,sans-serif;" href="#" rel="bookmark" title="How to Run Windows Programs from Windows 10’s Bash Shell">How to Run Windows Programs from Windows 10’s Bash Shell</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img class="alignnone size-full wp-image-285293" alt="" src="ximg_585322b274b86.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.pnpB06oULe.png"></p>
+<p>In the Creators Update, <a href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">Windows 10’s Bash shell</a> now allows you to run Windows binaries and standard Command Prompt commands, right from Bash. You can run both Linux and Windows programs from the same Bash shell, or even incorporate Windows commands into a Bash script.</p>
+<p>This&nbsp;only works in <a href="http://www.howtogeek.com/278132/whats-new-in-windows-10s-creators-update/">the Creators Update</a>—you can’t do this on the current <a href="http://www.howtogeek.com/248177/whats-new-in-windows-10s-anniversary-update/">Anniversary Update</a>. So if you want to do this, you’ll need to be running the <a href="http://www.howtogeek.com/224826/how-to-become-a-windows-insider-and-test-new-windows-10-features/">Insider Preview builds</a> until the Creator’s Update is released to everyone.</p>
+<div id="div-thetop1" style="margin-top: 5px; margin-bottom: 15px;">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script async="" src="about:blank"></script>
+<!-- htg-desktop-top -->
+<ins class="adsbygoogle" style="display: inline-block; width: 650px; height: 141px;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="1477883008"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<h3>What You Need to Know</h3>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/"><img src="ximg_57a14ed2a0cec.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.N3ROesx6Ps.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/">Everything You Can Do With Windows 10’s New Bash Shell</a></span><div style="clear: both;"></div></div></div>
+<p>Here are some basic&nbsp;details you need to know about this feature:</p>
+<ul>
+<li><strong>User Account</strong>: Programs launched from the Bash shell will run as if they were launched by the current Windows user account.</li>
+<li><strong>Permissions</strong>: These programs will have the same permissions as the Bash.exe process. So, if you want these commands to have Administrator access, you’ll need to run the Bash shell as Administrator.</li>
+<li><strong>Working Directory</strong>: Windows programs share the same “working directory” as the Bash shell.&nbsp;So, if you run a command that lists the contents of the current directory, it will list the contents of the current working directory in the Bash shell. Use the <code>cd </code> command to change working directories.</li>
+</ul>
+<p>With that in mind, let’s take a look at how to run a program.</p>
+<h3>How to Run a Windows Program</h3>
+<div class="relatedside" style="margin-top: 25px;"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLE</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 8px 8px 0px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/"><img src="ximg_577716202eb0f.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.PFnsekkg1T.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/">How to Access Your Ubuntu Bash Files in Windows (and Your Windows System Drive in Bash)</a></span><div style="clear: both;"></div></div></div>
+<p>To run a Windows program, enter the path to the program’s .exe file in teh Bash shell. Remember that your Windows C: drive is <a href="http://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/">available&nbsp;at /mnt/c in Bash</a>. The Bash environment is also case-sensitive, so you have to specify the correct capitalization.</p>
+<p>Let’s say you wanted to launch the Ping utility&nbsp;located at C:\Windows\System32\PING.EXE.&nbsp;You’d run the following command:</p>
+<pre>/mnt/c/Windows/System32/PING.EXE</pre>
+<p>The following command wouldn’t work, because Bash is case-sensitive:</p>
+<pre>/mnt/c/windows/system32/ping.exe</pre>
+<p><img class="alignnone size-full wp-image-285287" alt="" src="ximg_585320b5a5d24.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.9bObsA6OdB.png"></p>
+<p>This is a bit more complicated if the path contains complex characters like spaces and brackets, like the Program Files folders. You have to “escape” spaces, brackets, and other complex characters by prefixing them with a “\” character.</p>
+<p>For example, let’s say you wanted to run the Internet Explorer program located at&nbsp;C:\Program Files (x86)\Internet Explorer\iexplore.exe. You’d have to run the following command in Bash:</p>
+<pre>/mnt/c/Program\ Files\ \(x86\)/Internet\ Explorer/iexplore.exe</pre>
+<p>Note the “\” before the space and bracket characters. These characters must be “escaped” or Bash won’t realize the characters are part of a file path.</p>
+<p><img class="alignnone size-full wp-image-285288" alt="" src="ximg_585320f52a93c.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.SKHgQT2PYr.png"></p>
+<h3>How to Pass an Argument to a Command</h3>
+<p>The Bash shell passes arguments directly to the commands you execute.</p>
+<p>For example, if you wanted&nbsp;to ping example.com, you’d run:</p>
+<pre>/mnt/c/Windows/System32/PING.EXE&nbsp;example.com</pre>
+<p>Or,&nbsp;if you wanted to open the Windows hosts file in Notepad, you’d run:</p>
+<pre>/mnt/c/Windows/System32/notepad.exe "C:\Windows\System32\drivers\etc\hosts"</pre>
+<p>You use the standard Windows file path when passing a file path directly to a Windows program. That’s because Bash passes the argument directly. Notepad.exe&nbsp;and other Windows programs expect a Windows file path.</p>
+<p><img class="alignnone size-full wp-image-285289" alt="" src="ximg_58532145c9b0d.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.9CUjFgWYrR.png"></p>
+<h3>How to Run a Built-in Command</h3>
+<p>Some Windows commands aren’t .exe files, but are built into the Command Prompt itself. For example, this includes the <code>dir</code>&nbsp;command you might normally run in a Command Prompt. To run such a command, you need to run the <code>cmd.exe</code> binary associated with the Command Prompt and pass it the command&nbsp;as an argument with /C, like so:</p>
+<pre>/mnt/c/Windows/System32/cmd.exe /C command</pre>
+<p>For example, to run the <code>dir&nbsp;</code>command built into the Command Prompt, you’d run the following command:</p>
+<pre>/mnt/c/Windows/System32/cmd.exe /C dir</pre>
+<p><img class="alignnone size-full wp-image-285290" alt="" src="ximg_5853219c75c25.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.TBmSbUjTIN.png"></p>
+<h3>How to Add Directories to the Path</h3>
+<p>The Windows Services for Linux environment treats Windows executables&nbsp;similar to the way it treats Linux binaries. This means that you can add a directory containing .exe files to the path and then execute those .exe files directly.&nbsp;For example, to add the System32 directory to your path, you’d run:</p>
+<pre>export PATH=$PATH:/mnt/c/Windows/System32</pre>
+<p>You could then run Windows .exe files located in the System32 folder directly, like so:</p>
+<pre>PING.exe example.com</pre>
+<pre>notepad.exe</pre>
+<pre>cmd.exe /C dir</pre>
+<p><img class="alignnone size-full wp-image-285291" alt="" src="ximg_585321d3220ad.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.SQTuDoUXYg.png"></p>
+<h3>How to Pipe the Output of One Command to Another</h3>
+<p>The output of a Windows command can be <a href="http://www.howtogeek.com/110150/become-a-linux-terminal-power-user-with-these-8-tricks/">piped</a> to a Linux command, and vice versa. For example, you can use the&nbsp;<code>ipconfig.exe -all </code>command to list details about your network interfaces and pipe it to the Linux <code>grep </code> command to search the output. For example, to list all information about your connection and search for sections matching “IPv4 Address”, you’d run:</p>
+<pre>/mnt/c/Windows/System32/ipconfig.exe -all | grep "IPv4 Address"</pre>
+<p><img class="alignnone size-full wp-image-285292" alt="" src="ximg_58532222271b5.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic._7zHAqmPZJ.png"></p>
+<p>That’s the basic process.&nbsp;These commands will also work when incorporated into a Bash script, so you can <a href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/">write a Bash script</a> that incorporates both Windows commands and Linux utilities. If it runs in the Bash shell, it will work in a Bash script.</p>
+<p>And, if you want to go the other way, you can <a href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/">use the “bash -c” command</a> to run Bash commands from the standard Windows Command Prompt.</p>
+<div class="relatedfull"><span class="relatedtext" style="font-family: bebas_neueregular; font-size: 16px; z-index: 1; position: relative; top: -7px; padding-left: 10px; float: right; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(136, 136, 136);">RELATED ARTICLES</span><div class="relateditemwrap" style="border-top: 3px solid rgb(221, 221, 221); border-bottom: 3px solid rgb(221, 221, 221); margin-left: 6px; padding: 8px 0px;"><div style="clear: both;"><div class="leftitem" style="float: left; width: 310px; margin-right: 20px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/"><img src="data:image/png;base64,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"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/261591/how-to-create-and-run-bash-shell-scripts-on-windows-10/">How to Create and Run Bash Shell Scripts on Windows 10</a></span></div><div class="leftitem" style="float: left; width: 310px;"><div class="relateditemimg" style="float: left; width: 128px; margin-left: 2px;"><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/"><img src="ximg_577ef4a4c6404.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.sTYYtEXKih.png"></a></div><span><a style="text-decoration: none; font-weight: bold;" href="http://www.howtogeek.com/262086/how-to-run-linux-commands-from-outside-the-bash-shell-on-windows-10/">How to Run Linux Commands From Outside the Bash Shell on Windows 10</a></span></div><div style="clear: both;"> </div></div></div><div style="clear: both;"> </div></div>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear: both; height: 0px;"></div>
+<!-- discourse comments begin -->
+<style>
+/* Code tidied up by ScrapBook */
+#discusslink { color: rgb(88, 88, 88); text-decoration: none; }
+#discusslink:hover { color: rgb(0, 0, 255); text-decoration: none; }
+</style>
+<div style="max-width: 650px; width: 100%; padding-top: 10px;"><span style="font-family: bebas_neueregular; font-size: 19px; position: relative; top: -9px; padding-right: 10px; float: left; background-color: rgb(255, 255, 255); font-weight: normal; color: rgb(134, 134, 134);"><a id="discusslink" href="https://discuss.howtogeek.com/t/how-to-run-windows-programs-from-windows-10s-bash-shell/55160">JOIN THE DISCUSSION</a></span><div style="border-top: 4px solid rgb(204, 204, 204);"></div></div>
+<div style="clear: both; height: 0px;"></div>
+<div id="socialmediabuttons" style="margin-bottom: 0px;">
+<div id="fb-root"></div>
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="fb-like" data-href="http://www.howtogeek.com/285082/how-to-run-windows-programs-from-windows-10s-bash-shell/" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+</div>
+<div style="padding-right: 20px; float: left;">
+<div class="g-plusone" data-size="tall"></div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div style="padding-right: 20px; float: left;">
+<div class="pocket-btn"><iframe id="pocket-button-0" allowtransparency="true" scrolling="NO" src="index_17.html" width="60" height="63" frameborder="0"></iframe></div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-right: 20px; float: left;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.howtogeek.com/285082/how-to-run-windows-programs-from-windows-10s-bash-shell/" data-via="howtogeek" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="postiddiv" post="285082"></div>
+<div style="clear: both;"></div>
+<div class="articleExtras" style="background: rgb(254, 254, 254) none repeat scroll 0% 0%; border-top: medium none;">
+<div style="width: 450px; float: left;" id="authorinfobox">
+<p style="font-weight: normal; color: rgb(51, 51, 51);"><a href="http://www.howtogeek.com/author/chrishoffman/"><b>Chris Hoffman</b></a> is a technology writer and all-around computer geek. He's as at home using the Linux terminal as he is digging into the Windows registry.
+Connect with him on <a href="https://plus.google.com/107865379603964146316?rel=author">Google+</a>.</p>
+</div>
+<div style="width: 130px; float: right;">
+<ul class="normul" style="margin-bottom: 6px;">
+<li>Published 12/22/16</li>
+<!--<li><span id="pv3"></span></li>-->
+</ul>
+<div style="margin-left: -14px;"><a href="https://twitter.com/chrisbhoffman" class="twitter-follow-button" data-show-count="false"></a></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div class="below-post-features" style="width: 650px; overflow: hidden; max-height: 250px; margin-bottom: 20px;">
+<div id="outbrain-below-article" style="">
+<style>
+/* Code tidied up by ScrapBook */
+.below-post-features:hover { box-shadow: 0px 0px 3pt 2pt rgb(98, 128, 156); }
+#sb3 { padding-top: 0px; }
+.content { padding-bottom: 0px; margin-bottom: 0px; }
+</style>
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img src="715276755.gif" class="neivtwvqsleexxtcbwlz" border="0" width="1" height="1">
+</div>
+</div>
+<div style="width: 100%; max-width: 650px; margin-bottom: 0px;">
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<img src="image.php" alt="" id="htgstats" style="display: none;"></div>
+</div>
+<div class="yui-u">
+<div class="sidebar">
+<div style="margin-top: 24px; clear: both;"></div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding: 10px;"><p>The White House has 132 bedrooms, 35 bathrooms, and 28 fireplaces spread over the six levels of the residence.</p>
+</div>
+</div>
+<div id="side78"><div id="htgyr11">
+<script type="text/javascript" pagespeed_no_defer="">/* Code removed by ScrapBook */</script><script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>	<div class="sidebar-glossary lazyloaddiv">
+<style>
+/* Code tidied up by ScrapBook */
+</style>
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAwEAAwEAAAAAAAAAAAAAAAYHBQECBAj/xAAuEAABAwMDAwMDAwUAAAAAAAABAgMEAAURBhIhBzFRE0FhInGBFDKRFUKCobH/xAAZAQACAwEAAAAAAAAAAAAAAAAABAIDBQb/xAAeEQACAgMBAQEBAAAAAAAAAAABAgARAyExEgQiQf/aAAwDAQACEQMRAD8ASmtYdUGmJLki/MtqjrKFJUw2oHHggcj5pGsfV3W9qu93kuXBr9RMfSuQlbIKcpSEgpHtwB28U26w6laS1BbILypMuNcUtpMhl1lSUlZAC0gjO4ZAOffB80gS7Rb7zqZhuLIEeJITmTJkoVsbV5ThIVz4xSON8pYhppPjweB57GK39UtTagkO25bsqVOlHbFQyMhSvb6e4Hkj802wG75CSIs1EKVIz3Q+ELUraFFITjGRkc5xjHPeqN0o6N2u2wwIF1jJdcRslOsFtUhxWP2pLiwEgZx9OfuTTnd9Ewo8lcCMm3KvKEt+gzKlpXLWf3ZCU7Ep4B7lQq1r7F7UGpCLTd7fd/UbZSpD6EgusPI2uJB7HHuD5GRXhvOmIMwKcjoEd7ykfSfuKWuuETWNj18qU/ZX7UuMn0kPshK08IztKkcHOR37fiqToPUiJWk7cuXF0o/KRGQJK5D7wdC+AfUSMBJyft79qjkqtiWYXYH8mSiXDdhSFMvoIWk/g13bUkJHFN/Udt16/es4xBYCmk7UQystDHjfz8+OaVvQ+1IsQDN3FbKDHnpf09iL07Gu8xKXZctHqI3chtB7AfJHOfmmZ7p6+8pv0ZziEpc3FoIAQseDtwo8cZ3Um9FNfsStOs2yU4EyoI9PBPKkf2kfjj8VTBq5lDf0rArWIucwLHI12m4XKw2owoFltUGEMkpYU6ygc+4Qsbv8txNeeRfFQ5BaYmvRFvL3FERCWWSvB7gEc4zyr+amOu9YPybFJaYdOCBnB9s1laI10pEMyruESCyNja1qCVJ8nJ+lXHH1efzVTMqmpYqFtyr3CalTymZG9clzcVAqDhOBlWSMjI9+SalfUdiDJkqbnwmlvpAwpaAVAe2D3x9qo9h1DbdWX6FaIkVhiS/MAZXlsFpCkqBQChXuDycE8HHeudSaXjy7xcY7yEL/AKdIVG3pHCiME4z8mpKwMCvmRdi3T7xIiBy4oaZjRww2lTfGM91Edz8/ArCdVsdW24SlaFFJHyKqc+3swHihtIFZEy12+W960iMhbmMFXIzSuXGGOo/830HGKM+b470y2vM3KI7sKicFJ9x3BqoR9WWe5yGWbXOlMqLDfqIm7UlTu0b9pHG3dnGecUUU7/LmbxqjzpiM1I+iWkOBQwQrkEVtSumVvnwvStk9UEKUFFCkb0/buD/2iiolQw3D2VOozdG9ENaO1uxqO7T0Tf0xW400w3jKykhJJPYDJ/1TfcpLTbUlxAwp95byz3JUtRUT/JoooCheQLljuTG9Pl2ao+wNZ5VRRS57Ghyf/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/" class="title" rel="bookmark">7 Ways To Free Up Hard Disk Space On Windows</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img src="34320547.gif" class="neivtwvqsleexxtcbwlz" border="0" width="1" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/226722/how-when-and-why-to-set-a-connection-as-metered-on-windows-10/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHQAAAQUAAwEAAAAAAAAAAAAAAAQFBgcIAQIDCf/EADAQAAEDAwIDBwMEAwAAAAAAAAECAwQABREGIQcSMRMUIkFRcYEyYZEIJaGxM0JS/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAIBAwUE/8QAHREAAwEAAwADAAAAAAAAAAAAAAECEQMSIQQiMf/aAAwDAQACEQMRAD8AvXTOqLJeIqHbZNYkoPRbawc1LIylrTzBRwBXzk0I9e7Pe++We9SLbCjpVKmqSeZKWkbq8J2ydgPuRWgdD/qcgydGzZl+t6oL0V5phLraudLnaE42xnICST7Hp0rMfBaWr1HauSW0mabiymW5CmGmwfNZHka9JkhxvxtLxj+Kh2hNR23UNmZn2mWmXHdGe3B2UfOlPEe6s2rSziW3VLmTD3dgJOMEjc/Az84quO1fUesn0iDk6RqTV8m7vulyLFHd4g8sZ8Svvk7+3LTwspCceVN1miJgW1pgAApT4seZ867vPY2Jx9615WLDNp69Et1ix5aCl1tKh5H0+aj5i3OKotQrq+yznITkn+iKfZDuM79NhSFb4B64piDLPGxiy6RgN6U02h4P3Hkcl87pcUG0k8iBnfBO/wAVLoPBSZJ0JaIK7kxEloaU/JYdZJHbOYJyoHqEhKem3KfWpzw64M27V/GSxavd79PtcZnvl1kOutOw5MpBSGkR1J3LZOVFKhlITgnJrSmpuHttuIXItSxAknflAy0o+3+vx+Krc+YOm16Zc0LI4maGZj2e5QEXWzsAIYfgKBUyn0KNlEewqwWH7zq7UDEuP2SmoTYCW31FrlWck5yOp8HX08q41y1c9KiSxPaDb7bRcRhWQpO+CD6bGoZ+mTiZZL9a51pvl5bj6heeXypkEIDyCTyhB6HAwMddqqn48zfdFlc1VPVlmG6JbkLhykmPJbPKttZGQfcbH4odcDhCubpSG/wpbLYaukJM2PyhKXmzug/9BX1I9fT3pgS+5HH7dP7wgbBqQoBRx6K+lX8e1dJQSGa44lOWylRG6k+ZH2pjkXZlpzkkIdQ5gEgIJx814G8sreKJSFxZI2IWOU+1du9Pkk8zTgJ2OMbUAccCJA0fYWWrfIWytzxuoJylRPqOlXTL4lwoFicmS4rnefpbQ0QUrV8nb+aKKgE8KZv9we1RPmS5xJ7wko5c55U4wB+KzxrvgvMhOOTLBI7ZvJV2Kz4h7GiipDRLo/i/xF0C6m23Jx64QkHHdp+VED0SvqPyR9qtGy8UNC62AS46vT92XsUPKCUuH0C/pV84NFFQH6hxvi7zBYHbsJuMPcpUEk49h9SfgmmZq8QlJyzcpUdOf8ZSHMfOR/VFFMkIz//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/226722/how-when-and-why-to-set-a-connection-as-metered-on-windows-10/" class="title" rel="bookmark">How, When, and Why to Set a Connection as Metered on Windows 10</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABAYABQECAwf/xAAzEAABAwMDAwIEAgsAAAAAAAABAgMRAAQSBQYhEzFRYYEUIkGRB3EWMjM0QkOCkqGx8P/EABsBAAMAAgMAAAAAAAAAAAAAAAABBQYHAgME/8QAKhEAAQIEBAQHAQAAAAAAAAAAAQACAwQREwUhUZESQlKBBhUWIjNBofD/2gAMAwEAAhEDEQA/AEdpY80U2pBiYpMVuWxZdU2t1YUhRSqEHuK3G7NNA/auH+g1uMY1Ig0MVu4WpnYLOOzEM7FP1s6wnvE0e3qNqymVFIry5zd9r/Atf9poG73Oh0QlxZ9q4RMfkAPkB7rp9MTcU+5hHZer3O/29JPUssesnsYBikPeW+9f3G6oanqdzcNg/I2pw4J/IdhSe9qaHVSpaj7UI5coUZyP2qFM4zLxDVrmjaqu4f4dMoKBh/UU67JJ80OXBNcS+knvXMuieBUx09BPON1cbJxRylX22b3QrXW7t7XrI3bCssEj6Knv/wB35EiZHPbmpqsL28XauWbbLv8AJvGuo2tIVKZHkGDVG5ytRnuZrdi66DbrYQ0sOCCVoCing8jweaxSJJxL74nCc9llnmgfJQpQ8NGVz+89T/fgoznUrhTVy2XduDqJTk58KjKSCmEnHgjGfcGiXtbdcJDh2w6nNCxFmE8JWFBPABAMAR4kUsOayVFM2lhwZ/dxyee/3rKNcdQ042GLPFapINunjtwPTifzmixF6SvLdZqEyp3FdFDjGO2ClwYk/ApA47EGPlMHgjkenehtb1J7VbEt3FzoCZWFFTFtg6TP1VEwJ8+3c1RXGtl5tSFWliMk4ym3AI4jg/Tiujm4XnAQu2sVSZOVskkn8zyaLEXpKLrNVlGmWy7joI1W2ktZhauEZTymf9GOfSoxpbTqCpWrac18xELWqTBieEnihNQ1P43DNi2awEDotBHHrHf3oQut+aLEXpKLrNUrlavJ+9YKleT96lSiqdFu2pvpr6inM+MMYj1mi3xpg0u3Uw/dG+KVddC0gISrMxj5GMEk/XiI5qVKVSnRaupsUi0KLh5eQHxPEFPaQn2/yKYfw/OxBvMI3k5qn6PlpYztky6Fx8pIBEiZ7elSpTqkqy6VoC9a1NVmp9vTjdLNgLhJU4GMlY5Yn9bHGee81UXBR13OkolvI4T4nipUoqii/9k="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/225385/what%e2%80%99s-the-best-antivirus-for-windows-10-is-windows-defender-good-enough/" class="title" rel="bookmark">What’s the Best Antivirus for Windows 10? (Is Windows Defender Good Enough?)</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="max-width: 330px; max-height: 80px; overflow: hidden;">
+<script async="" type="text/javascript" src="about:blank" class="bt-script"></script><img src="34320549.gif" class="neivtwvqsleexxtcbwlz" border="0" width="1" height="1">
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/201606/completely-protect-your-windows-pc-with-microsoft-family-safety/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,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"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/201606/completely-protect-your-windows-pc-with-microsoft-family-safety/" class="title" rel="bookmark">Completely Protect Your Windows PC with Microsoft Family Safety</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/272201/all-the-ways-you-can-still-get-windows-10-for-free/" class="title" rel="bookmark"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAMAAACVZWnNAAABj1BMVEUXAFEXAFIYAFEYAFIZAVIcBFQcBVYdBlYfB1YfCFcgCVcgCVghCVghClkjDVojDlUkDVskDlskD1wlDlolDlslD1wlEVYmD1wmEFwmEV4nEV0oEV4oFVcpE18qF1ctG1gwG2QyHWUyHWYzH2c5JWs6Jms7J2w8KG09KW0+Km4+LG1DMHJFMnRGM3RINXZINnZJNnZNO3pNQoJOPHpPPHtSQH5TQn5YRoFaSYNcS4VdTIVdUIdeToZhUIhiUoljU4pkU4pkVItkY45mV41nV41oXI9pWo9rXpBucaBvXIpvcqJxZZJyZJV1Z5h1eal2Z5J2aJh2eqt3aZl4a5p6a5V6bJt6iJ18jqN+cZ6Dd6KFeaSGeaSJmrCKfqeNgqqOpL6RhqySh62Viq+Wi7CWrciass2bscqbssycs82dttKdt9OlnLylvtqmvNSnnr2rvdKtpcGvwtevyOK0wM+0xNa3yd3AutDGwNTQy9zTz97W0uDb1+Tc2eXe2ubj4Ork4evl4uvo5u7u7PLw7/T+/v6rrmZIAAABcElEQVRIx+2VRU8DURRG730fboNTintxd3ct0OJSHIq7W7EfzqK0MDAt88qCkHAWJ3mzmTcnXzLU8QNo21fW7XZaW9zc2vWFo7NTmpqf3Dj2hb2DE7JYhi0+MdDXR5qwWl8euCQAQIAgvApaImJmJmYwg8EMAjOrRPAkAQEhALXEZ0FLJAAQgd0iCREzEzF5F7T1dk9VIaSUNHw4EgjQ1NdgcZf3Ny+OiPzChKpiZioPlgmW8vxw+XztN7fQaWsZa+rZrx7tyqltsZp0BUu6uzq/u6BZ6077at30jHU5cOXQZl6K1RXM+Ph0++Kg0tw2Y312Zc9EmTmztSbPHK4vGCJNzUMZeoLBCaulD2cweBuXh3kJiF9cGBEJyfd9kDsYOyVR7z/YXw+WrKhIkwqmgNLBYQaD+ygRTAGKBht7xwsq+rtHAEUqmAKRFRqVGOMfEB0SBChSweLV35zqKRgxf/+XhCf91sLwA1zB3m8iMbNXnYeblsQzxDQAAAAASUVORK5CYII="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/272201/all-the-ways-you-can-still-get-windows-10-for-free/" class="title" rel="bookmark">All the Ways You Can Still Get Windows 10 for Free</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABgcAAwgCBAX/xAAzEAABAwMCAggFAwUAAAAAAAABAgMEAAURBhIhMQcIExQiQWGBMlFxcpMVRMFSVGKRof/EABgBAAMBAQAAAAAAAAAAAAAAAAECAwUE/8QAHxEAAgICAQUAAAAAAAAAAAAAAAECAxExIQQTIiNB/9oADAMBAAIRAxEAPwDV0P8AcHPnVt0bS5D2LAKcjIPI1XC5P/cal/kx40RIecAUpQ2NgFS148kpHE+woS0GOxMzGNA267/qSp0VDjzqkMbfg3IPjHDzB5ii7oheUnUF9j7CWX0syGVIRhAGCDn1Oc+1C3SJcbvp64W3DFukwlqdJR2aQ4hZ8W5QJxtA5keLOPcGa1je2paJMS7TISbhvKiwRk7DgE5GeOeH0rgpj7DV6jHZyzVqasHKspztQ6zDfaIveoH0nzZm/wAAg0b9VvWt2vs/U1ivUqa+7EdRIjd8WpTqUHKFA7uIGUpOP8jWgZWB6OHDaj6GhDRt8RqLTzF2RGEdLqnEhsqKiNqynn7UXL4oUPQ0ttMag0ppyzNWuRdbTBUhbigwiYp4JBWT8RAyScn05UGDn4El2kOR9O3d9hfZPNtOKQvHJWOB/wB0pdGyZ1w1d36S688WY7rq3XFnlt25yfuo2RcLhy77I/IauROn/wB7I/IaWTysDw8XkSDFgud7usi2s3WVc0wMPdnIaAQUrJARnhlQCAd3nniOORbrm1iDMt1tehiOxHg4QUnBcCnFlSvclXtTt77OP72R+Q0pesBLebFuffeWvIU3uWSSMlI/mkrgo6KW3Ss2DZuqIkBT7q9rbaMnHHHpXc6t9wcb6bI8kkI/V4Ehh1vfkpUja4AfXCcemCPnSv1NeS9FYtjS+zL8hCVOKJ/qHyIP/RR70XTbfYNYWi6HcWojo7RasAoSQUEgY+SjwHCrkcmxV/Ar6GsiPaIddmyirU+l2SHleFy4gHyPkPXHsa1zvCm9ySCCMgjzpDs6gnP3K6tlMRCY09xhATGQPCnGM8OfGnrqlY8RGhFy0FTahVyCKlSoALBSc6zDE2TH0+1BiSZS1S17kMNlaiAgnkB88VKlFbAhB6h09qhV9jd/tMyIy0A52ctBYzzwcKwSCfavXtLbkAYmXEtqA3YjvKSEn7eCcD6calSqBSNh9XjVj2q+jdtyUSuRbXTBW7tx2oQlJSoj57VAH1BPDOK53G03h+Wt+2SbPGaX4lJetyXFKX5kkEelSpSNtPgeC5P/2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/228570/10-quick-ways-to-speed-up-a-slow-windows-pc/" class="title" rel="bookmark">10 Quick Ways to Speed Up a Slow PC Running Windows 7, 8, or 10</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAABgcABQEECAIJ/8QAMBAAAQMDAwMDAwMEAwAAAAAAAQIDBAUGEQASIQcxQRMiURQyYUJxgQgVkaEWI9H/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/EACERAAICAQQCAwAAAAAAAAAAAAABAhEDBBIhMRNBIlHR/9oADAMBAAIRAxEAPwAJodlzpMf+41l1NJpycKUt4hK1JwD7QcYzuSAVY5UD2Cinof8Apze+lg1N9I+it3ZHaguyWvQ+qcSlW95OcBQUCkbsAkJTkZBJ1pPTqJSpcebcEtNwXG+C4XJCAIkMFXJbaPtJKlHBUD+pZHB0Zx7AhSXo82rLjy0kEOOPrO9Sj2CV/djOOM4PgJxjXVqtZk1D+T/BwxxguA5bcaebDjLiHEHkKSoEH+dYUNB0W3HqdeG2Aw/DjBhJ9dtxIQo5I2bf1cAcqBPwoebWdc8SDIXGltONupUEozwHCTgYJ458DPgjuNcV/ZVFJ1YrFPp9Ji0mo0uLUGq0/wDRBEte2OCRnKyApXfGMDvjkd9Ji5ek9PoPT+pSoMlcmQysPOodSlMdLaSTgJJJOM5yVEnjTv6iU2lXbbsu3XZTKJy0+pGSXAFtugZSoeR+/wAHSPv/AKNdRa/aVRqF0Xwh9+LEW9HpsFo+itSEkhJPtGTjGdvnvrHJHJKScXSLg4pcoSFx3FT4jp9RaEYSEpabHJwAOw+caEZV3SFPEsQ2w349RRz/AK1oU+kPP1QR5CVMlSFKSonhWASf515fepsV1TClKcKT9zYSoEfOc633ehbeLPpnc1PjS5iEyir0pCAhwIdU2vandnCkkEfeM4PjVLULrt+fS2WP+P1OvRI0gBP0LHr+m82oYKgFAg9lA+Qc6ur8okiu0F1inzFQqk374clJwW3PGfwfP+we2kBVL56o2vEcg12wY0mU04QmQ3CWW3iTnePTO0knkkY/zqW6YRSaHBUrgqVUphqwlR6Iw04FOB9QWG2U99ykqA3HOcZPj8Z1FUyndUrKcW7KlxWhUHHIcqKvY4koyjIPwfcCPI0mbPh9X+o7rcGXSza1ALm55YjlhGCeSlKsqcWecEkgHB10zbVHgW9QIVEpjZbiQ2g00CcnA8k+STkk/J0lbfISpdHPk6PWemtShyL2p8iuU2G8n6WsxZK0r2A+xDicjcQeyVZA8cZJIal1BukzjVLepkW5LWlgBtyJkus8DchxBwUqyf1HnPA8ac9RiRZsN2HNjtSY7yShxp1AUhaT3BB4I1z11fspPTKhz7wtKpKhUz2omU1xxWxYWoJAT5IyRxnIGTzxiXFropST7K+4+kHT1LCXoNxVtiQ+paUMtEzPTUg7VpKEDPtUCDk8EY76Cz0Puhf/AGQmaRWYyiS3KcffZWoAkYUgEbSCCCO4Oja2LpjdU7ZDFCpcNcuElAmw6gCo/AWhZIBBCScBSVJIP3AnRrTLtt+3IiaZX7iixpqfeWYr42IB/JxkkgngYGcc4ySndieRKNNmKT1/hV+vikUairY9dBEaRMcHKwknaptP5GB7v/NNy26oitUGFU0o2GQ0FLbzn019lo/dKgR/GpqaSk/M4+qBxWxM3nAChQyRkYyO40p5Nz1ehO+k7crkUBW1LV00wspV+0tkBv8AyFHU1NbMhFs1f89iKJNWtaYuIRxOo7yKhHPyrKMLA/dOhiRclodUL0at16QxMpcNn6luHJYUkTnSn7gFJAKUAn853cY51NTSfQ0a9q9IbUpIekSadIgtzH9y6YzOccZbcBUlJS4kJUUlPOFdio6LoNi2XBZ9GPbFK2lRUS5GS4ok+SpWSf5Opqai2ChHuj//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/220986/how-to-use-all-of-windows-10%e2%80%99s-backup-and-recovery-tools/" class="title" rel="bookmark">How to Use All of Windows 10’s Backup and Recovery Tools</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/howto/windows-vista/what-is-svchostexe-and-why-is-it-running/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAAEDBAUHBgL/xAA/EAABAgQEAQYKBwkAAAAAAAABAgMABAUREhMhMQYHFCJBVIEVFiMyUWFxktHSQlORlaGiwSQlNGSChIWU8P/EABcBAQEBAQAAAAAAAAAAAAAAAAAEAgP/xAAeEQACAQQDAQAAAAAAAAAAAAAAAQIDBBRSERIxUf/aAAwDAQACEQMRAD8A0Z7ifj0LCRL8QpSRcrSypeH1WyxeOVmOMOWcPLS1J1/AD0VGnq1HuxstZp9OFKZdqMpVkMMlTaG1IUHdba9EqUR3+3SHWKvIJSphpufGS2CAttQBAITYKKbE+q+sXQuKcfYpks6E5eS4MNVxdy530l66P8er5YTxu5dPqK593H5Y3DxhkQkqVL1UAfy6iT3BN+r/AIQ45XJJDGfl1BSceDClpWO/pw4b29cdcylojniz3Zhfjdy6dnrn3eflh5ji7ltJ8pLV3/QV8sbYK/Ty8lsoqKQohONTCgkEm2pwx7TWpIvhgpngsjVWUrAP6sNoZdLRBWs92ZFLcU8ryrZsvWx/ZKH6RLHEfKsdQisd8or4Rt3NmO1q94Qc2Y7Wr3hGHc0tEaVvPZkoYLavTF/Yn4Qt0fXTH2J+EXkJEXZfCjrL6c8064p91tUtOpShJKHMbdnCLabaXvpDDU+6sELpFaaUBuoy5F+5RP4RYU3L8P1PDk4/JYsMyVK80ecj6H679cN8VqWWEIcaZyMxspW5OGXGK5uCoa+jQbxg6Dc89zdpDjUvUZq5spDWViHrsqw/GGZaeU9NJZVTKyygmxdcyMI9Zsq9vYDEapJlzRJJK25VxOa5YeFShP0ho5ur2dXdFepxotB4OS6XStSVJHEbhSLWtrca2xaW6hAHWZDPaZj8vwgyGe0TH5fhFHIVh+RYcZSinlONYSqYrRcUVjQpupJI1tpfS8XEhX5B6Tbdm5ynyzqrkticQsAXNjfS9xrDkFxCQQQBVU/H4bqOLOweTw4pYIT5o2WNV9+20QeL3nxZlAnVJOBQDFOEyL9K++mwsesXT6YIIA8VHN8DMj9quXF3ApYdJ6ZtdsbD0Eb7xWzRmMPT58Tt06CHDbXQYdhBBADz/OMlz+Ptzp2/7nQrTo20G4tsrrG+oiGc7A3pOXwC9+G7nv6vsgggD//Z"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/howto/windows-vista/what-is-svchostexe-and-why-is-it-running/" class="title" rel="bookmark">What Is svchost.exe and Why Is It Running?</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/284948/what-is-nvram-and-when-should-i-reset-it-on-my-mac/" class="title" rel="bookmark"><span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoADwDASIAAhEBAxEB/8QAHAAAAgMAAwEAAAAAAAAAAAAABAYABQcBAwgC/8QAKxAAAgEDAwMEAgMAAwAAAAAAAQIDBAURABIhBjFBBxMiURRhIzJxM0KB/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAeEQADAQACAwEBAAAAAAAAAAAAAQIRITEDEkEyIv/aAAwDAQACEQMRAD8AWbPBfbLWSS0c8ciMpUCUZwNB3mXqF543DR+yp+US8Bh51z6cS3ytkqvzpGno1/45HHOfoHzplr6bg/HXDc+tHZVe0i7RXhElhWsqZKZy+1dw4XP39jR9dVu1WI6a409ZlMu+Cu39ADvpV6/lio7dhse9I4WJfJOeT/4NXnSO+3WqGS/01tgTYtVSUJlEc9WT2yT2BHyHIzxpqjFqEV84FiWsNJI08U7xkYLhCFwf1pXu1qVFYx1U07HsigIV+/8AdM1V1hTVrzJPTvaZ4oEllhljclwQSOMeAVPbH7I10UElqqbWbpFeqap2KytGkPJXnczZxgjI5zjjjOhOz8C2qFOvo7bUU5StQU8sYySWHK6r6ijtCOojZQu3j+M8/vRfUV0o1MtVFQflxNNinJ3ABO+TkAcYxj9+dK1yrpJ6tnjnmMf/AE8YGc9h/p1piaaIVU6eqlskdNTiOIiONRwAuABrJr/6gU818lsvS9vmvtQgw80WREjZCjsDkZIGfsgDOdD3nqrqj1hui2Xp5JOn+m5ZPaaplcK1SSTwWJAC8HIGcAHOe2vTXpj6Y9H+l/Tb1tFVxytGWlaoCCbnwexLMAP7cAfIgKCdSXjU/rsL8rfR5V6u6M66t8L3jqHpe5qyxlqiqlgLQRKxG1QAMIBjuTk55182+n6jK224UKwtUwxq8TywRMqIXfCqzE5AA5XHAIGNaj6teqSXi41NvvtQ9JaKV/Zkp4DkTksckbVcg7AQxJB5IwPkDjfVd86Zud2hprDXLTVFQwapuBkamjiQYG0INoJwMAY00t18A8nlhiXPqKKe+WaGsgrq+4AC41CSFpypBwhkIyq5GSueeAeNUH5V33zU9NOlNJT8yGnKKAVTBJwcE4HI/Z+9dpoKOG5R2npe71jLJmWtqmlDRKvALZ8tyOx8jQ0WwUZgpKV3tyljLFEymWd1UF5HXcWx54OOP1xVZ8E5+glHbL5dZ4q2uqlalpvkkbMI/dHO4r2HAB0dN1PVW6GnoqWGOOOGPbujVf5DuPzOc8+PHYcaq2qxVfjmlWqSXG3a75xycBfI4xx950XUCtkl3RCiK4HMoZnJxyWPk6drexU86Nw6fu9sgVbettknjt88f4cNDTe5C6SZkbKnB/pIFPB5AI5BJ01bLdoaKCAdMUgo6zc6O0TBInCjaGZQSMgkH4qCc5zxqamsTXJp3DG/Un0/6h6eIesp5FoniVFInVl7ZYD5f1HOOPPbWb3emiuF+M8VvWBa6RFdWPx3nGRu8DPIH1qamreN8E6WjDPbqKb3LFT1csVGJl92KNlCoTKxMfIGc8HjttGqXqK1dOUM0kKyV0NUIcpDCQ6FjkEbjyADwdTU0I32wNfnSvtVJFFGjwPH7+eNxwR+9V96j6iiuEiRU8axjG07gdw+/wDNTU1bconn8n//2Q=="></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/284948/what-is-nvram-and-when-should-i-reset-it-on-my-mac/" class="title" rel="bookmark">What Is NVRAM, and When Should I Reset It On My Mac?</a>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div style="clear: both;"></div>	<div style="width: 300px; min-height: 20px; margin-top: 30px;">
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<div id="htgys01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="padding-top: 10px;"></div>
+</div>
+<div id="sidebar-float-widget">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom: 0px;"></div>
+<div class="g-page" data-width="320" data-href="//plus.google.com/100292833634918081724" data-layout="landscape" data-rel="publisher"></div>
+<div style="margin-top: 8px;">
+<a href="https://twitter.com/howtogeek" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @howtogeek</a>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="fb-root"></div>
+<script>/* Code removed by ScrapBook */</script>
+<div style="margin-bottom: 10px;"></div>
+<div class="fb-like" data-href="https://www.facebook.com/howtogeek" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div style="margin-bottom: 15px;"></div></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both; margin-bottom: 20px;"></div>
+<div style="clear: both;"></div>
+<div id="htgyr01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<div style="padding: 0px 20px 20px;">
+<h3 style="text-align: left; font-size: 30px; color: rgb(35, 70, 113); font-family: bebas_neueregular; text-transform: uppercase; font-weight: normal;">More Articles You Might Like</h3>
+<script async="" src="about:blank"></script>
+<!-- htg-below-article-content -->
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-9173525300015284" data-ad-slot="8688851009" data-ad-format="autorelaxed"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div>
+<div id="htgyl01">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width: 18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="https://discuss.howtogeek.com/">Discussion Forum</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color: rgb(255, 152, 84);">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="post">
+<input name="list" value="weekday" type="hidden">
+<input name="tr" value="footer" type="hidden">
+<input id="fromaddress2" name="emailaddress" style="z-index: -9; height: 1px; width: 1px; position: absolute;" type="text">
+<input name="email" id="ftemtxt" style="color: rgb(187, 187, 187);" value="Enter Your Email Here" type="text">
+<input id="ftemsub" value="Get Articles by Email" style="background: rgb(85, 168, 223) none repeat scroll 0% 0%;" type="submit">
+</form>
+<p></p>
+<div style="clear: both;"></div>
+</div>
+<div style="width: 280px; float: left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&amp;region=following&amp;screen_name=howtogeek&amp;tw_p=followbutton&amp;variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/howtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left; margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<div style="font-style: italic; font-size: 11px; text-align: center;">Disclaimer: Most of the pages on the internet include affiliate links, including some on this site.</div>
+<br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2016 How-To Geek, LLC&nbsp; All Rights Reserved</div>
+</div>
+</div><script id="pocket-btn-js" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<!-- Begin comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<script>/* Code removed by ScrapBook */</script>
+<!-- Quantcast Tag -->
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+
+</body><div id="diigotb-imagepanel" style="display: none; width: 24px;"><div class="diigotb-btn enabled" title="Save this image to Diigo" id="diigotb-quick-save"></div></div><div class="diigotb-border diigotb-left" style="display: none;"></div><div class="diigotb-border diigotb-top" style="display: none;"></div><div class="diigotb-border diigotb-right" style="display: none;"></div><div class="diigotb-border diigotb-bottom" style="display: none;"></div>
+</html>

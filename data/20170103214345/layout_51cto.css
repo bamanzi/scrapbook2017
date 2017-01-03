@@ -1,0 +1,25 @@
+/* Code tidied up by ScrapBook */
+a { text-decoration: none; }
+.left { float: left; overflow: hidden; }
+.right { float: right; overflow: hidden; }
+.center { margin: 0px auto; overflow: hidden; }
+.comment { width: 635px; font-family: "Microsoft Yahei"; }
+.comment .inner { width: 615px; }
+.comment .title { height: 39px; border-bottom: 3px solid rgb(186, 186, 186); overflow: hidden; }
+.comment .title .word { float: left; margin-left: 8px; height: 100%; font-size: 24px; line-height: 188%; }
+.comment .title .con { float: left; margin-left: 20px; height: 100%; font-size: 16px; line-height: 217%; }
+.comment .title .total { color: rgb(255, 51, 51); margin-left: 6px; margin-right: 6px; font-size: 22px; height: 100%; display: inline-block; line-height: 220%; }
+.comment .frame { width: 613px; height: 90px; border: 1px solid rgb(229, 229, 229); margin-top: 13px; }
+.comment .frame textarea { outline: medium none; float: left; width: 98%; height: 100%; border: medium none; font-size: 14px; line-height: 200%; padding: 0px 3px 0px 10px; }
+.comment .user { height: 112px; background: transparent url("user.png") no-repeat scroll left bottom; }
+.comment .user .icon { float: left; width: 46px; height: 46px; margin-top: 13px; overflow: hidden; }
+.comment .user dl { float: left; height: 100%; width: 390px; overflow: hidden; }
+.comment .user .icon img { float: left; width: 100%; height: 100%; }
+.comment .user dl dd { float: left; margin-left: 10px; width: 334px; overflow: hidden; }
+.comment .user .btn { font-size: 16px; margin-top: 10px; line-height: 350%; }
+.comment .user .btn { color: rgb(124, 124, 124); }
+.comment .user .btn a { color: rgb(0, 0, 0); }
+.comment .user .submit { float: right; width: 90px; height: 40px; margin-top: 13px; margin-right: 2px; background-color: rgb(190, 28, 26); font-size: 16px; color: rgb(255, 255, 255); line-height: 40px; text-align: center; }
+.comment .user .submit:hover { text-decoration: none; background-color: rgb(127, 2, 0); }
+.submit { cursor: pointer; }
+.comment .list { width: 100%; }

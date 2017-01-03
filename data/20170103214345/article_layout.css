@@ -1,0 +1,174 @@
+/* Code tidied up by ScrapBook */
+body { margin: 0px; padding: 0px; font-size: 12px; font-family: "Microsoft Yahei"; background-color: rgb(255, 255, 255); background-image: url("about://blank/"); color: rgb(51, 51, 51); }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p { padding: 0px; margin: 0px; }
+h1, h2, h3, h4, h5, h6 { margin: 5px 0px; }
+li { list-style-type: none; }
+ol, ul { list-style: outside none none; }
+address, cite, code, em, th { font-weight: normal; font-style: normal; }
+img { border: medium none; }
+a { text-decoration: none; color: rgb(51, 51, 51); }
+a:hover { color: rgb(190, 0, 0); }
+.left { float: left; overflow: hidden; }
+.right { float: right; overflow: hidden; }
+.center { margin: 0px auto; overflow: hidden; }
+input { outline: medium none; }
+.top_bg { height: 176px; border-bottom: 1px solid rgb(234, 231, 226); background: rgb(250, 250, 250) none repeat scroll 0% 0%; }
+.top_bg .wrap { margin: auto; width: 1002px; padding-top: 10px; height: 90px; }
+#list4 { border: 1px solid rgb(211, 211, 211); height: 88px; width: 240px; }
+#list4 ul { padding: 5px 0px 0px 10px; }
+#list4 li { background: transparent url("0.gif") no-repeat scroll -497px 2px; line-height: 20px; padding-left: 8px; }
+.top_bg .nav { margin: auto; width: 1002px; padding-top: 26px; height: 33px; }
+.top_bg .nav a.logo { margin-top: 6px; width: 97px; text-align: center; border-right: 1px solid rgb(212, 212, 212); display: inline-block; float: left; }
+.top_bg .nav ul { margin-top: 2px; padding-left: 7px; display: inline-block; float: left; }
+.top_bg .nav li { padding-right: 20px; float: left; line-height: 30px; }
+.top_bg .nav li a { color: rgb(102, 102, 102); font-size: 14px; font-family: "Microsoft Yahei"; }
+.top_bg .nav li a:hover { color: rgb(190, 0, 0); }
+.top_bg .nav li a.active { color: rgb(51, 51, 51); font-size: 22px; font-family: "Microsoft Yahei"; }
+.top_bg .nav-rsear { float: right; margin-top: 0px; border: 1px solid rgb(212, 212, 212); width: 189px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.top_bg .nav-rsear .sear-1 { float: left; height: 18px; padding: 7px 0px 7px 2px; width: 156px; text-indent: 10px; border: 0px none; color: rgb(175, 175, 175); }
+.top_bg .nav-rsear .sear-2 { float: left; width: 30px; height: 30px; background: transparent url("search.png") no-repeat scroll 0% 0%; border: 0px none; cursor: pointer; }
+.top_bg .nav-rsear .sear-1:focus { color: rgb(51, 51, 51); }
+.main_left a:hover, .zwnr a:hover, .main_left .wznr dd a:hover, .main_left .wznr h2 a:hover { color: rgb(190, 0, 0); }
+.main { margin: 25px auto; width: 1002px; background: transparent url("bgline.png") repeat-y scroll center top; overflow: hidden; }
+.main_left { width: 650px; float: left; }
+.main_left .wznr { width: 650px; }
+.main_left .wznr h2 { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 28px; }
+.main_left .wznr p { color: rgb(102, 102, 102); font-family: "Microsoft Yahei"; font-size: 14px; line-height: 26px; padding: 12px 0px; }
+.main_left .wznr dl { width: 650px; height: 20px; border-bottom: 1px dashed rgb(219, 219, 219); }
+.main_left .wznr dt { color: rgb(153, 153, 153); font-size: 12px; float: left; }
+.main_left .wznr dt span { color: rgb(153, 153, 153); font-size: 12px; padding-right: 10px; }
+.main_left .wznr dt em { color: rgb(153, 153, 153); font-size: 12px; padding-left: 10px; }
+.main_left .wznr dd { color: rgb(153, 153, 153); font-size: 12px; float: right; margin-top: -5px; }
+.main_left .zwnr { width: 650px; margin-top: 10px; border-bottom: 1px solid rgb(234, 231, 226); font-size: 16px; }
+.main_left .zwnr h2 { font-family: "Microsoft Yahei"; }
+.main_left .zwnr h2 a { color: rgb(255, 66, 0); font-family: "Microsoft Yahei"; text-decoration: underline; font-size: 16px; }
+.main_left .zwnr h2 a:hover { text-decoration: none; color: rgb(190, 0, 0); }
+.main_left .zwnr p { padding-bottom: 15px; color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 16px; text-align: justify; line-height: 30px; overflow-wrap: break-word; }
+.main_left .zwnr p a { color: rgb(255, 66, 0); font-family: "Microsoft Yahei"; font-size: 16px; }
+.main_left .zwnr p a:hover { text-decoration: none; color: rgb(190, 0, 0); }
+.main_left .zwnr ol { margin-left: 25px; }
+.main_left .zwnr ol li { list-style-type: decimal; }
+.main_left .zwnr ol li a { color: rgb(255, 66, 0); font-size: 16px; line-height: 30px; }
+.ln { color: rgb(255, 66, 0); }
+.main_left .zwnr ol, .main_left .zwnr ul { margin-left: 55px; padding-bottom: 15px; }
+.main_left .zwnr ol li { list-style-type: decimal; }
+.main_left .zwnr ol li a { color: rgb(255, 66, 0); }
+.main_left .zwnr ol li a:hover { color: rgb(190, 0, 0); }
+.dzdz { width: 70px; height: 41px; border: 1px solid rgb(236, 236, 236); border-radius: 2px; display: inline-block; color: rgb(102, 102, 102); font-family: "Microsoft Yahei"; font-size: 16px; line-height: 41px; margin-bottom: 17px; background: transparent url("dzdz.jpg") no-repeat scroll 8px 12px; padding-left: 37px; }
+.dzdz:hover { text-decoration: none; color: rgb(0, 0, 0); background: transparent url("dzdz.jpg") no-repeat scroll 8px -28px; }
+.share5 { margin-top: 19px; height: 48px; border-bottom: 1px solid rgb(235, 230, 226); }
+.share5 ul { width: 460px; float: left; }
+.share5 li { margin-right: 8px; float: left; }
+.share5 li a { padding: 0px 25px; text-align: center; height: 36px; line-height: 36px; color: rgb(144, 144, 144); font-family: "Microsoft Yahei"; font-size: 14px; display: inline-block; background: rgb(239, 239, 239) none repeat scroll 0% 0%; border-radius: 2px; }
+.share5 li a:hover { font-family: "Microsoft Yahei"; font-size: 14px; background: rgb(225, 225, 225) none repeat scroll 0% 0%; border-radius: 2px; text-decoration: none; }
+.share5 dl { float: left; }
+.share5 dt { width: 190px; float: left; }
+.share5 dt em { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; float: left; line-height: 36px; margin-right: 10px; }
+.share5 dt a { width: 34px; height: 34px; margin-right: 14px; float: left; padding-left: 0px; }
+.share5 dt a.wb { background: transparent url("share2.png") no-repeat scroll -3px -76px; }
+.share5 dt a.wb:hover { background: transparent url("share2.png") no-repeat scroll 0% 0%; }
+.share5 dt a.wx { background: transparent url("share2.png") no-repeat scroll -52px -76px; }
+.share5 dt a.wx:hover { background: transparent url("share2.png") no-repeat scroll -49px 0px; }
+.share5 dt a.more { background: transparent url("share2.png") no-repeat scroll -102px -76px; }
+.dzk { width: 650px; margin-top: 45px; }
+.dzk dl { width: 650px; border-bottom: 1px solid rgb(211, 207, 204); height: 39px; }
+.dzk dt { float: left; cursor: pointer; margin-right: 25px; color: rgb(153, 153, 153); font-size: 24px; font-family: "Microsoft Yahei"; height: 39px; }
+.dzk dt.show { display: block; color: rgb(0, 0, 0); font-size: 24px; font-family: "Microsoft Yahei"; border-bottom: 1px solid rgb(153, 153, 153); }
+.dzk ul { width: 650px; margin-top: 20px; float: left; height: 140px; overflow: hidden; }
+.dzk ul li { width: 650px; list-style: outside none none; display: none; }
+.dzk ul li.show { display: block; }
+.djdzk { width: 650px; }
+.djdzk div { float: left; }
+.djdzk div a { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; }
+.djdzk div a:hover { color: rgb(190, 0, 0); }
+#cnxh div { width: 162px; margin-right: 0px; }
+.m15 { margin-right: 15px; }
+.wrap_right { margin-left: 50px; width: 300px; float: left; }
+.wrap_right a:hover { color: rgb(190, 0, 0); }
+.mtgg, .bjtj, .news, .spkc, .rmzw, .zxzt, .jcpl, .ds { width: 300px; float: left; }
+.m30 { margin-bottom: 30px; }
+.bjtj h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; margin-bottom: 10px; }
+.bjtj h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; color: rgb(0, 0, 0); float: left; }
+.bjtj dl { width: 300px; height: 47px; border-bottom: 1px dashed rgb(203, 203, 203); margin-top: 13px; float: left; }
+.bjtj dt, .bjtj dt a { width: 56px; height: 35px; background: rgb(242, 242, 242) none repeat scroll 0% 0%; display: inline-block; line-height: 35px; color: rgb(102, 102, 102); font-family: "Microsoft Yahei"; font-size: 16px; text-align: center; float: left; }
+.bjtj dd { padding-left: 10px; width: 230px; float: left; color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; display: block; font-weight: normal; }
+.bjtj dd a { color: rgb(51, 51, 51); display: table-cell; vertical-align: middle; height: 35px; font-weight: normal; }
+.bjtj dd a:hover { color: rgb(190, 0, 0); }
+.news dl { width: 300px; font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; margin-bottom: 20px; }
+.news dt { color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 16px; float: left; cursor: pointer; margin-right: 15px; }
+.news dt.show { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; color: rgb(0, 0, 0); float: left; }
+.news ul { width: 300px; float: left; }
+.news ul li { width: 300px; list-style: outside none none; display: none; }
+.news ul li.show { display: block; }
+.news ul li a { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; background: transparent url("icon.png") no-repeat scroll 0px 8px; display: block; padding-left: 12px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.news ul li a:hover { color: rgb(190, 0, 0); }
+.spkc h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; margin-bottom: 12px; }
+.spkc h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; font-family: "Microsoft Yahei"; color: rgb(0, 0, 0); float: left; }
+.spkc h2 a { color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 12px; float: right; margin-top: 5px; }
+.spkc h2 a:hover { color: rgb(190, 0, 0); }
+.spkc dl { margin-bottom: 20px; float: left; }
+.spkc dt { width: 99px; height: 70px; position: relative; float: left; }
+.spkc dt span { background: transparent url("videoc.png") no-repeat scroll 0% 0%; position: absolute; z-index: 999; width: 28px; height: 28px; left: 36px; top: 21px; }
+.spkc dd { float: left; padding: 0px 0px 0px 9px; width: 190px; }
+.spkc dd h3 { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; line-height: 23px; font-weight: 100; }
+.spkc dd h4 { color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 12px; padding-top: 6px; }
+.spkc dd .fl { float: left; }
+.spkc dd .fl em { color: rgb(102, 102, 102); font-family: "Microsoft Yahei"; font-size: 14px; }
+.spkc dd .fr { float: right; }
+.rmzw h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; margin-bottom: 8px; }
+.rmzw h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; font-family: "Microsoft Yahei"; color: rgb(0, 0, 0); float: left; }
+.rmzw h2 a { color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 12px; float: right; margin-top: 5px; }
+.rmzw h2 a:hover { color: rgb(190, 0, 0); }
+.rmzw dl { height: 55px; border-bottom: 1px dashed rgb(203, 203, 203); float: left; padding-top: 10px; }
+.rmzw dt { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; height: 30px; }
+.rmzw dt a { color: rgb(51, 51, 51); }
+.rmzw dt a:hover { color: rgb(190, 0, 0); }
+.rmzw dd { width: 300px; }
+.rmzw dd h3 { width: 132px; float: left; color: rgb(102, 102, 102); font-size: 12px; font-family: "Microsoft Yahei"; }
+.rmzw dd span { width: 60px; float: left; color: rgb(190, 0, 0); font-size: 12px; font-family: "Microsoft Yahei"; }
+.rmzw dd a { width: 105px; float: left; color: rgb(51, 51, 51); font-size: 12px; font-family: "Microsoft Yahei"; text-align: right; }
+.rmzw dd a:hover { color: rgb(190, 0, 0); }
+.zxzt h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; }
+.zxzt h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; font-family: "Microsoft Yahei"; color: rgb(0, 0, 0); float: left; }
+.zxzt h2 a { color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 12px; float: right; margin-top: 5px; }
+.zxzt h2 a:hover { color: rgb(190, 0, 0); }
+.zxzt dl { margin-top: 20px; width: 300px; float: left; }
+.zxzt dt { width: 99px; float: left; }
+.zxzt dd { width: 190px; float: left; padding-left: 9px; color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; line-height: 23px; }
+.zxzt dd a { color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; }
+.zxzt dd a:hover { text-decoration: none; color: rgb(190, 0, 0); }
+.zxzt dd h3 { width: 190px; margin-top: 3px; }
+.zxzt dd h3 a { padding: 0px 13px; height: 23px; line-height: 23px; color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 12px; display: inline-block; margin-right: 10px; background: rgb(239, 239, 239) none repeat scroll 0% 0%; border-radius: 20px; }
+.zxzt dd h3 a:hover { background: rgb(204, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); text-decoration: none; }
+.jcpl h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; }
+.jcpl h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; font-family: "Microsoft Yahei"; color: rgb(0, 0, 0); float: left; }
+.jcpl dl { margin-top: 20px; float: left; }
+.jcpl dt { width: 45px; float: left; }
+.jcpl dd { width: 240px; float: left; margin-left: 14px; border-bottom: 1px dashed rgb(203, 203, 203); }
+.jcpl dd h3 { padding-bottom: 10px; color: rgb(153, 153, 153); font-family: "Microsoft Yahei"; font-size: 14px; font-weight: 100; }
+.jcpl dd h3 a { color: rgb(153, 153, 153); }
+.jcpl dd h4 { padding-bottom: 10px; color: rgb(51, 51, 51); font-family: "Microsoft Yahei"; font-size: 14px; line-height: 23px; font-weight: 100; }
+.ds h2 { width: 300px; color: rgb(0, 0, 0); font-family: "Microsoft Yahei"; font-size: 16px; height: 25px; border-bottom: 1px solid rgb(212, 207, 203); float: left; }
+.ds h2 span { border-bottom: 1px solid rgb(153, 153, 153); height: 25px; font-family: "Microsoft Yahei"; color: rgb(0, 0, 0); float: left; margin-bottom: 20px; }
+.ds h2 a { color: rgb(153, 153, 153); float: right; font-family: "Microsoft Yahei"; font-size: 12px; margin-top: 5px; }
+.ds dl { margin-top: 20px; float: left; }
+.ds dt { float: left; }
+.ds dt img { border: 1px solid rgb(198, 198, 198); float: left; }
+.ds dd { padding: 4px 0px 0px 10px; width: 190px; float: left; color: rgb(102, 102, 102); font-family: "Microsoft Yahei"; }
+.ds dd h3 { color: rgb(51, 51, 51); line-height: 23px; font-family: "Microsoft Yahei"; font-size: 14px; padding-bottom: 10px; }
+.ds dd h3 a { color: rgb(51, 51, 51); }
+.dydy { border: 1px solid rgb(221, 219, 220); background: rgb(254, 253, 232) none repeat scroll 0% 0%; width: 298px; height: 128px; float: left; }
+.dydy dl { padding: 14px 0px 0px 14px; width: 267px; }
+.dydy dt { width: 80px; float: left; }
+.dydy dd { width: 180px; float: left; padding-left: 6px; text-align: right; }
+.dydy dd h3 { color: rgb(206, 22, 9); font-family: "Microsoft Yahei"; font-size: 23px; height: 40px; font-weight: bold; }
+.dydy dd h4 { color: rgb(255, 78, 0); font-family: "Microsoft Yahei"; font-size: 14px; text-decoration: underline; height: 28px; }
+.dydy dd h4 a { color: rgb(255, 78, 0); }
+.clk { width: 40px; height: 118px; position: fixed; top: 530px; right: 50%; margin-right: -610px; bottom: auto; background: transparent url("clk.jpg") no-repeat scroll 0% 0%; transition: bottom 0.3s ease 0s; }
+.clk a.ewm, .clk a.yjk, .clk a.topx { width: 40px; height: 40px; display: block; }
+.clk a.ewm img { display: none; position: absolute; bottom: 0px; left: -163px; }
+.clk a.ewm:hover { background: transparent url("clk.jpg") no-repeat scroll -40px 0px; width: 40px; height: 40px; }
+.clk a.yjk:hover { background: transparent url("clk.jpg") no-repeat scroll -40px -40px; width: 40px; height: 40px; }
+.clk a.topx:hover { background: transparent url("clk.jpg") no-repeat scroll -40px -80px; width: 40px; height: 40px; }
+.top_bg .wrap, .top_bg .nav, .main { padding-left: 20px; padding-right: 20px; }
+.bds_more1 { float: left; font-size: 12px; padding-left: 17px; line-height: 16px; height: 16px; background-image: url("scsc1.jpg"); background-repeat: no-repeat; cursor: pointer; margin: 6px 6px 6px 0px; }
