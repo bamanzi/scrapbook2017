@@ -1,10 +1,10 @@
 id	20161222223136
 create	20161222223136
-modify	20161222223136
+modify	20170103213538
 type	
 title	Linux / Unix Desktop Fun: Text Mode ASCII-art Box and Comment Drawing
 chars	UTF-8
-icon	favicon.ico
+icon	
 source	https://www.cyberciti.biz/tips/unix-linux-draw-any-kind-of-boxes-around-text-editor.html
 comment	
 lock	
