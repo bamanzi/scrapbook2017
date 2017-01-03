@@ -90,6 +90,17 @@
                    NS1:source=""
                    NS1:comment=""
                    NS1:lock="" />
+  <RDF:Description RDF:about="urn:scrapbook:item20170103214804"
+                   NS1:id="20170103214804"
+                   NS1:create="20170103214804"
+                   NS1:modify="20170103214804"
+                   NS1:title="The Portable Freeware Collection - Others - LiveUSB"
+                   NS1:chars="UTF-8"
+                   NS1:source="https://www.portablefreeware.com/index.php?sc=312&amp;so=p"
+                   NS1:comment=""
+                   NS1:lock=""
+                   NS1:type=""
+                   NS1:icon="resource://scrapbook/data/20170103214804/favicon.png" />
   <RDF:Description RDF:about="urn:scrapbook:item20161217125720"
                    NS1:id="20161217125720"
                    NS1:create="20161217125720"
@@ -207,6 +218,7 @@
                    NS1:type=""
                    NS1:icon="resource://scrapbook/data/20161217121607/favicon.ico" />
   <RDF:Seq RDF:about="urn:scrapbook:item20161222224918">
+    <RDF:li RDF:resource="urn:scrapbook:item20170103214804"/>
     <RDF:li RDF:resource="urn:scrapbook:item20161222224702"/>
     <RDF:li RDF:resource="urn:scrapbook:item20161222224653"/>
     <RDF:li RDF:resource="urn:scrapbook:item20161222224638"/>
@@ -217,6 +229,7 @@
     <RDF:li RDF:resource="urn:scrapbook:item20161224112111"/>
     <RDF:li RDF:resource="urn:scrapbook:item20161224112317"/>
     <RDF:li RDF:resource="urn:scrapbook:item20161224112045"/>
+    <RDF:li RDF:resource="urn:scrapbook:item20170103214816"/>
   </RDF:Seq>
   <RDF:Description RDF:about="urn:scrapbook:item20161222224918"
                    NS1:id="20161222224918"
@@ -1061,6 +1074,17 @@
                    NS1:source="https://www.cyberciti.biz/faq/linux-unix-dd-command-show-progress-while-coping/"
                    NS1:comment=""
                    NS1:lock="" />
+  <RDF:Description RDF:about="urn:scrapbook:item20170103214816"
+                   NS1:id="20170103214816"
+                   NS1:create="20170103214816"
+                   NS1:title="MultiBootUSB Guide"
+                   NS1:chars="UTF-8"
+                   NS1:icon=""
+                   NS1:source="http://multibootusb.org/page_guide/"
+                   NS1:comment=""
+                   NS1:lock=""
+                   NS1:type=""
+                   NS1:modify="20170103214838" />
   <RDF:Description RDF:about="urn:scrapbook:item20161217125311"
                    NS1:id="20161217125311"
                    NS1:create="20161217125311"

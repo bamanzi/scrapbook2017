@@ -1,0 +1,4 @@
+/* Code tidied up by ScrapBook */
+.rating { position: relative; width: 86px; height: 12px; }
+.rating .cover { position: absolute; background: transparent url("stars-empty.png") no-repeat scroll left top; top: 0px; left: 0px; width: 86px; height: 12px; z-index: 101; }
+.rating .progress { position: absolute; background: transparent url("stars-full.png") no-repeat scroll left top; top: 0px; left: 0px; height: 12px; z-index: 102; }

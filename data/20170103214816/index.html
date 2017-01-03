@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 --><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Guide</title>
+
+  <meta name="author" content="Sundar">
+  
+  
+  <meta name="description" content="Learn how to use MultiBootUSB...">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="MultiBootUSB - Create multi boot live Linux on a USB disk..." href="http://multibootusb.org/feed.xml">
+
+  
+    
+      <link rel="stylesheet" href="font-awesome.min.css">
+    
+      
+  
+  
+    
+      <link rel="stylesheet" href="bootstrap.min.css">
+    
+      <link rel="stylesheet" href="bootstrap-social.css">
+    
+      <link rel="stylesheet" href="main.css">
+    
+    
+  
+  
+    
+      <link rel="stylesheet" href="css.css">
+    
+      <link rel="stylesheet" href="css_001.css">
+    
+  
+
+    
+  
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Guide">
+  <meta property="og:type" content="website">
+  
+  <meta property="og:url" content="http://mbusb.github.io/page_guide/">
+  
+  
+  <meta property="og:image" content="http://mbusb.github.io/img/avatar-icon.png">
+  
+  
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@yourname">
+  <meta name="twitter:creator" content="@yourname">
+  <meta name="twitter:title" content="Guide">
+  <meta name="twitter:description" content="## Requirements: * USB disk formatted in one of the following filesystem:- * FAT, NTFS, ext2/3/4 and or Btrf filesystem. However, **FAT filesystem is recommended** and ext2/3/4 and or Btrf filesystems will only work under Linux. * Live linux as an ISO file of your choice. * Latest version of...">
+  
+  <meta name="twitter:image" content="http://mbusb.github.io/img/avatar-icon.png">
+  
+  
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mbusb.github.io/">MultiBootUSB</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://multibootusb.org/page_features">Features</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://multibootusb.org/page_download">Download</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://multibootusb.org/page_guide">Guide</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://multibootusb.org/news">News</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://multibootusb.org/page_contact">Contact</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://mbusb.github.io/">
+	      <img class="avatar-img" src="avatar-icon.png">
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Guide</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Learn how to use MultiBootUSB...</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h2 id="requirements">Requirements:</h2>
+
+<ul>
+  <li>USB disk formatted in one of the following filesystem:-
+    <ul>
+      <li>FAT, NTFS, ext2/3/4 and or Btrf filesystem. However, <strong>FAT filesystem is recommended</strong> and ext2/3/4 and or Btrf 
+  filesystems will only work under Linux.</li>
+    </ul>
+  </li>
+  <li>Live linux as an ISO file of your choice.</li>
+  <li>Latest version of MultiBootUSB.</li>
+</ul>
+
+<h2 id="installation">Installation:</h2>
+
+<ul>
+  <li>On Windows:-
+    <ul>
+      <li>The windows version of multbootusb is a standalone program. No installation is required. Simply download the 
+  precompiled binary (.exe) file from here:-
+   http://multibootusb.org/download/</li>
+      <li>The program can be launched directly just by double clicking on the downloaded “.exe” file.</li>
+    </ul>
+  </li>
+  <li>
+    <p>On Linux:-</p>
+
+    <p><strong>Using binary method:-</strong></p>
+
+    <ul>
+      <li>Download the installation files (.deb and .rpm) files for various distros from here:-
+  http://multibootusb.org/download/</li>
+      <li>Use your favourite package manager to install multibootusb.</li>
+    </ul>
+
+    <p><strong>Using source code method:-</strong></p>
+
+    <ul>
+      <li>The install.py script provided with multibootusb should take care of all dependencies and install multibootusb.
+  Assume that you have downloaded the package named “multibootusb.tar.gz” in to your home directory.
+  Issue the following commands to install multibootusb:-</li>
+    </ul>
+
+    <p>tar -xf ./multibootusb.tar.gz  <br>
+  cd multibootusb  <br>
+  chmod +x ./install.py  <br>
+  sudo ./install.py</p>
+  </li>
+</ul>
+
+<h2 id="creating-live-linux-on-usb-disk">Creating live linux on USB disk:</h2>
+
+<ul>
+  <li>Creating live Linux on a USB disk involves three steps and clearly written as <strong>Step 1</strong>, <strong>Step 2</strong> and <strong>Step 3</strong> in 
+<strong>bold</strong> letters on the right side of multibootusb GUI. Step wise operations are shown below:-
+    <ul>
+      <li><strong>Step 1</strong>
+        <ul>
+          <li>Insert USB disk and wait for few seconds so that Operating System can detect it.
+            <ul>
+              <li>All modern Linux distros should mount USB disks automatically after insertion. If not, open file manager and 
+  click on the USB disk icon to mount it. The same thing can be done from terminal also. But I am not going in to details.</li>
+            </ul>
+          </li>
+          <li>Open multibootusb by double clicking on the downloaded “.exe” file under Windows. Under Linux, multibootusb can 
+  be found under system menu. On Ubuntu click on dash –&gt; type “multibootusb” and click on the multibootusb icon.
+            <ul>
+              <li>Under Linux a password window will popup for user input. Provide sudo password. If you are running as root 
+  then no window will popup.</li>
+            </ul>
+          </li>
+          <li>Once multibootusb is opened you can see the list of USB disk on the combobox close to <strong>Step 1</strong>.The USB details are listed 
+  below “Refresh USB” button. Review it and choose the disk of your desire.</li>
+          <li>Use the “Refresh USB” button to detect USB disks if you have inserted the disk after opening multibootusb GUI.</li>
+        </ul>
+      </li>
+      <li><strong>Step 2</strong>
+        <ul>
+          <li>Now the <strong>Step 1</strong> is over and proceed to <strong>Step 2</strong>. Clicking on “Browse ISO” button should bring file chooser dialog 
+  and you can choose your live Linux. The choosen live Linux path will be available in the line edit for your view.</li>
+        </ul>
+      </li>
+      <li><strong>Step 3</strong>
+        <ul>
+          <li>The third and final step is to simply click on “Create” button available close to <strong>Step 3</strong> text. multibootusb will 
+   analyse the ISO and check if ISO is supported.</li>
+          <li>If the live Linux is supported then a “Review Selection” window will appear and wait for your confirmation. 
+  The review window will indicate the selected USB disk, mount path of the disk and a selected ISO. You can create 
+  live USB disk by clicking “Yes” button on the review selection window.</li>
+          <li>The progress bar will indicate the progress on live Linux installation. The text label just above the progress bar 
+  will indicate the current operation of the installation process (like Extracting some file…).</li>
+          <li>You will get the completion message after successful installation of live Linux. Now the installation is 
+  complete and you can reboot to live Linux after setting your BIOS to boot from USB disk.</li>
+          <li>After successful install, the installed distro is displayed in the list box, seen on the left side of GUI. 
+  The list box will list all the distros installed via multibootusb every time you open multibootusb.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="adding-newadditional-live-linux">Adding new/additional live Linux:</h2>
+<ul>
+  <li>Adding addition and new live linux is simple process. Just follow the <strong>Step 1</strong>, <strong>Step 2</strong> and <strong>Step 3</strong> mentioned in the
+   <strong>Creating live linux on USB disk</strong> section above.</li>
+</ul>
+
+<h2 id="removinguninstalling-distro">Removing/Uninstalling distro:</h2>
+<ul>
+  <li>You can only uninstall distros installed by multibootusb.</li>
+  <li>To do that you must select a disto from the list and choose “Uninstall Distro” button. A Review Selection window will 
+popup and ask you to confirm. Click on the Yes btton to remove installed distro. The progress bar will indicate the 
+progress of the uninstall process. You will get the completion message after successful uninstall of the selected distro.</li>
+</ul>
+
+<h2 id="reinstalling-syslinux">Reinstalling Syslinux:</h2>
+<ul>
+  <li>There might be a situation you may want to install syslinux for various reasons like using other live usb creator will 
+remove syslinux installation performed by multibootusb. In such a situation you can reinstall syslinux using syslinux tab.</li>
+  <li>Go to Syslinu tab –&gt; Install Syslinux section –&gt; Choose any of the method listed and click on “Install” button.</li>
+  <li>This will install syslinux on multibootusb directory in a selected USB disk.</li>
+</ul>
+
+<h2 id="edit-syslinux-config-files">Edit Syslinux config files:</h2>
+<ul>
+  <li>Please perform this action with caution. Any change in the path will make your distro install completely useless.</li>
+  <li>You can view and edit syslinux.cfg file located under multibootusb directory using the feature provided with multibootusb.
+ Syslinu tab –&gt; Edit Syslinux.cfg section –&gt; Click on “Edit” button. This action will open syslinux.cfg in a text editor.</li>
+</ul>
+
+<h2 id="test-your-iso-and-usb-with-qemu-option">Test your ISO and USB with QEMU option:</h2>
+<ul>
+  <li>Testing your downloaded ISO and USB installation is useful as need of rebooting your system is not required. multibootusb provides 
+ an option to do this as well.</li>
+  <li>
+    <p>QEMU binaries are shipped with Windows as default. But for Linux you need to install “qemu” package to avail this feature.</p>
+
+    <p><strong>Booting ISO</strong></p>
+
+    <ul>
+      <li>Go to –&gt; QEMU tab –&gt; Boot ISO section –&gt; Click on Browse ISO to choose an ISO file.</li>
+      <li>Then choose your desired ram size and click on Boot ISO button.</li>
+      <li>Your ISO will boot in a new separate window.</li>
+    </ul>
+
+    <p><strong>Booting USB</strong></p>
+
+    <ul>
+      <li>Booting USB also similar to booting ISO as mentioned above.</li>
+      <li>Go to –&gt; QEMU tab –&gt; Boot USB section.</li>
+      <li>Then choose your desired ram size and click on Boot USB button.</li>
+      <li>Your USB as listed in the combobox (in <strong>Step 1</strong>) will boot in a new separate window.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="author">Author</h3>
+<ul>
+  <li>Sundar.</li>
+</ul>
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/mbusb" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+      
+		  
+          <li>
+            <a href="mailto:feedback.multibootusb@gmail.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  Sundar
+		  &nbsp;•&nbsp;
+		  2016
+
+		  
+		  &nbsp;•&nbsp;
+		  <a href="http://mbusb.github.io/">multibootusb.org</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script async="" src="about:blank"></script><script>/* Code removed by ScrapBook */</script><script src="about:blank"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="about:blank"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="about:blank"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>/* Code removed by ScrapBook */</script>
+	<!-- End Google Analytics -->
+
+
+  
+  
+
+</body>
+</html>
