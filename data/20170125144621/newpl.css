@@ -1,0 +1,46 @@
+/* Code tidied up by ScrapBook */
+@charset "gb2312";
+@media not all {
+}
+.plDinfo { margin-top: 5px; }
+.plDinfo .commt-sub { height: 48px; line-height: 48px; clear: both; position: relative; }
+.plDinfo .commt-sub .fontsline { color: rgb(153, 153, 153); position: absolute; right: 110px; top: 6px; z-index: 1; }
+.plDinfo .commt-sub .fontsline strong { font-family: Georgia,Tahoma,Arial; font-size: 26px; position: relative; top: -5px; vertical-align: middle; font-weight: normal; padding: 0px 4px; }
+.plDinfo .commt-sub .tips { position: absolute; right: 90px; top: 6px; color: rgb(255, 144, 0); }
+.commt-sub .submit { background: url("plbg.png") no-repeat scroll 0% 0% transparent; }
+.plDinfo .commt-sub .submit { position: absolute; top: 13px; width: 89px; height: 29px; background-position: 0px -252px; border: medium none; right: 0px; text-indent: -10000px; }
+.plDinfo .commt-sub .submit:hover { background-position: -95px -252px; }
+.plDinfo textarea { width: 598px; height: 45px; outline: medium none; resize: none; padding: 5px; font-size: 14px; border: 0px none; overflow-y: auto; color: rgb(51, 51, 51); }
+.plDinfo .textarea-wraper, .list-wraper { width: 608px; height: 55px; border: 1px solid rgb(216, 216, 216); position: relative; z-index: 10; }
+.plDinfo .textarea-wraper-login, .list-wraper { height: 81px; border: 1px solid rgb(123, 214, 246); -moz-outline-radius: 8px 8px 8px 8px; box-shadow: 0px 0px 10px rgba(123, 214, 246, 0.6); }
+.plDinfo .textarea-wraper-login textarea, .list-wraper textarea { height: 70px; }
+.plDinfo .textarea-wraper-login .face, .list-wraper .face { height: 26px; line-height: 24px; background: none repeat scroll 0% 0% rgb(246, 246, 246); position: relative; overflow: hidden; display: block; }
+.plArea { height: auto; clear: both; margin: 20px auto 0px; }
+.newplArea { padding-top: 0px; padding-bottom: 24px; }
+.newplArea .login { float: left; margin-top: 6px; line-height: 20px; }
+.newplArea .login img { float: left; vertical-align: middle; border-radius: 2px 2px 2px 2px; }
+.newplArea .login .logoA { float: left; width: 52px; height: 19px; background: url("plbg_001.png") repeat scroll -58px -101px transparent; text-indent: -10000px; margin-left: 13px; }
+.newplArea .login .logoA:hover { background-position: 0px -101px; }
+.newplArea .login a { font-family: "simsun"; }
+.newplArea .login a:hover { color: rgb(204, 0, 0); }
+.sucssTip { border: 1px solid rgb(233, 233, 233); height: 50px; line-height: 50px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding-left: 18px; margin-top: 10px; clear: both; width: 610px; }
+.sucssTip span { font-size: 14px; color: rgb(102, 102, 102); padding: 5px 0px 5px 30px; background: url("plbg_001.png") no-repeat scroll -60px -10px transparent; }
+.sendList { position: relative; z-index: 101; float: left; margin: 2px 6px 0px 10px; height: 25px; overflow: hidden; width: 60px; display: inline; }
+.sendList a { display: block; outline: medium none; }
+.sendList a:hover { text-decoration: none; color: rgb(68, 104, 161); }
+.pl-top .bd li em, #toTop, .closebtn a, .close, .sanjia, .sico { background: url("plbg.png") no-repeat scroll 0% 0% transparent; }
+.ico_face, .ico_at { margin-top: 0px; width: 16px; background-position: -61px -57px; float: right; height: 16px; }
+.txt, .more { display: inline-block; height: 16px; padding-left: 24px; position: relative; white-space: nowrap; }
+a.txt { color: rgb(68, 104, 161); }
+.sico { cursor: pointer; left: 0px; position: absolute; top: 3px; }
+.ico_at { background-position: -86px -56px; }
+.listArea { width: 602px; padding: 0px 13px 15px; border: 1px solid rgb(233, 233, 233); background: none repeat scroll 0% 0% rgb(248, 247, 247); }
+.listArea .list-wraper { width: 600px; box-shadow: none; border: 1px solid rgb(216, 216, 216); }
+.listArea .list-wraper textarea { width: 590px; padding: 5px; }
+.listArea .hd { padding-top: 5px; position: relative; }
+.listArea .commt-sub .submit { width: 56px; height: 24px; background-position: 0px -219px; }
+.listArea .commt-sub .submit:hover { background-position: -62px -219px; }
+.listArea .commt-sub .fontsline { right: 72px; top: 3px; }
+.closebtn { width: 15px; height: 15px; position: absolute; right: 2px; top: 13px; }
+.closebtn a { display: block; width: 15px; height: 15px; background-position: 0px -45px; text-indent: -10000px; }
+.closebtn a:hover { background-position: 0px -30px; }

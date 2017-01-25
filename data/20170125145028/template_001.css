@@ -1,0 +1,6 @@
+/* Code tidied up by ScrapBook */
+div.mod-languages ul { margin: 0px; padding: 0px; list-style: none outside none; }
+div.mod-languages li { margin-left: 5px; margin-right: 5px; }
+div.mod-languages ul.lang-inline li { display: inline; }
+div.mod-languages img { border: medium none; }
+div.mod-languages a { text-decoration: none; }

@@ -1,0 +1,31 @@
+/* Code tidied up by ScrapBook */
+.ccomment div { margin: 0px; }
+.ccomment-comments-list { margin: 10px 0px ! important; padding: 0px ! important; list-style: none outside none ! important; }
+.ccomment-comments-list ul { list-style: none outside none; }
+.ccomment ul.ccomment-comments-list li { background: none repeat scroll 0% 0% transparent; padding: 0px; }
+.ccomment-comment { border-top: 1px dotted rgb(204, 204, 204); }
+ul.ccomment-comments-list > li.ccomment-comment:first-child { border-top: medium none; }
+.ccomment-comment-content { margin: 5px 0px; padding: 5px 0px; word-wrap: break-word; }
+.ccomment .ccomment-form { margin-top: 20px; }
+.ccomment-form .muted { color: rgb(153, 153, 153); }
+.ccomment-menu { border-bottom: 1px dotted rgb(204, 204, 204); }
+.ccomment-voting { cursor: pointer; padding: 1px 0px 1px 2px; border: 1px solid transparent; transition: all 0.3s linear 0s; border-radius: 2px 2px 2px 2px; display: inline-block; height: 14px; line-height: 14px; width: 14px; }
+.ccomment-thumbs-up { background: url("thumbs_up.png") no-repeat scroll 1px 1px transparent; }
+.ccomment-thumbs-down { background: url("thumbs_down.png") no-repeat scroll 1px 1px transparent; }
+.ccomment-comment > div:hover .ccomment-voting { background: none repeat scroll 0% 0% rgb(234, 234, 234); padding: 1px 0px 1px 2px; border: 1px solid rgb(198, 198, 198); }
+.ccomment-comment > div:hover .ccomment-voting.ccomment-thumbs-up { background: url("thumbs_up.png") no-repeat scroll 1px 1px rgb(234, 234, 234); }
+.ccomment-comment > div:hover .ccomment-voting.ccomment-thumbs-down { background: url("thumbs_down.png") no-repeat scroll 1px 1px rgb(234, 234, 234); }
+i.ccomment-voting { vertical-align: bottom; }
+.ccomment-moderation { height: 16px; }
+.ccomment-no-touch .ccomment-moderation { display: none; }
+.ccomment-no-touch .ccomment-comment > div:hover .ccomment-moderation { display: block; }
+.ccomment-comment .btn-link { margin: 0px; padding: 0px; }
+.ccomment-menu h4 { margin: 6px 0px; }
+.ccomment-menu .pull-right { margin-top: 3px; }
+.ccomment-avatar, .ccomment-avatar-form { max-width: 100%; }
+.ccomment-comment-content a { text-decoration: none; }
+.ccomment-comment-content a:hover { background: none repeat scroll 0% 0% transparent ! important; color: rgb(0, 85, 128) ! important; text-decoration: underline; }
+.ccomment div.ccomment-quote-text { margin: 10px 0px; }
+.ccomment div.ccomment-quote-text-author { font-weight: bold; }
+.ccomment div.ccomment-quote-text-body { padding: 5px; background: none repeat scroll 0% 0% rgb(242, 241, 238); border: 1px solid rgb(191, 195, 198); border-radius: 5px 5px 5px 5px; font-style: italic; }
+.ccomment .ccomment-replies { margin-left: 25px; }

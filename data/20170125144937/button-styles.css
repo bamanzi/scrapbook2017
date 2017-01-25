@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+@import url("dashicons.min.css");
+a.fasc-button { display: inline-block; color: rgb(255, 255, 255); text-decoration: none; margin: 3px 0px; }
+a.fasc-button:hover { text-decoration: none; }
+a.fasc-button.fasc-ico:before, a.fasc-button.fasc-ico-before:before { vertical-align: middle; display: inline-block; margin-top: -2px; }
+a.fasc-size-large.fasc-ico:before, a.fasc-size-large.fasc-ico-before:before { font: 400 20px/22px dashicons; padding-right: 6px; }
+.fasc-size-large { font-size: 18px; padding: 8px 10px; border: 0px none; }
+.fasc-type-flat:hover { background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); }

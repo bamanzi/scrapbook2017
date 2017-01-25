@@ -1,0 +1,77 @@
+/* Code tidied up by ScrapBook */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+fieldset, img { border: 0px none; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+ol, ul { list-style: none outside none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+strong { font-weight: 800; }
+textarea { resize: none; }
+body { font: 12px/1.75 "宋体","Arial Narrow",sans-serif; background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(0, 0, 0); }
+a:link { color: rgb(11, 59, 140); text-decoration: none; }
+a:visited { color: rgb(11, 59, 140); text-decoration: none; }
+a:hover, a:active { color: rgb(11, 59, 140); text-decoration: underline; }
+.wrapper { width: 960px; overflow: hidden; margin: 0px auto; }
+.hd, .bd, .ft { width: 100%; overflow: hidden; }
+#Main-Article-QQ { position: relative; background: url("rightBorder2.png") repeat-y scroll right center transparent; }
+#Main-Article-QQ .main { width: 650px; float: left; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-top: 2px solid rgb(0, 55, 149); }
+#Main-Article-QQ .side { width: 300px; float: right; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.mod-left { width: 648px; border: 1px solid rgb(216, 216, 216); margin-bottom: 8px; }
+.mod-left h2 { color: rgb(28, 44, 88); }
+.mod-right { width: 300px; margin-bottom: 8px; }
+.mod-right .hd { width: 300px; height: 29px; background: url("split_v4.4.png") no-repeat scroll 0px -571px transparent; line-height: 29px; }
+.mod-right h2 { font-size: 14px; color: rgb(28, 44, 88); padding-left: 12px; }
+.mod-right .bd { width: 298px; border-right: 1px solid rgb(218, 218, 218); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(218, 218, 218) rgb(218, 218, 218); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 10px 0px; }
+.mod-right .bd li { line-height: 21px; color: rgb(11, 59, 140); }
+.Crumbs-Article-QQ { float: left; padding: 10px 0px 8px 10px; }
+.Crumbs-Article-QQ img { float: left; margin: 0px; }
+.Crumbs-Article-QQ span { float: left; padding-left: 20px; padding-top: 11px; color: rgb(0, 0, 0); }
+.Crumbs-Article-QQ span em { color: rgb(126, 126, 126); }
+.Crumbs-Article-QQ span a:visited { color: rgb(11, 59, 140); }
+.Form-Crumbs-Article-QQ { float: right; padding-top: 14px; padding-right: 10px; }
+.Form-Crumbs-Article-QQ .submit { float: right; width: 60px; height: 22px; background: url("split_v4.4.png") no-repeat scroll -100px -372px transparent; border: 0px none; line-height: 21px; font-size: 12px; cursor: pointer; }
+.Form-Crumbs-Article-QQ .inputWarp { float: right; width: 202px; height: 21px; background: url("split_v4.4.png") no-repeat scroll 0px -344px transparent; margin-right: 3px; margin-left: 5px; padding-top: 1px; padding-left: 0px; text-align: center; }
+.Form-Crumbs-Article-QQ .txtArea { width: 176px; border: 0px none; height: 16px; margin: 2px auto 0px; font-size: 14px; }
+.Form-Crumbs-Article-QQ .SosonLogo { float: left; width: 20px; height: 20px; }
+.Form-Crumbs-Article-QQ .SosonLogo span { display: none; }
+#C-Main-Article-QQ { border-right: 1px solid rgb(211, 219, 230); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(211, 219, 230) rgb(211, 219, 230); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; text-align: left; }
+#C-Main-Article-QQ .hd, #C-Main-Article-QQ .bd { width: 588px; margin: 0px auto; overflow: hidden; }
+#C-Main-Article-QQ .hd { text-align: center; padding-top: 22px; padding-bottom: 0px; }
+#C-Main-Article-QQ h1 { color: rgb(0, 0, 0); font-family: "宋体",arial; font-size: 26px; font-size-adjust: none; font-stretch: normal; font-style: normal; font-variant: normal; line-height: 30px; margin-bottom: 6px; font-weight: 800; }
+#C-Main-Article-QQ .titBar { width: 578px; overflow: hidden; padding: 0px 5px; position: relative; }
+#C-Main-Article-QQ .info { color: rgb(126, 126, 126); height: 16px; }
+#C-Main-Article-QQ .infoCol { padding-right: 19px; }
+#C-Main-Article-QQ .info .where { padding-left: 19px; color: rgb(126, 126, 126); }
+#C-Main-Article-QQ .info .auth { color: rgb(126, 126, 126); padding-left: 19px; }
+#cmt_1:visited, .isCommt a:visited, .otherNews a:visited, a.hasCom:visited, .bottom_ad_text a:visited, .sildPic-Article-QQ .cnt a:visited, .mod-right a:visited, #Cnt-Main-Article-QQ a:visited, .otherZt a:visited, .hotKey a:visited { color: rgb(11, 59, 140); }
+#C-Main-Article-QQ .hd, #C-Main-Article-QQ .bd, #C-Main-Article-QQ .ft { clear: both; }
+#C-Main-Article-QQ .Introduction { width: 544px; border-width: 1px 0px; border-style: solid none; border-color: rgb(229, 229, 229) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: none repeat scroll 0% 0% rgb(251, 251, 251); line-height: 24px; font-size: 14px; padding: 13px 24px 13px 20px; margin: 18px auto 15px; }
+#Cnt-Main-Article-QQ { padding-bottom: 20px; font-size: 14px; }
+#Cnt-Main-Article-QQ p { line-height: 25px; margin: 20px auto 0px; }
+#C-Main-Article-QQ .ft { width: 100%; }
+.correlation-Article-QQ { width: 609px; margin: 0px auto; }
+.isCommt { width: 600px; text-align: right; padding-bottom: 5px; padding-right: 9px; color: rgb(11, 59, 140); }
+.isCommt { display: none; }
+.isCommt em { color: rgb(204, 0, 0); }
+#C-Main-Article-QQ { position: relative; z-index: 3; }
+#C-Main-Article-QQ .hd { position: relative; z-index: 3; }
+#C-Main-Article-QQ .bd { position: relative; z-index: 2; }
+#C-Main-Article-QQ .ft { position: relative; z-index: 1; }
+#C-Main-Article-QQ .hd, #C-Main-Article-QQ .bd, #C-Main-Article-QQ .titBar { overflow: visible; }
+.titBar .info { margin: 0px auto; padding-right: 80px; }
+.Tool-Article-QQ { display: block; }
+.Tool-Article-QQ { width: 638px; height: 52px; padding: 20px 12px 15px 0px; }
+.Tool-Article-QQ a:visited { color: rgb(11, 59, 140); }
+.Tool-Article-QQ ul { float: right; }
+.Tool-Article-QQ li { float: left; margin-right: 12px; padding-top: 9px; }
+.Tool-Article-QQ a { background: url("s_Tool_Article.png") no-repeat scroll 0% 0% transparent; width: 16px; height: 16px; overflow: hidden; display: inline-block; }
+#C-Main-Article-QQ .ft, .followall_mod .bd { overflow: visible; }
+.QQeditor { width: 609px; margin: 0px auto 6px; font-size: 14px; color: rgb(138, 138, 138); text-align: right; }
+.a-tips-Article-QQ:link { color: rgb(0, 0, 0); border-bottom: 1px dotted rgb(7, 129, 199); }
+.a-tips-Article-QQ:hover { color: rgb(11, 59, 140); background: none repeat scroll 0% 0% rgb(235, 242, 250); text-decoration: none; }
+.a-tips-Article-QQ:visited { color: rgb(0, 0, 0); border-bottom: 1px dotted rgb(7, 129, 199); }
+.place-Article-QQ .hd { background: url("split_v4.4.png") no-repeat scroll 0px -537px transparent; }
+.place-Article-QQ h2 { width: 89px; float: left; }
+.place-Article-QQ .bd { background: none repeat scroll 0% 0% rgb(243, 248, 255); border-right: 1px solid rgb(217, 228, 243); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(217, 228, 243) rgb(217, 228, 243); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; padding: 12px 0px 3px; }
+.place-Article-QQ ol { margin-left: 11px; }
+.place-Article-QQ li { width: 100%; overflow: hidden; }
+.place-Article-QQ li a { float: left; width: 258px; }

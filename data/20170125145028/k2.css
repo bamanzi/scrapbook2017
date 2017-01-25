@@ -1,0 +1,46 @@
+/* Code tidied up by ScrapBook */
+a:active, a:focus { outline: 0px none; }
+img { border: medium none; }
+#k2Container { padding: 0px 0px 24px; }
+.clr { clear: both; height: 0px; line-height: 0; display: block; float: none; padding: 0px; margin: 0px; border: medium none; }
+.even { background: none repeat scroll 0% 0% rgb(246, 246, 246); padding: 2px; border-bottom: 1px dotted rgb(204, 204, 204); }
+.odd { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 2px; border-bottom: 1px dotted rgb(204, 204, 204); }
+div.itemView { padding: 8px 0px 24px; margin: 0px 0px 24px; border-bottom: 1px dotted rgb(204, 204, 204); }
+div.itemHeader {  }
+div.itemHeader span.itemDateCreated { color: rgb(153, 153, 153); }
+div.itemHeader h2.itemTitle { font-family: "Open Sans",sans-serif; font-size: 32px; font-weight: normal; line-height: 110%; padding: 10px 0px; margin: 0px; color: rgb(75, 80, 83); }
+div.itemBody { padding: 8px 0px; margin: 0px; }
+div.itemIntroText { color: rgb(51, 51, 51); font-size: 18px; line-height: 28px; padding: 4px 0px 12px; font-weight: 400; }
+div.itemFullText {  }
+div.itemFullText p {  }
+div.itemFullText img {  }
+div.itemLinks { margin: 16px 0px; padding: 0px; }
+div.itemCategory {  }
+div.itemCategory span { font-weight: bold; color: rgb(85, 85, 85); padding: 0px 4px 0px 0px; }
+div.itemCategory a {  }
+div.itemTagsBlock { padding: 4px; border-bottom: 1px dotted rgb(204, 204, 204); }
+div.itemTagsBlock span { font-weight: bold; color: rgb(85, 85, 85); padding: 0px 4px 0px 0px; }
+div.itemTagsBlock ul.itemTags { list-style: none outside none; padding: 0px; margin: 0px; display: inline; }
+div.itemTagsBlock ul.itemTags li { display: inline; list-style: none outside none; padding: 0px 4px 0px 0px; margin: 0px; text-align: center; }
+div.itemTagsBlock ul.itemTags li a {  }
+div.itemTagsBlock ul.itemTags li a:hover {  }
+div.itemAuthorBlock { background: none repeat scroll 0% 0% rgb(246, 246, 246); margin: 70px 0px; min-height: 100px; }
+div.itemAuthorBlock img.itemAuthorAvatar { float: left; display: block; margin: 0px 8px 0px 0px; width: 100px; }
+div.itemAuthorBlock div.itemAuthorDetails { margin: 0px; }
+div.itemAuthorBlock div.itemAuthorDetails p {  }
+div.itemAuthorLatest { margin-bottom: 16px; padding: 0px; }
+div.itemRelated { margin-bottom: 16px; padding: 0px; }
+div.itemRelated h3 {  }
+div.itemRelated ul {  }
+div.itemRelated ul li {  }
+div.itemRelated ul li.clr { clear: both; height: 0px; line-height: 0; display: block; float: none; padding: 0px; margin: 0px; border: medium none; }
+a.itemRelTitle {  }
+div.itemNavigation { padding: 4px 8px; margin: 0px 0px 24px; border-top: 1px dotted rgb(204, 204, 204); border-bottom: 1px dotted rgb(204, 204, 204); background: none repeat scroll 0% 0% rgb(255, 255, 240); }
+div.itemNavigation a.itemPrevious { padding: 0px 12px; }
+div.itemNavigation a.itemNext { padding: 0px 12px; }
+div.itemBackToTop { text-align: right; }
+div.itemBackToTop a { text-decoration: underline; }
+div.itemBackToTop a:hover { text-decoration: underline; }
+span.itemDateCreated { margin-left: 40px; }
+p.createdate {  }
+h3.itemAuthorName { padding: 15px 0px 0px 25px; margin: 0px; text-decoration: none; font-size: 15px; }

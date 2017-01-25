@@ -1,0 +1,6 @@
+/* Code tidied up by ScrapBook */
+button::-moz-focus-inner { padding: 0px; border: 0px none; }
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+}
+@media all and (max-width: 900px) {
+}

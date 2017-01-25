@@ -1,0 +1,31 @@
+/* Code tidied up by ScrapBook */
+.ccomment .pull-left { float: left; }
+.ccomment .pull-right { float: right; }
+.ccomment .small { margin: 0px; }
+.ccomment .muted { color: rgb(153, 153, 153); }
+.row-fluid { width: 100%; }
+.row-fluid:before, .row-fluid:after { display: table; content: ""; line-height: 0; }
+.row-fluid:after { clear: both; }
+.row-fluid [class*="span"] { display: block; width: 100%; min-height: 30px; box-sizing: border-box; float: left; margin-left: 2.12766%; }
+.row-fluid [class*="span"]:first-child { margin-left: 0px; }
+.row-fluid .span11 { width: 91.4894%; }
+.row-fluid .span1 { width: 6.38298%; }
+.row-fluid .offset1 { margin-left: 8.38298%; }
+.row-fluid .offset1:first-child { margin-left: 8.51064%; }
+.ccomment form { margin: 0px 0px 20px; }
+.ccomment button, .ccomment select, .ccomment textarea { font-size: 14px; font-weight: normal; line-height: 20px; }
+.ccomment input, .ccomment button, .ccomment select, .ccomment textarea { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+.ccomment .btn { display: inline-block; padding: 4px 12px; margin-bottom: 0px; font-size: 14px; line-height: 20px; text-align: center; vertical-align: middle; cursor: pointer; color: rgb(51, 51, 51); text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75); background-color: rgb(245, 245, 245); background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(230, 230, 230)); background-repeat: repeat-x; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(179, 179, 179); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-radius: 4px 4px 4px 4px; box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05); }
+.ccomment .btn:hover, .ccomment .btn:focus, .ccomment .btn:active, .ccomment .btn.active { color: rgb(51, 51, 51); background-color: rgb(230, 230, 230); }
+.ccomment .btn:active, .ccomment .btn.active {  }
+.ccomment .btn:first-child {  }
+.ccomment .btn:hover, .ccomment .btn:focus { color: rgb(51, 51, 51); text-decoration: none; background-position: 0px -15px; transition: background-position 0.1s linear 0s; }
+.ccomment .btn:focus { outline: thin dotted rgb(51, 51, 51); outline-offset: -2px; }
+.ccomment .btn.active, .ccomment .btn:active { background-image: none; outline: 0px none; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset, 0px 1px 2px rgba(0, 0, 0, 0.05); }
+.ccomment .btn-small { padding: 0px; font-size: 11px; border-radius: 3px 3px 3px 3px; line-height: 16px; }
+.ccomment button.btn, .ccomment input.btn[type="submit"] {  }
+.ccomment button.btn::-moz-focus-inner, .ccomment input.btn[type="submit"]::-moz-focus-inner { padding: 0px; border: 0px none; }
+.ccomment button.btn.btn-small, .ccomment input.btn.btn-small[type="submit"] {  }
+.ccomment .btn-link, .ccomment .btn-link:active { background-color: transparent; background-image: none; box-shadow: none; }
+.ccomment .btn-link { border-color: transparent; cursor: pointer; color: rgb(0, 136, 204); border-radius: 0px 0px 0px 0px; }
+.ccomment .btn-link:hover, .ccomment .btn-link:focus { color: rgb(0, 85, 128); text-decoration: underline; background-color: transparent; }

@@ -1,0 +1,4 @@
+/* Code tidied up by ScrapBook */
+.bt-social-share { border: 1px solid rgb(202, 212, 231); border-radius: 2px 2px 2px 2px; background: none repeat scroll 0% 0% rgb(238, 238, 238); padding: 3px 0px 2px 4px; margin: 5px 0px; line-height: 100%; display: inline-block; width: calc(100% - 6px); }
+.bt-social-share-button { float: left; margin-right: 5px; min-height: 21px; }
+.bt-social-share img.fb-share, .bt-social-share img.digg-share { margin: 1px 0px 0px; border: medium none; padding: 0px; cursor: pointer; }

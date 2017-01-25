@@ -1,0 +1,11 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "simple-line-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("Simple-Line-Icons.eot") format("embedded-opentype"), url("Simple-Line-Icons.ttf") format("truetype"), url("Simple-Line-Icons.woff2") format("woff2"), url("Simple-Line-Icons.woff") format("woff"), url("Simple-Line-Icons.svg") format("svg");
+}
+@keyframes fa-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
