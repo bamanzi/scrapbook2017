@@ -1,0 +1,36 @@
+/* Code tidied up by ScrapBook */
+.bio, .bobo08 { border-bottom: 0.08em solid rgba(0, 0, 0, 0.1); }
+article .top { position: static; float: right; margin: 1.25em 0px 0px; }
+.bio { margin: 0px 0px 3em; padding: 0px 5.5% 2em; }
+.grv { width: 30%; }
+.about { width: 70%; }
+.about .poa { font-family: "Skolar Bold","Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif; font-weight: 700; font-style: normal; font-size: 1.5em; }
+.about .poa:hover { border-bottom: 0.08em solid; }
+.about, .grv, .pp { float: left; }
+.lt a, .sot { padding: 0.25em 0.5em; color: rgb(255, 255, 255); }
+.sot { font-size: 0.9em; display: inline-block; margin: 1em 1em 0px 0px; border: 0px none; background: rgb(85, 172, 238) none repeat scroll 0% 0%; border-radius: 0.25em; }
+.sot:focus, .sot:hover { border: 0px none; background: rgb(102, 189, 255) none repeat scroll 0% 0%; }
+.sot:active { border: 0px none; background: rgb(68, 155, 221) none repeat scroll 0% 0%; }
+.sot + .sot { background: rgb(65, 94, 155) none repeat scroll 0% 0%; }
+.sot + .sot:focus, .sot + .sot:hover { border: 0px none; background: rgb(82, 111, 172) none repeat scroll 0% 0%; }
+.sot + .sot:active { border: 0px none; background: rgb(48, 77, 138) none repeat scroll 0% 0%; }
+.lt { margin: 1em 0px; }
+.lt a { display: inline-block; margin: 0px 0.625em 0.625em 0px; background: rgb(233, 92, 51) none repeat scroll 0% 0%; border-radius: 0.25em; transition: all 0.3s ease 0s; }
+.lt a:focus, .lt a:hover { background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+.lt a:last-child { margin: 0px; }
+@media screen and (min-width: 31.25em) {
+  .sot { float: right; }
+}
+@media screen and (min-width: 38.125em) {
+  .about { width: 80%; }
+  .grv { width: 20%; }
+}
+@media screen and (min-width: 50em) {
+  .sot { margin-right: 1em; }
+}
+@media screen and (min-width: 63.75em) {
+}
+@media screen and (min-width: 76.25em) {
+  .bio { padding-left: 0px; }
+  .grv { text-align: center; }
+}

@@ -1,0 +1,23 @@
+/* Code tidied up by ScrapBook */
+h3:target, h4:target { color: rgb(233, 92, 51); border-bottom: 0.25em solid rgb(233, 92, 51); margin-bottom: 0.5em; }
+h3 .hsl, h4 .hsl { margin-left: 0.125em; width: 0.6em; height: 0.6em; background: transparent url("icon-link.png") no-repeat scroll 0% 0% / contain ; opacity: 0.25; transition: opacity 0.3s ease 0s; }
+h3 .hsl:focus, h3 .hsl:hover, h4 .hsl:focus, h4 .hsl:hover { opacity: 0.85; }
+h3 .hsl:active, h4 .hsl:active { background-color: rgb(233, 92, 51); }
+h4 .hsl { width: 0.75em; height: 0.75em; }
+.icad { clear: both; }
+.error, .rh { color: rgb(229, 59, 44); }
+code[class*="language-"], pre[class*="language-"] { font-family: Consolas,Monaco,"Andale Mono",monospace; font-size: 0.95em; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; -moz-tab-size: 4; hyphens: none; padding: 0px; color: rgb(51, 51, 51); }
+pre, pre[class*="language-"] { padding: 1em; margin: 0.5em 0px; overflow: auto; }
+pre { font-size: 0.9em; }
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background: rgb(245, 242, 240) none repeat scroll 0% 0%; }
+.token.punctuation { color: rgb(153, 153, 153); }
+.token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag { color: rgb(153, 0, 85); }
+.token.attr-name, .token.builtin, .token.selector, .token.string { color: rgb(102, 153, 0); }
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url, .token.variable { color: rgb(166, 127, 89); background: rgba(255, 255, 255, 0.5) none repeat scroll 0% 0%; }
+.token.atrule, .token.attr-value, .token.keyword { color: rgb(0, 119, 170); }
+@media screen and (min-width: 31.25em) {
+}
+@media screen and (min-width: 38.125em) {
+}
+@media screen and (min-width: 90.625em) {
+}
