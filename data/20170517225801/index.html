@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Miguel Rentes' personal blog about Software construction and related topics.">
+
+    <title>moreutils: the utilities package every UNIX/Linux/Mac OS developer should know - Clean Coding</title>
+
+    <link rel="canonical" href="https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <link href="css_001.css" rel="stylesheet" type="text/css">
+
+    <!-- github favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<script type="text/javascript" async="" src="about:blank"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style><link rel="prefetch" href="https://c.disquscdn.com/next/embed/styles/lounge.5d3e12b2c6dfd2d251a2140f75c4f7b9.css"><link rel="prefetch" href="https://c.disquscdn.com/next/embed/common.bundle.94805df7d922d8c7efc1170776463a6c.js"><link rel="prefetch" href="https://c.disquscdn.com/next/embed/lounge.bundle.d084be950e0f51ab6f06a54619af4c90.js"><link rel="prefetch" href="https://disqus.com/next/config.js"></head>
+
+
+<body>
+
+  <script async="" src="about:blank"></script><script>/* Code removed by ScrapBook */</script>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://rentes.github.io/">Clean Coding</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://rentes.github.io/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="https://rentes.github.io/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="https://rentes.github.io/archive/">Archive</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+  <!-- Post Header -->
+<header class="intro-header" style="background-image: url(&quot;home-bg.jpg&quot;);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>moreutils: the utilities package every UNIX/Linux/Mac OS developer should know</h1>
+                    
+                    <span class="meta">Posted by
+                      
+                      Miguel Rentes
+                       on July 27, 2015
+                    </span>
+                    <div class="categories">
+                      Read more about 
+                      
+                      
+                      <a href="https://rentes.github.io/categories/UNIX">UNIX</a>,
+                      
+                      
+                      
+                      <a href="https://rentes.github.io/categories/utilities">utilities</a>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p>Most UNIX professionals know about the <a href="https://en.wikipedia.org/wiki/GNU_Core_Utilities">GNU core utilities</a>, from the “used-everyday” ls, cp, ln, rm, touch, tail, wc, etc., to the “not-so-used” shell commands such as tsort, tac, factor, or seq. Among the UNIX utilities available, there is one package that includes some awesome utilities that makes our life’s a lot easier: the <a href="https://packages.debian.org/unstable/utils/moreutils">moreutils</a> package.</p>
+
+<ul>
+  <li><a href="#installing">Installing</a></li>
+  <li><a href="#the-moreutils-tools">The moreutils tools</a>
+    <ul>
+      <li><a href="#chronic">chronic: <em>runs a command quietly unless it fails</em></a></li>
+      <li><a href="#combine">combine: <em>combine the lines in two files using boolean operations</em></a></li>
+      <li><a href="#errno">errno: <em>look up errno names and descriptions</em></a></li>
+      <li><a href="#ifdata">ifdata: <em>get network interface info without parsing ifconfig output</em></a></li>
+      <li><a href="#ifne">ifne: <em>run a program if the standard input is not empty</em></a></li>
+      <li><a href="#isutf8">isutf8: <em>check if a file or standard input is utf-8</em></a></li>
+      <li><a href="#lckdo">lckdo: <em>execute a program with a lock held</em></a></li>
+      <li><a href="#mispipe">mispipe: <em>pipe two commands, returning the exit status of the first</em></a></li>
+      <li><a href="#parallel">parallel: <em>run multiple jobs at once</em></a></li>
+      <li><a href="#pee">pee: <em>tee standard input to pipes</em></a></li>
+      <li><a href="#sponge">sponge: <em>soak up standard input and write to a file</em></a></li>
+      <li><a href="#ts">ts: <em>timestamp standard input</em></a></li>
+      <li><a href="#vidir">vidir: <em>edit a directory in your text editor</em></a></li>
+      <li><a href="#vipe">vipe: <em>insert a text editor into a pipe</em></a></li>
+      <li><a href="#zrun">zrun: <em>automatically uncompress arguments to command</em></a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="installing">Installing</h2>
+<p>Before describing each of the utilities included, let me tell you that this package is not exclusive for Linux systems. You can install it also under Mac OS and different UNIX flavours.</p>
+
+<p>Under Mac OS, just use the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ brew install moreutils
+</code></pre>
+</div>
+
+<p><strong>Note</strong>: There is a conflict between the GNU parallel utility and the shipped parallel on the moreutils package. If you want to install GNU parallel instead of the moreutils’ parallel, use the following commands:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ brew install moreutils --without-parallel
+$ brew install parallel
+</code></pre>
+</div>
+
+<p>You can read more about it <a href="http://superuser.com/questions/545889/how-can-i-install-gnu-parallel-alongside-moreutils">here</a>.</p>
+
+<p>Under Linux, use your favourite package manager or the command line to retrieve this package.
+If you are using Arch Linux all you have to do is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo pacman -S moreutils
+</code></pre>
+</div>
+
+<p>Under Debian/Ubuntu/Mint a similar command is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo apt-get install moreutils
+</code></pre>
+</div>
+
+<p>And on RHEL, Fedora, CentOS:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo yum install moreutils
+</code></pre>
+</div>
+
+<p>Don’t forget to check your Linux distribution to know how to install this package if the above commands are not for your particular Linux distribution.</p>
+
+<p>##The moreutils tools</p>
+
+<p>###chronic
+This tool runs a command , and arranges for its standard out and standard error to only be displayed if the command fails (exits nonzero or crashes).  If the command succeeds, any extraneous output will be hidden.</p>
+
+<p>Before discovering this tool I would do something like this to hide a command output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ command &gt;&amp; /dev/null
+</code></pre>
+</div>
+<p>but using chronic is so much simpler, and has the benefit that I know if the command succeeded or not, which I would not know from the line above (all output is redirected to <code class="highlighter-rouge">/dev/null</code>).</p>
+
+<p>A common use for chronic is for running a cron job. Rather than trying to keep the command quiet, and having to deal with mails containing accidental output when it succeeds, and not verbose enough output when it fails, you can just run it verbosely always, and use chronic to hide the successful output.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>0 1 * * * chronic backup # instead of backup &gt;/dev/null 2&gt;&amp;1
+</code></pre>
+</div>
+<h3 id="combine">combine</h3>
+<p>This tool combines the lines in two files using boolean operations.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ combine file1 and file2
+
+$ combine file1 not file2
+
+$ combine file1 or file2
+
+$ combine file1 xor file2
+</code></pre>
+</div>
+
+<p>Depending on the boolean operation specified, the contents will be combined in different ways:</p>
+
+<ul>
+  <li>
+    <p><strong>and</strong> Outputs lines that are in file1 if they are also present in file2.</p>
+  </li>
+  <li>
+    <p><strong>not</strong> Outputs lines that are in file1 but not in file2.</p>
+  </li>
+  <li>
+    <p><strong>or</strong>  Outputs lines that are in file1 or file2.</p>
+  </li>
+  <li>
+    <p><strong>xor</strong> Outputs lines that are in either file1 or file2, but not in both files.</p>
+  </li>
+</ul>
+
+<p>The input files need not be sorted, and the lines are output in the order they occur in file1 (followed by the order they occur in file2 for the two “or” operations). This means that the operations are not commutative; “a and b” will not necessarily be the same as “b and a”. To obtain commutative behavior, use the <code class="highlighter-rouge">sort</code> and <code class="highlighter-rouge">uniq</code> commands to the result, like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cat a
+one
+ten
+two
+three
+$ cat b
+ten
+twelve
+one
+thirteen
+$ combine a and b
+one
+ten
+$ combine b and a
+ten
+one
+$ combine a and b | sort | uniq
+one
+ten
+$ combine b and a | sort | uniq
+one
+ten
+</code></pre>
+</div>
+
+<h3 id="errno">errno</h3>
+<p>This tool looks up errno macro names, errno codes, and the corresponding descriptions.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ errno ENOENT
+
+ENOENT 2 No such file or directory
+
+$ errno 100
+
+ENETDOWN 100 Network is down
+
+$ errno -l
+EPERM 1 Operation not permitted
+ENOENT 2 No such file or directory
+ESRCH 3 No such process
+EINTR 4 Interrupted system call
+EIO 5 Input/output error
+ENXIO 6 No such device or address
+E2BIG 7 Argument list too long
+ENOEXEC 8 Exec format error
+EBADF 9 Bad file descriptor
+ECHILD 10 No child processes
+EAGAIN 11 Resource temporarily unavailable
+ENOMEM 12 Cannot allocate memory
+EACCES 13 Permission denied
+EFAULT 14 Bad address
+ENOTBLK 15 Block device required
+EBUSY 16 Device or resource busy
+EEXIST 17 File exists
+EXDEV 18 Invalid cross-device link
+ENODEV 19 No such device
+ENOTDIR 20 Not a directory
+(...)
+</code></pre>
+</div>
+
+<p>This is a most valuable tool and a lot better than reading the system header files to figure out the meaning of a particular errno code. If you do a lot UNIX programming you know what I am taking about.</p>
+
+<h3 id="ifdata">ifdata</h3>
+<p>This tool can  be  used to check for the existence of a network interface, or to get information about the interface, such as its IP address, all statistics on input and output, number of packets, bytes, errors, drops, incoming and outgoing bit rate, etc.. Unlike <code class="highlighter-rouge">ifconfig</code> or <code class="highlighter-rouge">ip</code>, <code class="highlighter-rouge">ifdata</code> has simple to parse output that is designed to be easily used by a shell script.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ifdata -si eth0
+1943188030 8648846 0 16803 0 0 0 0
+$ ifdata -sip eth0
+8649245
+$ ifdata -so eth0
+141940989 953001 0 0 0 0 0 0
+$ ifdata -bips eth0
+3012
+$ ifdata -bops eth0
+66
+</code></pre>
+</div>
+<h3 id="ifne">ifne</h3>
+<p>This tool runs a program if the standard input is not empty. The name stands for “if not empty” and it simply runs the passed command to it, if it receives at least one byte in the <code class="highlighter-rouge">stdin</code>. You can also use the <code class="highlighter-rouge">-n</code> flag which causes <code class="highlighter-rouge">ifne</code> to reverse the operation, e.g., runs the command passed to it if the standard input is empty. Note that if the standard input is not empty, it is passed through ifne in this case. The below command line checks for <code class="highlighter-rouge">core</code> files on the current directory, and if found (standard inputs is not empty), sends a mail to user root alerting for this fact.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ find . -name core | ifne mail -s "Core files found" root
+</code></pre>
+</div>
+
+<h3 id="isutf8">isutf8</h3>
+<p>This tool checks if a file or standard input are syntactically valid UTF-8. Input is either files named on the command line, or the standard input. Information about files with invalid UTF-8 are printed to standard output, otherwise nothing is printed.</p>
+
+<h3 id="lckdo">lckdo</h3>
+
+<p><strong>Note</strong>: Now that package <code class="highlighter-rouge">util-linux</code> contains a similar command named <code class="highlighter-rouge">flock</code>, <code class="highlighter-rouge">lckdo</code> is deprecated, and  will  be  removed from some future version of moreutils.</p>
+
+<p>The <code class="highlighter-rouge">flock</code> utility runs a program with a lock held, in order to prevent multiple processes from running in parallel. It locks from within shell scripts or from the command line. It locks a specified file or directory,  which  is  created  (assuming appropriate  permissions)  if it does not already exist.  By default, if the lock cannot be immediately acquired, <code class="highlighter-rouge">flock</code> waits until the lock is available. It can also lock an open file by its file descriptor number. Use it just like <code class="highlighter-rouge">nice</code> or <code class="highlighter-rouge">nohup</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(shell1) $ flock /tmp -c cat
+(shell2) $ flock -w .007 /tmp -c echo; /bin/echo $?
+</code></pre>
+</div>
+<p>The first command sets an exclusive lock to directory /tmp and the second command will fail.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(shell1) $ flock -s /tmp -c cat
+(shell2) $ flock -s -w .007 /tmp -c echo; /bin/echo $?
+</code></pre>
+</div>
+<p>The first command sets a shared lock to directory /tmp and the second command will not fail. Notice that attempting to get exclusive lock with the second command would fail.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ flock -x local-lock-file echo 'a b c'
+</code></pre>
+</div>
+<p>This command grabs the exclusive lock <code class="highlighter-rouge">local-lock-file</code> before running <code class="highlighter-rouge">echo</code> with ‘a b c’.</p>
+
+<h3 id="mispipe">mispipe</h3>
+
+<p>This command pipes two commands together like the shell does, but unlike piping in the shell, which returns the exit status of the last command; when using mispipe, the exit status of the first  command  is  returned.</p>
+
+<p><strong>Note</strong>:  Modern shells, like <code class="highlighter-rouge">bash</code> or <code class="highlighter-rouge">zsh</code>, offer a pipefail option, although that option does not behave the same like mispipe because it makes a failure of <strong>any</strong> command in the pipeline to be returned, not just the exit status of the first. This can be a better alternative to mispipe which only returns the exit status of the first command passed to it.</p>
+
+<h3 id="parallel">parallel</h3>
+
+<p>This tool runs  the  specified command, passing it a single one of the specified arguments. This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ parallel sh -c "echo hi; sleep 2; echo bye" -- 1 2 3
+</code></pre>
+</div>
+
+<p>The above command runs three subshells that each print a message, delay, and print another message. If  your  system has multiple CPUs, parallel will run some of the jobs in parallel, which should be clear from the order the messages are output.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ parallel -j 3 ufraw -o processed -- *.NEF
+</code></pre>
+</div>
+
+<p>The above command runs three ufraw processes at the same time until all of the NEF files have been processed.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ parallel -j 3 -- ls df "echo hi"
+</code></pre>
+</div>
+<p>The above command runs three independent commands (<code class="highlighter-rouge">ls</code>, <code class="highlighter-rouge">df</code> and the <code class="highlighter-rouge">echo</code>) in parallel.</p>
+
+<p><strong>Note</strong>: check the <code class="highlighter-rouge">xargs</code> command to also run multiple processes at a time, specifically with the <code class="highlighter-rouge">-n</code> and <code class="highlighter-rouge">-P</code> flags.</p>
+
+<h3 id="pee">pee</h3>
+<p>This command is similar to how <code class="highlighter-rouge">tee</code> uses the standard input but for pipes, hence the name. It allows redirecting output to multiple commands at once. Each command is run and fed a copy of the standard input. The output of all commands is sent to <code class="highlighter-rouge">stdout</code>. While this is similar to <code class="highlighter-rouge">tee</code>, a copy of the input is not sent to <code class="highlighter-rouge">stdout</code>, like  <code class="highlighter-rouge">tee</code>  does.  If that is desired, use <code class="highlighter-rouge">pee cat ...</code> instead.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cat file
+5
+4
+3
+2
+1
+$ cat file | pee 'sort -u &gt; sorted' 'sort -R &gt; unsorted'
+$ cat sorted
+1
+2
+3
+4
+5
+$ cat unsorted
+2
+1
+4
+3
+5
+</code></pre>
+</div>
+
+<p>In this example, <code class="highlighter-rouge">pee</code> receives two commands: one for sorting the contents of the file, and another for randomly sorting the same file contents, outputting to two different files named sorted and unsorted, respectively.</p>
+
+<h3 id="sponge">sponge</h3>
+<p>This tool reads  standard  input and writes it out to the specified file. Unlike a shell redirect, sponge soaks up all its input before writing the output file. This means that it only writes to the file once the input has been fully read. This allows constructing pipelines that read from and write to the same file, without needing to redirect the output to temporary files.</p>
+
+<p>Instead of using these commands to sort a file contents:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sort filename | uniq &gt; temp
+$ mv temp filename
+</code></pre>
+</div>
+
+<p>Just use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sort filename | uniq | sponge filename
+</code></pre>
+</div>
+
+<p>No need to redirecting anymore.</p>
+
+<h3 id="ts">ts</h3>
+<p>This tool adds a timestamp to the beginning of each line of input. This is an awesome tool that I like to use specially on a chain of commands where I can measure how long a given command is taking to complete before passing the control to the next command. It is also a great way of logging the time stamps of a programs’ output.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cat script.sh
+echo "The first line"
+sleep 5s
+echo "The last line"
+$ chmod a+x script.sh
+$ ./script.sh
+The first line
+The last line
+$ ./script.sh | ts
+Jul 27 15:50:42 The first line
+Jul 27 15:50:47 The last line
+</code></pre>
+</div>
+
+<p>One possible use of the <code class="highlighter-rouge">ts</code> command is to assert whenever a given machine is up and running. Restart a machine and then use <code class="highlighter-rouge">ping</code> with the <code class="highlighter-rouge">ts</code> to know exactly when that machine came up to life!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ping &lt;IP address or hostname&gt; | ts
+Jul 27 15:53:15 PING EE.FF.GG.HH (EE.FF.GG.HH) 56(84) bytes of data.
+Jul 27 15:53:15 From AA.BB.CC.DD icmp_seq=3 Destination Net Unreachable
+Jul 27 15:53:18 From AA.BB.CC.DD icmp_seq=7 Destination Net Unreachable
+(...)
+Jul 27 15:54:08 64 bytes from EE.FF.GG.HH: icmp_seq=57 ttl=127 time=0.673 ms
+</code></pre>
+</div>
+
+<p>The optional format parameter controls how the timestamp is formatted, as used by the C function <code class="highlighter-rouge">strftime</code>. The default format is <code class="highlighter-rouge">%b %d %H:%M:%S</code>. In addition to the regular <code class="highlighter-rouge">strftime</code> conversion specifications, <code class="highlighter-rouge">%.S</code> and <code class="highlighter-rouge">%.s</code> are like <code class="highlighter-rouge">%S</code> and <code class="highlighter-rouge">%s</code>, but provide sub-second resolution (i.e., “30.00001” and “1301682593.00001”).</p>
+
+<h3 id="vidir">vidir</h3>
+<p>This tool allows editing of the contents of a directory in a text editor (check the <code class="highlighter-rouge">$EDITOR</code> environment variable, because it will be used for the text editor of your choice). If no directory is specified, the current directory is edited. When editing a directory, each item in the directory will appear on its own numbered line. These numbers are how vidir keeps track of what items are changed. Delete lines to remove files from the directory, or edit filenames to rename files. You can also switch pairs of numbers to swap filenames. Note that if “-“ is specified as the directory to edit, it reads a list of filenames from stdin and displays those for editing. Alternatively, a list of files can be specified on the command line.</p>
+
+<h3 id="vipe">vipe</h3>
+<p>This tool allows you to run your editor in the middle of a unix pipeline and edit the data that is being piped between programs (once again, check the <code class="highlighter-rouge">$EDITOR</code> environment variable for your text editor of choice).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ fortune | vipe | cowsay
+ _________________________________________
+/ "I am your density."                    \
+|                                         |
+| -- George McFly in "Back to the Future" |
+| - This fortune cookie was just edited   |
+\ by Miguel Rentes (in the future!)       /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+</code></pre>
+</div>
+
+<p>On the above command I edited the fortune cookie before passing it to the cowsay command. This is a command that offers you great flexibility and power.</p>
+
+<h3 id="zrun">zrun</h3>
+<p>This tool automatically decompresses arguments to command. Prefixing a shell command with <code class="highlighter-rouge">zrun</code> causes any compressed files that are arguments of the command to be transparently uncompressed to temp files (not pipes) and the uncompressed files fed to the command. This is a quick way to run a command that does not itself support compressed files, without manually uncompressing the files. For example, if you want to <code class="highlighter-rouge">diff</code> the contents of two archives without having to uncompress them first, use the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ zrun diff archive1.gz archive2.gz
+</code></pre>
+</div>
+
+<p>This command will uncompress automatically the two .gz files and pass the contents to the diff command. Very cool.</p>
+
+<p>The following compression types are supported: <code class="highlighter-rouge">gz bz2 Z xz lzma lzo</code>. If zrun is linked to some name beginning with z, like zprog, and the link is executed, this is equivalent to executing <code class="highlighter-rouge">zrun prog</code>.</p>
+
+<p>That’s it! Please don’t forget to read the manpages for greater detail on the above commands. I hope you liked to learn about this fantastic tool package and that it motivated you to use it on your daily UNIX programming tasks! Until next time, have an awesome coding fun!</p>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="https://rentes.github.io/planning/2015/07/17/writing-code-everyday/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Writing code every day">← Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="https://rentes.github.io/programming/stackoverflow/2015/09/03/Wisdom-of-the-Ancients/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wisdom of the Ancients">Next Post →</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+  <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="https://rentes.github.io/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+					
+					<li>
+					  <a rel="me" href="http://about.me/rentes">
+						<span class="fa-stack fa-lg">
+						  <i class="fa fa-circle fa-stack-2x"></i>
+						  <i class="fa fa-pied-piper fa-stack-1x fa-inverse"></i>
+						</span>
+					  </a>
+					</li>
+					
+                    
+                    <li>
+                        <a href="https://twitter.com/rentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/rentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://instagram.com/miguelrentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://www.flickr.com/photos/mrentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://pt.linkedin.com/in/miguelrentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://www.google.com/+MiguelRentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://www.facebook.com/miguel.rentes">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+					<li>
+					  <a rel="me" href="http://miguelrentes.tumblr.com/">
+						<span class="fa-stack fa-lg">
+						  <i class="fa fa-circle fa-stack-2x"></i>
+						  <i class="fa fa-tumblr fa-stack-1x fa-inverse"></i>
+						</span>
+					  </a>
+					</li>
+					
+					
+					<li>
+					<a href="http://stackexchange.com/users/114911">
+					<span class="fa-stack fa-lg">
+						  <i class="fa fa-circle fa-stack-2x"></i>
+						  <i class="fa fa-stack-exchange fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+					</li>
+					
+                </ul>
+                <p class="copyright text-muted">Copyright © Miguel Rentes 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="about:blank"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="about:blank"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="about:blank"></script>
+
+  
+<article>
+  <div class="container">
+	<div class="row">
+	  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 0px ! important;" src="index_15.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div>
+	  <script type="text/javascript">/* Code removed by ScrapBook */</script>
+	  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	  </div>
+	</div>
+  </div>
+</article>
+
+
+
+
+
+
+<iframe style="display: none;" src="index_16.html"></iframe></body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>给新手的 10 个有用 Linux 命令行技巧-技术 ◆ 学习|Linux.中国-开源社区</title>
+ 
+<meta name="keywords" content="给新手的 10 个有用 Linux 命令行技巧">
+<meta name="description" content="我记得我第一次使用 Linux 的时候，我还习惯于 Windows 的图形界面，我真的很讨厌 Linux 终端。那时候我觉得命令难以记忆，不能正确使用它们。随着时间推移，我意识到了 Linux 终端的优美、灵活和可用性，说实话，我没有一天不使用它。今天，我很高兴和刚开始接触 Linux 的人一起来分享一些有用的技巧和提示，希望能帮助他们更好的向 Linux 过渡，并帮助他们学到一些新的东西（希望如此）。  10 个 Linux 命令行技巧  5 个有趣的 Linux 命令行技巧 管理 Linux 文件类型的 5 个有用命令  这篇文章希望向你展示一些不需要很高的技术就可以像 ">
+<meta name="copyright" content="2005-2015 Linux.cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="referrer" content="always">
+<base href=""><link rel="stylesheet" type="text/css" href="style_1_common.css">
+<link rel="stylesheet" type="text/css" href="style_1_portal_view.css">
+<link href="responsive.css" rel="stylesheet">
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" type="text/javascript"></script>
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" type="text/javascript"></script>
+<link rel="canonical" href="https://linux.cn/article-6314-1.html"><script src="about:blank" type="text/javascript"></script>
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+.show_links { color: rgb(102, 102, 102); font-size: 9px; padding-left: 10px; }
+.sup { font-size: 9px; vertical-align: super; background-color: rgb(102, 102, 102); color: rgb(255, 255, 255); transform: scale(0.75); display: inline-block; padding: 1px 1px 3px; margin: 0px; line-height: 1em; }
+</style>
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+
+<body id="nv_portal">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<a id="close_print" title="关闭打印模式"></a>
+<a id="switchwidth" title="切换到窄版" class="switchwidth"></a>
+<div id="wp" class="wp pr">
+
+<div id="ct" class="ct2 wp cl">
+<div class="mn" style="float: none; margin: 40px auto;">
+<div class="vw">
+<div class="h">
+<div class="hm z">
+<h1 class="ph" id="article_title">给新手的 10 个有用 Linux 命令行技巧</h1>
+<p class="xg1">
+2015-09-29 08:44</p>
+<p class="copyright">
+    	 
+    		    			    			<span class="z">编译自：<a href="http://www.tecmint.com/10-useful-linux-command-line-tricks-for-newbies/" target="_blank">http://www.tecmint.com/10-useful-linux-command-line-tricks-for-newbies/</a></span>
+    			    		    		<span class="y">作者： Marin Todorov</span>    		<br class="clear">
+    	    	<span class="z">原创：<a href="http://lctt.github.io/" target="_blank">LCTT</a> <a href="#" target="_blank">https://linux.cn/article-6314-1.html</a></span>
+            			<span class="y">译者： ictlyh</span>    		<br class="clear">
+    	</p>
+
+</div>
+<div class="y" id="pr_qrcode"><canvas width="100" height="100"></canvas><script>(function (data) { var scripts = document.getElementsByTagName("script"); var script = scripts[scripts.length-1], canvas = script.previousSibling; var img = new Image(); img.onload = function(){ canvas.getContext("2d").drawImage(img, 0, 0); }; img.src = data; script.parentNode.removeChild(script); })("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAJ4ElEQVR4nO1d4bHjLAxMB7kOUkKuA6eTpINXAtdBrgOXQjpICSkhJfj7JX9rZ+VFxO+d3x2a0UwGCBJaAxJgvNvtdsNarMjKdV23WC7nPJZNKY3pXde9yMS6VL6ShZxzlu2Zt2slboBsEpD9fj90XRfm/X7/Asjj8Rhut9twu92G5/NZDMj9fh9ut9vQ9/1Yf9/3Y/7Hx8eYrgCxch8fH4t6ISCHw2Ei18oaPZ/PMe3xeLy0aw0b7pSRFKERjFJK9ElTsqyuEl0UIIyYXiW90cgru6YNGyDfAZCc8/Dr168Jp5TG32hkBcjlchn/h0MDq/dwOLzko6y+7yf/SylNhjQFSM55/J8NOWjkrutedNntdmPa5XIpBgRtiG1UNqSAoEEZqydJ/T/CShaSyvdAelevNW3YAPnXAGFziFdXhJjes4YV6e21u8btbYA0QD4XEItDcs7U37f82+02+vDn83lMO5/PLz7+8XiksiymwTgF9b5er+E45K8DhD3hEVeUPdWeq8rIa7eqqwHyrwGC/jrjSByiAGG+/+FwoLL6vh/TjR6Px5iGwwgz4ul0GmVZ2cfj8RLbzLkGkFobUkAi9C4gHkhrkVo8jPSgv3bppAEyJQrIfr8fTqfTcDqdhq7rxt8sDX+z1V4FyPF4HHLOQ855OJ/PY/r1eh1yzkPf92P989VeSze63+9j2v1+H9Mt7Xw+U1kKECZLAeLZUNmTrvauwaWAKN+/dsHvK2UxQFbiBsimABk+mVjDtiAr4mIzVvNNLTVAvgMguJav8hNZ65/voxhbGk7UWJcXG7DfjDBOYbJYWZzoWUxkxp+XxZjGqERvljZZhmHK4lir8hW/O66r+cojJotRRJZXNlKXtJEyuMpvgKwMCPOLsbta2vz0hvn2jJm/bwrnnCfxAgJyPB4XYweLU7BOLw5hsjC+sfZ6siIGtzpxZRnrxXTPXlbHrhTFSBTqub2qbGkPQvLc3ndlvdsDlAuNRCP1BshGAGHCmEtXEkCVKqPq8sCvWX5fkxQgJXpLGzJhDRBOXwKIbUler9cx8XK5vGxf3u/3oeuWj3cap5TotiprmAIEj39iXZaGx05xArf8LLaD8T9IuF1s/Pv371FvPHZqjNvJKBcndWYjzJdzSA1Fxn0FSGRdDKl0XI881V5drF3KnguhQwOE0R8DBJc2jFGZkiWIpeUSb9mA5as0HHIsDfVCXXBoYfWWHFtltjHGsmoLGOM6CQgzMiu8yoRF6mI9QDkYHkVklT71JRSxkdSFVdAAidGmALnf7+MSAA4TuAU7z1eAPJ/P8T8pJbo0gvKdrdBFWbYMg96lBwhbPsJlmIiN2PLUqoAgMQFqIlYOgMqPxAa1vbG0t9XaqAqQnz9/Uh8bf5uPjejjkUzmr88XD+d1mpNh8c88PqoFxGR5r89hHFIDCMZP2B4cRUzupGeXAlLC6v+lRkT25qN3AVFPdc18VDtfTWQ1QDYKCG4/YgHzpb29gvP5PJZhyrB8PP4ZCcBYfOTphXEAixNq4hAc0pjBsS6vXVYXyqKAeE+ayq+ZiL2yoSepsLfWLooqencUQWqAOHVtChD0/XEYYPnIuP1obF0y5zy5OEA1TMUGChC2xavio0gc0sE2N7aR6YJbuMiMJrGcMpKiNZ80FRsoQCJxSk0c4rVR5UeoAbI1QKwCz/1T+YqUq8oMXuI+srrUWK3mtsi8EAGE2cCzUQPEyf/jgByPx8VQH/O9N2PZ/9W2a0qv273zRTwri4zyl/LxzVl2XszLPx6PY12Whrf9YEyiAMFtbmZDCkiEa8d11tsiLnINReaQiN5Iykas7IINGyCbAsSLLeYC8DW0BHsUuN+h4pRSQHCPw9s6Vq+OGan4yYsXmN74ypoasjDmQb2YDatWe2ufataDVF21riiyIuZAKL29HhAZXVi7J8yUaYB8A0A8ZVRgqFy+iKupAr81A0PlrjNeIzRogHxXQDwfnN0UqnxwjFMSbNHa5IayvO1gZiSWj3EKq8uLifB4J4uf2CGF2lhtcpS0FJAS9BkgLF/1Jm+OQWaAsPxIu1RvjZSNhAYTrlHcowbIFwJSclMoU4bdJIo8r8vS1VaoEW4HsyOb3m0/VhaNbPHBnJkNlJHxLV02vNkQOdf7j0/qjNTk6dWlJmLVGz0qfroD7NqQKdAAmdKmAGHLCslZOmHC2DHKrnu9HQe55G1WBQi7DYjp7b2li+lWJy4fMcbtYPUW7twLG22oACkBbK54ZFKvfZIUIMaRFQbVLtWbIjGNR7u5fzyPDRih4uyoKPrz6G9bvscsDsG62OtxSOrrCUxv1M97v97qxCOw+ISzOEVdgb7wBYnlp1IBwsZ1le+RcnvVuhmSAkSxivrRRqoHMUAWemMDZFOAmC/s3Yrj3eDD/HUmDI+SqtuArJwni9066pECxPTyjqIyQDDmwfZEAFGv9cmTi6UTGlJkcqztAYpKZXntVrqw3lYCCOth1O1tgGwEEOX7M2HsVh3cNsXbgtg3qHArNKX/j2TatimeOvGIvWaGN4marB8/fiwecS0BRN2YxNqFZVWsNgNseVKPTI6KlCw2qau6sCx7Ej1ZRiWALNVZwipWa4AAbQ4Q2fIKiswhEVIGrxn3FWCe3hEXmj20ro2qLCOoAfIGIOrWHCM8coll8fe7SxBKFrtVBxnf0vWOtdr/7aio98EXBghu0Xrxy9uAvDvWRsZPVletLEaqBzG9lC4IyBrcAPlugLAlkJJlgyVGw2BdbNlAycK62Bu9HiBWbr4khLLnb/FGAJnXtWQDBsh8+ell6WRNWnNS9+pixBbxCoOxMCBeWaZ3qGcv1lpJDZA3APnS8bEQkEiw5tXF8iOuamTuq5G18HA0QDYJyJofuFeAeK/P2W/vNTY8eMBiGraQGTES3tDD7uZaGv66zv9IJbKVTYlvTe+Y4hFi47YCRHFEFzSS6kGRp1bJencOWbBRA2TzgGTYVmUfIJkvh8yFoY/NbhIt4ciHUZgsBQjGNMaeF8duHurINjfqh3sy6sYkCUjthLQWRVYFaid15UKzumqZyWqALBhB0V8LCNt2ZYSAeG/JMr3ZFu5nAeLpZeyteC9tXU8+6PIVgKin2qhk8mR1zfz5TwUkMqkzZ0PGIQ0Qrfe3BSTScFX2s4xoekfarQCJzH0L3AApbfcfAwTjCMa1cYj68KT3gXoss3TElQGCX0dAve31Oe/YqvqwJItDlvZeSpkCEqGaOUQ9aSWylN6f0a5ID4i0a6Z3A0TJMvpSQPDIJeOuK//APRLGBuZ3ezeBWlnvKwTs5iHMR2aAsCOw2BbvJRt23BaZxSEpJWovZaNdKeIlzEg9aZGJlk3q6qldw1mpabcnS9moAbIxQP4DmFAcwo4r7KcAAAAASUVORK5CYII=")</script></div>
+<br class="clear">
+</div>
+
+<div class="d">
+<div id="article_content">
+<p>我记得我第一次使用 Linux 的时候，我还习惯于 Windows 的图形界面，我真的很讨厌 Linux 终端。那时候我觉得命令难以记忆，不能正确使用它们。随着时间推移，我意识到了 Linux 终端的优美、灵活和可用性，说实话，我没有一天不使用它。今天，我很高兴和刚开始接触 Linux 的人一起来分享一些有用的技巧和提示，希望能帮助他们更好的向 Linux 过渡，并帮助他们学到一些新的东西（希望如此）。</p>
+<p class="article_img"><img src="224739ed8dqm5gamrrvd39.jpg" alt="10 个 Linux 命令行技巧" title="10 个 Linux 命令行技巧" style="width: 694px; cursor: pointer;"></p>
+<p class="article_img_desc"><em>10 个 Linux 命令行技巧</em></p>
+<ul>
+<li><a href="https://linux.cn/article-5485-1.html">5 个有趣的 Linux 命令行技巧</a><span class="sup">[1]</span></li>
+<li><a href="http://www.tecmint.com/manage-file-types-and-set-system-time-in-linux/" class="ext" rel="external nofollow" target="_blank">管理 Linux 文件类型的 5 个有用命令</a><span class="sup">[2]</span></li>
+</ul>
+<p>这篇文章希望向你展示一些不需要很高的技术就可以像一个高手一样使用 Linux 终端的有用技巧。你只需要一个 Linux 终端和一些自由时间来体会这些命令。</p>
+<h3 id="toc_1">1. 找到正确的命令</h3>
+<p>执行正确的命令对你的系统来说非常重要。然而在 Linux 中有如此多的、难以记忆的各种的命令行。那么怎样才能找到你需要的正确命令呢？答案是 apropos。你只需要运行：</p>
+<pre class="prettyprint linenums"><code># apropos &lt;description&gt;
+</code></pre>
+<p>其中你要用真正描述你要查找的命令的语句代替 “description”。这里有一个例子：</p>
+<pre class="prettyprint linenums"><code># apropos "list directory"
+
+dir (1) - list directory contents
+ls (1) - list directory contents
+ntfsls (8) - list directory contents on an NTFS filesystem
+vdir (1) - list directory contents
+</code></pre>
+<p>左边你看到的是命令，右边是它们的描述。</p>
+<h3 id="toc_2">2. 执行之前的命令</h3>
+<p>很多时候你需要一遍又一遍执行相同的命令。尽管你可以重复按你键盘上的向上光标键，但你也可以用 history 命令替代。这个命令会列出自从你上次启动终端以来所有输入过的命令：</p>
+<pre class="prettyprint linenums"><code># history
+
+    1  fdisk -l
+    2  apt-get install gnome-paint
+    3  hostname tecmint.com
+    4  hostnamectl tecmint.com
+    5  man hostnamectl 
+    6  hostnamectl --set-hostname tecmint.com
+    7  hostnamectl -set-hostname tecmint.com
+    8  hostnamectl set-hostname tecmint.com
+    9  mount -t "ntfs" -o
+   10  fdisk -l
+   11  mount -t ntfs-3g /dev/sda5 /mnt
+   12  mount -t rw ntfs-3g /dev/sda5 /mnt
+   13  mount -t -rw ntfs-3g /dev/sda5 /mnt
+   14  mount -t ntfs-3g /dev/sda5 /mnt
+   15  mount man
+   16  man mount
+   17  mount -t -o ntfs-3g /dev/sda5 /mnt
+   18  mount -o ntfs-3g /dev/sda5 /mnt
+   19  mount -ro ntfs-3g /dev/sda5 /mnt
+   20  cd /mnt
+   ...
+</code></pre>
+<p>正如你上面看到的，你会得到一个你运行过的命令的列表。每一行中有一个数字表示你在第几行输入了命令。你可以通过以下方法重新调用该命令：</p>
+<pre class="prettyprint linenums"><code>!#
+</code></pre>
+<p>其中要用命令的实际编号代替 #。为了更好的理解，请看下面的例子：</p>
+<pre class="prettyprint linenums"><code>!501
+</code></pre>
+<p>等价于：</p>
+<pre class="prettyprint linenums"><code># history
+</code></pre>
+<h3 id="toc_3">3. 使用 midnight 命令</h3>
+<p>如果你不习惯使用类似 cd、cp、mv、rm 等命令，你可以使用 midnight 命令。它是一个简单的可视化 shell，你可以在上面使用鼠标：</p>
+<p class="article_img"><img src="224745dkpcgd0s229pdggd.jpg" alt="Midnight 命令" title="Midnight 命令"></p>
+<p class="article_img_desc"><em>Midnight 命令</em></p>
+<p>借助 F1 到 F12 键，你可以轻易地执行不同任务。只需要在底部选择对应的命令。要选择文件或者目录，按下 “Insert” 键。</p>
+<p>简而言之 midnight 就是所谓的 “mc”。要安装 mc，只需要运行：</p>
+<pre class="prettyprint linenums"><code>$ sudo apt-get install mc        [On Debian based systems]
+</code></pre>
+<hr>
+<pre class="prettyprint linenums"><code># yum install mc                 [On Fedora based systems]
+</code></pre>
+<p>下面是一个使用 midnight 命令器的简单例子。通过输入以下命令打开 mc：</p>
+<pre class="prettyprint linenums"><code># mc
+</code></pre>
+<p>现在使用 TAB 键选择不同的窗口 - 左和右。我有一个想要移动到 “Software” 目录的 LibreOffice 文件：</p>
+<p class="article_img"><img src="224756j28cruuhi72ccijh.jpg" alt="Midnight 命令移动文件" title="Midnight 命令移动文件" style="width: 694px; cursor: pointer;"></p>
+<p class="article_img_desc"><em>Midnight 命令移动文件</em></p>
+<p>按 F6 按钮移动文件到新的目录。MC 会请求你确认：</p>
+<p class="article_img"><img src="224803s08yuzothigmtogt.png" alt="移动文件到新目录" title="移动文件到新目录" style="width: 694px; cursor: pointer;"></p>
+<p class="article_img_desc"><em>移动文件到新目录</em></p>
+<p>确认了之后，文件就会被移动到新的目标目录。</p>
+<ul>
+<li>扩展阅读：<a href="http://www.tecmint.com/midnight-commander-a-console-based-file-manager-for-linux/" class="ext" rel="external nofollow" target="_blank">如何在 Linux 中使用 Midnight 命令文件管理器</a><span class="sup">[3]</span></li>
+</ul>
+<h3 id="toc_4">4. 在指定时间关闭计算机</h3>
+<p>有时候你需要在下班几个小时后再关闭计算机。你可以通过使用下面的命令在指定时间关闭你的计算机：</p>
+<pre class="prettyprint linenums"><code>$ sudo shutdown 21:00
+</code></pre>
+<p>这会告诉你在你指定的时间关闭计算机。你也可以告诉系统在指定分钟后关闭：</p>
+<pre class="prettyprint linenums"><code>$ sudo shutdown +15
+</code></pre>
+<p>这表示计算机会在 15 分钟后关闭。</p>
+<h3 id="toc_5">5. 显示已知用户的信息</h3>
+<p>你可以使用一个简单的命令列出你 Linux 系统的用户以及一些关于它们的基本信息。</p>
+<pre class="prettyprint linenums"><code># lslogins
+</code></pre>
+<p>这会输出下面的结果：</p>
+<pre class="prettyprint linenums"><code>UID USER PWD-LOCK PWD-DENY LAST-LOGIN GECOS
+0 root 0 0 Apr29/11:35 root
+1 bin 0 1 bin
+2 daemon 0 1 daemon
+3 adm 0 1 adm
+4 lp 0 1 lp
+5 sync 0 1 sync
+6 shutdown 0 1 Jul19/10:04 shutdown
+7 halt 0 1 halt
+8 mail 0 1 mail
+10 uucp 0 1 uucp
+11 operator 0 1 operator
+12 games 0 1 games
+13 gopher 0 1 gopher
+14 ftp 0 1 FTP User
+23 squid 0 1
+25 named 0 1 Named
+27 mysql 0 1 MySQL Server
+47 mailnull 0 1
+48 apache 0 1 Apache
+...
+</code></pre>
+<h3 id="toc_6">6. 查找文件</h3>
+<p>查找文件有时候并不像你想象的那么简单。一个搜索文件的好例子是：</p>
+<pre class="prettyprint linenums"><code># find /home/user -type f
+</code></pre>
+<p>这个命令会搜索 /home/user 目录下的所有文件。find 命令真的很强大，你可以传递更多选项给它使得你的搜索更加详细。如果你想搜索超过特定大小的文件，可以使用：</p>
+<pre class="prettyprint linenums"><code># find . -type f -size 10M
+</code></pre>
+<p>上面的命令会搜索当前目录中所有大于 10M 的文件。确保不要在你 Linux 系统的根目录运行该命令，因为这可能导致你的机器 I/O 瓶颈。</p>
+<p>我最经常和 find 命令一起使用的选项之一是 “exec”，这允许你对 find 命令的结果运行一些操作。</p>
+<p>例如，假如我们想查找一个目录中的所有文件并更改权限。可以通过以下简单命令完成：</p>
+<pre class="prettyprint linenums"><code># find /home/user/files/ -type f -exec chmod 644 {} \;
+</code></pre>
+<p>上面的命令会递归搜索指定目录内的所有文件，并对找到的文件执行 chmod 命令。推荐你阅读 <a href="http://www.tecmint.com/35-practical-examples-of-linux-find-command/" class="ext" rel="external nofollow" target="_blank">35 个 Linux ‘find’ 命令的使用方法</a><span class="sup">[4]</span>，我肯定你会发现这个命令更多的使用方法。</p>
+<h3 id="toc_7">7. 用一个命令创建目录树</h3>
+<p>你很可能知道可以使用 mkdir 命令创建新的目录。因此如果你想创建一个新的目录，你可能会运行：</p>
+<pre class="prettyprint linenums"><code># mkdir new_folder
+</code></pre>
+<p>但如果你想在该目录下创建 5 个子目录呢？运行 5 次 mkdir 命令并非是一个好的选择。相反你可以类似下面这样使用 -p 选项：</p>
+<pre class="prettyprint linenums"><code># mkdir -p new_folder/{folder_1,folder_2,folder_3,folder_4,folder_5}
+</code></pre>
+<p>最后你会在 new_folder 中有 5 个目录：</p>
+<pre class="prettyprint linenums"><code># ls new_folder/
+
+folder_1 folder_2 folder_3 folder_4 folder_5
+</code></pre>
+<h3 id="toc_8">8. 复制文件到多个目录</h3>
+<p>通常使用 cp 命令进行文件复制。复制文件通常看起来类似：</p>
+<pre class="prettyprint linenums"><code># cp /path-to-file/my_file.txt /path-to-new-directory/
+</code></pre>
+<p>现在假设你需要复制该文件到多个目录：</p>
+<pre class="prettyprint linenums"><code># cp /home/user/my_file.txt /home/user/1
+# cp /home/user/my_file.txt /home/user/2
+# cp /home/user/my_file.txt /home/user/3
+</code></pre>
+<p>这有点荒唐。相反，你可以用简单的一行命令解决问题：</p>
+<pre class="prettyprint linenums"><code># echo /home/user/1/ /home/user/2/ /home/user/3/ | xargs -n 1  cp /home/user/my_file.txt
+</code></pre>
+<h3 id="toc_9">9. 删除大文件</h3>
+<p>有时候文件可能会变得很大。我看过由于缺乏管理技能一个日志文件就超过 250G 的例子。用 rm 命令可能不足以删除该文件，因为有大量的数据需要移除。应该避免这个很“笨重”的操作。相反，你可以使用一个简单的方法解决这个问题：</p>
+<pre class="prettyprint linenums"><code># &gt; /path-to-file/huge_file.log
+</code></pre>
+<p>当然你需要根据你实际情况替换路径和文件名。上面的命令写一个空输出到该文件。用更简单的话说它会清空文件而不会导致你的系统产生大的 I/O 消耗。</p>
+<h3 id="toc_10">10. 在多个 Linux 服务器上运行相同命令</h3>
+<p>最近我们的一个读者在 <a href="http://www.linuxsay.com/" class="ext" rel="external nofollow" target="_blank">LinuxSay 论坛</a><span class="sup">[5]</span>提问说如何通过 ssh 在多个 Linux 服务器上执行一个命令。他机器的 IP 地址是：</p>
+<pre class="prettyprint linenums"><code>10.0.0.1
+10.0.0.2
+10.0.0.3
+10.0.0.4
+10.0.0.5
+</code></pre>
+<p>这里有一个简单的解决方法。将服务器的 IP 地址写到文件 list.txt 中，像上面那样一行一个。然后运行：</p>
+<pre class="prettyprint linenums"><code># for in $i(cat list.txt); do ssh user@$i 'bash command'; done
+</code></pre>
+<p>上面的命令中你需要用实际登录的用户替换 “user”，用你希望执行的实际命令替换 “bash command”。这个方法非常适用于通过<a href="https://linux.cn/article-5202-1.html">使用 SSH 密钥进行无密码验证</a><span class="sup">[6]</span>，因为这样你不需要每次都为用户输入密码。</p>
+<p>注意取决于你 Linux 系统的设置，你可能还需要传递一些额外的参数给 SSH 命令。</p>
+<h3 id="toc_11">总结</h3>
+<p>上面的例子都很简单，我希望它们能帮助你发现 Linux 的优美之处，你如何能简单实现在其它操作系统上需要更多时间的不同操作。</p>
+<hr>
+<p>via: <a href="http://www.tecmint.com/10-useful-linux-command-line-tricks-for-newbies/" class="ext" rel="external nofollow" target="_blank">http://www.tecmint.com/10-useful-linux-command-line-tricks-for-newbies/</a></p>
+<p>作者：<a href="http://www.tecmint.com/author/marintodorov89/" class="ext" rel="external nofollow" target="_blank">Marin Todorov</a><span class="sup">[7]</span> 译者：<a href="http://mutouxiaogui.cn/blog/" class="ext" rel="external nofollow" target="_blank">ictlyh</a><span class="sup">[8]</span> 校对：<a href="https://github.com/wxy" class="ext" rel="external nofollow" target="_blank">wxy</a><span class="sup">[9]</span></p>
+<p>本文由 <a href="https://github.com/LCTT/TranslateProject" class="ext" rel="external nofollow" target="_blank">LCTT</a><span class="sup">[10]</span> 原创编译，<a href="#">Linux中国</a><span class="sup">[11]</span> 荣誉推出</p><hr width="80%"><p class="show_links">[1]: https://linux.cn/article-5485-1.html<br>[2]: http://www.tecmint.com/manage-file-types-and-set-system-time-in-linux/<br>[3]: http://www.tecmint.com/midnight-commander-a-console-based-file-manager-for-linux/<br>[4]: http://www.tecmint.com/35-practical-examples-of-linux-find-command/<br>[5]: http://www.linuxsay.com/<br>[6]: https://linux.cn/article-5202-1.html<br>[7]: http://www.tecmint.com/author/marintodorov89/<br>[8]: http://mutouxiaogui.cn/blog/<br>[9]: https://github.com/wxy<br>[10]: https://github.com/LCTT/TranslateProject<br>[11]: https://linux.cn/article-6314-1.html<br></p></div>
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div> 
+
+<link rel="stylesheet" href="prettify.css" type="text/css">
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div></body>
+</html>

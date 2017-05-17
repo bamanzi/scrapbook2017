@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = no">
+		<title>10 unsorted Linux tricks: volume 1</title>
+		<link type="text/css" rel="stylesheet" href="chrome://isreaditlater/content/text.css"><script type="text/javascript" src="about:blank"></script>
+	</head>
+	
+	<body o="{&quot;L&quot;:0,&quot;S&quot;:1,&quot;F&quot;:1,&quot;M&quot;:1,&quot;A&quot;:1}" class=" L0 S1 F1 M1 A1" id="less">
+	
+		<div id="RIL_container"><!--!TOPOFCTN-->
+		
+	<div id="text_header">
+		
+			
+	<div id="RIL_header">
+		
+		<div id="RIL_top">
+			<!--RILTOP-->
+			<cite><span><br><br>Original: </span><a href="http://blog.terminal.com/unsorted-tricks-1/" target="_blank">blog.terminal.com/unsorted-tricks-1/</a></cite>
+			<a class="i" id="RIL_settings"></a>
+		</div>
+			
+		<div id="RIL_settings_wrapper"></div>
+		
+		<br>
+		
+		<h1>10 unsorted Linux tricks: volume 1</h1>
+		<span id="header_cite">by <a class="RIL_author" href="#">CPU</a>, <a href="http://blog.terminal.com/">blog.terminal.com</a><span class="RIL_date"><br class="RIL_date_sep">July 16th 2015</span></span>
+	</div>
+	
+	<div id="text_body">	
+		<div><p nodeindex="22">You can learn something new every day.</p>
+<p nodeindex="24">The idea of this post is to show you some simple and (perhaps) useful Linux tricks that may help you to improve your productivity when working with the command line.</p>
+<p nodeindex="25">Unless defined differently, the tricks will work in standard <code nodeindex="110">bash</code> like with any Terminal base snapshot or in most of the modern Linux distributions.</p>
+<hr nodeindex="111"><h3 id="tip1powerfulfind" nodeindex="26">Tip 1: Powerful find</h3>
+<pre nodeindex="27"><code class="language-bash" nodeindex="112">~$ find /path -name "thename"
+</code>
+</pre>
+<p nodeindex="28">Basic usage: search for a file or folder named "thename".</p>
+<pre nodeindex="29"><code class="language-bash" nodeindex="113">~$ find /path -type f -name "thename"
+</code>
+</pre>
+<p nodeindex="30">This will narrow the search to just files.</p>
+<pre nodeindex="31"><code class="language-bash" nodeindex="114">~$ find /path -type d -name "thename"
+~$ find /path -type l -name "thename"
+</code>
+</pre>
+<p nodeindex="32">You can do the same with directories or links.</p>
+<pre nodeindex="33"><code class="language-bash" nodeindex="115"># example
+~$ find /var -xdev -type d -name log
+/var/log
+</code>
+</pre>
+<p nodeindex="34">This limits the search to the current filesystem.</p>
+<p nodeindex="35"><strong nodeindex="116">More flags:</strong></p>
+<ul nodeindex="37"><li nodeindex="36"><code nodeindex="117">-atime</code>: Access time.</li>
+<li nodeindex="38"><code nodeindex="118">-ctime</code>: Creation time.</li>
+<li nodeindex="39"><code nodeindex="119">-mtime</code>: Modification time.</li>
+<li nodeindex="40"><code nodeindex="120">-user</code>: Owner's username.</li>
+<li nodeindex="41"><code nodeindex="121">-uid</code>: Owner's UID.</li>
+<li nodeindex="42"><code nodeindex="122">-size</code>: File/dir size.</li>
+<li nodeindex="43"><code nodeindex="123">-exec</code>: Execute a command over the object found.</li>
+</ul><p nodeindex="44">Another example:</p>
+<pre nodeindex="45"><code class="language-bash" nodeindex="124">~$ find /backups -xdev -user qmax -type f -name "*.bck" -mtime -30 -exec gzip -v 9 {} \;
+</code>
+</pre>
+<p nodeindex="46">This searches the backups directory for all files that belong to the user <code nodeindex="125">qmax</code> with the <code nodeindex="126">bck</code> extension that were modified during the last 30 days and compresses them. The <code nodeindex="127">-xdev</code> prevents the command from being executed in filesystems mounted in subdirectories of the <code nodeindex="128">/backups</code> directory.</p>
+<hr nodeindex="129"><h3 id="tip2deleteafilewithaweirdname" nodeindex="47">Tip 2: Delete a file with a weird name</h3>
+<p nodeindex="48">This problem is not new and there are a lot of other solutions to deal with it, but this one always works.</p>
+<pre nodeindex="49"><code class="language-bash" nodeindex="130">~$ ls -ltr
+-rw-r--r-- 1 root root 4 Jul 13 17:19 -#?
+</code>
+</pre>
+<p nodeindex="50">Look at the name of that file -- <code nodeindex="131">-#?</code> -- I know... it's a nightmare.</p>
+<pre nodeindex="51"><code class="language-bash" nodeindex="132">~$ ls -li
+525004 -rw-r--r-- 1 root root 4 Jul 13 17:19 -#?  
+</code>
+</pre>
+<p nodeindex="52">First, execute <code nodeindex="133">ls -li</code> to get the <a href="https://en.wikipedia.org/wiki/Inode" target="_blank" nodeindex="134">inode number</a>.</p>
+<pre nodeindex="53"><code class="language-bash" nodeindex="135">~$ find . -inum 525004 -delete
+</code>
+</pre>
+<p nodeindex="54">Then, delete the file using <code nodeindex="136">find</code>. That will do the trick :)</p>
+<hr nodeindex="137"><h3 id="tip3getthetoptenspaceusagefilesordirectories" nodeindex="55">Tip 3: Get the 'top ten' space usage (files or directories)</h3>
+<pre nodeindex="56"><code class="language-bash" nodeindex="138"># example
+/var/cache$ du -sk * | sort -rn | head
+147108  apt  
+4540    debconf  
+1404    man  
+260     cracklib  
+188     fontconfig  
+32      terminal_backups  
+20      ldconfig  
+12      bind  
+</code>
+</pre>
+<p nodeindex="57">Size is in Kb.</p>
+<hr nodeindex="139"><h3 id="tip4listnewfiles" nodeindex="58">Tip 4: List new files</h3>
+<p nodeindex="59">List files and reverse sort them by modification time.</p>
+<pre nodeindex="60"><code class="language-bash" nodeindex="140">~$ ls -ltr
+</code>
+</pre>
+<p nodeindex="61">I do this by default; it shows the files that were modified recently at the end of the list. It's useful when finding files that change, logs, etc. You can add the <code nodeindex="141">-a</code> flag to include hidden files and directories.</p>
+<hr nodeindex="142"><h3 id="tip5psadvancedusage" nodeindex="62">Tip 5: PS advanced usage</h3>
+<pre nodeindex="63"><code class="language-bash" nodeindex="143">~$ ps -eo pcpu,pmem,comm,args | sort -rn | grep -v COMMAND
+</code>
+</pre>
+
+<pre nodeindex="65"><code class="language-bash" nodeindex="144">~$ ps -eo pmem,pcpu,comm,args | sort -rn | grep -v COMMAND
+</code>
+</pre>
+<p nodeindex="66">Applying the same logic, this lists processes ordered by memory usage, in percentage.</p>
+<hr nodeindex="145"><h3 id="tip6processmemoryusagetheeasyway" nodeindex="67">Tip 6: Process memory usage, the easy way</h3>
+<p nodeindex="68">Explaining how memory is assigned and used by each Linux process goes beyond the purpose of this post. Instead of that, I will show you this <a href="https://github.com/pixelb/ps_mem/blob/master/ps_mem.py" target="_blank" nodeindex="146">useful script</a> that will help you understand where your precious RAM is allocated:</p>
+<pre nodeindex="69"><code class="language-bash" nodeindex="147"># First, let's download the script
+~$ wget https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py
+--2015-07-15 10:48:06--  https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 23.235.47.133  
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|23.235.47.133|:443... connected.  
+HTTP request sent, awaiting response... 200 OK  
+Length: 17808 (17K) [text/plain]  
+Saving to: 'ps_mem.py'  
+# Now, execute it.
+~$ python ps_mem.py
+ Private  +   Shared  =  RAM used       Program
+
+260.0 KiB +  70.0 KiB = 330.0 KiB       cron  
+268.0 KiB +  75.0 KiB = 343.0 KiB       upstart-file-bridge  
+324.0 KiB +  72.5 KiB = 396.5 KiB       xinetd  
+304.0 KiB + 103.5 KiB = 407.5 KiB       upstart-udev-bridge  
+308.0 KiB + 144.0 KiB = 452.0 KiB       getty (2)  
+420.0 KiB +  77.5 KiB = 497.5 KiB       upstart-socket-bridge  
+484.0 KiB + 193.0 KiB = 677.0 KiB       ptyserved (2)  
+732.0 KiB +  96.5 KiB = 828.5 KiB       systemd-udevd  
+828.0 KiB +  83.5 KiB = 911.5 KiB       rsyslogd  
+704.0 KiB + 418.0 KiB =   1.1 MiB       su (2)  
+  1.4 MiB + 181.5 KiB =   1.6 MiB       init
+996.0 KiB + 919.0 KiB =   1.9 MiB       bash (2)  
+  1.6 MiB + 381.0 KiB =   2.0 MiB       sshd
+  1.1 MiB + 996.0 KiB =   2.1 MiB       nginx (2)
+  1.4 MiB +   1.5 MiB =   2.9 MiB       apache2 (2)
+ 62.7 MiB +   6.4 MiB =  69.1 MiB       Terminal server (2)
+---------------------------------
+                         85.4 MiB
+=================================
+</code>
+</pre>
+<p nodeindex="70">With this, we can clearly and easily see the 'real' memory consumption of each of our processes.</p>
+<hr nodeindex="148"><h3 id="tip7savetheconsoleoutputtoafile" nodeindex="71">Tip 7: Save the console output to a file</h3>
+<pre nodeindex="72"><code class="language-bash" nodeindex="149">~$ script
+Script started, file is typescript  
+~$ uname -a
+Linux terminal29935 2.6.32-042stab104.1 #1 SMP Thu Jul 9 13:40:24 MSK 2015 x86_64 x86_64 x86_64 GNU/Linux  
+~$ date
+Wed Jul 15 15:10:32 EDT 2015  
+~$ exit
+exit  
+Script done, file is typescript  
+</code>
+</pre>
+<p nodeindex="73">To demonstrate how it works, I executed a script, then some random commands, and finally I typed <code nodeindex="150">exit</code>. That told the script to finish logging the console output into a file.</p>
+<pre nodeindex="74"><code class="language- language-bash" nodeindex="151">~$ cat typescript
+Script started on Wed Jul 15 15:10:21 2015  
+  ~$ uname -a
+  Linux terminal29935 2.6.32-042stab104.1 #1 SMP Thu Jul 9 13:40:24 MSK 2015 x86_64 x86_64 x86_64 GNU/Linux
+  ~$ date
+  Wed Jul 15 15:10:32 EDT 2015
+  ~$ exit
+exit
+
+Script done on Wed Jul 15 15:10:36 2015  
+</code>
+</pre>
+<p nodeindex="75">Here you can see the contents of the file where we saved the output by using the <code nodeindex="152">script</code> command.</p>
+<hr nodeindex="153"><h3 id="tip8moveacrossdirectoriesusingpushdandpopd" nodeindex="76">Tip 8: Move across directories using <code nodeindex="154">pushd</code> and <code nodeindex="155">popd</code></h3>
+<p nodeindex="77">When you're working on the console, moving across directories is a common task and simple <code nodeindex="156">cd</code> shortcuts like this are well-known:</p>
+<pre nodeindex="78"><code class="language-bash" nodeindex="157"># 'cd' without any arguments will go to your home dir.
+~$ cd
+~$ pwd
+/root
+
+
+# 'cd -' will go back to the previous location
+/$ cd /opt
+/opt$ cd /etc/ssh/
+/etc/ssh$ cd -
+/opt
+
+# This will also send you to your home dir
+/opt$ cd ~
+~$ pwd
+/root
+</code>
+</pre>
+<p nodeindex="79">But, by using <code nodeindex="158">pushd</code> and <code nodeindex="159">popd</code>, you can set a directory as a 'bookmarked' and go back there quickly.</p>
+<pre nodeindex="80"><code class="language-bash" nodeindex="160"># Saving the location with pushd
+~$ cd /etc/ssh/
+/etc/ssh$ pushd $(pwd)
+/etc/ssh /etc/ssh
+
+/etc/ssh$ cd /var/www/
+/var/www$ cd /opt
+
+# Going back to the saved location
+/opt$ popd
+/etc/ssh
+/etc/ssh$ pwd
+/etc/ssh
+</code>
+</pre>
+<hr nodeindex="161"><h3 id="tip9practicalusesofthecommaoperator" nodeindex="81">Tip 9: Practical uses of the <code nodeindex="162">,</code> (comma) operator</h3>
+<p nodeindex="82">The <code nodeindex="163">,</code> operator is (not so) often used in scripts but sometimes it comes handy when you need to do some specific things at the command line directly.</p>
+<pre nodeindex="83"><code class="language-bash" nodeindex="164"># Rename a filename by replacing part of its name
+~$ touch file1.bck
+~$ mv file{1,one}.bck
+~$ ls
+fileone.bck
+
+# Use the expansion to create new files 
+~$ touch file{two,three,four}.bck
+~$ ls
+filefour.bck  fileone.bck  filethree.bck  filetwo.bck
+</code>
+</pre>
+<hr nodeindex="165"><h3 id="tip10addatimestamptoyourhistory" nodeindex="84">Tip 10: Add a timestamp to your history</h3>
+<pre nodeindex="85"><code class="language-bash" nodeindex="166">~$ export HISTTIMEFORMAT="%d/%m/%y %T "
+~$ history
+    1  15/07/15 18:07:03 clear
+    2  15/07/15 18:07:04 cd
+    3  15/07/15 18:07:05 ls -ltr
+    4  15/07/15 18:07:07 clear
+    5  15/07/15 18:07:12 touch file
+    6  15/07/15 18:07:17 chmod +rw file
+    7  15/07/15 18:07:22 chmod +x file
+    8  15/07/15 18:07:28 cat &gt; file
+    9  15/07/15 18:07:34 clear
+   10  15/07/15 18:07:36 history
+</code>
+</pre>
+<p nodeindex="86">If you want to make this change permanent, you can add the export to your <code nodeindex="167">.bashrc</code> file</p>
+<pre nodeindex="87"><code nodeindex="168">~$ echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' &gt;&gt; .bashrc
+</code>
+</pre>
+<hr nodeindex="169"><h3 id="finalnotes" nodeindex="88">Final notes</h3>
+<p nodeindex="89">I hope you didn't know some of the tricks presented here today. Most of them are part of my day-to-day sysadmin tasks.</p>
+<p nodeindex="90">Feel free to contribute with your own tricks in the comments section.</p>
+</div>
+	<div class="clear"></div>
+	</div>
+	</div>
+		</div>
+	
+	
+	<!--!ENDOFPAGE-->
+	
+	
+	
+	</body>
+</html>

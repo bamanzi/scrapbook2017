@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = no">
+		<title>Ten unsorted Linux tricks: Volume 3</title>
+		<link type="text/css" rel="stylesheet" href="chrome://isreaditlater/content/text.css"><script type="text/javascript" src="about:blank"></script>
+	</head>
+	
+	<body o="{&quot;L&quot;:0,&quot;S&quot;:1,&quot;F&quot;:1,&quot;M&quot;:1,&quot;A&quot;:1}" class=" L0 S1 F1 M1 A1" id="less">
+	
+		<div id="RIL_container"><!--!TOPOFCTN-->
+		
+	<div id="text_header">
+		
+			
+	<div id="RIL_header">
+		
+		<div id="RIL_top">
+			<!--RILTOP-->
+			<cite><span><br><br>Original: </span><a href="http://blog.terminal.com/10-unsorted-linux-tricks-volume-3/" target="_blank">blog.terminal.com/10-unsorted-linux-tricks-volume-3/</a></cite>
+			<a class="i" id="RIL_settings"></a>
+		</div>
+			
+		<div id="RIL_settings_wrapper"></div>
+		
+		<br>
+		
+		<h1>Ten unsorted Linux tricks: Volume 3</h1>
+		<span id="header_cite">by <a class="RIL_author" href="#">D</a>, <a href="http://blog.terminal.com/">blog.terminal.com</a><span class="RIL_date"><br class="RIL_date_sep">January 12th 2016</span></span>
+	</div>
+	
+	<div id="text_body">	
+		<div lang="en"><p nodeindex="47">Now, if you want to recombine the file, you can just use the <code nodeindex="169">cat</code> command:</p>
+<pre nodeindex="48"><code class="language-langauge-bash" nodeindex="170">root@terminal41657:~ cat small_chunk-* &gt; big_again.txt  
+</code>
+</pre>
+<p nodeindex="49"><strong nodeindex="171">Easy, right?</strong></p>
+<hr nodeindex="172"><h3 id="tip3mergeorsplitpdffilesdirectlyinyourterminal" nodeindex="50">Tip 3: Merge or split PDF files directly in your Terminal</h3>
+<p nodeindex="51">We will use the <code nodeindex="173">convert</code> command line utility, which is part of the <strong nodeindex="174">Imagemagick</strong> package. In order to use <code nodeindex="175">convert</code> you need first to install the <code nodeindex="176">imagemagick</code> package by executing:</p>
+<pre nodeindex="52"><code class="language-bash" nodeindex="177">apt-get install imagemagick  
+</code>
+</pre>
+<p nodeindex="53"><em nodeindex="178">(Ubuntu)</em>  <br nodeindex="179"></p>
+<pre nodeindex="54"><code class="language-bash" nodeindex="180">yum install imagemagick  
+</code>
+</pre>
+<p nodeindex="55"><em nodeindex="181">(Centos)</em></p>
+<p nodeindex="56">Now that we have Imagemagick, we can merge and split files.</p>
+<p nodeindex="57"><strong nodeindex="182">Merging PDF files:</strong></p>
+<pre nodeindex="58"><code class="language-bash" nodeindex="183">convert part1.pdf part2.pdf merged.pdf  
+</code>
+</pre>
+<p nodeindex="59"><em nodeindex="184">This command will merge <code nodeindex="185">part1.pdf</code> and <code nodeindex="186">part2.pdf</code> into one single file called <code nodeindex="187">merged.pdf</code>.</em>  <br nodeindex="188"></p>
+<p nodeindex="60">You can also merge a subset of pages instead of all pages in the input files:</p>
+<pre nodeindex="61"><code class="language-bash" nodeindex="189">convert file1.pdf[0-5] file2.pdf[3,7-9] merged.pdf  
+</code>
+</pre>
+<p nodeindex="62"><em nodeindex="190">In this example, we merge pages from 0 to 5 of <code nodeindex="191">file1.pdf</code> and pages 3, 7, 8 and 9 of <code nodeindex="192">file.pdf</code> into a single <code nodeindex="193">merged.pdf</code> file.</em>  <br nodeindex="194"></p>
+<p nodeindex="63"><strong nodeindex="195">Splitting a PDF file:</strong></p>
+<p nodeindex="64">This takes certain pages of the input PDF file and copies them into different output files:</p>
+<pre nodeindex="65"><code class="language-bash" nodeindex="196">convert input.pdf[0-10] pages0to10.pdf  
+convert input.pdf[11-20] pages11to20.pdf  
+</code>
+</pre>
+<p nodeindex="66"><em nodeindex="197">In this example we divide the file in two by taking certain subsets of pages from the same file and saving them in two different output files.</em></p>
+<hr nodeindex="198">
+<p nodeindex="68">You may want to do this for different reasons, for instance, when using plain password as commands argument (this is a bad practice, of course!).</p>
+<p nodeindex="69">To hide a command from the bash history, just leave a blank space at the beginning of the line.</p>
+<pre nodeindex="70"><code class="language-bash" nodeindex="199">$ mysql -uroot -pMYPASSWORD # This will apear in the bash history.
+$  mysql -uroot -pMYPASSWORD # This will NOT apear in the bash history. 
+</code>
+</pre>
+<hr nodeindex="200"><h3 id="tip5renamingfilesinbulk" nodeindex="71">Tip 5: Renaming files in bulk</h3>
+<p nodeindex="72">We will use the <code nodeindex="201">rename</code> command to change the name of several files in a batch. Imagine that we have a folder with several hundred photo files, downloaded from your camera. They have names like <code nodeindex="202">DSC-XXX.jpg</code> where <code nodeindex="203">X</code> is an entire number.</p>
+<pre nodeindex="73"><code class="language-bash" nodeindex="204">rename -v 's/DSC/birthday-party/' *.jpg  
+DSC_001.jpg renamed as birthday-party-001.jpg  
+DSC_002.jpg renamed as birthday-party-002.jpg  
+DSC_003.jpg renamed as birthday-party-003.jpg  
+.
+.
+.
+</code>
+</pre>
+<p nodeindex="74"><em nodeindex="205">'s/DSC/birthday-party/' is a perl-compatible regular expression.</em></p><p brd="1" nodeindex="75">If you want to replace ALL occurrences of a pattern in a file name, you must specify a global replace. For example, if you want to replace all spaces in the file names with null (remove all spaces):</p>
+<pre nodeindex="76"><code class="language-bash" nodeindex="207">$ rename -v 's/ //g' *.pdf
+Terminal Local T Documentation.pdf renamed as TerminalLocalTDocumentation.pdf  
+Curriculum Vitae 2015-09-05.pdf  renamed as CurriculumVitae2015-09-05.pdf  
+</code>
+</pre>
+<p brd="1" nodeindex="77">Now, suppose you want to replace all occurrences of spaces, underscores, and round brackets with the dash character <code nodeindex="208">-</code> :</p>
+<pre nodeindex="78"><code class="language-bash" nodeindex="209">$ rename -v 's/[ _()]/-/g' *
+upload_pic (001).jpg renamed as upload-pic-001-.jpg  
+upload_pic (002).jpg renamed as upload-pic-002-.jpg  
+2001 A Space Odyssey (Novel) Arthur C Clarke.pdf renamed as 2001-A-Space-Odyssey--Novel--Arthur-C-Clarke.pdf  
+</code>
+</pre>
+<hr nodeindex="210"><h3 id="tip6sharingyourbashhistoryacrossmultiplesessions" nodeindex="79">Tip 6: Sharing your bash history across multiple sessions</h3>
+<p nodeindex="80">By default, your bash session history is saved when your session ends. This was just fine when people worked with only one session at a time. Nowadays it's easy to work with multiple terminal sessions by just opening a new window or, in the case of Terminal, by opening a new tab.</p>
+<p nodeindex="81">In order to enable this feature, open your ~.bashrc file and add the lines in below:</p>
+<pre nodeindex="82"><code class="language-bash" nodeindex="211">export HISTCONTROL=ignoredups:erasedups  
+shopt -s histappend  
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"  
+</code>
+</pre>
+<ul nodeindex="84"><li nodeindex="83">
+<p nodeindex="85">The first statement is to avoid duplicates in your command history.</p>
+</li>
+<li nodeindex="86">
+<p nodeindex="87">The second statement appends the history to the file, instead of rewriting it every time.</p>
+</li>
+<li nodeindex="88">
+<p nodeindex="89">Finally, the third line will set the <code nodeindex="212">PROMPT_COMMAND</code> variable with the proper history commands to save the history file, clean the in-memory history stack, and reload it from the file again. This will happen each time the prompt is shown.</p>
+</li>
+</ul><hr nodeindex="213"><h3 id="tip7listallfilesthatweremodifiedbyacommand" nodeindex="90">Tip 7: List all files that were modified by a command</h3>
+<p nodeindex="91">Sometimes you run commands that you don't know entirely and afterwards you're not sure what was modified in a certain directory of your system.</p>
+<p nodeindex="92">To avoid that problem, you can execute your command like this:</p>
+<pre nodeindex="93"><code nodeindex="214">D="$(date "+%F %T.%N")"; &lt;COMMAND&gt;; find . -newermt "$D"  
+</code>
+</pre>
+<p nodeindex="94"><em nodeindex="215">Where <code nodeindex="216">&lt;command&gt;</code> is what you want to execute.</em></p>
+<p nodeindex="95">This simply takes the date (in nanoseconds resolution) and saves its value in a variable, then it executes the command and search the directory for the files that were modified since the date stored in the variable.</p>
+<p nodeindex="96">Note that this only works on the current directory and its subpaths, but you can change it by extending the <code nodeindex="217">find</code> scope to something different from <code nodeindex="218">.</code>.</p>
+<p nodeindex="97">See this trivial example:</p>
+<pre nodeindex="98"><code class="language-bash" nodeindex="219">root@terminal41651:~ D="$(date "+%F %T.%N")"; mkdir files;  touch files/newfile; find . -newermt "$D"  
+.
+./files
+./files/newfile
+</code>
+</pre>
+<p nodeindex="99"><em nodeindex="220">Note that I'm executing two commands in this case (<code nodeindex="221">mkdir and touch</code>). You can use as many commands as you want, surrounded by  and <code nodeindex="222">find . -newermt "$D"</code></em></p>
+<hr nodeindex="223"><h3 id="tip8showcurrentconnectionsandtheirdetails" nodeindex="100">Tip 8: Show current connections and their details</h3>
+<p nodeindex="101">You can use <code nodeindex="224">lsof -i -r</code> to show all connections and their details in realtime.</p>
+<pre nodeindex="102"><code nodeindex="225">root@terminal26617:~ lsof -i -r  
+COMMAND   PID  USER   FD   TYPE     DEVICE SIZE/OFF NODE NAME  
+mysqld    735 mysql    0u  IPv4 3409549032      0t0  TCP localhost.localdomain:mysql-&gt;localhost.localdomain:37524 (ESTABLISHED)  
+mysqld    735 mysql   25u  IPv4 1121802450      0t0  TCP localhost.localdomain:mysql (LISTEN)  
+mysqld    735 mysql   76u  IPv4 3409549033      0t0  TCP localhost.localdomain:mysql-&gt;localhost.localdomain:37525 (ESTABLISHED)  
+node    12407  root   10u  IPv4 3409549030      0t0  TCP localhost.localdomain:37524-&gt;localhost.localdomain:mysql (ESTABLISHED)  
+node    12407  root   13u  IPv4 3409549031      0t0  TCP localhost.localdomain:37525-&gt;localhost.localdomain:mysql (ESTABLISHED)  
+node    12407  root   20u  IPv4 1121802517      0t0  TCP *:http (LISTEN)  
+sshd    12980  root    3u  IPv4 1121802518      0t0  TCP *:ssh (LISTEN)  
+sshd    12980  root    4u  IPv6 1121802519      0t0  TCP *:ssh (LISTEN)  
+===
+</code>
+</pre>
+<hr nodeindex="226"><h3 id="tip9generatearandompassword" nodeindex="103">Tip 9: Generate a random password</h3>
+<pre nodeindex="104"><code class="language-bash" nodeindex="227">LANG=c &lt; /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;  
+</code>
+</pre>
+<p nodeindex="105">In the line above, we take a random string from the <code nodeindex="228">/dev/urandom</code> special device, just leaving the permitted characters and cutting it down to 16 characters.</p>
+<pre nodeindex="106"><code class="language-bash" nodeindex="229">root@terminal41657:~ LANG=c &lt; /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;  
+31uLtZWQN58Y_6tg  
+root@terminal41657:~ LANG=c &lt; /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;  
+BJJrGvVdNg_ult2k  
+root@terminal41657:~  LANG=c &lt; /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;  
+zyiou-8Zkm5BRXwd  
+</code>
+</pre>
+<p nodeindex="107"><em nodeindex="230">You can change the value <code nodeindex="231">16</code> to another number depending on how long your password needs to be.</em></p>
+<hr nodeindex="232"><h3 id="tip10usepvtoactivelymonitordatasentthroughapipe" nodeindex="108">Tip 10: Use <code nodeindex="233">pv</code> to actively monitor data sent through a pipe</h3>
+<p nodeindex="109">With <code nodeindex="234">pv</code> you can watch your piped operations by getting information like time elapsed, percentage of completion, throughput rate, and ETA.  <br nodeindex="235"><!--IMG_1--><strong nodeindex="237">Let's install it:</strong></p>
+<pre nodeindex="110"><code class="language-bash" nodeindex="238">apt-get install pv  
+</code>
+</pre>
+<p nodeindex="111"><em nodeindex="239">(Ubuntu)</em>  <br nodeindex="240"></p>
+<pre nodeindex="112"><code class="language-bash" nodeindex="241">wget http://mirror-fpt-telecom.fpt.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm  
+rpm -ivh epel-release-6-8.noarch.rpm  
+yum install pv  
+</code>
+</pre>
+<p nodeindex="113"><em nodeindex="242">(CentOS, adding the EPEL repository)</em></p>
+<p brd="1" nodeindex="114"><strong nodeindex="243">And some usage examples:</strong></p>
+<pre nodeindex="115"><code class="language-bash" nodeindex="244">pv 500M.out &gt; copy.out  
+500MB 0:00:01 [ 237MB/s] [==&gt;  ] 50%  
+</code>
+</pre>
+<p nodeindex="116"><em nodeindex="245">Piping the contents of a file into another file</em></p>
+<pre nodeindex="117"><code class="language-bash" nodeindex="246">tar -cf - . | pv -s $(du -sb . | awk '{print $1}') | gzip &gt; out.tgz  
+ 313MB 0:00:05 [53.7MB/s] [&gt;     ]  2% ETA 0:03:59
+</code>
+</pre>
+<p nodeindex="118"><em nodeindex="247">Getting info about a tar and gzip process</em>  <br nodeindex="248"></p>
+<pre nodeindex="119"><code class="language-bash" nodeindex="249">root@terminal41060:~# pv /dev/zero &gt; /dev/null  
+143GB 0:00:11 [13.2GB/s] [                  &lt;=&gt;       ]  
+</code>
+</pre>
+<p nodeindex="120"><em nodeindex="250">See how fast your Terminal copies from /dev/zero to /dev/null</em></p>
+<p nodeindex="121">For more information please check the <code nodeindex="251">pv</code> man pages.</p>
+</div>
+	<div class="clear"></div>
+	</div>
+	</div>
+		</div>
+	
+	
+	<!--!ENDOFPAGE-->
+	
+	
+	
+	</body>
+</html>

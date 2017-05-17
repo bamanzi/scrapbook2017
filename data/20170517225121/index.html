@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = no">
+		<title>10 unsorted Linux tricks: volume 2</title>
+		<link type="text/css" rel="stylesheet" href="chrome://isreaditlater/content/text.css"><script type="text/javascript" src="about:blank"></script>
+	</head>
+	
+	<body o="{&quot;L&quot;:0,&quot;S&quot;:1,&quot;F&quot;:1,&quot;M&quot;:1,&quot;A&quot;:1}" class=" L0 S1 F1 M1 A1" id="less">
+	
+		<div id="RIL_container"><!--!TOPOFCTN-->
+		
+	<div id="text_header">
+		
+			
+	<div id="RIL_header">
+		
+		<div id="RIL_top">
+			<!--RILTOP-->
+			<cite><span><br><br>Original: </span><a href="http://blog.terminal.com/unsorted-tricks-2/" target="_blank">blog.terminal.com/unsorted-tricks-2/</a></cite>
+			<a class="i" id="RIL_settings"></a>
+		</div>
+			
+		<div id="RIL_settings_wrapper"></div>
+		
+		<br>
+		
+		<h1>10 unsorted Linux tricks: volume 2</h1>
+		<span id="header_cite">by <a class="RIL_author" href="https://blog.terminal.com/author/enrique/index.html">Enrique Conci's Picture</a>, <a href="http://blog.terminal.com/">blog.terminal.com</a><span class="RIL_date"><br class="RIL_date_sep">July 22nd 2015</span></span>
+	</div>
+	
+	<div id="text_body">	
+		<div><p nodeindex="22">Welcome to our second post about simple and (perhaps) useful tricks to use with Linux Terminals. Check out the <a href="https://blog.terminal.com/unsorted-tricks-1/index.html" target="_blank" nodeindex="122">first post</a> in the series if you missed it.</p>
+<p nodeindex="24">Unless defined differently, these tricks will work in standard bash like with any Terminal base snapshot or in most of the modern Linux distributions.</p>
+<hr nodeindex="123"><h3 id="tip1showotheruserprocessesthatareconsumingyourcpu" nodeindex="25">Tip 1: Show other user processes that are consuming your CPU</h3>
+<p nodeindex="26">This command shows all processes sorted by CPU usage that are not owned by your current user (in this example I'm root).</p>
+<pre nodeindex="27"><code class="language-bash" nodeindex="124">~$ ps aux  --sort=-%cpu | grep -m 20 -v `whoami`
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND  
+syslog     298  0.0  0.0 184188  1488 ?        Ssl  Jul07   0:00 rsyslogd  
+bind       591  0.0  0.3 248904  5396 ?        Ssl  Jul07   0:00 /usr/sbin/named -u bind  
+postfix    900  0.0  0.0  27408   264 ?        S    Jul07   0:00 qmgr -l -t unix -u  
+postfix   3697  0.0  0.0  27356  1560 ?        S    17:18   0:00 pickup -l -t unix -u -c  
+</code>
+</pre>
+<hr nodeindex="125"><h3 id="tip2mergefileswithdataincolumns" nodeindex="28">Tip 2: Merge files with data in columns</h3>
+<p nodeindex="29">It's relatively easy to separate the columns of one file into different files, but not so easy to make just one file out of columns from different files. To illustrate this, I will make 2 simple files:</p>
+<pre nodeindex="30"><code class="language-bash" nodeindex="126">~$ cat names
+joe  
+varun  
+julie  
+jeff  
+zach  
+jesse
+
+~$ cat colors
+blue  
+red  
+green  
+brown  
+pink  
+yellow  
+</code>
+</pre>
+<p nodeindex="31">Now, let's make a script to merge the columns of these two files in just one output, separated by a comma.</p>
+<pre nodeindex="32"><code class="language-bash" nodeindex="127">~$ cat &gt; merger.sh
+#!/bin/bash
+length=$(wc -l $1 | awk '{print $1}')  
+count=1  
+while [ "$count" -le "$length" ] ; do  
+      a=$(head -$count $1 | tail -1)
+      b=$(head -$count $2 | tail -1)
+      echo "$a,$b"
+      count=$(expr $count + 1)
+done  
+# I press Control+D here to stop sending characters to the pipe.
+~$ chmod +x merger.sh
+</code>
+</pre>
+<p nodeindex="33">Note that we're making the script executable as well by using the <code nodeindex="128">chmod</code> command.</p>
+<pre nodeindex="34"><code class="language-bash" nodeindex="129">~$ ./merger.sh names colors
+joe,blue  
+varun,red  
+julie,green  
+jeff,brown  
+zach,pink  
+jesse,yellow  
+</code>
+</pre>
+<p nodeindex="35">Finally, we test the script.</p>
+<hr nodeindex="130"><h3 id="tip3avoidcompressionorencryptionoverheadwhensendingdatainsecureenvironments" nodeindex="36">Tip 3: Avoid compression or encryption overhead when sending data in secure environments</h3>
+<p nodeindex="37">Sometimes you might need to transfer a huge amount of data between servers as quickly as possible. The default option is <a href="https://en.wikipedia.org/wiki/Secure_copy" target="_blank" nodeindex="131"><code nodeindex="132">scp</code></a> due its convenience and protocol security, but if you need something more raw to speed up the process you can use <a href="https://en.wikipedia.org/wiki/Netcat" target="_blank" nodeindex="133"><code nodeindex="134">nc</code></a>.</p>
+<p nodeindex="38">To send just one file:</p>
+<pre nodeindex="39"><code class="language-bash" nodeindex="135">~$ nc -l -p 1234 &gt; out.file
+</code>
+</pre>
+<p nodeindex="40">(On the <strong nodeindex="136">receiving end</strong>)</p>
+<pre nodeindex="41"><code class="language-bash" nodeindex="137">~$ nc -w 3 [destination_server] 1234 &lt; out.file
+</code>
+</pre>
+<p nodeindex="42">(On the <strong nodeindex="138">sending end</strong>)</p>
+<p nodeindex="44">To send a directory:</p>
+<pre nodeindex="45"><code class="language-bash" nodeindex="141">~$ nc -l -p 1234 | tar xvfp -
+</code>
+</pre>
+<p nodeindex="46">(On the <strong nodeindex="142">receiving end</strong>)</p>
+<pre nodeindex="47"><code class="language-bash" nodeindex="143">~$ tar cfp - /some/dir | nc -w 3 [destination_server] 1234
+</code>
+</pre>
+<p nodeindex="48">(On the <strong nodeindex="144">sending end</strong>)</p>
+<hr nodeindex="145"><h3 id="tip4writemorethanonefileatthesametime" nodeindex="49">Tip 4: Write more than one file at the same time</h3>
+<p nodeindex="50">Unix piping is wonderful. You can easily save the output of a file by using <code nodeindex="146">&gt;</code>, but saving the same output to different files at the same time can be tricky... unless you know how to use <a href="https://en.wikipedia.org/wiki/Tee_(command)" target="_blank" nodeindex="147"><code nodeindex="148">tee</code></a>.</p>
+<!--IMG_1-->
+<p nodeindex="52">This file was made by Wikipedia User: Sven (Own work) [<a href="http://www.gnu.org/copyleft/fdl.html" nodeindex="150">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/4.0/" nodeindex="151">CC BY-SA 4.0-3.0-2.5-2.0-1.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3ATee.svg" nodeindex="152">via Wikimedia Commons</a></p>
+<p nodeindex="53">In addition, you can pass more than one filename to <code nodeindex="153">tee</code> and the output will be saved as well.</p>
+<pre nodeindex="54"><code class="language-bash" nodeindex="154">~$ ps | head -5 | tee file1 file2 file3
+  PID TTY          TIME CMD
+  617 pts/2    00:00:00 su
+  618 pts/2    00:00:00 bash
+ 1078 pts/2    00:00:00 ps
+ 1079 pts/2    00:00:00 head
+
+~$ cat file*
+  PID TTY          TIME CMD
+  617 pts/2    00:00:00 su
+  618 pts/2    00:00:00 bash
+ 1078 pts/2    00:00:00 ps
+ 1079 pts/2    00:00:00 head
+  PID TTY          TIME CMD
+  617 pts/2    00:00:00 su
+  618 pts/2    00:00:00 bash
+ 1078 pts/2    00:00:00 ps
+ 1079 pts/2    00:00:00 head
+  PID TTY          TIME CMD
+  617 pts/2    00:00:00 su
+  618 pts/2    00:00:00 bash
+ 1078 pts/2    00:00:00 ps
+ 1079 pts/2    00:00:00 head
+</code>
+</pre>
+<p nodeindex="55">As you can see, the same output has been saved to all files.</p>
+<p nodeindex="56">Tee has more interesting usages than that -- you can also use it to save partial results of command output.</p>
+<p nodeindex="57">Let's check out an example:</p>
+<pre nodeindex="58"><code class="language-bash" nodeindex="155">~$ ps -ef | tee ps.txt | grep upstart | tee upstart_processes.txt | awk '{print $2}'
+204  
+333  
+334  
+1090  
+1091  
+</code>
+</pre>
+<p nodeindex="59">This will save two files: one file called <strong nodeindex="156">ps.txt</strong> with the <code nodeindex="157">ps -ef</code> output, and another file called <strong nodeindex="158">upstart_processes.txt</strong> with the upstart processes only. Additionally, it will show the PID of the upstart processes.</p>
+<hr nodeindex="159"><h3 id="tip5executecommandseverytimeauserlogsinviassh" nodeindex="60">Tip 5: Execute commands every time a user logs in via SSH</h3>
+<p nodeindex="61">There are hundreds of different things to do to secure your machine but one of the most important is to know what's happening there.</p>
+<p nodeindex="62">You can trigger an action simply &amp; easily every time a user logs in remotely by adding / calling your script to / from the <code nodeindex="160">/etc/ssh/sshrc</code> file. If you want to apply this rule to just one user, you will write the <code nodeindex="161">&lt;user's_home&gt;/.ssh/rc</code> file.</p>
+<p nodeindex="63">Check out a couple of examples:</p>
+<pre nodeindex="64"><code class="language-bash" nodeindex="162">user=$(/usr/bin/whoami)  
+ip=$(/usr/bin/last | head -1 | awk '{print $3}')  
+echo "The user: $user is now connected to the server from $ip" | mail -s "$user connected to $(hostname)" your@email.com  
+</code>
+</pre>
+<p nodeindex="65">This is an example of <code nodeindex="163">/etc/ssh/sshrc</code> file. It will send an email every time a user logs into your server.</p>
+<pre nodeindex="66"><code class="language-bash" nodeindex="164">#Requires node-slack-cli: npm install node-slack-cli -g
+message="The user $(whoami) just logged in to the server"  
+export SLACK_TOKEN="your-slack-chat-user-token"  
+/usr/local/bin/slack -c 'notifications_channel' -m $message -u 'ServerLogin'
+</code>
+</pre>
+<p nodeindex="67">If your company uses <a href="https://slack.com/" target="_blank" nodeindex="165">Slack</a> this could be useful for you. It uses <a href="https://github.com/juanpabloaj/node-slack-cli" target="_blank" nodeindex="166">node-slack-cli</a> to send a message to a specific chat channel every time a user logs into the server via SSH.</p>
+<hr nodeindex="167"><h3 id="tip6recovermysqlrootpassword" nodeindex="68">Tip 6: Recover MySQL root password</h3>
+<p nodeindex="69">Losing the root password of a MySQL DB instance may sound like a catastrophe, but in fact it's not a big deal for the seasoned system admin.</p>
+<p nodeindex="70">To recover your MySQL root password, follow these steps (as root):</p>
+<pre nodeindex="71"><code class="language-bash" nodeindex="168">/etc/init.d/mysql stop
+</code>
+</pre>
+<p nodeindex="72">This stops your MySQL server.</p>
+<pre nodeindex="73"><code class="language-bash" nodeindex="169">mysqld_safe --skip-grant-tables --skip-networking &amp;  
+</code>
+</pre>
+<p nodeindex="74">This will start MySQL with the <code nodeindex="170">--skip-grant-tables</code> options. It allows you to log in as root without the password.</p>
+<p nodeindex="75">Additionally we add the <code nodeindex="171">--skip-networking</code> option which will prevent anyone to log in to the DB as root remotely.</p>
+<pre nodeindex="76"><code class="language-bash" nodeindex="172">mysql -u root -p  
+</code>
+</pre>
+<p nodeindex="77">We try logging in as root and this time it will not ask for a password.</p>
+<pre nodeindex="78"><code class="language-sql" nodeindex="173">mysql&gt; use mysql;  
+mysql&gt; update user set password=PASSWORD("NEWPASSWORD") where user="root";  
+mysql&gt; flush privileges;  
+mysql&gt; Ctrl+D  
+</code>
+</pre>
+<p nodeindex="79">Now we change the MySQL root password.</p>
+<pre nodeindex="80"><code class="language-bash" nodeindex="174">/etc/init.d/mysql restart
+</code>
+</pre>
+<p nodeindex="81">And finally we restart MySQL to make sure it's working in 'normal' mode.</p>
+<hr nodeindex="175"><h3 id="tip7changeyourservertimezone" nodeindex="82">Tip 7: Change your server timezone</h3>
+<p nodeindex="83">There are several ways to change your Linux server timezone, but in general this method will always work. Execute the commands as root.</p>
+<pre nodeindex="84"><code class="language-bash" nodeindex="176">cp /etc/localtime  /etc/localtime-old  
+</code>
+</pre>
+<p nodeindex="85">First we make a backup of the current localtime file.</p>
+<pre nodeindex="86"><code class="language-bash" nodeindex="177">rm /etc/localtime; ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime  
+</code>
+</pre>
+<p nodeindex="87">Then, we delete and change the localtime by a symbolic link to the time zone file that you want to set up. In this example I selected the <code nodeindex="178">America/Los_Angeles</code> TZ file, located at <code nodeindex="179">/usr/share/zoneinfo</code>.</p>
+<hr nodeindex="180"><h3 id="tip8runahttpserverinjustoneline" nodeindex="88">Tip 8: Run a HTTP server in just one line</h3>
+<p nodeindex="89">This trick is well-known among Python developers.</p>
+<p nodeindex="90">Just execute the line below on the directory that you want to share and then access the <code nodeindex="181">server:port</code> directly from your browser.</p>
+<pre nodeindex="91"><code class="language-bash" nodeindex="182">python -m SimpleHTTPServer 8080  
+</code>
+</pre>
+<p nodeindex="92">In this example, the current directory will be served as <strong nodeindex="183">Document_Root</strong> over port <code nodeindex="184">8080</code>.</p>
+<hr nodeindex="185"><h3 id="tip9prependtexttoafile" nodeindex="93">Tip 9: Prepend text to a file</h3>
+<p nodeindex="94">This is a simple but super useful tip.</p>
+<pre nodeindex="95"><code class="language-bash" nodeindex="186">~$ cat existing_file
+old line 1  
+old line 2  
+old line 3
+
+~$ echo "This is the first line of my file" | cat - existing_file
+This is the first line of my file  
+old line 1  
+old line 2  
+old line 3  
+</code>
+</pre>
+<hr nodeindex="187"><h3 id="tip10dumpanentiresiteusingwget" nodeindex="96">Tip 10: Dump an entire site using <code nodeindex="188">wget</code></h3>
+<p nodeindex="97">Nowadays, most sites are <a href="https://en.wikipedia.org/wiki/Dynamic_web_page" target="_blank" nodeindex="189">dynamic</a> and you're not able to get the actual source code. Instead of that, you will be able get an HTML flat version of it.</p>
+<pre nodeindex="98"><code class="language-bash" nodeindex="190">~$ wget --random-wait -r -p -e robots=off -U mozilla https://blog.terminal.com
+</code>
+</pre>
+<p nodeindex="99">This will <em nodeindex="191">try to</em> download an entire site as it renders in a web browser.</p>
+<hr nodeindex="192"><h3 id="finalnotes" nodeindex="100">Final notes</h3>
+<p nodeindex="101">I hope you've enjoyed this list of tricks. All of them will work in Terminals.</p>
+<p nodeindex="102">Feel free to contribute with your own tricks in the comments section.</p>
+</div>
+	<div class="clear"></div>
+	</div>
+	</div>
+		</div>
+	
+	
+	<!--!ENDOFPAGE-->
+	
+	
+	
+	</body>
+</html>

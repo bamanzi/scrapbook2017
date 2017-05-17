@@ -1,0 +1,34 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("urn:scrapbook-download-error:https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("fontawesome-webfont.woff2") format("woff2"), url("fontawesome-webfont.woff") format("woff"), url("fontawesome-webfont.ttf") format("truetype"), url("fontawesome-webfont.svg") format("svg");
+}
+.fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; font-size-adjust: none; font-stretch: normal; font-feature-settings: normal; font-language-override: normal; font-kerning: auto; font-synthesis: weight style; font-variant: normal; font-size: inherit; text-rendering: auto; transform: translate(0px, 0px); }
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+@keyframes fa-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+@keyframes fa-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+.fa-stack { position: relative; display: inline-block; width: 2em; height: 2em; line-height: 2em; vertical-align: middle; }
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; text-align: center; }
+.fa-stack-1x { line-height: inherit; }
+.fa-stack-2x { font-size: 2em; }
+.fa-inverse { color: rgb(255, 255, 255); }
+.fa-twitter::before { content: ""; }
+.fa-facebook-f::before, .fa-facebook::before { content: ""; }
+.fa-github::before { content: ""; }
+.fa-rss::before { content: ""; }
+.fa-google-plus::before { content: ""; }
+.fa-linkedin::before { content: ""; }
+.fa-circle::before { content: ""; }
+.fa-instagram::before { content: ""; }
+.fa-flickr::before { content: ""; }
+.fa-tumblr::before { content: ""; }
+.fa-stack-exchange::before { content: ""; }
+.fa-pied-piper::before { content: ""; }

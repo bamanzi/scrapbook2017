@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>你值得了解的 10 个有趣的 Linux 命令行小技巧-技术 ◆ 学习|Linux.中国-开源社区</title>
+ 
+<meta name="keywords" content="你值得了解的 10 个有趣的 Linux 命令行小技巧">
+<meta name="description" content="当我们发现使用 Linux 的新技巧时，尤其是像我这样的命令行极客，我们总会感到非常来劲。 ">
+<meta name="copyright" content="2005-2015 Linux.cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="referrer" content="always">
+<base href=""><link rel="stylesheet" type="text/css" href="style_1_common.css">
+<link rel="stylesheet" type="text/css" href="style_1_portal_view.css">
+<link href="responsive.css" rel="stylesheet">
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" type="text/javascript"></script>
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script src="about:blank" type="text/javascript"></script>
+<link rel="canonical" href="https://linux.cn/article-8119-1.html"><script src="about:blank" type="text/javascript"></script>
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+.show_links { color: rgb(102, 102, 102); font-size: 9px; padding-left: 10px; }
+.sup { font-size: 9px; vertical-align: super; background-color: rgb(102, 102, 102); color: rgb(255, 255, 255); transform: scale(0.75); display: inline-block; padding: 1px 1px 3px; margin: 0px; line-height: 1em; }
+</style>
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+
+<body id="nv_portal">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<a id="close_print" title="关闭打印模式"></a>
+<a id="switchwidth" title="切换到窄版" class="switchwidth"></a>
+<div id="wp" class="wp pr">
+
+<div id="ct" class="ct2 wp cl">
+<div class="mn" style="float: none; margin: 40px auto;">
+<div class="vw">
+<div class="h">
+<div class="hm z">
+<h1 class="ph" id="article_title">你值得了解的 10 个有趣的 Linux 命令行小技巧</h1>
+<p class="xg1">
+2017-01-15 10:48</p>
+<p class="copyright">
+    	 
+    		    			    			<span class="z">编译自：<a href="http://www.tecmint.com/linux-command-line-tricks-and-tips-worth-knowing/" target="_blank">http://www.tecmint.com/linux-command-line-tricks-and-tips-worth-knowing/</a></span>
+    			    		    		<span class="y">作者： Aaron Kili</span>    		<br class="clear">
+    	    	<span class="z">原创：<a href="http://lctt.github.io/" target="_blank">LCTT</a> <a href="https://linux.cn/article-8119-1.html" target="_blank">https://linux.cn/article-8119-1.html</a></span>
+            			<span class="y">译者： zhb127</span>    		<br class="clear">
+    	</p>
+
+</div>
+<div class="y" id="pr_qrcode"><canvas width="100" height="100"></canvas><script>(function (data) { var scripts = document.getElementsByTagName("script"); var script = scripts[scripts.length-1], canvas = script.previousSibling; var img = new Image(); img.onload = function(){ canvas.getContext("2d").drawImage(img, 0, 0); }; img.src = data; script.parentNode.removeChild(script); })("data:image/png;base64,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")</script></div>
+<br class="clear">
+</div>
+
+<div class="d">
+<div id="article_content">
+<p>我非常喜欢使用命令，因为它们比 GUI（图形用户界面）应用程序对 Linux 系统提供更多的控制，因此，我一直在寻找一些有趣的方法<a href="https://linux.cn/article-5816-1.html">让 Linux 的操作变得简单好玩</a><span class="sup">[1]</span>，主要是基于终端操作。</p>
+<p>当我们发现使用 Linux 的新技巧时，尤其是像我这样的命令行极客，我们总会感到非常来劲。</p>
+<p class="article_img"><img src="104837smm1hlc1cmh1877c.jpg" alt="" style="width: 694px; cursor: pointer;"></p>
+<p><strong>建议阅读：</strong> <a href="https://linux.cn/article-5485-1.html">5 有趣的 Linux 命令行技巧 - 第一部分</a><span class="sup">[2]</span></p>
+<p>而且我们也会很想与数百万 Linux 用户分享新学到的实践或命令，特别是那些还在使用自己的方式操作这个令人兴奋的操作系统的新手们。</p>
+<p><strong>建议阅读：</strong> <a href="https://linux.cn/article-6314-1.html">10 个对新手有用的 Linux 命令行技巧 - 第二部分</a><span class="sup">[3]</span></p>
+<p>在这篇文章中，我们将回顾一系列<a href="https://linux.cn/article-6314-1.html">有用的命令行小技巧</a><span class="sup">[4]</span>，它们可以显著地提高你的 Linux 使用技能。</p>
+<h3 id="toc_1">1、 在 Linux 中锁定或隐藏文件或目录</h3>
+<p>锁定文件或目录最简单的方法是使用 Linux 文件权限。如果你是文件或目录的所有者，你可以阻止其他用户和组访问（删除、读取、写入、执行）它，如下所示：</p>
+<pre class="prettyprint linenums"><code>$ chmod 700 tecmint.info
+或
+$ chmod go-rwx tecmint.info
+</code></pre>
+<p>想要了解更多有关 Linux 文件权限的内容，请阅读这篇文章<a href="https://linux.cn/article-7418-1.html">在 Linux 中管理用户和组，文件权限和属性</a><span class="sup">[5]</span>。</p>
+<p>为了实现对系统中的其他用户隐藏文件或目录，可以通过在文件或目录开头添加 <code>.</code> 的方式重命名：</p>
+<pre class="prettyprint linenums"><code>$ mv filename .tecmint.info
+</code></pre>
+<h3 id="toc_2">2、 在 Linux 中将 rwx 权限转为八进制格式</h3>
+<p>默认情况下，当你运行 <a href="https://linux.cn/article-5531-1.html">ls 命令</a><span class="sup">[6]</span>之后，它会使用 <code>rwx</code> 格式显示文件权限，为了了解 rwx 格式和八进制格式的等同性，你可以学习如何<a href="https://linux.cn/article-4067-1.html">在 Linux 中将 rwx 权限转为八进制格式</a><span class="sup">[7]</span>。</p>
+<h3 id="toc_3">3、 当 <code>sudo</code> 命令执行失败时怎么使用 <code>su</code> 命令</h3>
+<p>虽然 <a href="https://linux.cn/article-7418-1.html">sudo 命令</a><span class="sup">[8]</span>被用来以超级用户权限执行命令，但是在某些情况下它也会执行失败，如下所示。</p>
+<p>在这里，我想<a href="https://linux.cn/article-8024-1.html">清空一个大文件的内容</a><span class="sup">[9]</span>，其文件名为 <code>uptime.log</code>，但是即便我是使用 sudo 命令也执行失败了。</p>
+<pre class="prettyprint linenums"><code>$ cat /dev/null &gt;/var/log/uptime.log
+$ sudo cat /dev/null &gt;/var/log/uptime.log
+</code></pre>
+<p class="article_img"><img src="104844r5qom5eq7uug7v1u.png" alt="在 Linux 中清空大文件的内容" title="在 Linux 中清空大文件的内容"></p>
+<p class="article_img_desc"><em>在 Linux 中清空大文件的内容</em></p>
+<p>遇到这种情况，你需要使用 <code>su</code> 命令切换到 <code>root</code> 用户，然后像下面这样去执行清空操作：</p>
+<pre class="prettyprint linenums"><code>$ su
+$ sudo cat /dev/null &gt;/var/log/uptime.log
+$ cat /var/log/uptime.log
+</code></pre>
+<p class="article_img"><img src="104845lqvhhppzzzaavfv1.png" alt="切换到超级用户" title="切换到超级用户"></p>
+<p class="article_img_desc"><em>切换到超级用户</em></p>
+<p>尝试理解 <a href="http://www.tecmint.com/su-vs-sudo-and-how-to-configure-sudo-in-linux/" class="ext" rel="external nofollow" target="_blank">su 和 sudo 之间的区别</a><span class="sup">[10]</span>，另外，通过阅读它们的手册页以了解更多的使用指南：</p>
+<pre class="prettyprint linenums"><code>$ man sudo
+$ man su
+</code></pre>
+<h3 id="toc_4">4、 在 Linux 中结束一个进程</h3>
+<p>有些时候，当你想<a href="https://linux.cn/article-5557-1.html">使用 kill、killall、pkill 命令结束一个进程</a><span class="sup">[11]</span>时，它们有可能无法生效，你可能会看到该进程仍然还在系统上运行。</p>
+<p>如果要强制结束一个进程，可以发送 <code>-KILL</code> 信号给该进程。</p>
+<p>首先<a href="https://linux.cn/article-5051-1.html">获取指定进程 ID</a><span class="sup">[12]</span>，然后像下面这样结束该进程：</p>
+<pre class="prettyprint linenums"><code>$ pidof vlc
+$ sudo kill -KILL 10279
+</code></pre>
+<p class="article_img"><img src="104845s24aztnkefzof9se.png" alt="在 Linux 中查找和结束进程" title="在 Linux 中查找和结束进程"></p>
+<p class="article_img_desc"><em>在 Linux 中查找和结束进程</em></p>
+<p>查看 <a href="https://linux.cn/article-2116-1.html">kill 命令</a><span class="sup">[13]</span>以获取更多的使用选项和信息。</p>
+<h3 id="toc_5">5、 在 Linux 中永久删除文件</h3>
+<p>一般情况下，我们通过使用 <code>rm</code> 命令将文件从 Linux 系统中删除。然而，这些文件并没有被真正的删除，它们仍被存储在那里并隐藏在你的硬盘中，其他用户仍然可以<a href="https://linux.cn/article-7974-1.html">在 Linux 中恢复删除的文件</a><span class="sup">[14]</span>并查看。</p>
+<p>为了防止这种情况发生，我们可以使用 <code>shred</code> 命令来覆写文件内容，并在覆盖完成后选择删除文件。</p>
+<pre class="prettyprint linenums"><code>$ shred -zvu tecmint.pdf
+</code></pre>
+<p>上述命令中所使用的选项说明：</p>
+<ol>
+<li><code>-z</code> – 最后一次使用 0 进行覆盖以隐藏覆写动作。</li>
+<li><code>-u</code> – 覆写后截断并移除文件。</li>
+<li><code>-v</code> – 显示详细过程。</li>
+</ol>
+<p class="article_img"><img src="104845z84n787eecf777xc.png" alt="在 Linux 中永久删除文件" title="在 Linux 中永久删除文件"></p>
+<p class="article_img_desc"><em>在 Linux 中永久删除文件</em></p>
+<p>阅读 <code>shred</code> 手册以获取更多的使用信息。</p>
+<pre class="prettyprint linenums"><code>$ man shred
+</code></pre>
+<h3 id="toc_6">6、 在 Linux 中重命名多个文件</h3>
+<p>你可以通过使用 <code>rename</code> 命令随时<a href="https://linux.cn/article-4905-1.html">在 Linux 中重命名多个文件</a><span class="sup">[15]</span>。</p>
+<p><code>rename</code> 命令会根据第一个参数中的规则重命名指定文件。</p>
+<p>以下命令会将所有 <code>.pdf</code> 文件重命名为 <code>.doc</code> 文件，使用的规则为 <code>'s/\.pdf$/\.doc/'</code>：</p>
+<pre class="prettyprint linenums"><code>$ rename -v 's/\.pdf$/\.doc/' *.pdf
+</code></pre>
+<p class="article_img"><img src="104846edojbnza6dq5sd6s.png" alt="在 Linux 中重命名多个文件" title="在 Linux 中重命名多个文件"></p>
+<p class="article_img_desc"><em>在 Linux 中重命名多个文件</em></p>
+<p>在接下来的例子中，我们将通过重命名所有匹配 <code>"*.bak"</code> 的文件来移除其拓展名，使用的规则是 <code>'s/\e.bak$//'</code>：</p>
+<pre class="prettyprint linenums"><code>$ rename -v 's/\e.bak$//' *.bak
+</code></pre>
+<h3 id="toc_7">7、 在 Linux 中检查单词拼写</h3>
+<p><code>look</code> 命令用于显示文件中以指定字符串为前缀的任意行，同时它也可以帮你检查命令行中给定单词的拼写。尽管它并不是那么有效和可靠，但它仍然算得上是其他强大的拼写检查工具的有用替代品。</p>
+<pre class="prettyprint linenums"><code>$ look linu
+$ look docum
+</code></pre>
+<p class="article_img"><img src="104846c6fi0craiaze02pr.png" alt="在 Linux 中检查单词拼写" title="在 Linux 中检查单词拼写"></p>
+<p class="article_img_desc"><em>在 Linux 中检查单词拼写</em></p>
+<h3 id="toc_8">8、 按关键字搜索手册页</h3>
+<p><code>man</code> 命令用于显示命令的手册页，当使用 <code>-k</code> 选项时，它会将关键字 <code>printf</code>（或者如下命令中的关键字 <code>adjust</code>、<code>apache</code>、<code>php</code> ）作为正则表达式，来搜索所有匹配该名称手册页，并显示其简介。</p>
+<pre class="prettyprint linenums"><code>$ man -k adjust
+$ man -k apache
+$ man -k php
+</code></pre>
+<p class="article_img"><img src="104847b6i55flf6o5684h5.png" alt="按关键字搜索手册页" title="按关键字搜索手册页" style="width: 694px; cursor: pointer;"></p>
+<p class="article_img_desc"><em>按关键字搜索手册页</em></p>
+<h3 id="toc_9">9、 在 Linux 中实时监测日志</h3>
+<p><code>watch</code> 命令可以<a href="https://linux.cn/article-5765-1.html">定期执行另一个 Linux 命令</a><span class="sup">[16]</span>并全屏显示该命令的执行结果。当 <code>watch</code> 命令与 <a href="http://www.tecmint.com/view-contents-of-file-in-linux/" class="ext" rel="external nofollow" target="_blank">tail 命令</a><span class="sup">[17]</span>（用于查看文件结尾的 Linux 命令）配合使用时，可以监测到日志文件的日志记录情况。</p>
+<p>在以下示例中，你将实时监测系统认证日志文件。打开两个终端窗口，在第一个窗口中实时监测该日志文件，如下：</p>
+<pre class="prettyprint linenums"><code>$ sudo watch tail /var/log/auth.log
+</code></pre>
+<p>你也可以使用 <a href="http://www.tecmint.com/view-contents-of-file-in-linux/" class="ext" rel="external nofollow" target="_blank">tail 命令</a><span class="sup">[18]</span>（显示文件结尾的 Linux 命令）的 <code>-f</code> 选项实时监测文件变化。这样，我们就可以在日志文件中看到日志的生成情况。</p>
+<pre class="prettyprint linenums"><code>$ sudo tail -f /var/log/auth.log
+</code></pre>
+<p>接着，在第二个终端窗口中运行以下命令，之后，你就可以在第一个终端窗口中观察日志文件内容：</p>
+<pre class="prettyprint linenums"><code>$ sudo mkdir -p /etc/test
+$ sudo rm -rf /etc/test
+</code></pre>
+<h3 id="toc_10">10、 列出所有 Shell 内置命令</h3>
+<p>shell 内置命令是一个命令或者函数，从内部调用并直接在 shell 里执行，而不是从硬盘加载外部的可执行程序来执行。</p>
+<p>列出所有 shell 内置命令及其语法，执行如下命令：</p>
+<pre class="prettyprint linenums"><code>$ help
+</code></pre>
+<p>作为结束语，<a href="http://www.tecmint.com/tag/linux-tricks/" class="ext" rel="external nofollow" target="_blank">命令行小技巧</a><span class="sup">[19]</span>不仅能派得上用场，而且让学习和使用 Linux 变得更加简单有趣，尤其是对新手来讲。</p>
+<p>你也可以通过留言给我们分享其他在 Linux 中<a href="https://linux.cn/article-5485-1.html">有用有趣的命令行小技巧</a><span class="sup">[20]</span>。</p>
+<hr>
+<p>作者简介：</p>
+<p class="article_img"><img style="margin: 10px; float: left;" src="104848wq5zei3k8ek53zhj.jpg" alt="" height="128" width="128"></p>
+<p>Aaron Kili 是一名 Linux 和 F.O.S.S 的爱好者，未来的 Linux 系统管理员、网站开发人员，目前是 TecMint 的写作者，他喜欢用电脑工作，并且乐于分享知识。</p>
+<p>&nbsp;</p>
+<hr>
+<p>via: <a href="http://www.tecmint.com/linux-command-line-tricks-and-tips-worth-knowing/" class="ext" rel="external nofollow" target="_blank">http://www.tecmint.com/linux-command-line-tricks-and-tips-worth-knowing/</a></p>
+<p>作者：<a href="http://www.tecmint.com/author/aaronkili/" class="ext" rel="external nofollow" target="_blank">Aaron Kili</a><span class="sup">[21]</span> 译者：<a href="https://github.com/zhb127" class="ext" rel="external nofollow" target="_blank">zhb127</a><span class="sup">[22]</span> 校对：<a href="https://github.com/wxy" class="ext" rel="external nofollow" target="_blank">wxy</a><span class="sup">[23]</span></p>
+<p>本文由 <a href="https://github.com/LCTT/TranslateProject" class="ext" rel="external nofollow" target="_blank">LCTT</a><span class="sup">[24]</span> 原创编译，<a href="#">Linux中国</a><span class="sup">[25]</span> 荣誉推出</p><hr width="80%"><p class="show_links">[1]: https://linux.cn/article-5816-1.html<br>[2]: https://linux.cn/article-5485-1.html<br>[3]: https://linux.cn/article-6314-1.html<br>[4]: https://linux.cn/article-6314-1.html<br>[5]: https://linux.cn/article-7418-1.html<br>[6]: https://linux.cn/article-5531-1.html<br>[7]: https://linux.cn/article-4067-1.html<br>[8]: https://linux.cn/article-7418-1.html<br>[9]: https://linux.cn/article-8024-1.html<br>[10]: http://www.tecmint.com/su-vs-sudo-and-how-to-configure-sudo-in-linux/<br>[11]: https://linux.cn/article-5557-1.html<br>[12]: https://linux.cn/article-5051-1.html<br>[13]: https://linux.cn/article-2116-1.html<br>[14]: https://linux.cn/article-7974-1.html<br>[15]: https://linux.cn/article-4905-1.html<br>[16]: https://linux.cn/article-5765-1.html<br>[17]: http://www.tecmint.com/view-contents-of-file-in-linux/<br>[18]: http://www.tecmint.com/view-contents-of-file-in-linux/<br>[19]: http://www.tecmint.com/tag/linux-tricks/<br>[20]: https://linux.cn/article-5485-1.html<br>[21]: http://www.tecmint.com/author/aaronkili/<br>[22]: https://github.com/zhb127<br>[23]: https://github.com/wxy<br>[24]: https://github.com/LCTT/TranslateProject<br>[25]: https://linux.cn/article-8119-1.html?utm_source=rss&amp;utm_medium=rss<br></p></div>
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div> 
+
+<link rel="stylesheet" href="prettify.css" type="text/css">
+<script src="about:blank" type="text/javascript"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+</div></body>
+</html>

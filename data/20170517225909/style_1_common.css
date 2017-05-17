@@ -1,0 +1,38 @@
+/* Code tidied up by ScrapBook */
+* { overflow-wrap: break-word; }
+body { background: rgb(220, 226, 231) url("background.png") repeat-x scroll 0px 0px; position: relative; }
+body, input, button, select, textarea { font: 12px/1.8 "Lantinghei SC","Helvetica Neue","Microsoft YaHei",微软雅黑,Arial,STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif; color: rgb(68, 68, 68); }
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, .pr, .pc { margin: 0px; padding: 0px; }
+ul li, .xl li { list-style: outside none none; }
+h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+h1, h2, h3 { font-family: "Microsoft YaHei","Hiragino Sans GB","STHeiti",Tahoma,"SimHei",sans-serif; }
+em, cite, i { font-style: normal; }
+a { color: rgb(0, 51, 102); text-decoration: none; }
+a:hover { text-decoration: underline; }
+*::-moz-selection { background: rgb(34, 103, 181) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+a::-moz-selection { color: rgb(204, 204, 204); }
+.z { float: left; }
+.y { float: right; padding-left: 5px; }
+.cl::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.cl {  }
+hr { display: block; clear: both; }
+.mn hr, .sd hr { margin: 0px 10px; }
+.ph { font-family: "Microsoft YaHei","Hiragino Sans GB","STHeiti",Tahoma,"SimHei",sans-serif; font-weight: 100; }
+.ph { font-size: 20px; }
+.xg1, .xg1 a { color: rgb(153, 153, 153) ! important; }
+.hm { text-align: center; }
+#ajaxwaitid { display: none; position: absolute; right: 0px; top: 0px; z-index: 1; padding: 0px 5px; background: rgb(221, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.pr, .pc { vertical-align: middle; margin: 0px 5px 1px 0px; padding: 0px; }
+.wp { margin: 0px auto; width: 960px; }
+#wp .wp { width: auto; }
+#ct { min-height: 300px; }
+.mn { overflow: hidden; }
+.ct2 .mn { float: left; width: 730px; margin-bottom: 1em; }
+#toptb a#sslct, .switchwidth, #toptb a.switchblind { margin-top: 5px; padding: 0px ! important; width: 23px; height: 18px ! important; background: transparent url("switch_style.png") no-repeat scroll 100% 0px; text-indent: -9999px; overflow: hidden; }
+#switchwidth { position: fixed; right: 35px; top: 10px; margin-top: 2px; }
+.switchwidth { background-image: url("switch_width.png"); }
+.switchwidth:hover { background: transparent url("switch_width.png") no-repeat scroll 100% -36px; }
+.messageinfo, .contentinfo, .copyright { color: rgb(153, 153, 153); line-height: 1.5em; font-size: 12px; padding: 5px; border: 1px solid rgb(238, 238, 238); margin: 5px; border-radius: 5px; }
+.messageinfo a, .contentinfo a, .copyright a { color: rgb(51, 51, 51); }
+.copyright { background-color: rgba(24, 241, 24, 0.1); padding: 5px 10px; margin: 5px; text-align: left; }
+.clear { clear: both; }
