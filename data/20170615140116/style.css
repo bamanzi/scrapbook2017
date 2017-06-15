@@ -1,0 +1,39 @@
+/* Code tidied up by ScrapBook */
+html, body, img, div, ul, li, a { margin: 0px; padding: 0px; border: 0px none; }
+body { font-family: arial,sans-serif; font-size: 14px; text-align: center; background: none repeat scroll 0% 0% rgb(22, 56, 77); }
+p { font-size: 14px; }
+div#container { width: 1000px; margin: 26px auto; background-color: rgb(255, 255, 255); border-bottom: 8px solid rgb(204, 204, 204); border-top: 2px solid rgb(204, 204, 204); }
+div#header { height: 110px; text-align: left; position: relative; background: none repeat scroll 0% 0% rgb(26, 23, 27); margin: 0px auto 2px; }
+div#navigation { text-align: right; height: 32px; background-color: rgb(51, 51, 51); }
+.main_menu ul { list-style-type: none; height: 32px; padding: 0px 20px; }
+.main_menu ul li { display: block; height: 32px; line-height: 32px; float: left; position: relative; white-space: nowrap; }
+.main_menu ul li a { font-size: 13px; color: rgb(255, 255, 255); display: block; float: left; line-height: 32px; text-decoration: none; height: 32px; padding: 0px 10px; }
+.main_menu li a:hover, .main_menu li a:active { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(0, 51, 153); }
+.main_menu li a.select, .main_menu li.current_page_item a, .main_menu li.current_page_item a, .main_menu li.current_page_ancestor a, .main_menu li.current_page_parent a { color: rgb(0, 51, 153); background: none repeat scroll 0% 0% rgb(204, 204, 204); }
+.main_menu ul li ul { position: absolute; top: 32px; background: none repeat scroll 0% 0% rgb(51, 51, 51); padding: 0px; margin: 0px; z-index: 100; text-align: left; display: none; }
+.main_menu ul li:hover ul { display: block; }
+.main_menu ul li ul li { float: inherit; clear: both; margin: 0px; padding: 0px; }
+.main_menu ul li ul li a { background: none repeat scroll 0% 0% rgb(102, 102, 102); display: block; float: inherit; }
+div#contenent { position: relative; clear: both; text-align: left; background-color: rgb(255, 255, 255); padding: 10px 20px; }
+div#cont { width: 620px; float: left; }
+div#cont ul { list-style: disc outside none; padding-left: 20px; }
+div#sidebar { float: right; width: 300px; font-size: 13px; }
+div#sidebar h2 { margin: 10px 0px 5px; text-transform: uppercase; font-size: 16px; }
+div#sidebar ul { margin: 0px; padding: 0px; list-style: none outside none; font-size: 14px; }
+div#sidebar ul li.widget_pages ul li a { background: none repeat scroll 0% 0% rgb(102, 102, 102); border-bottom: 1px solid rgb(204, 204, 204); color: rgb(255, 255, 255); line-height: 22px; display: block; padding: 0px 5px; text-decoration: none; }
+div#sidebar ul li.widget_pages ul li.current_page_item a, div#sidebar ul ul li.current_page_parent a { background: none repeat scroll 0% 0% rgb(51, 51, 51); }
+div#sidebar ul li.widget_pages ul ul li a, div#sidebar ul li.widget_pages ul li.current_page_item ul li a, div#sidebar ul li.widget_pages ul li.current_page_parent ul li a { background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 1px solid rgb(204, 204, 204); line-height: 20px; color: rgb(102, 102, 102); }
+div#sidebar ul ul li a:hover { background: none repeat scroll 0% 0% rgb(0, 51, 153); color: rgb(255, 255, 255); }
+p, h1, h2, h3, h4, h5, h6 { margin-top: 0px; }
+h1 { margin: 0px auto 0px 0px; }
+h1 a { height: 110px; width: 278px; display: block; }
+a { color: rgb(102, 102, 102); }
+a:hover { color: rgb(51, 51, 51); text-decoration: none; }
+.terminal { color: rgb(255, 102, 102); }
+.path { color: rgb(153, 0, 204); }
+.key { color: rgb(0, 102, 255); }
+.emphasized { color: rgb(255, 51, 0); }
+.clr { clear: both; }
+p img { padding: 0px; max-width: 100%; }
+img.alignright { padding: 4px; margin: 0px 0px 2px 7px; display: inline; }
+.alignright { float: right; }

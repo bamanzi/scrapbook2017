@@ -1,0 +1,10 @@
+id	20170615140009
+create	20170615140009
+modify	20170615140051
+type	
+title	Sushi, a quick previewer for Nautilus
+chars	UTF-8
+icon	resource://scrapbook/data/20170615140009/favicon.ico
+source	https://github.com/GNOME/sushi
+comment	
+lock	

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Bing search engine validation-->
+  <meta name="msvalidate.01" content="C6990C0351F7B20ED3C944A3BB3BECD9">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to integrate RabbitVCS with Nautilus file manager in Ubuntu 14.04 Trusty Tahr</title>
+  <meta name="description" content="">
+
+  <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css.dat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="googlecode.min.css">
+  <style>
+/* Code tidied up by ScrapBook */
+#themecover_mobileworking_willsong { background: url("background.png") repeat-y scroll 0% 0% / 100% auto transparent; height: 100%; left: 0px; position: fixed; top: 30px; width: 100%; z-index: -100; }
+</style>
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="about:blank" async=""></script><script src="about:blank"></script>
+  <script src="about:blank"></script>
+  <script src="about:blank"></script>
+  <!--<script src="/vendor/google-code-prettify/prettify.js" type="text/javascript"></script>-->
+
+
+    <link rel="canonical" href="http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/">
+    
+    <meta property="og:site_name" content="aruizca's blog = brain.collect {idea -> post(idea)}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to integrate RabbitVCS with Nautilus file manager in Ubuntu 14.04 Trusty Tahr">
+    <meta property="og:description" content="There are still some instances of very nice applications that do not work straight away after installing them via the apt package manager and unfortunately  RabbitVCS is one of them. RabbitVCS is for Linux what TortoiseGit and TortoiseSVN are for...">
+    <meta property="og:url" content="http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/">
+    <meta property="article:published_time" content="2014-05-27T05:18:51.847Z">
+    <meta property="article:modified_time" content="2014-08-08T01:55:08.306Z">
+    <meta property="article:tag" content="ubuntu">
+    <meta property="article:tag" content="rabbitvcs">
+    <meta property="article:tag" content="nautilus">
+    <meta property="article:tag" content="integration">
+    <meta property="article:tag" content="git">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How to integrate RabbitVCS with Nautilus file manager in Ubuntu 14.04 Trusty Tahr">
+    <meta name="twitter:description" content="There are still some instances of very nice applications that do not work straight away after installing them via the apt package manager and unfortunately  RabbitVCS is one of them. RabbitVCS is for Linux what TortoiseGit and TortoiseSVN are for...">
+    <meta name="twitter:url" content="http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/">
+    
+    <script type="application/ld+json">/* Code removed by ScrapBook */</script>
+
+    <meta name="generator" content="Ghost 0.5">
+    <link rel="alternate" type="application/rss+xml" title="aruizca's blog = brain.collect {idea -> post(idea)}" href="http://aruizca.com/rss/">
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script src="about:blank" async="" type="text/javascript"></script></head>
+<body class="post-template tag-ubuntu tag-rabbitvcs tag-nautilus tag-integration tag-git">
+
+<div id="themecover_mobileworking_willsong"></div>
+
+<nav id="mainnav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+              <a id="blogname_willsong" class="navbar-brand" href="http://aruizca.com/">
+            aruizca's blog = brain.collect {idea -&gt; post(idea)}
+        </a>
+  </div>
+</nav>
+
+
+<header id="posthead_willsong" class="respowidth_willsong">
+  <div id="description_willsong" class="respowidth_willsong">
+    <h3>- For everything that is worth writing about in more than 140 characters -</h3>
+    <h3>For everything else follow me <a href="https://twitter.com/aruizca" target="_twitter">@aruizca <i class="fa fa-twitter fa-lg"></i></a></h3>
+  </div>
+</header>
+
+<section id="main_willsong" role="main">
+
+      <article id="thearticle_willsong" class="respowidth_willsong" role="article" itemscope="" itemtype="http://schema.org/Article">
+
+        <h2 class="posttitle_willsong" itemprop="headline">How to integrate RabbitVCS with Nautilus file manager in Ubuntu 14.04 Trusty Tahr</h2>
+
+        <div class="articledetails_willsong">
+
+          <i class="fa fa-clock-o fa-lg"></i><span><time class="date_willsong" datetime="Tuesday 27 May 2014" itemprop="datePublished">27 May 2014</time></span>
+          <i class="fa fa-user fa-lg"></i><span>Angel Ruiz</span>
+            <i class="fa fa-tag fa-lg"></i><span><a href="http://aruizca.com/tag/ubuntu/">ubuntu</a>, <a href="http://aruizca.com/tag/rabbitvcs/">rabbitvcs</a>, <a href="http://aruizca.com/tag/nautilus/">nautilus</a>, <a href="http://aruizca.com/tag/integration/">integration</a>, <a href="http://aruizca.com/tag/git/">git</a></span>
+        </div>
+
+        <div class="postcontent_willsong">
+            <p><a href="http://rabbitvcs.org/" title="RabbitVCS website" target="_blank"> <br>
+<img alt="RabbitVCS Git client in Ubuntu" src="urn:scrapbook-download-error:http://aruizca.com/content/images/rabbitvcs-post-logo.png" class="center-block img-responsive"> <br>
+</a></p>
+
+<p>There are still some instances of very nice applications that do not work straight away after installing them via the apt package manager and unfortunately  RabbitVCS is one of them.</p>
+
+<p><a href="http://rabbitvcs.org/" title="RabbitVCS website" target="_blank">RabbitVCS</a> is for Linux what <a href="https://code.google.com/p/tortoisegit/" title="TortoiseGit website" target="_blank">TortoiseGit</a> and <a href="http://tortoisesvn.net/" title="TortoiseSVN website" target="_blank">TortoiseSVN</a> are for the Windows platform. It is a SCM client that integrates itself with the OS file manager to manage local Git or SVN repositories.</p>
+
+<p>Today I wanted to install RabbitVCS (v0.16.0) in Ubuntu 14.04 which has the tool already available in the default package repositories. So normally, it should be enough to execute the following commands and have it ready to go:  </p>
+
+<pre><code>    $ sudo apt-get update
+    $ sudo apt-get install rabbitvcs-nautilus3
+    # Optional
+    $ sudo apt-get install rabbitvcs-gedit
+    $ sudo apt-get install rabbitvcs-cli
+</code></pre>
+
+<p>sadly that did not happen for me, so I decided to summarize the set of commands I have gathered to make it work:</p>
+
+<ul>
+<li><del>Create symlinks</del></li>
+</ul>
+
+<pre><code>    $ sudo ln -sf /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0 /usr/lib/
+    $ sudo ln -sf /usr/lib/x86_64-linux-gnu/libpython2.7.so.1 /usr/lib/
+</code></pre>
+
+<ul>
+<li><del>Replace RabbitVCS.py script with latest from source code</del></li>
+</ul>
+
+<pre><code>    $ wget http://rabbitvcs.googlecode.com/svn/trunk/clients/nautilus-3.0/RabbitVCS.py  /usr/share/nautilus-python/extensions
+</code></pre>
+
+<ul>
+<li>Change access rights to your local RabbitCVS configuration folder. It did not worked until I did this, so previous steps might not be needed. If you try let me know please.</li>
+</ul>
+
+<pre><code>    $ chown -R $USER:$USER ~/.config/rabbitvcs
+</code></pre>
+
+<p>When working you should be able to see the RabbitVCS context submenu when using Nautilus like in the following snapshot:</p>
+
+<p><img alt="RabbitVCS Nautilus integration" src="rabbitvcs-nautilus-integration.png" class="center-block img-responsive"></p>
+        </div>
+
+        <div id="sharepost_willsong">
+          <span>Share this post:</span><br><br>
+          <a class="sharelink_willsong" target="_blank" href="http://www.facebook.com/sharer.php?u=http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/"><i class="fa fa-facebook fa-lg"></i></a>
+          <a class="sharelink_willsong" target="_blank" href="http://twitter.com/share?text=How%20to%20integrate%20RabbitVCS%20with%20Nautilus%20file%20manager%20in%20Ubuntu%2014.04%20Trusty%20Tahr&amp;url=http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/"><i class="fa fa-twitter fa-lg"></i></a>
+          <a class="sharelink_willsong" target="_blank" href="https://plus.google.com/share?url=http://aruizca.com/how-to-integrate-rabbitvcs-with-nautilus-file-manager-in-ubuntu-14-04-trusty-tahr/"><i class="fa fa-google-plus-square fa-lg"></i></a>
+        </div>
+
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">/* Code removed by ScrapBook */</script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </article>
+
+</section>
+
+<footer>
+
+    
+    
+    <div id="socialmedia_willsong">
+    	<a href="https://twitter.com/aruizca" class="sociallink_willsong"><i class="fa fa-twitter fa-lg"></i></a>
+    	<a href="https://plus.google.com/u/0/+%C3%81ngelRuiz" class="sociallink_willsong"><i class="fa fa-google-plus-square fa-lg"></i></a>
+    	<a href="http://au.linkedin.com/in/angelruiz/" target="linkedin" class="sociallink_willsong"><i class="fa fa-linkedin fa-lg"></i></a>
+        <a href="http://aruizca.com/rss" target="_rss" class="sociallink_willsong"><i class="fa fa-rss fa-lg"></i></a>
+    </div>
+  <p id="copyright_willsong">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width: 0px;" src="88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">aruizca's blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://aruizca.com/" property="cc:attributionName" rel="cc:attributionURL">Angel Ruiz Calvo</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    <br>
+    Prowdly powered by <a href="http://ghost.org/" target="_blank">Ghost</a>. Look&amp;Feel based on Wilson theme created by <a href="http://marcosn.com/" target="_blank">Marcosn.com</a>
+  </p>
+
+</footer>
+
+<script src="about:blank"></script>
+<script src="about:blank"></script>
+<script src="about:blank"></script>
+<script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script>
+
+</body>
+</html>

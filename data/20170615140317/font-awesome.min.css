@@ -1,0 +1,25 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fontawesome-webfont.eot") format("embedded-opentype"), url("fontawesome-webfont.woff") format("woff"), url("fontawesome-webfont.ttf") format("truetype"), url("fontawesome-webfont.svg") format("svg");
+}
+.fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; }
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+.fa-user:before { content: ""; }
+.fa-clock-o:before { content: ""; }
+.fa-tag:before { content: ""; }
+.fa-twitter:before { content: ""; }
+.fa-facebook:before { content: ""; }
+.fa-rss:before { content: ""; }
+.fa-google-plus-square:before { content: ""; }
+.fa-linkedin:before { content: ""; }

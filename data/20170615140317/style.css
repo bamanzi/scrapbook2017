@@ -1,0 +1,41 @@
+/* Code tidied up by ScrapBook */
+[class^="icon-"], [class*=" icon-"] { font-family: 'icomoon'; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; }
+body { color: rgb(80, 80, 80); font: 1.6em/1.6em 'Roboto',sans-serif; width: 100%; }
+h1, h2, h3, h4, h5, h6 { color: black; font-family: "Open Sans",sans-serif; font-weight: normal; line-height: 1.4em; }
+a { color: black; text-decoration: none; }
+p { margin-top: 1.2em ! important; }
+#mainnav { box-shadow: 0px 0px 30px -5px rgb(0, 0, 0); }
+#posthead_willsong { background-color: rgba(255, 255, 255, 0.8); box-shadow: 0px 4px 8px rgb(190, 190, 190); overflow: hidden; position: relative; text-align: center; width: 100%; z-index: 40; margin-top: 50px; }
+#posthead_willsong #description_willsong { position: relative; margin: 25px auto; }
+#posthead_willsong #description_willsong h3 { font-weight: bold; }
+#main_willsong { background-color: rgb(255, 255, 255); box-shadow: 0px 4px 8px rgb(190, 190, 190); overflow: hidden; padding: 1em 0px; position: relative; z-index: 20; width: 100%; min-height: 600px; }
+#main_willsong #thearticle_willsong { position: relative; margin: 0px auto; }
+#main_willsong #thearticle_willsong .articledetails_willsong { font-size: 0.8em; margin-bottom: 40px; }
+#main_willsong #thearticle_willsong .articledetails_willsong span { padding-left: 0.5em; margin-right: 1.5em; }
+#main_willsong #thearticle_willsong .postcontent_willsong a { text-decoration: underline; }
+#main_willsong h2.posttitle_willsong { font-weight: bold; }
+#main_willsong #thearticle_willsong .postcontent_willsong pre code { padding: 2%; }
+#main_willsong #thearticle_willsong .postcontent_willsong img { max-width: 100%; height: auto; padding-top: 1em; }
+#main_willsong #thearticle_willsong #sharepost_willsong { border-bottom: 1px solid rgb(190, 190, 190); border-top: 1px solid rgb(190, 190, 190); color: rgb(80, 80, 80); margin: 1.5em 0px; padding: 20px 0px; position: relative; text-align: center; }
+#main_willsong #thearticle_willsong #sharepost_willsong i { padding: 0px 1em; }
+#main_willsong #thearticle_willsong #sharepost_willsong .sharelink_willsong { color: rgb(149, 149, 149); margin: 0px 5px; font-size: 1.4em; }
+#main_willsong #thearticle_willsong #sharepost_willsong .sharelink_willsong:hover { color: rgb(0, 0, 0); }
+#main_willsong #disqus_thread { background-color: rgb(235, 235, 235); margin: 1em auto; padding: 3%; position: relative; width: 94%; }
+footer { background-color: rgba(255, 255, 255, 0.8); overflow: hidden; padding: 20px 0px; position: relative; text-align: center; z-index: 0; }
+footer a { text-decoration: underline; }
+footer #copyright_willsong { color: rgb(80, 80, 80); font-size: 0.8em; font-weight: 700; position: relative; }
+footer #socialmedia_willsong { position: relative; width: 100%; margin-top: 10px; }
+footer #socialmedia_willsong .sociallink_willsong { text-decoration: none; margin: 5px; font-size: 1.4em; }
+footer #socialmedia_willsong .sociallink_willsong i { padding: 0.5em 1em; }
+@media screen and (min-width: 320px) {
+  .respowidth_willsong { width: 300px; overflow: hidden; }
+}
+@media screen and (min-width: 480px) {
+  .respowidth_willsong { width: 440px; }
+}
+@media screen and (min-width: 768px) {
+  .respowidth_willsong { width: 720px; }
+}
+@media screen and (min-width: 960px) {
+  .respowidth_willsong { width: 920px; }
+}

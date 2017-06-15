@@ -1,0 +1,18 @@
+/* Code tidied up by ScrapBook */
+div.bbp-submit-wrapper { margin-top: 15px; float: right; clear: both; }
+.bbp-login-form fieldset legend { display: none; }
+.bbp-login-form .bbp-username input, .bbp-login-form .bbp-email input, .bbp-login-form .bbp-password input { padding: 5px; }
+.bbp-login-form label { width: 140px; display: inline-block; }
+#sidebar .bbp-login-form label { width: 70px; }
+.bbp-login-form .bbp-username, .bbp-login-form .bbp-email, .bbp-login-form .bbp-password, .bbp-login-form .bbp-remember-me, .bbp-login-form .bbp-submit-wrapper { margin-top: 10px; }
+.bbp-login-form .bbp-remember-me {  }
+.bbp-login-form .bbp-submit-wrapper { text-align: right; }
+@media screen and (max-device-width: 480px), not all {
+}
+@media only screen and (max-width: 480px) {
+  div.bbp-submit-wrapper { float: left; }
+}
+@media only screen and (max-width: 320px) {
+}
+@media only screen and (max-width: 240px) {
+}
