@@ -1,0 +1,40 @@
+/* Code tidied up by ScrapBook */
+@media only screen and (max-width: 480px) {
+}
+.rate-info, .rate-description { clear: left; font-size: 0.8em; color: rgb(102, 102, 102); }
+.os-article__top-inner { margin: 0px auto; padding: 38px 5% 31px; max-width: 830px; }
+.os-article .pane-node-title h1 { font-size: 40px; font-weight: bold; line-height: 49px; color: rgb(0, 0, 0); margin: 0px 0px 14px; }
+.os-article .pane-node-field-article-subhead h2 { font-size: 24px; line-height: 30px; color: rgb(93, 103, 112); font-weight: normal; margin: 0px 0px 23px; }
+.os-article__middle, .os-article__footer { max-width: 830px; padding-left: 5%; padding-right: 5%; }
+.os-article__image { margin: 0px auto; text-align: center; }
+@media screen and (min-width: 630px) {
+  .os-article__image { text-align: left; max-width: 830px; padding-left: 5%; padding-right: 5%; }
+}
+.os-article__image .pane-file-field-file-image-caption { padding-left: 5%; padding-right: 5%; }
+@media screen and (min-width: 630px) {
+  .os-article__image .pane-file-field-file-image-caption { padding-left: 0px; padding-right: 0px; }
+}
+.os-article__middle { margin: 28px auto 0px; }
+.os-article__bottom { margin: 87px auto 0px; max-width: 1150px; padding-left: 5%; padding-right: 5%; }
+.os-article__footer { margin: 2em auto 35px; overflow: hidden; }
+#comments { margin-top: 15px; }
+.vud-widget-upanddown { margin: 5px 10px; position: relative; float: left; }
+.vud-widget-upanddown .up-score .up-current-score, .vud-widget-upanddown .down-score .down-current-score { display: block; font-size: 16px; margin-left: 25px; text-align: right; padding-top: 2px; }
+.vud-widget-upanddown .up-score { color: rgb(51, 51, 51); }
+.vud-widget-upanddown .down-score { color: rgb(51, 51, 51); }
+.vud-widget-upanddown .up-active, .vud-widget-upanddown .down-active { cursor: default; }
+.vud-widget-upanddown .up-inactive, .vud-widget-upanddown .down-inactive, .vud-widget-upanddown .up-active, .vud-widget-upanddown .down-active { float: left; display: block; width: 20px; height: 22px; font-weight: bold; text-align: center; background: url("arrows.png") no-repeat scroll 0px 0px transparent; }
+.vud-widget-upanddown .up-active { background-position: 0px -22px; }
+.vud-widget-upanddown .down-active { background-position: -20px -22px; }
+.element-invisible { position: absolute ! important; clip: rect(1px, 1px, 1px, 1px); }
+.rate-thumbs-up-btn-up { display: inline-block; background: url("thumbs.png") no-repeat scroll 0px 0px transparent; width: 24px; height: 24px; text-indent: -9999px; }
+.sf-menu, .sf-menu * { list-style: none outside none; margin: 0px; padding: 0px; }
+.sf-menu { line-height: 1; z-index: 497; }
+.sf-menu ul { left: 0px; position: absolute; top: -99999em; width: 12em; }
+.sf-menu ul li { width: 100%; }
+.sf-menu li { float: left; position: relative; z-index: 498; }
+.sf-menu a { display: block; position: relative; }
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu li:hover ul, .sf-menu li.sfHover ul { z-index: 499; }
+.sf-menu li:hover > ul, .sf-menu li.sfHover > ul { left: 0px; top: 2.5em; }
+.sf-menu li li:hover > ul, .sf-menu li li.sfHover > ul { left: 12em; top: 0px; }
+.sf-hidden { left: 0px ! important; top: -99999em ! important; }

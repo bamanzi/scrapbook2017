@@ -1,0 +1,37 @@
+/* Code tidied up by ScrapBook */
+html, body { margin: 0px; padding: 0px; height: 100%; }
+#container { min-height: 100%; position: relative; }
+#header { background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 0.9em; width: 100%; position: fixed; top: 0px; left: 0px; z-index: 1500; }
+#menu-icon { width: 40px; height: 40px; background: url("menu.svg") no-repeat scroll 0px 70% rgb(74, 134, 207); }
+#header li, #footer li { display: inline-block; padding: 0px 0.6em; }
+.gnome-navbar-brand { padding: 5px; float: left; outline: 0px none; margin-left: 9%; }
+.gnome-navbar-brand img { max-height: 35px; min-height: 35px; min-width: 35px; }
+#main_content { padding-bottom: 15em; padding-top: 80px; }
+#footer { position: absolute; bottom: 0px; width: 100%; }
+#main_content, #footer_content { width: 80%; margin: auto; }
+div#content { position: relative; z-index: 1000; }
+#search { margin: 1.5em auto auto; text-align: center; font-size: 80%; }
+div#search form { background: none repeat scroll 0% 0% transparent; }
+input#searchinput { border: 1px solid rgb(136, 136, 136); margin-right: 6px; }
+hr { background-color: rgb(192, 192, 192); border: 0px none; height: 1px; width: 40%; margin: 30px auto; clear: both; }
+#global_domain_bar .tab { background: none repeat scroll 0% 0% rgb(74, 134, 207); width: 100%; }
+#user_tab { float: left; }
+div#content, p#pageinfo {  }
+p#pageinfo { position: relative; z-index: 999; }
+div.table-of-contents { border: 1px solid rgb(204, 204, 204); margin: 1em; padding: 1em; float: right; font-size: 85%; }
+div.table-of-contents p.table-of-contents-heading { font-weight: bold; margin: 0.5em 1em; }
+div.table-of-contents ol { margin: 1em 0.5em 1em 1em; padding: 0px; }
+div.table-of-contents ol li { margin: 0px 0px 0px 1em; padding: 0px; }
+div.table-of-contents ol ol { margin: 0.5em 0.5em 0.5em 1em; padding: 0px; }
+@media (max-width: 640px) {
+  #header { position: absolute; }
+  #header li { display: block; }
+  #menu-icon { float: right; display: inline-block; }
+  #user_tab ul { display: none; position: absolute; padding: 20px; background: none repeat scroll 0% 0% rgb(74, 134, 207); top: 30px; width: 100%; color: rgb(255, 255, 255); }
+  #user_tab li { width: 100%; padding: 10px 0px; margin: 0px; }
+  #user_tab:hover ul { display: block; }
+}
+@media (min-width: 1400px) {
+  #main_content, #footer_content { width: 65%; }
+  .gnome-navbar-brand { margin-left: 17%; }
+}

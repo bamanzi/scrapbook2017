@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+html { font-family: Times,serif; font-size: 12pt; }
+body { margin: 1.5cm; }
+a, a:visited, a.nonexistent, a.badinterwiki { color: black; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.info a { color: gray; }
+pre { font-size: 10pt; }
+#header, #sidebar, #footer, #timings, #credits, #interwiki, #pagelocation, #side_editbar { display: none; }

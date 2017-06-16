@@ -1,0 +1,32 @@
+/* Code tidied up by ScrapBook */
+.cresta-share-icon a { text-decoration: none ! important; border: 0px none ! important; outline: medium none ! important; box-shadow: none ! important; }
+#crestashareicon { line-height: 1; font-size: 15px; text-rendering: optimizelegibility; }
+.cresta-share-icon .sbutton { position: relative; margin: 8px 0px; letter-spacing: 0.5px; font-family: 'Noto Sans',sans-serif; line-height: 1; }
+.cresta-share-icon .sbutton.crestaShadow a i { border-bottom: 2px solid rgba(0, 0, 0, 0.1); border-right: 2px solid rgba(0, 0, 0, 0.1); }
+.cresta-share-icon .sbutton.crestaShadow a i:after { content: ""; position: absolute; top: 0px; bottom: -20px; left: 39%; right: -6px; background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1); transform: rotate(45deg); transition: background 0.8s linear 0s; }
+.cresta-share-icon .sbutton.crestaShadow:hover a i:after { background: none repeat scroll 0% 0% transparent; transition: background 0s linear 0s; }
+.cresta-share-icon i.c-icon-cresta-facebook { background: none repeat scroll 0% 0% rgb(59, 89, 152); }
+.cresta-share-icon i.c-icon-cresta-facebook:hover { border: 2px solid rgb(59, 89, 152) ! important; color: rgb(59, 89, 152); }
+.cresta-share-icon i.c-icon-cresta-twitter { background: none repeat scroll 0% 0% rgb(64, 153, 255); }
+.cresta-share-icon i.c-icon-cresta-twitter:hover { border: 2px solid rgb(64, 153, 255) ! important; color: rgb(64, 153, 255); }
+.cresta-share-icon i.c-icon-cresta-gplus { background: none repeat scroll 0% 0% rgb(211, 72, 54); }
+.cresta-share-icon i.c-icon-cresta-gplus:hover { border: 2px solid rgb(211, 72, 54) ! important; color: rgb(211, 72, 54); }
+.cresta-share-icon i.c-icon-cresta-pinterest { background: none repeat scroll 0% 0% rgb(203, 32, 39); }
+.cresta-share-icon i.c-icon-cresta-pinterest:hover { border: 2px solid rgb(203, 32, 39) ! important; color: rgb(203, 32, 39); }
+.cresta-share-icon i.c-icon-cresta-facebook, .cresta-share-icon i.c-icon-cresta-twitter, .cresta-share-icon i.c-icon-cresta-gplus, .cresta-share-icon i.c-icon-cresta-linkedin, .cresta-share-icon i.c-icon-cresta-pinterest, .cresta-share-icon i.c-icon-cresta-print { color: rgb(255, 255, 255); width: 40px ! important; height: 40px ! important; text-align: center ! important; padding: 11px 0px; border: 2px solid transparent; position: relative; overflow: hidden; box-sizing: border-box ! important; transition: border 0.6s linear 0s, background 0.6s linear 0s, color 0.6s linear 0s; }
+.cresta-share-icon i.c-icon-cresta-facebook:hover, .cresta-share-icon i.c-icon-cresta-twitter:hover, .cresta-share-icon i.c-icon-cresta-gplus:hover, .cresta-share-icon i.c-icon-cresta-linkedin:hover, .cresta-share-icon i.c-icon-cresta-pinterest:hover, .cresta-share-icon i.c-icon-cresta-print:hover { background: none repeat scroll 0% 0% rgb(255, 255, 255); transition: border 0.2s linear 0s, background 0.2s linear 0s, color 0.2s linear 0s; }
+.cresta-share-icon .cresta-the-total-count, .cresta-share-icon .cresta-the-total-text { display: block; text-align: center; color: rgb(0, 0, 0); line-height: 1em; }
+.cresta-share-icon .cresta-the-total-text { font-size: 11px; letter-spacing: -0.5px; text-transform: uppercase; }
+.cresta-share-icon .cresta-the-total-count { font-size: 25px; font-weight: 700; }
+.cresta-share-icon.eleventh_style i { padding: 5px 0px; border-radius: 3px 3px 3px 3px; }
+.cresta-share-icon i.c-icon-cresta-spinner { padding: 0px ! important; }
+@media all and (max-width: 768px) {
+  #crestashareicon { bottom: 0px ! important; top: inherit ! important; left: 0px ! important; right: inherit ! important; float: none ! important; width: 100%; margin: 0px ! important; background: none repeat scroll 0% 0% rgb(255, 255, 255); text-align: center; }
+  #crestashareicon .sbutton { clear: none ! important; float: none ! important; display: inline-block ! important; }
+  #crestashareicon #total-shares.sbutton, #crestashareicon .sbutton span, .cresta-the-button { display: none ! important; }
+  #crestashareicon.cresta-share-icon .sbutton i { width: 30px ! important; height: 30px ! important; padding: 0px ! important; line-height: 30px ! important; }
+  #crestashareicon.cresta-share-icon .sbutton, #crestashareicon.cresta-share-icon .sbutton-total { margin: 3px 1px ! important; }
+}
+@media print {
+  .cresta-share-icon { display: none ! important; }
+}

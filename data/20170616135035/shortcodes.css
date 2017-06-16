@@ -1,0 +1,15 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "bdaia-shorty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("bdaia-shorty.eot") format("embedded-opentype"), url("bdaia-shorty.ttf") format("truetype"), url("bdaia-shorty.woff") format("woff"), url("bdaia-shorty.svg") format("svg");
+}
+@keyframes bdaia-sio-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+@media only screen and (max-width: 728px) {
+}
+@media only screen and (max-width: 728px) {
+}

@@ -1,0 +1,9 @@
+/* Code tidied up by ScrapBook */
+.print_html, .print_mail, .print_pdf { margin-left: 1em; }
+.flag-wrapper { position: relative; }
+.addtoany { display: inline; }
+.addtoany_list { display: inline; line-height: 16px; }
+.addtoany_list > a, .addtoany_list a img, .addtoany_list a > span { vertical-align: middle; }
+.addtoany_list > a { display: inline-block; font-size: 16px; padding: 0px 4px; }
+.addtoany_list a span { display: inline-block; float: none; }
+.addtoany_list a:hover:hover img, .addtoany_list a:hover span { opacity: 0.7; }

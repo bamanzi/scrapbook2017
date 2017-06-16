@@ -1,0 +1,9 @@
+/* Code tidied up by ScrapBook */
+.element-invisible { position: absolute ! important; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; height: 1px; }
+.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus { position: static ! important; clip: auto; overflow: visible; height: auto; }
+.clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+div.error, .error { color: rgb(140, 46, 11); }
+form { margin: 0px; padding: 0px; }
+img { border: 0px none; }
+.form-item, .form-actions { margin-top: 1em; margin-bottom: 1em; }
+.form-item input.error, .form-item textarea.error, .form-item select.error { border: 2px solid red; }

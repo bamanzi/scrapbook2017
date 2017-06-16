@@ -1,0 +1,54 @@
+/* Code tidied up by ScrapBook */
+.stackcommerce-widget * { box-sizing: border-box; }
+.stackcommerce-widget { width: 100%; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; float: left; clear: both; }
+.stackcommerce-widget:after { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.scw-all-deals { text-align: right; clear: both; }
+.scw-item { overflow: hidden; width: 100%; float: left; margin-bottom: 20px; position: relative; height: auto; }
+.scw-item a:hover { border: medium none; }
+.scw-item img { height: auto; width: 100%; }
+.scw-item .scw-price { display: block; width: 60%; margin: -16px auto 0px; position: relative; font-size: 14px; z-index: 999; text-align: center; background: none repeat scroll 0% 0% rgb(45, 181, 0); color: rgb(255, 255, 255); text-decoration: none; border-radius: 3px 3px 3px 3px; padding: 5px; border-bottom: medium none; }
+.scw-item .scw-buy { display: inline; text-transform: uppercase; }
+.scw-item .scw-discount { position: absolute; background: none repeat scroll 0% 0% rgb(255, 211, 0); font-weight: 700; color: rgb(0, 0, 0); width: 200px; font-size: 15px; padding: 70px 40px 5px; top: -33px; right: -93px; text-align: center; transform: rotate(50deg); }
+.scw-item .scw-price-original { text-decoration: line-through; font-size: small; display: none; }
+.scw-item .scw-title { width: 100%; float: left; padding: 10px 0.3em; font-size: 15px; text-align: center; }
+.scw-item .scw-title a { color: rgb(107, 107, 107); border-bottom: medium none; }
+.scw-item .scw-title a, .scw-item .scw-title a span { text-decoration: none; box-shadow: none; }
+.scw-item .scw-title a:hover { text-decoration: underline; }
+.scw-horizontal, .scw-wrap { width: 100%; float: left; }
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+@media (min-width: 100px) {
+}
+.stackcommerce-widget.vertical-medium .scw-item { background: none repeat scroll 0% 0% transparent; }
+.stackcommerce-widget.vertical-medium .scw-image { padding-right: 10px; width: 40%; float: left; }
+.stackcommerce-widget.vertical-medium .scw-title { width: 60%; float: left; text-align: left; }
+.stackcommerce-widget.vertical-medium .scw-discount, .stackcommerce-widget.vertical-medium .scw-price { display: none ! important; }
+@media (max-width: 750px) {
+  .stackcommerce-widget.vertical-grid, .stackcommerce-widget.vertical-medium .scw-wrap { width: 100% ! important; }
+  .stackcommerce-widget.vertical-grid .scw-item, .stackcommerce-widget.vertical-medium .scw-wrap .scw-item { height: auto ! important; }
+  .stackcommerce-widget.vertical-grid .scw-image, .stackcommerce-widget.vertical-medium .scw-wrap .scw-image { width: 50% ! important; float: left; height: auto ! important; }
+  .stackcommerce-widget.vertical-grid .scw-image img, .stackcommerce-widget.vertical-medium .scw-wrap .scw-image img { height: auto ! important; }
+  .stackcommerce-widget.vertical-grid .scw-title, .stackcommerce-widget.vertical-medium .scw-wrap .scw-title { width: 50% ! important; float: left ! important; }
+}
+@media (max-width: 970px) {
+}

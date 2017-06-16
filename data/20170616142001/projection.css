@@ -1,0 +1,8 @@
+/* Code tidied up by ScrapBook */
+@import url("screen.css");
+html { line-height: 1.8em; }
+body, b, em, a, span, div, p, td { font-size: 22pt; }
+h1 { font-size: 28pt; }
+h2 { font-size: 24pt; }
+h3 { font-size: 22pt; }
+tt, pre { font-size: 18pt; }

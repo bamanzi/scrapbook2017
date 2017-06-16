@@ -1,0 +1,21 @@
+/* Code tidied up by ScrapBook */
+#header_tabs li a:hover { background-color: rgba(255, 255, 255, 0.2); }
+#header_tabs li a { padding: 16px 4px; }
+body { font-family: 'Source Sans Pro',sans-serif; line-height: 1.4; color: black; }
+div#content a, p#pageinfo a { color: rgb(52, 101, 164); border-bottom: 1px dotted rgb(136, 136, 136); text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { color: rgb(63, 63, 63); margin: 0px; padding-top: 20px; padding-bottom: 10px; }
+#content p { line-height: 1.4em; }
+li { padding-bottom: 0.2em; }
+h1 { font-size: 2.4em; padding-bottom: 20px; font-weight: 200; }
+h2 { font-size: 1.5em; font-weight: normal; color: rgb(74, 134, 207); }
+h3 { font-size: 1.3em; font-weight: 300; }
+a img { border: 0px none; }
+a { color: rgb(0, 0, 255); }
+a:visited { color: rgb(85, 26, 139); }
+a:active { color: rgb(255, 0, 0); }
+#pagelocation { color: rgb(255, 255, 255); }
+input[type="submit"] { cursor: pointer; text-transform: none; border: 1px solid rgb(213, 208, 208); border-radius: 2px 2px 2px 2px; margin-right: 5px; padding: 2px 8px; background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); }
+#footer_container { background: none repeat scroll 0% 0% rgb(0, 0, 0); padding: 1em; color: rgb(255, 255, 255); }
+#header a, #footer a { color: rgb(255, 255, 255); text-decoration: none; }
+#footer a:hover { border-bottom: 1px solid rgb(136, 136, 136); }
+#copyright { text-align: center; font-size: small; clear: both; margin-top: 2em; }

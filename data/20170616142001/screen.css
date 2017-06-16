@@ -1,0 +1,5 @@
+/* Code tidied up by ScrapBook */
+span#pagelocation span.sep { display: inline; }
+span.sep { display: none; }
+#pagelocation { list-style: none outside none; margin: 0px; padding: 0px; }
+#pagebottom { clear: both; }

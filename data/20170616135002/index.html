@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>GNOME Shell Extensions in Debian 9.0 | Jonathan Carter</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="style.css">
+<link rel="pingback" href="https://jonathancarter.org/xmlrpc.php">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Jonathan Carter » Feed" href="https://jonathancarter.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jonathan Carter » Comments Feed" href="https://jonathancarter.org/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jonathan Carter » GNOME Shell Extensions in Debian 9.0 Comments Feed" href="https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/feed/">
+		<script type="text/javascript">/* Code removed by ScrapBook */</script><script defer="" type="text/javascript" src="about:blank"></script>
+		<style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+<link rel="stylesheet" id="gkl_postavatar_css-css" href="gkl-postavatar.css" type="text/css" media="all">
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="https://jonathancarter.org/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jonathancarter.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://jonathancarter.org/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="A few impressions of DebConf 16 in Cape Town" href="https://jonathancarter.org/2016/11/08/a-few-impressions-of-debconf-16-in-cape-town/">
+<meta name="generator" content="WordPress 4.7.5">
+<link rel="canonical" href="https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/">
+<link rel="shortlink" href="https://jonathancarter.org/?p=8231">
+<link rel="alternate" type="application/json+oembed" href="https://jonathancarter.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjonathancarter.org%2F2017%2F04%2F05%2Fgnome-shell-extensions-in-debian-9-0%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://jonathancarter.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjonathancarter.org%2F2017%2F04%2F05%2Fgnome-shell-extensions-in-debian-9-0%2F&amp;format=xml">
+<!-- <meta name="NextGEN" version="2.2.3" /> -->
+<style type="text/css" id="custom-background-css">
+/* Code tidied up by ScrapBook */
+body.custom-background { background-color: rgb(55, 72, 94); background-image: url("blueblocks.jpg"); background-position: center top; background-size: auto auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+<link rel="icon" href="favicon.png" sizes="32x32">
+<link rel="icon" href="favicon.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://jonathancarter.org/files/images/favicon.png">
+<meta name="msapplication-TileImage" content="https://jonathancarter.org/files/images/favicon.png">
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style id="diigo-activeHighlight" type="text/css">
+/* Code tidied up by ScrapBook */
+</style><script>/* Code removed by ScrapBook */</script></head>
+
+<body class="post-template-default single single-post postid-8231 single-format-standard custom-background">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<div id="site-title">
+					<span>
+						<a href="https://jonathancarter.org/" title="Jonathan Carter" rel="home">Jonathan Carter</a>
+					</span>
+				</div>
+				<div id="site-description"></div>
+
+										<img src="fern.jpg" alt="" width="940" height="198">
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+								<div class="menu-header"><ul id="menu-top-menu" class="menu"><li id="menu-item-1312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1312"><a href="http://jonathancarter.org/">Home</a></li>
+<li id="menu-item-1315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315"><a href="https://jonathancarter.org/feeds/">Feeds</a></li>
+<li id="menu-item-1317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a href="https://jonathancarter.org/contact/">Contact</a></li>
+<li id="menu-item-1313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1313"><a href="https://jonathancarter.org/about/">About</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="https://jonathancarter.org/2016/11/08/a-few-impressions-of-debconf-16-in-cape-town/" rel="prev"><span class="meta-nav">←</span> A few impressions of DebConf 16 in Cape Town</a></div>
+					<div class="nav-next"></div>
+				</div><!-- #nav-above -->
+
+				<div id="post-8231" class="post-8231 post type-post status-publish format-standard hentry category-free-software tag-debcamp tag-debian tag-gnome tag-ubuntu">
+					<h1 class="entry-title">GNOME Shell Extensions in Debian 9.0</h1>
+
+					<div class="entry-meta">
+						<span class="meta-prep meta-prep-author">Posted on</span> <a href="#" title="23:27" rel="bookmark"><span class="entry-date">5 April 2017</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://jonathancarter.org/author/admin/" title="View all posts by jonathan">jonathan</a></span>					</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<h2>About</h2>
+<p>GNOME 3 introduced an extensions framework that allows its users to extend the desktop shell by writing&nbsp;extensions using JavaScript and CSS. It works quite well and dozens of extensions have already been uploaded to the<a href="https://extensions.gnome.org/"> extensions site</a>. Some of these solve some annoyances that users typically share with GNOME, while others add useful functionality.</p>
+<p>During <a href="https://jonathancarter.org/2016/07/02/so-that-was-debcamp16/">DebCamp last year</a>, I started packaging some of these for Debian. That’s been going really well. Now that <a href="https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/">Ubuntu is finally dropping Unity in favour of GNOME</a>, it helps to serve as a nudge to get this blog post out that’s been stuck in drafts. These extensions also make their way into Ubuntu and other Debian/Ubuntu derivatives.</p>
+<p>Here are some extensions I’ve been packaging that’s already in the archive:</p>
+<h3><b><a class="own_package" title="dash-to-dock extension for GNOME shell" href="https://tracker.debian.org/pkg/gnome-shell-extension-dashtodock" name="gnome-shell-extension-dashtodock">gnome-shell-extension-dashtodock</a></b></h3>
+<p><a href="https://micheleg.github.io/dash-to-dock/"><img class="aligncenter wp-image-8272" src="screenshots.png" width="555" height="127"></a></p>
+<p>Provides a multitude of options for the shell dock. Not only really useful but also well maintained by upstream, see <a href="https://micheleg.github.io/dash-to-dock/">their website</a> for more info. This is a great extension if you support previous Unity users, since you can set your panel to look and behave very similarly to Unity. I think the app launcher is slightly better in Gnome because apps are easier to discover.</p>
+<h3><b><a class="own_package" title="GNOME shell extension that hides the activities button" href="https://tracker.debian.org/pkg/gnome-shell-extension-hide-activities" name="gnome-shell-extension-hide-activities">gnome-shell-extension-hide-activities</a></b></h3>
+<p>Simple extension that hides the “Activities” button from the top left corner.</p>
+<h3><b><a class="own_package" title="speed up the gnome-shell animation speed" href="https://tracker.debian.org/pkg/gnome-shell-extension-impatience" name="gnome-shell-extension-impatience">gnome-shell-extension-impatience</a></b></h3>
+<p><img class="aligncenter size-full wp-image-8276" src="impatience.png" alt="" width="555" height="97"></p>
+<p>Speeds up shell animations. Animations can make the system more usable, but it can also be either distracting or cause some slight delays while waiting for the animation to complete. This gives you a sliding scale that lets you choose how much you’d like to speed it up.</p>
+<h3><b><a class="own_package" title="move clock extension for GNOME shell" href="https://tracker.debian.org/pkg/gnome-shell-extension-move-clock" name="gnome-shell-extension-move-clock">gnome-shell-extension-move-clock</a></b></h3>
+<p>Simple extension that moves the clock from the center of the panel to the right.</p>
+<h3><del><b><a class="own_package" title="refresh wifi extension for GNOME shell" href="https://tracker.debian.org/pkg/gnome-shell-extension-refreshwifi" name="gnome-shell-extension-refreshwifi">gnome-shell-extension-refreshwifi</a></b></del></h3>
+<p><del>In gnome-shell, network manager doesn’t automatically refresh the list of available network, which can be quite annoying. Currently a user has to turn wifi off and back on in order to see a refreshed list. This has been fixed upstream and will be in the next version of GNOME. In the meantime, this extension fixes that.</del></p>
+<p>Update: Refreshing wifi in the background has been fixed in Gnome 3.22.2, which is now in stretch. This extension will be removed from the archives.</p>
+<h3><b><a class="own_package" title="removes drop down arrows from panel on GNOME shell" href="https://tracker.debian.org/pkg/gnome-shell-extension-remove-dropdown-arrows" name="gnome-shell-extension-remove-dropdown-arrows">gnome-shell-extension-remove-dropdown-arrows</a></b></h3>
+<p>Items in the top panel contain dropdown arrows, which are useful for new users who might not be aware that they expand into more entries. For more experience users, the arrows tend to result in extra clutter in the panel, this extension hides those arrows.</p>
+<h3><b><a class="own_package" title="GNOME Shell extension that improves volume control" href="https://tracker.debian.org/pkg/gnome-shell-extension-better-volume" name="gnome-shell-extension-better-volume">gnome-shell-extension-better-volume</a></b></h3>
+<p>This allows you to hover over the volume control indicator and scroll up and down to increase/decrease the volume. Probably another extension that should really just be integrated into gnome-shell by default.</p>
+<h3><b><a class="own_package" href="https://extensions.gnome.org/extension/988/harddisk-led/" name="gnome-shell-extension-hard-disk-led">gnome-shell-extension-hard-disk-led</a></b></h3>
+<p><a href="https://extensions.gnome.org/extension/988/harddisk-led/"><img class="aligncenter size-full wp-image-8285" src="screenshot_988_VbpWBTs.png" alt="" width="93" height="27"></a></p>
+<p>Many new laptops either don’t have a hard disk L.E.D. anymore, or they hide it so that it’s not really all that visible. This extension shows you hard disk activity in your panel. There’s also work being done to make it report reads and writes separately. I’ll be looking at backporting that when it’s available.</p>
+<h3><b><a class="own_package" href="https://tracker.debian.org/pkg/gnome-shell-extension-disconnect-wifi" name="gnome-shell-extension-disconnect-wifi">gnome-shell-extension-disconnect-wifi</a></b></h3>
+<p>Allows you to disconnect from the current network without having to turn off wi-fi entirely.</p>
+<h3><b><a class="own_package" href="https://extensions.gnome.org/extension/723/pixel-saver/" name="gnome-shell-extension-pixelsaver">gnome-shell-extension-pixelsaver</a></b></h3>
+<p>Title bars can be incredibly pixel-hungry, which isn’t great on small displays. This extension hides the title bar when a window is maximised, and adds control buttons for that window to the top panel.</p>
+<h3><b><a class="own_package" title="Display system information in GNOME Shell status bar" href="https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet" name="gnome-shell-extension-system-monitor">gnome-shell-extension-system-monitor</a></b></h3>
+<p><a href="https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet"><img class="aligncenter size-full wp-image-8289" src="687474703a2f2f692e696d6775722e636f6d2f58375373732e706e67.png" alt="" width="735" height="705"></a></p>
+<h3><b><a class="own_package" title="trash applet for GNOME shell" href="https://extensions.gnome.org/extension/48/trash/" name="gnome-shell-extension-trash">gnome-shell-extension-trash</a></b></h3>
+<p>Displays a trash icon to the top panel when there are items in trash. From there you can view or delete the trash contents.</p>
+<h3><b><a class="own_package" title="Better support for additional monitors in GNOME shell" href="https://extensions.gnome.org/extension/921/multi-monitors-add-on/" name="gnome-shell-extension-multi-monitors">gnome-shell-extension-multi-monitors</a></b></h3>
+<p>This extension adds some tweaks for users of multiple monitors. It’s most useful feature is that you can have desktop overviews on both displays and easily move apps between them.</p>
+<h2>More extensions</h2>
+<p>Here are some more extensions packaged in Debian that others have packaged:</p>
+<ul>
+<li>gnome-shell-extension-shortcuts – shows a keyboard shortcut overlay</li>
+<li>gnome-shell-extension-show-ip – shows ip address in the notification area</li>
+<li>gnome-shell-extension-autohidetopbar – hide the top panel</li>
+<li>gnome-shell-extension-caffeine – prevents computer from suspending when enabled</li>
+<li>gnome-shell-extension-mediaplayer – control mediaplayer from the system menu</li>
+<li>gnome-shell-extension-redshift – change colour temperature to improve attention span and sleep paterns</li>
+<li>gnome-shell-extension-suspend-button – adds suspend shortcut</li>
+<li>gnome-shell-extension-taskbar – adds plenty of options for the top panel and optional bottom taskbar</li>
+<li>ugnome-shell-extension-top-icons-plus – moves system tray icons from the bottom hidden menu to the top</li>
+<li>gnome-shell-extension-weather – weather report in panel</li>
+<li>gnome-shell-extensions-gpaste – clipbook manager</li>
+<li>gnome-shell-extension-onboard – on screen keyboard manager</li>
+</ul>
+<h2>Didn’t make it this time</h2>
+<p>Both Debian and Ubuntu are in feature freeze right now, and the following didn’t make it in the archives in time, but should be in the following releases (they’re still installable via the extensions site in the meantime):</p>
+<ul>
+<li>gnome-shell-extension-remove-round-corners – remove round corners on top panel</li>
+<li>gnome-shell-extension-proxy-switcher – adds menu in system menu to quickly switch between proxy settings</li>
+<li>gnome-shell-extension-apt-update-indicator – show apt status and available upgrades</li>
+<li>gnome-shell-extension-uptime-indicator- indicator that displays uptime</li>
+<li>gnome-shell-extension-dash-to-panel<span style="font-size: 10px;">&nbsp;– great extension that combines the dock into the top panel</span></li>
+<li>gnome-shell-extension-tilix-dropdown – shortcut configurator for tilix’s quake mode</li>
+</ul>
+<h2>Next steps</h2>
+<h3>Consider auto-enable</h3>
+<p>Currently, when you install these debian packages, (most of) the extensions won’t be enabled by default. Users have to use the gnome-tweak-tool to enable them after installation. The rationale behind this is that a system administrator of a network of computers might only want to enable certain extensions for certain users. After some more consideration, I think such administrators will probably already have a system (like a configuration management system) in place to manage this. So, to make it easier for the typical user, I think it’s worth considering enabling these by default with installation. Feedback welcome :)</p>
+<h3>Debian team</h3>
+<p>The list of packaged extensions are growing fast, and it would be nice to have these team-maintained. It might be a good idea to start a team for this or use an existing team under the Debian gnome team namespace.</p>
+<h3>Packaging guide</h3>
+<p>I’ve packaged enough Gnome extensions to be aware of the typical gotchas and things that need fixing. They’re overall easy to package and a good place to start for someone who wants to get into packaging. I want to put together a good short guide on how to properly package gnome-shell extensions.</p>
+<h3>Anything else?</h3>
+<p>Any other extensions you’d like to see packaged? Let me know. Even better, package it yourself and help test my extension package guide (once it exists) so that we can improve that too.</p>
+
+
+<!-- Begin Top Social Bookmarking Buttons plugin -->
+<!-- http://wordpress.org/extend/plugins/top-social-bookmarking-buttons/ -->
+<div style="padding: 16px 0px; text-align: left; width: 100%;">
+<a href="http://socibook.com/submit.php?url=GNOME%20Shell%20Extensions%20in%20Debian%209.0&amp;url=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/" target="_blank" rel="nofollow" title="SociBook"><img src="socibook.png" style="width: 16px; height: 16px; border: 0px none;" alt="SociBook" title="SociBook"></a>
+<a href="http://del.icio.us/post?url=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/&amp;title=GNOME%20Shell%20Extensions%20in%20Debian%209.0" target="_blank" rel="nofollow" title="del.icio.us"><img src="delicious.gif" style="width: 16px; height: 16px; border: 0px none;" alt="del.icio.us" title="del.icio.us"></a>
+<a href="http://digg.com/submit?phase=2&amp;url=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/&amp;title=GNOME%20Shell%20Extensions%20in%20Debian%209.0" target="_blank" rel="nofollow" title="Digg"><img src="digg.gif" style="width: 16px; height: 16px; border: 0px none;" alt="Digg" title="Digg"></a>
+<a href="http://facebook.com/sharer.php?u=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/&amp;t=GNOME%20Shell%20Extensions%20in%20Debian%209.0" target="_blank" rel="nofollow" title="Facebook"><img src="facebook.gif" style="width: 16px; height: 16px; border: 0px none;" alt="Facebook" title="Facebook"></a>
+<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/&amp;title=GNOME%20Shell%20Extensions%20in%20Debian%209.0" target="_blank" rel="nofollow" title="Google"><img src="google.gif" style="width: 16px; height: 16px; border: 0px none;" alt="Google" title="Google"></a>
+<a href="http://buzz.yahoo.com/submit?submitUrl=GNOME%20Shell%20Extensions%20in%20Debian%209.0&amp;u=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/" target="_blank" rel="nofollow" title="Yahoo Buzz"><img src="buzz-icon.gif" style="width: 16px; height: 16px; border: 0px none;" alt="Yahoo Buzz" title="Yahoo Buzz"></a>
+<a href="http://stumbleupon.com/submit?url=https://jonathancarter.org/2017/04/05/gnome-shell-extensions-in-debian-9-0/&amp;title=GNOME%20Shell%20Extensions%20in%20Debian%209.0&amp;newcomment=GNOME%20Shell%20Extensions%20in%20Debian%209.0" target="_blank" rel="nofollow" title="StumbleUpon"><img src="stumbleupon.gif" style="width: 16px; height: 16px; border: 0px none;" alt="StumbleUpon" title="StumbleUpon"></a>
+</div>
+<!-- End Top Social Bookmarking Buttons plugin -->
+
+											</div><!-- .entry-content -->
+
+
+					<div class="entry-utility">
+						This entry was posted in <a href="https://jonathancarter.org/category/free-software/" rel="category tag">Free Software</a> and tagged <a href="https://jonathancarter.org/tag/debcamp/" rel="tag">Debcamp</a>, <a href="https://jonathancarter.org/tag/debian/" rel="tag">Debian</a>, <a href="https://jonathancarter.org/tag/gnome/" rel="tag">GNOME</a>, <a href="https://jonathancarter.org/tag/ubuntu/" rel="tag">Ubuntu</a>. Bookmark the <a href="#" title="Permalink to GNOME Shell Extensions in Debian 9.0" rel="bookmark">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="https://jonathancarter.org/2016/11/08/a-few-impressions-of-debconf-16-in-cape-town/" rel="prev"><span class="meta-nav">←</span> A few impressions of DebConf 16 in Cape Town</a></div>
+					<div class="nav-next"></div>
+				</div><!-- #nav-below -->
+
+				
+			<div id="comments">
+
+
+			<h3 id="comments-title">12 Responses to <em>GNOME Shell Extensions in Debian 9.0</em></h3>
+
+
+			<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-384772">
+		<div id="comment-384772">
+			<div class="comment-author vcard">
+				<img alt="" src="4ad594c1e13211c1ad9edb81ce5110b7.jpeg" srcset="4ad594c1e13211c1ad9edb81ce5110b7_001.jpeg 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn"><a href="https://anarc.at/" rel="external nofollow" class="url">anarcat</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384772">
+				6 April 2017 at 00:11</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Consider auto-enable: yes please, absolutely. In fact, I think it could be seen as a way for sysadmins to enable this in a scalable way *without* having to tweak around configuration files.. either the package is there or it isn’t on a given workstation..</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-384775">
+		<div id="comment-384775">
+			<div class="comment-author vcard">
+				<img alt="" src="0ee943fe632ff995f6f0f25b7167d03b.png" srcset="0ee943fe632ff995f6f0f25b7167d03b_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn"><a href="https://smcv.pseudorandom.co.uk/" rel="external nofollow" class="url">smcv</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384775">
+				6 April 2017 at 10:04</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>“Currently, when you install these debian packages, (most of) the extensions won’t be enabled by default. Users have to use the gnome-tweak-tool to enable them after installation.”</p>
+<p>I believe the reason for this is that the list of enabled extensions is a single gsettings key. We can override the default system-wide (like GNOME Shell overrides the default for the list of “favourite apps” pinned to the dock), but overriding it to a dynamically-generated value would require non-trivial cooperation between extensions’ maintainer scripts, and any user who has changed the list would not receive the new default anyway.</p>
+<p>So implementing this would probably require new “API” design and new upstream code, to be able to cover overrides in both directions (extension A is installed locally by user U and they want to enable it; extension B is installed system-wide but user U doesn’t want to enable it). In particular, enabling all extensions present in a “.d” drop-in directory in /etc would not allow the second form of override.</p>
+<p>This seems like something that should absolutely be done upstream.</p>
+<p>“The list of packaged extensions are growing fast, and it would be nice to have these team-maintained. It might be a good idea to start a team for this or use an existing team under the Debian gnome team namespace.”</p>
+<p>All my extensions are in collab-maint git, and co-maintainers are welcome. I think the reason I didn’t use pkg-gnome was that at the time, pkg-gnome packages were consistently maintained in svn and I didn’t want to touch svn more than I had to.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-384776">
+		<div id="comment-384776">
+			<div class="comment-author vcard">
+				<img alt="" src="0ee943fe632ff995f6f0f25b7167d03b.png" srcset="0ee943fe632ff995f6f0f25b7167d03b_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn"><a href="https://smcv.pseudorandom.co.uk/" rel="external nofollow" class="url">smcv</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384776">
+				6 April 2017 at 10:19</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Also, I’m not convinced that extensions *should* be enabled by default: they change the UX, and not always for the better.</p>
+<p>The extensions in the official gnome-shell-extensions package (which is mostly the implementation of GNOME Classic mode) definitely shouldn’t be enabled when merely installed, because if they were, the normal GNOME session would accidentally turn into GNOME Classic whenever the gnome-core metapackage was installed! It would seem inconsistent to auto-enable other extensions, but not that one.</p>
+<p>Many of the other extensions are a matter of taste – if they were unambiguously better than stock GNOME Shell, they wouldn’t be extensions, because upstream Shell would just have their behaviour. remove-round-corners, dash-to-panel, dashtodock, hide-activities, move-clock, pixelsaver, autohidetopbar, top-icons-plus all seem like things that are very much a matter of taste: they undermine Shell’s visual design as a pragmatic compromise to make particular things work the way a particular user prefers. (I’m the Debian maintainer of top-icons-plus, and it’s basically a hack to keep deprecated things mostly-working.)</p>
+<p>I also wouldn’t want to inflict the caffeine extension on other users of a shared computer – it’s very convenient if you know what it’s for, but it’s non-obvious and not entirely reliable.</p>
+<p>Finally, requiring users to enable extensions via gnome-tweak-tool has the side-effect that all users of extensions know how to turn them off! I think there’s value in that.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://techrights.org/2017/04/06/ubuntu-is-back-to-gnome/" rel="external nofollow" class="url">Links 6/4/2017: CentOS Linux 6.9, Ubuntu is Back to GNOME | Techrights</a></p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-384778">
+		<div id="comment-384778">
+			<div class="comment-author vcard">
+				<img alt="" src="eca4c2dcc547098b51d1e92bf096bd65.png" srcset="eca4c2dcc547098b51d1e92bf096bd65_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Greg K Nicholson</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384778">
+				6 April 2017 at 12:09</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>You *can* hover over the volume indicator and scroll to change the volume without an extension. Better volume just adds visual feedback when you do.</p>
+<p>I agree there should be visual feedback by default, ideally the OSD that appears when you use a keyboard volume key.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-384779">
+		<div id="comment-384779">
+			<div class="comment-author vcard">
+				<img alt="" src="c9ce41e97a9a77da234727b2ea266680.png" srcset="c9ce41e97a9a77da234727b2ea266680_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn"><a href="http://jmtd.net/" rel="external nofollow" class="url">Jonathan</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384779">
+				6 April 2017 at 12:20</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Thanks for doing this. When I last played with extensions (many years ago) my biggest frustration was them breaking when I upgraded GNOME (minor version bumps). It’s possible that this is no longer a problem, but if it is, this is one big thing that packaging the extensions could address with adequately tight dependencies between extension packages and the gnome ones.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-384783">
+		<div id="comment-384783">
+			<div class="comment-author vcard">
+				<img alt="" src="2fb1545a225e029445b5bb568ce8c0b9.png" srcset="2fb1545a225e029445b5bb568ce8c0b9_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Martin</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384783">
+				6 April 2017 at 13:59</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Is there already an extension that let’s you change the users time zone? If so, please package it!</p>
+<p>Last time I checked, a user could not change their time zone in Gnome. If a user had root permissions they could change the time zone of the complete system, though. But my system runs on UTC, while my desktop changes time zones all of the time, when travelling.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-384785">
+		<div id="comment-384785">
+			<div class="comment-author vcard">
+				<img alt="" src="0ee943fe632ff995f6f0f25b7167d03b.png" srcset="0ee943fe632ff995f6f0f25b7167d03b_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn"><a href="https://smcv.pseudorandom.co.uk/" rel="external nofollow" class="url">smcv</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384785">
+				6 April 2017 at 19:36</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>“Last time I checked, a user could not change their time zone in Gnome. If a user had root permissions they could change the time zone of the complete system, though.”</p>
+<p>Sorry, I don’t think this can work. The standard way to configure per-user time zone is an environment variable (TZ) which means if you set it for the whole desktop somehow, you can’t change it without terminating all your user processes (logging out) and starting again, because all the processes that are already running think they already know what the value of TZ is. Changing the system time zone that is used while TZ is unset uses a file (/etc/localtime) which processes can monitor, so it doesn’t have that problem.</p>
+<p>Locales have the same problem: you can’t switch your whole session from English to French without logging out.</p>
+<p>It’s a historical Unix design issue, rather than a GNOME or freedesktop problem.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-384787">
+		<div id="comment-384787">
+			<div class="comment-author vcard">
+				<img alt="" src="2fb1545a225e029445b5bb568ce8c0b9.png" srcset="2fb1545a225e029445b5bb568ce8c0b9_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Martin</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384787">
+				6 April 2017 at 20:36</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>About the time zone issue: The need to logout and login again to change the timezone is a minor inconvenience. But currently, one cannot change the time zone at all, only the time zone of the complete system – and only, if root gives their password :~)</p>
+<p>A very raw idea would be: The Gnome function to set the time zone could change the TZ variable and additionally send a DBus signal “time zone changed to UTC+12”, and all programs that are timezone-aware need to interpret this signal and call tzset(3) from “time.h”. If they don’t, one can still logout and login and everything would be fine.</p>
+<p>Talking about timezones and travelling: Is there already a Gnome clock, that shows more than one time in the panel? Like the cool Orage clock in XFCE? Visible without any clicks etc.? That would make changing the timezone less urgent. Last time I checked, Gnome in Debian did not have such a function.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-384801">
+		<div id="comment-384801">
+			<div class="comment-author vcard">
+				<img alt="" src="bd4262acb5fa35024ccca7c8d878d0db.png" srcset="bd4262acb5fa35024ccca7c8d878d0db_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Claude</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384801">
+				8 April 2017 at 08:33</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Super cool. Extensions packaged right for Ubuntu / Debian. Working well in Gnome 3.24.</p>
+<p>One extension I would really like to be packaged is gnome-shell-mailnag. The actual maintener is waiting to get Gnome 3.24 in his Arch distro.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-384818">
+		<div id="comment-384818">
+			<div class="comment-author vcard">
+				<img alt="" src="b6c232afe7462d016b5d845d0807f82c.png" srcset="b6c232afe7462d016b5d845d0807f82c_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Frederik</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-384818">
+				9 April 2017 at 23:43</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p><a href="https://extensions.gnome.org/extension/615/appindicator-support/" rel="nofollow">https://extensions.gnome.org/extension/615/appindicator-support/</a></p>
+<p><a href="https://extensions.gnome.org/extension/723/pixel-saver/" rel="nofollow">https://extensions.gnome.org/extension/723/pixel-saver/</a></p>
+<p><a href="https://extensions.gnome.org/extension/519/messaging-menu/" rel="nofollow">https://extensions.gnome.org/extension/519/messaging-menu/</a></p>
+<p><a href="https://extensions.gnome.org/extension/1080/transparent-notification/" rel="nofollow">https://extensions.gnome.org/extension/1080/transparent-notification/</a></p>
+<p><a href="https://extensions.gnome.org/extension/708/panel-osd/" rel="nofollow">https://extensions.gnome.org/extension/708/panel-osd/</a></p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-385540">
+		<div id="comment-385540">
+			<div class="comment-author vcard">
+				<img alt="" src="e92fe66c5f5cf0346f5f9ddc01b93711.png" srcset="e92fe66c5f5cf0346f5f9ddc01b93711_001.png 2x" class="avatar avatar-40 photo" width="40" height="40">				<cite class="fn">Abdellah</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+			
+			<div class="comment-meta commentmetadata"><a href="#comment-385540">
+				28 May 2017 at 16:35</a>			</div><!-- .comment-meta .commentmetadata -->
+
+			<div class="comment-body"><p>Nice work. I created before a tiny gnome shell extension, an accessibility indicator to show the state of keyboard modifiers. Generally needed when sticky keys is active (lock or latch  mod). But I faced different behaviors in different gnome releases. It doesn’t work in some of them. Gnome was changing quickly and I did bother myself migrating it without edge updated doc (clear change log prepared for extension developers).</p>
+<p>Please, how do you test your extension with multiples releases of gnome-shell? or are you just keeping track of debian stable?</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+			</ol>
+
+
+	
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel reply</a></small></h3>			<form action="https://jonathancarter.org/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p style="clear: both;" class="subscribe-to-comments">
+			<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+			<label for="subscribe">Notify me of followup comments via e-mail</label>
+			</p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" id="author" name="author" value="" size="30" maxlength="245" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" value="" size="30" maxlength="200" type="text"></p>
+<p class="form-submit"><input name="submit" id="submit" class="submit" value="Post Comment" type="submit"> <input name="comment_post_ID" value="8231" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="66ee661402" type="hidden"></p><p style="display: none;"></p>			<input id="ak_js" name="ak_js" value="1497592053049" type="hidden"></form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="tag_cloud-3" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="https://jonathancarter.org/tag/android/" class="tag-link-157 tag-link-position-1" title="5 topics" style="font-size: 8pt;">Android</a>
+<a href="https://jonathancarter.org/tag/apple/" class="tag-link-66 tag-link-position-2" title="5 topics" style="font-size: 8pt;">Apple</a>
+<a href="https://jonathancarter.org/tag/canada/" class="tag-link-505 tag-link-position-3" title="10 topics" style="font-size: 10.8661pt;">Canada</a>
+<a href="https://jonathancarter.org/tag/canonical/" class="tag-link-65 tag-link-position-4" title="9 topics" style="font-size: 10.4252pt;">Canonical</a>
+<a href="https://jonathancarter.org/tag/cape-town/" class="tag-link-11 tag-link-position-5" title="16 topics" style="font-size: 12.9606pt;">Cape Town</a>
+<a href="https://jonathancarter.org/tag/classmate-pc/" class="tag-link-49 tag-link-position-6" title="7 topics" style="font-size: 9.32283pt;">Classmate PC</a>
+<a href="https://jonathancarter.org/tag/clug/" class="tag-link-1039 tag-link-position-7" title="13 topics" style="font-size: 12.0787pt;">CLUG</a>
+<a href="https://jonathancarter.org/tag/debconf/" class="tag-link-839 tag-link-position-8" title="11 topics" style="font-size: 11.3071pt;">Debconf</a>
+<a href="https://jonathancarter.org/tag/debian/" class="tag-link-12 tag-link-position-9" title="38 topics" style="font-size: 16.9291pt;">Debian</a>
+<a href="https://jonathancarter.org/tag/edubuntu/" class="tag-link-14 tag-link-position-10" title="43 topics" style="font-size: 17.4803pt;">Edubuntu</a>
+<a href="https://jonathancarter.org/tag/education/" class="tag-link-1037 tag-link-position-11" title="7 topics" style="font-size: 9.32283pt;">Education</a>
+<a href="https://jonathancarter.org/tag/facebook/" class="tag-link-145 tag-link-position-12" title="6 topics" style="font-size: 8.77165pt;">Facebook</a>
+<a href="https://jonathancarter.org/tag/free-software/" class="tag-link-1034 tag-link-position-13" title="76 topics" style="font-size: 20.2362pt;">Free Software</a>
+<a href="https://jonathancarter.org/tag/fsf/" class="tag-link-29 tag-link-position-14" title="12 topics" style="font-size: 11.6378pt;">FSF</a>
+<a href="https://jonathancarter.org/tag/geekdinner/" class="tag-link-13 tag-link-position-15" title="5 topics" style="font-size: 8pt;">Geekdinner</a>
+<a href="https://jonathancarter.org/tag/gnome/" class="tag-link-78 tag-link-position-16" title="14 topics" style="font-size: 12.4094pt;">GNOME</a>
+<a href="https://jonathancarter.org/tag/gnu/" class="tag-link-17 tag-link-position-17" title="6 topics" style="font-size: 8.77165pt;">GNU</a>
+<a href="https://jonathancarter.org/tag/gnulinux/" class="tag-link-92 tag-link-position-18" title="5 topics" style="font-size: 8pt;">GNU/Linux</a>
+<a href="https://jonathancarter.org/tag/google/" class="tag-link-143 tag-link-position-19" title="8 topics" style="font-size: 9.87402pt;">Google</a>
+<a href="https://jonathancarter.org/tag/jonathan/" class="tag-link-1036 tag-link-position-20" title="9 topics" style="font-size: 10.4252pt;">Jonathan</a>
+<a href="https://jonathancarter.org/tag/kde/" class="tag-link-137 tag-link-position-21" title="7 topics" style="font-size: 9.32283pt;">KDE</a>
+<a href="https://jonathancarter.org/tag/kubuntu/" class="tag-link-138 tag-link-position-22" title="6 topics" style="font-size: 8.77165pt;">Kubuntu</a>
+<a href="https://jonathancarter.org/tag/launchpad/" class="tag-link-64 tag-link-position-23" title="7 topics" style="font-size: 9.32283pt;">Launchpad</a>
+<a href="https://jonathancarter.org/tag/linux/" class="tag-link-111 tag-link-position-24" title="11 topics" style="font-size: 11.3071pt;">Linux</a>
+<a href="https://jonathancarter.org/tag/ltsp/" class="tag-link-15 tag-link-position-25" title="20 topics" style="font-size: 13.9528pt;">LTSP</a>
+<a href="https://jonathancarter.org/tag/mayhem/" class="tag-link-5 tag-link-position-26" title="8 topics" style="font-size: 9.87402pt;">Mayhem</a>
+<a href="https://jonathancarter.org/tag/microsoft/" class="tag-link-28 tag-link-position-27" title="15 topics" style="font-size: 12.6299pt;">Microsoft</a>
+<a href="https://jonathancarter.org/tag/montreal/" class="tag-link-640 tag-link-position-28" title="7 topics" style="font-size: 9.32283pt;">Montreal</a>
+<a href="https://jonathancarter.org/tag/motu/" class="tag-link-177 tag-link-position-29" title="9 topics" style="font-size: 10.4252pt;">MOTU</a>
+<a href="https://jonathancarter.org/tag/novell/" class="tag-link-30 tag-link-position-30" title="5 topics" style="font-size: 8pt;">Novell</a>
+<a href="https://jonathancarter.org/tag/openofficeorg/" class="tag-link-147 tag-link-position-31" title="5 topics" style="font-size: 8pt;">OpenOffice.org</a>
+<a href="https://jonathancarter.org/tag/python/" class="tag-link-33 tag-link-position-32" title="7 topics" style="font-size: 9.32283pt;">Python</a>
+<a href="https://jonathancarter.org/tag/revolution-linux/" class="tag-link-491 tag-link-position-33" title="7 topics" style="font-size: 9.32283pt;">Revolution Linux</a>
+<a href="https://jonathancarter.org/tag/shuttleworth-foundation/" class="tag-link-34 tag-link-position-34" title="11 topics" style="font-size: 11.3071pt;">Shuttleworth Foundation</a>
+<a href="https://jonathancarter.org/tag/software-freedom-day/" class="tag-link-26 tag-link-position-35" title="5 topics" style="font-size: 8pt;">Software Freedom Day</a>
+<a href="https://jonathancarter.org/tag/south-africa/" class="tag-link-6 tag-link-position-36" title="24 topics" style="font-size: 14.8346pt;">South Africa</a>
+<a href="https://jonathancarter.org/tag/stephane-graber/" class="tag-link-519 tag-link-position-37" title="7 topics" style="font-size: 9.32283pt;">Stephane Graber</a>
+<a href="https://jonathancarter.org/tag/telkom/" class="tag-link-86 tag-link-position-38" title="6 topics" style="font-size: 8.77165pt;">Telkom</a>
+<a href="https://jonathancarter.org/tag/tuxlabs/" class="tag-link-25 tag-link-position-39" title="12 topics" style="font-size: 11.6378pt;">tuXlabs</a>
+<a href="https://jonathancarter.org/tag/ubuntu/" class="tag-link-10 tag-link-position-40" title="112 topics" style="font-size: 22pt;">Ubuntu</a>
+<a href="https://jonathancarter.org/tag/uds/" class="tag-link-429 tag-link-position-41" title="11 topics" style="font-size: 11.3071pt;">UDS</a>
+<a href="https://jonathancarter.org/tag/unity/" class="tag-link-705 tag-link-position-42" title="7 topics" style="font-size: 9.32283pt;">Unity</a>
+<a href="https://jonathancarter.org/tag/windows/" class="tag-link-119 tag-link-position-43" title="11 topics" style="font-size: 11.3071pt;">Windows</a>
+<a href="https://jonathancarter.org/tag/wine/" class="tag-link-224 tag-link-position-44" title="5 topics" style="font-size: 8pt;">Wine</a>
+<a href="https://jonathancarter.org/tag/xubuntu/" class="tag-link-36 tag-link-position-45" title="5 topics" style="font-size: 8pt;">Xubuntu</a></div>
+</li><li id="pages-2" class="widget-container widget_pages"><h3 class="widget-title">Content</h3>		<ul>
+			<li class="page_item page-item-41"><a href="https://jonathancarter.org/how-to-spell-jonathan/">How to Spell Jonathan</a></li>
+<li class="page_item page-item-352"><a href="https://jonathancarter.org/favourite-quotes/">Favourite Quotes</a></li>
+		</ul>
+		</li><li id="most_commented_widget-2" class="widget-container widget_most_commented_widget"><h3 class="widget-title">Most Commented</h3><ul><li><a href="https://jonathancarter.org/2007/01/21/10-games-in-the-ubuntu-universe/" title="10 Games from the Ubuntu Universe">10 Games from the Ubuntu Universe</a> (44)</li><li><a href="https://jonathancarter.org/2010/11/24/how-do-ltsp-fat-clients-work/" title="How do LTSP Fat Clients work?">How do LTSP Fat Clients work?</a> (33)</li><li><a href="https://jonathancarter.org/2009/09/30/the-importance-of-saying-hi/" title="The importance of saying “Hi”">The importance of saying “Hi”</a> (21)</li><li><a href="https://jonathancarter.org/2013/02/05/gnome-panel-is-alive/" title="Gnome Panel is Alive">Gnome Panel is Alive</a> (19)</li><li><a href="https://jonathancarter.org/2010/12/26/how-do-you-find-new-music/" title="How do you find new music?">How do you find new music?</a> (18)</li></ul></li><li id="archives-2" class="widget-container widget_archive"><h3 class="widget-title">Posts By Date</h3>		<ul>
+			<li><a href="https://jonathancarter.org/2017/04/">April 2017</a></li>
+	<li><a href="https://jonathancarter.org/2016/11/">November 2016</a></li>
+	<li><a href="https://jonathancarter.org/2016/07/">July 2016</a></li>
+	<li><a href="https://jonathancarter.org/2016/03/">March 2016</a></li>
+	<li><a href="https://jonathancarter.org/2015/10/">October 2015</a></li>
+	<li><a href="https://jonathancarter.org/2015/05/">May 2015</a></li>
+	<li><a href="https://jonathancarter.org/2015/04/">April 2015</a></li>
+	<li><a href="https://jonathancarter.org/2015/02/">February 2015</a></li>
+	<li><a href="https://jonathancarter.org/2014/06/">June 2014</a></li>
+	<li><a href="https://jonathancarter.org/2013/02/">February 2013</a></li>
+	<li><a href="https://jonathancarter.org/2013/01/">January 2013</a></li>
+	<li><a href="https://jonathancarter.org/2012/10/">October 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/09/">September 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/08/">August 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/07/">July 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/06/">June 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/05/">May 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/04/">April 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/02/">February 2012</a></li>
+	<li><a href="https://jonathancarter.org/2012/01/">January 2012</a></li>
+	<li><a href="https://jonathancarter.org/2011/11/">November 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/10/">October 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/09/">September 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/08/">August 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/07/">July 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/05/">May 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/03/">March 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/02/">February 2011</a></li>
+	<li><a href="https://jonathancarter.org/2011/01/">January 2011</a></li>
+	<li><a href="https://jonathancarter.org/2010/12/">December 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/11/">November 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/10/">October 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/09/">September 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/08/">August 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/07/">July 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/05/">May 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/04/">April 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/02/">February 2010</a></li>
+	<li><a href="https://jonathancarter.org/2010/01/">January 2010</a></li>
+	<li><a href="https://jonathancarter.org/2009/12/">December 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/11/">November 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/10/">October 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/09/">September 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/07/">July 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/05/">May 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/04/">April 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/03/">March 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/02/">February 2009</a></li>
+	<li><a href="https://jonathancarter.org/2009/01/">January 2009</a></li>
+	<li><a href="https://jonathancarter.org/2008/12/">December 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/11/">November 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/10/">October 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/09/">September 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/08/">August 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/07/">July 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/06/">June 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/05/">May 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/04/">April 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/03/">March 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/02/">February 2008</a></li>
+	<li><a href="https://jonathancarter.org/2008/01/">January 2008</a></li>
+	<li><a href="https://jonathancarter.org/2007/12/">December 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/11/">November 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/10/">October 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/09/">September 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/08/">August 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/07/">July 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/06/">June 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/05/">May 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/04/">April 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/03/">March 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/02/">February 2007</a></li>
+	<li><a href="https://jonathancarter.org/2007/01/">January 2007</a></li>
+	<li><a href="https://jonathancarter.org/2006/12/">December 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/11/">November 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/10/">October 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/09/">September 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/08/">August 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/07/">July 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/06/">June 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/05/">May 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/04/">April 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/03/">March 2006</a></li>
+	<li><a href="https://jonathancarter.org/2006/02/">February 2006</a></li>
+	<li><a href="https://jonathancarter.org/2005/09/">September 2005</a></li>
+	<li><a href="https://jonathancarter.org/2005/08/">August 2005</a></li>
+	<li><a href="https://jonathancarter.org/2005/07/">July 2005</a></li>
+	<li><a href="https://jonathancarter.org/2005/06/">June 2005</a></li>
+	<li><a href="https://jonathancarter.org/2005/05/">May 2005</a></li>
+		</ul>
+		</li><li id="text-8" class="widget-container widget_text"><h3 class="widget-title"> </h3>			<div class="textwidget"><div style="text-align: center;"><a href="http://debian.org/"><img src="debgetnow_250.png" alt=""></a></div></div>
+		</li><li id="text-5" class="widget-container widget_text">			<div class="textwidget"><div style="text-align: center;"><a href="http://try.github.com/levels/1/challenges/1"><img src="try-git.png"></a>
+</div></div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="https://jonathancarter.org/" title="Jonathan Carter" rel="home">
+					Jonathan Carter				</a>
+			</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress.</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<!-- ngg_resource_manager_marker --><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+
+
+
+
+
+
+</body>
+</html>

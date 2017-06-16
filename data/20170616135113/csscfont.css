@@ -1,0 +1,21 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "csscfont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("csscfont.eot") format("embedded-opentype"), url("csscfont.woff2") format("woff2"), url("csscfont.woff") format("woff"), url("csscfont.ttf") format("truetype"), url("csscfont.svg") format("svg");
+}
+[class^="c-icon-cresta-"]:before, [class*=" c-icon-cresta-"]:before { font-family: 'csscfont' ! important; font-style: normal ! important; font-weight: normal ! important; display: inline-block ! important; text-decoration: inherit ! important; text-align: center ! important; line-height: 1em ! important; }
+.cs { display: inline-block ! important; font-family: csscfont ! important; font-style: normal ! important; font-variant: normal ! important; font-weight: normal ! important; line-height: 1 ! important; font-size-adjust: none ! important; font-stretch: normal ! important; -moz-font-feature-settings: normal ! important; -moz-font-language-override: normal ! important; font-size: inherit ! important; text-rendering: auto ! important; }
+.c-icon-cresta-pinterest:before { content: ""; }
+.c-icon-cresta-facebook:before { content: ""; }
+.c-icon-cresta-twitter:before { content: ""; }
+.c-icon-cresta-gplus:before { content: ""; }
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(359deg); }
+}
