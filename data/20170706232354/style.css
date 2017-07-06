@@ -1,0 +1,327 @@
+/* Code tidied up by ScrapBook */
+#mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link { transition: none 0s ease 0s ; border-radius: 0px; box-shadow: none; background: transparent none repeat scroll 0% 0%; border: 0px none; bottom: auto; box-sizing: border-box; clip: auto; color: rgb(102, 102, 102); display: block; float: none; font-family: inherit; font-size: 14px; height: auto; left: auto; line-height: 1.7; list-style-type: none; margin: 0px; min-height: 0px; opacity: 1; outline: medium none; overflow: visible; padding: 0px; position: relative; right: auto; text-align: left; text-decoration: none; text-transform: none; top: auto; vertical-align: baseline; visibility: inherit; width: auto; }
+#mega-menu-wrap-primary::before, #mega-menu-wrap-primary #mega-menu-primary::before, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu::before, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item::before, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link::before, #mega-menu-wrap-primary::after, #mega-menu-wrap-primary #mega-menu-primary::after, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu::after, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item::after, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link::after { display: none; }
+#mega-menu-wrap-primary { background: rgb(35, 40, 45) none repeat scroll 0% 0%; border-radius: 0px; }
+#mega-menu-wrap-primary #mega-menu-primary { visibility: visible; text-align: left; padding: 0px 10px 0px 0px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary { background: rgb(34, 34, 34) none repeat scroll 0% 0%; }
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary { padding: 0px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link { cursor: pointer; display: inline; transition: background 200ms linear 0s, color 200ms linear 0s; }
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-primary #mega-menu-primary input, #mega-menu-wrap-primary #mega-menu-primary img { max-width: 100%; }
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item > ul.mega-sub-menu { display: block; visibility: hidden; opacity: 1; }
+#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu { opacity: 0; margin-top: 10px; transition-duration: 200ms; transition-timing-function: ease-in; transition-property: opacity, margin-top, visibility; }
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a[class^="dashicons"]::before { font-family: dashicons; }
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a.mega-menu-link::before { display: inline-block; font-style: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit; font-language-override: inherit; font-kerning: inherit; font-synthesis: inherit; font-variant: inherit; font-family: dashicons; position: static; margin: 0px 6px 0px 0px; vertical-align: top; color: inherit; }
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-hide-text a.mega-menu-link::before { margin: 0px; }
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item { margin: 0px; display: inline-block; height: auto; vertical-align: middle; }
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right { float: right; }
+@media only screen and (min-width: 601px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right { margin: 0px; }
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus { background: rgb(50, 55, 60) none repeat scroll 0% 0%; color: rgb(0, 185, 235); font-weight: normal; text-decoration: none; border-color: rgb(255, 255, 255); }
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link { background: rgb(50, 55, 60) none repeat scroll 0% 0%; color: rgb(0, 185, 235); font-weight: normal; text-decoration: none; border-color: rgb(255, 255, 255); }
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link { border-width: 0px; border-style: solid; border-color: rgb(255, 255, 255); outline: medium none; padding: 0px 10px; line-height: 40px; font-weight: inherit; height: 40px; vertical-align: baseline; text-align: left; width: auto; display: block; color: rgb(255, 255, 255); text-transform: none; text-decoration: none; background: transparent none repeat scroll 0% 0%; border-radius: 0px; font-family: inherit; font-size: 14px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link { text-align: left; color: rgb(255, 255, 255); font-size: 14px; }
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item { display: list-item; margin: 0px; clear: both; border: 0px none; }
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right { float: none; }
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link { border: 0px none; margin: 0px; line-height: 40px; height: 40px; padding: 0px 10px; }
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu { z-index: 999; position: absolute; width: 200px; border-width: 0px 1px 1px; border-style: solid; border-color: rgb(51, 51, 51); padding: 0px; background: rgb(50, 55, 60) none repeat scroll 0% 0%; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu { float: left; position: static; width: 100%; padding: 0px; border: 0px none; }
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item { clear: both; }
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link { display: block; background: rgb(50, 55, 60) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-family: inherit; font-size: 14px; font-weight: normal; padding: 0px 10px; line-height: 30px; text-decoration: none; text-transform: none; vertical-align: baseline; }
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:first-child > a.mega-menu-link { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:first-child > a.mega-menu-link { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:last-child > a.mega-menu-link { border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:last-child > a.mega-menu-link { border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:focus { background: rgb(50, 55, 60) none repeat scroll 0% 0%; font-weight: normal; text-decoration: none; color: rgb(0, 185, 235); }
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-menu-item-has-children > a.mega-menu-link::after, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout li.mega-menu-item-has-children > a.mega-menu-link::after, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item-has-children > a.mega-menu-link::after { content: ""; display: inline-block; font-family: dashicons; margin: 0px 0px 0px 6px; vertical-align: top; transform: rotate(0deg); color: inherit; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-menu-item-has-children a.mega-menu-link::after, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout li.mega-menu-item-has-children a.mega-menu-link::after, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item-has-children a.mega-menu-link::after { float: right; }
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-primary .mega-menu-toggle { display: none; z-index: 1; cursor: pointer; background: rgb(34, 34, 34) none repeat scroll 0% 0%; border-radius: 2px; line-height: 40px; height: 40px; text-align: center; -moz-user-select: none; outline: medium none; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary .mega-menu-toggle { display: block; }
+}
+#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-block { text-align: left; display: inline-block; height: 100%; }
+#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-block-right { float: right; margin-right: 6px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary { display: none; }
+  #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary li.mega-menu-item > ul.mega-sub-menu { display: none; visibility: visible; opacity: 1; }
+}
+#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-block-1::before { content: ""; font-family: "dashicons"; font-size: 24px; margin: 0px 0px 0px 5px; color: rgb(255, 255, 255); }
+#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-block-1::after { content: "MENU"; color: rgb(255, 255, 255); float: left; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1920 > a.mega-menu-link::before { font-size: 28px; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1920 > a.mega-menu-link::before { color: rgb(158, 163, 168); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1920 > a.mega-menu-link:hover::before { color: rgb(0, 185, 235); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-558 > a.mega-menu-link::before { font-size: 20px; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-558 > a.mega-menu-link::before { color: rgb(158, 163, 168); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-558 > a.mega-menu-link:hover::before { color: rgb(0, 185, 235); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1830 > a.mega-menu-link::before { font-size: 20px; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1830 > a.mega-menu-link::before { color: rgb(158, 163, 168); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1830 > a.mega-menu-link:hover::before { color: rgb(22, 161, 231); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1943 > a.mega-menu-link::before { font-size: 20px; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1943 > a.mega-menu-link::before { color: rgb(158, 163, 168); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1943 > a.mega-menu-link:hover::before { color: rgb(22, 161, 231); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1828 > a.mega-menu-link::before { font-size: 20px; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1828 > a.mega-menu-link::before { color: rgb(158, 163, 168); }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-1828 > a.mega-menu-link:hover::before { color: rgb(22, 161, 231); }
+@media only screen and (min-width: 600px) {
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 { border-left: 0px none; box-shadow: none; }
+@media only screen and (min-width: 601px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 { line-height: 40px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search-wrap { position: relative; width: 30px; height: 30px; vertical-align: middle; display: inline-block; z-index: 99999; margin-top: 0px; }
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search-wrap { width: 100%; margin: 5px 0px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search { line-height: 30px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search { padding: 0px 5px; }
+}
+@media only screen and (min-width: 601px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search { position: absolute; right: 0px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search.mega-search-closed input[type="text"] { width: 30px; padding: 0px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search.mega-search-closed input[type="text"] { width: 100%; padding: 5px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search input[type="text"] { color: rgb(51, 51, 51); background-color: transparent; width: 200px; margin: 0px; min-height: 0px; padding: 0px 30px 0px 5px; height: 30px; border: 0px none; line-height: 30px; transition: width 0.6s ease 0s, background-color 0.6s ease 0s, color 1s ease 0s; box-sizing: border-box; border-radius: 2px; vertical-align: top; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search input[type="text"] { width: 100%; background-color: rgb(255, 255, 255); }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search input:focus { outline: medium none; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search input[type="submit"] { display: none; }
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search .search-icon { right: 0px; position: absolute; width: 30px; height: 30px; cursor: pointer; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search .search-icon { right: 5px; }
+}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search .search-icon::before { color: rgb(255, 255, 255); height: 30px; width: 30px; vertical-align: middle; line-height: 30px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-3466 .mega-search .search-icon::before { color: rgb(51, 51, 51); }
+}
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-primary .mega-menu-toggle {  }
+#mega-menu-wrap-primary { clear: both; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 p, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 img, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 div, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a { color: rgb(102, 102, 102); font-family: inherit; font-size: 14px; background: transparent none repeat scroll 0% 0%; border: 0px none; border-radius: 0px; margin: 0px; opacity: 1; padding: 0px; position: relative; right: auto; top: auto; bottom: auto; left: auto; text-align: left; text-transform: none; vertical-align: baseline; box-shadow: none; list-style-type: none; line-height: 1.7; box-sizing: border-box; float: none; overflow: visible; display: block; min-height: 0px; transition: none 0s ease 0s ; text-decoration: none; width: auto; clip: auto; height: auto; outline: medium none; visibility: inherit; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 p::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 img::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 div::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 p::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 img::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 div::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a::after { display: none; }
+#mega-menu-wrap-max_mega_menu_1, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul.mega-sub-menu, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li.mega-menu-item, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a.mega-menu-link { transition: none 0s ease 0s ; border-radius: 0px; box-shadow: none; background: transparent none repeat scroll 0% 0%; border: 0px none; bottom: auto; box-sizing: border-box; clip: auto; color: rgb(102, 102, 102); display: block; float: none; font-family: inherit; font-size: 14px; height: auto; left: auto; line-height: 1.7; list-style-type: none; margin: 0px; min-height: 0px; opacity: 1; outline: medium none; overflow: visible; padding: 0px; position: relative; right: auto; text-align: left; text-decoration: none; text-transform: none; top: auto; vertical-align: baseline; visibility: inherit; width: auto; }
+#mega-menu-wrap-max_mega_menu_1::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul.mega-sub-menu::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li.mega-menu-item::before, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a.mega-menu-link::before, #mega-menu-wrap-max_mega_menu_1::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 ul.mega-sub-menu::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li.mega-menu-item::after, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a.mega-menu-link::after { display: none; }
+#mega-menu-wrap-max_mega_menu_1 { background: rgba(255, 255, 255, 0.1) none repeat scroll 0% 0%; border-radius: 0px; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 { visibility: visible; text-align: left; padding: 0px 10px 0px 0px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 { background: rgba(34, 34, 34, 0) none repeat scroll 0% 0%; }
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 { padding: 0px; }
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a.mega-menu-link { cursor: pointer; display: inline; transition: background 200ms linear 0s, color 200ms linear 0s; }
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li.mega-menu-item a.mega-menu-link::before { display: inline-block; font-style: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit; font-language-override: inherit; font-kerning: inherit; font-synthesis: inherit; font-variant: inherit; font-family: dashicons; position: static; margin: 0px 6px 0px 0px; vertical-align: top; color: inherit; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item { margin: 0px; display: inline-block; height: auto; vertical-align: middle; }
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link:focus { background: transparent linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)) repeat scroll 0% 0%; color: rgb(34, 34, 34); font-weight: normal; text-decoration: none; border-color: rgb(200, 200, 200); }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link { background: transparent linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)) repeat scroll 0% 0%; color: rgb(34, 34, 34); font-weight: normal; text-decoration: none; border-color: rgb(200, 200, 200); }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link { border-width: 0px 0px 1px; border-style: solid; border-color: rgb(222, 222, 222); outline: medium none; padding: 0px 10px 5px; line-height: 42px; font-weight: inherit; height: 42px; vertical-align: baseline; text-align: left; width: auto; display: block; color: rgb(50, 55, 60); text-transform: none; text-decoration: none; background: transparent none repeat scroll 0% 0%; border-radius: 0px; font-family: inherit; font-size: 13px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link { text-align: left; color: rgb(50, 55, 60); font-size: 13px; }
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item { display: list-item; margin: 0px; clear: both; border: 0px none; }
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link { border: 0px none; margin: 0px; line-height: 40px; height: 40px; padding: 0px 10px; }
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle { display: none; z-index: 1; cursor: pointer; background: rgb(34, 34, 34) none repeat scroll 0% 0%; border-radius: 2px; line-height: 40px; height: 40px; text-align: center; -moz-user-select: none; outline: medium none; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle { display: none; }
+}
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle .mega-toggle-block { text-align: left; display: inline-block; height: 100%; }
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle .mega-toggle-block-right { float: right; margin-right: 6px; }
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle + #mega-menu-max_mega_menu_1 { display: block; }
+}
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle .mega-toggle-block-1::before { content: ""; font-family: "dashicons"; font-size: 24px; margin: 0px 0px 0px 5px; color: rgb(255, 255, 255); }
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle .mega-toggle-block-1::after { content: "MENU"; color: rgb(255, 255, 255); float: left; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 a.custom.mega-menu-link::before { transition: background 200ms linear 0s; }
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2443 > a.mega-menu-link::before { content: ""; background-image: url("Complete-Internet-Icon-new.png"); background-size: 32px 32px; background-repeat: no-repeat; width: 32px; height: 32px; line-height: 32px; vertical-align: middle; }
+@media not all {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2443 > a.mega-menu-link::before { background-image: url("Complete-Internet-Icon-new-64x64.png"); }
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2291 > a.mega-menu-link::before { content: ""; background-image: url("DVDRepair-icon-new.png"); background-size: 32px 32px; background-repeat: no-repeat; width: 32px; height: 32px; line-height: 32px; vertical-align: middle; }
+@media not all {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2291 > a.mega-menu-link::before { background-image: url("DVDRepair-icon-new-64x64.png"); }
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2541 > a.mega-menu-link::before { content: ""; background-image: url("Firemin-Icon.png"); background-size: 32px 32px; background-repeat: no-repeat; width: 32px; height: 32px; line-height: 32px; vertical-align: middle; }
+@media not all {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2541 > a.mega-menu-link::before { background-image: url("Firemin-Icon-64x64.png"); }
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2425 > a.mega-menu-link::before { content: ""; background-image: url("Notepad3-new.png"); background-size: 32px 32px; background-repeat: no-repeat; width: 32px; height: 32px; line-height: 32px; vertical-align: middle; }
+@media not all {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2425 > a.mega-menu-link::before { background-image: url("Notepad3-new-64x64.png"); }
+}
+@media only screen and (min-width: 601px) {
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2495 > a.mega-menu-link::before { content: ""; background-image: url("Windows-10-Update-Switch-icon.png"); background-size: 32px 32px; background-repeat: no-repeat; width: 32px; height: 32px; line-height: 32px; vertical-align: middle; }
+@media not all {
+  #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li#mega-menu-item-2495 > a.mega-menu-link::before { background-image: url("Windows-10-Update-Switch-icon-64x64.png"); }
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical > li.mega-menu-item { display: list-item; clear: both; width: 100%; margin: 0px; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical > li.mega-menu-item > a.mega-menu-link { height: auto; }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical > li.mega-menu-megamenu.mega-menu-item, #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1.mega-menu-vertical > li.mega-menu-flyout.mega-menu-item { position: relative; }
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle {  }
+#mega-menu-wrap-max_mega_menu_1 { clear: both; }
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) {
+}
+@media not all {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+}

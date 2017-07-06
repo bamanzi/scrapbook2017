@@ -1,0 +1,13 @@
+/* Code tidied up by ScrapBook */
+.rateit { display: inline-block; position: relative; -moz-user-select: none; }
+.rateit .rateit-hover, .rateit .rateit-selected { position: absolute; left: 0px; }
+.rateit .rateit-range { position: relative; display: inline-block; height: 16px; width: 16px; outline: medium none; vertical-align: -5px; }
+div.medium .rateit-range { width: 24px; height: 24px; }
+div.medium .rateit-hover { width: 24px; height: 24px; display: none; }
+div.medium .rateit-selected { width: 24px; height: 24px; }
+.rateit button.rateit-reset { background: transparent url("delete.gif") repeat scroll 0px 0px; width: 16px; height: 16px; display: inline-block; float: left; outline: medium none; border: medium none; padding: 0px; }
+.rateit button.rateit-reset:hover, .rateit button.rateit-reset:focus { background-position: 0px -16px; }
+#yasr-custom-text-before-visitor-rating { display: block; padding-right: 15px; vertical-align: top; }
+.yasr-container-custom-text-and-visitor-rating {  }
+#yasr-custom-text-before-visitor-rating { display: block; vertical-align: top; padding-right: 15px; }
+.yasr-dashicons-visitor-stats { vertical-align: bottom ! important; text-decoration: none; cursor: pointer; }

@@ -1,0 +1,53 @@
+/* Code tidied up by ScrapBook */
+#wm-ipp { width: 100%; min-height: 65px; min-width: 800px; left: 0px; top: 0px; padding: 0px; margin: 0px; border-radius: 0px; background-color: transparent; font-size: 11px; }
+#wm-ipp * { font-family: Lucida Grande,Helvetica,Arial,sans-serif; font-size: inherit; line-height: 1.2; letter-spacing: 0px; width: auto; height: auto; outline: medium none; float: none; text-align: left; border: medium none; }
+#wm-ipp div, #wm-ipp tr, #wm-ipp td, #wm-ipp a, #wm-ipp form { padding: 0px; margin: 0px; border: medium none; border-radius: 0px; background-color: transparent; background-image: none; z-index: 2147483640; height: auto; }
+#wm-ipp table { border: medium none; border-collapse: collapse; margin: 0px; padding: 0px; width: auto; font-size: inherit; }
+#wm-ipp form input { padding: 1px; height: auto; display: inline; margin: 0px; color: rgb(0, 0, 0); background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(102, 102, 102); }
+#wm-ipp form input[type="submit"] { padding: 0px 8px; margin: 1px 0px 1px 5px; width: auto ! important; }
+#wm-ipp a:hover { text-decoration: underline; }
+#wm-ipp a.wm-btn:hover { text-decoration: none; color: rgb(255, 255, 0) ! important; }
+#wm-ipp a.wm-btn:hover span { color: rgb(255, 255, 0) ! important; }
+#wm-ipp #wm-ipp-inside { width: 98% ! important; min-width: 780px; margin: 0px auto; border-width: medium 5px 5px; border-style: none solid solid; border-color: currentcolor rgb(0, 0, 0) rgb(0, 0, 0); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background-color: rgba(255, 255, 255, 0.9); box-shadow: 1px 1px 4px rgb(51, 51, 51); border-radius: 0px 0px 8px 8px; }
+#wm-ipp #wm-logo { padding: 0px 10px; vertical-align: middle; min-width: 110px; width: 15%; }
+#wm-ipp table tr::before, #wm-ipp table tr::after { margin: 0px; height: auto; }
+#wm-ipp td.c { vertical-align: top; width: 60%; }
+#wm-ipp td.c td.u { padding: 3px 0px; text-align: center; }
+#wm-ipp td.c td.n { padding-left: 5px; }
+#wm-ipp td.c td.n a { text-decoration: none; color: rgb(51, 51, 255); font-weight: bold; }
+#wm-ipp td.c td.n td.b { padding-right: 6px ! important; text-align: right ! important; overflow: visible; white-space: nowrap; color: rgb(153, 153, 170); vertical-align: middle; }
+#wm-ipp td.c td.n td.c { background: rgb(0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 0); font-weight: bold; text-align: center; }
+#wm-ipp td.c td.n td.f { padding-left: 6px ! important; text-align: left ! important; overflow: visible; white-space: nowrap; color: rgb(153, 153, 170); vertical-align: middle; }
+#wm-ipp td.c td.n tr.m td { text-transform: uppercase; white-space: nowrap; padding: 2px 0px; }
+#wm-ipp td.c td.s { padding-right: 5px; text-align: center; vertical-align: bottom; }
+#wm-ipp td.c td.s a.t { color: rgb(51, 51, 255); font-weight: bold; line-height: 1.8; }
+#wm-ipp td.c td.s div.r { color: rgb(102, 102, 102); font-size: 9px; white-space: nowrap; }
+#wm-ipp td.c td.k { vertical-align: bottom; padding-bottom: 2px; }
+#wm-ipp td.c td.n tr.y td, #wm-ipp td.c td.s { padding-bottom: 2px; }
+div#wm-ipp-sparkline { position: relative; white-space: nowrap; background-color: rgb(255, 255, 255); cursor: pointer; line-height: 0.9; }
+#sparklineImgId, #wm-sparkline-canvas { position: relative; z-index: 9012; max-width: none; }
+#wm-ipp-sparkline div.yt { position: absolute; z-index: 9010 ! important; background-color: rgb(255, 255, 0) ! important; }
+#wm-ipp-sparkline div.mt { position: absolute; z-index: 9013 ! important; background-color: rgb(236, 0, 140) ! important; }
+#wm-ipp td.r { position: relative; padding-left: 65px; width: 20%; }
+#wm-ipp td.r a { display: block; padding: 0px 15px 0px 0px; color: rgb(51, 51, 255); border: medium none; position: absolute; right: 5px; background-color: transparent; background-repeat: no-repeat ! important; background-position: 100% 100% ! important; text-decoration: none; }
+#wm-ipp #wm-capinfo .c-logo { display: block; float: left; margin-right: 3px; width: 90px; height: 90px; border-radius: 45px; overflow: hidden; background-position: 50% center; background-size: auto 90px; box-shadow: 0px 0px 2px 2px rgb(208, 208, 208) inset; }
+#wm-ipp #wm-capinfo .wm-title { font-size: 130%; }
+#wm-ipp #wm-capinfo a.wm-selector { display: inline-block; color: rgb(170, 170, 170); text-decoration: none ! important; padding: 2px 8px; }
+#wm-ipp #wm-capinfo a.wm-selector.selected { background-color: rgb(102, 102, 102); }
+#wm-ipp #wm-capinfo a.wm-selector:hover { color: rgb(255, 255, 255); }
+#wm-ipp #wm-expand { right: 1px; bottom: -1px; color: rgb(255, 255, 255); background-color: rgb(53, 53, 53) ! important; padding: 0px 5px 0px 3px ! important; border-radius: 3px 3px 0px 0px ! important; }
+#wm-ipp #wm-expand span { color: rgb(255, 255, 255); }
+#wm-ipp #wmtb { text-align: center; }
+#wm-ipp #wm-graph-anchor { border-right: 1px solid rgb(204, 204, 204); display: block ! important; }
+@keyframes bounce_spinningSquaresG {
+0% { transform: scale(1); background-color: rgb(0, 0, 0); }
+100% { transform: scale(0.3) rotate(90deg); background-color: rgb(255, 255, 255); }
+}
+@keyframes bounce_spinningSquaresG {
+0% { transform: scale(1); background-color: rgb(0, 0, 0); }
+100% { transform: scale(0.3) rotate(90deg); background-color: rgb(255, 255, 255); }
+}
+@keyframes bounce_spinningSquaresG {
+0% { transform: scale(1); background-color: rgb(0, 0, 0); }
+100% { transform: scale(0.3) rotate(90deg); background-color: rgb(255, 255, 255); }
+}

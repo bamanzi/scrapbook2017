@@ -1,0 +1,23 @@
+/* Code tidied up by ScrapBook */
+@import url("css.css");
+.socialmedia img { margin-left: -3px; }
+p a { color: rgb(3, 133, 219) ! important; }
+p a:hover { color: rgb(255, 100, 0) ! important; text-decoration: none ! important; }
+header { border: 1px solid rgb(233, 233, 233); }
+.widget-area .widget-title { background: rgb(230, 230, 230) none repeat scroll 0% 0% ! important; font-size: 16px ! important; padding: 10px; }
+.widget-area .widget-title:hover { background-color: rgb(223, 223, 223) ! important; }
+.site { box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35); }
+.site-header { border-left: 1px solid rgb(200, 200, 200) ! important; border-right: 1px solid rgb(200, 200, 200) ! important; border-top: 1px solid rgb(200, 200, 200) ! important; background-color: rgb(242, 242, 242); background-image: url("ignasi.png"); }
+.themonic-nav { margin-left: -1px ! important; border-right: 2px solid rgb(35, 40, 45) ! important; }
+.mailchimp p.description { font-size: 13px; line-height: 125%; color: rgb(85, 85, 85); font-weight: normal; }
+.mailchimp p.description .subscribers { color: rgb(3, 114, 189); }
+#bbp_search, .mailchimp input[type="email"] { width: 100%; padding: 7px; outline: medium none; margin-top: -20px; box-sizing: border-box; border: 1px solid rgb(194, 194, 194); box-shadow: 1px 1px 4px rgb(235, 235, 235); border-radius: 3px; }
+.mailchimp input[type="email"]:focus:invalid { border: 1px solid red; }
+.mailchimp input[type="email"]:focus:valid { border: 1px solid green; }
+#bbp_search_submit, .mailchimp input[type="submit"], .mailchimp input[type="button"] { cursor: pointer; border: medium none; padding: 8px 15px; background: rgb(3, 133, 219) none repeat scroll 0% 0%; color: rgb(255, 255, 255); box-shadow: 1px 1px 4px rgb(218, 218, 218); border-radius: 3px; }
+#bbp_search_submit:hover, .mailchimp input[type="submit"]:hover, .mailchimp input[type="button"]:hover { background: rgb(3, 114, 189) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.su-table { width: 100%; }
+.su-table tbody td, .su-table tbody th { vertical-align: top; line-height: 110%; }
+a:hover { color: rgb(255, 102, 0); text-decoration: none; }
+.widget-area .widget a { color: rgb(25, 100, 200); }
+.widget-area .widget a:hover { color: rgb(255, 102, 0); text-decoration: none; }

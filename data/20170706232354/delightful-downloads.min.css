@@ -1,0 +1,6 @@
+/* Code tidied up by ScrapBook */
+.ddownload-button { display: inline-block; font-size: 12px; text-decoration: none ! important; padding: 8px 12px; border-radius: 3px; box-shadow: 0px 0px 2px rgb(255, 255, 255) inset; }
+.ddownload-button:active { box-shadow: 0px 0px 3px rgb(153, 153, 153) inset; }
+.button-grey { color: rgb(68, 68, 68) ! important; border: 1px solid rgb(208, 208, 208); background-image: linear-gradient(rgb(237, 237, 237), rgb(225, 225, 225)); text-shadow: 1px 1px 1px rgb(255, 255, 255); background-color: rgb(225, 225, 225); }
+.button-grey:hover { color: rgb(68, 68, 68) ! important; border: 1px solid rgb(176, 176, 176); background-image: linear-gradient(rgb(225, 225, 225), rgb(237, 237, 237)); background-color: rgb(237, 237, 237); }
+.button-grey:active { color: rgb(68, 68, 68) ! important; border: 1px solid rgb(102, 102, 102); }

@@ -1,0 +1,79 @@
+/* Code tidied up by ScrapBook */
+@media not all, not all, only screen and (min--moz-device-pixel-ratio: 1.5), not all {
+}
+@media not all, not all, only screen and (min--moz-device-pixel-ratio: 1.5), not all {
+}
+@media only screen and (max-width: 760px) {
+}
+@media (max-width: 800px) {
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+}
+@font-face {
+  font-family: "Noticons";
+  src: url("Noticons.woff_");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("css.html");
+}
+#content div.sharedaddy, #main div.sharedaddy, div.sharedaddy { clear: both; }
+div.sharedaddy h3.sd-title { margin: 0px 0px 1em; display: inline-block; line-height: 1.2; font-size: 9pt; font-weight: 700; }
+div.sharedaddy h3.sd-title::before { content: ""; display: block; width: 100%; min-width: 30px; border-top: 1px solid rgb(221, 221, 221); margin-bottom: 1em; }
+@media only screen and (max-width: 640px) {
+}
+@media only screen and (max-width: 320px) {
+}
+#content div.sharedaddy, #main div.sharedaddy, div.sharedaddy { clear: both; }
+div.sharedaddy h3.sd-title { margin: 0px 0px 1em; display: inline-block; line-height: 1.2; font-size: 9pt; font-weight: 700; }
+div.sharedaddy h3.sd-title::before { content: ""; display: block; width: 100%; min-width: 30px; border-top: 1px solid rgb(221, 221, 221); margin-bottom: 1em; }
+.sd-content ul { padding: 0px ! important; margin: 0px 0px 0.7em ! important; list-style: outside none none ! important; }
+.sd-content ul li { display: inline-block; }
+#sharing_email .sharing_send, .sd-content ul li .option a.share-ustom, .sd-content ul li a.sd-button, .sd-content ul li.advanced a.share-more, .sd-content ul li.preview-item div.option.option-smart-off a, .sd-social-icon .sd-content ul li a.sd-button, .sd-social-icon-text .sd-content ul li a.sd-button, .sd-social-official .sd-content > ul > li .digg_button > a, .sd-social-official .sd-content > ul > li > a.sd-button, .sd-social-text .sd-content ul li a.sd-button { text-decoration: none ! important; display: inline-block; font-size: 12px; font-family: "Open Sans",sans-serif; font-weight: 400; border-radius: 3px; color: rgb(119, 119, 119) ! important; background: rgb(248, 248, 248) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204); box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08); text-shadow: none; line-height: 23px; padding: 1px 8px 0px 5px; }
+.sd-content ul li .option a.share-ustom span, .sd-content ul li a.sd-button > span, .sd-content ul li.advanced a.share-more span, .sd-content ul li.preview-item div.option.option-smart-off a span, .sd-social-icon-text .sd-content ul li a.sd-button > span, .sd-social-official .sd-content > ul > li .digg_button > a span, .sd-social-official .sd-content > ul > li > a.sd-button span, .sd-social-text .sd-content ul li a.sd-button span { line-height: 23px; }
+.sd-social-icon .sd-content ul li a.sd-button:active, .sd-social-icon .sd-content ul li a.sd-button:hover, .sd-social-icon-text .sd-content ul li a.sd-button:active, .sd-social-icon-text .sd-content ul li a.sd-button:hover, .sd-social-official .sd-content > ul > li .digg_button > a:active, .sd-social-official .sd-content > ul > li .digg_button > a:hover, .sd-social-official .sd-content > ul > li > a.sd-button:active, .sd-social-official .sd-content > ul > li > a.sd-button:hover, .sd-social-text .sd-content ul li a.sd-button:active, .sd-social-text .sd-content ul li a.sd-button:hover { color: rgb(85, 85, 85); background: rgb(250, 250, 250) none repeat scroll 0% 0%; border: 1px solid rgb(153, 153, 153); }
+.sd-social-icon .sd-content ul li a.sd-button:active, .sd-social-icon-text .sd-content ul li a.sd-button:active, .sd-social-official .sd-content > ul > li .digg_button > a:active, .sd-social-official .sd-content > ul > li > a.sd-button:active, .sd-social-text .sd-content ul li a.sd-button:active { box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16) inset; }
+.sd-content ul li a.sd-button::before { display: inline-block; font: 18px/1 social-logos; vertical-align: top; text-align: center; }
+@media not all {
+  .sd-content ul li a.sd-button::before { position: relative; top: 2px; }
+}
+@media not all {
+}
+.sd-content ul li { margin: 0px 5px 5px 0px; padding: 0px; }
+@media not all {
+}
+@-moz-document url-prefix("") {
+  .sd-social-icon .sd-content ul li a.share-more { top: 2px; }
+}
+.sd-content ul li.share-twitter div.option.option-smart-off a::before, .sd-social-icon .sd-content ul li.share-twitter a::before, .sd-social-icon-text .sd-content li.share-twitter a::before, .sd-social-text .sd-content ul li.share-twitter a::before { content: ""; }
+.sd-content ul li.share-reddit div.option.option-smart-off a::before, .sd-social-icon .sd-content ul li.share-reddit a::before, .sd-social-icon-text .sd-content li.share-reddit a::before, .sd-social-text .sd-content ul li.share-reddit a::before { content: ""; }
+.sd-content ul li.share-pinterest div.option.option-smart-off a::before, .sd-social-icon .sd-content ul li.share-pinterest a::before, .sd-social-icon-text .sd-content li.share-pinterest a::before, .sd-social-text .sd-content ul li.share-pinterest a::before { content: ""; }
+.sd-content ul li.share-google-plus-1 div.option.option-smart-off a::before, .sd-social-icon .sd-content ul li.share-google-plus-1 a::before, .sd-social-icon-text .sd-content li.share-google-plus-1 a::before, .sd-social-text .sd-content ul li.share-google-plus-1 a::before { content: ""; }
+.sd-content ul li.share-facebook div.option.option-smart-off a::before, .sd-social-icon .sd-content ul li.share-facebook a::before, .sd-social-icon-text .sd-content li.share-facebook a::before, .sd-social-text .sd-content ul li.share-facebook a::before { content: ""; }
+.sd-social-icon .sd-content ul li[class*="share-"] a, .sd-social-icon .sd-content ul li[class*="share-"] a:hover, .sd-social-icon .sd-content ul li[class*="share-"] div.option a { border-radius: 50%; border: 0px none; box-shadow: none; padding: 7px; position: relative; top: -2px; line-height: 1; width: auto; height: auto; margin-bottom: 0px; }
+.sd-social-icon .sd-content ul li[class*="share-"] a.sd-button > span, .sd-social-icon .sd-content ul li[class*="share-"] div.option a span { line-height: 1; }
+.sd-social-icon .sd-content ul li[class*="share-"] a:hover, .sd-social-icon .sd-content ul li[class*="share-"] div.option a:hover { border: medium none; opacity: 0.6; }
+.sd-social-icon .sd-content ul li[class*="share-"] a.sd-button::before { top: 1px; }
+.sd-social-icon .sd-content ul li[class*="share-"] a.sd-button { background: rgb(233, 233, 233) none repeat scroll 0% 0%; margin-top: 2px; text-indent: 0px; }
+.sd-social-icon .sd-content ul li.share-facebook[class*="share-"] a.sd-button { background: rgb(59, 89, 152) none repeat scroll 0% 0%; color: rgb(255, 255, 255) ! important; }
+.sd-social-icon .sd-content ul li.share-twitter[class*="share-"] a.sd-button { background: rgb(0, 172, 238) none repeat scroll 0% 0%; color: rgb(255, 255, 255) ! important; }
+.sd-social-icon .sd-content ul li.share-pinterest[class*="share-"] a.sd-button { background: rgb(202, 31, 39) none repeat scroll 0% 0%; color: rgb(255, 255, 255) ! important; }
+.sd-social-icon .sd-content ul li.share-google-plus-1[class*="share-"] a.sd-button { background: rgb(221, 75, 57) none repeat scroll 0% 0%; color: rgb(255, 255, 255) ! important; }
+.sd-social-icon .sd-content ul li.share-reddit[class*="share-"] a.sd-button { background: rgb(206, 227, 248) none repeat scroll 0% 0%; color: rgb(85, 85, 85) ! important; }
+.sharing-screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute ! important; height: 1px; width: 1px; overflow: hidden; }
+.sharing-screen-reader-text:active, .sharing-screen-reader-text:focus, .sharing-screen-reader-text:hover { background-color: rgb(241, 241, 241); border-radius: 3px; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.6); clip: auto ! important; color: rgb(33, 117, 155); display: block; font-size: 14px; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+@media not all {
+}
+@media not all, not all, only screen and (min--moz-device-pixel-ratio: 1.5), not all {
+}
+.widget_eu_cookie_law_widget.widget { bottom: 1em; display: none; left: 1em; margin: 0px; padding: 0px; position: fixed; right: 1em; width: auto; z-index: 50001; }
+#eu-cookie-law { background-color: rgb(255, 255, 255); border: 1px solid rgb(222, 222, 222); color: rgb(46, 68, 103); font-size: 12px; line-height: 1.5; overflow: hidden; padding: 6px 6px 6px 15px; position: relative; }
+#eu-cookie-law a, #eu-cookie-law a:active, #eu-cookie-law a:visited { color: inherit; cursor: inherit; text-decoration: underline; }
+#eu-cookie-law a:hover { cursor: pointer; text-decoration: none; }
+#eu-cookie-law input, #eu-cookie-law input:focus, #eu-cookie-law input:hover { background: rgb(243, 243, 243) none repeat scroll 0% 0%; border: 1px solid rgb(222, 222, 222); border-radius: 3px; color: rgb(46, 68, 83); cursor: pointer; display: inline; float: right; font-family: inherit; font-size: 14px; font-weight: inherit; line-height: inherit; margin: 0px 0px 0px 5%; padding: 8px 12px; position: static; text-transform: none; }
+@media (max-width: 600px) {
+  #eu-cookie-law { padding-bottom: 55px; }
+  #eu-cookie-law input.accept { bottom: 8px; position: absolute; right: 8px; }
+}

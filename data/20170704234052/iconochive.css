@@ -1,0 +1,13 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "Iconochive-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("Iconochive-Regular.eot") format("embedded-opentype"), url("Iconochive-Regular.woff") format("woff"), url("Iconochive-Regular.ttf") format("truetype"), url("Iconochive-Regular.svg") format("svg");
+}
+[class^="iconochive-"], [class*=" iconochive-"] { font-family: "Iconochive-Regular" ! important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; }
+.iconochive-question::before { content: "⍰"; }
+.iconochive-down-solid::before { content: "▾"; }
+.iconochive-remove-circle::before { content: "❎"; }
+.iconochive-twitter::before { content: "🐦"; }
+.iconochive-facebook::before { content: "f"; }
