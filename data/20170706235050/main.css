@@ -1,0 +1,27 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg") format("svg");
+}
+.iconfont { font-family: "iconfont" ! important; font-size: 24px; font-style: normal; font-weight: normal; }
+.os-login-qq::before { content: ""; }
+.os-login-qq { color: rgb(42, 168, 222); }
+.os-login-sina::before { content: ""; }
+.os-login-sina { color: rgb(250, 125, 60); }
+.os-share-qq::before { content: ""; }
+.os-share-qq { color: rgb(42, 168, 222); }
+.os-share-qqzone::before { content: ""; }
+.os-share-qqzone { color: rgb(255, 206, 0); }
+.os-share-twitter::before { content: ""; }
+.os-share-twitter { color: rgb(29, 161, 242); }
+.os-share-wechat::before { content: ""; }
+.os-share-wechat { color: rgb(60, 176, 53); }
+.os-share-weibo::before { content: ""; }
+.os-share-weibo { color: rgb(250, 125, 60); }
+@media screen and (max-width: 600px) {
+}
+.os-icon { margin: 3px 5px 3px 1px; display: inline-block; }
+.os-login-box { clear: both; line-height: 36px; }
+.os-share-box { clear: both; line-height: 30px; }
+.os-login-box .os-icon { cursor: pointer; font-size: 32px; }
+.os-share-box .os-icon { cursor: pointer; font-size: 25px; }

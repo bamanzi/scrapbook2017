@@ -1,0 +1,1034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="qc:admins" content="122561731161001666375741775656353567257167">
+<meta name="application-name" content="小众软件">
+<meta content="http://www.appinn.com/apple-touch-icon-180x180.png" property="og:image">   
+<link rel="apple-touch-icon" sizes="57x57" href="http://www.appinn.com/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.appinn.com/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.appinn.com/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.appinn.com/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.appinn.com/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.appinn.com/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.appinn.com/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.appinn.com/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.appinn.com/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://www.appinn.com/manifest.json">
+<link rel="mask-icon" href="http://www.appinn.com/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="alternate" type="application/rss+xml" title="小众软件" href="http://feed.appinn.com/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://feeds.appinn.com/appinns/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://feeds.appinn.com/appinns/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://feeds.appinn.com/appinns/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://feeds.appinn.com/appinns/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://feeds.appinn.com/appinns/&amp;id=5; cycle=1">
+<meta name="keywords" content="兼容, 扩展, ">
+<meta name="description" content="Firefox 与 Chrome 标准版的版本号大战已经到了 46:50，而 Firefox 需要到 48 才会放出&nbsp;WebExtensions 的稳定版本，也就是可以兼容 Chrome 扩展......">
+<meta name="generator" content="WordPress">
+    <meta property="og:title" content="  给 Firefox 安装 Chrome 扩展">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.appinn.com/chrome-store-foxified/">
+    <meta property="og:image" content="http://img3.appinn.com/images/201605/167050.png">
+    <meta property="og:site_name" content="小众软件">
+    <meta property="og:description" content="Firefox 与 Chrome 标准版的版本号大战已经到了 46:50，而 Firefox 需要到 48 才会放出&nbsp;WebExtensions 的稳定版本，也就是可以兼容 Chrome 扩展......">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@appinn">
+<meta name="twitter:title" content="  给 Firefox 安装 Chrome 扩展">
+<meta name="twitter:description" content="Firefox 与 Chrome 标准版的版本号大战已经到了 46:50，而 Firefox 需要到 48 才会放出&nbsp;WebExtensions 的稳定版本，也就是可以兼容 Chrome 扩展......">
+<meta name="twitter:image" content="http://img3.appinn.com/images/201605/167050.png">
+<meta name="twitter:url" content="http://www.appinn.com/chrome-store-foxified/">
+
+
+<link rel="dns-prefetch" href="http://img3.appinn.com/">
+<link rel="dns-prefetch" href="http://cdn.bootcss.com/">
+<link rel="dns-prefetch" href="http://hm.baidu.com/">
+<link rel="dns-prefetch" href="http://www.google-analytics.com/">
+<link rel="dns-prefetch" href="http://pagead2.googlesyndication.com/">
+<link rel="dns-prefetch" href="http://ax-d.pixfuture.net/">
+<link rel="stylesheet" href="style218.css" type="text/css" media="screen">
+
+<title>   给 Firefox 安装 Chrome 扩展  - 小众软件</title>
+
+<!--[if IE 6]><style type="text/css" media="screen">#topnav{bottom:-1px;}#topnav ul li a{display:inline-block;}#loading{position:absolute;overflow:hidden;}.aligncenter{text-align:center;}#postfooterinfo{border-top:1px solid #c96;border-bottom:1px solid #c96;}</style><![endif]-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="小众软件 RSS Feed" href="http://feeds.appinn.com/appinns/">
+<link title="小众软件搜索" type="application/opensearchdescription+xml" rel="search" href="http://www.appinn.com/appinn.xml">
+<link rel="pingback" href="http://www.appinn.com/xmlrpc.php">
+<style type="text/css" media="screen">
+/* Code tidied up by ScrapBook */
+#searchform { padding: 0px 0px 10px ! important; }
+</style>
+<link rel="prefetch" href="http://www.appinn.com/">
+<link rel="prerender" href="http://www.appinn.com/">
+<link rel="dns-prefetch" href="http://cdn.bootcss.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+		<script src="about:blank"></script><script async="" src="about:blank"></script><script type="text/javascript">/* Code removed by ScrapBook */</script><script src="about:blank" type="text/javascript" defer=""></script>
+		<style type="text/css">
+/* Code tidied up by ScrapBook */
+img.wp-smiley, img.emoji { display: inline ! important; border: medium none ! important; box-shadow: none ! important; height: 1em ! important; width: 1em ! important; margin: 0px 0.07em ! important; vertical-align: -0.1em ! important; background: transparent none repeat scroll 0% 0% ! important; padding: 0px ! important; }
+</style>
+<link rel="stylesheet" id="wp-postratings-css" href="postratings-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="open-social-style-css" href="main.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="http://www.appinn.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.appinn.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://img3.appinn.com/static/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="科学杂志 – 用智能手机进行科学实验，声/光/速[Android]" href="http://www.appinn.com/forscience-whistlepunk/">
+<link rel="next" title="Hypocam – 黑白摄影世界[iPhone]" href="http://www.appinn.com/hypocam-for-iphone/">
+<link rel="canonical" href="http://www.appinn.com/chrome-store-foxified/">
+<link rel="alternate" type="application/json+oembed" href="http://www.appinn.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.appinn.com%2Fchrome-store-foxified%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.appinn.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.appinn.com%2Fchrome-store-foxified%2F&amp;format=xml">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<link rel="amphtml" href="http://www.appinn.com/chrome-store-foxified/amp/"><style type="text/css" id="syntaxhighlighteranchor">
+/* Code tidied up by ScrapBook */
+</style>
+<link rel="icon" href="cropped-Appinn-icon-512-32x32.png" sizes="32x32">
+<link rel="icon" href="cropped-Appinn-icon-512-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://img3.appinn.com/static/wp-content/uploads/cropped-Appinn-icon-512-180x180.png">
+<meta name="msapplication-TileImage" content="//img3.appinn.com/static/wp-content/uploads/cropped-Appinn-icon-512-270x270.png">
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+  #diigotb-imagepanel { height: 22px ! important; position: absolute ! important; z-index: 11000022 ! important; margin: 0px ! important; }
+  #diigotb-imagepanel .diigotb-btn { cursor: pointer ! important; width: 20px ! important; height: 20px ! important; margin: 2px ! important; float: left ! important; background: transparent url("chrome://diigotb/skin/save-image-action-icons.png") no-repeat scroll 0% 0% ! important; }
+  #diigotb-imagepanel #diigotb-quick-save { background-position: 0px 0px ! important; }
+  .diigotb-border { position: absolute ! important; z-index: 11000000 ! important; margin: 0px ! important; background-color: rgb(75, 140, 220) ! important; }
+  .diigotb-left { width: 1px ! important; }
+  .diigotb-right { width: 1px ! important; }
+  .diigotb-top { height: 1px ! important; }
+  .diigotb-bottom { height: 1px ! important; }
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+<body>
+<div id="outerbox"><!-- lemoned's fix -->
+<div id="outerheader"><!-- lemoned's fix -->
+<div id="header">
+    <div id="hbox">
+    <h1><a href="http://www.appinn.com/" title="小众软件" rel="home">小众软件</a></h1>
+    <div id="tagline">这里分享免费、小巧、实用、有趣、绿色的软件。</div>
+    <div id="topnav">
+      <ul>
+<li class="current_page_item"><a href="http://www.appinn.com/">首页</a>
+        <ul class="sub-menu">
+            <li id="aff"><a href="http://love.appinn.com/" target="_blank">我最喜欢的软件</a></li>
+            <li><a href="https://meta.appinn.com/" title="小众软件官方论坛" rel="external" target="_blank">论坛</a></li>
+        </ul>
+</li>
+<li><a href="https://faxian.appinn.com/" target="_blank">发现</a>
+</li>
+<li><a href="http://love.appinn.com/" target="_blank">精选</a>
+        <ul class="sub-menu">
+            <li id="aff"><a href="http://love.appinn.com/" target="_blank"><font color="#c30">我最喜欢的软件</font></a></li>
+            <li><a href="http://www.appinn.com/tag/selected/">编辑精选软件</a></li>
+        </ul>
+</li>
+<li><a href="http://www.appinn.com/category/chrome/" title="分类于 Chrome 的全部文章">Chrome</a></li>
+<li><a href="http://www.appinn.com/category/android/">Android</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/category/android/">Android 应用程序</a></li>
+            <li><a href="http://www.appinn.com/tag/windowsphone/">WindowsPhone 应用</a></li>
+            <li><a href="http://www.appinn.com/category/mobile/">其他手机应用</a></li>
+        </ul>
+</li>
+<li><a href="http://www.appinn.com/category/ios/">Mac/iOS</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/category/mac/">macOS</a></li>
+            <li><a href="http://www.appinn.com/category/ios/">iOS</a>
+            <ul class="sub-menu">
+             <li><a href="http://www.appinn.com/tag/iphone/">iPhone</a></li>
+             <li><a href="http://www.appinn.com/tag/ipad/">iPad</a></li>
+            </ul>
+            </li>
+        </ul>
+</li>
+<li><a href="http://www.appinn.com/category/net/">网络软件</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/tag/wechat/"><font color="#c30">¤微信¤</font></a></li>
+            <li><a href="http://www.appinn.com/category/online-tools/">在线应用</a></li>
+            <li><a href="http://www.appinn.com/category/net/">网络工具</a></li>
+            <li><a href="http://www.appinn.com/category/google/">Google</a></li>
+            <li><a href="http://www.appinn.com/category/firefox/">Firefox</a></li>
+        </ul>
+ </li>
+<li><a href="http://www.appinn.com/category/tools/">常用软件</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/category/tools/">实用工具</a></li>
+            <li><a href="http://www.appinn.com/category/desktop/">桌面工具</a></li>
+            <li><a href="http://www.appinn.com/category/office/">办公软件</a></li>
+            <li><a href="http://www.appinn.com/tag/%E5%AD%A6%E4%B9%A0/">学习软件</a></li>
+            <li><a href="http://www.appinn.com/category/pcskill/">电脑技巧</a></li>
+            <li><a href="http://www.appinn.com/category/system/">系统工具</a></li>
+            <li><a href="http://www.appinn.com/category/manage/">管理工具</a></li>
+            <li><a href="http://www.appinn.com/category/safetools/">安全工具</a></li>
+            <li><a href="http://www.appinn.com/category/autohotkey/">AutoHotKey</a></li>
+        </ul>
+</li>
+<li><a href="http://www.appinn.com/category/pic/">图片视频</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/category/pic/">多媒体工具</a></li>
+            <li><a href="http://www.appinn.com/tag/%E8%A7%86%E9%A2%91/">视频软件</a></li>
+            <li><a href="http://www.appinn.com/tag/%E7%85%A7%E7%89%87/">照片软件</a></li>
+            <li><a href="http://www.appinn.com/tag/%E5%9B%BE%E7%89%87/">图片软件</a></li>
+            <li><a href="http://www.appinn.com/category/systemthemes/">美化主题</a></li>
+        </ul>
+</li>
+<li><a href="http://www.appinn.com/category/games/">游戏</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.appinn.com/category/games/">电脑/手机游戏</a></li>
+            <li><a href="http://www.appinn.com/category/interesting/">趣味软件</a></li>
+        </ul>
+</li>
+<li><a href="https://meta.appinn.com/">讨论</a>
+</li>
+
+      </ul>
+      <div id="feed">
+    <a class="feed" href="http://feeds.appinn.com/appinns/" title="订阅我">feed</a>
+        <div id="feedurl">
+        <cite class="ifeed">Hello，欢迎通过<a href="http://reader.youdao.com/#feed%3A%3A4097218364299771896%3A%3A1%3A%3A-1" title="有道阅读">有道阅读</a>，<a href="http://mail.qq.com/cgi-bin/feed?u=feeds.appinn.com/appinns/" title="QQ 邮箱订阅">QQ 邮箱</a>，<a href="http://9.douban.com/reader/subscribe?url=http://feeds.appinn.com/appinns/" target="_blank">豆瓣九点</a>
+，<a href="http://feedly.com/i/subscription/feed/http://feeds.appinn.com/appinns/" title="用 feedly 订阅小众软件">feedly</a>， <a href="http://feeds.appinn.com/appinns/" title="订阅">更多阅读器</a>，订阅本站更新。</cite>
+        </div>
+      </div>
+    </div>
+    </div><!-- #hbox -->
+
+    </div><!-- #header -->
+
+</div><!-- unknown missing div closure / lemoned's fix -->
+</div><!-- end #outerheader / lemoned's fix -->
+<div id="outerwrapper"><!-- lemoned's fix -->
+<div id="wrapper">
+
+		<div id="stopbox" class="topbox">
+        <span class="ilogin"></span>
+        
+<div class="blognav"><a href="http://www.appinn.com/" title="小众软件" rel="bookmark">首页</a> » <a href="http://www.appinn.com/category/firefox/" rel="category tag">Firefox</a> »</div>
+        </div>
+	<div id="container">
+		<div id="content">
+			<div id="post-19542" class="spost post">
+<!-- google_ad_section_start -->
+				<h2 class="entry-title">给 Firefox 安装 Chrome 扩展</h2>
+	                <div class="wpfp-addlink"><span class="wpfp-span"><img src="heart.png" alt="Favorite" title="Favorite" class="wpfp-img"><img src="loading_001.gif" alt="Loading" title="Loading" class="wpfp-hide wpfp-img"><a class="wpfp-link" href="http://www.appinn.com/chrome-store-foxified/?wpfpaction=add&amp;postid=19542" title="收藏" rel="nofollow">收藏</a></span></div><a class="comments-link" href="#comments" title="post a comment">36</a><meta itemprop="interactionCount" content="UserComments:36">
+		<div class="ratings"><div id="post-ratings-19542" class="post-ratings" itemscope="" itemtype="http://schema.org/Article" data-nonce="f25cee9ed3"><img id="rating_19542_1" src="rating_on.gif" alt="1 Star" title="1 Star" style="cursor: pointer; border: 0px none;"><img id="rating_19542_2" src="rating_on.gif" alt="2 Stars" title="2 Stars" style="cursor: pointer; border: 0px none;"><img id="rating_19542_3" src="rating_on.gif" alt="3 Stars" title="3 Stars" style="cursor: pointer; border: 0px none;"><img id="rating_19542_4" src="rating_off.gif" alt="4 Stars" title="4 Stars" style="cursor: pointer; border: 0px none;"><img id="rating_19542_5" src="rating_off.gif" alt="5 Stars" title="5 Stars" style="cursor: pointer; border: 0px none;"> (<strong>1</strong> votes)<meta itemprop="headline" content="给 Firefox 安装 Chrome 扩展"><meta itemprop="description" content="Firefox 与 Chrome 标准版的版本号大战已经到了 46:50，而 Firefox 需要到 48 才会放出&nbsp;WebExtensions 的稳定版本，也就是可以兼容 Chrome 扩展的 Firefox，大概会是今年 8 月份。
+
+
+
+现在只需要安装&nbsp;Chrome Store Foxified 扩展，就能直接在 Firefox 里安装 Chrome 扩展。
+
+不过，还是需要先登..."><meta itemprop="datePublished" content="2016-05-25T22:02:03+00:00"><meta itemprop="dateModified" content="2016-05-25T22:02:03+00:00"><meta itemprop="url" content="http://www.appinn.com/chrome-store-foxified/"><meta itemprop="author" content="青小蛙"><meta itemprop="mainEntityOfPage" content="http://www.appinn.com/chrome-store-foxified/"><div style="display: none;" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="//img3.appinn.com/static/wp-content/uploads/167050.pngo_.png"><meta itemprop="width" content="128"><meta itemprop="height" content="42"></div><div style="display: none;" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><meta itemprop="name" content="小众软件"><div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content=""></div></div><div style="display: none;" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="bestRating" content="5"><meta itemprop="worstRating" content="1"><meta itemprop="ratingValue" content="3"><meta itemprop="ratingCount" content="1"></div></div><div id="post-ratings-19542-loading" class="post-ratings-loading">
+            <img src="loading.gif" class="post-ratings-image" width="16" height="16">Loading...</div></div>
+
+                <div class="entry-meta"><strong><a href="http://www.appinn.com/author/zxt/" title="由青小蛙发布" rel="author">青小蛙</a></strong> on <cite>2016.05.25</cite>.</div>
+				<div class="entry-content" data-tag="1">                   
+<p>Firefox 与 Chrome 标准版的版本号大战已经到了 <a href="https://www.mozilla.org/en-US/firefox/releases/">46</a>:<a href="http://googlechromereleases.blogspot.com/">50</a>，而 Firefox 需要到 48 才会放出&nbsp;WebExtensions 的稳定版本，也就是可以兼容 Chrome 扩展的 Firefox，大概会是今年 8 月份。</p>
+<p><img class="aligncenter" src="167050.png!o" title="" alt="" width="512" height="166"></p>
+<p>现在只需要安装&nbsp;<a href="#">Chrome Store Foxified</a> 扩展，就能直接在 Firefox 里安装 Chrome 扩展。</p> 
+<div style="text-align: center;"> 
+<script async="" src="about:blank"></script>
+<!-- 小众- 正文底部 - 300×250 -->
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-0572409470985588" data-ad-slot="9632449987"></ins>
+<script>/* Code removed by ScrapBook */</script>
+</div> 
+
+<p>不过，还是需要先登录&nbsp;<a href="https://addons.mozilla.org/">https://addons.mozilla.org/</a>&nbsp;然后就可以打开 Chrome 网上应用店里。</p>
+<p><img class="aligncenter" src="2016-05-25-9-56-06.png!o" title="" alt="" width="529" height="135"></p>
+<p>点击 ADD TO FIREFOX 后，<strong>Chrome Store Foxified</strong>&nbsp;就在后台工作了，最终会在 addons 里提交一个临时扩展，并且安装在你的 Firefox 里。</p>
+<p>另外还会在桌面生成 xpi 文件，开发者必备扩展。</p>
+<p>不过青小蛙测试的这个扩展安装成功但并没有弹出正常的设置页面…失败了。</p>
+<p><strong>下载地址:</strong>&nbsp;<a href="https://addons.mozilla.org/zh-CN/firefox/addon/chrome-store-foxified/?src=cb-dl-updated">https://addons.mozilla.org/…/chrome-store-foxified/</a></p>
+<div class="os-share-box"><i title="分享给 QQ 好友" class="iconfont os-icon os-share-qq"></i><i title="分享到微博" class="iconfont os-icon os-share-weibo"></i><i title="分享到 QQ 空间" class="iconfont os-icon os-share-qqzone"></i><i title="分享到微信" class="iconfont os-icon os-share-wechat"></i><i title="分享到 Twitter" class="iconfont os-icon os-share-twitter"></i></div><p></p>				</div>
+
+
+
+<!-- google_ad_section_end -->
+
+<div id="bdunc">
+<script async="" src="about:blank"></script>
+<!-- Comments -->
+
+<script>/* Code removed by ScrapBook */</script>
+</div>
+	<div id="postfooterinfo">
+		<ul>
+			<h4 class="related_post_title">与本文标签 <a href="http://www.appinn.com/tag/%e5%85%bc%e5%ae%b9/" rel="tag">兼容</a>, <a href="http://www.appinn.com/tag/%e6%89%a9%e5%b1%95/" rel="tag">扩展</a> 相关的文章</h4>
+				
+<div class="wp_rp_wrap  wp_rp_vertical" id="wp_rp_first"><div class="wp_rp_content"><ul class="related_post wp_rp"><li data-position="0" data-poid="ex-in_17181" data-post-type="own_sourcefeed"><a href="http://www.appinn.com/firefox-for-ios-cn/" class="wp_rp_thumbnail"><img src="thumbs_screen480x480.jpeg" alt="Firefox 网络浏览器 iOS 中国区上架" width="150" height="150"></a><a href="http://www.appinn.com/firefox-for-ios-cn/" class="wp_rp_title">Firefox 网络浏览器 iOS 中国区上架</a></li><li data-position="1" data-poid="ex-in_11200" data-post-type="own_sourcefeed"><a href="http://www.appinn.com/firefox-integration-pocket/" class="wp_rp_thumbnail"><img src="thumbs_2015-06-03-10-15-45.png" alt="Firefox 原生支持稍候阅读服务 Pocket" width="150" height="150"></a><a href="http://www.appinn.com/firefox-integration-pocket/" class="wp_rp_title">Firefox 原生支持稍候阅读服务 Pocket</a></li><li data-position="2" data-poid="ex-in_13329" data-post-type="own_sourcefeed"><a href="http://www.appinn.com/firefox-for-ios/" class="wp_rp_thumbnail"><img src="thumbs_firefox-iphone-white-high-res-fb6b32568557.png" alt="Firefox for iOS 已出，竟然没在中国区上架" width="150" height="150"></a><a href="http://www.appinn.com/firefox-for-ios/" class="wp_rp_title">Firefox for iOS 已出，竟然没在中国区上架</a></li></ul></div></div>
+		</ul>
+		<div class="iclear"></div>
+		<div id="nav-single">
+			<div class="nav-previous">
+				<h4>上一篇</h4>
+				← <a href="http://www.appinn.com/forscience-whistlepunk/" rel="prev">科学杂志 – 用智能手机进行科学实验，声/光/速[Android]</a>			</div>
+			<div class="nav-next">
+				<h4>下一篇</h4> <a href="http://www.appinn.com/hypocam-for-iphone/" rel="next">Hypocam – 黑白摄影世界[iPhone]</a> →			</div>
+		</div>
+		<div class="iclear"></div>
+	</div>  
+			</div><!-- .post -->
+                
+	
+			<div id="comments">
+
+
+			<h3 id="comments-title">已有 36 条评论, <a href="#respond">我要留言</a></h3>
+
+
+			<ol class="commentlist">
+						<li class="comment even thread-even depth-1 parent" id="comment-391496">
+				<div id="div-comment-391496" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="16ec677bd6ca74ef1297c6f50772d4bc.png" srcset="16ec677bd6ca74ef1297c6f50772d4bc_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">起名烦呀</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391496">
+			2016/05/25 23:23</a>		</div>
+
+		<p>火狐迟早药丸</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391496" aria-label="回复给起名烦呀">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-391843">
+				<div id="div-comment-391843" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="8afa1863c7eedbfe4d79e81de0798e97.png" srcset="8afa1863c7eedbfe4d79e81de0798e97_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">LW</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391843">
+			2016/06/07 11:16</a>		</div>
+
+		<p>天朝之下，FF活得比chrome舒服多了。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391843" aria-label="回复给LW">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-391498">
+				<div id="div-comment-391498" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="aaa5d56d10558a6416c4fa14ae2709bb.jpeg" srcset="aaa5d56d10558a6416c4fa14ae2709bb_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">FD</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391498">
+			2016/05/26 08:55</a>		</div>
+
+		<p>默默地期待chrome那边也出兼容ff插件的插件……</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391498" aria-label="回复给FD">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-391504">
+				<div id="div-comment-391504" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="900f6da790e12641ccf0800d987de4be.png" srcset="900f6da790e12641ccf0800d987de4be_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">落寞</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391504">
+			2016/05/26 10:40</a>		</div>
+
+		<p>这个估计不大现实 ff的插件很多超出沙盒的操作</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391504" aria-label="回复给落寞">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-391499">
+				<div id="div-comment-391499" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="adb9e1ee6cf3f9bdad498c4d463bf9e6.png" srcset="adb9e1ee6cf3f9bdad498c4d463bf9e6_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">怪了个兽</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391499">
+			2016/05/26 09:14</a>		</div>
+
+		<p>已经卸载Firefox很久了，现在启动Firefox还是会很久才打开吗？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391499" aria-label="回复给怪了个兽">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-391501">
+				<div id="div-comment-391501" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="a31e2a9c0ada5140e1c8fd2ce4db8677.png" srcset="a31e2a9c0ada5140e1c8fd2ce4db8677_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">ayanamist</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391501">
+			2016/05/26 09:29</a>		</div>
+
+		<p>开了不关就可以了</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391501" aria-label="回复给ayanamist">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even depth-2" id="comment-391518">
+				<div id="div-comment-391518" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="3959760a11a89a0e2ff33907048ba605.png" srcset="3959760a11a89a0e2ff33907048ba605_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">rp</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391518">
+			2016/05/26 15:44</a>		</div>
+
+		<p>固态硬盘秒开呀。。。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391518" aria-label="回复给rp">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt depth-2" id="comment-391695">
+				<div id="div-comment-391695" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="dc2e434d7fb37e7c724ea611547ee133.jpeg" srcset="dc2e434d7fb37e7c724ea611547ee133_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">bigmax</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391695">
+			2016/05/31 23:11</a>		</div>
+
+		<p>一直用FF，都是秒开</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391695" aria-label="回复给bigmax">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-391502">
+				<div id="div-comment-391502" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="9741390ea6cd80a20d2191994bf1fc98.png" srcset="9741390ea6cd80a20d2191994bf1fc98_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Vic</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391502">
+			2016/05/26 09:55</a>		</div>
+
+		<p>Chrome已经到51了</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391502" aria-label="回复给Vic">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-391506">
+				<div id="div-comment-391506" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="c8142ed40109c7822428de915c7ee381.png" srcset="c8142ed40109c7822428de915c7ee381_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn"><a href="http://sanhuo.info/" rel="external nofollow" class="url">sanhuo</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391506">
+			2016/05/26 10:51</a>		</div>
+
+		<p>显示Connecting to addons.mozilla.org to get singning key.<br>
+错误的，然后再选项里，勾选 Do Not Sign ，就可以啦。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391506" aria-label="回复给sanhuo">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-391510">
+				<div id="div-comment-391510" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="07e7eb6c551d57d8ef1138a09bc8e8d0.png" srcset="07e7eb6c551d57d8ef1138a09bc8e8d0_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">kapoli</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391510">
+			2016/05/26 13:16</a>		</div>
+
+		<p>一直显示not signed yet，这个貌似是签名？不过问题不是签名吧（我一直都是关了签名验证），而是转换过来的扩展能用吗？直接安装桌面的xpi竟然安装成功也有图标，不过文字乱码，按钮也不能用。总之看看就好不能报太大希望</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391510" aria-label="回复给kapoli">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-391511">
+				<div id="div-comment-391511" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="67f0d079d404e33c9694df93bd9d3d99.jpeg" srcset="67f0d079d404e33c9694df93bd9d3d99_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">evolighting</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391511">
+			2016/05/26 13:21</a>		</div>
+
+		<p>很多人并不了解mozilla在做什么；<br>
+以及这个扩展事实上是干什么用的…….</p>
+<p>firefox比chrome差在哪里呢？那就是没有一个google那样的爹；事实上现在无论性能还是可玩性firefox都不输chrome，而把性能和可扩展性加起来，chrome就被爆的连渣都不剩了……</p>
+<p>还拿启动时间黑只能说，内存占用你们不是说就是要拿来用么？不换ssd怪我咯？</p>
+<p>不过这一切都是理论上的，实际使用上，简直就是灾难。毕竟adobe收了google的钱之后在firefox的在flash里下毒了，除了这个我实在找不出为啥flash在firefox这么坑的原因….</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391511" aria-label="回复给evolighting">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2" id="comment-391516">
+				<div id="div-comment-391516" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="226e0b2a5800e7c261cff37cdda92c77.jpeg" srcset="226e0b2a5800e7c261cff37cdda92c77_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">havc</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391516">
+			2016/05/26 14:47</a>		</div>
+
+		<p>麻蛋，flash早该死啦死啦的了，禁掉它之后速度飞快，而且还不卡；<br>
+可是国内N多网站就是不换，气死个人啊</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391516" aria-label="回复给havc">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt depth-2 parent" id="comment-391522">
+				<div id="div-comment-391522" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="6197d74e45b566d50df8112e1e0225da.png" srcset="6197d74e45b566d50df8112e1e0225da_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Yaksha</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391522">
+			2016/05/26 18:36</a>		</div>
+
+		<p>对Firefox很有感情的，但是Firefox的Flash插件三天两头搞个事情出来，导致动辄不响应、死机什么的…真的吃不消，只好用Chrome了。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391522" aria-label="回复给Yaksha">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-3 parent" id="comment-391526">
+				<div id="div-comment-391526" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="2adb04b11e70f6ccae8c6c185bef7fa1.png" srcset="2adb04b11e70f6ccae8c6c185bef7fa1_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Aquamarine</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391526">
+			2016/05/26 23:27</a>		</div>
+
+		<p>火狐的Flash插件真是太成问题了，每开必挂，我都不装了，用个H5脚本，不行就换Chrome吧。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391526" aria-label="回复给Aquamarine">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-4" id="comment-391723">
+				<div id="div-comment-391723" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="037d03187ff00e5ad57f8a5c681138e0.png" srcset="037d03187ff00e5ad57f8a5c681138e0_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Delta</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391723">
+			2016/06/01 22:03</a>		</div>
+
+		<p>这个H5脚本是什么可以详细说一下吗？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391723" aria-label="回复给Delta">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even depth-4" id="comment-399047">
+				<div id="div-comment-399047" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="d8ba4c3229c11766ec572489261e2fc1.png" srcset="d8ba4c3229c11766ec572489261e2fc1_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">姓名*</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-399047">
+			2017/01/17 22:29</a>		</div>
+
+		<p>那么能不能给FIREFOX用CHROME的FLASH的DLL呢？LINUX下面是可以的啊。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-399047" aria-label="回复给姓名*">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-391525">
+				<div id="div-comment-391525" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="2adb04b11e70f6ccae8c6c185bef7fa1.png" srcset="2adb04b11e70f6ccae8c6c185bef7fa1_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Aquamarine</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391525">
+			2016/05/26 23:25</a>		</div>
+
+		<p>火狐已经穷困到要兼容Chrome的扩展了？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391525" aria-label="回复给Aquamarine">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2" id="comment-391765">
+				<div id="div-comment-391765" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="6f501ea1041b2d69ed2b524e7ece1335.png" srcset="6f501ea1041b2d69ed2b524e7ece1335_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">景深</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391765">
+			2016/06/03 16:02</a>		</div>
+
+		<p>有病吧您？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391765" aria-label="回复给景深">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-391528">
+				<div id="div-comment-391528" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="82a27d19ce5347edfe31e390cbed714d.png" srcset="82a27d19ce5347edfe31e390cbed714d_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">meow</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391528">
+			2016/05/27 08:17</a>		</div>
+
+		<p>chrome有的扩展，firefox也有，chrome没有的扩展，firefox还是有有，要论功能强大性上，chrome的扩展还不够给firefox提鞋。<br>
+随便举一个例子：Zotero</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391528" aria-label="回复给meow">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2" id="comment-391532">
+				<div id="div-comment-391532" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="6bb5c0f7d05dc63fe1d83a1feb9f4db0.png" srcset="6bb5c0f7d05dc63fe1d83a1feb9f4db0_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Izual_Yang</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391532">
+			2016/05/27 10:32</a>		</div>
+
+		<p>版本号兼容性是硬伤。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391532" aria-label="回复给Izual_Yang">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt depth-2 parent" id="comment-391544">
+				<div id="div-comment-391544" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="c70b937e5b2932a3aa68f90bdb8b1f3b.png" srcset="c70b937e5b2932a3aa68f90bdb8b1f3b_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">vxxholic</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391544">
+			2016/05/27 20:54</a>		</div>
+
+		<p>然而SwitchyOmega在火狐上并不能找到可以与之媲美的替代品<img draggable="false" class="emoji" alt="😂" src="urn:scrapbook-download-error:https://s.w.org/images/core/emoji/2.3/svg/1f602.svg"></p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391544" aria-label="回复给vxxholic">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-3 parent" id="comment-391545">
+				<div id="div-comment-391545" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="60769ec49e9087f68611d7d3cf36d39f.jpeg" srcset="60769ec49e9087f68611d7d3cf36d39f_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Leonard</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391545">
+			2016/05/27 21:43</a>		</div>
+
+		<p>FoxyProxy 我觉得比SwitchyOmega好用</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391545" aria-label="回复给Leonard">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-4" id="comment-391561">
+				<div id="div-comment-391561" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="648946a45cc116b6e54e1d2ed8de1ad7.jpeg" srcset="648946a45cc116b6e54e1d2ed8de1ad7_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">swthchen</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391561">
+			2016/05/28 19:12</a>		</div>
+
+		<p>FoxyProxy好用</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391561" aria-label="回复给swthchen">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even depth-3" id="comment-391594">
+				<div id="div-comment-391594" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="6cc63bf7298ebc89220ee8e87c6d7c92.png" srcset="6cc63bf7298ebc89220ee8e87c6d7c92_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">wingmancn</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391594">
+			2016/05/29 18:06</a>		</div>
+
+		<p>我挺你，SwitchyOmega好用得多</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391594" aria-label="回复给wingmancn">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt depth-3 parent" id="comment-391639">
+				<div id="div-comment-391639" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="94ba82edc472f23dca090fbe5b1d97be.png" srcset="94ba82edc472f23dca090fbe5b1d97be_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">l</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391639">
+			2016/05/30 16:13</a>		</div>
+
+		<p>Pan可替代,兼有广告过滤和代理功能</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391639" aria-label="回复给l">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-4 parent" id="comment-391722">
+				<div id="div-comment-391722" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="c70b937e5b2932a3aa68f90bdb8b1f3b.png" srcset="c70b937e5b2932a3aa68f90bdb8b1f3b_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">vxxholic</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391722">
+			2016/06/01 20:56</a>		</div>
+
+		<p>gfwlist 项目已经迁移到了github，然而pan上面的订阅url还是googlecode，而且不能自己改…………</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391722" aria-label="回复给vxxholic">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-5" id="comment-398246">
+				<div id="div-comment-398246" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="ae6b3fd4e00d006fa1c3905b87e74712.png" srcset="ae6b3fd4e00d006fa1c3905b87e74712_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">windx</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-398246">
+			2016/12/15 19:05</a>		</div>
+
+		<p>明显你不会<br>
+filter preferences-》Add filter subscription——》Add a different filter subscription</p>
+
+		
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even depth-2 parent" id="comment-391615">
+				<div id="div-comment-391615" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="78210ad2e7816ab78d36ff96d9b18c0f.jpeg" srcset="78210ad2e7816ab78d36ff96d9b18c0f_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn"><a href="http://qcts33.me/" rel="external nofollow" class="url">qcts33</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391615">
+			2016/05/29 23:26</a>		</div>
+
+		<p>我记得Firefox之所以要开始支持WebExtensions的扩展是因为Mozilla打算放弃原有扩展的支持……<br>
+作为Firefox的死忠，对Mozilla的决定表示完全不理解啊……</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391615" aria-label="回复给qcts33">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-3" id="comment-391623">
+				<div id="div-comment-391623" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="38fe98544c7ad034644123ef293c4e8d.png" srcset="38fe98544c7ad034644123ef293c4e8d_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">Kuma</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391623">
+			2016/05/30 09:14</a>		</div>
+
+		<p>那时只能放弃升级了。<br>
+实在坚持不住就放弃火狐</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391623" aria-label="回复给Kuma">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-391530">
+				<div id="div-comment-391530" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="99b80fa56a3cc7c25e8ac75162160b64.jpeg" srcset="99b80fa56a3cc7c25e8ac75162160b64_001.jpeg 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">nhnhwsnh</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391530">
+			2016/05/27 10:01</a>		</div>
+
+		<p>有那个必要吗？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391530" aria-label="回复给nhnhwsnh">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-391557">
+				<div id="div-comment-391557" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="9511f20c4905ee6c9bfb8199176ad2ac.png" srcset="9511f20c4905ee6c9bfb8199176ad2ac_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn"><a href="http://weibo.com/u/2618173363" rel="external nofollow" class="url">飞羽乐佳</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391557">
+			2016/05/28 16:17</a>		</div>
+
+		<p>反过来还差不多，就chrome那些扩展？？</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391557" aria-label="回复给飞羽乐佳">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-391593">
+				<div id="div-comment-391593" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="6cc63bf7298ebc89220ee8e87c6d7c92.png" srcset="6cc63bf7298ebc89220ee8e87c6d7c92_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">wingmancn</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-391593">
+			2016/05/29 18:04</a>		</div>
+
+		<p>那就再等等吧，8月也不算远</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-391593" aria-label="回复给wingmancn">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-392018">
+				<div id="div-comment-392018" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="75fe72178fcf72f43a10014dac53b85e.png" srcset="75fe72178fcf72f43a10014dac53b85e_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">hzhbest</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-392018">
+			2016/06/14 17:07</a>		</div>
+
+		<p>其实Firefox下的扩展功能很足够了，再不行可以装GM加脚本，再不行装UC加UC脚本，再再不行自己写……<br>
+是的，我自己写了一些脚本</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-392018" aria-label="回复给hzhbest">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-395334">
+				<div id="div-comment-395334" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="03c713fba4069cf88051af5d29038488.png" srcset="03c713fba4069cf88051af5d29038488_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">sanmaodo</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-395334">
+			2016/09/25 21:20</a>		</div>
+
+		<p>真正被我放弃的浏览器只有IE，然后开始使用Firefox，然后就没有然后了，对其它浏览器一概不关注，功能、性能、界面、扩展，强大、强悍、美观、取之不尽用之不竭。。。</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-395334" aria-label="回复给sanmaodo">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-398643">
+				<div id="div-comment-398643" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="9c7b87a3a227eea9bef40b60e7799e3e.png" srcset="9c7b87a3a227eea9bef40b60e7799e3e_001.png 2x" class="avatar avatar-42 photo" width="42" height="42">			<cite class="fn">firefoxer</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-398643">
+			2017/01/01 23:46</a>		</div>
+
+		<p>浏览器，我只认 Firefox</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-398643" aria-label="回复给firefoxer">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+			</ol>
+
+
+	
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> 有不同想法？说说看 <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">取消回复</a></small></h3>			<form action="http://www.appinn.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<div class="os-login-box"><i title="使用 QQ 登录" class="iconfont os-icon os-login-qq"></i><i title="使用 微博 登录" class="iconfont os-icon os-login-sina"></i></div><p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><input required="required" id="author" name="author" value="" size="30" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="text"><label for="author">姓名<span class="required">*</span></label></p>
+<p class="comment-form-email"><input required="required" id="email" name="email" value="" size="30" type="text"><label for="email">邮箱<span class="required">*</span></label></p>
+<p class="comment-form-url"><input id="url" name="url" value="" size="30" type="text"><label for="url">网址</label></p>
+<p class="form-submit"><input name="submit" id="submit" class="submit" value="发表评论" type="submit"> <input name="comment_post_ID" value="19542" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="4cc9fcd790" type="hidden"></p><input name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" style="margin-bottom: 20px;" type="checkbox"><label for="comment_mail_notify">有人回复时邮件通知我</label><p style="display: none;"></p>			<input id="ak_js" name="ak_js" value="1499356155094" type="hidden"></form>
+			</div><!-- #respond -->
+	</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #container -->
+<!--– google_ad_section_start(weight=ignore) –-->
+<div id="sidebar" class="sidebar">
+<div id="searchform">
+  <div class="gsc-baidu">
+    <form method="get" action="http://s.appinn.com/cse/search" id="cse-search-box" target="_blank">
+      <input name="q" id="s" value="" type="text">
+      <button type="submit">Search</button>
+      <input name="s" value="5999676002387380177" type="hidden">
+      <input name="source" value="www.appinn.com" type="hidden">
+    </form>
+  </div>
+</div>
+
+
+<ul>
+  <li>
+    <h4>本月热门</h4>
+    <ul>
+<li><a href="http://www.appinn.com/notion/" title="Notion - 火爆的「你到底是什么」工具，病毒式营销又一案例">Notion - 火爆的「你到底是什么」工具，病毒式营销又一案例</a></li><li><a href="http://www.appinn.com/xinhuazidian/" title="正版「新华字典」App 发布，每天能免费查 2 个字，2 个 [iPhone/Android]">正版「新华字典」App 发布，每天能免费查 2 个字，2 个 [iPhone/Android]</a></li><li><a href="http://www.appinn.com/amplifi-mesh-network/" title="AmpliFi - 最漂亮的家用「无线路由器」">AmpliFi - 最漂亮的家用「无线路由器」</a></li><li><a href="http://www.appinn.com/ms-path-guide/" title="有了可以室内导航的「微软寻路」，感觉再也不会迷路了">有了可以室内导航的「微软寻路」，感觉再也不会迷路了</a></li><li><a href="http://www.appinn.com/rowe-news-new-tab/" title="为什么没有人开发一款基于 Chrome 新标签页的阅读器呢？">为什么没有人开发一款基于 Chrome 新标签页的阅读器呢？</a></li>      </ul>   
+  </li>
+      <li>
+      <h4>精选推荐</h4>
+        <ul>
+                            <li><a href="http://www.appinn.com/hammultiplayer/" rel="bookmark" title="HamMultiPlayer – 「一屏」看遍硬盘所有片，就问你行不行？">HamMultiPlayer – 「一屏」看遍硬盘所有片，就问你行不行？</a></li>
+                                    <li><a href="http://www.appinn.com/notion/" rel="bookmark" title="Notion – 火爆的「你到底是什么」工具，病毒式营销又一案例">Notion – 火爆的「你到底是什么」工具，病毒式营销又一案例</a></li>
+                                    <li><a href="http://www.appinn.com/onetake-wdj-award/" rel="bookmark" title="3 秒微动摄影，拍出「活」的风景 | 豌豆荚设计奖 • 一闪">3 秒微动摄影，拍出「活」的风景 | 豌豆荚设计奖 • 一闪</a></li>
+                                    <li><a href="http://www.appinn.com/liner/" rel="bookmark" title="LINER – 为网页和 PDF 进行标注、高亮 [Chrome / Firefox / iOS]">LINER – 为网页和 PDF 进行标注、高亮 [Chrome / Firefox / iOS]</a></li>
+                                    <li><a href="http://www.appinn.com/shouqu-bookmarklife-wdj-award/" rel="bookmark" title="一键把所有 app 的好内容都收藏到这里 | 豌豆荚设计奖·收趣">一键把所有 app 的好内容都收藏到这里 | 豌豆荚设计奖·收趣</a></li>
+                                    <li><a href="http://www.appinn.com/xiaoyusn/" rel="bookmark" title="618 屯了太多东西的问题解决了，用「小鱼收纳」管理家庭物品库存">618 屯了太多东西的问题解决了，用「小鱼收纳」管理家庭物品库存</a></li>
+                          </ul>   
+    </li>
+  </ul>
+<div id="pixfuture" class="ads-m">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script src="about:blank"></script></div>
+<ul>
+  <li id="cats">
+    <h4 class="nw">按分类查看文章:</h4>
+      <ul>
+        <li class="cat-item cat-item-1686"><a href="http://www.appinn.com/category/android/" title="Android 相关咨询">Android</a>
+        </li>
+          <li class="cat-item cat-item-2143"><a href="http://www.appinn.com/category/ios/" title="移动应用已经成为生活的部分，我们觉得应该更加效率些">iOS [iPhone/iPad]</a></li>
+          <li class="cat-item cat-item-1317"><a href="http://www.appinn.com/category/autohotkey/" title="AHK 快餐店 改造 Windows 必备的软件">AutoHotKey</a></li>
+          <li class="cat-item cat-item-1585"><a href="http://www.appinn.com/category/chrome/" title="Chrome 十分迷人，不管是 Chrome 浏览器，还是 Chrome OS，都值得我们期待">Chrome</a>
+        </li>
+          <li class="cat-item cat-item-21"><a href="http://www.appinn.com/category/firefox/" title="经典的网页浏览器，个性化和自定性一流">Firefox</a>
+        </li>
+          <li class="cat-item cat-item-16"><a href="http://www.appinn.com/category/google/" title="Google 的良好口碑值得为其建立一个分类，这里有 Google 的相关软件信息">Google</a>
+        </li>
+          <li class="cat-item cat-item-600"><a href="http://www.appinn.com/category/mac/" title="查看 Mac 下的所有文章">Mac</a>
+        </li>
+          <li class="cat-item cat-item-8"><a href="http://www.appinn.com/category/office/" title="电脑在多数情况下还是处于办公状态，也只有这样才能发挥电脑的最大价值">办公软件</a>
+        </li>
+          <li class="cat-item cat-item-25"><a href="http://www.appinn.com/category/online-tools/" title="在线工具，势必有一天会取代本地软件，让我们共同期待吧。。。">在线应用</a>
+        </li>
+          <li class="cat-item cat-item-5"><a href="http://www.appinn.com/category/pic/" title="照片，视频，音频，你最喜欢的东西">媒体工具</a>
+        </li>
+          <li class="cat-item cat-item-12"><a href="http://www.appinn.com/category/safetools/" title="安全，还记得 2008 年的最佳摄影师拍摄的艳照们吗？">安全工具</a>
+        </li>
+          <li class="cat-item cat-item-10"><a href="http://www.appinn.com/category/tools/" title="好用，小巧，实用，人见人爱的软件">实用工具</a>
+        </li>
+          <li class="cat-item cat-item-1278"><a href="http://www.appinn.com/category/mobile/" title="手机无疑是个人终端，强大的手机其实是可以代替个人 PC 的">手机应用</a>
+        </li>
+          <li class="cat-item cat-item-26"><a href="http://www.appinn.com/category/desktop/" title="Windows 强大的桌面系统给了我们丰富多彩的 PC 体验">桌面工具</a>
+        </li>
+          <li class="cat-item cat-item-17"><a href="http://www.appinn.com/category/games/" title="精彩独立游戏，免费，趣味，小众">游戏</a>
+        </li>
+          <li class="cat-item cat-item-22"><a href="http://www.appinn.com/category/pcskill/" title="小技巧，小窍门，你很可能没听说过，但学会它，有益无害">电脑技巧</a>
+        </li>
+          <li class="cat-item cat-item-9"><a href="http://www.appinn.com/category/manage/" title="提高效率，告别过去">管理工具</a>
+        </li>
+          <li class="cat-item cat-item-7"><a href="http://www.appinn.com/category/system/" title="Windows 强大，但也漏洞百出">系统工具</a>
+        </li>
+          <li class="cat-item cat-item-6"><a href="http://www.appinn.com/category/net/" title="话说给你一台没有网络的电脑你需要吗？">网络工具</a>
+        </li>
+          <li class="cat-item cat-item-27"><a href="http://www.appinn.com/category/systemthemes/" title="查看 美化主题 下的所有文章">美化主题</a>
+        </li>
+          <li class="cat-item cat-item-15"><a href="http://www.appinn.com/category/interesting/" title="查看 趣味软件 下的所有文章">趣味软件</a>
+        </li>
+          <li class="cat-item cat-item-15"><a href="http://www.appinn.com/category/softlist/" title="查看 我最喜爱 下的所有文章">我最喜爱</a>
+        </li>
+          <li class="cat-item cat-item-15"><a href="http://www.appinn.com/category/faxian/" title="查看 每日发行 下的所有文章">每日发现</a>
+        </li>
+      </ul>
+      <div class="iclear"></div>
+  </li>
+</ul>
+  <ul>
+    <li>
+      <h4>最新文章</h4>
+      <ul>
+    <li><a href="http://www.appinn.com/hammultiplayer/">HamMultiPlayer - 「一屏」看遍硬盘所有片，就问你行不行？</a> </li> <li><a href="http://www.appinn.com/virtocean/">VirtOcean - 虚拟大海与海底的声音 [在线白噪音]</a> </li> <li><a href="http://www.appinn.com/type-hero/">TYPE HERO - 在线测试线上字体（Google fonts）样式</a> </li> <li><a href="http://www.appinn.com/catgate-for-chrome/">CatGate - 基于浏览器的数据抓取工具 [Chrome]</a> </li> <li><a href="http://www.appinn.com/baimao-ocr/">白描 - 图片文字识别 OCR，支持自动分段 [iPhone]</a> </li>       </ul>
+    </li>
+  <li id="socmt">
+    <h4 class="nw">大家都在讨论些什么</h4>
+      <ul>
+    <li><a href="http://www.appinn.com/unhoard-new/#comment-407208" title="View the entire comment by Benson">Benson</a>: IFTTT不就可以了么</li><li><a href="http://www.appinn.com/hammultiplayer/#comment-407207" title="View the entire comment by null">null</a>: 恐怕一屏显示不了我电脑里所有的片</li><li><a href="http://www.appinn.com/hammultiplayer/#comment-407205" title="View the entire comment by fl53">fl53</a>: 有点牛。。。</li><li><a href="http://www.appinn.com/hammultiplayer/#comment-407204" title="View the entire comment by fl53">fl53</a>: 有点牛逼。。。</li><li><a href="http://www.appinn.com/hammultiplayer/#comment-407203" title="View the entire comment by ROM">ROM</a>: 我有一个大胆的想法……</li><li><a href="http://www.appinn.com/hammultiplayer/#comment-407198" title="View the entire comment by Sharuru">Sharuru</a>: 仿佛电影里面看监控用的软件...</li><li><a href="http://www.appinn.com/evernote-ahk-script-windows/#comment-407196" title="View the entire comment by Neptune">Neptune</a>: 1 可以在标签中加少用的特殊字符，用全文搜索，曲线救国。实现你所描述的效果。
+2 不行</li>      </ul>
+  </li>
+ 
+          <!-- 这个widget只在非首页显示 -->
+        
+        
+          <!-- 这个widget在有sidebar的所在页面显示 -->
+      </ul>
+</div>
+<!-- #sidebar .sidebar -->
+<!-- Powered by WPtouch Pro: 4.0.17 --><script type="text/javascript">/* Code removed by ScrapBook */</script><script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<div class="iclear"></div>
+</div><!--#wrapper-->
+</div><!-- end #outerwrapper / lemoned's fix -->
+<!-- end #outerbox / lemoned's fix -->
+<div id="footer">
+  <div id="ftop"></div>
+  <div class="fbox">
+  	<div id="blinks">
+    	        <h3>最热门<cite>标签</cite></h3>
+          <a href="http://www.appinn.com/tag/ahk/" class="tag-cloud-link tag-link-1318 tag-link-position-1" style="font-size: 10.9903pt;" aria-label="AHK (72 items)">AHK</a>
+<a href="http://www.appinn.com/tag/android-1/" class="tag-cloud-link tag-link-1938 tag-link-position-2" style="font-size: 13.301pt;" aria-label="Android (107 items)">Android</a>
+<a href="http://www.appinn.com/tag/chrome/" class="tag-cloud-link tag-link-3893 tag-link-position-3" style="font-size: 12.6214pt;" aria-label="Chrome (95 items)">Chrome</a>
+<a href="http://www.appinn.com/tag/firefox/" class="tag-cloud-link tag-link-3889 tag-link-position-4" style="font-size: 13.4369pt;" aria-label="Firefox (108 items)">Firefox</a>
+<a href="http://www.appinn.com/tag/google/" class="tag-cloud-link tag-link-3887 tag-link-position-5" style="font-size: 11.6699pt;" aria-label="Google (80 items)">Google</a>
+<a href="http://www.appinn.com/tag/linux/" class="tag-cloud-link tag-link-356 tag-link-position-6" style="font-size: 8.27184pt;" aria-label="linux (45 items)">linux</a>
+<a href="http://www.appinn.com/tag/mac/" class="tag-cloud-link tag-link-3890 tag-link-position-7" style="font-size: 19.4175pt;" aria-label="Mac OS X (298 items)">Mac OS X</a>
+<a href="http://www.appinn.com/tag/mp3/" class="tag-cloud-link tag-link-224 tag-link-position-8" style="font-size: 8.40777pt;" aria-label="MP3 (46 items)">MP3</a>
+<a href="http://www.appinn.com/tag/pdf/" class="tag-cloud-link tag-link-126 tag-link-position-9" style="font-size: 10.5825pt;" aria-label="PDF (66 items)">PDF</a>
+<a href="http://www.appinn.com/tag/win7/" class="tag-cloud-link tag-link-1784 tag-link-position-10" style="font-size: 8.40777pt;" aria-label="win7 (46 items)">win7</a>
+<a href="http://www.appinn.com/tag/%e4%b8%8b%e8%bd%bd/" class="tag-cloud-link tag-link-64 tag-link-position-11" style="font-size: 12.4854pt;" aria-label="下载 (92 items)">下载</a>
+<a href="http://www.appinn.com/tag/%e5%8a%a8%e4%bd%9c/" class="tag-cloud-link tag-link-1527 tag-link-position-12" style="font-size: 8.54369pt;" aria-label="动作 (47 items)">动作</a>
+<a href="http://www.appinn.com/tag/%e5%90%8c%e6%ad%a5/" class="tag-cloud-link tag-link-576 tag-link-position-13" style="font-size: 10.1748pt;" aria-label="同步 (62 items)">同步</a>
+<a href="http://www.appinn.com/tag/%e5%9b%be%e6%a0%87/" class="tag-cloud-link tag-link-72 tag-link-position-14" style="font-size: 8.54369pt;" aria-label="图标 (47 items)">图标</a>
+<a href="http://www.appinn.com/tag/%e5%9b%be%e7%89%87/" class="tag-cloud-link tag-link-43 tag-link-position-15" style="font-size: 15.4757pt;" aria-label="图片 (155 items)">图片</a>
+<a href="http://www.appinn.com/tag/%e5%a3%81%e7%ba%b8/" class="tag-cloud-link tag-link-483 tag-link-position-16" style="font-size: 10.9903pt;" aria-label="壁纸 (72 items)">壁纸</a>
+<a href="http://www.appinn.com/tag/%e5%a4%87%e4%bb%bd/" class="tag-cloud-link tag-link-442 tag-link-position-17" style="font-size: 9.2233pt;" aria-label="备份 (53 items)">备份</a>
+<a href="http://www.appinn.com/tag/%e5%ad%a6%e4%b9%a0/" class="tag-cloud-link tag-link-1125 tag-link-position-18" style="font-size: 9.35922pt;" aria-label="学习 (54 items)">学习</a>
+<a href="http://www.appinn.com/tag/%e5%ae%89%e5%85%a8/" class="tag-cloud-link tag-link-199 tag-link-position-19" style="font-size: 10.9903pt;" aria-label="安全 (72 items)">安全</a>
+<a href="http://www.appinn.com/tag/%e5%ae%a2%e6%88%b7%e7%ab%af/" class="tag-cloud-link tag-link-547 tag-link-position-20" style="font-size: 9.76699pt;" aria-label="客户端 (58 items)">客户端</a>
+<a href="http://www.appinn.com/tag/%e5%af%86%e7%a0%81/" class="tag-cloud-link tag-link-136 tag-link-position-21" style="font-size: 9.49515pt;" aria-label="密码 (55 items)">密码</a>
+<a href="http://www.appinn.com/tag/%e5%b1%8f%e5%b9%95/" class="tag-cloud-link tag-link-82 tag-link-position-22" style="font-size: 9.90291pt;" aria-label="屏幕 (59 items)">屏幕</a>
+<a href="http://www.appinn.com/tag/%e5%b7%a5%e5%85%b7/" class="tag-cloud-link tag-link-161 tag-link-position-23" style="font-size: 9.08738pt;" aria-label="工具 (51 items)">工具</a>
+<a href="http://www.appinn.com/tag/wechat/" class="tag-cloud-link tag-link-2869 tag-link-position-24" style="font-size: 8.40777pt;" aria-label="微信 (46 items)">微信</a>
+<a href="http://www.appinn.com/tag/%e5%bf%ab%e6%8d%b7%e9%94%ae/" class="tag-cloud-link tag-link-751 tag-link-position-25" style="font-size: 8.54369pt;" aria-label="快捷键 (47 items)">快捷键</a>
+<a href="http://www.appinn.com/tag/%e6%88%aa%e5%9b%be/" class="tag-cloud-link tag-link-77 tag-link-position-26" style="font-size: 8.95146pt;" aria-label="截图 (50 items)">截图</a>
+<a href="http://www.appinn.com/tag/%e6%89%a9%e5%b1%95/" class="tag-cloud-link tag-link-340 tag-link-position-27" style="font-size: 10.0388pt;" aria-label="扩展 (60 items)">扩展</a>
+<a href="http://www.appinn.com/tag/%e6%89%b9%e9%87%8f/" class="tag-cloud-link tag-link-434 tag-link-position-28" style="font-size: 9.08738pt;" aria-label="批量 (51 items)">批量</a>
+<a href="http://www.appinn.com/tag/%e6%8f%90%e9%86%92/" class="tag-cloud-link tag-link-565 tag-link-position-29" style="font-size: 8.67961pt;" aria-label="提醒 (48 items)">提醒</a>
+<a href="http://www.appinn.com/tag/%e6%90%9c%e7%b4%a2/" class="tag-cloud-link tag-link-577 tag-link-position-30" style="font-size: 9.2233pt;" aria-label="搜索 (53 items)">搜索</a>
+<a href="http://www.appinn.com/tag/%e6%92%ad%e6%94%be%e5%99%a8/" class="tag-cloud-link tag-link-238 tag-link-position-31" style="font-size: 10.8544pt;" aria-label="播放器 (69 items)">播放器</a>
+<a href="http://www.appinn.com/tag/%e6%96%87%e4%bb%b6/" class="tag-cloud-link tag-link-96 tag-link-position-32" style="font-size: 13.301pt;" aria-label="文件 (105 items)">文件</a>
+<a href="http://www.appinn.com/tag/%e6%96%87%e4%bb%b6%e5%a4%b9/" class="tag-cloud-link tag-link-97 tag-link-position-33" style="font-size: 10.0388pt;" aria-label="文件夹 (61 items)">文件夹</a>
+<a href="http://www.appinn.com/tag/%e6%97%a5%e5%8e%86/" class="tag-cloud-link tag-link-1150 tag-link-position-34" style="font-size: 8.95146pt;" aria-label="日历 (50 items)">日历</a>
+<a href="http://www.appinn.com/tag/%e6%a1%8c%e9%9d%a2/" class="tag-cloud-link tag-link-73 tag-link-position-35" style="font-size: 12.6214pt;" aria-label="桌面 (94 items)">桌面</a>
+<a href="http://www.appinn.com/tag/%e6%b5%8f%e8%a7%88%e5%99%a8/" class="tag-cloud-link tag-link-44 tag-link-position-36" style="font-size: 12.0777pt;" aria-label="浏览器 (86 items)">浏览器</a>
+<a href="http://www.appinn.com/tag/%e6%b8%b8%e6%88%8f/" class="tag-cloud-link tag-link-846 tag-link-position-37" style="font-size: 15.7476pt;" aria-label="游戏 (162 items)">游戏</a>
+<a href="http://www.appinn.com/tag/%e7%85%a7%e7%89%87/" class="tag-cloud-link tag-link-150 tag-link-position-38" style="font-size: 14.1165pt;" aria-label="照片 (122 items)">照片</a>
+<a href="http://www.appinn.com/tag/%e7%9b%8a%e6%99%ba/" class="tag-cloud-link tag-link-1596 tag-link-position-39" style="font-size: 8.67961pt;" aria-label="益智 (48 items)">益智</a>
+<a href="http://www.appinn.com/tag/%e7%aa%97%e5%8f%a3/" class="tag-cloud-link tag-link-167 tag-link-position-40" style="font-size: 10.4466pt;" aria-label="窗口 (65 items)">窗口</a>
+<a href="http://www.appinn.com/tag/%e7%ac%94%e8%ae%b0/" class="tag-cloud-link tag-link-975 tag-link-position-41" style="font-size: 11.3981pt;" aria-label="笔记 (76 items)">笔记</a>
+<a href="http://www.appinn.com/tag/%e7%ae%a1%e7%90%86/" class="tag-cloud-link tag-link-118 tag-link-position-42" style="font-size: 13.165pt;" aria-label="管理 (103 items)">管理</a>
+<a href="http://www.appinn.com/tag/selected/" class="tag-cloud-link tag-link-31 tag-link-position-43" style="font-size: 22pt;" aria-label="精选 (468 items)">精选</a>
+<a href="http://www.appinn.com/tag/%e7%b3%bb%e7%bb%9f/" class="tag-cloud-link tag-link-196 tag-link-position-44" style="font-size: 13.0291pt;" aria-label="系统 (101 items)">系统</a>
+<a href="http://www.appinn.com/tag/%e7%bc%96%e8%be%91%e5%99%a8/" class="tag-cloud-link tag-link-287 tag-link-position-45" style="font-size: 9.63107pt;" aria-label="编辑器 (57 items)">编辑器</a>
+<a href="http://www.appinn.com/tag/%e7%bd%91%e7%bb%9c/" class="tag-cloud-link tag-link-395 tag-link-position-46" style="font-size: 10.3107pt;" aria-label="网络 (64 items)">网络</a>
+<a href="http://www.appinn.com/tag/%e8%87%aa%e5%8a%a8/" class="tag-cloud-link tag-link-429 tag-link-position-47" style="font-size: 10.3107pt;" aria-label="自动 (64 items)">自动</a>
+<a href="http://www.appinn.com/tag/%e8%a7%86%e9%a2%91/" class="tag-cloud-link tag-link-145 tag-link-position-48" style="font-size: 15.068pt;" aria-label="视频 (144 items)">视频</a>
+<a href="http://www.appinn.com/tag/%e8%ae%b0%e5%bd%95/" class="tag-cloud-link tag-link-84 tag-link-position-49" style="font-size: 8pt;" aria-label="记录 (43 items)">记录</a>
+<a href="http://www.appinn.com/tag/%e8%b1%86%e7%93%a3/" class="tag-cloud-link tag-link-460 tag-link-position-50" style="font-size: 8.13592pt;" aria-label="豆瓣 (44 items)">豆瓣</a>
+<a href="http://www.appinn.com/tag/wandoujia-award/" class="tag-cloud-link tag-link-3773 tag-link-position-51" style="font-size: 10.9903pt;" aria-label="豌豆荚设计奖 (71 items)">豌豆荚设计奖</a>
+<a href="http://www.appinn.com/tag/%e8%b7%a8%e5%b9%b3%e5%8f%b0/" class="tag-cloud-link tag-link-1942 tag-link-position-52" style="font-size: 10.9903pt;" aria-label="跨平台 (72 items)">跨平台</a>
+<a href="http://www.appinn.com/tag/%e8%bd%ac%e6%8d%a2/" class="tag-cloud-link tag-link-146 tag-link-position-53" style="font-size: 12.3495pt;" aria-label="转换 (91 items)">转换</a>
+<a href="http://www.appinn.com/tag/%e8%bd%af%e4%bb%b6/" class="tag-cloud-link tag-link-46 tag-link-position-54" style="font-size: 12.0777pt;" aria-label="软件 (86 items)">软件</a>
+<a href="http://www.appinn.com/tag/%e9%94%ae%e7%9b%98/" class="tag-cloud-link tag-link-225 tag-link-position-55" style="font-size: 9.08738pt;" aria-label="键盘 (51 items)">键盘</a>
+<a href="http://www.appinn.com/tag/%e9%98%85%e8%af%bb/" class="tag-cloud-link tag-link-128 tag-link-position-56" style="font-size: 8.13592pt;" aria-label="阅读 (44 items)">阅读</a>
+<a href="http://www.appinn.com/tag/%e9%9f%b3%e4%b9%90/" class="tag-cloud-link tag-link-390 tag-link-position-57" style="font-size: 14.2524pt;" aria-label="音乐 (124 items)">音乐</a>
+<a href="http://www.appinn.com/tag/%e9%bc%a0%e6%a0%87/" class="tag-cloud-link tag-link-722 tag-link-position-58" style="font-size: 10.9903pt;" aria-label="鼠标 (72 items)">鼠标</a>            </div>
+
+    <div id="babout">
+    <h3>传说中的<cite>小众软件</cite> <span>让你的手机应用与众不同。</span></h3>
+    <p class="writter">
+        <em>作者:</em> <a href="http://www.appinn.com/author/scavin/">Scavin</a> | <a href="http://www.appinn.com/author/sfufoet/">Sfufoet</a> | <a href="http://www.appinn.com/author/thruth/">Thruth</a> | <a href="http://www.appinn.com/author/socekin/">Socekin</a> | <a href="http://www.appinn.com/author/390080445/">Root</a> | <a href="http://www.appinn.com/author/yushufang/">稻米鼠</a> | <a href="http://www.appinn.com/author/wjw19930520/">wjwen</a> | <a href="http://www.appinn.com/author/lychee/">LYcHEE</a> | <a href="http://www.appinn.com/author/wright/">Wright</a>
+    </p>
+    <h5><a href="http://www.appinn.com/copyright/" title="版权信息">版权声明：</a></h5>
+    <p>
+    商业网站或未授权媒体不得复制、转载、使用本站内容。
+    </p>
+    <p>
+	<a href="http://www.appinn.com/about/" title="你想知道的小众软件">关于小众软件</a> | <a href="http://www.appinn.com/join-us/" title="加入我们"><strong>加入我们</strong></a> | <a href="http://www.appinn.com/contact/">联系我们</a> | <a href="http://www.appinn.com/feeds-subscribe/" title="订阅指南">订阅指南</a> | <a href="http://appinn.me/" title="论坛" rel="nofollow external">论坛</a> | <a href="https://plus.google.com/109664059198403597343" rel="publisher">Google+</a> | <a href="http://weibo.com/appinncom/">微博</a>
+    </p>
+<p>
+     <a href="http://www.appinn.com/contribute/" title="提交软件">【提交软件】</a> 
+
+     <a href="http://faxian.appinn.com/developers" title="开发者自荐">【开发者自荐】</a> 
+
+</p>
+    <span class="show">
+    </span>
+    </div>
+  </div><!-- #fbox -->
+  <div id="fbtn">
+   <div class="copyright">
+    <strong><a class="flogo" href="http://www.appinn.com/" title="小众软件"></a> <span class="fspan"><a href="http://wordpress.org/" title="由 WordPress 强力驱动" rel="external nofollow">WordPress</a> Powered, Theme by <b>sofish</b>, 感谢 <a href="http://i.appinn.com/yunduo" title="云朵 | 靠谱的云主机" rel="external nofollow">云朵</a> 靠谱的云主机赞助, <a href="http://www.miibeian.gov.cn/" rel="external nofollow">黑ICP备09023260号</a></span></strong>
+    <span><a href="#header">↑ Back To Top</a></span>
+    <div class="iclear"></div>
+    </div>
+  </div>
+</div><!--#footer-->
+
+<!-- 44 | 0.238 -->
+<script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="//img3.appinn.com/wp-content/themes/appinn_wp/js/minmax.js"></script>
+<![endif]-->
+
+<script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>    
+<div id="pixfuturec" style="display: none;">
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script><script src="about:blank"></script></div>
+<script language="javascript">/* Code removed by ScrapBook */</script>
+
+</body><div id="diigotb-imagepanel" style="display: none; width: 24px; left: 435px; top: 889px;" class=""><div class="diigotb-btn enabled" title="Save this image to Diigo" id="diigotb-quick-save"></div></div><div class="diigotb-border diigotb-left" style="display: none; height: 150px; width: 1px; left: 169px; top: 771px;"></div><div class="diigotb-border diigotb-top" style="display: none; width: 300px; height: 1px; left: 169px; top: 771px;"></div><div class="diigotb-border diigotb-right" style="display: none; height: 150px; width: 1px; left: 469px; top: 771px;"></div><div class="diigotb-border diigotb-bottom" style="display: none; width: 300px; height: 1px; left: 169px; top: 921px;"></div>
+</html>

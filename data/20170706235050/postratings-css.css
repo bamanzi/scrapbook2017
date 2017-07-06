@@ -1,0 +1,5 @@
+/* Code tidied up by ScrapBook */
+.post-ratings { width: 100%; opacity: 1; }
+.post-ratings-loading { display: none; height: 16px; text-align: left; }
+.post-ratings-image { border: 0px none; }
+.post-ratings IMG, .post-ratings-loading IMG, .post-ratings-image IMG { border: 0px none; padding: 0px; margin: 0px; }

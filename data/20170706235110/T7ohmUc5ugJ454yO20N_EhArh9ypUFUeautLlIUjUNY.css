@@ -1,0 +1,228 @@
+/* Code tidied up by ScrapBook */
+html { background-color: rgb(0, 83, 159); }
+body { background-color: rgba(238, 238, 238, 0.95); }
+@keyframes bg_change {
+0% { background-color: blue; }
+100% { background-color: red; }
+}
+@keyframes bg_change {
+0% { background-color: blue; }
+100% { background-color: red; }
+}
+@keyframes bg_change {
+0% { background-color: blue; }
+100% { background-color: red; }
+}
+@keyframes color_change {
+0% { color: blue; }
+100% { color: red; }
+}
+@keyframes color_change {
+0% { color: blue; }
+100% { color: red; }
+}
+@keyframes color_change {
+0% { color: blue; }
+100% { color: red; }
+}
+#RESShortcutsViewport, .sr-list { margin-right: 67px; }
+#sr-more-link { background-color: transparent; color: white; }
+#sr-header-area, .dropdown.srdrop .selected { color: white; border: 0px none; z-index: 500; }
+#sr-header-area .drop-choices.srdrop { z-index: 2147483647 ! important; }
+#header-bottom-right { padding: 0px 16px 0px 10px ! important; height: 20px ! important; right: 0px; background-color: transparent ! important; font-family: sans-serif; font-size: 11px; line-height: 18px; position: absolute; z-index: 3; text-align: right; top: 75px ! important; }
+#header-bottom-right a { color: rgb(251, 251, 251); }
+#header-bottom-right .user, #header-bottom-right .userkarma { color: rgb(255, 255, 255); }
+#header-bottom-right .user a:hover { text-decoration: underline; }
+#header-bottom-right .separator { display: none ! important; }
+#header { z-index: 10; height: 193px; border: 0px none; background: rgb(0, 83, 159) none repeat scroll 0% 0%; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.18); }
+#srLeftContainer, #RESShortcutsViewport, #RESShortcutsSort, #RESShortcutsEditContainer, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash, .sr-bar a, #sr-header-area .dropdown.srdrop, .dropdown.srdrop .selected { background-color: transparent ! important; color: white ! important; }
+#sr-header-area { background-color: rgba(0, 0, 0, 0.2); }
+#header-bottom-right a, .sr-bar a, .pagename a { color: white ! important; }
+#header-img { width: 85px; height: auto; }
+#header-img, #header-img-a, a#header-img-a { margin: 0px; }
+#header-img-a { z-index: 500; display: block; float: left; top: 29px; left: 8px; padding: 13px 13px 4px; background-color: transparent; border: 0px none; border-radius: 100%; margin: 0px ! important; overflow: hidden; background-position: -260px -1215px; transition: background-color 0.03s ease 0s; }
+#header-bottom-left a#header-img-a:hover { background-color: rgba(250, 250, 250, 0.1); }
+.pagename { font-size: 0px; left: 85px; letter-spacing: 1px; }
+.pagename a { font-size: 0px; text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25); line-height: 45px; letter-spacing: 5px; font-weight: normal; display: block; left: 80px; z-index: 1; top: 50px; padding: 0px; border-radius: 3px; background: transparent url("yRlXvjV2ZFDLGkklcn78T8KgfHS65c4X0bNID4p68UU.png") no-repeat scroll 45px center / auto 45px; text-indent: 0px; width: 250px; height: 69px; margin: 5px 0px 0px 66px; }
+.pagename a:hover { text-decoration: none; background-color: rgba(250, 250, 250, 0.1); }
+.content[role="main"] { margin: 47px 332px 0px 16px; }
+.wiki-page .wikititle, .content .spacer { margin: 0px; }
+.reddit-infobar { margin: 0px; border: medium none; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16); }
+body:not(.comments-page):not(.listing-page):not(.related-page):not(.other-discussions-page):not(.search-page) .content[role="main"] { background-color: rgb(255, 255, 255); margin: 32px 332px 0px 16px; padding: 32px 16px 16px; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16); }
+body:not(.comments-page):not(.listing-page):not(.related-page):not(.other-discussions-page):not(.search-page) .titlebox .usertext-body .md h6 { left: 16px; }
+body.comments-page .content[role="main"] { margin: 16px 332px 0px 16px; }
+.commentarea > .usertext, .commentarea .infobar, .commentarea .panestack-title, .commentarea .menuarea { margin: 0px; padding: 7px 16px; background-color: rgb(250, 250, 250); box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.14); border: 0px none; }
+.commentarea { display: flex; flex-direction: column; }
+.comments-page .link { z-index: 4; }
+.commentarea .panestack-title { z-index: 1; }
+.commentarea .menuarea { z-index: 2; }
+.commentarea .menuarea { margin-bottom: 0px; }
+.side .titlebox .md h6 { left: 80px; }
+#header-bottom-left { width: 316px; margin: 0px 0px 0px 8px; padding: 10px 332px 0px 0px; }
+#header-bottom-left .tabmenu { border: 0px solid rgb(237, 238, 238); display: flex ! important; box-shadow: 0px 1px 5px transparent; transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s; z-index: 2147483630 ! important; margin: 0px 332px 0px 16px; position: absolute; top: 145px; left: 0px; width: calc(100% - 348px); }
+#header-bottom-left .tabmenu:hover { box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.18), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.133); }
+.menuarea { margin: -1px 0px 0px; background-color: white; padding: 7px 16px; border-style: solid; border-color: rgb(128, 128, 128); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 1px 0px 0px; }
+#header-bottom-left .tabmenu li { display: inline-block; margin: 0px 0px -1px; width: 100px; height: 45px; overflow: hidden; text-overflow: ellipsis; background-color: rgb(0, 83, 159); z-index: 500; border-width: 0px 0px 3px; border-style: solid; border-color: rgb(0, 0, 0) rgb(0, 0, 0) transparent; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; transition: height 0.125s cubic-bezier(0.19, 0.79, 0.19, 0.79) 0.15s, border-color 0.125s ease 0s; flex-grow: 1; flex-shrink: 1; }
+#header-bottom-left .tabmenu:hover > li { height: 80px; }
+#header-bottom-left .tabmenu li a { display: block; padding: 0px; color: white; width: 100%; height: 100%; text-align: center; border: medium none ! important; font-size: 13px ! important; font-weight: normal; text-transform: capitalize; transition: background-color 0.03s ease 0s; text-shadow: none ! important; background-color: transparent; overflow: hidden; text-overflow: ellipsis; }
+#header-bottom-left .tabmenu li a:hover { background-color: rgba(0, 0, 0, 0.2); }
+#header-bottom-left .tabmenu li:hover { border-color: white; }
+#header-bottom-left .tabmenu li.selected { border-color: rgb(255, 149, 0); }
+#header-bottom-left .tabmenu li.selected:hover { border-color: rgb(230, 96, 0); }
+#header-bottom-left .tabmenu li a::before { width: 22px; height: 50px; content: ""; display: block; margin: 0px auto; background: transparent url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png") no-repeat scroll -274px 0px; }
+#header-bottom-left .tabmenu li a, .wiki-page tabmenu li a::before { background-position: -274px 0px; }
+.single-page #header-bottom-left .tabmenu li a::before { background-position: -274px -585px; }
+.single-page #header-bottom-left .tabmenu li.selected a::before, .single-page.res-nightmode #header-bottom-left .tabmenu li a::before, .single-page.res-nightmode #header-bottom-left .tabmenu li a::before { background-position: -274px -1620px ! important; }
+.side { width: 300px; margin: 191px 16px 0px 0px; border-right: 0px none; border-top: 0px none; background-color: transparent; padding-left: 11px; z-index: 4 ! important; }
+.side .leavemoderator, .side .toggle, .side .icon-menu a, .side .create .spacer { background-color: transparent ! important; }
+.side .titlebox, .sidecontentbox, .sidebox.create { padding: 12px; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.18); background-color: white; }
+.sidecontentbox .content { border-width: 0px; }
+.titlebox .usertext-body .md h6 { display: block; position: absolute; top: 209px; left: 16px; right: 0px; overflow: hidden; font-family: Arial,Helvetica,sans-serif; font-size: 15px; color: black; margin-right: 332px; height: 30px ! important; line-height: 30px; padding: 0px 16px; background-color: white; text-decoration: none; font-weight: normal; border-radius: 2px 2px 0px 0px; border-bottom: 1px solid rgba(0, 0, 0, 0.133); margin-top: 0px; text-align: center; }
+.side { z-index: 1; }
+.content[role="main"] { z-index: 2; }
+.titlebox .usertext-body .md h6 a { color: rgb(29, 141, 200); }
+.titlebox .usertext-body .md h6:lang(nt), .res-nightmode .titlebox .usertext-body .md h6 { background-color: rgb(51, 51, 51); color: rgb(255, 255, 255); }
+.titlebox .redditname { text-align: center; letter-spacing: 1px; font-weight: normal; padding: 0px; border-bottom: 0px solid rgba(0, 0, 0, 0.2); border-radius: 2px; top: 209px; right: 16px; position: absolute; display: block; height: 175px; width: 300px; font-size: 0px; background: rgb(140, 0, 221) url("o3YqkExfzJCzvohuLpUNylq0q5VATrqm-zRnrAeObZE.png") no-repeat scroll center 0px / 300px auto; margin: 0px; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.18); }
+.side .usertext-body .md { border-top: 1px solid rgb(221, 221, 221); padding-top: 6px; }
+.side .titlebox .md h3 { width: 248px; border-radius: 2px; background-color: rgb(0, 83, 159); font-family: verdana,arial,sans-serif; transition: all 0.25s ease 0s; color: rgb(255, 255, 255); box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24); display: block; margin: 5px 0px; font-size: 11px; font-weight: normal; padding: 8px 14px; }
+.side .titlebox .md h3:hover { background-color: rgb(0, 83, 159); box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.54); }
+.side .titlebox .md h3:active { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.54); }
+.side .md h3:hover { background: rgb(120, 29, 19) none repeat scroll 0% 0%; transition: all 0.16s ease 0s; }
+.side .md h3 + ul, .side .md h3 + blockquote { font-family: Segoe,"Segoe UI",Optima,Candara,Calibri,Arial,sans-serif; font-size: 13px; list-style: outside none none; margin: -60px 0px 0px; padding: 0px; position: absolute; width: auto; min-width: 100px; max-width: 300px; right: 310px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-right: 0px none; opacity: 0; visibility: hidden; transition: all 0.16s ease 0s; z-index: 100; box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.18), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.133); border-radius: 2px; }
+.side .md h3 + ul, .side .md h3 + blockquote { padding: 7px 12px; }
+.side .md h3 + ul li:last-of-type { border: 0px none; }
+.side .md h3:hover + ul, .side .md h3 + ul:hover, .side .md h3:hover + blockquote, .side .md h3 + blockquote:hover { opacity: 1; visibility: visible; right: 315px; }
+.side .md h3 + ul::after, .side .md h3 + blockquote::after { content: ""; position: absolute; top: 0px; bottom: 0px; left: 100%; width: 11px; background-color: transparent; }
+.footer-parent { margin-right: 320px; }
+.footer, .footer .col { border: medium none; }
+.footer .flat-vert.title { color: rgb(81, 81, 81); }
+.side .md h4 { margin: 0px ! important; padding: 0px ! important; position: relative; }
+.side .md h4 a { display: block; height: 32px; width: 200px; margin: 0px; padding: 0px 0px 0px 38px; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24); border-radius: 2px; background-color: rgb(230, 96, 0); color: rgb(255, 255, 255); font-family: verdana,arial,sans-serif; font-size: 11px; font-weight: normal; line-height: 31px; transition: all 0.16s ease 0s; }
+.side .md h4 a:hover { background: rgb(255, 149, 0) none repeat scroll 0% 0%; }
+.side .md h4 a { display: block; height: 32px; width: 200px; margin: 6px auto; padding: 0px 0px 0px 38px; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24); border-radius: 2px; background-color: rgb(230, 96, 0); color: rgb(255, 255, 255); font-family: verdana,arial,sans-serif; font-size: 11px; font-weight: normal; line-height: 31px; transition: all 0.16s ease 0s; }
+.side .md h4 a:hover { background: rgb(255, 149, 0) none repeat scroll 0% 0%; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/"]::before, .side .md h4 a[href="https://www.mozilla.org/firefox/channel/#beta"]::before, .side .md h4 a[href="https://www.mozilla.org/firefox/channel/#developer"]::before, .side .md h4 a[href="https://nightly.mozilla.org/"]::before, .side .md h4 a[href="https://www.mozilla.org/mobile/"]::before, .side .md h4 a[href="https://www.mozilla.org/firefox/organizations/all/"]::before, .side .md h4 a[href="https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds"]::before { background: transparent url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png") no-repeat scroll -192px 0px; content: ""; width: 16px; height: 16px; display: block; position: absolute; top: 8px; left: 43px; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/"]::before { background-position: -192px 0px; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#beta"]::before { background-position: -208px 0px; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#developer"]::before { background-position: -224px 0px; }
+.side .md h4 a[href="https://nightly.mozilla.org/"]::before { background-position: -240px 0px; }
+.side .md h4 a[href="https://www.mozilla.org/mobile/"]::before { background-position: -192px -16px; left: 46px; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/"], .res-nightmode .side .md h4 a[href="https://www.mozilla.org/firefox/"] { background-color: rgb(224, 159, 38) ! important; color: rgb(38, 38, 38) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#beta"], .res-nightmode .side .md h4 a[href="https://www.mozilla.org/firefox/channel/#beta"] { background-color: rgb(178, 31, 36) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#developer"], .res-nightmode .side .md h4 a[href="https://www.mozilla.org/firefox/channel/#developer"] { background-color: rgb(16, 86, 153) ! important; }
+.side .md h4 a[href="https://nightly.mozilla.org/"], .res-nightmode .side .md h4 a[href="https://nightly.mozilla.org/"] { background-color: rgb(25, 37, 83) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/mobile/"], .res-nightmode .side .md h4 a[href="https://www.mozilla.org/mobile/"] { background-color: rgb(7, 159, 217) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/"]:hover { background-color: rgb(167, 37, 37) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#beta"]:hover { background-color: rgb(80, 16, 15) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/firefox/channel/#developer"]:hover { background-color: rgb(15, 74, 135) ! important; }
+.side .md h4 a[href="https://nightly.mozilla.org/"]:hover { background-color: rgb(0, 0, 0) ! important; }
+.side .md h4 a[href="https://www.mozilla.org/mobile/"]:hover { background-color: rgb(0, 150, 201) ! important; }
+.side .fancy-toggle-button .active { display: inline-block ! important; padding: 3px 0px ! important; margin: 0px ! important; border-radius: 2px; font-weight: normal; text-transform: capitalize; background: rgb(255, 149, 0) none repeat scroll 0% 0%; border: 1px solid transparent; width: 126px ! important; height: 23px; line-height: 23px; text-align: center; font-size: 12px; box-shadow: 0px 2px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 0px 4px 0px rgba(0, 0, 0, 0.12); transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s; }
+.titlebox .fancy-toggle-button { margin: 0px 74px 7px; }
+.side .fancy-toggle-button .active:hover { background-color: rgb(230, 96, 0); text-decoration: none; box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.18), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.133); }
+.fancy-toggle-button .remove, .res .RESshortcutside.remove, .res .RESDashboardToggle.remove { background: transparent none repeat scroll 0% 0% ! important; color: rgb(128, 128, 128) ! important; border: 0px solid transparent ! important; }
+.fancy-toggle-button .remove:hover { background-color: rgb(243, 243, 243); }
+.side #search { white-space: nowrap; position: absolute; top: 105px; z-index: 500; }
+.side form#search input[type="text"], .res-nightmode .side form#search input[type="text"] { border: 1px solid rgba(255, 255, 255, 0.15) ! important; font-family: sans-serif ! important; font-size: 13px ! important; height: 28px ! important; line-height: 28px ! important; padding: 0px 3px 0px 14px ! important; margin: 0px -5px 0px 0px ! important; color: rgb(255, 255, 255) ! important; background-color: rgba(250, 250, 250, 0.1) ! important; width: 300px ! important; border-radius: 2px ! important; }
+.side #search input[type="submit"] { background-image: url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png"); background-position: 0px -80px; opacity: 0.8; }
+.side #search input[type="submit"]:hover { background-image: url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png"); background-position: 0px -80px; opacity: 1; }
+.side #searchexpando.infobar { border-color: transparent ! important; background-color: rgb(0, 83, 159) ! important; border-radius: 2px; margin-right: 16px; margin-bottom: 0px; margin-left: 0px; color: rgb(255, 255, 255); width: 274px ! important; margin-top: 76px ! important; height: 161px; padding: 12px 12px 0px ! important; }
+.side #searchexpando.infobar label, .side #searchexpando.infobar p { margin: 7px 3px ! important; line-height: 30px; }
+.side #searchexpando.infobar a { text-decoration: underline; color: rgb(255, 255, 255); margin-top: 4px; }
+.linkinfo { width: 300px; border: 0px none; background-color: white; margin: 0px; padding: 12px 0px 0px; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.18); }
+.shortlink { font-size: 0px ! important; margin-top: 12px ! important; }
+.shortlink #shortlink-text { font-size: 12px; width: calc(100% - 6px); height: 32px; margin-right: 13px; text-align: center; border-style: solid; border-color: rgba(0, 0, 0, 0.2); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 1px 0px 0px; padding: 0px; }
+.linkinfo .score, .linkinfo .totalvotes, .linkinfo .date { text-align: center; }
+.linkinfo .date span { display: none; }
+.nub { display: none; }
+.morelink { top: 144px; z-index: 999; position: absolute; width: 145px; height: 36px; padding: 0px; background-image: none ! important; margin: 0px; background-color: rgb(255, 149, 0); border: 0px none; border-radius: 2px; font-weight: normal; letter-spacing: 1px; box-shadow: 0px 2px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 0px 4px 0px rgba(0, 0, 0, 0.12); transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s; line-height: 36px; }
+.submit-text .morelink { right: 16px; }
+.morelink:hover { background-color: rgb(230, 96, 0); box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.18), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.133); }
+.morelink:active { background-color: rgb(255, 149, 0); box-shadow: 0px 2px 1.5px 0px rgba(0, 0, 0, 0.12), 0px 0px 4px 0px rgba(0, 0, 0, 0.12); }
+.morelink a { color: rgb(251, 251, 251) ! important; font-size: 12px; cursor: pointer; }
+.morelink a:hover { text-decoration: none; }
+.comments-page .linklisting { padding-bottom: 0px ! important; margin: 17px 0px 0px; }
+.comments-page .commentarea .thing:first-of-type { margin-top: 16px ! important; }
+.res .comment, .comment { border-radius: 2px ! important; margin: 0px 0px 16px ! important; padding: 7px 7px 7px 2px ! important; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.14); background-color: white; }
+.comments-page .comment .midcol { margin: 0px 7px ! important; }
+.comments-page .link { border-bottom: medium none; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.18); }
+.comment div.child { border-left: medium none ! important; }
+.comment .comment, .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res .comment .comment, .res .comment .comment .comment .comment, .res .comment .comment .comment .comment .comment .comment, .res .comment .comment .comment .comment .comment .comment .comment .comment, .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment { background-color: rgb(247, 247, 248); margin: 0px 8px 8px 10px ! important; box-shadow: 0px 0px 0px 0px transparent; border: 1px solid rgb(230, 230, 230) ! important; }
+.comment .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment, .comment .comment .comment, .res .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res .comment .comment .comment .comment .comment .comment .comment, .res .comment .comment .comment .comment .comment, .res .comment .comment .comment { background-color: rgb(255, 255, 255); margin: 0px 8px 8px 10px ! important; box-shadow: 0px 0px 0px 0px transparent; border: 1px solid rgb(230, 230, 230) ! important; }
+.link { margin-bottom: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding: 16px 30px 16px 0px; border-bottom: 1px solid rgba(0, 0, 0, 0.133); }
+.thing .title { color: rgb(23, 23, 23); }
+.link .title a.title:visited, .sitetable .thing.link .title.click:visited, .thing .title:visited, .thing.visited .title { color: rgb(131, 131, 131) ! important; }
+.thumbnail { margin: 0px 16px 0px 0px; border-radius: 2px; width: inherit; }
+.entry .buttons li a.comments:hover::after { background-color: rgba(0, 0, 0, 0.1) ! important; }
+.link { position: relative; }
+.link .rank { position: absolute; left: 0px; margin-top: 0px; top: 0px; bottom: 0px; text-align: center; color: rgb(38, 38, 38) ! important; padding-top: 30px; border-right: 1px solid rgba(0, 0, 0, 0.133); min-width: 30px; }
+.midcol { margin: 0px 16px 0px 40px; }
+.comments-page .midcol, .related-page .midcol, .other-discussions-page .midcol { margin: 0px 16px; }
+.midcol .score.unvoted { color: rgb(38, 38, 38); }
+.midcol .score.likes { color: rgb(244, 112, 50); }
+.midcol .score.dislikes { color: rgb(29, 141, 200); }
+.arrow, .res-nightmode .arrow { background-image: url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png") ! important; width: 17px ! important; height: 17px ! important; }
+.arrow.up { background-position: -158px -3px ! important; }
+.arrow.down { background-position: -175px -3px ! important; }
+.link:hover > .entry .tagline, .link:hover > .entry .title .domain a, .link:hover > .entry .title .domain::before, .link:hover > .entry .flat-list a:not(.comments) { color: rgb(29, 29, 29) ! important; }
+.link .entry .tagline { font-size: 0px; }
+.entry .tagline a, .entry .tagline time, .entry .title .domain a, .entry .title .domain::before, .entry .flat-list a { color: rgb(102, 102, 102) ! important; transition: color 0.2s ease 0s; font-size: x-small; }
+.link .entry .tagline time:not(.edited-timestamp)::after { content: " by "; font-size: x-small; }
+.side .spacer { margin: 16px 0px 0px; width: initial ! important; }
+.sidebox.submit { width: 142px; }
+.sidebox.submit.submit-text { margin-left: 8px; }
+.sidebox.submit.submit-link { margin-right: 8px; }
+.login-form-side { border-color: transparent ! important; background-color: white; border-radius: 2px; box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.14); margin-top: 16px; }
+.domain { font-size: 0px; position: relative; top: -2px; }
+.domain a { font-size: x-small; position: relative; top: -4px; }
+.domain::before { display: inline-block; content: "❯"; font-weight: bold; width: 6px; height: 4px; margin-right: 2px; font-size: 7px ! important; position: relative; top: -1px; }
+.entry .buttons li a { font-weight: normal; }
+.entry .buttons li a.comments { font-weight: bold; color: rgb(0, 83, 159) ! important; }
+.titlebox { display: flex; flex-flow: row wrap; }
+.titlebox .redditname { order: 1; }
+.titlebox .subscribers { order: 3; }
+.titlebox .fancy-toggle-button { order: 2; }
+.titlebox .users-online { order: 3; }
+.titlebox .usertext { order: 12; }
+.titlebox .bottom { order: 13; }
+form input[type="checkbox"], form input[type="radio"] { margin: 0px 5px 0px 4px ! important; }
+.titlebox { color: rgb(128, 128, 128) ! important; }
+form input[type="checkbox"], form input[type="radio"] { margin: 2px 5px 0px 0px; }
+.titlebox .number::after { content: " subscribed"; }
+.titlebox .users-online .number::after { content: " online now"; }
+.subscribers, .users-online { display: inline-block; font-size: 13px; line-height: 23px; height: 23px; width: 138px; padding: 2px 0px; color: rgb(0, 0, 0); text-align: center; border-top: 0px solid rgba(0, 0, 0, 0.133); border-bottom: 1px solid rgb(221, 221, 221); }
+.subscribers { border-right: 0px solid rgba(0, 0, 0, 0.133); margin: 0px; }
+.users-online { margin: 0px 0px 7px; right: 30px; border-left: 4px none rgb(0, 0, 0); }
+.titlebox .word, .users-online::before { display: none; }
+.titlebox .bottom { border: 0px none; padding: 4px 0px; }
+.user {  }
+#header-bottom-right a:hover { text-decoration: none; }
+@keyframes breathebeat {
+0% { transform: scale(1); }
+50% { transform: scale(1.25); }
+100% { transform: scale(1); }
+}
+#header-bottom-right a.pref-lang, .loggedin .logout a { background-position: -45px 0px; background-image: url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png"); width: 20px; height: 20px; display: inline-block; text-indent: -9999px ! important; font-size: 0px; }
+#header-bottom-right a.pref-lang::before, .loggedin .logout a::before { display: block; position: absolute; white-space: nowrap; z-index: 98888; text-indent: 0px ! important; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: black; font-size: 12px ! important; text-transform: none; opacity: 1 ! important; border: thin solid rgb(118, 118, 118); padding: 2px 7px; top: -30px; height: 18px; width: 20px; line-height: 16px; }
+#header-bottom-right a.pref-lang:hover::after { content: "Preferences"; left: -30px; }
+#modmail, #mail, .gearIcon, #header-bottom-right a.pref-lang, .loggedin .logout a { opacity: 1; transition: opacity 0.3s ease 0s; }
+#modmail:hover, #mail:hover, #header-bottom-right a.pref-lang:hover, .gearIcon:hover { opacity: 1; text-decoration: none ! important; border-bottom: 0px solid ! important; }
+#mail, #modmail, a.pref-lang, #openRESPrefs, .logout { display: inline-block; width: 20px ! important; height: 20px ! important; font-size: 0px; white-space: nowrap; overflow: hidden; transform: scale(0.8); margin: 0px 0px 0px 5px ! important; padding: 0px ! important; top: 0px ! important; bottom: 0px ! important; left: 0px ! important; right: 0px ! important; vertical-align: top; }
+.user { display: inline-block; top: 0px ! important; bottom: 0px ! important; left: 0px ! important; right: 0px ! important; line-height: 20px ! important; height: 20px ! important; vertical-align: top; }
+.thing { border-left: 3px solid transparent; border-radius: 0px; }
+.flair { vertical-align: baseline; transition: all 0.16s ease 0s; background-color: transparent; border-style: dotted; border-color: rgb(230, 96, 0); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; color: rgb(0, 0, 0); border-radius: 0px; padding: 0px 6px 0px 4px; line-height: 16px; height: 16px; border-width: 0px 1px; margin: 0px 3px; }
+.flair-jansmall { background-color: transparent; border-style: dotted; border-color: rgb(230, 96, 0); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; color: rgb(230, 96, 0); border-radius: 0px; padding: 0px 5px 1px 2px; line-height: 19px; height: 20px; border-width: 0px 1px; }
+.flair-jansmall::before { content: ""; width: 17px; height: 16px; display: inline-block; background-repeat: no-repeat; background-image: url("IWZsez-xTsGA3RXt42GgDzCOXh5BsAahvJ1nfgCZ-pU.png"); background-position: 0px 0px; vertical-align: middle; margin-right: 2px; background-size: 14px auto; }
+.flair-fxstable::before, .flair-beta::before, .flair-deved::before, .flair-nightly::before, .flair-icedragon::before, .flair-icecat::before, .flair-iceweasel::before, .flair-palemoon::before, .flair-swiftfox::before, .flair-swiftweasel::before, .flair-waterfox::before, .flair-chrome::before, .flair-chromium::before, .flair-opera::before, .flair-msedge::before, .flair-mozemploy::before, .flair-fxengineer::before, .flair-brave::before, .flair-seamonkey::before, .flair-vivaldi::before, .flair-kmelon::before, .flair-safari::before, .flair-tor::before { background: transparent url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png") no-repeat scroll -192px 0px; content: ""; width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin: 0px 5px 3px 2px; }
+.flair-beta::before { background-position: -208px 0px; }
+.flair-deved::before { background-position: -224px 0px; }
+.flair-nightly::before { background-position: -240px 0px; }
+.flair-beta { border-color: rgb(178, 31, 36); color: rgb(80, 16, 15); }
+.flair-deved { border-color: rgb(16, 86, 153); color: rgb(15, 74, 135); }
+.flair-nightly { border-color: rgb(25, 37, 83); color: rgb(0, 0, 0); }
+.flair[title*="Arch"]::after, .flair[title*="CentOS"]::after, .flair[title*="Chakra"]::after, .flair[title*="Debian"]::after, .flair[title*="Deepin"]::after, .flair[title*="Fedora"]::after, .flair[title*="Gentoo"]::after, .flair[title*="Kubuntu"]::after, .flair[title*="Lubuntu"]::after, .flair[title*="Mageia"]::after, .flair[title*="Manjaro"]::after, .flair[title*="Mint"]::after, .flair[title*="Siduction"]::after, .flair[title*="Ubuntu"]::after, .flair[title*="openSUSE"]::after, .flair[title*="Linux"]::after, .flair[title*="OSX"]::after, .flair[title*="OS X"]::after, .flair[title*="Win"]::after, .flair[title*="Nix"]::after, .flair[title*="Void"]::after, .flair[title*="OpenBSD"]::after, .flair[title*="Xubuntu"]::after, .flair[title*="Android"]::after, .flair[title*="iOS"]::after { background: transparent url("uv1Pcc9OhyjRbr8d9xoqL95lXbl29dIO2Cv6LKduyc4.png") no-repeat scroll -192px 0px; content: ""; display: inline-block; vertical-align: middle; margin: 0px 2px 3px 5px; height: 16px; width: 16px; }
+.flair[title*="Win"]::after { background-position: -16px -264px; }
+.flair[title*="OSX"]::after, .flair[title*="OS X"]::after { background-position: 0px -264px; }
+.flair[title*="Arch"]::after { background-position: 0px -200px; }
+.flair[title*="Ubuntu"]::after { background-position: -16px -248px; }
+.flair[title*="Manjaro"]::after { background-position: -32px -232px; }

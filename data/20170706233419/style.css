@@ -1,0 +1,116 @@
+/* Code tidied up by ScrapBook */
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul, dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object, a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span, strong, sub, sup, tt, var, legend, fieldset, figure { margin: 0px; padding: 0px; }
+img, fieldset { border: 0px none; }
+img { max-width: 100%; height: auto; box-sizing: border-box; }
+@media �screen {
+  img { width: auto; }
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
+html {  }
+body { font: 0.875em/150% Georgia,"Times New Roman",Times,serif; overflow-wrap: break-word; color: rgb(102, 102, 102); background: rgb(244, 243, 243) url("noise-bg.png") repeat scroll 0% 0%; }
+a { text-decoration: underline; outline: medium none; color: rgb(0, 0, 0); }
+a:hover { text-decoration: none; }
+p { margin: 0px 0px 1.2em; padding: 0px; }
+small { font-size: 87%; }
+ul, ol { margin: 1em 0px 1.4em 24px; padding: 0px; line-height: 140%; }
+li { margin: 0px 0px 0.5em; padding: 0px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.4em; margin: 20px 0px 0.4em; font-family: "OFL Sorts Mill Goudy TT",Georgia,Times,serif; color: rgb(0, 0, 0); font-weight: normal; }
+h1 { font-size: 2em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.2em; }
+input, textarea, select, input[type="search"], button { font-size: 100%; font-family: inherit; }
+textarea, input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="url"] { background: rgb(249, 249, 249) none repeat scroll 0% 0%; color: rgb(102, 102, 102); border-width: 1px; border-style: solid; border-color: rgb(213, 213, 213) rgb(234, 234, 234) rgb(244, 244, 244); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; padding: 6px 10px; border-radius: 5px; }
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="email"]:focus, input[type="url"]:focus { outline: medium none; background: rgb(252, 252, 252) none repeat scroll 0% 0%; color: rgb(0, 0, 0); }
+input[type="text"], input[type="search"], input[type="email"], input[type="url"] { width: 240px; max-width: 96%; }
+textarea { line-height: 150%; width: 94%; }
+input[type="reset"], input[type="submit"], button { background: rgb(51, 51, 51) none repeat scroll 0% 0%; color: rgb(255, 255, 255); line-height: 100%; text-transform: uppercase; border: medium none; padding: 7px 20px; cursor: pointer; border-radius: 5px; box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1); }
+input[type="reset"]:hover, input[type="submit"]:hover, button:hover { background: rgb(0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+#pagewrap, .pagewidth, #headerwrap, #header, #main-nav, #body, #layout, #content, .post, .author-box, .post-nav, .pagenav, #sidebar, .widget, #footerwrap, #footer { box-sizing: border-box; }
+#pagewrap { width: 990px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(153, 153, 153); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; padding: 10px 49px; margin: 10px auto 70px; position: relative; }
+#pagewrap::before, #pagewrap::after { content: ""; position: absolute; z-index: -2; bottom: 15px; left: 10px; width: 50%; height: 10px; max-width: 300px; box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6); transform: rotate(-3deg); }
+#pagewrap::after { right: 10px; left: auto; transform: rotate(3deg); }
+#content { margin: 50px 0px 60px; min-height: 300px; width: 600px; float: left; }
+#sidebar { width: 260px; float: right; margin: 50px 0px 60px; font-size: 90%; }
+#header { position: relative; min-height: 150px; padding-top: 60px; border-bottom: 2px solid rgb(0, 0, 0); z-index: 1000; }
+#header .hgroup { text-align: center; }
+#site-logo { margin: 0px 0px 10px; padding: 0px; font: small-caps 56px/100% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; letter-spacing: 2px; text-align: center; }
+#site-logo a { text-decoration: none; }
+#site-description { margin: 0px 0px 10px; font: italic 14px/100% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; text-align: center; color: rgb(153, 153, 153); }
+.social-widget { float: right; margin-top: -1px; position: absolute; top: 10px; right: 0px; }
+.main-nav { margin: 20px auto 5px; padding: 10px 0px 0px; z-index: 100; border-top: 1px solid rgb(204, 204, 204); width: 84%; text-align: center; }
+.main-nav li { margin: 0px; padding: 0px 0px 7px; list-style: outside none none; position: relative; display: inline-block; }
+.main-nav a { color: rgb(119, 119, 119); padding: 5px; margin: 0px 4px; text-decoration: none; text-transform: uppercase; display: inline-block; }
+.main-nav a:hover, .main-nav li:hover > a { color: rgb(0, 0, 0); text-decoration: none; }
+.post { margin-bottom: 40px; box-sizing: border-box; }
+.post-title { font: italic 2.28em/120% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; margin: 0px 0px 7px; padding: 0px; }
+.post-title a { text-decoration: none; }
+.post-meta { margin: 0px 0px 10px; font: 90%/130% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; }
+.post-meta span { margin-right: 5px; }
+.post-meta a { text-decoration: none; }
+.post-meta a:hover { text-decoration: underline; }
+.post-meta .post-date { display: block; margin-bottom: 3px; clear: left; }
+.loops-wrapper.list-post .post, .single .list-post .post { padding-left: 122px; position: relative; margin-bottom: 60px; min-height: 150px; }
+.loops-wrapper.list-post .post-meta, .single .list-post .post-meta { width: 100px; text-align: right; line-height: 125%; position: absolute; left: 0px; top: 55px; }
+.loops-wrapper.list-post .post-meta span, .single .list-post .post-meta span { display: block; margin: 0px 0px 5px; }
+.loops-wrapper.list-post .post-meta a, .single .list-post .post-meta a { font-variant: small-caps; }
+.loops-wrapper.list-post .post-meta em, .single .list-post .post-meta em { font-size: 90%; }
+.loops-wrapper.list-post .post-meta .post-date, .single .list-post .post-meta .post-date { margin-bottom: 5px; }
+.loops-wrapper.list-post .post-meta .post-comment, .single .list-post .post-meta .post-comment { font-size: 110%; }
+.post-icon { background: transparent url("icon-post.png") no-repeat scroll right 2px; width: 27px; height: 30px; display: block; float: left; margin: 2px 12px 5px 0px; }
+.loops-wrapper.list-post .post-icon, .single .list-post .post-icon { width: 100px; padding-bottom: 15px; margin: 0px 0px 10px; display: block; border-bottom: 1px solid rgb(187, 187, 187); top: 0px; left: 0px; position: absolute; }
+.post-nav { margin: 0px 0px 30px; padding: 15px 0px; clear: both; font: italic 110%/140% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; }
+.post-nav .prev, .post-nav .next { width: 47%; position: relative; }
+.post-nav a { text-decoration: none; display: block; color: rgb(102, 102, 102); }
+.post-nav a:hover { text-decoration: none; color: rgb(0, 0, 0); }
+.post-nav .prev { float: left; }
+.post-nav .next { float: right; text-align: right; }
+.post-nav .arrow { background: rgb(0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font: 22px/100% "Times New Roman",Times,serif; display: block; float: left; width: 34px; height: 30px; padding: 4px 0px 0px; text-align: center; margin: -8px 10px 17px 0px; border-radius: 10em; }
+.post-nav .next .arrow { float: right; margin-left: 10px; margin-right: 0px; }
+.commentwrap { margin: 40px 0px 20px; position: relative; clear: both; }
+.comment-title, #reply-title { font-size: 175%; margin: 0px 0px 10px; padding: 0px; }
+.commentlist { margin: 20px 0px 0px; padding: 5px 0px 0px 122px; border-top: 2px solid rgb(0, 0, 0); }
+.commentlist li { margin: 0px; padding: 15px 0px 0px; list-style: outside none none; position: relative; }
+.commentlist .comment-author { margin: 2px 0px 5px; padding: 0px; }
+.commentlist cite { font: small-caps 135%/110% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; }
+.commentlist .bypostauthor > .comment-author cite { background: transparent url("icon-author-comment.png") no-repeat scroll 0px 2px; padding-left: 18px; }
+.commentlist .comment-time { font-size: 75%; text-transform: uppercase; }
+.commentlist .commententry { border-bottom: 1px solid rgb(221, 221, 221); position: relative; min-height: 40px; overflow: hidden; padding-bottom: 5px; }
+.commentlist ul, .commentlist ol { margin: 0px 0px 0px 90px; padding: 0px; }
+.commentlist .reply { position: absolute; right: 0px; top: 20px; }
+.commentlist .comment-reply-link { font-size: 11px; text-transform: uppercase; text-decoration: none; }
+.commentlist .comment-reply-link:hover { text-decoration: none; }
+#respond { margin: 40px 0px 30px; padding: 10px 0px 0px; position: relative; clear: both; }
+#respond #cancel-comment-reply-link { position: absolute; top: 15px; right: 0px; font-size: 65%; line-height: 100%; text-decoration: none; padding: 5px 10px; display: block; color: rgb(255, 255, 255); background: rgb(255, 51, 0) none repeat scroll 0% 0%; }
+#respond #cancel-comment-reply-link:hover { background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+#commentform { margin: 0px; padding: 0px; }
+#commentform input[type="text"] { width: 206px; margin-right: 5px; }
+#commentform label { font: small-caps 100% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; }
+#commentform textarea { height: 140px; }
+#sidebar li a { text-decoration: none; }
+#sidebar li a:hover { text-decoration: underline; }
+#sidebar .secondary { width: 120px; float: left; }
+#sidebar .secondary.last { float: right; }
+.widget { margin: 0px 0px 30px; }
+.widgettitle { margin: 0px 0px 10px; padding: 0px; font: 1em/120% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; text-transform: uppercase; }
+.widget ul { margin: 0px; padding: 0px; }
+.widget li { margin: 0px; padding: 6px 0px; list-style: outside none none; clear: both; border-top: 1px solid rgb(221, 221, 221); }
+#sidebar #searchform { position: static; }
+#sidebar #searchform #s { width: 93%; }
+#footer { clear: both; border-top: 1px solid rgb(0, 0, 0); padding: 25px 0px 10px; position: relative; font-size: 90%; }
+#footer a { text-decoration: none; }
+#footer a:hover { text-decoration: underline; }
+#footer-logo { font: 30px/100% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin: 10px 0px 20px; clear: both; }
+#footer-logo a { color: rgb(0, 0, 0); text-decoration: none; }
+.footer-nav { margin: 0px auto 20px; padding: 15px 0px 0px; border-top: 1px solid rgb(204, 204, 204); width: 86%; text-align: center; }
+.footer-nav li { padding: 0px; margin: 0px; display: inline; list-style: outside none none; }
+.footer-nav a { font: 100% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; margin: 0px 8px; text-transform: uppercase; text-decoration: none; }
+.footer-text { font: italic 90%/150% "OFL Sorts Mill Goudy TT",Georgia,Times,serif; text-align: center; margin: 0px 0px 15px; }
+.back-top { clear: both; text-align: center; margin: 20px 0px 0px -15px; position: absolute; bottom: -27px; left: 50%; }
+.back-top a { background: rgb(51, 51, 51) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font: 16px/100% "Times New Roman",Times,serif; width: 30px; height: 26px; padding-top: 4px; text-align: center; text-decoration: none; display: inline-block; border-radius: 10em; box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1); }
+.back-top a:hover { text-decoration: none; }
+.back-top a span { display: none; }
+.wp-caption { text-align: center; margin-bottom: 15px; max-width: 100%; }
+.wp-caption-text { font: italic 95%/120% Georgia,"Times New Roman",Times,serif; margin: 6px 0px; }
+.clearfix::after, .widget li::after, #footer::after, .pagenav::after, #main-nav::after, .main-nav::after, .menu::after, .gallery::after, #content::after { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.clearfix, .widget li, footer, .pagenav, #main-nav, .main-nav, .menu, .gallery, #content { display: inline-block; }
+.clearfix, .widget li, #footer, .pagenav, #main-nav, .main-nav, .menu, .gallery, #content { display: block; }
