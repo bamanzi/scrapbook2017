@@ -1,0 +1,5 @@
+/* Code tidied up by ScrapBook */
+@import url("style_001.css");
+#navigation { clear: both; box-sizing: border-box; width: 80%; left: -80%; position: absolute; top: 0px; min-height: 100%; z-index: 9000; padding-top: 4.236em; margin-bottom: 1em; font: 300 14px/14px sans-serif; background: rgb(240, 240, 240) none repeat scroll 0% 0%; }
+#comments .comment-entry p { margin: 0px 0px 10px; overflow-wrap: break-word; }
+ul.nav { margin-right: 20px; }

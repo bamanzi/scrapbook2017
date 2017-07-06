@@ -1,0 +1,47 @@
+/* Code tidied up by ScrapBook */
+@media screen and (max-width: 1150px) {
+  #pagewrap { max-width: 92%; padding: 2% 3% 10px; margin-bottom: 10%; }
+  #content { margin: 7% 0px 5%; }
+  .sidebar1 #content { max-width: 67.8%; }
+  #sidebar { margin: 7% 0px 5%; max-width: 26.2%; }
+  #sidebar .secondary { max-width: 47%; }
+}
+@media screen and (max-width: 780px) {
+  .sidebar1 #content { width: 100%; max-width: 100%; float: none; clear: both; }
+  #sidebar { width: 100%; max-width: 100%; float: none; clear: both; }
+  #sidebar .secondary { width: 48%; }
+  #headerwrap #site-logo, #headerwrap #site-description, #headerwrap #main-nav { position: static; float: none; clear: both; }
+  #header { height: auto ! important; min-height: 0px; padding-top: 20px; }
+  .main-nav { clear: both; z-index: 100; }
+}
+@media screen and (max-width: 600px) {
+  .loops-wrapper.list-post .post, .single .list-post .post { padding-left: 0px ! important; width: 100% ! important; max-width: 100% ! important; }
+  .loops-wrapper.list-post .post-meta, .single .list-post .post-meta { width: 100%; text-align: left; position: static; }
+  .loops-wrapper.list-post .post-meta span, .single .list-post .post-meta span { display: inline; margin: 0px 5px 0px 0px; }
+  .loops-wrapper.list-post .post-icon, .single .list-post .post-icon { width: 27px; height: 30px; display: block; float: left; margin: 2px 14px 5px 0px; border: medium none; position: static; }
+}
+@media screen and (max-width: 480px) {
+  #header { padding: 0px; }
+  #header .hgroup { text-align: left; }
+  #site-logo { font-size: 42px; text-align: left; padding: 0px 90px 0px 0px; margin: 10px 0px; }
+  #site-description { text-align: left; margin: 0px 0px 10px; }
+  .mobile-button { position: relative; width: 32px; height: 30px; margin-bottom: 3px; margin-right: 3px; display: block; float: right; cursor: pointer; background: rgb(238, 238, 238) none repeat scroll 0% 0%; border-radius: 5px; }
+  .mobile-button::before { content: ""; font: 21px/1em FontAwesome; color: rgb(0, 0, 0); position: absolute; top: 50%; left: 50%; margin: -0.5em 0px 0px -0.5em; width: 1em; height: 1em; text-align: center; }
+  #main-nav-wrap { position: absolute; top: 4px; right: 0px; z-index: 1000; }
+  #headerwrap #main-nav { clear: both; position: static; width: 160px; height: auto; z-index: 1000; padding: 10px 5px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(153, 153, 153); display: none; box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.2); border-radius: 5px; }
+  #headerwrap #main-nav li { clear: both; float: none; margin: 5px 0px 5px 10px; padding: 0px; border: medium none; box-shadow: none; display: block; text-align: left; }
+  #headerwrap #main-nav a, #headerwrap #main-nav ul a { font: inherit; text-transform: inherit; background: transparent none repeat scroll 0% 0%; width: auto; display: inline; padding: 0px; color: rgb(102, 102, 102); border: medium none; text-shadow: none; box-shadow: none; }
+  #headerwrap #main-nav a:hover, #headerwrap #main-nav ul a:hover { background: transparent none repeat scroll 0% 0%; color: rgb(0, 0, 0); }
+  .social-widget { position: static ! important; margin: 10px 0px; float: none; padding: 0px; }
+  .post { width: auto ! important; max-width: 100% ! important; margin-left: 0px ! important; float: none ! important; }
+  .post-title { margin: 0px 0px 2px ! important; padding-top: 4px; font-size: 2em ! important; }
+  .post-nav .prev, .post-nav .next { display: block; width: 100%; clear: both; margin-bottom: 10px; }
+  .commentlist { padding-left: 0px; }
+  .commentlist .commententry { clear: left; }
+  .commentlist ul, .commentlist ol { margin: 0px 0px 0px 7%; }
+  .footer-nav { margin: 0px auto 20px; width: 100%; }
+  .footer-nav a { margin: 0px 4px; }
+}
+@media screen and (min-width: 481px) {
+  #main-nav, #headerwrap #searchform { display: block ! important; }
+}

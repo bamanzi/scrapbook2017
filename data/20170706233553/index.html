@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="en">
+<head><script async="" src="about:blank"></script><script async="" src="about:blank"></script><script async="" src="about:blank"></script>
+<meta charset="UTF-8">
+<title>Security/Contextual Identity Project/Containers - MozillaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23.17">
+<link rel="ExportRDF" type="application/rdf+xml" title="Security/Contextual Identity Project/Containers" href="https://wiki.mozilla.org/index.php?title=Special:ExportRDF/Security/Contextual_Identity_Project/Containers&amp;xmlmime=rdf">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.mozilla.org/opensearch_desc.php" title="MozillaWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.mozilla.org/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="MozillaWiki Atom feed" href="https://wiki.mozilla.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="load.php">
+<link rel="stylesheet" href="load_001.php">
+<style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px; width: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px -1px 0px 0px; }
+html > body .suggestions { margin: -1px 0px 0px; }
+.suggestions-special { position: relative; background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; display: none; padding: 0.25em; line-height: 1.25em; }
+.suggestions-results { background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="load_002.php">
+<style>
+/* Code tidied up by ScrapBook */
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-decoration: none; }
+</style>
+<script src="about:blank"></script><script src="about:blank"></script><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style>
+<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script><script src="about:blank"></script><script src="about:blank"></script><script src="about:blank"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Security_Contextual_Identity_Project_Containers skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display: none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Security/Contextual Identity Project/Containers</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MozillaWiki</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="https://wiki.mozilla.org/Security" title="Security">Security</a>‎ | <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project" title="Security/Contextual Identity Project">Contextual Identity Project</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p><i><b>lightweight persistent contexts that isolate sites from one another</b></i>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#How_to_Use_Containers"><span class="tocnumber">2</span> <span class="toctext">How to Use Containers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#File_Menu"><span class="tocnumber">2.1</span> <span class="toctext">File Menu</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Hamburger_Menu"><span class="tocnumber">2.2</span> <span class="toctext">Hamburger Menu</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Open_links_in_new_tabs_and_containers"><span class="tocnumber">2.3</span> <span class="toctext">Open links in new tabs and containers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Benefits_and_Use_Cases"><span class="tocnumber">3</span> <span class="toctext">Benefits and Use Cases</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Purpose-specific_Containers"><span class="tocnumber">4</span> <span class="toctext">Purpose-specific Containers</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Implementation_Details"><span class="tocnumber">5</span> <span class="toctext">Implementation Details</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#What_is_.28and_isn.27t.29_separated_between_Containers"><span class="tocnumber">5.1</span> <span class="toctext">What is (and isn't) separated between Containers</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#An_extended_origin"><span class="tocnumber">5.2</span> <span class="toctext">An extended origin</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#More_information"><span class="tocnumber">5.3</span> <span class="toctext">More information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Making_containers_look_different"><span class="tocnumber">6</span> <span class="toctext">Making containers look different</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Discovering_the_feature"><span class="tocnumber">7</span> <span class="toctext">Discovering the feature</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Potential_Difficulties"><span class="tocnumber">8</span> <span class="toctext">Potential Difficulties</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Alternative_Features"><span class="tocnumber">9</span> <span class="toctext">Alternative Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Site-specific_Containers"><span class="tocnumber">9.1</span> <span class="toctext">Site-specific Containers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Add-ons"><span class="tocnumber">10</span> <span class="toctext">Add-ons</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p>Individuals behave differently in the world when they are in different contexts. The way they act at work may differ from how they act with their family. Similarly, users have different contexts when they browse the web.  They may not want to mix their social network context with their work context. The goal of this project is to allow users to separate these different contexts while browsing the web on Firefox. Each context will have its own local state which is separated from the state of other contexts.
+</p><p><a href="File_Containers-side-by-side-cropped.png" class="image"><img alt="Containers-side-by-side-cropped.png" src="700px-Containers-side-by-side-cropped.png" srcset="1050px-Containers-side-by-side-cropped.png 1.5x, 1400px-Containers-side-by-side-cropped.png 2x" width="700" height="144"></a>
+</p>
+<h2><span class="mw-headline" id="How_to_Use_Containers">How to Use Containers</span></h2>
+<p>The containers feature is enabled in Firefox Nightly 50 by default with the about:config pref `privacy.userContext.enabled` set to true.  When enabled, containers will integrate seamlessly into your current browsing experience.  You will have the option to open entirely new browsing contexts, which will have their browser storage (such as cookies or localStorage) separated from other containers. Your normal tabs, which we consider to exist in the <i>default container</i>, will still look and act as you'd expect them to before enabling containers.
+</p><p>Container tabs operate just as you would expect a normal tab to, except for the fact that the sites you visit will have access to a separate slice of the browser's storage. This means your site preferences, logged in sessions, and advertising tracking data won't carry over to the new container. Likewise, any browsing you do within the new container will not affect the preferences, logged in sessions, or tracking data of your other containers.
+</p><p>There are several ways to open new containers:
+</p>
+<h3><span class="mw-headline" id="File_Menu">File Menu</span></h3>
+<p>In the OS menu bar, click "File" -&gt; "New Container Tab". From here you can choose from one of the four pre-defined containers (Home, Work, Banking, and Shopping). After choosing one of these, you will see a new tab from that container appear in the tab strip. 
+</p><p><a href="File_Conatiners-file-menu.jpg" class="image"><img alt="Conatiners-file-menu.jpg" src="700px-Conatiners-file-menu.jpg" srcset="Conatiners-file-menu.jpg 1.5x, Conatiners-file-menu.jpg 2x" width="700" height="259"></a>
+</p>
+<h3><span class="mw-headline" id="Hamburger_Menu">Hamburger Menu</span></h3>
+<p>In Firefox Nightly, click the hamburger menu (three horizontal bars on the right hand side of the browser), and then click "Customize". From here, you'll find the "Open Container Tab" icon under the "Additional Tools and Features" section of the icons.
+</p><p><a href="File_Containers-hamburger-menu-customize.png" class="image"><img alt="Containers-hamburger-menu-customize.png" src="700px-Containers-hamburger-menu-customize.png" srcset="1050px-Containers-hamburger-menu-customize.png 1.5x, 1400px-Containers-hamburger-menu-customize.png 2x" width="700" height="171"></a>
+</p><p>You can drag this icon to the right side of the URL bar.
+</p><p><a href="File_Containers-hamburger-menu-dropdown.png" class="image"><img alt="Containers-hamburger-menu-dropdown.png" src="700px-Containers-hamburger-menu-dropdown.png" srcset="1050px-Containers-hamburger-menu-dropdown.png 1.5x, 1400px-Containers-hamburger-menu-dropdown.png 2x" width="700" height="146"></a>
+</p><p>Alternatively, you can place the icon in the dropdown hamburger menu.
+</p><p><a href="File_Containers-hamburger-in-hamburger.png" class="image"><img alt="Containers-hamburger-in-hamburger.png" src="700px-Containers-hamburger-in-hamburger.png" srcset="1050px-Containers-hamburger-in-hamburger.png 1.5x, 1400px-Containers-hamburger-in-hamburger.png 2x" width="700" height="237"></a>
+</p>
+<h3><span class="mw-headline" id="Open_links_in_new_tabs_and_containers">Open links in new tabs and containers</span></h3>
+<p>It's possible to open links in a new and/or different container. Right click on any link, select "Open link in New Container Tab", and then select the desired container tab.
+</p><p><a href="File_Containers-right-click-menu.png" class="image"><img alt="Containers-right-click-menu.png" src="700px-Containers-right-click-menu.png" srcset="1050px-Containers-right-click-menu.png 1.5x, 1400px-Containers-right-click-menu.png 2x" width="700" height="278"></a>
+</p><p>Holding the "Control" key on Windows or Linux (or the "Command" key on Mac) while clicking a link will open it in a new tab. The new tab will open within the same container as the previous tab. This includes both the default container and in any of the predefined containers. 
+</p>
+<h2><span class="mw-headline" id="Benefits_and_Use_Cases">Benefits and Use Cases</span></h2>
+<p>At an abstract level, the feature seeks to give users more control over the data websites can access (ex: cookies, localStorage, indexedDB, etc). The current level of control is very coarse, essentially providing an "all or nothing" solution; users can clear everything or accept everything. Cookies can be managed with the Cookie manager, but all other state has no graphical interface for management (see <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1147820">Bug 1147820</a>).
+</p><p>The containers project inserts a user-controlled key into storage via OriginAttributes, which allows users to decide which state to use when interacting with a site. They can choose to send the state from their personal context or work context, and they can choose to create a new, short-lived state to browse in a certain context for a few days until a task is completed. The goal of the project is to create a very customizable experience while including a few suggested uses for users who may not want as much control.
+</p>
+<ol>
+<li> Users can log into multiple accounts on the same site, even when the site does not natively support concurrent sessions.
+<ul>
+<li> Several examples include:
+<ul>
+<li> A user may wants to manage their work and personal Gmail accounts side-by-side in the same window.
+</li>
+<li> A user has a Facebook or eBay account for their business and one for their personal life.
+</li>
+</ul>
+</li>
+<li> Current solutions:
+<ul>
+<li> Users open multiple browsers (this takes users away from Firefox).
+</li>
+<li> A user opens one account in Private Browsing mode (this has a limit of 2 accounts, and forces one to be ephemeral).
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> Provides protection against tracking while still providing access to services
+<ul>
+<li> A user wants to log into Facebook and keep the site open while they browse the web, but doesn't want Facebook buttons to track them across sites.
+</li>
+<li> A user wants to use Gmail but doesn't want their google searches linked to their Google account.
+</li>
+</ul>
+</li>
+<li> Users can control an advertiser's ability to track them.
+<ul>
+<li> A user wants to shop for items, but doesn't want retargeting ads to follow them around during the browsing they do for work. If the user does their shopping in the shopping context and switches to the work context while at work they will not send the same set of cookies to advertisers.
+</li>
+</ul>
+</li>
+<li> Users can create short-lived contexts for a specific task, and discard them once the task is complete (Note that this is not implemented yet in the current design.)
+<ul>
+<li> A user may want to do research for a vacation. They can create a vacation container which keeps their TripAdvisor account logged in and has advertisements related to travel. The user can keep this context for the few weeks leading up to the vacation and can discard it after.
+</li>
+</ul>
+</li>
+<li> Isolates a site's credentials to a container, helping prevent CSRF, clickjacking, or other attacks which rely on the presence of ambient credentials.
+<ul>
+<li> A user has their online banking sites open in the banking container. An attacker attempts to exploit a CSRF by tricking the user into clicking a link on Facebook (open in the Home container). The CSRF is sent without the bank's credentials and the attack fails.
+</li>
+</ul>
+</li>
+</ol>
+<p>Containers also provides benefits for developers. For example, a web developer can easily test their website by being logged in as different users at the same time.
+</p>
+<ul>
+<li> They can test a learning management system (e.g. Moodle) by having three containers: teacher, student, admin.
+</li>
+<li> User Story: I work at a technology company which primarily focuses on our website. Being able to view the site with a fresh set of cookies this easily is awesome. We use incognito mode currently, but that has the limitation of each tab/window sharing one set of incognito cookies.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Purpose-specific_Containers">Purpose-specific Containers</span></h2>
+<p>We propose a model where users are given a set of contexts that user research suggests are common or useful user contexts, and also provide the ability for a user to define their own contexts.
+</p><p><a href="File_Containers-start-page.png" class="image"><img alt="Containers-start-page.png" src="Containers-start-page.png" width="900" height="560"></a>
+</p><p><i>(Note that the description text in the above image has not yet been implemented.)</i>
+</p><p>The set of included containers is:
+</p>
+<ul>
+<li> Personal (to use at home)
+</li>
+<li> Work (to use at the office)
+</li>
+<li> Banking (for accessing sites with financial or sensitive information)
+</li>
+<li> Shopping (for accessing ecommerce sites)
+</li>
+<li> Custom [available in future versions]
+</li>
+</ul>
+<p>Through naming and onboarding, we gently encourage users to use different containers for different purposes, as the separation is necessary to gain the benefits above. A purpose-specific container can have many sites in it:
+</p>
+<ul>
+<li> The Personal container can be signed into Outlook, Facebook and Twitter. Work can have Outlook, Facebook and Twitter, too.
+</li>
+<li> The Banking container can be signed into your bank, insurance, accounting and investing websites
+</li>
+<li> The Shopping container can be a place for Amazon, Alibaba, and other stores
+</li>
+</ul>
+<h2><span class="mw-headline" id="Implementation_Details">Implementation Details</span></h2>
+<h3><span class="mw-headline" id="What_is_.28and_isn.27t.29_separated_between_Containers">What is (and isn't) separated between Containers</span></h3>
+<p>Separated by Containers:
+</p>
+<ul>
+<li> Cookies
+</li>
+<li> localStorage
+</li>
+<li> indexedDB
+</li>
+<li> HTTP data cache
+</li>
+<li> Image Cache (<a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1270680">bug</a> in progress)
+</li>
+<li> Any other areas supported by originAttributes <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179985">Bug 1179985</a>
+</li>
+</ul>
+<p>Not separated by Containers (Yet):
+</p>
+<ul>
+<li> History - <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1283320">Bug 1283320</a>
+</li>
+<li> Bookmarks - <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1213290">Bug 1213290</a>
+</li>
+<li> Security Exceptions for Invalid TLS Certificates <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1249348">Bug 1249348</a>
+</li>
+</ul>
+<p>Not separated by Containers (On Purpose):
+</p>
+<ul>
+<li> Saved Passwords
+</li>
+<li> Saved Search and Form data
+</li>
+<li> HSTS Flags - (Supported by OA: <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1253006">Bug 1253006</a>)
+</li>
+<li> OCSP Responses - (OA Supported: <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1264562">Bug 1264562</a>)
+</li>
+</ul>
+<p>You can find more information on the implementation of the project by looking through the Contextual Identity / Containers meta-bug, <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191418">Bug 1191418</a>.
+</p>
+<h3><span class="mw-headline" id="An_extended_origin">An extended origin</span></h3>
+<p>An origin is defined as a combination of a scheme, host and port. Browsers make numerous security decisions based off of the origin of a resource using the same-origin-policy.  Various features can be re-imagined as simply adding another key to the origin check. These include the Tor Browser’s work on <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1260931">First Party Isolation</a>, Private Browsing Mode, the <a rel="nofollow" class="external text" href="https://w3c.github.io/webappsec-suborigins/">SubOrigin Proposal</a>, and Containers.
+</p><p>Hence, Gecko has added additional attributes to the origin called OriginAttributes.  When trying to determine if two origins are same-origin, Gecko will not only check if they have matching schemes, hosts, and ports, but now also check if all their OriginAttributes match.
+</p><p>Containers adds a userContextId OriginAttribute.  Each container has a unique userContextId.  Stored site data (like cookies) is now stored with a scheme, host, port, and userContextId.  So if a user has example.com cookies for the Shopping userContextId, they will not be accessible by example.com in the Banking Container.
+</p><p>Note that one of the motivations in enabling this feature in Nightly is to help ensure that we iron out any bugs that may exist in our OriginAttribute implementation before features that depend on it are rolled out to users.
+</p>
+<h3><span class="mw-headline" id="More_information">More information</span></h3>
+<ul>
+<li> OriginAttributes implementation <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179985">meta-bug</a>
+</li>
+<li> Containers implementation <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191418">meta-bug</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Making_containers_look_different">Making containers look different</span></h2>
+<p><a href="File_Containers-tabs-stacked.png" class="image"><img alt="Containers-tabs-stacked.png" src="900px-Containers-tabs-stacked.png" srcset="Containers-tabs-stacked.png 1.5x, Containers-tabs-stacked.png 2x" width="900" height="318"></a>
+</p><p>Each container has several visual indicators:
+</p>
+<ul>
+<li> Name: On the location bar
+</li>
+<li> Icon: On the location bar
+</li>
+<li> Color: On the tab and location bar
+</li>
+</ul>
+<h2><span class="mw-headline" id="Discovering_the_feature">Discovering the feature</span></h2>
+<p>For the initial version, this feature is discoverable via the File menu and hamburger icon menu as discussed above. This makes the feature accessible for those who want to use it, and have no impact on the browsing experience of those who don't. Through user research, we’ve found that many people have only one account per website, and that they don’t currently separate their online selves into work/home/banking/etc.  Containers is not a feature for those users.
+</p><p>However, we can hook into several user actions and present onboarding messages to encourage container use for users who can benefit from them. We can detect users logging in and out of a service like Twitter that doesn't have support for multiple logins, and offer the feature to them. We can also offer the feature to users when they first try to access their online banking after the feature has been enabled.
+</p>
+<h2><span class="mw-headline" id="Potential_Difficulties">Potential Difficulties</span></h2>
+<p>There are several open questions and problems related to how users will understand the feature. We will need to determine the best way to prevent these misunderstandings.
+</p>
+<ul>
+<li> A user may open in account in one container and not understand why they are not logged into the account on other containers.
+</li>
+<li> A user may browse in their Home container for a bit and not understand why their browsing history shows up in their Work container.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Alternative_Features">Alternative Features</span></h2>
+<h3><span class="mw-headline" id="Site-specific_Containers">Site-specific Containers</span></h3>
+<p>Site-specific containers could be used to pin a container to a specific origin. Users could specify that a container only be used for a specific first-party. 
+</p><p>For example the user may want to define a "Facebook Container" which is only used for isolating Facebook from the rest of the user's browsing. When the user types "facebook.com" into the address bar, they would receive a result which allows them to open their Facebook Container. The browser could also prevent or prompt the user from navigating to other sites within that container.
+</p><p>The browser could also take steps to prevent the user from browsing a specific site outside of its container. For example, when you navigate to twitter.com the browser could show a ribbon at the top that says: "hey, you normally open this in a container, would you like to do this now?" with a button to close the tab and open a new container window.
+</p><p>When we link containers to a specific origin (i.e Facebook Container), we may be able to offer some additional features to users. For example, we can clear all non-Facebook cookies from that container each time the users finishes a session in the Facebook Container.
+</p><p>Site-specific containers raise some issues and questions:
+</p>
+<ul>
+<li> When I sign out of a site, will that site-specific container disappear?
+</li>
+<li> The website I signed into saves a whole bunch of cookies that are outside of its origin. How will the browser know that these out-of-origin cookies are associated with a specific site container?
+</li>
+<li> Some sites may require that the user interact with multiple top-level origins during a session, or may require cookies from multiple origins.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Add-ons">Add-ons</span></h2>
+<ul>
+<li> Firefox add-ons:
+<ul>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=sessionperwindow">"One session per window"</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/priv8/">Priv8</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-GB/firefox/addon/private-tab/">Private Tab</a>
+</li>
+<li> Cookies
+<ul>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/cookieswap/">CookieSwap</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/multifox/">Multifox</a> (abandoned)
+</li>
+</ul>
+</li>
+<li> Profile managment
+<ul>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/profilist/">Profilist</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/profileswitcher/">ProfileSwitcher</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/switchy/">Switchy</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.080 seconds
+Real time usage: 0.111 seconds
+Preprocessor visited node count: 67/1000000
+Preprocessor generated node count: 72/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki_mozilla_org:pcache:idhash:233330-0!*!*!!en!2!* and timestamp 20170706061508 and revision id 1162651
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;oldid=1162651">https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;oldid=1162651</a>"				</div>
+												<div id="catlinks" class="catlinks catlinks-allhidden"></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="https://wiki.mozilla.org/index.php?title=Special:UserLogin&amp;returnto=Security%2FContextual+Identity+Project%2FContainers" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="https://wiki.mozilla.org/Special:RequestAccount">Request account</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="#" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="https://wiki.mozilla.org/index.php?title=Talk:Security/Contextual_Identity_Project/Containers&amp;action=edit&amp;redlink=1" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="#">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="https://wiki.mozilla.org/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input name="search" placeholder="Search" title="Search MozillaWiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" type="submit">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(&quot;mozilla-wiki-logo-alt-135px.png&quot;);" href="https://wiki.mozilla.org/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="https://wiki.mozilla.org/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-Product-releases"><a href="https://wiki.mozilla.org/Releases">Product releases</a></li>
+			<li id="n-newpages"><a href="https://wiki.mozilla.org/Special:NewPages">New pages</a></li>
+			<li id="n-recentchanges"><a href="https://wiki.mozilla.org/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-Recent-uploads"><a href="https://wiki.mozilla.org/Special:NewFiles">Recent uploads</a></li>
+			<li id="n-Popular-pages"><a href="https://wiki.mozilla.org/Special:PopularPages">Popular pages</a></li>
+			<li id="n-randompage"><a href="https://wiki.mozilla.org/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li>
+			<li id="n-Help"><a href="https://wiki.mozilla.org/MozillaWiki:Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-How_to_Contribute" aria-labelledby="p-How_to_Contribute-label">
+	<h3 id="p-How_to_Contribute-label" tabindex="2"><a href="#" aria-haspopup="true" aria-controls="p-How_to_Contribute-list" role="button" aria-pressed="true" aria-expanded="true">How to Contribute</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-How_to_Contribute-list">
+			<li id="n-All-hands-meeting"><a href="https://wiki.mozilla.org/WeeklyUpdates">All-hands meeting</a></li>
+			<li id="n-Other-meetings"><a href="https://wiki.mozilla.org/Community_Calendar">Other meetings</a></li>
+			<li id="n-Contribute-to-Mozilla"><a href="https://wiki.mozilla.org/Contribute">Contribute to Mozilla</a></li>
+			<li id="n-Mozilla-Reps"><a href="https://wiki.mozilla.org/ReMo">Mozilla Reps</a></li>
+			<li id="n-Student-Ambassadors"><a href="https://wiki.mozilla.org/StudentAmbassadors">Student Ambassadors</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-MozillaWiki" aria-labelledby="p-MozillaWiki-label">
+	<h3 id="p-MozillaWiki-label" tabindex="3"><a href="#" aria-haspopup="true" aria-controls="p-MozillaWiki-list" role="button" aria-pressed="false" aria-expanded="false">MozillaWiki</a></h3>
+	<div class="body">
+		<ul id="p-MozillaWiki-list">
+			<li id="n-News"><a href="https://wiki.mozilla.org/MozillaWiki:News">News</a></li>
+			<li id="n-About"><a href="https://wiki.mozilla.org/MozillaWiki:About">About</a></li>
+			<li id="n-Team"><a href="https://wiki.mozilla.org/MozillaWiki:Team">Team</a></li>
+			<li id="n-Policies"><a href="https://wiki.mozilla.org/MozillaWiki:Policies">Policies</a></li>
+			<li id="n-Releases"><a href="https://wiki.mozilla.org/MozillaWiki:Releases">Releases</a></li>
+			<li id="n-.40MozillaWiki"><a href="https://twitter.com/MozillaWiki" rel="nofollow">@MozillaWiki</a></li>
+			<li id="n-Report-a-wiki-bug"><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Websites&amp;component=wiki.mozilla.org" rel="nofollow">Report a wiki bug</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Around_Mozilla" aria-labelledby="p-Around_Mozilla-label">
+	<h3 id="p-Around_Mozilla-label" tabindex="4"><a href="#" aria-haspopup="true" aria-controls="p-Around_Mozilla-list" role="button" aria-pressed="false" aria-expanded="false">Around Mozilla</a></h3>
+	<div class="body">
+		<ul id="p-Around_Mozilla-list">
+			<li id="n-Mozilla-Support"><a href="https://support.mozilla.org/" rel="nofollow">Mozilla Support</a></li>
+			<li id="n-Mozilla-Developer-Network"><a href="https://developer.mozilla.org/" rel="nofollow">Mozilla Developer Network</a></li>
+			<li id="n-Planet-Mozilla"><a href="https://planet.mozilla.org/" rel="nofollow">Planet Mozilla</a></li>
+			<li id="n-Mozilla-Blog"><a href="https://blog.mozilla.org/" rel="nofollow">Mozilla Blog</a></li>
+			<li id="n-Webmaker"><a href="https://webmaker.org/" rel="nofollow">Webmaker</a></li>
+			<li id="n-Research"><a href="https://www.mozilla.org/research/" rel="nofollow">Research</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="5"><a href="#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="https://wiki.mozilla.org/Special:WhatLinksHere/Security/Contextual_Identity_Project/Containers" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="https://wiki.mozilla.org/Special:RecentChangesLinked/Security/Contextual_Identity_Project/Containers" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="https://wiki.mozilla.org/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;oldid=1162651" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="https://wiki.mozilla.org/index.php?title=Security/Contextual_Identity_Project/Containers&amp;action=info">Page information</a></li>
+			<li id="t-importfrometherpadlink"><a href="https://wiki.mozilla.org/Special:ImportFromEtherpad" rel="importfrometherpad-link">Import an Etherpad</a></li>
+			<li id="t-smwbrowselink"><a href="https://wiki.mozilla.org/Special:Browse/Security-2FContextual_Identity_Project-2FContainers" rel="smw-browse">Browse properties</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 February 2017, at 13:02.</li>
+											<li id="footer-info-viewcount">This page has been accessed 82,658 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wiki.mozilla.org/MozillaWiki:Privacy_policy" title="MozillaWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://wiki.mozilla.org/MozillaWiki:About" title="MozillaWiki:About">About MozillaWiki</a></li>
+											<li id="footer-places-mobileview"><a href="https://m.wiki.mozilla.org/Security/Contextual_Identity_Project/Containers" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+						<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+<script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+</html>
