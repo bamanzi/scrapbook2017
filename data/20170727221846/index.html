@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+            <title>Sea Containers :: Add-ons for Firefox</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    
+        <link title="Firefox Add-ons" rel="search" type="application/opensearchdescription+xml" href="https://addons.mozilla.org/en-US/firefox/opensearch.xml">
+
+          <link href="tabzilla.css" rel="stylesheet">
+              <link rel="stylesheet" media="all" href="impala-min.css">
+      <link rel="stylesheet" media="all" href="css-min.css">
+    
+        <meta property="og:title" content="Sea Containers">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://addons.cdn.mozilla.net/user-media/addon_icons/813/813862-64.png?modified=1496427620">
+  <meta property="og:url" content="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/">
+  <meta property="og:description" content="Containers sidebar for managing tabs.">
+    <noscript><link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/impala/nojs.css?b=7bdc88a2-596f7405"></noscript>
+
+    
+    <script type="text/javascript" async="" src="about:blank"></script><script src="about:blank"></script>
+  <style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+  #diigotb-imagepanel { height: 22px !important; position: absolute !important; z-index: 11000022 !important; margin: 0px !important; }
+  #diigotb-imagepanel .diigotb-btn { cursor: pointer !important; width: 20px !important; height: 20px !important; margin: 2px !important; float: left !important; background: transparent url("chrome://diigotb/skin/save-image-action-icons.png") no-repeat scroll 0% 0% !important; }
+  #diigotb-imagepanel #diigotb-quick-save { background-position: 0px 0px !important; }
+  #diigotb-imagepanel.needpremium #diigotb-quick-save { background-position: 0px -20px !important; cursor: default !important; }
+  .diigotb-border { position: absolute !important; z-index: 11000000 !important; margin: 0px !important; background-color: rgb(75, 140, 220) !important; }
+  .diigotb-left { width: 1px !important; }
+  .diigotb-right { width: 1px !important; }
+  .diigotb-top { height: 1px !important; }
+  .diigotb-bottom { height: 1px !important; }
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+  <body class="html-ltr firefox moz-header-slim gutter addon-details is-impala restyle linux" data-app="firefox" data-appname="Firefox" data-appid="1" data-anonymous="true" data-readonly="false" data-media-url="https://addons.cdn.mozilla.net/user-media/" data-static-url="https://addons.cdn.mozilla.net/static/" data-raven-dsn="https://8c1c5936578948a9a0614cbbafccf049@sentry.prod.mozaws.net/78" data-raven-urls="['addons.mozilla.org', 'addons.cdn.mozilla.net']" data-fxa-config="{&quot;state&quot;: &quot;18e2ec0cdf3a8694bf7e20e44f964221f402407d692c51a7006ec7846c70f1bf&quot;, &quot;clientId&quot;: &quot;a4907de5fa9d78fc&quot;, &quot;oauthHost&quot;: &quot;https://oauth.accounts.firefox.com/v1&quot;, &quot;profileHost&quot;: &quot;https://profile.accounts.firefox.com/v1&quot;, &quot;redirectUrl&quot;: &quot;https://addons.mozilla.org/api/v3/accounts/authenticate/&quot;, &quot;scope&quot;: &quot;profile&quot;, &quot;contentHost&quot;: &quot;https://accounts.firefox.com&quot;}">
+
+    <div id="main-wrapper">
+      <div id="page" class="c">
+                  <div class="header-bg" style="width: calc(100vw - 7px);">
+            <div class="amo-header-wrapper">
+              <div id="tabzilla">
+    <a href="https://www.mozilla.org/">Mozilla</a>
+</div>              <div class="amo-header">
+                <nav id="aux-nav" role="navigation" class="menu-nav c">
+                  <ul>
+                                            <li class="account anonymous nomenu login legacy">
+    <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signup&amp;scope=profile&amp;state=18e2ec0cdf3a8694bf7e20e44f964221f402407d692c51a7006ec7846c70f1bf%3AL2VuLVVTL2ZpcmVmb3gvYWRkb24vc2VhLWNvbnRhaW5lcnMvP3NyYz1jb2xsZWN0aW9uJmNvbGxlY3Rpb25faWQ9ODRlYmEyYzYtY2YyNS00MWRjLTlkMGMtZmNlZmIxMDMwYjg4&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Register</a> or <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signin&amp;scope=profile&amp;state=18e2ec0cdf3a8694bf7e20e44f964221f402407d692c51a7006ec7846c70f1bf%3AL2VuLVVTL2ZpcmVmb3gvYWRkb24vc2VhLWNvbnRhaW5lcnMvP3NyYz1jb2xsZWN0aW9uJmNvbGxlY3Rpb25faWQ9ODRlYmEyYzYtY2YyNS00MWRjLTlkMGMtZmNlZmIxMDMwYjg4&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Log in</a>  </li>
+
+                                                              <li>
+                        <a href="#" id="other-apps" title="Find add-ons for other applications">Other Applications</a>
+                        <ul class="other-apps">
+                                                                                                                                          <li id="app-thunderbird" class="thunderbird">
+                                <a href="https://addons.mozilla.org/en-US/thunderbird">Thunderbird</a>
+                              </li>
+                                                                                                                <li id="app-android" class="android">
+                                <a href="https://addons.mozilla.org/en-US/android">Firefox for Android</a>
+                              </li>
+                                                                                                                <li id="app-seamonkey" class="seamonkey">
+                                <a href="https://addons.mozilla.org/en-US/seamonkey">SeaMonkey</a>
+                              </li>
+                                                                              </ul>
+                      </li>
+                                      </ul>
+                </nav>
+                <div class="header-search" role="search">
+                                                                                  <form id="search" action="https://addons.mozilla.org/en-US/firefox/search/" data-no-csrf="">
+  <input id="search-q" name="q" autocomplete="off" title="" class="text placeholder" placeholder="search for add-ons" value="" type="text">
+        <input id="id_appver" name="appver" value="54.0" type="hidden">
+    <input id="id_platform" name="platform" value="linux" type="hidden">
+    <button class="search-button" type="submit" title="Search" src="https://addons.cdn.mozilla.net/static/img/zamboni/global/btn-search.png?b=7bdc88a2-596f7405"></button>
+      <div id="site-search-suggestions" data-cat="all" data-src="/en-US/firefox/search/suggestions"><div class="wrap"><p><a class="sel" href="#"><span>Search add-ons for <b>{0}</b></span></a></p><ul></ul></div></div>
+  </form>                                                      </div>
+                <div id="masthead">
+                                    <h1 class="site-title">
+  <a href="https://addons.mozilla.org/en-US/firefox/" title="Return to the Firefox Add-ons homepage">
+    <img alt="Firefox" src="firefox.png">
+    Add-ons
+</a>
+</h1>                  
+
+<nav id="site-nav" class="menu-nav c">
+  <ul>
+      <li id="extensions">
+    <a href="https://addons.mozilla.org/en-US/firefox/extensions/">Extensions</a>
+    <ul class="two-col">
+              <li><em><a href="https://addons.mozilla.org/en-US/firefox/extensions/?sort=featured">Featured</a></em></li>
+              <li><em><a href="https://addons.mozilla.org/en-US/firefox/extensions/?sort=users">Most Popular</a></em></li>
+              <li><em><a href="https://addons.mozilla.org/en-US/firefox/extensions/?sort=rating">Top Rated</a></em></li>
+                  <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/alerts-updates/">Alerts &amp; Updates</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/appearance/">Appearance</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/bookmarks/">Bookmarks</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/download-management/">Download Management</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/feeds-news-blogging/">Feeds, News &amp; Blogging</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/games-entertainment/">Games &amp; Entertainment</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/language-support/">Language Support</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/photos-music-videos/">Photos, Music &amp; Videos</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/privacy-security/">Privacy &amp; Security</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/search-tools/">Search Tools</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/shopping/">Shopping</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/social-communication/">Social &amp; Communication</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/tabs/">Tabs</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/web-development/">Web Development</a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/extensions/other/">Other</a></li>
+          </ul>
+  </li>
+
+    
+        <li id="themes">
+      <a href="https://addons.mozilla.org/en-US/firefox/themes/">Themes</a>
+              <ul class="two-col">
+                      <li><em><a href="https://addons.mozilla.org/en-US/firefox/themes/?sort=popular">Most Popular</a></em></li>
+                      <li><em><a href="https://addons.mozilla.org/en-US/firefox/themes/?sort=rating">Top Rated</a></em></li>
+                      <li><em><a href="https://addons.mozilla.org/en-US/firefox/themes/?sort=created">Newest</a></em></li>
+                                <li><a href="https://addons.mozilla.org/en-US/firefox/themes/abstract">Abstract</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/causes">Causes</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/fashion">Fashion</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/film-and-tv">Film and TV</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/firefox">Firefox</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/foxkeh">Foxkeh</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/holiday">Holiday</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/music">Music</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/nature">Nature</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/other">Other</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/scenery">Scenery</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/seasonal">Seasonal</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/solid">Solid</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/sports">Sports</a></li>
+                      <li><a href="https://addons.mozilla.org/en-US/firefox/themes/websites">Websites</a></li>
+                  </ul>
+        <div>
+          <a class="complete-themes" href="https://addons.mozilla.org/en-US/firefox/complete-themes/">
+            Want more customization? Try <b>Complete Themes</b>          </a>
+        </div>
+          </li>
+
+        <li id="collections">
+            <a href="https://addons.mozilla.org/en-US/firefox/collections/">Collections</a>
+      <ul>
+                  <li><em><a href="https://addons.mozilla.org/en-US/firefox/collections/?sort=featured">Featured</a></em></li>
+                  <li><em><a href="https://addons.mozilla.org/en-US/firefox/collections/?sort=users">Most Followers</a></em></li>
+                  <li><em><a href="https://addons.mozilla.org/en-US/firefox/collections/?sort=created">Newest</a></em></li>
+                <hr>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/collections/mine/">
+          Collections I've Made</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/collections/following/">
+          Collections I'm Following</a></li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/collections/mine/favorites">
+          My Favorite Add-ons</a></li>
+      </ul>
+          </li>
+    <li id="more">
+      <a href="#">More…</a>
+      <ul>
+                  <li class="more-mobile"><a href="https://addons.mozilla.org/en-US/android">
+            Add-ons for Mobile</a></li>
+                <li class="more-lang"><a href="https://addons.mozilla.org/en-US/firefox/language-tools/">
+          Dictionaries &amp; Language Packs</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/search-tools/">Search Tools</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/developers/">Developer Hub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                                  </div>
+                                                                                                      <div class="site-balloon" id="site-nonfx">
+                      <p>
+                        To try the thousands of add-ons available here, download <a href="http://mozilla.org/firefox/?src=amo">Mozilla Firefox</a>, a fast, free way to surf the Web!                      </p>
+                      <a href="#" class="close">Close</a>
+                    </div>
+                                    <div class="site-balloon" id="site-welcome">
+                                        <h3>Welcome to Firefox Add-ons.</h3>
+                    <p>
+                                              Choose from thousands of extra features and styles to make Firefox your own.                                          </p>
+                    <a href="#" class="close">Close</a>
+                  </div>
+                  <div class="site-balloon" id="mobile-banner">
+                    <h3>On the go?</h3>
+                    <p>
+                      Check out our <a class="mobile-link" href="#">Mobile Add-ons site</a>.                    </p>
+                    <a href="#" class="close">Close</a>
+                  </div>
+                                <div itemscope="" itemtype="http://schema.org/WebApplication">
+  <link itemprop="SoftwareApplicationCategory" href="http://schema.org/OtherApplication">
+  <aside class="secondary addon-vitals">
+
+        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <meta itemprop="price" content="$0">
+      <meta itemprop="priceCurrency" content="USD">
+      <link itemprop="availability" href="http://schema.org/InStock">
+    </span>
+
+    <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+      <meta content="4.0" itemprop="ratingValue">
+        <span class="stars large stars-4" title="Rated 4 out of 5 stars">
+      Rated 4 out of 5 stars  </span>
+
+
+      <div>
+        <a id="reviews-link" href="#reviews" class="scrollto">
+          <span itemprop="ratingCount">2</span> user reviews        </a>
+      </div>
+    </div>
+
+                                                    <div id="daily-users">
+                  <a class="stats" title="View statistics" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/statistics/">158 users</a>
+                <meta itemprop="interactionCount" content="UserDownloads:970">
+      </div>
+    
+    <div class="widgets">
+      
+      <a class="collection-add widget collection" data-listurl="/en-US/firefox/collections/ajax/list" data-addurl="/en-US/firefox/collections/ajax/add" data-removeurl="/en-US/firefox/collections/ajax/remove" data-newurl="/en-US/firefox/collections/ajax/new" data-addonid="813862" title="" href="#">
+  Add to collection
+</a>    </div>
+              </aside>
+
+  
+    <section class="primary addon-description-header">
+    <div id="addon" class="island c" role="main" data-id="813862">
+      <hgroup>
+                <img id="addon-icon" itemprop="image" src="813862-64.png" class="icon" alt="Icon of Sea Containers">
+        <h1 class="addon" dir="ltr" lang="en-gb">
+          <span itemprop="name">Sea Containers</span>
+                      <span class="version-number" itemprop="version">0.8</span>
+                              <a href="https://support.mozilla.org/kb/firefox-add-technology-modernizing" class="is-webextension" title="This add-on is built with new technology that is compatible with Firefox 57 and beyond.">Compatible with Firefox 57+</a>
+          
+                  </h1>
+        <h4 class="author">by <a href="https://addons.mozilla.org/en-US/firefox/user/jkt/" title="jkt">jkt</a></h4>
+      </hgroup>
+      <p id="addon-summary" itemprop="description" dir="ltr" lang="en-gb">Containers sidebar for managing tabs.</p>
+              <div class="install-wrapper ">
+<div class="install-shell">
+<div class="install clickHijack" data-addon="813862" data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/813/813862-32.png?modified=1496427620" data-developers="/en-US/firefox/addon/sea-containers/developers" data-versions="/en-US/firefox/addon/813862/versions/" data-name="Sea Containers" data-min="54.0a2" data-max="*" data-is-compatible="true" data-is-compatible-app="true" data-compat-overrides="[]" data-version-supported="true">
+  <p class="install-button">
+                        <a class="button prominent platform linux add installer" data-hash="sha256:ea6a26230a54a61992e11a9f2bed0c8f3fe8ef2bb178add61d96e33d53f11da5" href="https://addons.mozilla.org/firefox/downloads/latest/sea-containers/platform:2/addon-813862-latest.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button prominent platform mac add installer" data-hash="sha256:2569c0eb1a7f430b76112600b09f948ab8fc27d44c9c9221b4ef32bc358972d1" href="https://addons.mozilla.org/firefox/downloads/latest/sea-containers/platform:3/addon-813862-latest.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button prominent platform windows add installer" data-hash="sha256:67eca3c4e505ea390ea45933ee7ffe6c101208aca9b1da98b3d07f785596bffa" href="https://addons.mozilla.org/firefox/downloads/latest/sea-containers/platform:5/addon-813862-latest.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+      </p>
+</div> 
+
+  <div class="detailed">
+          <a class="webext-permissions badge" href="#">
+      Permissions
+    </a>
+    </div>
+  
+      <div class="d2c-reasons-popup popup">
+      <p>This add-on is not compatible with your version of Firefox because of the following:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> </div>
+                </div>
+
+    
+
+      </section>
+</div>
+              </div>
+            </div>           </div>         
+                                              
+  
+      <section class="previews" style="width: calc(100vw - 7px);">
+      <div class="carousel">
+        <a href="#" class="control prev disabled">«</a>
+        <a href="#" class="control next disabled">»</a>
+        <ul id="preview" class="slider" style="left: 0%;"><li class="panel active">
+              <a class="screenshot thumbnail" rel="jquery-lightbox" href="184792.png" title="">
+                                <img src="184792_001.png" alt="Add-on screenshot #1">
+              </a>
+            </li></ul>
+      </div>
+    </section>
+    <div id="lightbox" style="display: none;" class="">
+      <section>
+        <div class="content">
+          <a class="close" href="#">Close</a>
+        <img id="preview0" src="184792.png" alt="" style="opacity: 1; z-index: 1;"></div>
+        <div class="controls">
+          <a href="#" class="control next disabled">»</a>
+          <a href="#" class="control prev disabled">«</a>
+          <div class="caption"><span></span></div>
+        </div>
+      </section>
+    </div>
+  
+<aside class="secondary metadata c">
+  <ul class="links">
+          <li><a class="home" href="https://outgoing.prod.mozaws.net/v1/85e9e6eac1ed919dd42e04bef9becb556cf834846b6cbe0dae2fb4c3f6021ce8/https%3A//github.com/jonathanKingston/sea-containers">
+        Add-on home page</a></li>
+              <li><a class="support" href="https://outgoing.prod.mozaws.net/v1/85e9e6eac1ed919dd42e04bef9becb556cf834846b6cbe0dae2fb4c3f6021ce8/https%3A//github.com/jonathanKingston/sea-containers">Support site</a></li>
+          </ul>
+      <ul>
+      <li>Version 0.8 <a class="scrollto" href="#detail-relnotes">Info</a></li>
+      <li>Last Updated: June  2, 2017</li>
+      <li class="source-license">
+                                      Released under <a href="http://www.mozilla.org/MPL/2.0/">Mozilla Public License, version 2.0</a>                        </li>
+    </ul>
+  </aside>
+
+<section class="primary island c">
+  <h2>About this Add-on</h2>
+  <div class="prose">
+      <div id="addon-description" class="prose">Containers sidebar for managing tabs.</div>
+    </div>
+</section>
+
+<aside class="secondary addon-reviews c">
+      <div>
+        <span class="stars stars-4" title="Rated 4 out of 5 stars">Rated 4 out of 5 stars</span>
+
+      Average
+    </div>
+      <div>
+    <ul class="grouped_ratings" data-total="2">
+                <li class="c">  <span class="stars stars-5" title="Rated 5 out of 5 stars">Rated 5 out of 5 stars</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width: 0%;">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-4" title="Rated 4 out of 5 stars">Rated 4 out of 5 stars</span>
+
+        <div class="rating_bar" data-num-reviews="2">
+          <span class="bar" style="width: 100%;">
+            <span class="num_ratings">2</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-3" title="Rated 3 out of 5 stars">Rated 3 out of 5 stars</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width: 0%;">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-2" title="Rated 2 out of 5 stars">Rated 2 out of 5 stars</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width: 0%;">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-1" title="Rated 1 out of 5 stars">Rated 1 out of 5 stars</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width: 0%;">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+        </ul>
+  </div>
+      <div>
+      <a class="button" id="add-review" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/reviews/add">Write a review</a>
+    </div>
+    <a id="report-abuse" href="https://addons.mozilla.org/en-US/firefox/addon/813862/abuse/" class="abuse-image">Report Abuse</a>
+</aside>
+
+<section id="reviews" class="primary island c">
+  <h2>Reviews</h2>
+                  <div class="review">
+        <h3>
+                      <b>Cool</b>
+                      <span class="stars stars-4" title="Rated 4 out of 5 stars">Rated 4 out of 5 stars</span>
+
+        </h3>
+        <p class="byline">
+          by <a href="https://addons.mozilla.org/en-US/firefox/user/atuo/" title="BrianD">BrianD</a> on June 19, 2017          ·
+          <a class="permalink" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/reviews/885952/">permalink</a>
+        </p>
+        <p class="description">I like this, it's a way to keep them organized. Do you think it's possible to maybe separate bookmarks and history by container? I'd like to achieve that and was wondering if it was possible in an add-on</p>
+              </div>
+          <div class="review">
+        <h3>
+                      <b>very nice</b>
+                      <span class="stars stars-4" title="Rated 4 out of 5 stars">Rated 4 out of 5 stars</span>
+
+        </h3>
+        <p class="byline">
+          by <a href="https://addons.mozilla.org/en-US/firefox/user/najjarammar/" title="Ammar Najjar">Ammar Najjar</a> on May 15, 2017          ·
+          <a class="permalink" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/reviews/873159/">permalink</a>
+        </p>
+        <p class="description">This is very nice, thanks and keep the good work.<br><br> I would suggest some improvements though to suite a better workflow:<br><br>- The ability to expand more than one container at the same time (expand one, expand all, collapse one, collapse all, etc. )<br>- The ability to drag and move/re-order open tabs inside the same container.<br>- The ability to move/re-order the containers themselves.<br><br><br>Edit: (seems like one cannot reply to a reply)<br><br>Thanks for the quick response.<br>yes, I could not move opened tabs inside the same container, and I opened an issue for that (https://github.com/jonathanKingston/sea-containers/issues/5)</p>
+                  <a class="more-info" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/reviews/873166/">
+            Show the developer's reply to this review</a>
+              </div>
+              <p>
+        <a class="more-info" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/reviews/">
+          See all 2 user reviews        </a>
+      </p>
+      
+</section>
+
+<aside id="related" class="secondary metadata c">
+            <h3>Related Categories</h3>
+      <ul>
+                <li>
+          <a href="https://addons.mozilla.org/en-US/firefox/extensions/privacy-security/">
+            Privacy &amp; Security
+          </a>
+        </li>
+                <li>
+          <a href="https://addons.mozilla.org/en-US/firefox/extensions/tabs/">
+            Tabs
+          </a>
+        </li>
+              </ul>
+        <div class="clearboth">
+  <h3 class="compact-bottom">Tags</h3>
+
+  <div id="tagbox">
+    
+  <ul class="addon-tags nojs" id="addonid-813862">
+          <li id="taglink-171821" class="tag">
+      <a href="https://addons.mozilla.org/en-US/firefox/tag/firefox57" class="tagitem">
+      firefox57
+    </a>
+  </li>
+      </ul>
+
+  </div>
+</div>
+
+</aside>
+
+  <section class="primary island c">
+          <section id="collections-grid">
+        <h2>Part of these Collections</h2>
+        <ul class="listing-grid c cols-3" style="width: 720px; height: 66px;">
+    <section>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="https://addons.mozilla.org/en-US/firefox/collections/andreipetcu/webextensions-i-like/">
+          <div class="icon">
+                          <img src="collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>WebExtensions I like</h3>
+            <p class="desc">This collection has only WebExtensions, that have a nice privacy policy or no need for one and that are Free Software (free as in free speech, not free beer).</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>60</span> add-ons          ·
+                    <span>18</span> followers        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="https://addons.mozilla.org/en-US/firefox/collections/Unoriginal-Pseudonym/tab-tools/">
+          <div class="icon">
+                          <img src="collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>Tab Tools</h3>
+            <p class="desc">WebExtension for supercharging your tabs. Has many legacy addon replacements.</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>21</span> add-ons          ·
+                    <span>8</span> followers        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="https://addons.mozilla.org/en-US/firefox/collections/yfdyh000/webextensions-for-tabs/">
+          <div class="icon">
+                          <img src="collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>WebExtensions for tabs</h3>
+            <p class="desc">Tabs-related enhancement.
+/firefox/search/?q=tab&amp;amp;tag=firefox57
+/firefox/extensions/tabs/?sort=updated&amp;amp;appver=57.0</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>57</span> add-ons          ·
+                    <span>3</span> followers        </div>
+      </div>
+    </li>
+    </section>
+</ul>
+
+      </section>
+                <section id="author-addons">
+        <h2>
+                      Other add-ons by <a href="https://addons.mozilla.org/en-US/firefox/user/jkt/" title="jkt">jkt</a>                  </h2>
+        <ul class="listing-grid c cols-3" style="width: 720px; height: 66px;">
+    <section>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/merge-window/?src=dp-dl-othersby">
+            <img src="821449-32.png" alt="Icon for Merge Windows">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/merge-window/?src=dp-dl-othersby">
+        <h3>Merge Windows</h3>
+                              <div class="category more-info">Tabs</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Rated 5 out of 5 stars">Rated 5 out of 5 stars</span>
+
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/merge-window/reviews/">(3)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install clickHijack" data-addon="821449" data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/821/821449-32.png?modified=1496931620" data-developers="/en-US/firefox/addon/merge-window/developers" data-versions="/en-US/firefox/addon/821449/versions/" data-name="Merge Windows" data-min="48.0" data-max="*" data-is-compatible="true" data-is-compatible-app="true" data-compat-overrides="[]" data-version-supported="true">
+  <p class="install-button">
+                        <a class="button platform linux add installer" data-hash="sha256:0dd19801be14499b3b85798fb21c526518029c04251ab66ac86544a194190995" href="https://addons.mozilla.org/firefox/downloads/latest/merge-window/platform:2/addon-821449-latest.xpi?src=dp-hc-othersby">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button platform mac add installer" data-hash="sha256:eb64cde2b3f0a046aea2bea5a282d9745cb16c8a7c4b5f303a700d6d69cd76eb" href="https://addons.mozilla.org/firefox/downloads/latest/merge-window/platform:3/addon-821449-latest.xpi?src=dp-hc-othersby">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button platform windows add installer" data-hash="sha256:187768037fff39f2a3f469dcde3f885d63e43486cef34fa7d2896272f75fb1ed" href="https://addons.mozilla.org/firefox/downloads/latest/merge-window/platform:5/addon-821449-latest.xpi?src=dp-hc-othersby">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+      </p>
+</div> 
+
+
+      <div class="d2c-reasons-popup popup">
+      <p>This add-on is not compatible with your version of Firefox because of the following:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Merge multiple windows together
+    </span>
+    <div class="byline">
+      by <a href="https://addons.mozilla.org/en-US/firefox/user/jkt/" title="jkt">jkt</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    157 users        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+    </section>
+</ul>
+      </section>
+      </section>
+
+<section class="primary island more-island">
+  
+      <section id="detail-relnotes" class="expando">
+      <h2>Version Information<a class="toggle" href="#detail-relnotes"><b></b></a></h2>
+      <div class="content listing">
+        <div class="items">
+          <div class="version item" id="version-0.8">
+  <div class="info">
+    <h3><a href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/versions/0.8" title="Permanent link to this version">
+      Version 0.8</a>
+      <span class="meta">
+        <time datetime="2017-06-02T17:54:43Z">
+                    Released June  2, 2017
+        </time>
+                  <span class="filesize">
+            269.8 KiB
+          </span>
+              </span>
+              <span class="meta compat">
+                    Works with
+                      Firefox for Android 54.0a2 - *,             Firefox 54.0a2 and later        </span>
+          </h3>
+
+    <div class="desc prose">
+      
+    </div>
+
+    <ul class="source">
+                  <li>
+                      Source code released under <a href="http://www.mozilla.org/MPL/2.0/">Mozilla Public License, version 2.0</a>                  </li>
+        <li>
+          <a class="license-faq" href="https://addons.mozilla.org/en-US/faq#license">
+            What's this?</a>
+        </li>
+        </ul>
+
+  </div>
+  <div class="action">
+          
+<div class="install-shell">
+<div class="install clickHijack" data-addon="813862" data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/813/813862-32.png?modified=1496427620" data-developers="/en-US/firefox/addon/sea-containers/developers" data-versions="/en-US/firefox/addon/813862/versions/" data-name="Sea Containers" data-min="54.0a2" data-max="*" data-is-compatible="true" data-is-compatible-app="true" data-compat-overrides="[]" data-version-supported="true">
+  <p class="install-button">
+                        <a class="button platform linux add installer" data-hash="sha256:ea6a26230a54a61992e11a9f2bed0c8f3fe8ef2bb178add61d96e33d53f11da5" href="https://addons.mozilla.org/firefox/downloads/file/658700/sea_containers-0.8-an+fx-linux.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button platform mac add installer" data-hash="sha256:2569c0eb1a7f430b76112600b09f948ab8fc27d44c9c9221b4ef32bc358972d1" href="https://addons.mozilla.org/firefox/downloads/file/658701/sea_containers-0.8-an+fx-mac.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+                <a class="button platform windows add installer" data-hash="sha256:67eca3c4e505ea390ea45933ee7ffe6c101208aca9b1da98b3d07f785596bffa" href="https://addons.mozilla.org/firefox/downloads/file/658702/sea_containers-0.8-an+fx-windows.xpi?src=collection&amp;collection_id=84eba2c6-cf25-41dc-9d0c-fcefb1030b88">
+  <b></b>
+  <span>Add to Firefox</span>
+</a>
+      </p>
+</div> 
+
+
+      <div class="d2c-reasons-popup popup">
+      <p>This add-on is not compatible with your version of Firefox because of the following:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+      </div>
+</div>
+        </div>
+        <p class="more c">
+          <a class="more-info" href="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/versions/">
+            See complete version history
+          </a>
+        </p>
+      </div>
+    </section>
+  
+  </section>
+
+
+</div>
+              </div>
+      <div id="tooltip">
+        <span></span>
+      </div>
+      <div id="popup-staging">
+        <div id="add-to-collection" class="popup" style="width: 200px;">
+          <div class="collection-add-login">
+            <p>To create your own collections, you must have a Mozilla Add-ons account.</p>
+            <p class="register-button">
+              <a class="button" href="https://oauth.accounts.firefox.com/v1/authorization?action=signup&amp;scope=profile&amp;state=18e2ec0cdf3a8694bf7e20e44f964221f402407d692c51a7006ec7846c70f1bf%3AL2VuLVVTL2ZpcmVmb3gvYWRkb24vc2VhLWNvbnRhaW5lcnMvP3NyYz1jb2xsZWN0aW9uJmNvbGxlY3Rpb25faWQ9ODRlYmEyYzYtY2YyNS00MWRjLTlkMGMtZmNlZmIxMDMwYjg4&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Create an Add-ons Account</a>
+            </p>
+            <p>
+              or <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signin&amp;scope=profile&amp;state=18e2ec0cdf3a8694bf7e20e44f964221f402407d692c51a7006ec7846c70f1bf%3AL2VuLVVTL2ZpcmVmb3gvYWRkb24vc2VhLWNvbnRhaW5lcnMvP3NyYz1jb2xsZWN0aW9uJmNvbGxlY3Rpb25faWQ9ODRlYmEyYzYtY2YyNS00MWRjLTlkMGMtZmNlZmIxMDMwYjg4&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">log in to your current account</a>            </p>
+          </div>
+        </div>
+                <div class="modal" id="webext-permissions" style="width: 500px;">
+      <a href="#" class="close">close</a>
+      <h2>Permissions</h2>
+                      <div class="prose">
+          <p>
+          Some add-ons ask for permission to perform certain functions (example: a tab management add-on will ask permission to access your browser’s tab system).
+          </p><p>
+          Since you’re in control of your Firefox, the choice to grant or deny these requests is yours. Accepting permissions does not inherently compromise your browser’s performance or security, but in some rare cases risk may be involved.
+          </p>
+        </div>
+        <div>
+          <p>
+                        </p><h3>This add-on can:</h3>
+            <ul class="webext-permissions-list">
+                              <li class="webext-permissions-list">Access browser tabs</li>
+                          </ul>
+          <p></p>
+        </div>
+          </div>
+            <div id="abuse-modal" class="modal" style="width: 450px;">
+      <a href="#" class="close">close</a>
+      <h2>Report Abuse</h2>
+      <form method="post" action="https://addons.mozilla.org/en-US/firefox/addon/sea-containers/abuse/" data-no-csrf="anon-only">
+    <fieldset class="abuse">
+        <ol>
+      <li>
+        <p>If you suspect this add-on violates <a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy">our policies</a> or has security or privacy issues, please use the form below to describe your concerns. Please do not use this form for any other reason.</p>
+      </li>
+      <li>
+        <textarea cols="40" id="id_text" name="text" rows="10"></textarea>
+        
+      </li>
+              <script src="about:blank" async="" defer=""></script>
+<div class="g-recaptcha" data-sitekey="6LcsBhYTAAAAAKpVTZ16Lh7nmTxVRKoKSr8e3vsV"></div>
+<noscript>
+  <div style="width: 302px; height: 484px;">
+    <div style="width: 302px; height: 424px; position: relative;">
+      <div style="width: 302px; height: 424px; position: absolute;">
+        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcsBhYTAAAAAKpVTZ16Lh7nmTxVRKoKSr8e3vsV&amp;hl=en"
+                frameborder="0" scrolling="no"
+                style="width: 302px; height:424px; border-style: none;">
+        </iframe>
+      </div>
+    </div>
+    <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+      <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                class="g-recaptcha-response"
+                style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                       margin: 10px 25px; padding: 0px; resize: none;" >
+      </textarea>
+    </div>
+  </div>
+</noscript>
+        
+            <li class="footer-submit">
+        <button type="submit">Send Report</button>
+              </li>
+    </ol>
+  </fieldset>
+</form>
+    </div>
+        </div>
+    
+          <div id="footer" role="contentinfo">
+        <div class="section">
+                    <img class="footerlogo" src="footer-logo-med.png" alt="Footer logo">
+                                <div class="links-footer">
+  <ul>
+    <li>get to know <b>add-ons</b></li>
+    <li><a href="https://addons.mozilla.org/en-US/about">About</a></li>
+    <li><a href="http://blog.mozilla.com/addons">Blog</a></li>
+    <li class="footer-devhub-link"><a href="https://addons.mozilla.org/en-US/developers/">Developer Hub</a></li>
+    <li><a href="https://addons.mozilla.org/en-US/faq">FAQ</a></li>
+    <li><a href="https://discourse.mozilla-community.org/c/add-ons">Forum</a></li>
+  </ul>
+</div>
+<div id="footer-content">
+                <form class="languages go" id="lang_form" method="get" action="" data-no-csrf="">
+          <label for="language">Other languages</label>
+          <select id="language" name="lang" dir="ltr">
+            <option value="af">
+                Afrikaans
+              </option><option value="ar">
+                عربي
+              </option><option value="bg">
+                Български
+              </option><option value="bn-bd">
+                বাংলা (বাংলাদেশ)
+              </option><option value="ca">
+                Català
+              </option><option value="cs">
+                Čeština
+              </option><option value="da">
+                Dansk
+              </option><option value="de">
+                Deutsch
+              </option><option value="dsb">
+                Dolnoserbšćina
+              </option><option value="el">
+                Ελληνικά
+              </option><option value="en-gb">
+                English (British)
+              </option><option value="en-us" selected="">
+                English (US)
+              </option><option value="es">
+                Español
+              </option><option value="eu">
+                Euskara
+              </option><option value="fa">
+                فارسی
+              </option><option value="fi">
+                suomi
+              </option><option value="fr">
+                Français
+              </option><option value="ga-ie">
+                Gaeilge
+              </option><option value="he">
+                עברית
+              </option><option value="hsb">
+                Hornjoserbsce
+              </option><option value="hu">
+                magyar
+              </option><option value="id">
+                Bahasa Indonesia
+              </option><option value="it">
+                Italiano
+              </option><option value="ja">
+                日本語
+              </option><option value="ka">
+                ქართული
+              </option><option value="kab">
+                Taqbaylit
+              </option><option value="ko">
+                한국어
+              </option><option value="mk">
+                Македонски
+              </option><option value="mn">
+                Монгол
+              </option><option value="nl">
+                Nederlands
+              </option><option value="nn-no">
+                Norsk nynorsk
+              </option><option value="pl">
+                Polski
+              </option><option value="pt-br">
+                Português (do&nbsp;Brasil)
+              </option><option value="pt-pt">
+                Português (Europeu)
+              </option><option value="ro">
+                Română
+              </option><option value="ru">
+                Русский
+              </option><option value="sk">
+                slovenčina
+              </option><option value="sl">
+                Slovenščina
+              </option><option value="sq">
+                Shqip
+              </option><option value="sv-se">
+                Svenska
+              </option><option value="uk">
+                Українська
+              </option><option value="vi">
+                Tiếng Việt
+              </option><option value="zh-cn">
+                中文 (简体)
+              </option><option value="zh-tw">
+                正體中文 (繁體)
+              </option>          </select>
+                      <input name="src" value="collection" type="hidden">
+                      <input name="collection_id" value="84eba2c6-cf25-41dc-9d0c-fcefb1030b88" type="hidden">
+                    <noscript><button type="submit">Go</button></noscript>
+        </form>
+            <div id="copyright">
+  <p id="footer-links">
+          <a href="https://www.mozilla.org/privacy/websites/">
+        Privacy Policy
+      </a> &nbsp;|&nbsp;
+      <a href="https://www.mozilla.org/about/legal/">
+        Legal Notices
+      </a> &nbsp;|&nbsp;
+      <a href="https://www.mozilla.org/about/legal/fraud-report/">
+        Report Trademark Abuse
+      </a>
+                        &nbsp;|&nbsp;<a class="mobile-link" href="#">View Mobile Site</a>
+                &nbsp;|&nbsp;<a href="https://status.mozilla.org/#addons.mozilla.org_service_history">Site Status </a>
+        &nbsp;|&nbsp;<a href="https://developer.mozilla.org/Add-ons/AMO/Policy/Contact">Report a bug</a>
+            </p>
+  <p>
+    Except where otherwise <a href="https://www.mozilla.org/about/legal/">noted</a>, content on this site is licensed under the <br> <a href="https://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version.  </p>
+</div>    </div>
+                  </div>       </div>                   <script src="about:blank"></script>
+      <script src="about:blank"></script>
+      <script async="" defer="" src="about:blank"></script>
+                
+</body><div id="diigotb-imagepanel" style="display: none; width: 24px; left: 873px; top: 633px;" class="needpremium"><div class="diigotb-btn enabled" title="Premium feature, please upgrade." id="diigotb-quick-save"></div></div><div class="diigotb-border diigotb-left" style="display: none; height: 542px; width: 1px; left: 204px; top: 123px;"></div><div class="diigotb-border diigotb-top" style="display: none; width: 703px; height: 1px; left: 204px; top: 123px;"></div><div class="diigotb-border diigotb-right" style="display: none; height: 542px; width: 1px; left: 907px; top: 123px;"></div><div class="diigotb-border diigotb-bottom" style="display: none; width: 703px; height: 1px; left: 204px; top: 665px;"></div>
+</html>

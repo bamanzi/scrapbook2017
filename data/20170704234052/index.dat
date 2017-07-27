@@ -1,10 +1,10 @@
 id	20170704234052
 create	20170704234052
-modify	20170704234052
+modify	20170727221148
 type	
 title	Diigo Toolbar - Annotate, Screenshot, Bookmark :: Add-ons for Firefox
 chars	UTF-8
-icon	favicon.ico
+icon	resource://scrapbook/data/20170704234052/favicon.ico
 source	http://web.archive.org/web/20161118071200/https://addons.mozilla.org/en-US/firefox/addon/diigo-web-highlighter-and-stic/?src=search
-comment	
+comment	http://www.filewatcher.com/m/diigo_toolbar_annotate_screenshot_bookmark-5.1.0.38-fx.xpi.493881-0.html
 lock	

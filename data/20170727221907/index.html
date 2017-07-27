@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" id="blog-mozilla-com-zandr" lang="en-US">
+<head>
+  <meta name="viewport" content="width=1024">
+  <meta name="og:image" content="https://blog.mozilla.org/tanvi/wp-content/themes/Zandr-Nova/img/firefox-100.jpg">
+  <meta charset="UTF-8">
+  <meta name="title" content="Tanvi Vyas">
+  <meta name="description" content="Security Engineer  – @TanviHacks">
+  <meta name="Rating" content="General">
+  <!--[if IE]>
+  <meta name="MSSmartTagsPreventParsing" content="true">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/tanvi/wp-content/themes/Zandr-Nova/js/html5.js"></script>
+  <![endif]-->
+
+  <link rel="copyright" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/#copyright">
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="style.css">
+  <link rel="stylesheet" type="text/css" media="print" href="print.css">
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/tanvi/wp-content/themes/Zandr-Nova/css/ie7.css"><![endif]-->
+
+  <link rel="alternate" type="application/rss+xml" title="Tanvi Vyas RSS Feed" href="https://blog.mozilla.org/tanvi/feed/">
+  <link rel="pingback" href="https://blog.mozilla.org/tanvi/xmlrpc.php">
+
+  <title>Contextual Identities on the Web | Tanvi Vyas</title>
+
+    
+<!-- This site is optimized with the Yoast SEO plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Contextual Identities on the Web - Tanvi Vyas">
+<meta property="og:description" content="The Containers Feature in Firefox Nightly enables users to login to multiple accounts on the same site simultaneously and gives users the ability to segregate site data for improved privacy and security. We all portray different characteristics of ourselves in different situations. The way I speak with my son is much different than the way… Read more">
+<meta property="og:url" content="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/">
+<meta property="og:site_name" content="Tanvi Vyas">
+<meta property="article:section" content="Browser Security">
+<meta property="article:published_time" content="2016-06-16T10:39:27+00:00">
+<meta property="article:modified_time" content="2016-08-24T20:43:41+00:00">
+<meta property="og:updated_time" content="2016-08-24T20:43:41+00:00">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/containers-twitter-login.png">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/conatiners-file-menu-e1466033185220.jpg">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/containers-tabs-stacked-1024x362.png">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/side-by-side-containers-1024x84.png">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/hamburger-containers-1024x405.png">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/side-by-side-containers-with-default-1024x80.png">
+<meta property="og:image" content="https://blog.mozilla.org/tanvi/files/2016/06/containers-segregation-chart6-300x177.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="The Containers Feature in Firefox Nightly enables users to login to multiple accounts on the same site simultaneously and gives users the ability to segregate site data for improved privacy and security. We all portray different characteristics of ourselves in different situations. The way I speak with my son is much different than the way… Read more">
+<meta name="twitter:title" content="Contextual Identities on the Web - Tanvi Vyas">
+<meta name="twitter:site" content="@TanviHacks">
+<meta name="twitter:image" content="https://blog.mozilla.org/tanvi/files/2016/06/containers-twitter-login.png">
+<meta name="twitter:creator" content="@TanviHacks">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Tanvi Vyas » Contextual Identities on the Web Comments Feed" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/feed/">
+		<script async="" src="about:blank"></script><script type="text/javascript">/* Code removed by ScrapBook */</script><script src="about:blank" type="text/javascript" defer=""></script>
+		<style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<link rel="https://api.w.org/" href="https://blog.mozilla.org/tanvi/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.mozilla.org/tanvi/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.mozilla.org/tanvi/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://blog.mozilla.org/tanvi/?p=201">
+<link rel="alternate" type="application/json+oembed" href="https://blog.mozilla.org/tanvi/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.mozilla.org%2Ftanvi%2F2016%2F06%2F16%2Fcontextual-identities-on-the-web%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://blog.mozilla.org/tanvi/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.mozilla.org%2Ftanvi%2F2016%2F06%2F16%2Fcontextual-identities-on-the-web%2F&amp;format=xml">
+            <script type="text/javascript">/* Code removed by ScrapBook */</script>		<style type="text/css">
+/* Code tidied up by ScrapBook */
+.recentcomments a { display: inline !important; padding: 0px !important; margin: 0px !important; }
+</style>
+		<style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+  #diigotb-imagepanel { height: 22px !important; position: absolute !important; z-index: 11000022 !important; margin: 0px !important; }
+  #diigotb-imagepanel .diigotb-btn { cursor: pointer !important; width: 20px !important; height: 20px !important; margin: 2px !important; float: left !important; background: transparent url("chrome://diigotb/skin/save-image-action-icons.png") no-repeat scroll 0% 0% !important; }
+  #diigotb-imagepanel #diigotb-quick-save { background-position: 0px 0px !important; }
+  #diigotb-imagepanel.needpremium #diigotb-quick-save { background-position: 0px -20px !important; cursor: default !important; }
+  .diigotb-border { position: absolute !important; z-index: 11000000 !important; margin: 0px !important; background-color: rgb(75, 140, 220) !important; }
+  .diigotb-left { width: 1px !important; }
+  .diigotb-right { width: 1px !important; }
+  .diigotb-top { height: 1px !important; }
+  .diigotb-bottom { height: 1px !important; }
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+
+<body class="post-template-default single single-post postid-201 single-format-standard" role="document">
+<div id="doc">
+  <ul id="nav-access" role="navigation">
+    <li><a href="#content-main">Skip to content</a></li>
+    <li><a href="#search">Skip to blog search</a></li>
+  </ul>
+
+  <header id="branding">
+    <div id="header">
+      <h4><a href="http://www.mozilla.com/" title="Go to the Mozilla Firefox home page">Mozilla Firefox</a></h4>
+      <a href="http://www.mozilla.org/" class="mozilla" title="The Mozilla Foundation">visit <span>Mozilla</span></a>
+      <!-- start menu #nav-main -->
+<nav id="nav-main" role="navigation">
+  <ul id="menu">
+    <li id="nav-main-features">
+      <a aria-haspopup="true" aria-owns="nav-main-features-submenu" href="http://www.mozilla.org/firefox/features/">Desktop</a>
+      <ul class="nav-sub" id="nav-main-features-submenu" aria-expanded="false">
+        <li><a href="http://www.mozilla.org/firefox/features/">Features</a></li>
+        <li><a href="http://www.mozilla.org/firefox/customize/">Customize</a></li>
+        <li><a href="http://www.mozilla.org/firefox/performance/">Performance</a></li>
+        <li><a href="http://www.mozilla.org/firefox/technology/">Technology</a></li>
+        <li><a href="http://www.mozilla.org/firefox/security/">Privacy &amp; Security</a></li>
+      </ul>
+    </li>    
+    <li id="nav-main-mobile">
+      <a aria-haspopup="true" aria-owns="nav-main-mobile-submenu" href="http://www.mozilla.com/mobile/">Mobile</a>
+      <ul class="nav-sub" id="nav-main-mobile-submenu" aria-expanded="false">
+        <li><a href="http://www.mozilla.org/mobile/">Download</a></li>
+        <li><a href="http://www.mozilla.org/mobile/features/">Features</a></li>
+        <li><a href="https://addons.mozilla.org/mobile/?browse=featured">Customize</a></li>
+        <li><a href="http://www.mozilla.org/mobile/faq/">FAQ</a></li>
+      </ul>
+    </li>
+    <li id="nav-main-releases">
+      <a aria-haspopup="true" aria-owns="nav-main-releases-submenu" href="http://www.mozilla.com/firefox/channel/">Releases</a>
+      <ul class="nav-sub" id="nav-main-releases-submenu" aria-expanded="false">
+        <li><a href="http://www.mozilla.org/firefox/channel/">Download</a></li>
+        <li><a href="http://www.mozilla.org/firefox/aurora/">Firefox Aurora</a></li>
+        <li><a href="http://www.mozilla.org/beta/">Firefox Beta</a></li>
+        <li><a href="http://www.mozilla.org/firefox/">Firefox</a></li>
+      </ul>
+    </li>
+    <li id="nav-main-addons">
+      <a aria-haspopup="true" aria-owns="nav-main-addons-submenu" href="https://addons.mozilla.org/">Add-ons</a>
+      <ul class="nav-sub" id="nav-main-addons-submenu" aria-expanded="false">
+        <li><a href="https://addons.mozilla.org/firefox/">Desktop Add-ons</a></li>
+        <li><a href="https://addons.mozilla.org/mobile/">Mobile Add-ons</a></li>
+        <li><a href="http://www.getpersonas.com/">Personas</a></li>
+      </ul>
+    </li>
+    <li id="nav-main-support">
+      <a aria-haspopup="true" aria-owns="nav-main-support-submenu" href="http://support.mozilla.com/">Support</a>
+      <ul class="nav-sub" id="nav-main-support-submenu" aria-expanded="false">
+        <li><a href="http://support.mozilla.com/kb/">Desktop Support</a></li>
+        <li><a href="http://support.mozilla.com/mobile">Mobile Support</a></li>
+      </ul>
+    </li>
+    <li id="nav-main-about" class="last">
+      <a aria-haspopup="true" aria-owns="nav-main-about-submenu" href="http://www.mozilla.com/about/">About</a>
+      <ul class="nav-sub" id="nav-main-about-submenu" aria-expanded="false">
+        <li><a href="http://blog.mozilla.com/">Blog</a></li>
+        <li><a href="http://www.mozilla.org/firefox/about/">About Firefox</a></li>
+        <li><a href="http://www.mozilla.org/join">Join Mozilla</a></li>
+        <li><a href="http://www.mozilla.org/about/participate/">Participate</a></li>
+        <li><a href="http://www.mozilla.org/press/">Press Center</a></li>
+        <li><a href="http://www.mozilla.org/firefox/brand/">Brand Toolkit</a></li>
+        <li><a href="http://www.mozilla.org/about/careers.html">Careers</a></li>
+        <li><a href="http://www.mozilla.org/about/partnerships.html">Partnerships</a></li>
+        <li><a href="http://www.mozilla.org/about/contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<!-- end menu #nav-main -->
+    </div><!-- end #header -->
+
+      <h1 id="site-title"><a href="https://blog.mozilla.org/tanvi" title="Go to the front page"><b>Tanvi Vyas</b></a></h1>
+      <p id="tagline">Security Engineer  – @TanviHacks</p>
+  </header><!-- end #branding -->
+  
+  <section id="content">
+
+<section id="content-main" class="hfeed single" role="main">
+
+
+  <article class="post-201 post type-post status-publish format-standard hentry category-security" id="post-201">
+    <header>
+      <h1 class="entry-title">Contextual Identities on the Web</h1>
+      <p class="entry-posted">
+        <time class="published" title="2016-06-16T10:39:27+00:00" pubdate="pubdate" datetime="2016-06-16T10:39:27+00:00">
+         <a class="posted-month" href="https://blog.mozilla.org/tanvi/2016/06/" title="See all posts from June, 2016">Jun</a>
+         <span class="posted-date">16</span>
+         <a class="posted-year" href="https://blog.mozilla.org/tanvi/2016/" title="See all posts from 2016">2016</a>
+        </time>
+      </p>
+          <p class="entry-comments"><a href="#comments" title="87 comments">87</a></p>
+        </header>
+    
+    <div class="entry-content">
+            <p><em>The Containers Feature in <a href="https://nightly.mozilla.org/">Firefox Nightly</a> enables users to login to multiple accounts on the same site simultaneously and gives users the ability to segregate site data for improved privacy and security.</em></p>
+<p>We all portray different characteristics of ourselves in different situations. The way I speak with my son is much different than the way I communicate with my coworkers. The things I tell my friends are different than what I tell my parents. I’m much more guarded when withdrawing money from the bank than I am when shopping at the grocery store. I have the ability to use multiple identities in multiple contexts. But when I use the web, I can’t do that very well. There is no easy way to segregate my identities such that my browsing behavior while shopping for toddler clothes doesn’t cross over to my browsing behavior while working. The Containers feature I’m about to describe attempts to solve this problem: empowering Firefox to help segregate my online identities in the same way I can segregate my real life identities.</p>
+<p>With Containers, users can open tabs in multiple different contexts – Personal, Work, Banking, and Shopping.&nbsp; Each context has a fully segregated cookie jar, meaning that the cookies, indexeddb, localStorage, and cache that sites have access to in the Work Container are completely different than they are in the Personal Container. That means that the user can login to their work twitter account on twitter.com in their Work Container and also login to their personal twitter on twitter.com in their Personal Container. The user can use both accounts in side-by-side tabs simultaneously. The user won’t need to use multiple browsers, an account switcher<a href="#footnote1">[1]</a>, or constantly log in and out to switch between accounts on the same domain.</p>
+<div id="attachment_202" style="width: 554px;" class="wp-caption aligncenter"><img class=" wp-image-202" src="containers-twitter-login.png" alt="User logged into work twitter account in Work Container and personal twitter account in Personal Container, simulatenously in side-by-side tabs" width="544" height="389"><p class="wp-caption-text">Simultaneously logged into Personal Twitter and Work Twitter accounts.</p></div>
+<p>Note that the inability to efficiently use “Contextual Identities” on the web has been discussed for many years<a href="#footnote2">[2]</a>. The hard part about this problem is figuring out the right User Experience and answering questions like:</p>
+<ul>
+<li><i><i>How will users know what context they are operating in?</i></i></li>
+<li><i><i>What if the user makes a mistake and uses the wrong context; can the user recover?</i></i></li>
+<li><i><i>Can the browser assist by automatically assigning websites to Containers so that users don’t have to manage their identities by themselves?</i></i></li>
+<li><i><i>What heuristics would the browser use for such assignments?</i></i></li>
+</ul>
+<p>We don’t have the answers to all of these questions yet, but hope to start uncovering some of them with user research and feedback. The Containers implementation in <a href="https://nightly.mozilla.org/">Nightly Firefox</a> is a basic implementation that allows the user to manage identities with a minimal user interface.</p>
+<p>We hope to gather feedback on this basic experience to see how we can iterate on the design to make it more convenient, elegant, and usable for our users. Try it out and share your feedback by filling out this quick <a href="https://docs.google.com/forms/d/1oQN14TUnqj-MDErp8MKxH_v7YttOASVdER4lwCgbGKY/viewform?c=0&amp;w=1">form</a> or writing to <a href="mailto:containers@mozilla.com?Subject=Containers%20Feedback" target="_top">containers@mozilla.com</a>.</p>
+<h1>FAQ</h1>
+<h3>How do I use Containers?</h3>
+<p>You can start using Containers in <a href="https://nightly.mozilla.org/">Nightly</a> Firefox 50 by opening a New Container Tab. Go the File Menu and select the “New Container Tab” option. (Note that on Windows you need to hit the alt key to access the File Menu.) Choose between Personal, Work, Shopping, and Banking.</p>
+<p><img class="aligncenter size-full wp-image-203" src="conatiners-file-menu-e1466033185220.jpg" alt="Use the File Menu to access New Container Tab, then choose between Personal, Work, Banking, and Shopping." width="500" height="185"></p>
+<p>Notice that the tab is decorated to help you remember which context you are browsing in. The right side of the url bar specifies the name of the Container you are in along with an icon. The very top of the tab has a slight border that uses the same color as the icon and Container name.  The border lets you know what container a tab is open in, even when it is not the active tab.</p>
+<p><img class="aligncenter size-large wp-image-209" src="containers-tabs-stacked-1024x362_001.png" alt="User interface for the 4 different types of Container tabs" srcset="containers-tabs-stacked-1024x362.png 1024w, containers-tabs-stacked-300x106.png 300w, containers-tabs-stacked-768x271.png 768w, containers-tabs-stacked.png 1155w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="362"></p>
+<p>You can open multiple tabs in a specific container at the same time. You can also open multiple tabs in different containers at the same time:</p>
+<div id="attachment_205" style="width: 1034px;" class="wp-caption aligncenter"><img class="size-large wp-image-205" src="side-by-side-containers-1024x84_001.png" alt="User Interface when multiple container tabs are open side-by-side" srcset="side-by-side-containers-1024x84.png 1024w, side-by-side-containers-300x25.png 300w, side-by-side-containers-768x63.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="84"><p class="wp-caption-text">2 Work Containers tabs, 2 Shopping Container tabs, 1 Banking Container tab</p></div>
+<p>Your regular browsing context (your <a href="#default_container">“default container”</a>) will not have any tab decoration and will be in a normal tab. See the <a href="#default_container">next section</a> to learn more about the “default container”</p>
+<p>Containers are also accessible via the hamburger menu. Customize your hamburger menu by adding in the File Cabinet icon. From there you can select a container tab to open. We are working on adding more access points for container tabs; particularly on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1272256">long-press of the plus button</a>.</p>
+<p><img src="hamburger-containers-1024x405_001.png" alt="User Interface for Containers Option in Hamburger Menu" class="aligncenter size-large wp-image-211" srcset="hamburger-containers-1024x405.png 1024w, hamburger-containers-300x119.png 300w, hamburger-containers-768x303.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" border="1" width="1024" height="405"></p>
+<h3 id="default_container">How does this change affect normal tabs and the site data already stored in my browser?</h3>
+<p>The containers feature doesn’t change the normal browsing experience you get when using <i>New Tab</i> or <i>New Window</i>. The normal tab will continue to access the site data the browser has already stored in the past. The normal tab’s user interface will not change. When browsing in the normal context, any site data read or written will be put in what we call the “default container”.</p>
+<p>If you use the containers feature, the different container tabs will not have access to site data in the default container. And when using a normal tab, the tab won’t have access to site data that was stored for a different container tab. You can use normal tabs along side other containers:</p>
+<div id="attachment_210" style="width: 1034px;" class="wp-caption aligncenter"><img class="size-large wp-image-210" src="side-by-side-containers-with-default-1024x80_001.png" alt="User Interface when 2 normal tabs are open, next to 2 Work Container tabs and 1 Banking Container tab" srcset="side-by-side-containers-with-default-1024x80.png 1024w, side-by-side-containers-with-default-300x24.png 300w, side-by-side-containers-with-default-768x60.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="80"><p class="wp-caption-text">2 normal tabs (“Default Container tabs”), 2 Work Container tabs, 1 Banking Container tab</p></div>
+<h3>What browser data is segregated by containers?</h3>
+<p>In principle, any data that a site has read or write access to should be segregated.</p>
+<p>Assume a user logins into example.com in their Personal Container, and then loads example.com in their Work Container. Since these loads are in different containers, there should be no way for the example.com server to tie these two loads together. Hence, each container has its own separate cookies, indexedDB, localStorage, and cache.</p>
+<p><img src="containers-segregation-chart6-300x177_001.png" lt="Chart showing what browser data is and isn't separated by Container" class="alignright size-medium wp-image-219" srcset="containers-segregation-chart6-300x177.png 300w, containers-segregation-chart6-768x454.png 768w, containers-segregation-chart6.png 852w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="177"></p>
+<p>Assume the user then opens a Shopping Container and opens the History menu option to look for a recently visited site. example.com will still appear in the user’s history, even though they did not visit example.com in the Shopping Container. This is because the site doesn’t have access to the user’s locally stored History. We only segregate data that a site has access to, not data that the user has access to. The Containers feature was designed for a single user who has the need to portray themselves to the web in different ways depending on the context in which they are operating.</p>
+<p>By separating the data that a site has access to, rather than the data that a user has access to, Containers is able to offer a better experience than some of the <a href="#current-alternatives">alternatives</a> users may be currently using to manage their identities.</p>
+<h3>Is this feature going to be in Firefox Release?</h3>
+<p>This is an <b>experimental</b> feature in <a href="https://nightly.mozilla.org/">Nightly</a> only. We would like to collect <a href="#feedback">feedback</a> and iterate on the design before the containers concept goes beyond Nightly. Moreover, we would like to get this in the hands of Nightly users so they can help validate the <a href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/%22#OriginAttributes">OriginAttribute</a> architecture we have implemented for this feature and other features. We have also planned a <a href="https://testpilot.firefox.com/">Test Pilot</a> study for the Fall.</p>
+<p>To be clear, this means that when Nightly 50 moves to Aurora/DevEdition 50, containers will not be enabled.</p>
+<h3 id="current-alternatives">How do users manage different identities on the web today?</h3>
+<p>What do users do if they have two twitter accounts and want to login to them at the same time? Currently, users may login to one twitter account using their main browser, and another using a secondary browser. This is not ideal, since then the user is running two browsers in order to accomplish their tasks.</p>
+<p>Alternatively, users may open a Private Browsing Window to login to the second twitter account. The problem with this is that all data associated with Private Browsing Windows is deleted when they are closed. The next time the user wants to use their secondary twitter account, they have to login again. Moreover, if the account requires two factor authentication, the user will always be asked for the second factor token, since the browser shouldn’t remember that they had logged in before when using Private Browsing.</p>
+<p>Users may also use a second browser if they are worried about tracking. They may use a secondary browser for Shopping, so that the trackers that are set while Shopping can’t be associated with the tasks on their primary browser.</p>
+<h3>Can I disable containers on Nightly?</h3>
+<p>Yes, by following these steps:</p>
+<ol>
+<li>Open a new window or tab in Firefox.</li>
+<li>Type about:config and press enter.</li>
+<li>You will get to a page that asks you to promise to be careful. Promise you will be.</li>
+<li>Set the <i>privacy.userContext.enabled</i> preference to false.</li>
+</ol>
+<h3>Can I enable containers on a version of Firefox that is not Nightly?</h3>
+<p>Although the <i>privacy.userContext.enabled</i> preference described above may be present in other versions of Firefox, the feature may be incomplete, outdated, or buggy. We currently only recommend enabling the feature in Nightly, where you’ll have access to the newest and most complete version.</p>
+<h3>How is Firefox able to Compartmentalize Containers?</h3>
+<p>An origin is defined as a combination of a scheme, host, and port. Browsers make numerous security decisions based on the origin of a resource using the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin-policy</a>. Various features require additional keys to be added to the origin combination. Examples include the Tor Browser’s work on <a href="https://www.torproject.org/projects/torbrowser/design/#identifier-linkability">First Party Isolation</a>, Private Browsing Mode, the <a href="https://w3c.github.io/webappsec-suborigins/">SubOrigin Proposal</a>, and Containers.</p>
+<p>Hence, Gecko has added additional attributes to the origin called OriginAttributes. When trying to determine if two origins are same-origin, Gecko will not only check if they have matching schemes, hosts, and ports, but now also check if all their OriginAttributes match.</p>
+<p>Containers adds an OriginAttribute called userContextId. Each container has a unique userContextId. Stored site data (i.e. cookies) is now stored with a scheme, host, port, and userContextId. If a user has https://example.com cookies with the userContextId for the Shopping Container, those cookies will not be accessible by https://example.com in the Banking Container.</p>
+<p>Note that one of the motivations in enabling this feature in <a href="https://nightly.mozilla.org/">Nightly</a> is to help ensure that we iron out any bugs that may exist in our OriginAttribute implementation before features that depend on it are rolled out to users.</p>
+<h3>How does Containers improve user privacy and security?</h3>
+<p>The Containers feature offers users some control over the techniques websites can use to track them. Tracking cookies set while shopping in the Shopping Container won’t be accessible to sites in the Personal Container. So although a tracker can easily track a user within their Shopping Container, they would have to use device fingerprinting techniques to link that tracking information with tracking information from the user’s Personal Container.</p>
+<p>Containers also offers the user a way to compartmentalize sensitive information. For example, users could be careful to only use their Banking Container to log into banking sites, protecting themselves from potential XSS and CSRF attacks on these sites. Assume a user visits attacker.com in an non-banking-container. The malicious site may try to use a vulnerability in a banking site to obtain the user’s financial data, but wouldn’t be able to since the user’s bank’s authentication cookies are shielded off in a separate container that the malicious site can’t touch.</p>
+<h3>Is there any chance that a tracker will be able to track me across containers?</h3>
+<p>There are some caveats to data separation with Containers.</p>
+<p>The first is that all requests by your browser still have the same IP address, user agent, OS, etc. Hence, fingerprinting is still a concern. Containers are meant to help you separate your identities and reduce naive tracking by things like cookies. But more sophisticated trackers can still use your fingerprint to identify your device. The Containers feature is not meant to replace the Tor Browser, which tries to minimize your fingerprint as much as possible, sometimes at the expense of site functionality. With Containers, we attempt to improve privacy while still minimizing breakage.</p>
+<p>There are also some bugs still open related to OriginAttribute separation. Namely, the following areas are not fully separated in Containers yet:</p>
+<ul>
+<li>Some favicon requests use the default container cookies even when you are in a different container – <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1277803">Bug 1277803</a></li>
+<li>The about:newtab page makes network requests to recently visited sites using the default container’s cookies even when you are in a different container – <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279568">Bug 1279568</a></li>
+<li>Awesome Bar search requests use the default container cookies even when you are in a different container – <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1244340">Bug 1244340</a></li>
+<li>The Forget About Site button doesn’t forget about site data from Container tabs – <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1238183">Bug 1238183</a></li>
+<li>The image cache is shared across all containers – <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1270680">Bug 1270680</a></li>
+</ul>
+<p>We are working on fixing these last remaining bugs and hope to do so during this Nightly 50 cycle.</p>
+<h3 id="#feedback">How can I provide feedback?</h3>
+<p>I encourage you to try out the feature and provide your feedback via:</p>
+<ul>
+<li><a href="https://docs.google.com/forms/d/1oQN14TUnqj-MDErp8MKxH_v7YttOASVdER4lwCgbGKY/viewform?c=0&amp;w=1">2 minute survey</a></li>
+<li>Email <a href="mailto:containers@mozilla.com?Subject=Containers%20Feedback" target="_top">containers@mozilla.com</a></li>
+<li>File a <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&amp;blocked=ContextualIdentity&amp;bug_file_loc=http%3A%2F%2F&amp;bug_ignored=0&amp;bug_severity=normal&amp;bug_status=NEW&amp;cc=tanvi%40mozilla.com&amp;cf_blocking_b2g=---&amp;cf_blocking_fennec=---&amp;cf_feature_b2g=---&amp;cf_fx_iteration=---&amp;cf_fx_points=---&amp;cf_status_b2g_2_0=---&amp;cf_status_b2g_2_0m=---&amp;cf_status_b2g_2_1=---&amp;cf_status_b2g_2_1_s=---&amp;cf_status_b2g_2_2=---&amp;cf_status_b2g_2_2r=---&amp;cf_status_b2g_2_5=---&amp;cf_status_b2g_2_6=---&amp;cf_status_b2g_master=---&amp;cf_status_firefox47=---&amp;cf_status_firefox48=---&amp;cf_status_firefox49=---&amp;cf_status_firefox50=---&amp;cf_status_firefox_esr38=---&amp;cf_status_firefox_esr45=---&amp;cf_status_thunderbird_esr38=---&amp;cf_status_thunderbird_esr45=---&amp;cf_tracking_b2g=---&amp;cf_tracking_e10s=---&amp;cf_tracking_firefox47=---&amp;cf_tracking_firefox48=---&amp;cf_tracking_firefox49=---&amp;cf_tracking_firefox50=---&amp;cf_tracking_firefox_esr38=---&amp;cf_tracking_firefox_esr45=---&amp;cf_tracking_firefox_relnote=---&amp;cf_tracking_relnote_b2g=---&amp;cf_tracking_thunderbird_esr38=---&amp;cf_tracking_thunderbird_esr45=---&amp;component=DOM%3A%20Security&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;defined_groups=1&amp;flag_type-203=X&amp;flag_type-37=X&amp;flag_type-4=X&amp;flag_type-41=X&amp;flag_type-5=X&amp;flag_type-607=X&amp;flag_type-720=X&amp;flag_type-721=X&amp;flag_type-737=X&amp;flag_type-781=X&amp;flag_type-787=X&amp;flag_type-799=X&amp;flag_type-800=X&amp;flag_type-803=X&amp;flag_type-835=X&amp;flag_type-846=X&amp;flag_type-855=X&amp;flag_type-863=X&amp;flag_type-864=X&amp;flag_type-875=X&amp;flag_type-889=X&amp;flag_type-892=X&amp;flag_type-901=X&amp;flag_type-905=X&amp;flag_type-908=X&amp;form_name=enter_bug&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=Unspecified&amp;priority=--&amp;product=Core&amp;rep_platform=Unspecified&amp;status_whiteboard=%5BuserContextId%5D%5Bdomsecurity-backlog%5D&amp;target_milestone=---&amp;version=unspecified">bug</a></li>
+</ul>
+<h3>Thank you</h3>
+<p>Thanks to everyone who has worked to make this feature a reality! Special call outs to the containers team:</p>
+<p>Andrea Marchesini<br>
+Kamil Jozwiak<br>
+David Huseby<br>
+Bram Pitoyo<br>
+Yoshi Huang<br>
+Tim Huang<br>
+Jonathan Hao<br>
+Jonathan Kingston<br>
+Steven Englehardt<br>
+Ethan Tseng<br>
+Paul Theriault</p>
+<h4>Footnotes</h4>
+<p><a name="footnote1"></a>[1] Some <a href="https://support.google.com/accounts/answer/1721977?hl=en">websites provide account switchers</a> in their products. For websites that don’t support switching, users may install <a href="https://addons.mozilla.org/en-US/firefox/addon/multifox/">addons</a> to help them switch between accounts.<br>
+<a name="footnote2"></a>[2] <a href="s1p2.pdf">http://www.ieee-security.org/TC/W2SP/2013/papers/s1p2.pdf</a><a href="https://addons.mozilla.org/en-US/firefox/addon/multifox/">, </a><a href="https://blog.mozilla.org/ladamski/2010/07/contextual-identity/">https://blog.mozilla.org/ladamski/2010/07/contextual-identity/</a><br>
+[3] <a href="https://docs.google.com/presentation/d/1tkOXM9nEaBerNSngRLRs1CAUSbaAn3xA6pfXghVR_Bw/edit?usp=sharing">Containers Slide Deck</a></p>
+    </div>
+    
+        
+      
+    <p class="meta"><strong>Categories:</strong> <a href="https://blog.mozilla.org/tanvi/category/security/" rel="category tag">Browser Security</a></p>
+  
+  
+  </article>
+
+
+<section id="comments">
+  <header class="comments-head">
+    <h1>87 responses <span class="cmt-post">{<a href="#respond" title="Post a comment">+</a>}</span></h1>
+  </header>
+
+  <ol id="comment-list" class="hfeed av">
+  
+ <li id="comment-31040" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="f2ed34fbf15d0fd83a402eb993efec71_001.png" srcset="f2ed34fbf15d0fd83a402eb993efec71.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">David Mercer</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31040" rel="bookmark" title="Permanent link to this comment by David Mercer"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 12:23 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>A link to Nightly, especially in the FAQ section, would be great</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31040#respond" aria-label="Reply to David Mercer">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31056" class="comment byuser comment-author-tvyasmozilla-com bypostauthor odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="9f4d447f27c116342ba41a747802372d.png" srcset="9f4d447f27c116342ba41a747802372d_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Tanvi Vyas</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31056" rel="bookmark" title="Permanent link to this comment by Tanvi Vyas"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 12:41 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Thanks for the suggestion!  I have added a link: <a href="https://nightly.mozilla.org/" rel="nofollow">https://nightly.mozilla.org/</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31056#respond" aria-label="Reply to Tanvi Vyas">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31041" class="comment even thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://blog.ssokolow.com/" class="url" rel="nofollow external" title="http://blog.ssokolow.com/">
+         <span class="photo"><img alt="" src="6c4c32136401648af694dde68a5d61fc.png" srcset="6c4c32136401648af694dde68a5d61fc_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Stephan Sokolow</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31041" rel="bookmark" title="Permanent link to this comment by Stephan Sokolow"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 12:44 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <blockquote><p>We are working on adding more access points for container tabs; particularly on long-press of the plus button.</p></blockquote>
+<p>Whatever happened to right-click? This IS still a desktop application, is it not?</p>
+<p>(The whole point of having two mouse buttons, rather than a long press, is that it’s both quicker to use and more discoverable.)</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31041#respond" aria-label="Reply to Stephan Sokolow">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31057" class="comment byuser comment-author-tvyasmozilla-com bypostauthor odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="9f4d447f27c116342ba41a747802372d.png" srcset="9f4d447f27c116342ba41a747802372d_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Tanvi Vyas</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31057" rel="bookmark" title="Permanent link to this comment by Tanvi Vyas"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 12:42 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Actually we do have a right click menu option as well, to <i>Open Link in Container Tab</i> and then choose the container you’d like to open the link in.  I didn’t mention it in my post.  Thanks for pointing it out!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31057#respond" aria-label="Reply to Tanvi Vyas">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31062" class="comment even depth-3 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="d35ab2c06df975598a56e8c5b61d1d81_001.jpeg" srcset="d35ab2c06df975598a56e8c5b61d1d81.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">cpdt</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31062" rel="bookmark" title="Permanent link to this comment by cpdt"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 3:20 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I believe Stephan was referring to right-clicking the plus button, not just right-clicking a link. To me, it makes more sense (and would be faster) to right-click the new tab button to create a tab in a context, rather than click and hold.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31062#respond" aria-label="Reply to cpdt">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31074" class="comment odd alt depth-4 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://blog.ssokolow.com/" class="url" rel="nofollow external" title="http://blog.ssokolow.com/">
+         <span class="photo"><img alt="" src="6c4c32136401648af694dde68a5d61fc.png" srcset="6c4c32136401648af694dde68a5d61fc_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Stephan Sokolow</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31074" rel="bookmark" title="Permanent link to this comment by Stephan Sokolow"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 3:04 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Exactly. I’d never think that long-pressing might do anything different on a desktop. In fact, when I first got access to mobile apps, it took me a while to discover that context menus were possible.</p>
+<p>The #1 rule of good UI design is consistency and, since long-pressing on a phone is a somewhat time-inefficient surrogate for having a second mouse button, that means that, in this desktop app, the feature should be accessed by right-click.</p>
+<p>Now, if you’re proposing implementing it as right-click, but then aliasing long-press to right-click across the entire Firefox UI to try to unify the desktop and tablet workflow in a consistent manner, maybe would could have a discussion.</p>
+<p>(Admittedly, I think trying to use the same UI for both a touch device and a device with keyboard and precise pointing device (mouse) will inevitably cripple and cheapen the UI for desktop users, but I’m willing to be convinced otherwise.)</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31074#respond" aria-label="Reply to Stephan Sokolow">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31161" class="comment even depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="9007e377e91f6b4b3acb654fbc86f6e4_001.jpeg" srcset="9007e377e91f6b4b3acb654fbc86f6e4.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Ahmed</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31161" rel="bookmark" title="Permanent link to this comment by Ahmed"><time class="published" pubdate="" datetime="2016-06-21" title="2016-06-21">June 21st, 2016 at 11:56 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>The advantage of long-pressing a button then moving to a dropdown element is that it’s 1 click vs 2 clicks. I think they are referring to the behavior you see when maintaining a click on a menu item, the move the cursor over the element you want and release your click… certainly more convenient than right (or left) clicking, then moving your cursor and left clicking on the element. (which you can also do with menus, but I find more annoying)</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31161#respond" aria-label="Reply to Ahmed">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31045" class="comment odd alt thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="b4da882c3c7e5620762988c11c745c40.png" srcset="b4da882c3c7e5620762988c11c745c40_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Amazing</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31045" rel="bookmark" title="Permanent link to this comment by Amazing"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 3:15 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>And give me please options to set default context for pages</p>
+<p>i.e<br>
+Gmail =&gt; persoanl<br>
+Google search =&gt; Shopping</p>
+<p>So you say right now I will be able to control better my privacy :0</p>
+<p>Also this options shoule be enable default<br>
+Accept third-part cookies: From visited</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31045#respond" aria-label="Reply to Amazing">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31046" class="comment even thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://h.ello.com/" class="url" rel="nofollow external" title="http://h.ello.com">
+         <span class="photo"><img alt="" src="fa3aaea0e9cccfa47c43d38e46ef82b8_001.png" srcset="fa3aaea0e9cccfa47c43d38e46ef82b8.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">nonsa</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31046" rel="bookmark" title="Permanent link to this comment by nonsa"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 4:02 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awesome this is the kind of thing that will help firefox gain back chrome users. As a long time privacy advocate and firefox user, thank you. More features like this please. Tor integration would be nice too and the ability to return generic data for apis that can be fingerprinted</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31046#respond" aria-label="Reply to nonsa">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31048" class="comment odd alt thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://eff.org/" class="url" rel="nofollow external" title="http://eff.org">
+         <span class="photo"><img alt="" src="5ca4136a060a2574a936cdf6881f733c_001.png" srcset="5ca4136a060a2574a936cdf6881f733c.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">aaaa</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31048" rel="bookmark" title="Permanent link to this comment by aaaa"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 4:27 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>What do you use Containers for? *<br>
+More privacy, isolating identities</p>
+<p>How many Containers do you usually open in a browsing session?<br>
+Two or more</p>
+<p>Do you use different Containers side-by-side or one-at-a-time?<br>
+Side-by-side</p>
+<p>Do you like the Containers feature?<br>
+awesome!</p>
+<p>Will you recommend Containers to a friend?<br>
+Yes</p>
+<p>Do you have additional feedback?</p>
+<p>It would be cool to have the option of forcing certain containers to use certain proxy settings and an optional persona for each container to help further visually distinguish each one. Like the QuebesOS appVM approach.</p>
+<p>Privacy and security features are sorely lacking in browsers today. Chrome has increased security but with the big brother overlord Google waiting at every turn. Mozilla have some great addons but are still missing sandboxing , I know it is a work in progress and that development is slowed down by legacy code where as the others could build new browser engines from the start. That being said Firefox, the Tor browser and Brave are the only private options available for anyone serious about protecting themselves. </p>
+<p>The brave browser seems to be doing some things right by building in options such as adblocking, anti fingerprinting and https everywhere by default. This is the right approach privacy by design. Anything that would compromise user privacy must be opt in and have an option to disable it.</p>
+<p>I would love to see Mozilla focus more on initiatives like the one above and really implement as much of the suggestions by the torproject as possible. </p>
+<p>For instance all of the addons I use are to protect myself online. It would be great if I could install the browser  for friends and family and know they will be protected from fingerprinting, malvertising, tracking via third party cookies and etags and so on.</p>
+<p>Each time I see new shiny javascipt API’s in a new version of firefox the first thing I am concerned with is how can I stop this from being used against me, like they generally end up doing.</p>
+<p>I would love an option to return a standard device fingerprint for every firefox user built into the code so if you checked a preference javascript would always get the same values. This would really help Tor users. </p>
+<p>Also please consider not using google docs. They have enough information already.</p>
+<p>Thank you</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31048#respond" aria-label="Reply to aaaa">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31050" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="c111b4a2acd7895f6323bbbe0d62bd0f_001.png" srcset="c111b4a2acd7895f6323bbbe0d62bd0f.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Jason</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31050" rel="bookmark" title="Permanent link to this comment by Jason"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 5:15 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Why can’t each tab or page be automatically and individually containerized? Without having to have contexts defined either. Wouldn’t this provide the best security and privacy via isolation with no hoops for the user to jump through? At least consider it as an optional mode of operation for this feature.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31050#respond" aria-label="Reply to Jason">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31059" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="26ce53c20c5831d282772b3795c2429c.png" srcset="26ce53c20c5831d282772b3795c2429c_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Simon</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31059" rel="bookmark" title="Permanent link to this comment by Simon"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 1:33 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Presumably if every tab were individually containerized, you’d break stuff – opening sub-pages in new tabs would fail because the new tab wasn’t sharing authentication cookies with the initial page.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31059#respond" aria-label="Reply to Simon">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31053" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="fce12300b80ca98151e9331523d6a2dc_001.jpeg" srcset="fce12300b80ca98151e9331523d6a2dc.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Chris</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31053" rel="bookmark" title="Permanent link to this comment by Chris"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 9:23 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Do containers partition Flash’s Local Shared Objects? If not, then advertisers can track users across containers using Flash cookies.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31053#respond" aria-label="Reply to Chris">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31071" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="7bb698c4991c5af83adabe3c3b8ee8aa_001.png" srcset="7bb698c4991c5af83adabe3c3b8ee8aa.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Matt</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31071" rel="bookmark" title="Permanent link to this comment by Matt"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 1:10 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Containers don’t force Flash to follow this new convention. However, the NPAPI could be updated to allow the plugin to be container-aware, and then plugins can play nicely with Firefox’s enhanced privacy model.  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1280626" rel="nofollow">https://bugzilla.mozilla.org/show_bug.cgi?id=1280626</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31071#respond" aria-label="Reply to Matt">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31054" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="26ce53c20c5831d282772b3795c2429c.png" srcset="26ce53c20c5831d282772b3795c2429c_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Simon</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31054" rel="bookmark" title="Permanent link to this comment by Simon"><time class="published" pubdate="" datetime="2016-06-16" title="2016-06-16">June 16th, 2016 at 9:50 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>So, as a developer, I often have a number of instances of the same web app running on the same machine (on different ports) – right now, it’s not possible to be logged in to two of them at once, because they overwrite each others session-management cookies.</p>
+<p>It sounds like these containers will solve that problem – however, would there be any way to automate their setup, such that anything hitting “https://hostname:10001” automatically goes into a container, and anything hitting “https://hostname:10002” automatically goes into a second container?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31054#respond" aria-label="Reply to Simon">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31061" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="ad410bf3d9930c8a789172916459528b_001.png" srcset="ad410bf3d9930c8a789172916459528b.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Charles</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31061" rel="bookmark" title="Permanent link to this comment by Charles"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 1:48 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>That is the typical user cases that an add-on can to fill, after this feature gains some traction.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31061#respond" aria-label="Reply to Charles">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31060" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="b5355419e69c8b030d4799b58915a938_001.png" srcset="b5355419e69c8b030d4799b58915a938.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Nowan</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31060" rel="bookmark" title="Permanent link to this comment by Nowan"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 1:47 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>How is this going to interact with tools like Self Destructing cookies? Will extensions be able to configure different behaviors based on containers?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31060#respond" aria-label="Reply to Nowan">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31065" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="72bbc7edbac37156a74f26605589d01e_001.jpeg" srcset="72bbc7edbac37156a74f26605589d01e.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">janw.oostendorp</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31065" rel="bookmark" title="Permanent link to this comment by janw.oostendorp"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 7:00 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>This looks a loot like my current setup.<br>
+2 profiles with the same sync user.</p>
+<p>Pretty sure I’ll use this the same way.<br>
+I won’t use mixed tabs. I don’t want the distraction of private stuff during work.</p>
+<p>How will the design be of pinned tabs?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31065#respond" aria-label="Reply to janw.oostendorp">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31066" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="bd17d80ee0f2ae7a65660f2b8657095a_001.png" srcset="bd17d80ee0f2ae7a65660f2b8657095a.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">bmn</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31066" rel="bookmark" title="Permanent link to this comment by bmn"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 7:54 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Firefox is so much better than chrome</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31066#respond" aria-label="Reply to bmn">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31069" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="f54db59875d884cf49088453a57e8461_001.png" srcset="f54db59875d884cf49088453a57e8461.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Mark Tyndall</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31069" rel="bookmark" title="Permanent link to this comment by Mark Tyndall"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 11:08 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>You probably want to get together with the accessibility group to find colours which work for the widest range of people with colour vision issues.<br>
+(For me, the work and banking colours in your examples are basically indistinguishable.)</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31069#respond" aria-label="Reply to Mark Tyndall">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31072" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="178a829620a3d9efbd2a89c1b3e6cbd8_001.png" srcset="178a829620a3d9efbd2a89c1b3e6cbd8.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Will</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31072" rel="bookmark" title="Permanent link to this comment by Will"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 1:52 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Fun!</p>
+<p>Though the icon of “work” looks to much like a lock, which might be misleading people to think it’s a https-connected website.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31072#respond" aria-label="Reply to Will">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31075" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="8697d1cff478ecb6afbb6302244537d5_001.png" srcset="8697d1cff478ecb6afbb6302244537d5.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Sam</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31075" rel="bookmark" title="Permanent link to this comment by Sam"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 3:43 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>It would be nice to be able to customize the names associated with the identities.  Instead of forcing “Personal”, “Work”, “Banking”, and “Shopping”, it would be nice to be able to modify those (or add more).  I could see this being useful when you have multiple people using a shared PC that is always logged in (think parents/kids).</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31075#respond" aria-label="Reply to Sam">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31076" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="0d2e3a5d2ccac0fe127d6c089afa3bd4.png" srcset="0d2e3a5d2ccac0fe127d6c089afa3bd4_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Evan</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31076" rel="bookmark" title="Permanent link to this comment by Evan"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 5:00 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awesome feature.</p>
+<p>Automatically segregating bank websites into their own context would be ideal even for people who are not even aware of the feature.  </p>
+<p>It would also be nice to “switch” contexts.  For example, say you click on a link in an email.  It would be better to launch that into it’s own context and then later change contexts if the link isn’t malicious.</p>
+<p>I think there should be an option to automatically launch all third-party websites into their own context similar to how you can block third-party cookies.</p>
+<p>Imagining the possibilities.  Picture an addon that allows you to launch external js into different contexts as long as you enhance the API to allow for that.  Imagine downloading google analytics code off of tor or some other proxy, but the rest of the site through your real ip.  You could proxy anything that tracks you assuming you allow for proxying individual contexts.  Or for performance reasons (or censorship), use a different proxy if it has a more direct connection to a third party include.</p>
+<p>Is there any reason to run flash in the same context?  What exactly is perfectly safe to run in a completely different context?</p>
+<p>I’ve recently switched to Chrome + uMatrix after using the FF nightly + NoScript for a year, but this may bring me back.  This is a great feature that brings about wonderful opportunity if full developed like things used to be done.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31076#respond" aria-label="Reply to Evan">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31078" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="0d2e3a5d2ccac0fe127d6c089afa3bd4.png" srcset="0d2e3a5d2ccac0fe127d6c089afa3bd4_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Evan</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31078" rel="bookmark" title="Permanent link to this comment by Evan"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 6:08 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Maybe auto-contexualize websites that use an EV cert into a banking container.</p>
+<p>Not so sure if splitting proxies is a good idea now that I think about it.  Still great feature, though.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31078#respond" aria-label="Reply to Evan">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31077" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="32547db4ac6016b7ef8e02f9244e009b_001.png" srcset="32547db4ac6016b7ef8e02f9244e009b.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Florian</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31077" rel="bookmark" title="Permanent link to this comment by Florian"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 5:00 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>As a former user of the “priv8” add-on which would do exactly the same kind of thing for pre-e10s versions of Firefox, I’m just sooooo relieved to see this feature in my Nightly, I was really missing that !!!</p>
+<p>Now I still miss 3 features ( or “story”) to be totally happy :</p>
+<p>– being able to create my own containers ( I’d like multiple “Website X” containers, which would not fit with the provided ones ) and choose their color/icon.<br>
+This should definitively be a core feature</p>
+<p>– the possibility to “bind” a website to a/multiple container/s ( and magically provide a list of possible containers when going on the website from an “unbound” container / no container at all ), both for avoiding tracking ( I currently avoid going on Facebook,etc. because I would only do it in a proper container to avoid too much tracking ), and for development (because I am a web developer).<br>
+Probably/Maybe this feature should be for power users, as an add-on (like tab-groups are now)</p>
+<p>– being able to switch the current tab into a container, and know if I used a container for accessing this website before ( by checking cookies/ localstorage would be enough I guess, because if the website is stateless, the container would probably not matter that much).<br>
+Better yet, provide some kind of UI tip (tooltip including colored icons of the containers ?) on a link if I ever used the destination url in a/multiple container/s (and maybe up to the domain without path / port ). I guess this can be done as an add-on for power users as well</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31077#respond" aria-label="Reply to Florian">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31082" class="comment odd alt thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://walid.damouny.com/" class="url" rel="nofollow external" title="http://walid.damouny.com/">
+         <span class="photo"><img alt="" src="a617e55940d7d1ee05ddbbfa6bf6a2b0.png" srcset="a617e55940d7d1ee05ddbbfa6bf6a2b0_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Wliad Damouny</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31082" rel="bookmark" title="Permanent link to this comment by Wliad Damouny"><time class="published" pubdate="" datetime="2016-06-17" title="2016-06-17">June 17th, 2016 at 8:24 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>The branding of “containers” and “default container” is not user friendly. I think a re-purposing of the Tab Groups UI and branding is much better for users. It is convenient for users to see a group of tabs that share the same cookies email or social media.</p>
+<p>The use cases for a marriage of Tab Groups and Containers are quite many. One is the mentioned in this article. The other is a family computer where everyone is logged in and use the computer sparingly and in turn. It is easier for everyone to leave their websites signed in and loaded then switch to each Tab Groups based on the person using the computer. Tab Groups can also be the UI for private browsing sessions. Rather than create a New Private Window, merely created a New Private Group. The Tab Groups UI need a little work to make it more responsive because in the past it wasn’t. This Tab Groups <a href="https://addons.mozilla.org/en-US/firefox/addon/tab-groups-panorama/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/tab-groups-panorama/</a> extension actually has some good UI touches for the Tab Groups/Containers UI.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31082#respond" aria-label="Reply to Wliad Damouny">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31089" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="922cef8e9a4b8ee16c1d67409d08d676_001.png" srcset="922cef8e9a4b8ee16c1d67409d08d676.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Andy</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31089" rel="bookmark" title="Permanent link to this comment by Andy"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 1:26 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I’m going to preface this and say this is going to sound harsh.<br>
+This seems like something a new develper for Firefox would come up with and think it’s a novel and unique idea.  All this does is put a new thing in the browser that adds unnecessary complexity.  I’ve always thought FFox could use contextual stuff for bookmark management but thinking that opening different tabs on the same instance would reduce my browsing fingerprint is silly.  1 word : panopticlick</p>
+<p>This feature sounds like a rabbit hole.  People will next want per-context DNS servers, per-context proxy servers, per-context search engines, passwords/bookmarks… all sorts of random things and yet Firefox has profiles.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31089#respond" aria-label="Reply to Andy">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31098" class="comment odd alt depth-2 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://walid.damouny.com/" class="url" rel="nofollow external" title="http://walid.damouny.com/">
+         <span class="photo"><img alt="" src="a617e55940d7d1ee05ddbbfa6bf6a2b0.png" srcset="a617e55940d7d1ee05ddbbfa6bf6a2b0_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Walid Damouny</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31098" rel="bookmark" title="Permanent link to this comment by Walid Damouny"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 1:48 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>You’re attacking the concept as a simple programming problem and also make a somewhat good point about profiles. First it isn’t about programming but about some accessibility and UI. Secondly profiles are supposed to be for devs who want to tinker with extensions. For a moment I agreed with you about profiles and then rejected it on the grounds that a profile is a means to test a parallel setup and not to communicate with your existing one.</p>
+<p>The point you make about bookmarks management is one I’ve been thinking about. One of my pet peeves is that I couldn’t partially sync my home Firefox profile to my work computer or the other way round. Sometimes I want to share bits and pieces of information like bookmarks and some of the browser’s history because it is something I was researching on my own time. You’d think that since we are in an interconnected world we can share more easily and contextualize and segregate with the same ease.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31098#respond" aria-label="Reply to Walid Damouny">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31092" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://mohanpalaniappan.com/" class="url" rel="nofollow external" title="https://mohanpalaniappan.com">
+         <span class="photo"><img alt="" src="c046fa6c48dc8fcb236b18d9d825d070.jpeg" srcset="c046fa6c48dc8fcb236b18d9d825d070_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Mohan P</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31092" rel="bookmark" title="Permanent link to this comment by Mohan P"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 9:41 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>This is an interesting attempt to bring contextual identity to the browser and thanks for doing it. As few others mentioned in the comments, we need the flexibility to create our own identity rather than using a predetermined set of identities like Work, Shopping, etc., Main concern with the current design is that having different identities at the tab level is very confusing. As of now, I am using private window not only for private browsing, but also for establishing identities. I login into my personal twitter account in a private window and treat that private window as my personal identity. I expect any new tab I open in the private window to have my personal identity and that eases my browsing when there is a need to open the same twitter account in multiple tabs. I cannot imagine doing the same with the current tab level design so easily. So I would think the identity to exist at least at the window level and not at the tab level. I wont say this is the best way, but it is definitely better than tab level in my opinion.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31092#respond" aria-label="Reply to Mohan P">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31093" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="66a7a87c4ec02e70b4fbfc81e5655769.png" srcset="66a7a87c4ec02e70b4fbfc81e5655769_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Bob</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31093" rel="bookmark" title="Permanent link to this comment by Bob"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 10:06 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Isn’t that useless when you can just do `firefox -P –no-remote`? There’s even an addon that doesn’t require you to open the command line: <a href="https://addons.mozilla.org/en-US/firefox/addon/profileswitcher/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/profileswitcher/</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31093#respond" aria-label="Reply to Bob">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31099" class="comment even depth-2 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://walid.damouny.com/" class="url" rel="nofollow external" title="http://walid.damouny.com/">
+         <span class="photo"><img alt="" src="a617e55940d7d1ee05ddbbfa6bf6a2b0.png" srcset="a617e55940d7d1ee05ddbbfa6bf6a2b0_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Walid Damouny</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31099" rel="bookmark" title="Permanent link to this comment by Walid Damouny"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 1:53 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>This one is cooler <a href="https://addons.mozilla.org/en-US/firefox/addon/profilist/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/profilist/</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31099#respond" aria-label="Reply to Walid Damouny">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31151" class="comment odd alt depth-3 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://bigbluehat.com/" class="url" rel="nofollow external" title="http://bigbluehat.com/">
+         <span class="photo"><img alt="" src="3c9c4267bb4bf7e4cdbdb0d07f858eb7.jpeg" srcset="3c9c4267bb4bf7e4cdbdb0d07f858eb7_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">BigBlueHat</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31151" rel="bookmark" title="Permanent link to this comment by BigBlueHat"><time class="published" pubdate="" datetime="2016-06-21" title="2016-06-21">June 21st, 2016 at 2:47 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Just want to say thanks for the Profilist tip. Best thing about this announcement was finding this alternative to this upcoming Containers–which I hope will be rethought given the feedback threads here.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31151#respond" aria-label="Reply to BigBlueHat">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31094" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="e61f6f2f6dbc5a7708e9797398ee46e8.png" srcset="e61f6f2f6dbc5a7708e9797398ee46e8_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Lesnik</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31094" rel="bookmark" title="Permanent link to this comment by Lesnik"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 10:15 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Again you just take a feature from Chrome and add your own sugar coat over it to call it unique. Bring back customization which is now only available with Classic Theme Restorer and THAT WAY you gain users again.</p>
+<p>Most power users have loved the flexibility of the Firefox UI in the past. Now you remove that bit by bit and implementing stuff like that to satisfy Chrome users. Hint: It is not the Chrome users you want, it is the power user fraction you should wand to be back – as that is the user fraction which is utterly vocal about Firefox.</p>
+<p>But that kind of users will not come back because of some more security features. Bring back customization and we will be back. But not ONE moment earlier!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31094#respond" aria-label="Reply to Lesnik">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31111" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="1ba6f00b4701cd5a7719875b2846115a.png" srcset="1ba6f00b4701cd5a7719875b2846115a_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Someone</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31111" rel="bookmark" title="Permanent link to this comment by Someone"><time class="published" pubdate="" datetime="2016-06-19" title="2016-06-19">June 19th, 2016 at 8:13 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>What exactly about this is “taken from Chrome”?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31111#respond" aria-label="Reply to Someone">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31097" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="447941e9e3f170e257721452c03182eb.png" srcset="447941e9e3f170e257721452c03182eb_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Name (required)</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31097" rel="bookmark" title="Permanent link to this comment by Name (required)"><time class="published" pubdate="" datetime="2016-06-18" title="2016-06-18">June 18th, 2016 at 1:45 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Stop working on this and release Servo already !!<br>
+A lot of old Opera Presto users are going to adopt Servo so just release it.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31097#respond" aria-label="Reply to Name (required)">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31105" class="comment odd alt thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="5877d521525f86d0473a8f5919afc667.jpeg" srcset="5877d521525f86d0473a8f5919afc667_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Valentin Born</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31105" rel="bookmark" title="Permanent link to this comment by Valentin Born"><time class="published" pubdate="" datetime="2016-06-19" title="2016-06-19">June 19th, 2016 at 6:45 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Sounds good—but for proper compartmentalisation something along the lines of qubes-os would be more secure.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31105#respond" aria-label="Reply to Valentin Born">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31113" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="9f115551adac70bc6783490d6cd1d2a3.png" srcset="9f115551adac70bc6783490d6cd1d2a3_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">CJ</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31113" rel="bookmark" title="Permanent link to this comment by CJ"><time class="published" pubdate="" datetime="2016-06-19" title="2016-06-19">June 19th, 2016 at 10:14 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>What is the possibility that you will be able to use different IP’s for each Container in the future?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31113#respond" aria-label="Reply to CJ">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31121" class="comment odd alt thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://jimpick.com/" class="url" rel="nofollow external" title="https://jimpick.com/">
+         <span class="photo"><img alt="" src="ce56665a53573f8cf401244abea61482.jpeg" srcset="ce56665a53573f8cf401244abea61482_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Jim Pick</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-31121" rel="bookmark" title="Permanent link to this comment by Jim Pick"><time class="published" pubdate="" datetime="2016-06-19" title="2016-06-19">June 19th, 2016 at 7:18 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>This is a feature that will make me switch back to Firefox from Chrome!</p>
+<p>Great work!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31121#respond" aria-label="Reply to Jim Pick">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31126" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="6194c33df1e6a0fb23566d6dcbb8d9f5.png" srcset="6194c33df1e6a0fb23566d6dcbb8d9f5_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">larowlan</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31126" rel="bookmark" title="Permanent link to this comment by larowlan"><time class="published" pubdate="" datetime="2016-06-20" title="2016-06-20">June 20th, 2016 at 1:12 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Such a great idea – killer feature<br>
+Keep up the great work folks.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31126#respond" aria-label="Reply to larowlan">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31165" class="comment odd alt thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="c33be32f0779b72fa85028ed3e99bca9.png" srcset="c33be32f0779b72fa85028ed3e99bca9_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">David</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31165" rel="bookmark" title="Permanent link to this comment by David"><time class="published" pubdate="" datetime="2016-06-22" title="2016-06-22">June 22nd, 2016 at 11:36 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Great feature, but when I try to access it, the menu item and the button are greyed out. I just downloaded Nightly 50.0a1 and I made sure that privacy.userContext.enabled was set to true. The menu item is still greyed out, and when I drag the button to the hamburger menu (it wasn’t there automatically) it is greyed out here too. Did the feature become disabled in 50.0a1 recently? Or am I missing something?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31165#respond" aria-label="Reply to David">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31171" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="936383b387d6cc6d51279e429e5d7cd9.png" srcset="936383b387d6cc6d51279e429e5d7cd9_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Flimm</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31171" rel="bookmark" title="Permanent link to this comment by Flimm"><time class="published" pubdate="" datetime="2016-06-22" title="2016-06-22">June 22nd, 2016 at 8:25 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Is it possible to give containers a different name other than “Personal”, “Work”, “Banking” or “Shopping”?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31171#respond" aria-label="Reply to Flimm">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31254" class="trackback odd alt thread-even depth-1 hentry">
+      <h3 class="entry-title">Trackback from  <cite><a href="http://www.6rupx.com/" rel="external nofollow" class="url">... [Trackback]</a></cite>
+      <span class="comment-meta">on <a href="#comment-31254" rel="bookmark" title=" Permanent link to this comment by … [Trackback]"><time class="published" pubdate="" datetime="2016-06-27" title="2016-06-27">June 27th, 2016 at 9:03 pm</time></a>:</span>
+    </h3>
+  
+    
+    <blockquote class="entry-content">
+      <p><strong>… [Trackback]</strong></p>
+<p>[…] Read More here: blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/ […]</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31254#respond" aria-label="Reply to ... [Trackback]">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31265" class="comment even thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="cd2f0ae4617476af515cb312f4143b86.jpeg" srcset="cd2f0ae4617476af515cb312f4143b86_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Ibrahim</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31265" rel="bookmark" title="Permanent link to this comment by Ibrahim"><time class="published" pubdate="" datetime="2016-06-29" title="2016-06-29">June 29th, 2016 at 1:38 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awesome, looks like this already works in Firefox Developer Edition (on v49 as of writing, instead of v50) if you set privacy.userContext.enabled=true. I’ve been wanting something like this for a while as a web developer because I need to log in as multiple different users in my dev environment. My current workaround was to run a local nginx proxy that proxies different subdomains to my application server, so that I can log in to different users using different URLs. This lets you do that with a little less overhead, though I still like having multiple URLs for different users.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31265#respond" aria-label="Reply to Ibrahim">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-31368" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="baa87d50d6e5ad3588ae8f986310a68c.png" srcset="baa87d50d6e5ad3588ae8f986310a68c_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">yup</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31368" rel="bookmark" title="Permanent link to this comment by yup"><time class="published" pubdate="" datetime="2016-07-05" title="2016-07-05">July 5th, 2016 at 1:38 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>As mentioned above, FF has supported multiple profiles for a long time. They are literally totally isolated browsing experiences with completely independent copies of everything. Settings, cookies,…</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/profileswitcher/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/profileswitcher/</a><br>
+access the profiles with shortcuts like:<br>
+General Tab:<br>
+change description<br>
+Shortcut tab:<br>
+Target: “C:\Program Files\Mozilla Firefox\firefox.exe” -p yahoo -no-remote<br>
+start in: “C:\Program Files\Mozilla Firefox”</p>
+<p>This container experience seems to be slightly different as the containers are all sharing the same browser(one set of settings) but hiding the contexts. Profiles are full blown copies of FF running in parallel.<br>
+Look inside: C:\Users\%UserName%\AppData\Roaming\Mozilla\Firefox\Profiles<br>
+You will see each profile has its own copies of everything. And each FF is started under new process.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31368#respond" aria-label="Reply to yup">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-31494" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="f8540e7aff5932fc4cb406dfd925660c.png" srcset="f8540e7aff5932fc4cb406dfd925660c_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Bill Maggs</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31494" rel="bookmark" title="Permanent link to this comment by Bill Maggs"><time class="published" pubdate="" datetime="2016-07-13" title="2016-07-13">July 13th, 2016 at 2:49 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Tanvi, </p>
+<p>Really glad to see all your long and hard work on containers finally shipped! Congrats to you and Bram and Kamil and others that have worked on it. Clearly only part of the long term solution to identities on the Web, but a great start.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31494#respond" aria-label="Reply to Bill Maggs">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-31608" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="54d713eda68edb3bf4872958f14c7092.png" srcset="54d713eda68edb3bf4872958f14c7092_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Kamil</cite>
+        <span class="comment-meta">wrote on <a href="#comment-31608" rel="bookmark" title="Permanent link to this comment by Kamil"><time class="published" pubdate="" datetime="2016-07-21" title="2016-07-21">July 21st, 2016 at 4:12 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Great thing!!! Thank you very much for it. I am using Firefox alpha for webapps development and this funcionality helps me a lot. </p>
+<p>Please add function to customize both name and number of containers.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=31608#respond" aria-label="Reply to Kamil">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-32320" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="f19c9b6586ad3e6a0c7f33c2244f3666.png" srcset="f19c9b6586ad3e6a0c7f33c2244f3666_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">thadtheman</cite>
+        <span class="comment-meta">wrote on <a href="#comment-32320" rel="bookmark" title="Permanent link to this comment by thadtheman"><time class="published" pubdate="" datetime="2016-09-11" title="2016-09-11">September 11th, 2016 at 7:05 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I asked a question about profiles on reddit about profiles and was pointed to here.<br>
+<a href="https://www.reddit.com/r/firefox/comments/526zlm/better_profile_management/" rel="nofollow">https://www.reddit.com/r/firefox/comments/526zlm/better_profile_management/</a></p>
+<p>Why not make profiles a bit more lightweight. Easier to create ( and to keep what addons you want  when creating), delete, run two profiles at once and switch between them?</p>
+<p>A bit more work there and it seems like you would have the basic functionality of containers, but more stable and with less effort.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=32320#respond" aria-label="Reply to thadtheman">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-32738" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="84606b35437b5d9dfa7fa09b763742c1.png" srcset="84606b35437b5d9dfa7fa09b763742c1_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">julius</cite>
+        <span class="comment-meta">wrote on <a href="#comment-32738" rel="bookmark" title="Permanent link to this comment by julius"><time class="published" pubdate="" datetime="2016-10-16" title="2016-10-16">October 16th, 2016 at 12:46 pm</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Amazing feature! Looking forward to using it on the stable version some day! Great work! Thank you!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=32738#respond" aria-label="Reply to julius">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-33401" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://www.quora.com/profile/John-Russell-Burgreen-III/answers/Homelessness" class="url" rel="nofollow external" title="https://www.quora.com/profile/John-Russell-Burgreen-III/answers/Homelessness">
+         <span class="photo"><img alt="" src="bee98d425529dccedf958a53d04826ef.jpeg" srcset="bee98d425529dccedf958a53d04826ef_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">John is Ready to Work in Boulder</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-33401" rel="bookmark" title="Permanent link to this comment by John is Ready to Work in Boulder"><time class="published" pubdate="" datetime="2016-12-15" title="2016-12-15">December 15th, 2016 at 5:10 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>So, in theory you could be logged into multiple accounts in the same browser?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=33401#respond" aria-label="Reply to John is Ready to Work in Boulder">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-33728" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="3a3802df83300b017282479746488f81.png" srcset="3a3802df83300b017282479746488f81_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">James Fricker</cite>
+        <span class="comment-meta">wrote on <a href="#comment-33728" rel="bookmark" title="Permanent link to this comment by James Fricker"><time class="published" pubdate="" datetime="2017-01-20" title="2017-01-20">January 20th, 2017 at 12:05 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I love this feature but I need to be able to launch a particular URL from the command line in a particular container. Is there a way to open a URL in a new container tab from the command line?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=33728#respond" aria-label="Reply to James Fricker">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-33806" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="eb9070e348bc332987d2935bbcf23a50.jpeg" srcset="eb9070e348bc332987d2935bbcf23a50_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Murz</cite>
+        <span class="comment-meta">wrote on <a href="#comment-33806" rel="bookmark" title="Permanent link to this comment by Murz"><time class="published" pubdate="" datetime="2017-01-29" title="2017-01-29">January 29th, 2017 at 9:11 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Very useful feature, I move to it from Multifox extension. But how can I switch container of already opened tab (current tab)?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=33806#respond" aria-label="Reply to Murz">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-33807" class="comment odd alt depth-2 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="eb9070e348bc332987d2935bbcf23a50.jpeg" srcset="eb9070e348bc332987d2935bbcf23a50_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Murz</cite>
+        <span class="comment-meta">wrote on <a href="#comment-33807" rel="bookmark" title="Permanent link to this comment by Murz"><time class="published" pubdate="" datetime="2017-01-29" title="2017-01-29">January 29th, 2017 at 9:12 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Maybe we can add this functional via extension? Does Containers have any API for Firefox Extensions?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=33807#respond" aria-label="Reply to Murz">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-34243" class="comment even thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://ramblinggeek.co.uk/" class="url" rel="nofollow external" title="http://ramblinggeek.co.uk">
+         <span class="photo"><img alt="" src="9b5b2d575c326f6f7b13f4c63972e28f.png" srcset="9b5b2d575c326f6f7b13f4c63972e28f_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Wayne</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34243" rel="bookmark" title="Permanent link to this comment by Wayne"><time class="published" pubdate="" datetime="2017-03-14" title="2017-03-14">March 14th, 2017 at 4:40 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Does this not work in Windows Version no option on menu?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34243#respond" aria-label="Reply to Wayne">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-34382" class="comment odd alt thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://whiteboard-review.com/" class="url" rel="nofollow external" title="http://whiteboard-review.com/">
+         <span class="photo"><img alt="" src="48d828b6354cd32efa6e96f00ab6e09f.png" srcset="48d828b6354cd32efa6e96f00ab6e09f_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Dann</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34382" rel="bookmark" title="Permanent link to this comment by Dann"><time class="published" pubdate="" datetime="2017-03-20" title="2017-03-20">March 20th, 2017 at 12:51 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Great! It’s very useful for me. thanks so much</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34382#respond" aria-label="Reply to Dann">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-34695" class="comment even thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://jvzooacademyreviews.com/" class="url" rel="nofollow external" title="http://jvzooacademyreviews.com/">
+         <span class="photo"><img alt="" src="5889df83d3f240d647caa9b029987133.png" srcset="5889df83d3f240d647caa9b029987133_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Connie Scott</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34695" rel="bookmark" title="Permanent link to this comment by Connie Scott"><time class="published" pubdate="" datetime="2017-04-08" title="2017-04-08">April 8th, 2017 at 2:07 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awesome post!!!, I solve my problem after read this post.<br>
+Thanks TanviHacks for your post.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34695#respond" aria-label="Reply to Connie Scott">Reply</a> </p>
+  <ol class="children">
+
+ <li id="comment-34730" class="comment odd alt depth-2 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://www.jvzooacademyreviews.com/" class="url" rel="nofollow external" title="http://www.jvzooacademyreviews.com">
+         <span class="photo"><img alt="" src="5889df83d3f240d647caa9b029987133.png" srcset="5889df83d3f240d647caa9b029987133_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Scott Conie</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34730" rel="bookmark" title="Permanent link to this comment by Scott Conie"><time class="published" pubdate="" datetime="2017-04-10" title="2017-04-10">April 10th, 2017 at 3:13 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Yes, it’s helpul. it’s not happen one more.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34730#respond" aria-label="Reply to Scott Conie">Reply</a> </p>
+  </li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+ <li id="comment-34863" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://hakireview.com/" class="url" rel="nofollow external" title="https://hakireview.com/">
+         <span class="photo"><img alt="" src="72913b421e492be5a1bdd39a1f2d10d8.jpeg" srcset="72913b421e492be5a1bdd39a1f2d10d8_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Tony</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34863" rel="bookmark" title="Permanent link to this comment by Tony"><time class="published" pubdate="" datetime="2017-04-23" title="2017-04-23">April 23rd, 2017 at 11:07 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awsome post! It’s very useful for me. Thank you so much!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34863#respond" aria-label="Reply to Tony">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-34877" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://www.prensadelmundo.net/ver_periodico.php?diario=autonotebuyer.net" class="url" rel="nofollow external" title="http://www.prensadelmundo.net/ver_periodico.php?diario=autonotebuyer.net">
+         <span class="photo"><img alt="" src="9584d757adaafd535b103284bb69f875.png" srcset="9584d757adaafd535b103284bb69f875_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Financial Solutions</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-34877" rel="bookmark" title="Permanent link to this comment by Financial Solutions"><time class="published" pubdate="" datetime="2017-04-25" title="2017-04-25">April 25th, 2017 at 4:00 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Hmm it looks like your website ate my first<br>
+comment (it was super long) so I guess I’ll just sum it up what I wrote and say, I’m thoroughly enjoying your blog.</p>
+<p>I as well am an aspiring blog writer but I’m still new to the whole thing.<br>
+Do you have any points for beginner blog writers?<br>
+I’d definitely appreciate it.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34877#respond" aria-label="Reply to Financial Solutions">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-34901" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="7113cc132e73a105ab230df3997a50c1.jpeg" srcset="7113cc132e73a105ab230df3997a50c1_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">S3nd41</cite>
+        <span class="comment-meta">wrote on <a href="#comment-34901" rel="bookmark" title="Permanent link to this comment by S3nd41"><time class="published" pubdate="" datetime="2017-04-27" title="2017-04-27">April 27th, 2017 at 8:42 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Hello,</p>
+<p>This is a great functionality but you’re implementing it wrong.<br>
+I don’t want to have to choose for every tab which identity I’m opening it on.<br>
+I want to open new windows and have all the tabs I open under the window belonging to the same identity.<br>
+Can you just basically mimic the behavior of the sadly discontinued Multifox?<br>
+You really don’t need to reinvent the wheel regarding this feature.</p>
+<p>Thank you!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=34901#respond" aria-label="Reply to S3nd41">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35052" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://titanrxmaleenhancement.com/" class="url" rel="nofollow external" title="http://titanrxmaleenhancement.com/">
+         <span class="photo"><img alt="" src="239d317a8ab9ce09da271c1885c53d52.png" srcset="239d317a8ab9ce09da271c1885c53d52_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Titan RX</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35052" rel="bookmark" title="Permanent link to this comment by Titan RX"><time class="published" pubdate="" datetime="2017-05-11" title="2017-05-11">May 11th, 2017 at 2:38 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Perfect piece of work you have done, this website is really<br>
+cool with superb info.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35052#respond" aria-label="Reply to Titan RX">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35055" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://flashreviewz.com/" class="url" rel="nofollow external" title="http://flashreviewz.com">
+         <span class="photo"><img alt="" src="2fb4c806bebdb4a443f7d9befd0f11cc.jpeg" srcset="2fb4c806bebdb4a443f7d9befd0f11cc_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Jvzoo Review Site</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35055" rel="bookmark" title="Permanent link to this comment by Jvzoo Review Site"><time class="published" pubdate="" datetime="2017-05-11" title="2017-05-11">May 11th, 2017 at 2:50 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Awsome post! It’s very useful for me. Thank you so much!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35055#respond" aria-label="Reply to Jvzoo Review Site">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35087" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://www.am-review.com/" class="url" rel="nofollow external" title="http://www.am-review.com">
+         <span class="photo"><img alt="" src="fbb41ce03fa8c6c40ad729e9c290b6ec.jpeg" srcset="fbb41ce03fa8c6c40ad729e9c290b6ec_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Danny</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35087" rel="bookmark" title="Permanent link to this comment by Danny"><time class="published" pubdate="" datetime="2017-05-16" title="2017-05-16">May 16th, 2017 at 6:17 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Firefox is so much better than chrome</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35087#respond" aria-label="Reply to Danny">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35100" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://senseireview.com/" class="url" rel="nofollow external" title="http://senseireview.com/">
+         <span class="photo"><img alt="" src="58e53a826bba824aeaf80ee28ed73130.png" srcset="58e53a826bba824aeaf80ee28ed73130_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Robert</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35100" rel="bookmark" title="Permanent link to this comment by Robert"><time class="published" pubdate="" datetime="2017-05-17" title="2017-05-17">May 17th, 2017 at 12:28 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Because of Nightly, I quit using Chrome. I prefer Firefox.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35100#respond" aria-label="Reply to Robert">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35101" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://agbreview.com/" class="url" rel="nofollow external" title="http://agbreview.com/">
+         <span class="photo"><img alt="" src="5bae9f80788d6f0affdcd7396a042cf4.png" srcset="5bae9f80788d6f0affdcd7396a042cf4_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">aGB Review</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35101" rel="bookmark" title="Permanent link to this comment by aGB Review"><time class="published" pubdate="" datetime="2017-05-17" title="2017-05-17">May 17th, 2017 at 12:29 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Perfect piece of work you have done, this website is really<br>
+cool with superb info.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35101#respond" aria-label="Reply to aGB Review">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35138" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://digitechcenter.com/" class="url" rel="nofollow external" title="http://digitechcenter.com/">
+         <span class="photo"><img alt="" src="39fc716d2e5334b6a0402e2f6b22325e.png" srcset="39fc716d2e5334b6a0402e2f6b22325e_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Ovy</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35138" rel="bookmark" title="Permanent link to this comment by Ovy"><time class="published" pubdate="" datetime="2017-05-21" title="2017-05-21">May 21st, 2017 at 4:28 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Chrome was down so I have to use Firefox again, but it feels great!<br>
+Firefox not bad after all</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35138#respond" aria-label="Reply to Ovy">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35162" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://reviewtrustreviews.com/" class="url" rel="nofollow external" title="http://reviewtrustreviews.com">
+         <span class="photo"><img alt="" src="56749e76e24acc3be89304cfa243b85d.png" srcset="56749e76e24acc3be89304cfa243b85d_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Jack</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35162" rel="bookmark" title="Permanent link to this comment by Jack"><time class="published" pubdate="" datetime="2017-05-23" title="2017-05-23">May 23rd, 2017 at 8:18 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>A post is great ! It’s very useful for me. Thank you so much! ^^</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35162#respond" aria-label="Reply to Jack">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35220" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://letsbuy.net/" class="url" rel="nofollow external" title="http://letsbuy.net">
+         <span class="photo"><img alt="" src="4dcd93254d0937927598576ab6198736.png" srcset="4dcd93254d0937927598576ab6198736_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Phillip Lam</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35220" rel="bookmark" title="Permanent link to this comment by Phillip Lam"><time class="published" pubdate="" datetime="2017-05-29" title="2017-05-29">May 29th, 2017 at 6:49 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>FF is better than Chrome</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35220#respond" aria-label="Reply to Phillip Lam">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35277" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://goo.gl/LIJm7B" class="url" rel="nofollow external" title="https://goo.gl/LIJm7B">
+         <span class="photo"><img alt="" src="c6993cc6e21c4fe8836b637fcb7e81f1.png" srcset="c6993cc6e21c4fe8836b637fcb7e81f1_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Mobdro</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35277" rel="bookmark" title="Permanent link to this comment by Mobdro"><time class="published" pubdate="" datetime="2017-06-03" title="2017-06-03">June 3rd, 2017 at 1:54 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>We are the one that the thing which is cool to know is the best.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35277#respond" aria-label="Reply to Mobdro">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35293" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://taihinhnendepnhat.net/" class="url" rel="nofollow external" title="https://taihinhnendepnhat.net/">
+         <span class="photo"><img alt="" src="f4b96e7320eb8f1ad4bb6875e439ca10.jpeg" srcset="f4b96e7320eb8f1ad4bb6875e439ca10_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Hinh Nen</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35293" rel="bookmark" title="Permanent link to this comment by Hinh Nen"><time class="published" pubdate="" datetime="2017-06-05" title="2017-06-05">June 5th, 2017 at 4:23 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Seems good. but I hope there will be context menu to open tabs based on container . I hope I can retain specific cookies across the containers. like gmail for example.I like know how does FF handle it?</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35293#respond" aria-label="Reply to Hinh Nen">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35296" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://pivotalmarketingventures.com/" class="url" rel="nofollow external" title="https://pivotalmarketingventures.com/">
+         <span class="photo"><img alt="" src="60453528c6ff2ac50edbb6fb64552594.jpeg" srcset="60453528c6ff2ac50edbb6fb64552594_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Erica</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35296" rel="bookmark" title="Permanent link to this comment by Erica"><time class="published" pubdate="" datetime="2017-06-05" title="2017-06-05">June 5th, 2017 at 6:52 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>And this is the reason we like using Firefox considerable more than IE, Chrome, or Edge.  Our team does internet marketing product reviews so we see now software launched on nearly a daily basis.  You’d be  surprised how many pieces of software have compatibility problems if you don’t use Firefox.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35296#respond" aria-label="Reply to Erica">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35355" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://urchancereview.com/" class="url" rel="nofollow external" title="http://urchancereview.com/">
+         <span class="photo"><img alt="" src="33eb7d7143d306e1e67631085c8492fc.jpeg" srcset="33eb7d7143d306e1e67631085c8492fc_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Hoang Tran</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35355" rel="bookmark" title="Permanent link to this comment by Hoang Tran"><time class="published" pubdate="" datetime="2017-06-12" title="2017-06-12">June 12th, 2017 at 4:11 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Really good topic</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35355#respond" aria-label="Reply to Hoang Tran">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35359" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://jamesaz.com/" class="url" rel="nofollow external" title="http://JamesAZ.com">
+         <span class="photo"><img alt="" src="4dcd93254d0937927598576ab6198736.png" srcset="4dcd93254d0937927598576ab6198736_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">james</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35359" rel="bookmark" title="Permanent link to this comment by james"><time class="published" pubdate="" datetime="2017-06-12" title="2017-06-12">June 12th, 2017 at 6:52 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>thanks you</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35359#respond" aria-label="Reply to james">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35368" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://joe-review.com/" class="url" rel="nofollow external" title="http://joe-review.com/">
+         <span class="photo"><img alt="" src="3963b643e1fd5442c2c66b87c7322616.png" srcset="3963b643e1fd5442c2c66b87c7322616_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Joe Wilson</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35368" rel="bookmark" title="Permanent link to this comment by Joe Wilson"><time class="published" pubdate="" datetime="2017-06-13" title="2017-06-13">June 13th, 2017 at 6:57 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I solve my problem after read this post.<br>
+Thank you so much!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35368#respond" aria-label="Reply to Joe Wilson">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35385" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://milouskincarecream.com/" class="url" rel="nofollow external" title="http://milouskincarecream.com/">
+         <span class="photo"><img alt="" src="29bc370ddb5c9eeaca9b5d9863d7e682.png" srcset="29bc370ddb5c9eeaca9b5d9863d7e682_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Milou Skin Cream</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35385" rel="bookmark" title="Permanent link to this comment by Milou Skin Cream"><time class="published" pubdate="" datetime="2017-06-15" title="2017-06-15">June 15th, 2017 at 12:41 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I truly enjoy looking through on this site, it has excellent blog posts.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35385#respond" aria-label="Reply to Milou Skin Cream">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35400" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://pinfluxreview.com/" class="url" rel="nofollow external" title="http://pinfluxreview.com">
+         <span class="photo"><img alt="" src="d814aad53a19d21e172bc2594b657deb.png" srcset="d814aad53a19d21e172bc2594b657deb_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">pinflux review</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35400" rel="bookmark" title="Permanent link to this comment by pinflux review"><time class="published" pubdate="" datetime="2017-06-17" title="2017-06-17">June 17th, 2017 at 3:29 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Thank for sharing your tips, It’s a helpful for me<br>
+<a href="http://pinfluxreview.com/" rel="nofollow">http://pinfluxreview.com</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35400#respond" aria-label="Reply to pinflux review">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35421" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://agbreview.com/review/" class="url" rel="nofollow external" title="http://agbreview.com/review/">
+         <span class="photo"><img alt="" src="0fd62d44fec9e5013930e4e80d6c72ed.png" srcset="0fd62d44fec9e5013930e4e80d6c72ed_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Review</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35421" rel="bookmark" title="Permanent link to this comment by Review"><time class="published" pubdate="" datetime="2017-06-18" title="2017-06-18">June 18th, 2017 at 12:13 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Agbreview will help your site have the best review, people will easily find your site by the attraction that agbreview make your site, in addition to products on agbreview you choose will. It can help you get rid of your complex issues as well as the difficulties and grow your business smoothly. And a huge amount of awesome bonuses. Follow “Agbreview” and follow “Agbreview” to be able to update new articles and application information, tools, software and training courses in Agbreview.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35421#respond" aria-label="Reply to Review">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35584" class="comment even thread-even depth-1 hentry">
+            <h3 class="entry-title vcard">
+        <span class="photo"><img alt="" src="d81d3e47cbb1778d090171ce02fc94b1.png" srcset="d81d3e47cbb1778d090171ce02fc94b1_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>        <cite class="author fn">Andrew</cite>
+        <span class="comment-meta">wrote on <a href="#comment-35584" rel="bookmark" title="Permanent link to this comment by Andrew"><time class="published" pubdate="" datetime="2017-07-07" title="2017-07-07">July 7th, 2017 at 10:11 am</time></a>:</span>
+      </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I’ve been using Multifox extension for many years and I’m happy this functionality getting integrated in the Firefox itself. These days I wouldn’t use a browser that doesn’t have some sort of lightweight identity separation.</p>
+<p>Comments:<br>
+– While per-tab identities are technically superior, per-window identities seems to be easier to use/keep track of. Multifox was briefly toying with switching to per-tab identities but, from what I’ve seen, users generally preferred an older per-window implementation more, so in the end it started supporting both with an option. Note that per-window identities are nothing than a sub-set of the current feature.<br>
+– Pinned tabs should support identities.<br>
+– Opening new identity tabs should be integrated with the open new tab button/menu items.<br>
+– It should be possible to assign external shortcuts to be open in a specific identity.<br>
+– It should be possible to associate certain websites with identities.<br>
+– It should be possible to reload the current website under a different identity.<br>
+– Some websites (e.g. banks, paypal, facebook, google) need to be used in other identities (for example, I’m browsing a page using identity A and try to make a paypal payment, once I’ve logged into paypal it has now left its cookies in identity A. Any idea how to solve this issue? For this reason I wouldn’t simply assign bank websites to their own identities as that would break communication between them and other websites that may need payment authorization etc.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35584#respond" aria-label="Reply to Andrew">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35591" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://www.mylinkspage.com/" class="url" rel="nofollow external" title="https://www.mylinkspage.com">
+         <span class="photo"><img alt="" src="cd673fc9a631ffa0cc3dcac26ceb88db.png" srcset="cd673fc9a631ffa0cc3dcac26ceb88db_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">My Links Page</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35591" rel="bookmark" title="Permanent link to this comment by My Links Page"><time class="published" pubdate="" datetime="2017-07-08" title="2017-07-08">July 8th, 2017 at 12:55 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Perfect piece of work you have done, this website is really<br>
+cool with superb info. <a href="https://www.mylinkspage.com/" rel="nofollow">https://www.mylinkspage.com</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35591#respond" aria-label="Reply to My Links Page">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35596" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://urchancereview.com/" class="url" rel="nofollow external" title="http://urchancereview.com">
+         <span class="photo"><img alt="" src="33eb7d7143d306e1e67631085c8492fc.jpeg" srcset="33eb7d7143d306e1e67631085c8492fc_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Urchance Review</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35596" rel="bookmark" title="Permanent link to this comment by Urchance Review"><time class="published" pubdate="" datetime="2017-07-09" title="2017-07-09">July 9th, 2017 at 8:52 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>FF never comparation with chrome .. seriously</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35596#respond" aria-label="Reply to Urchance Review">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35598" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://bc-review.com/" class="url" rel="nofollow external" title="https://bc-review.com">
+         <span class="photo"><img alt="" src="2af8db01154364e3e551c54d51f7be9d.png" srcset="2af8db01154364e3e551c54d51f7be9d_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">bc review</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35598" rel="bookmark" title="Permanent link to this comment by bc review"><time class="published" pubdate="" datetime="2017-07-09" title="2017-07-09">July 9th, 2017 at 4:28 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>I have a question is why I can’t use javascript in my website while using firefox. Although other browser can use it ? You can see my website to know more <a href="https://bc-review.com/" rel="nofollow">https://bc-review.com/</a></p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35598#respond" aria-label="Reply to bc review">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35601" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://jsonformatter-online.com/" class="url" rel="nofollow external" title="https://jsonformatter-online.com/">
+         <span class="photo"><img alt="" src="291a0f9e8947691bbc833c0b240a65be.jpeg" srcset="291a0f9e8947691bbc833c0b240a65be_001.jpeg 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">json formatter</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35601" rel="bookmark" title="Permanent link to this comment by json formatter"><time class="published" pubdate="" datetime="2017-07-10" title="2017-07-10">July 10th, 2017 at 4:00 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Thank you for the article. It’s very informative. With Containers, users can open tabs in multiple different contexts</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35601#respond" aria-label="Reply to json formatter">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35605" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://19216801help.com/" class="url" rel="nofollow external" title="https://19216801help.com/">
+         <span class="photo"><img alt="" src="4e176cf26fbc2edd72eda5439eb79253.png" srcset="4e176cf26fbc2edd72eda5439eb79253_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">192.168.0.1</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35605" rel="bookmark" title="Permanent link to this comment by 192.168.0.1"><time class="published" pubdate="" datetime="2017-07-10" title="2017-07-10">July 10th, 2017 at 4:05 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Problem solved! Thank you</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35605#respond" aria-label="Reply to 192.168.0.1">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35619" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://www.alugueltrancoso.com.br/" class="url" rel="nofollow external" title="http://www.alugueltrancoso.com.br">
+         <span class="photo"><img alt="" src="001f0d678070329540f23f1a0233af05.png" srcset="001f0d678070329540f23f1a0233af05_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">aluguel trancoso</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35619" rel="bookmark" title="Permanent link to this comment by aluguel trancoso"><time class="published" pubdate="" datetime="2017-07-11" title="2017-07-11">July 11th, 2017 at 2:08 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>This is a feature that will make me switch back to Firefox from Chrome!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35619#respond" aria-label="Reply to aluguel trancoso">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35633" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://worthreview.com/" class="url" rel="nofollow external" title="http://worthreview.com">
+         <span class="photo"><img alt="" src="59c39cd35a85bc6937e701bdbedcb84c.png" srcset="59c39cd35a85bc6937e701bdbedcb84c_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Emma Trinh</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35633" rel="bookmark" title="Permanent link to this comment by Emma Trinh"><time class="published" pubdate="" datetime="2017-07-13" title="2017-07-13">July 13th, 2017 at 12:17 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>What a nice post! Easy to understand and I had solved!</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35633#respond" aria-label="Reply to Emma Trinh">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35634" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://hipporeview.com/" class="url" rel="nofollow external" title="https://hipporeview.com/">
+         <span class="photo"><img alt="" src="dbd40fd890d6d14de5c197fb228fe089.png" srcset="dbd40fd890d6d14de5c197fb228fe089_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Andy</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35634" rel="bookmark" title="Permanent link to this comment by Andy"><time class="published" pubdate="" datetime="2017-07-13" title="2017-07-13">July 13th, 2017 at 4:11 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Thank you! I have solved the problem.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35634#respond" aria-label="Reply to Andy">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35640" class="comment odd alt thread-odd thread-alt depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="https://mobdroappdownload.co/" class="url" rel="nofollow external" title="https://mobdroappdownload.co/">
+         <span class="photo"><img alt="" src="ac51124de0ed1c5bca213a2d0138afa3.png" srcset="ac51124de0ed1c5bca213a2d0138afa3_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">The blog Homepage</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35640" rel="bookmark" title="Permanent link to this comment by The blog Homepage"><time class="published" pubdate="" datetime="2017-07-14" title="2017-07-14">July 14th, 2017 at 6:06 am</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>In the web based or streaming based blogs are very unique when it comes to contextual identities. Mobdro is the perfect example on the web to check out.</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35640#respond" aria-label="Reply to The blog Homepage">Reply</a> </p>
+  </li><!-- #comment-## -->
+
+ <li id="comment-35790" class="comment even thread-even depth-1 hentry">
+           <h3 class="entry-title vcard">
+       <a href="http://yenhung.vn/mo-boi-tron" class="url" rel="nofollow external" title="http://yenhung.vn/mo-boi-tron">
+         <span class="photo"><img alt="" src="5c6a0122a65007ceaa3e7e65bc7b2978.png" srcset="5c6a0122a65007ceaa3e7e65bc7b2978_001.png 2x" class="avatar avatar-36 photo" width="36" height="36"></span>         <cite class="author fn">Phạm Thanh</cite>
+       </a>
+       <span class="comment-meta">wrote on <a href="#comment-35790" rel="bookmark" title="Permanent link to this comment by Phạm Thanh"><time class="published" pubdate="" datetime="2017-07-26" title="2017-07-26">July 26th, 2017 at 3:36 pm</time></a>:</span>
+     </h3>
+      
+    
+    <blockquote class="entry-content">
+      <p>Thanks for sharing your blog’s usefulness. Wish your blog grow stronger and share more useful information with your readers, thanks</p>
+    </blockquote>
+
+      <p class="comment-util"><a rel="nofollow" class="comment-reply-link" href="https://blog.mozilla.org/tanvi/2016/06/16/contextual-identities-on-the-web/?replytocom=35790#respond" aria-label="Reply to Phạm Thanh">Reply</a> </p>
+  </li><!-- #comment-## -->
+  </ol>
+
+  
+
+  <div id="respond">
+        <form id="comment-form" action="https://blog.mozilla.org/tanvi/wp-comments-post.php" method="post">
+      <fieldset>
+        <legend><span>Post Your Comment</span></legend>
+        <p id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel Reply</a></p>
+        <ol>
+                  <li id="cmt-name"><label for="author">Name <span class="note">(required)</span></label> <input name="author" id="author" value="" size="25" tabindex="1" required="" aria-required="true" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="text"></li>
+          <li id="cmt-email"><label for="email">Mail <span class="note">(required, will not be published)</span></label> <input name="email" id="email" value="" size="25" tabindex="2" required="" aria-required="true" type="text"></li>
+          <li id="cmt-web"><label for="url">Website</label> <input name="url" id="url" value="" size="25" tabindex="3" type="text"></li>
+                  <li id="cmt-cmt"><label for="comment">Your comment</label> <textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea></li>
+          <li id="comment-submit"><button name="submit" type="submit" id="submit" tabindex="5">Submit Comment</button>
+          <input name="comment_post_ID" value="201" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+          <p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="a69591509c" type="hidden"></p><p style="display: none;"><input id="ak_js" name="ak_js" value="189" type="hidden"></p></li>
+        </ol>
+      </fieldset>
+    </form>
+      </div>
+    <script type="text/javascript" src="about:blank"></script>
+  <script type="text/javascript">/* Code removed by ScrapBook */</script>
+  
+
+</section>
+
+
+</section><!-- end #content-main -->
+  
+<aside id="content-sub" role="complementary">
+
+<div id="search-2" class="widget widget_search"><form method="get" class="fm-search" action="https://blog.mozilla.org/tanvi">
+  <fieldset>
+    <p><input value="" name="s" id="s" placeholder="Search" type="text"> <button type="submit">Search</button></p>
+  </fieldset>
+</form>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widgettitle">Recent Posts</h2>
+		<ul>
+					<li>
+				<a href="#">Contextual Identities on the Web</a>
+						</li>
+					<li>
+				<a href="https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/">No More Passwords over HTTP, Please!</a>
+						</li>
+					<li>
+				<a href="https://blog.mozilla.org/tanvi/2016/01/26/updated-firefox-security-indicators/">Updated Firefox Security Indicators</a>
+						</li>
+					<li>
+				<a href="https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/">Mixed Content Blocking Enabled in Firefox 23!</a>
+						</li>
+					<li>
+				<a href="https://blog.mozilla.org/tanvi/2012/09/18/user-specified-content-security-policy/">User Specified Content Security Policy</a>
+						</li>
+				</ul>
+		</div>		<div id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widgettitle">Recent Comments</h2>
+<ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://yenhung.vn/mo-boi-tron" rel="external nofollow" class="url">Phạm Thanh</a></span> on <a href="#comment-35790">Contextual Identities on the Web</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://support.mozilla.org/" rel="external nofollow" class="url">Noyder</a></span> on <a href="https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/#comment-35784">Mixed Content Blocking Enabled in Firefox 23!</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.necmar.nl/" rel="external nofollow" class="url">ICT bedrijven Amsterdam</a></span> on <a href="https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/#comment-35748">No More Passwords over HTTP, Please!</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.suachuativitainha.com.vn/" rel="external nofollow" class="url">sua tivi tai nha</a></span> on <a href="https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/#comment-35660">Mixed Content Blocking Enabled in Firefox 23!</a></li><li class="recentcomments"><span class="comment-author-link">MattNDick</span> on <a href="https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/#comment-35655">No More Passwords over HTTP, Please!</a></li></ul></div><div id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+		<ul>
+			<li><a href="https://blog.mozilla.org/tanvi/2016/06/">June 2016</a></li>
+	<li><a href="https://blog.mozilla.org/tanvi/2016/01/">January 2016</a></li>
+	<li><a href="https://blog.mozilla.org/tanvi/2013/04/">April 2013</a></li>
+	<li><a href="https://blog.mozilla.org/tanvi/2012/09/">September 2012</a></li>
+		</ul>
+		</div><div id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-69"><a href="https://blog.mozilla.org/tanvi/category/security/">Browser Security</a>
+</li>
+		</ul>
+</div><div id="meta-2" class="widget widget_meta"><h2 class="widgettitle">Meta</h2>
+			<ul>
+						<li><a rel="nofollow" href="https://blog.mozilla.org/tanvi/wp-login.php">Log in</a></li>
+			<li><a href="https://blog.mozilla.org/tanvi/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://blog.mozilla.org/tanvi/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</div>
+
+</aside><!-- end #content-sub -->
+
+  </section><!-- end #content -->
+</div><!-- end #doc -->
+  
+<!-- start #footer -->
+<aside id="sub-footer">
+  <div id="sub-footer-contents">
+    <h3>Let’s be <span>friends!</span></h3>
+    <ul>
+      <li id="footer-twitter"><a href="http://twitter.com/firefox">Twitter</a></li>
+      <li id="footer-facebook"><a href="http://facebook.com/Firefox">Facebook</a></li>
+      <li id="footer-connect"><a href="http://www.mozilla.org/firefox/connect/">More Ways to Connect</a></li>
+    </ul>
+    <p id="sub-footer-newsletter">
+      <span class="intro">Want us to keep in touch?</span>
+      <a href="http://www.mozilla.org/newsletter/">Get Monthly News <span>»</span></a>
+    </p>
+  </div>
+</aside>
+
+<footer id="footer">
+  <div id="footer-contents" role="contentinfo">
+    <h3 id="footer-logo"><a href="http://www.mozilla.org/firefox/">Firefox</a></h3>
+
+    <nav id="footer-menu" role="navigation">
+        <ul>
+          <li><a href="http://www.mozilla.org/firefox/features/">Desktop</a>
+            <ul>
+              <li class="first"><a href="http://www.mozilla.org/firefox/features/">Features</a></li>
+              <li><a href="http://www.mozilla.org/firefox/customize/">Customize</a></li>
+              <li><a href="http://www.mozilla.org/firefox/performance/">Performance</a></li>
+              <li><a href="http://www.mozilla.org/firefox/technology/">Technology</a></li>
+              <li class="last"><a href="http://www.mozilla.org/firefox/security/">Privacy &amp; Security</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.mozilla.org/mobile/">Mobile</a>
+            <ul>
+              <li class="first"><a href="http://www.mozilla.org/mobile/">Download</a></li>
+              <li><a href="http://www.mozilla.org/mobile/features/">Features</a></li>
+              <li><a href="https://addons.mozilla.org/en-US/mobile/?browse=featured">Customize</a></li>
+              <li class="last"><a href="http://www.mozilla.org/mobile/faq/">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.mozilla.org/firefox/channel/">Releases</a>
+            <ul>
+              <li class="first"><a href="http://www.mozilla.org/firefox/channel/">Download</a></li>
+              <li><a href="http://www.mozilla.org/firefox/aurora/">Firefox Aurora</a></li>
+              <li><a href="http://www.mozilla.org/beta/">Firefox Beta</a></li>
+              <li class="last"><a href="http://www.mozilla.org/firefox/">Firefox</a></li>
+            </ul>
+          </li>
+          <li><a href="https://addons.mozilla.org/">Add-ons</a>
+            <ul>
+              <li class="first"><a href="https://addons.mozilla.org/firefox/">Desktop Add-ons</a></li>
+              <li><a href="https://addons.mozilla.org/mobile/">Mobile Add-ons</a></li>
+              <li class="last"><a href="http://www.getpersonas.com/">Personas</a></li>
+            </ul>
+          </li>
+          <li><a href="http://support.mozilla.com/">Support</a>
+            <ul>
+              <li class="first"><a href="http://support.mozilla.com/en-US/kb/">Desktop Support</a></li>
+              <li class="last"><a href="http://support.mozilla.com/mobile">Mobile Support</a></li>
+            </ul>
+          </li>
+          <li class="current last"><a href="http://www.mozilla.org/firefox/about/">About</a>
+            <ul>
+              <li class="first"><a href="https://blog.mozilla.org/tanvi">Blog</a></li>
+              <li><a href="http://www.mozilla.org/firefox/about/">About Firefox</a></li>
+              <li><a href="http://www.mozilla.org/join">Join Mozilla</a></li>
+              <li><a href="http://www.mozilla.org/about/participate/">Participate</a></li>
+              <li><a href="http://www.mozilla.org/press/">Press Center</a></li>
+              <li><a href="http://www.mozilla.org/firefox/brand/">Brand Toolkit</a></li>
+              <li><a href="http://www.mozilla.org/about/careers.html">Careers</a></li>
+              <li><a href="http://www.mozilla.org/about/partnerships.html">Partnerships</a></li>
+              <li class="last"><a href="http://www.mozilla.org/about/contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav><!-- end #footer-menu -->
+
+    <div id="copyright">
+      <p id="footer-links"><a href="http://www.mozilla.org/privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; 
+      <a href="http://www.mozilla.org/about/legal.html">Legal Notices</a> &nbsp;|&nbsp;
+      <a href="http://www.mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></p>
+      <p>Except where otherwise <a href="http://www.mozilla.org/about/legal.html#site">noted</a>, content on this site is licensed under the <br><a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+    </div>
+
+  </div>
+</footer><!-- end #footer -->
+
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+<script type="text/javascript" src="about:blank"></script>
+
+
+</body><div id="diigotb-imagepanel" style="display: none; width: 24px; left: 666px; top: 1183px;" class="needpremium"><div class="diigotb-btn enabled" title="Premium feature, please upgrade." id="diigotb-quick-save"></div></div><div class="diigotb-border diigotb-left" style="display: none; height: 389px; width: 1px; left: 156px; top: 826px;"></div><div class="diigotb-border diigotb-top" style="display: none; width: 544px; height: 1px; left: 156px; top: 826px;"></div><div class="diigotb-border diigotb-right" style="display: none; height: 389px; width: 1px; left: 700px; top: 826px;"></div><div class="diigotb-border diigotb-bottom" style="display: none; width: 544px; height: 1px; left: 156px; top: 1215px;"></div>
+</html>

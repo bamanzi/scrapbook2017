@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Pale Moon - Developer Wiki - Jetpack Style Extensions</title>
+        
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+
+		<link rel="stylesheet" type="text/css" href="enano-shared.css">
+        <link id="mdgCss" rel="stylesheet" href="palemoon.css" type="text/css">
+        		<link id="mdgCss" rel="stylesheet" href="binoc-enano.css" type="text/css">
+		    <script type="text/javascript">/* Code removed by ScrapBook */</script>
+		
+		
+		<script type="text/javascript">/* Code removed by ScrapBook */</script>
+		
+		
+   <style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+      
+   <style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+         
+      <style type="text/css">
+/* Code tidied up by ScrapBook */
+</style>
+      <script type="text/javascript">/* Code removed by ScrapBook */</script>
+      
+
+   <script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+		
+        <link rel="icon" href="favicon.ico">		
+        
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+    
+    <body style="cursor: default;">
+    
+		<div id="PM-Wrapper">
+			<div id="PM-Header" class="PM-Wrapper-Width">
+				<div id="PM-Header-Body">
+					<img src="logo.png" class="alignleft">
+					<img src="wordmark-palemoon.png" class="alignright">
+				</div>
+			</div>
+			<div id="PM-Menubar" class="mainmenu">
+			<span class="alignleft">
+                <ul>
+
+                    <li class="li_hc"><a href="#" target="_self">Main</a> 
+                        <ul class="ul_ch"> 
+                            <li class="li_nc"><a href="http://www.palemoon.org/" target="_self">Pale Moon homepage</a></li> 
+                            <li class="li_nc"><a href="http://start.palemoon.org/" target="_self">Pale Moon Start page</a></li> 
+                            <li class="li_nc"><a href="http://developer.palemoon.org/" target="_self">Pale Moon developer site</a></li> 
+                        </ul>
+                    </li>
+                    
+                    <li class="li_hc"><a href="#" target="_self">Developer Guide</a> 
+                        <ul class="ul_ch"> 
+                            <li class="li_nc"><a href="http://developer.palemoon.org/Developer_Guide:Build_Instructions" target="_self">Build Instructions</a>
+                                <ul class="ul_ch">
+                                    <li class="li_hc"><a href="http://developer.palemoon.org/Developer_Guide:Build_Instructions/Pale_Moon" target="_self">Pale Moon</a></li>
+                                    <li class="li_hc"><a href="#" target="_self">Pale Moon for Android</a></li>
+                                    <li class="li_hc"><a href="#" target="_self">FossaMail</a></li>
+                                    <li class="li_hc"><a href="#" target="_self">Platform Stub (xulrunner)</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_nc"><a href="http://developer.palemoon.org/Developer_Guide" target="_self">More...</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="li_hc"><a href="#" target="_self">Add-ons</a> 
+                        <ul class="ul_ch"> 
+                            <li class="li_nc"><a href="http://developer.palemoon.org/Add-ons:Extensions" target="_self">Extensions</a>
+                                <ul class="ul_ch">
+                                    <li class="li_hc"><a href="http://developer.palemoon.org/Add-ons:Extensions/Toolkit" target="_self">Toolkit (Overlay / XUL)</a></li>
+                                    <li class="li_hc"><a href="http://developer.palemoon.org/Add-ons:Extensions/Bootstrap" target="_self">Bootstrap (Restartless)</a></li>
+                                    <li class="li_hc"><a href="#" target="_self">Jetpack (Add-ons SDK)</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_nc"><a href="http://developer.palemoon.org/Add-ons:Themes" target="_self">Themes</a>
+                                <ul class="ul_ch">
+                                    <li class="li_hc"><a href="http://developer.palemoon.org/Add-ons:Themes/Complete" target="_self">Complete Themes</a></li>
+                                    <li class="li_hc"><a href="http://developer.palemoon.org/Add-ons:Themes/Persona" target="_self">Personas</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_nc"><a href="http://developer.palemoon.org/Add-ons" target="_self">More...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+			</span>
+			<span class="alignright" style="margin-top: 2px; margin-right: 15px;">
+                <form method="get" action="http://developer.palemoon.org/index.php?title=Special:Search">
+                    <input value="Special:Search" name="title" type="hidden">
+                    <input size="20" alt="Search box" name="q" type="text">
+                    <input value="Go" type="submit">
+                </form>
+
+			</span>
+			</div>
+			<div id="PM-Content">
+				<div id="PM-Content-Body"> 
+                    
+
+				<div class="pad">
+
+				<div class="contentDiv">
+
+				
+
+					<div style="float: right;">
+						<img alt=" " src="spacer.gif" id="ajaxloadicon">
+					</div>
+					<h1 id="h2PageName">Jetpack Style Extensions</h1>
+	<div id="ajaxEditContainer">
+<h3 align="center">PMkit documentation draft v1.2<sup><a href="#note1">[1]</a></sup></h3>
+<ul>
+    <li>PMkit is an experimental Pale Moon library that provides basic compatibility layer with <a href="https://developer.mozilla.org/en-US/Add-ons/SDK">Mozilla Add-on SDK</a>. It implements the most of the API but has the differences described below in the document. Thus, to successfuly run in Pale Moon, the extensions initially targeted to the other browsers (such as Firefox or SeaMonkey) should be properly adapted.</li>
+</ul>
+
+
+<ul>
+    <li>PMkit supports only the add-ons created using <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm">jpm</a>. The old style (cfx) extensions should be first <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/cfx_to_jpm">migrated</a> to jpm to be able to run in Pale Moon. Use “<em>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em>” as a name of engine and “<em>27.1.0b1</em>” / “<em>27.*</em>” as a minimum / maximum versions to add Pale Moon as a target application in <em><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#Creating_a_manifest">package.json</a></em><sup><a href="#note2">[2]</a></sup>. If you prefer to create <em><a href="https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#targetApplication">install.rdf</a></em> manually, you also have to set <em>targetApplication</em> using the above values<sup><a href="#note3">[3]</a></sup>. This will allow to use jpm to build, test, run and debug as usual.</li>
+</ul>
+
+
+<ul>
+    <li>PMkit has some limitations and supplements. The rarely used modules “<em>ui/frame</em>”, “<em>ui/sidebar</em>” and “<em>ui/toolbar</em>” are currently unsupported, although it may be changed in the future. This also applies to all API that were or will be added to Mozilla Add-on SDK after Gecko 38. Since Pale Moon does not use separate processes for browser’s UI and web content (e10s) and does not support WebExtensions the corresponding “<em>remote/parent</em>”, “<em>remote/child</em>” and “<em>webextension</em>” modules are absent in PMkit completely. At the same time, the “<em>widget</em>” module, that was removed from Mozilla Add-on SDK, can still be used with PMkit to create buttons, along with “<em>ui/button/action</em>” and “<em>ui/button/toggle</em>” (please always include 16px icon for the last ones).</li>
+</ul>
+
+
+<ul>
+    <li>You should also take into account that Pale Moon uses his own browser core named Goanna. The main differences from Mozilla products that follow from this are described in a <a href="http://www.palemoon.org/technical.shtml#Firefox_Differences">separate document</a>. So, any routines not related to SDK must be also brought into line with the target environment.</li>
+</ul>
+
+
+<ul>
+    <li>Despite the experimental status of PMkit, several popular add-ons have already been <a href="https://github.com/JustOff/pm27-sdk-addons/blob/master/README.md">successfully adapted</a> and work fine in Pale Moon. Some of them run even faster and use less memory than in the browser for which they were originally created. Nevertheless, traditional bootstrapped and XUL extensions remain the preferred and most optimal types of add-ons for Pale Moon.</li>
+</ul>
+
+
+
+<p><a name="note1">[1]</a> This document is currently applicable to <a href="https://forum.palemoon.org/viewtopic.php?f=1&amp;t=14455">Pale Moon 27.1.0b1 and above</a>.</p>
+
+<p><a name="note2">[2]</a> Example of <em>package.json</em> for add-on that is targeted to both Firefox and Pale Moon:</p>
+
+<div class="preformat-panel">Code: &lt;<a href="#">Select</a>&gt; &lt;<a href="#">Popup</a>&gt;</div><pre class="wikitext-code">{
+  "name": "my-addon",
+  "title": "my-addon",
+  "id": "jid1-1FERGV45e4f4f@jetpack",
+  "description": "a basic add-on",
+  "author": "",
+  "license": "MPL-2.0",
+  "version": "0.1",
+  "engines": {
+    "firefox": "&gt;=38.0a1",
+    "{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}": "&gt;=27.1.0b1 &lt;=27.*"
+   }
+}</pre>
+<p><a name="note3">[3]</a> Example of <em>install.rdf</em> for add-on that is targeted to both Firefox and Pale Moon:</p>
+
+<div class="preformat-panel">Code: &lt;<a href="#">Select</a>&gt; &lt;<a href="#">Popup</a>&gt;</div><pre class="wikitext-code">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+    &lt;Description about="urn:mozilla:install-manifest"&gt;
+          &lt;em:id&gt;jid1-1FERGV45e4f4f@jetpack&lt;/em:id&gt;
+          &lt;em:type&gt;2&lt;/em:type&gt;
+          &lt;em:bootstrap&gt;true&lt;/em:bootstrap&gt;
+          &lt;em:unpack&gt;false&lt;/em:unpack&gt;
+          &lt;em:version&gt;0.1&lt;/em:version&gt;
+          &lt;em:name&gt;my-addon&lt;/em:name&gt;
+          &lt;em:description&gt;a basic add-on&lt;/em:description&gt;
+
+          &lt;em:targetApplication&gt;
+            &lt;Description&gt;
+              &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+              &lt;em:minVersion&gt;38.0a1&lt;/em:minVersion&gt;
+              &lt;em:maxVersion&gt;*&lt;/em:maxVersion&gt;
+            &lt;/Description&gt;
+          &lt;/em:targetApplication&gt;
+
+          &lt;em:targetApplication&gt;
+            &lt;Description&gt;
+              &lt;em:id&gt;{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}&lt;/em:id&gt;
+              &lt;em:minVersion&gt;27.1.0b1&lt;/em:minVersion&gt;
+              &lt;em:maxVersion&gt;27.*&lt;/em:maxVersion&gt;
+            &lt;/Description&gt;
+          &lt;/em:targetApplication&gt;
+
+    &lt;/Description&gt;
+&lt;/RDF&gt;</pre>
+
+<div class="mdg-comment" style="margin: 10px 0px 0px;" id="category_box_wrapper"><div style="float: right;">(<a href="#">show page tags</a>)</div><div id="mdgCatBox">Categories: <a href="http://developer.palemoon.org/Category:Add-ons">Add-ons</a></div></div></div>
+</div>
+
+<div id="mdgCommentContainer">
+</div>
+
+
+
+		<div id="root3" class="jswindow" style="display: none;">
+			<div id="tb3" class="titlebar">Wiki formatting help</div>
+			<div class="content" id="cn3">
+				Loading...
+			</div>
+		</div>
+				<!-- jsres.php is a wrapper script that compresses and caches single JS files to minimize requests -->
+		<script type="text/javascript" src="about:blank"></script>
+		<script type="text/javascript">/* Code removed by ScrapBook */</script>
+		
+        
+</div>                      
+</div>
+                <div id="PM-Content-Sidebar">
+                    
+                    
+
+
+
+
+<div id="PM-Content-Sidebar-Block">
+	<div id="PM-Content-Sidebar-Block-Title">
+		<strong>Guest</strong>
+	</div>
+	<div id="PM-Content-Sidebar-Block-Body">
+		
+<li><a href="http://developer.palemoon.org/Special:Login/Add-ons:Extensions/Jetpack">Log in</a></li>
+
+<li><a href="http://developer.palemoon.org/Special:Register">Create an account</a></li>
+
+
+<br>
+
+	</div>
+</div>
+
+
+
+
+
+                    
+                </div>
+</div>
+
+    <div style="text-align: center;"><script async="" src="about:blank"></script>
+    <!-- Addons site leaderboard -->
+    <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px;" data-ad-client="ca-pub-4490583218014683" data-ad-slot="4318962855"></ins>
+    <script>/* Code removed by ScrapBook */</script></div>
+					<div style="margin-top: 10px; text-align: center; line-height: 13px; font-size: 10px;">
+					<span style="color: silver;">
+						Firefox, Mozilla Firefox and Mozilla are registered trademarks of the Mozilla Corporation.
+					</span><br>
+					<span style="color: rgb(102, 102, 102);">
+						Site design and Branding © 2016 <a href="http://www.moonchildproductions.info/" target="_blank">Moonchild Productions</a> - All rights reserved
+					</span><br>
+					<span style="color: rgb(102, 102, 102);">
+						Any other content is copyright or trademark to their respective owners.
+					</span><br>
+					<span style="color: rgb(102, 102, 102);">
+						This site uses <a href="http://www.palemoon.org/cookies.shtml">Cookies</a> - Your usage indicates your consent to their use.
+					</span><br><br>
+                    <span style="color: rgb(102, 102, 102);">
+						The Pale Moon Developer Wiki is powered by <a href="http://developer.palemoon.org/index.php?title=Special:About_Enano" target="_blank">Enano</a>
+					</span><br><br>
+					</div>
+				</div>
+            
+		
+	
+
+</body>
+</html>

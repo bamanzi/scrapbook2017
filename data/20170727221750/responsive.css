@@ -1,0 +1,48 @@
+/* Code tidied up by ScrapBook */
+.responsive-hide { display: none !important; }
+html { height: auto; }
+body { padding: 0px; }
+#wrap { border: medium none; border-radius: 0px; margin: 0px; min-width: 290px; padding: 0px 5px; }
+.headerbar, .navbar, .forabg, .forumbg, .post, .panel { border-radius: 0px; margin-left: -5px; margin-right: -5px; }
+#site-description { float: none; width: auto; text-align: center; }
+.logo { display: none; float: none; padding: 10px; }
+#site-description h1, #site-description p { text-align: inherit; float: none; margin: 5px; line-height: 1.2em; overflow: hidden; text-overflow: ellipsis; }
+#site-description p, .search-header { display: none; }
+.responsive-search { display: block !important; }
+.responsive-search a { display: block; width: 16px; height: 22px; text-indent: 99px; overflow: hidden; background-position: 50% 50%; background-repeat: no-repeat; text-decoration: none; }
+@media only screen and (max-width: 550px), only screen and (max-device-width: 550px) {
+}
+@media only screen and (max-width: 350px), only screen and (max-device-width: 350px) {
+}
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+  select, .inputbox { max-width: 260px; }
+}
+@media only screen and (max-width: 430px), only screen and (max-device-width: 430px) {
+  .section-viewtopic .search-box .inputbox { width: 110px; }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  select, .inputbox { max-width: 240px; }
+}
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+}
+.postbody { position: inherit; }
+.postprofile, .postbody, .search .postbody { display: block; width: auto; float: none; padding: 0px; min-height: 0px; }
+.post .postprofile { width: auto; border-width: 0px 0px 1px; padding-bottom: 5px; margin: 0px 0px 5px; min-height: 40px; overflow: hidden; }
+.postprofile dd { display: none; }
+.postprofile dt, .postprofile dd.profile-rank, .search .postprofile dd { display: block; margin: 0px; }
+.postprofile .has-avatar .avatar-container { margin: 0px; overflow: inherit; }
+.postprofile .avatar-container::after { clear: none; }
+.postprofile .avatar { margin-right: 5px; }
+.postprofile .avatar img { width: auto !important; height: auto !important; max-height: 32px; }
+.has-profile .postbody h3 { margin-left: 0px !important; margin-right: 0px !important; }
+.has-profile .post-buttons { right: 20px; top: 15px; }
+h2 { margin-top: 0.5em; }
+p { margin-bottom: 0.5em; overflow: hidden; }
+fieldset.display-options label { display: block; clear: both; margin-bottom: 5px; }
+.phpbb_alert { width: auto; margin: 0px 5px; }
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+  .action-bar > div { margin-bottom: 5px; }
+  .action-bar > .pagination { float: none; clear: both; padding-bottom: 1px; text-align: center; }
+  p.jumpbox-return { display: none; }
+  .display-options > label:nth-child(1) { display: block; margin-bottom: 5px; }
+}

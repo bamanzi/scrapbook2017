@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="en">
+<head><script async="" src="about:blank"></script><script async="" src="about:blank"></script><script async="" src="about:blank"></script>
+<meta charset="UTF-8">
+<title>Add-ons/Extension Signing - MozillaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23.17">
+<link rel="ExportRDF" type="application/rdf+xml" title="Add-ons/Extension Signing" href="https://wiki.mozilla.org/index.php?title=Special:ExportRDF/Add-ons/Extension_Signing&amp;xmlmime=rdf">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.mozilla.org/opensearch_desc.php" title="MozillaWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.mozilla.org/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="MozillaWiki Atom feed" href="https://wiki.mozilla.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="load.php">
+<link rel="stylesheet" href="load_001.php">
+<style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px; width: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px -1px 0px 0px; }
+html > body .suggestions { margin: -1px 0px 0px; }
+.suggestions-special { position: relative; background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; display: none; padding: 0.25em; line-height: 1.25em; }
+.suggestions-results { background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="load_002.php">
+<style>
+/* Code tidied up by ScrapBook */
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-decoration: none; }
+</style>
+<script src="about:blank"></script><script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script><script src="about:blank"></script><script src="about:blank"></script><script src="about:blank"></script>
+
+
+<script type="text/javascript" src="about:blank"></script>
+
+<script type="text/javascript" src="about:blank"></script>
+
+<script type="text/javascript">/* Code removed by ScrapBook */</script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="shCoreMinit.css">
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Add-ons_Extension_Signing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display: none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Add-ons/Extension Signing</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MozillaWiki</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="https://wiki.mozilla.org/Add-ons" title="Add-ons">Add-ons</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p>Mozilla requires all extensions to be signed by Mozilla in order for them to be installable in Release and Beta versions of Firefox. Extensions submitted on <a rel="nofollow" class="external text" href="https://addons.mozilla.org/">addons.mozilla.org (AMO)</a> are signed as part of the review process, and a <a rel="nofollow" class="external text" href="http://addons-server.readthedocs.io/en/latest/topics/api/signing.html">signing service</a> is also offered. Additional information on the extension submission and signing process is <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/Distribution">available on MDN</a>.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Algorithm"><span class="tocnumber">1</span> <span class="toctext">Algorithm</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Signing_of_special_add-ons"><span class="tocnumber">1.1</span> <span class="toctext">Signing of special add-ons</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Documentation"><span class="tocnumber">2</span> <span class="toctext">Documentation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Timeline"><span class="tocnumber">3</span> <span class="toctext">Timeline</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Unbranded_Builds"><span class="tocnumber">4</span> <span class="toctext">Unbranded Builds</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Latest_Builds"><span class="tocnumber">4.1</span> <span class="toctext">Latest Builds</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Treeherder_Root_Directories"><span class="tocnumber">4.2</span> <span class="toctext">Treeherder Root Directories</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#FAQ"><span class="tocnumber">5</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Feedback_and_Questions"><span class="tocnumber">6</span> <span class="toctext">Feedback and Questions</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span></h2>
+<p>Extension signing is controlled by Mozilla and requires access to a private signing infrastructure exposed by <a rel="nofollow" class="external text" href="https://addons.mozilla.org/">AMO</a>, and internal services like <a rel="nofollow" class="external text" href="https://github.com/mozilla-services/autograph">Autograph</a>.
+</p><p>Add-ons and Extensions are XPI files (zip archives) where each file in the archives is hashed, and the manifest containing all the hashes is signed. When signing an extension, a manifest file containing the hash of each file in the XPI is first generated. The manifest file is stored in the signed XPI under <b>META-INF/manifest.mf</b>. The snippet below shows an example of manifest file.
+</p>
+<div><div id="highlighter_123314" class="syntaxhighlighter  plain"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">Manifest-Version: 1.0</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="plain plain">Name: install.rdf</code></div><div class="line number4 index3 alt1"><code class="plain plain">Digest-Algorithms: MD5 SHA1</code></div><div class="line number5 index4 alt2"><code class="plain plain">MD5-Digest: rzkfLZ5nC80leZsgMSGT3w==</code></div><div class="line number6 index5 alt1"><code class="plain plain">SHA1-Digest: +43YVUxeOYeiJeOKeJaRdancg5I=</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="plain plain">Name: bootstrap.js</code></div><div class="line number9 index8 alt2"><code class="plain plain">Digest-Algorithms: MD5 SHA1</code></div><div class="line number10 index9 alt1"><code class="plain plain">MD5-Digest: 2rUx2iRkGHx9yehpvoF2Wg==</code></div><div class="line number11 index10 alt2"><code class="plain plain">SHA1-Digest: 7F7q7SUdOpxp7EYDFLENUqrNWMo=</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="plain plain">Name: test.txt</code></div><div class="line number14 index13 alt1"><code class="plain plain">Digest-Algorithms: MD5 SHA1</code></div><div class="line number15 index14 alt2"><code class="plain plain">MD5-Digest: tT4aaxDCqRgFrpVHhe//Wg==</code></div><div class="line number16 index15 alt1"><code class="plain plain">SHA1-Digest: 8mPWZnQPS9arW9Tu/vmC+JHgnYA=</code></div></div></td></tr></tbody></table></div></div>
+<p>A signature file is then created containing the hash of the manifest file (eg. `openssl dgst -binary -sha1 manifest.mf | base64`). The signature file is stored in the XPI under <b>META-INF/mozilla.sf</b>. An example is shown below:
+</p>
+<div><div id="highlighter_532798" class="syntaxhighlighter  plain"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">Signature-Version: 1.0</code></div><div class="line number2 index1 alt1"><code class="plain plain">MD5-Digest-Manifest: OlmmwIHcPmhoIt4uMxdh8A==</code></div><div class="line number3 index2 alt2"><code class="plain plain">SHA1-Digest-Manifest: 82zZH0Aq6GaTNMq+PnBlzep6fEA=</code></div></div></td></tr></tbody></table></div></div>
+<p>A PKCS7 detached signature is computed on "mozilla.sf", using a signing certificate generated for each signature. The signing certificate, also called end-entity cert, is issued by an intermediate certificate of the Firefox private PKI. No special key usage or extended key usage is required in the end-entity cert, but its subject CN must match the add-on ID (for example, add-on ID test@tests.mozilla.org would have a cert CN set to that value).
+</p><p>Note: If the add-on ID is longer than 64 characters, we use the SHA256 hash of the add-on ID in the end-entity subject CN, to work around issues with long string in certificates (see <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1203787">bug 1203787</a>).
+</p><p>The <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc2315">PKCS #7 (section 9.1 SignedData type)</a> signature is a binary file stored in the XPI under <b>META-INF/mozilla.rsa</b>. Because it is a standard PKCS7 signature, it can be verified using OpenSSL, as follows:
+</p>
+<div><div id="highlighter_480405" class="syntaxhighlighter  plain"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">$ openssl cms -verify -inform der -in META-INF/mozilla.rsa -content META-INF/mozilla.sf -CAfile test.addons.signing.root.ca.crt -purpose any</code></div><div class="line number2 index1 alt1"><code class="plain plain">Signature-Version: 1.0</code></div><div class="line number3 index2 alt2"><code class="plain plain">MD5-Digest-Manifest: OlmmwIHcPmhoIt4uMxdh8A==</code></div><div class="line number4 index3 alt1"><code class="plain plain">SHA1-Digest-Manifest: 82zZH0Aq6GaTNMq+PnBlzep6fEA=</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="plain plain">Verification successful</code></div></div></td></tr></tbody></table></div></div>
+<p>Both the end-entity and the intermediate certificates are also stored in the
+SignedData.Certificates document. The root cert is not stored in the document
+but shipped with Firefox directly.
+</p><p>When installing add-ons, Firefox does the following verifications:
+</p>
+<ul>
+<li> verify the signature of `mozilla.sf` using `mozilla.rsa`
+</li>
+<li> verify the signing cert chains back to the Firefox Root CA
+</li>
+<li> verify the hash of `manifest.mf` matches the hash stored in `mozilla.sf`
+</li>
+<li> verify the hashes of all files in the XPI match the hashes stored in `manifest.mf`
+</li>
+<li> verify all files in the XPI are listed in `manifest.mf`
+</li>
+</ul>
+<h3><span class="mw-headline" id="Signing_of_special_add-ons">Signing of special add-ons</span></h3>
+<p>There are three special cases of add-ons developed by Mozilla: System add-ons, Mozilla Extensions and Hotfixes.
+</p>
+<ul>
+<li> If the add-on is a system add-on, the Organizational Unit (OU) of the end-entity certificate must be set to "Mozilla Components".
+</li>
+<li> If the add-on is a Mozilla Extension, the OU of the EE cert must be set to "Mozilla Extensions".
+</li>
+<li> If the add-on is a hotfix, the add-on ID must match the pref `extensions.hotfix.id` (currently `firefox-hotfix@mozilla.org`) and the public key hash of the end-entity cert must match the fingerprints set in `extensions.hotfix.certs.1.sha1Fingerprint` or `extensions.hotfix.certs.2.sha1Fingerprint`.
+</li>
+</ul>
+<p>refs:
+</p>
+<ul>
+<li> <a rel="nofollow" class="external free" href="https://dxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/internal/XPIProvider.jsm">https://dxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/internal/XPIProvider.jsm</a>
+</li>
+<li> <a rel="nofollow" class="external free" href="https://developer.mozilla.org/en-US/docs/Signing_a_XPI">https://developer.mozilla.org/en-US/docs/Signing_a_XPI</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Documentation">Documentation</span></h2>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://blog.mozilla.org/addons/2015/02/10/extension-signing-safer-experience/">Introducing Extension Signing</a>, Add-ons Blog.
+</li>
+<li> <a rel="nofollow" class="external text" href="https://blog.mozilla.org/addons/2015/04/15/the-case-for-extension-signing/">The Case for Extension Signing</a>, Add-ons Blog.
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=signed-addons">Main tracking bug</a>.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Timeline">Timeline</span></h2>
+<p>Check the <a href="https://wiki.mozilla.org/RapidRelease/Calendar" title="RapidRelease/Calendar">Firefox Release Calendar</a> for specific dates. The following timelines are for Desktop:
+</p>
+<ul>
+<li> <b>Firefox 40-42</b>: Firefox warns about signatures but doesn't enforce them.
+</li>
+<li> <b>Firefox 43</b>: Firefox enforces the use of signatures by default, but has a preference that allows signature enforcement to be disabled (<i>xpinstall.signatures.required</i> in about:config).
+</li>
+<li> <b>Firefox 48</b>: (Pushed from Firefox 46). Release and Beta versions of Firefox for Desktop will not allow unsigned extensions to be installed, with no override. Firefox for Android will enforce add-on signing, and will retain a preference — which will be removed in a future release — to allow the user to disable signing enforcement.
+</li>
+</ul>
+<p>The first ESR version to include signing support will be the Firefox ESR 52 release. 
+</p><p>All Firefox extensions - for Desktop and Android - on AMO that have passed review are now signed.
+</p><p>For unlisted (non-AMO) add-ons, submission and signing is active through <a rel="nofollow" class="external text" href="https://addons.mozilla.org/">AMO</a>, and there is a <a rel="nofollow" class="external text" href="https://blog.mozilla.org/addons/2015/11/20/signing-api-now-available/">Signing API available</a> for automated submission and retrieval of unlisted add-ons.
+</p>
+<h2><span class="mw-headline" id="Unbranded_Builds">Unbranded Builds</span></h2>
+<p>Unbranded builds are available from the continuous integration builds on archive.mozilla.org. Links to the latest beta and release builds, as well as the root directories for those treeherder builds are below, and subdirectories are named from the epoch timestamp of when the build was generated.
+</p>
+<h3><span class="mw-headline" id="Latest_Builds">Latest Builds</span></h3>
+<p><b>Release builds</b> 
+</p><p>Latest release (Firefox 54.0 - <a rel="nofollow" class="external text" href="https://hg.mozilla.org/releases/mozilla-release/rev/e832ed037a3c">changeset e832ed037a3c</a>) builds:
+</p>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-linux64-add-on-devel/1496944705/firefox-54.0.en-US.linux-x86_64-add-on-devel.tar.bz2">Linux Installer</a> (<a rel="nofollow" class="external text" href="https://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-linux64-add-on-devel/1496944705/">build directory</a>) 
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-macosx64-add-on-devel/1496944705/firefox-54.0.en-US.mac-add-on-devel.dmg">Mac OSX Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-macosx64-add-on-devel/1496944705/">build directory</a>) 
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win32-add-on-devel/1496944705/firefox-54.0.en-US.win32-add-on-devel.installer.exe">Windows 32-bit Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win32-add-on-devel/1496944705/">build directory</a>)  
+</li>
+<li><a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win64-add-on-devel/1496944705/firefox-54.0.en-US.win64-add-on-devel.installer.exe">Windows 64-bit Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win64-add-on-devel/1496944705/">build directory</a>) 
+</li>
+</ul>
+<p><b>Beta builds</b>
+</p><p>Latest beta (BUSTED - linked builds are 54) (55.0b1 - <a rel="nofollow" class="external text" href="https://hg.mozilla.org/releases/mozilla-beta/rev/d956c96a1926">changeset d956c96a1926</a>) builds:
+</p>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-linux64-add-on-devel/1493919146/firefox-54.0.en-US.linux-x86_64-add-on-devel.tar.bz2">Linux Installer</a> (<a rel="nofollow" class="external text" href="https://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-linux64-add-on-devel/1493919146/">build directory</a>) 
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-macosx64-add-on-devel/1493919146/firefox-54.0.en-US.mac-add-on-devel.dmg">Mac OSX Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-macosx64-add-on-devel/1493919146/">build directory</a>) 
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win32-add-on-devel/1493919146/firefox-54.0.en-US.win32-add-on-devel.installer.exe">Windows 32-bit Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win32-add-on-devel/1493919146/">build directory</a>)  
+</li>
+<li><a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win64-add-on-devel/1493919146/firefox-54.0.en-US.win64-add-on-devel.installer.exe">Windows 64-bit Installer</a> (<a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win64-add-on-devel/1493919146/">build directory</a>)
+</li>
+</ul>
+<h3><span class="mw-headline" id="Treeherder_Root_Directories">Treeherder Root Directories</span></h3>
+<p><b>Release</b>
+</p>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-linux64-add-on-devel/">Linux</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-macosx64-add-on-devel/">Mac OSX</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win32-add-on-devel/">Windows 32-bit</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-release-win64-add-on-devel/">Windows 64-bit</a>
+</li>
+</ul>
+<p><b>Beta</b>
+</p>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-linux64-add-on-devel/">Linux</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-macosx64-add-on-devel/">OSX</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win32-add-on-devel/">Windows 32-bit</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://archive.mozilla.org/pub/firefox/tinderbox-builds/mozilla-beta-win64-add-on-devel/">Windows 64-bit</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="FAQ">FAQ</span></h2>
+<ul>
+<li> Which add-on types will need to be signed?
+<ul>
+<li> Only extensions (<a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#type">type 2</a> in install.rdf)--this includes WebExtensions. Themes, dictionaries, language packs, and plugins don't need to be signed.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will other applications like Thunderbird, Seamonkey, Palemoon, etc. require extensions to be signed?
+<ul>
+<li> The leaders of each of those projects will decide if they want to enforce signing, keep it as a setting, or deactivate it by default. We haven't heard about any other applications planning to support this.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will signed extensions work on other applications or older versions of Firefox?
+<ul>
+<li> Yes, the signature system is built on top of the <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/docs/Signing_a_XPI">existing add-on signing feature</a>, which has been supported in Firefox and other applications.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will there be a setting or other overrides to disable signature checks?
+<ul>
+<li> Firefox Release and Beta versions will not have any way to disable signature checks.  Signature checks can be disabled in other versions, as described in detail below.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> What are my options if I want to install unsigned extensions in Firefox?
+<ul>
+<li> The <a rel="nofollow" class="external text" href="https://nightly.mozilla.org/">Nightly</a> and <a rel="nofollow" class="external text" href="https://www.mozilla.org/firefox/developer/">Developer Edition</a> versions of Firefox have a preference to disable signature enforcement. There are also be special <a rel="nofollow" class="external text" href="#Unbranded_Builds">unbranded versions of Release and Beta</a> that have this preference, so that add-on developers can work on their add-ons without having to sign every build. To disable signature checks, you will need to set the <code>xpinstall.signatures.required</code> preference to "false".
+<ul>
+<li> type <code>about:config</code> into the URL bar in Firefox
+</li>
+<li> in the Search box type <code>xpinstall.signatures.required</code>
+</li>
+<li> double-click the preference, or right-click and selected "Toggle", to set it to <code>false</code>.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> How do the <a href="#Unbranded_Builds" title="Add-ons/Extension Signing">unbranded versions of Firefox</a> work?
+<ul>
+<li> They work just like Firefox, with two differences: they have a setting to disable mandatory signature checks, and they don't have the Firefox name and logo (instead using a generic name and logo). These builds are available in the en-US locale only.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> What about private add-ons used in enterprise environments?
+<ul>
+<li> The ESR release supports signing starting with version 45-based releases. Signing enforcement is enabled by default in these releases, and enforcement can be disabled using the <code>xpinstall.signatures.required</code> preference.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> How do I get my add-ons signed if they are hosted on addons.mozilla.org (AMO)?
+<ul>
+<li> No action is required.  We automatically signed reviewed versions of all add-ons currently hosted on AMO. All new versions will be signed automatically after they pass review. 
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> How do I get my add-ons signed if they are not hosted on addons.mozilla.org (AMO)?
+<ul>
+<li> You will need to create an AMO account and submit your add-on. There will be an option where you indicate the add-on won't be listed on AMO, and you'll be able to submit your add-on files without having them published on the site. Please read the <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/Distribution">Distribution Policy</a> for more details.
+</li>
+<li> You can also use the <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a> command to generate a signed XPI that can be self-hosted.
+</li>
+<li> There is an <a rel="nofollow" class="external text" href="http://olympia.readthedocs.org/en/latest/topics/api/signing.html">API you can use</a> for signing.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> How does the signing process work for unlisted add-ons?
+<ul>
+<li> For unlisted add-ons, files submitted for signing go through an automated review process. If they pass this review, they are automatically signed and a download link is sent back to the developer. This process should normally take seconds.
+</li>
+<li> There is an <a rel="nofollow" class="external text" href="http://olympia.readthedocs.org/en/latest/topics/api/signing.html">API you can use</a> for signing.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> What about <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Maintenance#How_do_I_submit_a_Beta_add-on.3F">Beta versions on AMO</a>? Will they be reviewed and signed?
+<ul>
+<li> Yes. Beta versions will be treated like non-AMO add-ons. They will be automatically validated and signed if they pass validation.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will I need to sign the custom version of an existing add-on I created with my own code changes, locale additions, etc.?
+<ul>
+<li> If you use it on Release or Beta, yes. You will also need to change the add-on ID in order to submit it for signing.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Is this a way for Mozilla to censor add-ons they don't like, enforce copyright, government demands, etc.?
+<ul>
+<li> No, the purpose of this is to protect users from malicious add-ons. We have <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Reviews">a set of guidelines</a> for when it is appropriate to blocklist an add-on and have refused multiple times to block for other reasons.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will there be an upload and signing API so I don't have to manually upload each new version of the add-on?
+<ul>
+<li> Yes. The <a rel="nofollow" class="external text" href="http://olympia.readthedocs.org/en/latest/topics/api/signing.html">signing API is documented here</a>.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Will this protect users against all forms of add-on malware?
+<ul>
+<li> No, there is no perfect solution for this. Fighting malware requires defenses on many levels: operating system,, application, user, and even industry. Extension signing is a big step in protecting Firefox against malicious add-ons, but there is much more to do in other fronts to ensure the best experience for our users.
+</li>
+</ul>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Feedback_and_Questions">Feedback and Questions</span></h2>
+<p>For questions about signing, you can use <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons#Contact_us">any of our communication channels</a>.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.032 seconds
+Real time usage: 0.033 seconds
+Preprocessor visited node count: 62/1000000
+Preprocessor generated node count: 100/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki_mozilla_org:pcache:idhash:234799-0!*!0!!en!*!* and timestamp 20170726181919 and revision id 1174684
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;oldid=1174684">https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;oldid=1174684</a>"				</div>
+												<div id="catlinks" class="catlinks catlinks-allhidden"></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="https://wiki.mozilla.org/index.php?title=Special:UserLogin&amp;returnto=Add-ons%2FExtension+Signing" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="https://wiki.mozilla.org/Special:RequestAccount">Request account</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="#" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk"><span><a href="https://wiki.mozilla.org/Talk:Add-ons/Extension_Signing" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="#">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="https://wiki.mozilla.org/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input name="search" placeholder="Search" title="Search MozillaWiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" type="submit">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(&quot;mozilla-wiki-logo-alt-135px.png&quot;);" href="https://wiki.mozilla.org/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="https://wiki.mozilla.org/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-Product-releases"><a href="https://wiki.mozilla.org/Releases">Product releases</a></li>
+			<li id="n-newpages"><a href="https://wiki.mozilla.org/Special:NewPages">New pages</a></li>
+			<li id="n-recentchanges"><a href="https://wiki.mozilla.org/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-Recent-uploads"><a href="https://wiki.mozilla.org/Special:NewFiles">Recent uploads</a></li>
+			<li id="n-Popular-pages"><a href="https://wiki.mozilla.org/Special:PopularPages">Popular pages</a></li>
+			<li id="n-randompage"><a href="https://wiki.mozilla.org/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li>
+			<li id="n-Help"><a href="https://wiki.mozilla.org/MozillaWiki:Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-How_to_Contribute" aria-labelledby="p-How_to_Contribute-label">
+	<h3 id="p-How_to_Contribute-label" tabindex="2"><a href="#" aria-haspopup="true" aria-controls="p-How_to_Contribute-list" role="button" aria-pressed="true" aria-expanded="true">How to Contribute</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-How_to_Contribute-list">
+			<li id="n-All-hands-meeting"><a href="https://wiki.mozilla.org/WeeklyUpdates">All-hands meeting</a></li>
+			<li id="n-Other-meetings"><a href="https://wiki.mozilla.org/Community_Calendar">Other meetings</a></li>
+			<li id="n-Contribute-to-Mozilla"><a href="https://wiki.mozilla.org/Contribute">Contribute to Mozilla</a></li>
+			<li id="n-Mozilla-Reps"><a href="https://wiki.mozilla.org/ReMo">Mozilla Reps</a></li>
+			<li id="n-Student-Ambassadors"><a href="https://wiki.mozilla.org/StudentAmbassadors">Student Ambassadors</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-MozillaWiki" aria-labelledby="p-MozillaWiki-label">
+	<h3 id="p-MozillaWiki-label" tabindex="3"><a href="#" aria-haspopup="true" aria-controls="p-MozillaWiki-list" role="button" aria-pressed="false" aria-expanded="false">MozillaWiki</a></h3>
+	<div class="body">
+		<ul id="p-MozillaWiki-list">
+			<li id="n-News"><a href="https://wiki.mozilla.org/MozillaWiki:News">News</a></li>
+			<li id="n-About"><a href="https://wiki.mozilla.org/MozillaWiki:About">About</a></li>
+			<li id="n-Team"><a href="https://wiki.mozilla.org/MozillaWiki:Team">Team</a></li>
+			<li id="n-Policies"><a href="https://wiki.mozilla.org/MozillaWiki:Policies">Policies</a></li>
+			<li id="n-Releases"><a href="https://wiki.mozilla.org/MozillaWiki:Releases">Releases</a></li>
+			<li id="n-.40MozillaWiki"><a href="https://twitter.com/MozillaWiki" rel="nofollow">@MozillaWiki</a></li>
+			<li id="n-Report-a-wiki-bug"><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Websites&amp;component=wiki.mozilla.org" rel="nofollow">Report a wiki bug</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Around_Mozilla" aria-labelledby="p-Around_Mozilla-label">
+	<h3 id="p-Around_Mozilla-label" tabindex="4"><a href="#" aria-haspopup="true" aria-controls="p-Around_Mozilla-list" role="button" aria-pressed="false" aria-expanded="false">Around Mozilla</a></h3>
+	<div class="body">
+		<ul id="p-Around_Mozilla-list">
+			<li id="n-Mozilla-Support"><a href="https://support.mozilla.org/" rel="nofollow">Mozilla Support</a></li>
+			<li id="n-Mozilla-Developer-Network"><a href="https://developer.mozilla.org/" rel="nofollow">Mozilla Developer Network</a></li>
+			<li id="n-Planet-Mozilla"><a href="https://planet.mozilla.org/" rel="nofollow">Planet Mozilla</a></li>
+			<li id="n-Mozilla-Blog"><a href="https://blog.mozilla.org/" rel="nofollow">Mozilla Blog</a></li>
+			<li id="n-Webmaker"><a href="https://webmaker.org/" rel="nofollow">Webmaker</a></li>
+			<li id="n-Research"><a href="https://www.mozilla.org/research/" rel="nofollow">Research</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="5"><a href="#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="https://wiki.mozilla.org/Special:WhatLinksHere/Add-ons/Extension_Signing" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="https://wiki.mozilla.org/Special:RecentChangesLinked/Add-ons/Extension_Signing" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="https://wiki.mozilla.org/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;oldid=1174684" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="https://wiki.mozilla.org/index.php?title=Add-ons/Extension_Signing&amp;action=info">Page information</a></li>
+			<li id="t-importfrometherpadlink"><a href="https://wiki.mozilla.org/Special:ImportFromEtherpad" rel="importfrometherpad-link">Import an Etherpad</a></li>
+			<li id="t-smwbrowselink"><a href="https://wiki.mozilla.org/Special:Browse/Add-2Dons-2FExtension_Signing" rel="smw-browse">Browse properties</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 June 2017, at 13:38.</li>
+											<li id="footer-info-viewcount">This page has been accessed 832,953 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wiki.mozilla.org/MozillaWiki:Privacy_policy" title="MozillaWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://wiki.mozilla.org/MozillaWiki:About" title="MozillaWiki:About">About MozillaWiki</a></li>
+											<li id="footer-places-mobileview"><a href="https://m.wiki.mozilla.org/Add-ons/Extension_Signing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+						<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+<script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+</html>

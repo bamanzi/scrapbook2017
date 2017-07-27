@@ -1,0 +1,23 @@
+/* Code tidied up by ScrapBook */
+#snippet-box { background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(255, 255, 255) 50%, rgb(231, 231, 231) 100%) repeat scroll 0% 0%; border: 1px solid rgb(172, 172, 172); font-family: inherit; font-size: 13px; padding: 0px; margin: 0px 0px 15px; float: left; width: 600px; clear: both; box-sizing: content-box; }
+.snippet-title { font-family: inherit; font-size: 14px; font-weight: bold; background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(213, 210, 202) 0%, rgb(235, 234, 232) 100%) repeat scroll 0% 0%; border-bottom: 1px solid rgb(172, 172, 172); clear: both; padding: 0.5em 0px 0.5em 1%; width: 99%; float: left; }
+.snippet-data-img { width: 56%; float: left; padding: 0.4em 2%; }
+.snippet-image { float: left; min-height: 190px; width: 200px; }
+.snippet-image img { border: 2px solid rgb(255, 255, 255); box-shadow: none; transition: all 400ms ease-in 0s; margin: 10px auto; display: block; }
+.snippet-label-img { width: 37%; float: left; clear: right; text-align: right; font-size: 13px; font-weight: bold; margin: 0px 1% 0px 0px; padding: 0.4em 1%; }
+.aio-info { width: 400px; float: left; }
+.snippet-clear { clear: both; }
+@media (max-width: 855px) {
+  #snippet-box { width: 100%; }
+  .snippet-title { width: 96%; padding: 0.5em 0px 0.5em 4%; }
+  .snippet-image { min-height: 50px; margin: 0px 0px 15px; width: 100%; float: left; clear: both; }
+  .aio-info { width: 100%; float: left; clear: both; }
+}
+@media (max-width: 650px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 450px) {
+}
+@media (max-width: 320px) {
+}

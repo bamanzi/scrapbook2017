@@ -1,0 +1,28 @@
+/* Code tidied up by ScrapBook */
+header, hgroup, nav, section, article, aside, footer { display: block; }
+#header, #content-sub, #respond, #nav-access, #sub-footer, .footerlogo, #footer-menu, .comment-util, .cmt-post, .edit, #nav-mozilla, .single .entry-comments, .comment-reply-link, #social-footer { display: none; }
+#doc { width: 90%; margin: 0px auto; }
+body { font: 14pt/1.7 Georgia,"Times New Roman",Times,serif; color: rgb(0, 0, 0); }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 115%; }
+#branding { border-bottom: 3px double rgb(204, 204, 204); text-align: center; }
+#branding h1 { font-size: 16pt; line-height: 1.3; margin: 0.25em 0px 0px; }
+#branding h1 a { text-decoration: none; color: rgb(51, 51, 51); }
+#branding #tagline { font-size: 11pt; color: rgb(102, 102, 102); margin: 0.15em 0px 0.25em; }
+.hentry { position: relative; border-bottom: 1px solid rgb(102, 102, 102); }
+.hentry .entry-title { font-size: 140%; padding-right: 120px; }
+.hentry .entry-title a { text-decoration: none; color: rgb(0, 0, 0); }
+.single .entry-posted { margin: 0px 0px 0.25em; }
+.alignright { float: right; margin: 0px 0px 15px 1em; }
+.aligncenter { display: block; margin: 0px auto 1.4em; }
+.wp-caption.aligncenter { width: auto !important; height: auto !important; padding: 0px; border: 0px none; }
+.wp-caption img { display: block; margin: 0px; max-width: 100%; }
+.wp-caption.aligncenter img { margin: 0px auto; }
+.wp-caption-text { margin: 0.3em 5px; font-size: 0.923em; font-style: italic; text-align: center; }
+#comment-list { font-size: 90%; list-style: outside none none; margin: 0px 0px 1.5em; padding: 0px; }
+#comment-list li.hentry { border-bottom: 1px solid rgb(102, 102, 102); list-style: outside none none; }
+#comment-list .entry-title { font-size: 1em; }
+#comment-list .entry-title img { display: none; }
+#comment-list .entry-content { margin: 0px 0px 1.5em; padding: 0px; }
+#copyright { font-size: 11pt; text-align: center; border-top: 3px double rgb(204, 204, 204); }

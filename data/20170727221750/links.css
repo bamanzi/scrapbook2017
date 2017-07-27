@@ -1,0 +1,14 @@
+/* Code tidied up by ScrapBook */
+a { direction: ltr; unicode-bidi: embed; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.username-coloured { font-weight: bold; display: inline !important; padding: 0px !important; }
+li.breadcrumbs span:first-child > a { display: inline-block; padding-left: 17px; }
+.postprofile a, .postprofile dt.author a { font-weight: bold; text-decoration: none; }
+.postprofile a:hover, .postprofile dt.author a:hover { text-decoration: underline; }
+.back2top { clear: both; height: 11px; text-align: right; }
+a.top { background: rgba(0, 0, 0, 0) none no-repeat scroll left top; text-decoration: none; width: 34px; height: 11px; display: block; float: right; overflow: hidden; text-indent: 8px; line-height: 10px; }
+a.arrow-left { background: rgba(0, 0, 0, 0) none no-repeat scroll 3px 60%; }
+a.arrow-left { padding-left: 12px; }
+a.arrow-left:hover { text-decoration: none; background-position: 0px 60%; }
+.skiplink { position: absolute; left: -999px; width: 990px; }
+a.anchor { display: block; }

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="en">
+<head><script async="" src="about:blank"></script><script async="" src="about:blank"></script><script async="" src="about:blank"></script>
+<meta charset="UTF-8">
+<title>WebExtensions - MozillaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23.17">
+<link rel="ExportRDF" type="application/rdf+xml" title="WebExtensions" href="https://wiki.mozilla.org/index.php?title=Special:ExportRDF/WebExtensions&amp;xmlmime=rdf">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.mozilla.org/opensearch_desc.php" title="MozillaWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.mozilla.org/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="MozillaWiki Atom feed" href="https://wiki.mozilla.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="load_001.php">
+<link rel="stylesheet" href="load_002.php">
+<style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><style>
+/* Code tidied up by ScrapBook */
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px; width: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px -1px 0px 0px; }
+html > body .suggestions { margin: -1px 0px 0px; }
+.suggestions-special { position: relative; background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; display: none; padding: 0.25em; line-height: 1.25em; }
+.suggestions-results { background-color: white; cursor: pointer; border: 1px solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+</style><style>
+/* Code tidied up by ScrapBook */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="load.php">
+<style>
+/* Code tidied up by ScrapBook */
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-decoration: none; }
+</style>
+<script src="about:blank"></script><script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script><script src="about:blank"></script><script src="about:blank"></script><script src="about:blank"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--><style type="text/css">
+/* Code tidied up by ScrapBook */
+@media screen {
+}
+@media print {
+}
+</style><style type="text/css" id="diigo-activeHighlight">
+/* Code tidied up by ScrapBook */
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-WebExtensions skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display: none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">WebExtensions</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MozillaWiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p>This page is an introduction to Mozilla's implementation of WebExtensions, a new browser extension API. The goals of this API are:
+</p>
+<ul>
+<li> Porting add-ons to and from other browsers should be easier. 
+</li>
+<li> Reviewing add-ons for addons.mozilla.org should be easier.
+</li>
+<li> WebExtensions must be compatible with multiprocess Firefox (<a href="https://wiki.mozilla.org/Electrolysis" title="Electrolysis">Electrolysis</a>).
+</li>
+<li> Changes to Firefox's internal code should be less likely to break add-ons.
+</li>
+<li> WebExtensions should be easier to use than the existing Firefox XPCOM/XUL APIs.
+</li>
+<li> WebExtensions should maintain acceptable security and privacy standards.
+</li>
+</ul>
+<p>Much of the specifics of the new API are similar to the Blink extension API. Google has <a rel="nofollow" class="external text" href="https://developer.chrome.com/extensions">extensive documentation on the API</a>. <a rel="nofollow" class="external text" href="https://dev.opera.com/extensions/">So does Opera</a>.
+</p><p><b>Please note:</b> we are going with the name WebExtensions because it can be used in search engines, not Web Extensions (with a space) which is almost impossible to search.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Status"><span class="tocnumber">1</span> <span class="toctext">Status</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Useful_queries"><span class="tocnumber">1.1</span> <span class="toctext">Useful queries</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Firefox_57"><span class="tocnumber">1.1.1</span> <span class="toctext">Firefox 57</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Communication_and_meetings"><span class="tocnumber">2</span> <span class="toctext">Communication and meetings</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Testing_out_the_WebExtensions_API"><span class="tocnumber">3</span> <span class="toctext">Testing out the WebExtensions API</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Technical_Details"><span class="tocnumber">4</span> <span class="toctext">Technical Details</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Permission_Model"><span class="tocnumber">4.1</span> <span class="toctext">Permission Model</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Namespacing"><span class="tocnumber">4.2</span> <span class="toctext">Namespacing</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Out-of-process_Extensions"><span class="tocnumber">4.3</span> <span class="toctext">Out-of-process Extensions</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Packaging"><span class="tocnumber">4.4</span> <span class="toctext">Packaging</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#API_support_status"><span class="tocnumber">4.5</span> <span class="toctext">API support status</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Additional_APIs"><span class="tocnumber">4.6</span> <span class="toctext">Additional APIs</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Contributing"><span class="tocnumber">4.7</span> <span class="toctext">Contributing</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Status">Status</span></h2>
+<ul>
+<li> Bugs are filed in Bugzilla under Toolkit &gt; WebExtensions, <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided#h=dupes%7CToolkit%7CWebExtensions">find or create a bug</a>
+</li>
+</ul>
+<h3><span class="mw-headline" id="Useful_queries">Useful queries</span></h3>
+<ul>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?f1=keywords&amp;list_id=13314909&amp;o1=anywords&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;v1=dev-doc-needed&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">Need documentation</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?f1=status_whiteboard&amp;list_id=13314901&amp;o1=substring&amp;resolution=---&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;v1=triaged&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">Triaged</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?f1=status_whiteboard&amp;o3=notsubstring&amp;list_id=13314898&amp;v3=intermittent-failure&amp;o1=notsubstring&amp;resolution=---&amp;o2=notsubstring&amp;query_format=advanced&amp;f3=keywords&amp;f2=status_whiteboard&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;v1=triaged&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;v2=design-decision-needed&amp;product=Toolkit">Untriaged</a> (note: this is different from the untriaged component)
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?f1=status_whiteboard&amp;list_id=13314907&amp;o1=anywordssubstr&amp;resolution=---&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;v1=design-decision-needed&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">Design Decision Needed</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?f1=status_whiteboard&amp;list_id=13314907&amp;o1=anywordssubstr&amp;resolution=---&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;v1=advisory-group&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">Advisory Group</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13314906&amp;resolution=---&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">All bugs</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13315397&amp;resolution=FIXED&amp;chfieldto=Now&amp;query_format=advanced&amp;chfield=cf_last_resolved&amp;chfieldfrom=-17d&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">Closed in past 17 days</a>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Firefox_57">Firefox 57</span></h4>
+<p>To keep track of priorities for Firefox 57, we are using the webextensions tracking flag. You can nominate a bug by using the flag with a&nbsp;?. Bugs that are not on the tracking flag may still be worked but, but will not be a priority. All bugs must have a priority and preferably an assignee. All P1 bugs must have an assignee.
+</p>
+<ul>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13377474&amp;o1=equals&amp;v1=%2B&amp;f1=cf_blocking_webextensions&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">webextensions+</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13377455&amp;o1=equals&amp;v1=%3F&amp;f1=cf_blocking_webextensions&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=WebExtensions%3A%20Android&amp;component=WebExtensions%3A%20Compatibility&amp;component=WebExtensions%3A%20Developer%20Tools&amp;component=WebExtensions%3A%20Experiments&amp;component=WebExtensions%3A%20Frontend&amp;component=WebExtensions%3A%20General&amp;component=WebExtensions%3A%20Request%20Handling&amp;component=WebExtensions%3A%20Untriaged&amp;product=Toolkit">webextensions?</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Communication_and_meetings">Communication and meetings</span></h2>
+<ul>
+<li> There are <a rel="nofollow" class="external text" href="https://wiki.mozilla.org/Add-ons/developer/communication">developer resources</a> to help you through the migration.
+</li>
+<li> Currently every week there is a <a rel="nofollow" class="external text" href="https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar">public triage meeting</a> of the bugs we hope to complete.
+</li>
+<li> Every other week there is a <a rel="nofollow" class="external text" href="https://wiki.mozilla.org/Add-ons/Contribute/Triage">triage of WebExtensions APIs</a>.
+</li>
+<li> Join the mailing list at <a rel="nofollow" class="external text" href="https://mail.mozilla.org/listinfo/dev-addons">dev-addons@mozilla.org</a>.
+</li>
+<li> Join us on <a href="https://wiki.mozilla.org/IRC" title="IRC">IRC</a> at #webextensions or #addons
+</li>
+</ul>
+<h2><span class="mw-headline" id="Testing_out_the_WebExtensions_API">Testing out the WebExtensions API</span></h2>
+<p>See <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension">Your first WebExtension</a> on MDN.
+</p>
+<h1><span class="mw-headline" id="Technical_Details">Technical Details</span></h1>
+<h2><span class="mw-headline" id="Permission_Model">Permission Model</span></h2>
+<p>We currently enforce <a rel="nofollow" class="external text" href="https://developer.chrome.com/extensions/declare_permissions">manifest permissions</a> for <a href="#List_of_supported_APIs" title="WebExtensions">the supported APIs</a>. We also enforce CSP protections.
+</p>
+<h2><span class="mw-headline" id="Namespacing">Namespacing</span></h2>
+<p>At this time, all APIs are accessible through the chrome.* and browser.* namespace. When we begin to add our own APIs, we expect to add them to the browser.* namespace. 
+</p>
+<h2><span class="mw-headline" id="Out-of-process_Extensions">Out-of-process Extensions</span></h2>
+<p>WebExtensions are compatible with Electrolysis. They run in the main Firefox process (except for content scripts, which run in the same process as web content). We are considering a plan to run extensions in a separate process (or possibly the content process) eventually, see <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1190679">1190679</a> for more details.
+</p><p>Technical details about the implementation are published at <a href="https://wiki.mozilla.org/WebExtensions/Implementing_APIs_out-of-process" title="WebExtensions/Implementing APIs out-of-process">WebExtensions/Implementing_APIs_out-of-process</a>. 
+</p><p>Testing details are published at <a href="https://wiki.mozilla.org/WebExtensions/Testing-out-of-process" title="WebExtensions/Testing-out-of-process">WebExtensions/Testing-out-of-process</a>.
+</p>
+<h2><span class="mw-headline" id="Packaging">Packaging</span></h2>
+<p>Extensions are packaged as standard Zip files, but with <code>.xpi</code> extensions. In the future, we're planning to move towards whatever the W3C WG recommends.
+</p><p>See <a rel="nofollow" class="external free" href="https://developer.chrome.com/extensions/manifest">https://developer.chrome.com/extensions/manifest</a> for a complete list of manifest directives.
+</p>
+<h2><span class="mw-headline" id="API_support_status">API support status</span></h2>
+<p>The list of APIs and their status is now maintained on <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">MDN</a>. We intend to fix any of the exceptions listed there.
+</p><p>Please also see <a rel="nofollow" class="external text" href="http://arewewebextensionsyet.com/">arewewebextensionsyet.com</a> for an up to date list of supported APIs that is taken by parsing schemas defined in mozilla-central. No guarantees are made on this site, the MDN page is definitive in case of disagreement.
+</p>
+<h2><span class="mw-headline" id="Additional_APIs">Additional APIs</span></h2>
+<ul>
+<li>If you're experienced with Mozilla infrastructure and would like to develop WebExtensions APIs directly for Firefox, here is a list of <a rel="nofollow" class="external text" href="https://mzl.la/2dVs5Ys">approved APIs</a> that you can start contributing to.
+</li>
+</ul>
+<ul>
+<li>If you'd like to become familiar with Mozilla infrastructure so you can develop WebExtensions APIs directly for Firefox, follow these steps:
+<ul>
+<li>Familiarize yourself with the on-boarding materials: <a rel="nofollow" class="external text" href="http://areweeveryoneyet.org/onramp/desktop.html">Onboard to Firefox codebase</a>
+</li>
+<li>Pick a <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component%3AWebExtensions%20keyword%3Agood-first-bug&amp;list_id=13160623">"Good First Bug"</a> to work on
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>If you just want to tinker with WebExtensions APIs without having to build Firefox, <a rel="nofollow" class="external text" href="http://webextensions-experiments.readthedocs.io/en/latest/index.html">WebExtensions Experiments</a> is for you!
+</li>
+</ul>
+<ul>
+<li>If you simply want to request a WebExtensions API, please <a href="https://wiki.mozilla.org/WebExtensions/NewAPIs" title="WebExtensions/NewAPIs">read this information</a> before filing a bug.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Contributing">Contributing</span></h2>
+<p>Please see the <a href="https://wiki.mozilla.org/WebExtensions/Hacking" title="WebExtensions/Hacking">hacking guide</a> for information about contributing code to the WebExtensions project.
+</p><p>Please see <a rel="nofollow" class="external free" href="https://webextensions-experiments.readthedocs.io/en/latest/">https://webextensions-experiments.readthedocs.io/en/latest/</a> for some information on Experiments which might be useful for contributing.
+</p><p>Here is a list of all <a rel="nofollow" class="external text" href="https://wiki.mozilla.org/Add-ons/Contribute">add-on contribution opportunities</a>.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.033 seconds
+Real time usage: 0.039 seconds
+Preprocessor visited node count: 58/1000000
+Preprocessor generated node count: 84/1000000
+Post‐expand include size: 62/2097152 bytes
+Template argument size: 14/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki_mozilla_org:pcache:idhash:238840-0!*!0!!en!*!* and timestamp 20170727101501 and revision id 1172606
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;oldid=1172606">https://wiki.mozilla.org/index.php?title=WebExtensions&amp;oldid=1172606</a>"				</div>
+												<div id="catlinks" class="catlinks catlinks-allhidden"></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="https://wiki.mozilla.org/index.php?title=Special:UserLogin&amp;returnto=WebExtensions" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="https://wiki.mozilla.org/Special:RequestAccount">Request account</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="#" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="https://wiki.mozilla.org/index.php?title=Talk:WebExtensions&amp;action=edit&amp;redlink=1" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="#">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="https://wiki.mozilla.org/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input name="search" placeholder="Search" title="Search MozillaWiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" type="submit">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(&quot;mozilla-wiki-logo-alt-135px.png&quot;);" href="https://wiki.mozilla.org/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="https://wiki.mozilla.org/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-Product-releases"><a href="https://wiki.mozilla.org/Releases">Product releases</a></li>
+			<li id="n-newpages"><a href="https://wiki.mozilla.org/Special:NewPages">New pages</a></li>
+			<li id="n-recentchanges"><a href="https://wiki.mozilla.org/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-Recent-uploads"><a href="https://wiki.mozilla.org/Special:NewFiles">Recent uploads</a></li>
+			<li id="n-Popular-pages"><a href="https://wiki.mozilla.org/Special:PopularPages">Popular pages</a></li>
+			<li id="n-randompage"><a href="https://wiki.mozilla.org/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li>
+			<li id="n-Help"><a href="https://wiki.mozilla.org/MozillaWiki:Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-How_to_Contribute" aria-labelledby="p-How_to_Contribute-label">
+	<h3 id="p-How_to_Contribute-label" tabindex="2"><a href="#" aria-haspopup="true" aria-controls="p-How_to_Contribute-list" role="button" aria-pressed="true" aria-expanded="true">How to Contribute</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-How_to_Contribute-list">
+			<li id="n-All-hands-meeting"><a href="https://wiki.mozilla.org/WeeklyUpdates">All-hands meeting</a></li>
+			<li id="n-Other-meetings"><a href="https://wiki.mozilla.org/Community_Calendar">Other meetings</a></li>
+			<li id="n-Contribute-to-Mozilla"><a href="https://wiki.mozilla.org/Contribute">Contribute to Mozilla</a></li>
+			<li id="n-Mozilla-Reps"><a href="https://wiki.mozilla.org/ReMo">Mozilla Reps</a></li>
+			<li id="n-Student-Ambassadors"><a href="https://wiki.mozilla.org/StudentAmbassadors">Student Ambassadors</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-MozillaWiki" aria-labelledby="p-MozillaWiki-label">
+	<h3 id="p-MozillaWiki-label" tabindex="3"><a href="#" aria-haspopup="true" aria-controls="p-MozillaWiki-list" role="button" aria-pressed="false" aria-expanded="false">MozillaWiki</a></h3>
+	<div class="body">
+		<ul id="p-MozillaWiki-list">
+			<li id="n-News"><a href="https://wiki.mozilla.org/MozillaWiki:News">News</a></li>
+			<li id="n-About"><a href="https://wiki.mozilla.org/MozillaWiki:About">About</a></li>
+			<li id="n-Team"><a href="https://wiki.mozilla.org/MozillaWiki:Team">Team</a></li>
+			<li id="n-Policies"><a href="https://wiki.mozilla.org/MozillaWiki:Policies">Policies</a></li>
+			<li id="n-Releases"><a href="https://wiki.mozilla.org/MozillaWiki:Releases">Releases</a></li>
+			<li id="n-.40MozillaWiki"><a href="https://twitter.com/MozillaWiki" rel="nofollow">@MozillaWiki</a></li>
+			<li id="n-Report-a-wiki-bug"><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Websites&amp;component=wiki.mozilla.org" rel="nofollow">Report a wiki bug</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Around_Mozilla" aria-labelledby="p-Around_Mozilla-label">
+	<h3 id="p-Around_Mozilla-label" tabindex="4"><a href="#" aria-haspopup="true" aria-controls="p-Around_Mozilla-list" role="button" aria-pressed="false" aria-expanded="false">Around Mozilla</a></h3>
+	<div class="body">
+		<ul id="p-Around_Mozilla-list">
+			<li id="n-Mozilla-Support"><a href="https://support.mozilla.org/" rel="nofollow">Mozilla Support</a></li>
+			<li id="n-Mozilla-Developer-Network"><a href="https://developer.mozilla.org/" rel="nofollow">Mozilla Developer Network</a></li>
+			<li id="n-Planet-Mozilla"><a href="https://planet.mozilla.org/" rel="nofollow">Planet Mozilla</a></li>
+			<li id="n-Mozilla-Blog"><a href="https://blog.mozilla.org/" rel="nofollow">Mozilla Blog</a></li>
+			<li id="n-Webmaker"><a href="https://webmaker.org/" rel="nofollow">Webmaker</a></li>
+			<li id="n-Research"><a href="https://www.mozilla.org/research/" rel="nofollow">Research</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="5"><a href="#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="https://wiki.mozilla.org/Special:WhatLinksHere/WebExtensions" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="https://wiki.mozilla.org/Special:RecentChangesLinked/WebExtensions" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="https://wiki.mozilla.org/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;oldid=1172606" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="https://wiki.mozilla.org/index.php?title=WebExtensions&amp;action=info">Page information</a></li>
+			<li id="t-importfrometherpadlink"><a href="https://wiki.mozilla.org/Special:ImportFromEtherpad" rel="importfrometherpad-link">Import an Etherpad</a></li>
+			<li id="t-smwbrowselink"><a href="https://wiki.mozilla.org/Special:Browse/WebExtensions" rel="smw-browse">Browse properties</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 June 2017, at 13:55.</li>
+											<li id="footer-info-viewcount">This page has been accessed 142,279 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wiki.mozilla.org/MozillaWiki:Privacy_policy" title="MozillaWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://wiki.mozilla.org/MozillaWiki:About" title="MozillaWiki:About">About MozillaWiki</a></li>
+											<li id="footer-places-mobileview"><a href="https://m.wiki.mozilla.org/WebExtensions" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+						<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>/* Code removed by ScrapBook */</script><script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+<script src="about:blank"></script>
+<script>/* Code removed by ScrapBook */</script>
+<script>/* Code removed by ScrapBook */</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+</html>

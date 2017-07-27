@@ -1,10 +1,10 @@
 id	20170704233315
 create	20170704233315
-modify	20170704233315
+modify	20170727221049
 type	
 title	Clean Links :: Add-ons for Firefox
 chars	UTF-8
-icon	favicon.ico
+icon	resource://scrapbook/data/20170704233315/favicon.ico
 source	http://web.archive.org/web/20170311015206/https://addons.mozilla.org/en-US/firefox/addon/clean-links/
-comment	
+comment	https://github.com/diegocr/CleanLinks __BR__  __BR__ http://www.filewatcher.com/m/clean_links-2.6.0-fn+tb+an+fx+sm.xpi.46597-0.html
 lock	

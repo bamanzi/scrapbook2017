@@ -1,0 +1,182 @@
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "MetaBlack";
+  font-style: normal;
+  font-weight: bold;
+  src: url("MetaWebPro-Black.eot") format("eot"), url("MetaWebPro-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "MuseoSans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("museosans_500-webfont.eot") format("eot"), url("museosans_500-webfont.woff") format("woff");
+}
+header, hgroup, nav, section, article, aside, footer { display: block; }
+html, body, form, fieldset, legend, h1, h2, h3, h4, h5, h6, dd { margin: 0px; padding: 0px; }
+p, pre, blockquote, ul, ol, dl, table { margin: 0px 0px 1.5em; padding: 0px; }
+blockquote::before, blockquote::after, q::before, q::after { content: ""; }
+blockquote, q { quotes: "" ""; }
+fieldset { border: 0px none; }
+form ul, form ol { list-style: outside none none; margin: 0px 0px 1.5em; }
+a img { border: 0px none; }
+input, select, textarea { font-family: inherit; font-size: 100%; }
+.dtstart, .dtend, .published, .updated { border: 0px none; }
+html { background: rgb(255, 255, 255) url("page-background.png") repeat-x scroll center top; }
+body { font: 13px/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; color: rgb(48, 48, 48); overflow-wrap: break-word; border-top: 2px solid rgb(104, 104, 104); }
+#doc { margin: 0px auto; width: 1000px; }
+#content { margin: 65px 0px 0px; padding: 0px 20px 100px; background: rgba(0, 0, 0, 0) url("bg-content.png") repeat-y scroll right top; }
+#content::after { content: "."; display: block; clear: both; height: 0px; visibility: hidden; }
+#content-main { float: left; position: relative; z-index: 10; margin: -65px 0px -100px; width: 685px; padding: 0px 10px; }
+#content-sub { float: right; width: 226px; padding: 0px 20px 100px 21px; margin: -65px -20px 0px 0px; background: rgba(0, 0, 0, 0) url("bg-sidebar-top.png") no-repeat scroll right top; }
+a:link { text-decoration: none; color: rgb(51, 102, 204); }
+a:visited { text-decoration: none; color: rgb(87, 107, 146); }
+a:hover, a:focus, a:active { text-decoration: underline; color: rgb(51, 102, 204); }
+button, a.button:link, a.button:visited { height: auto; display: inline-block; padding: 0.25em 15px; color: rgb(255, 255, 255); font: bold 100%/1.2 "MetaBold","Trebuchet MS",sans-serif; text-decoration: none; text-transform: uppercase; cursor: pointer; text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2); border: 0px none; border-radius: 0.95em; box-shadow: 0px 2px rgba(0, 0, 0, 0.1); background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(53, 95, 164) 0%, rgb(33, 54, 111) 100%) repeat scroll 0% 0%; }
+button:hover, button:focus, a.button:hover, a.button:focus, a.button:active { text-decoration: none; background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(86, 128, 197) 0%, rgb(63, 87, 154) 100%) repeat scroll 0% 0%; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-style: italic; font-family: Georgia,serif; color: rgb(72, 72, 72); margin: 0px 0px 0.25em; }
+h1, .page-title { font-size: 2.32em; }
+h2 { font-size: 1.538em; }
+h3 { font-size: 1.385em; }
+h4 { font-size: 1.231em; }
+#nav-access { font-size: 95%; position: absolute; top: -10em; }
+#nav-access a:active, #nav-access a:focus { text-decoration: none; text-align: center; outline: 0px none; border: 1px solid rgb(138, 169, 208); position: absolute; top: 18em; left: 20px; z-index: 99; width: 200px; padding: 0.25em 20px; display: block; background: rgba(255, 255, 255, 0.8) none repeat scroll 0% 0%; border-radius: 3px; }
+#branding { position: relative; min-height: 310px; }
+#site-title { clear: both; font-size: 40px; line-height: 1.2; font-weight: normal; color: rgb(72, 72, 72); padding: 70px 400px 10px 35px; margin: 0px; }
+#site-title b { display: block; font: bold 60px/0.738 MetaBlack,"Arial Black",sans-serif; letter-spacing: -0.02em; }
+#site-title a:link, #site-title a:visited { color: rgb(72, 72, 72); text-decoration: none; }
+#site-title a:hover, #site-title a:focus, #site-title a:active { color: rgb(85, 85, 85); text-decoration: none; }
+#tagline { clear: both; font: 1.538em/1.4 Georgia,sans-serif; color: rgb(72, 72, 72); padding: 0px 430px 0px 35px; }
+#header { height: 57px; margin: 0px 10px; text-align: center; }
+#header h4 { margin: 0px; float: left; }
+#header h4 a, #header h4 a:link, #header h4 a:visited { background: rgba(0, 0, 0, 0) url("title.png") no-repeat scroll 0px 0px; display: block; height: 61px; overflow: hidden; text-indent: -500px; width: 160px; }
+#header a.mozilla { position: relative; float: right; height: 49px; width: 118px; background: rgba(0, 0, 0, 0) url("title.png") no-repeat scroll 100% 0px; text-indent: -200px; overflow: hidden; }
+#nav-main { display: inline-block; text-align: left; font: bold 13px/1 "Trebuchet MS",sans-serif; text-transform: uppercase; }
+#nav-main ul { float: left; z-index: 99; left: auto; margin: 0px; padding: 0px; }
+#nav-main li { list-style: outside none none; float: left; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; margin: 0px 0px 0px -1px; padding: 0px; position: relative; z-index: 100; }
+#nav-main ul li a, #nav-main ul li a:link, #nav-main ul li a:visited, #nav-main ul li span { padding: 15px 30px 10px 10px; height: 18px; float: left; border-width: 0px 1px; border-style: solid; border-color: rgb(152, 178, 201); z-index: 100; position: relative; color: rgb(72, 72, 72); text-decoration: none; }
+#nav-main ul li a:hover, #nav-main ul li:hover a, #nav-main ul li.hover a, #nav-main ul li.hover a:link, #nav-main ul li.hover a:visited { box-shadow: 0px 0px 0px rgba(152, 178, 201, 0.2), 0px -6px 20px 10px rgba(255, 255, 255, 0.8) inset; transition-duration: 0.2s; transition-timing-function: linear; transition-delay: 0s; transition-property: background, box-shadow, border-right; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%; outline: 0px none; padding-bottom: 15px; }
+#nav-main ul li.last a, #nav-main ul li.last span { border-right-color: transparent; }
+#nav-main ul li.last a:hover, #nav-main ul li.last a:focus, #nav-main ul li.last a:active, .js #nav-main ul li.last a:focus, #nav-main ul li.hover a { border-right-color: rgb(152, 178, 201); }
+#nav-main ul.nav-sub, #nav-main ul.nav-sub li { height: auto; border: 0px none; float: none; }
+#nav-main ul.nav-sub { position: absolute; left: -999em; opacity: 0; z-index: 99; border: 1px solid rgb(152, 178, 201); width: 190px; border-radius: 4px; text-shadow: 1px 1px 0px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255); background: rgba(255, 255, 255, 0.9) none repeat scroll 0% 0%; box-shadow: 0px 2px 0px rgba(152, 178, 201, 0.2), 0px -2px 0px rgba(152, 178, 201, 0.3) inset; }
+#nav-main li:hover ul.nav-sub, #nav-main li.sfHover ul.nav-sub { margin-top: 47px; left: 0px; opacity: 1; transition: opacity 0.2s ease-in-out 0s; }
+#nav-main ul.nav-sub li { box-shadow: 0px -1px 0px 0px rgba(152, 178, 201, 0.1) inset; margin-left: 0px; }
+#nav-main ul.nav-sub li a, #nav-main ul.nav-sub li a:link, #nav-main ul.nav-sub li a:visited, #nav-main ul.nav-sub li span { overflow: hidden; padding: 8px 10px; margin: 0px; height: auto; float: none; display: block; font-size: 10px; border: 0px none; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; box-shadow: none; position: relative; transition: background 0.1s ease-in 0s; }
+#nav-main ul.nav-sub li a:hover, #nav-main ul.nav-sub li a:focus, #nav-main ul.nav-sub li a:active, #nav-main ul li.current ul li a:hover, #nav-main ul li.current ul li a:focus, #nav-main ul li.current ul li a:active, .js #nav-main ul ul li a:focus, .js #nav-main ul li.current ul li a:focus { background: rgba(152, 178, 201, 0.2) none repeat scroll 0% 0%; box-shadow: 0px 2px 0px rgba(152, 178, 201, 0.3) inset, 0px 0px 3px 2px rgba(152, 178, 201, 0.2) inset; transition: background 0.1s ease-out 0s; }
+#nav-main ul li:hover ul li a, #nav-main ul li.hover ul li a:link, #nav-main ul li.hover ul li a:visited { padding-bottom: 8px; }
+#content-sub .widget { padding: 0px 0px 20px 5px; margin: 0px 0px 20px; font-family: Georgia,serif; color: rgb(72, 72, 72); border-bottom: 2px groove rgba(218, 232, 247, 0.1); }
+#content-sub ul, #content-sub ol { list-style: outside none none; margin: 0px; padding: 0px; }
+#content-sub li { margin-bottom: 0.15em; }
+#content-sub .widgettitle { margin: 0px 0px 0.65em; font: 14px/1.1 "MuseoSans","Century Gothic",sans-serif; text-transform: uppercase; }
+#content-main .post { clear: both; padding: 0px 8px 1em; margin-bottom: 3em; background: rgba(0, 0, 0, 0) url("dots.png") repeat-x scroll 0px 100%; }
+#content-main.single .post { background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; padding-bottom: 0px; margin-bottom: 0px; }
+.post header { position: relative; padding: 0px 8px 1em 75px; margin: 0px -8px 1.5em; background: rgba(0, 0, 0, 0) url("dots.png") repeat-x scroll 0px 100%; }
+.single .post header { padding: 0px 75px 0.75em; min-height: 95px; }
+.entry-title { font-size: 2.461em; line-height: 1.1; margin: 0px; }
+.entry-title a:link, .entry-title a:visited { color: rgb(75, 75, 75); }
+.entry-title a:hover, .entry-title a:focus, .entry-title a:active { color: rgb(51, 102, 204); }
+.single .entry-title { padding-top: 0.5em; }
+.post .entry-posted { position: absolute; float: left; left: 8px; top: 4px; width: 34px; color: rgb(255, 255, 255); text-align: center; padding: 6px 6px 4px; font: bold 100%/0.85 "MetaBold","Trebuchet MS",sans-serif; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5); background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(62, 104, 173) 0%, rgb(37, 63, 125) 100%) repeat scroll 0% 0%; box-shadow: 0px -3px 0px rgba(0, 0, 0, 0.15) inset; border-radius: 3px; }
+.entry-posted .posted-month { display: block; color: rgb(255, 255, 255); text-decoration: none; font-size: 16px; height: 1em; overflow-y: hidden; }
+.entry-posted .posted-date { display: block; margin-bottom: -3px; font-size: 28px; height: 1em; overflow-y: hidden; letter-spacing: -1px; }
+.entry-posted .posted-year { display: block; color: rgb(255, 255, 255); text-decoration: none; font: 12px "MetaBook","Trebuchet MS",sans-serif; letter-spacing: -0.05em; }
+.single .entry-comments { float: right; padding: 0.5em 0px 0.5em 15px; position: absolute; right: 0px; top: 1.15em; background: rgba(0, 0, 0, 0) url("bg-meta-sep.png") no-repeat scroll 0px 50%; font: italic 1.23em Georgia,serif; }
+.entry-comments a { position: relative; display: inline-block; color: rgb(255, 255, 255); font-weight: bold; margin-top: -2px; padding: 2px 14px; background: rgb(102, 155, 225) none repeat scroll 0% 0%; border-radius: 8px; }
+.entry-comments a::after { content: " "; display: block; position: absolute; bottom: -5px; right: 8px; width: 0px; height: 0px; border-width: 5px 6px 0px 0px; border-style: solid; border-color: rgb(102, 155, 225) transparent; }
+.entry-comments a:hover, .entry-comments a:focus, .entry-comments a:active { background-color: rgb(51, 102, 204); text-decoration: none; }
+.entry-comments a:hover::after, .entry-comments a:focus::after, .entry-comments a:active::after { border-color: rgb(51, 102, 204) transparent; }
+#content-main img { max-width: 100%; height: auto; }
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { color: rgb(46, 81, 147); }
+.entry-content ul, .entry-content ol { margin-left: 25px; }
+.entry-content li { margin-bottom: 0.25em; }
+.entry-content blockquote { padding: 0px 15px 0px 40px; min-height: 40px; font: italic 1.231em Georgia,serif; background: transparent url("quote.png") no-repeat scroll 0px 0px; }
+.alignright { float: right; margin: 0px 0px 15px 1em; }
+.aligncenter { display: block; margin: 0px auto 1.4em; }
+.wp-caption.aligncenter { width: auto !important; height: auto !important; padding: 0px; border: 0px none; }
+.wp-caption img { display: block; margin: 0px; max-width: 100%; }
+.wp-caption.aligncenter img { margin: 0px auto; }
+.wp-caption-text { margin: 0.3em 5px; font-size: 0.923em; font-style: italic; text-align: center; }
+.meta { font-size: 0.846em; margin: 0px 0px 0.5em; color: rgb(120, 120, 120); }
+.meta a { color: rgb(120, 120, 120); }
+.meta strong { margin-right: 8px; font-family: "MetaBlack","Trebuchet MS",sans-serif; text-transform: uppercase; }
+#comments { padding: 0px 8px; }
+.comments-head { clear: both; margin: 2em 0px; padding-top: 30px; background: rgba(0, 0, 0, 0) url("bg-sepover-wide.png") no-repeat scroll center top; }
+.comments-head h1 { font-size: 1.85em; }
+.comments-head .cmt-post { margin-left: 8px; font-style: normal; }
+.comments-head .cmt-post a { font-weight: bold; text-decoration: none; }
+#comments .entry-title { font: bold 16px/0.85 "MetaBlack","Trebuchet MS",sans-serif; margin: 0px 0px 0.5em; }
+#comments #comment-list { list-style: outside none none; margin: 0px 0px 3em; padding: 0px; }
+#comment-list .comment, #comment-list .pingback, #comment-list .trackback { position: relative; padding: 20px 20px 5px; }
+#comment-list.av .comment { padding-left: 83px; min-height: 70px; }
+#comment-list .author { font-style: normal; color: rgb(48, 48, 48); }
+#comment-list .entry-title cite { font-style: normal; }
+#comment-list .comment-meta { font-size: 0.846em; color: rgb(120, 120, 120); }
+#comment-list .comment-meta a { font-weight: bold; }
+#comment-list .comment-meta .published { font-weight: normal; color: rgb(120, 120, 120); }
+#comment-list .entry-title a:hover, #comment-list .entry-title a:focus, #comment-list .entry-title a:active { text-decoration: none; }
+#comment-list .entry-title a:hover .author, #comment-list .entry-title a:focus .author, #comment-list .entry-title a:active .author { text-decoration: underline; color: rgb(68, 123, 196); }
+#comment-list .entry-title .comment-meta a:hover, #comment-list .entry-title .comment-meta a:focus, #comment-list .entry-title .comment-meta a:active { text-decoration: underline; }
+#comment-list .thread-odd { background-color: rgba(0, 0, 0, 0.02); border-style: solid; border-color: rgb(201, 201, 201); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 1px 0px; }
+#comment-list .bypostauthor { background-color: rgb(245, 249, 253); border-style: solid; border-color: rgb(175, 209, 233); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 1px 0px; box-shadow: 0px 1px 3px rgba(175, 210, 235, 0.75) inset; }
+#comment-list .avatar { position: absolute; left: 20px; top: 20px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+#comment-list a:hover .avatar, #comment-list a:focus .avatar, #comment-list a:active .avatar { box-shadow: 1px 1px 2px rgba(50, 100, 200, 0.75); }
+#comment-list .entry-content { font-size: 0.923em; border: 0px none; padding: 0px; }
+#comment-list .entry-content p, #comment-list .entry-content pre, #comment-list .entry-content blockquote { margin: 0.75em 0px 0px; }
+#comment-list .comment-util { margin: 1em 0px; font-size: 0.846em; font-weight: bold; }
+#comment-list ol.children { margin-left: -35px; list-style: outside none none; background: rgb(250, 250, 250) none repeat scroll 0% 0%; border: 1px solid rgb(245, 245, 245); box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset; }
+#comment-list ol.children .alt {  }
+#comment-list ol.children ol.children { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(245, 245, 245); box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); }
+#respond { width: 100%; }
+#comment-form { position: relative; padding-top: 5em; background: rgba(0, 0, 0, 0) url("dots.png") repeat-x scroll center top; }
+#comment-form legend span { position: absolute; top: 1em; font: italic 1.538em Georgia,serif; color: rgb(72, 72, 72); margin: 0px 0px 0.25em; }
+#comment-form ol { margin: 0px; padding: 0px; }
+#comment-form li { margin-bottom: 1em; }
+#comment-form label { display: block; margin: 0px 0px 0.25em 6px; font: bold 1em "MetaBlack","Trebuchet MS",sans-serif; text-transform: uppercase; color: rgb(50, 85, 155); }
+#comment-form label .note { color: rgb(102, 102, 102); font: 0.846em Georgia,serif; text-transform: none; }
+#comment { width: 98%; }
+#cancel-comment-reply { position: absolute; right: 20px; top: 1.75em; }
+#cancel-comment-reply a { background: rgb(239, 239, 239) none repeat scroll 0% 0%; color: rgb(153, 0, 0); padding: 3px 10px; border-radius: 0.95em; }
+#cancel-comment-reply a:hover, #cancel-comment-reply a:focus, #cancel-comment-reply a:active { background: rgb(227, 227, 227) none repeat scroll 0% 0%; }
+#comment-form input, #comment-form textarea { padding: 3px 5px; font: 1.07em "Lucida Grande",Helvetica,Arial,sans-serif; border: 1px solid rgb(219, 233, 247); background: rgb(255, 255, 255) none repeat scroll 0% 0%; box-shadow: 0px 2px rgba(170, 200, 230, 0.3) inset; border-radius: 6px; }
+#comment-form input:hover, #comment-form input:focus, #comment-form textarea:hover, #comment-form textarea:focus { color: rgb(48, 48, 48); border-color: rgb(185, 206, 226); }
+.fm-search { margin: 0px 0px 2em; }
+#content-sub .fm-search { margin: 0px; }
+.fm-search p { position: relative; margin: 0px; }
+.fm-search input#s { width: 140px; padding: 3px 3px 3px 35px; margin-right: 4px; font-size: 14px; height: 22px; border: 1px solid rgb(219, 233, 247); background: rgb(255, 255, 255) url("icn-search.png") no-repeat scroll 5px 50%; box-shadow: 0px 2px rgba(170, 200, 230, 0.3) inset; border-radius: 6px; }
+.fm-search input#s:hover, .fm-search input#s:focus { color: rgb(48, 48, 48); border-color: rgb(185, 206, 226); }
+.fm-search button { position: absolute; top: 0px; right: 0px; margin: 0px; border: 0px none; text-indent: -999em; width: 35px; height: 30px; overflow: hidden; cursor: pointer; border-radius: 6px; background: url("arr-go.png") no-repeat scroll 55% 50%, rgba(0, 0, 0, 0) -moz-linear-gradient(center bottom , rgb(87, 162, 31) 0%, rgb(132, 198, 60) 100%) repeat scroll 0% 0%; }
+.fm-search button:hover, .fm-search button:focus { background: url("arr-go.png") no-repeat scroll 55% 50%, rgba(0, 0, 0, 0) -moz-linear-gradient(center bottom , rgb(105, 191, 38) 0%, rgb(143, 215, 65) 100%) repeat scroll 0% 0%; }
+#content { padding-bottom: 160px; margin-bottom: -90px; }
+#sub-footer { padding-top: 70px; background: transparent url("footer-background.png") repeat-x scroll center top; color: rgb(71, 111, 190); clear: both; }
+#sub-footer #sub-footer-contents { margin: 0px auto; width: 980px; text-align: left; overflow: auto; background: rgb(61, 109, 181) url("footer-background.png") repeat-x scroll center -70px; }
+#sub-footer h3 { margin: 115px 0px 10px; float: left; background: rgba(0, 0, 0, 0) url("footer-social.png") no-repeat scroll 50% 0px; height: 100px; width: 126px; padding: 15px 0px 0px 25px; font: italic 22px/1 Georgia,serif; color: rgb(51, 85, 155); }
+#sub-footer h3 span { font: bold 22px/0.738 MetaBlack,"Arial Black",sans-serif; text-transform: uppercase; letter-spacing: -0.02em; color: rgb(255, 255, 255); }
+#sub-footer ul { margin: 100px 0px 0px; left: auto; float: left; }
+#sub-footer ul li { float: left; margin: 0px 15px 0px 0px; }
+#sub-footer ul li a, #sub-footer ul li a:link, #sub-footer ul li a:visited { display: block; background: rgba(0, 0, 0, 0) url("footer-social.png") no-repeat scroll 50% 0px; width: 110px; padding: 60px 0px 0px; font: italic 18px/1 Georgia,serif; text-align: center; color: rgb(255, 255, 255); transition: text-shadow 0.2s ease-out 0s; }
+#sub-footer a:hover, #sub-footer a:active { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 5px rgb(51, 85, 155), 0px 0px 20px rgba(255, 255, 255, 0.6); transition: text-shadow 0.1s ease-out 0s; }
+#sub-footer ul li#footer-twitter a { background-position: 50% -115px; }
+#sub-footer ul li#footer-facebook a { background-position: 50% -215px; }
+#sub-footer ul li#footer-connect a { background-position: 50% -315px; }
+#sub-footer #sub-footer-newsletter { float: right; width: 275px; background: rgba(0, 0, 0, 0) url("footer-social.png") no-repeat scroll 30% -412px; margin: 0px 22px 0px 0px; padding: 135px 0px 0px; line-height: 24px; text-align: left; }
+#sub-footer #sub-footer-newsletter span.intro { display: block; font: italic 18px/1 Georgia,serif; color: rgb(255, 255, 255); }
+#sub-footer #sub-footer-newsletter a, #sub-footer #sub-footer-newsletter a:link, #sub-footer #sub-footer-newsletter a:visited { font-family: MetaBlack,"Arial Black",sans-serif; font-weight: bold; text-transform: uppercase; font-style: normal; font-size: 22px; color: rgb(131, 179, 242); transition: text-shadow 0.2s ease-in 0s; }
+#sub-footer #sub-footer-newsletter a:hover, #sub-footer #sub-footer-newsletter a:active { text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 5px rgb(51, 85, 155), 0px 0px 20px rgba(255, 255, 255, 0.4); }
+#footer { background: rgb(51, 85, 155) url("footer-background.png") repeat-x scroll -200px center; text-align: center; color: rgb(71, 111, 190); clear: both; padding: 5px 0px; }
+#footer a:link, #footer a:visited { color: rgb(102, 155, 225); text-decoration: none; transition: color 0.1s ease-in 0s; }
+#footer a:hover, #footer a:active { color: rgb(255, 255, 255); text-decoration: underline; transition: color 0.1s ease-in 0s; }
+#footer-contents { width: 980px; text-align: left; margin: 0px auto; }
+#footer-logo { float: left; display: inline; margin: 15px 50px 0px 10px; }
+#footer-logo a, #footer-logo a:link, #footer-logo a:visited { font-size: 28px; padding: 0px; display: block; text-indent: -999em; overflow: hidden; width: 100px; height: 40px; background: rgba(0, 0, 0, 0) url("footer-title.png") no-repeat scroll 0px 0px; }
+#footer-menu, #footer-menu ul { list-style: outside none none; left: auto; margin: 0px; }
+#footer-menu li { line-height: 1.2; margin: 15px 10px 0px 0px; padding: 0px; float: left; display: inline; font-weight: bold; position: relative; width: 115px; }
+#footer-menu li a, #footer-menu li a:link, #footer-menu li a:visited { color: rgb(255, 255, 255); font: bold 14px/1.2 MetaBlack,"Arial Black",sans-serif; text-transform: uppercase; }
+#footer li li a:link, #footer li li a:visited { color: rgb(102, 155, 225); font: 13px Georgia,serif; text-transform: none; }
+#footer li li a:hover, #footer li li a:active { color: rgb(255, 255, 255); }
+#footer-menu ul li ul { margin: 4px 0px 15px; }
+#footer-menu li.last { margin-right: 0px; }
+#footer-menu ul ul li { float: none; padding: 0px 0px 0.3em; margin: 0px; font-weight: normal; display: block; width: auto; }
+#footer #copyright { clear: both; font-family: Georgia,serif; }
+#footer #copyright p { margin-bottom: 0.5em; font-size: 85%; }
+#footer #copyright a:hover, #footer #copyright a:focus #footer #copyright a:active { text-decoration: underline; }
+#footer #footer-links { font-size: 85%; }
